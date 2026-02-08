@@ -112,6 +112,7 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
         self.embed_enabled = True
         self.embed_top_k = 3
         self.embed_min_score = 0.18
+        self.embed_min_score_strong = 0.3
         self.embed_cue_boost = 0.45
         self.embed_store_on_import = True
         self.embed_db_path = embed_db_path
@@ -569,13 +570,30 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
 
     def denken(self, frage: str) -> Dict:
         intent = self._erkenne_intent(frage)
-        cues = self._cue_set(frage)
+        if self._is_greeting(frage):
+            return {
+                "frage": frage,
+                "intent": intent,
+                "unknown": "",
+                "denkmuster": [],
+                "focus": [],
+                "memories": [],
+                "trace": [],
+                "smalltalk": "greeting",
+                "timestamp": datetime.now().isoformat(),
+            }
+
+        base_cues = self._cue_set(frage)
+        cues = dict(base_cues)
         focus_ids = [k for k, _ in sorted(cues.items(), key=lambda x: x[1], reverse=True)[:2]]
         memory_hits: List[Dict[str, object]] = []
 
         # Hybrid memory: retrieve similar texts and use as weak cues
-        if self.embed_enabled:
+        if self.embed_enabled and self._use_embeddings_for(frage):
             memory_hits = self.embed_query(frage)
+            top_score = float(memory_hits[0].get("score") or 0.0) if memory_hits else 0.0
+            if not base_cues and top_score < self.embed_min_score_strong:
+                memory_hits = []
             for hit in memory_hits:
                 score = float(hit.get("score") or 0.0)
                 if score <= 0:
@@ -623,6 +641,8 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
         }
 
     def antworte(self, frage: str, auto_lernen: bool = True, use_lm: Optional[bool] = None) -> str:
+        if self._is_greeting(frage):
+            return "Das weiß ich nicht. Bitte stelle mir eine neue Frage."
         res = self.denken(frage)
         pattern = res["denkmuster"]
         trace = res.get("trace") or []
@@ -630,14 +650,7 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
         memory_hits = res.get("memories") or []
 
         if not pattern:
-            unk = res.get("unknown") or ""
-            if unk:
-                return (
-                    f"Ich kenne {unk} noch nicht. "
-                    "Gib mir einen kurzen Text (oder eine Definition) zum Import, dann kann ich es lernen. "
-                    "Tipp: /import <pfad_zur_txt_datei> (oder CLI: --import <pfad>)."
-                )
-            return "Ich weiß das nicht."
+            return "Das weiß ich nicht. Bitte stelle mir eine neue Frage."
 
         if auto_lernen:
             self.lerne_aus_aktivierung(pattern, trace)
@@ -651,6 +664,28 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
             focus_ids=focus_ids,
             memory_hits=memory_hits,
         )
+
+    def _is_greeting(self, text: str) -> bool:
+        t = self._norm_label(text)
+        if not t:
+            return False
+        greetings = {
+            "hallo", "hi", "hey", "moin", "servus",
+            "guten tag", "guten morgen", "guten abend",
+        }
+        if t in greetings:
+            return True
+        if t.startswith("guten "):
+            return True
+        return False
+
+    def _use_embeddings_for(self, text: str) -> bool:
+        toks = self._tokenize(text)
+        if not toks:
+            return False
+        if len(toks) < 2 and len(text.strip()) < 6:
+            return False
+        return True
 
     # -------------------------
     # Lernen (Hebb + Anti-Hebb + Decay)
