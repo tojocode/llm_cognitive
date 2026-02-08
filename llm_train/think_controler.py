@@ -132,6 +132,10 @@ def _print_help():
     print("  seed <n>                  -> Zufallssaat setzen")
     print("  learn on|off              -> Lernen an/aus")
     print("  embed on|off              -> Embedding-Memory an/aus")
+    print("  goal set <text>           -> Ziel setzen (überschreibt)")
+    print("  goal add <text>           -> Ziel hinzufügen")
+    print("  goal clear                -> Ziele löschen")
+    print("  goal show                 -> Ziele anzeigen")
     print("  seeds on|off              -> Seeds anzeigen an/aus")
     print("  pattern on|off|<n>         -> Pattern-Ausgabe an/aus, optional max n")
     print("  trace on|off|<n>           -> Trace-Ausgabe an/aus, optional max n")
@@ -207,6 +211,36 @@ def main():
                 print("✓ seed gesetzt")
             except Exception:
                 print("⚠️ ungültiger seed")
+            continue
+        if cmd == "goal":
+            if len(parts) < 2:
+                print("⚠️ goal set|add|clear|show")
+                continue
+            sub = parts[1].lower()
+            if sub == "set":
+                g = " ".join(parts[2:]).strip()
+                engine.set_goals([g] if g else [])
+                print("✓ goal gesetzt" if g else "✓ goals geleert")
+                continue
+            if sub == "add":
+                g = " ".join(parts[2:]).strip()
+                if not g:
+                    print("⚠️ goal add <text>")
+                    continue
+                engine.add_goal(g)
+                print("✓ goal hinzugefügt")
+                continue
+            if sub == "clear":
+                engine.clear_goals()
+                print("✓ goals geleert")
+                continue
+            if sub == "show":
+                if engine.goal_state:
+                    print("Goals:", ", ".join(engine.goal_state))
+                else:
+                    print("Goals: (leer)")
+                continue
+            print("⚠️ goal set|add|clear|show")
             continue
         if cmd == "learn" and len(parts) >= 2:
             val = parts[1].lower()

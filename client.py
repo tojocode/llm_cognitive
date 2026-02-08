@@ -103,6 +103,39 @@ def _chat_loop(engine: KognitivesModell, semantic_path: str, episodic_path: str,
                     continue
                 print("⚠️ Nutzung: /lex add <id> <alias...> | /lex save")
                 continue
+            if cmd == "/goal":
+                if len(parts) < 2:
+                    if engine.goal_state:
+                        print("Goals:", ", ".join(engine.goal_state))
+                    else:
+                        print("Goals: (leer)")
+                    continue
+                sub = parts[1].lower()
+                if sub == "set":
+                    g = " ".join(parts[2:]).strip()
+                    engine.set_goals([g] if g else [])
+                    print("✓ Goal gesetzt" if g else "✓ Goals geleert")
+                    continue
+                if sub == "add":
+                    g = " ".join(parts[2:]).strip()
+                    if not g:
+                        print("⚠️ Nutzung: /goal add <text>")
+                        continue
+                    engine.add_goal(g)
+                    print("✓ Goal hinzugefügt")
+                    continue
+                if sub == "clear":
+                    engine.clear_goals()
+                    print("✓ Goals geleert")
+                    continue
+                if sub == "show":
+                    if engine.goal_state:
+                        print("Goals:", ", ".join(engine.goal_state))
+                    else:
+                        print("Goals: (leer)")
+                    continue
+                print("⚠️ Nutzung: /goal set <text> | /goal add <text> | /goal clear | /goal show")
+                continue
             print("⚠️ Unbekannter Command")
             continue
         ans = engine.antworte(q, use_lm=engine.use_lm_default)

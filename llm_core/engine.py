@@ -117,6 +117,11 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
         self.embed_db_path = embed_db_path
         self.embed_db = None
 
+        # Goal Layer
+        self.goal_state: List[str] = []
+        self.goal_boost = 0.55
+        self.goal_neighbor_boost = 0.35
+
         if self.semantic_datei:
             self.modell_laden(self.semantic_datei, episodic=False)
         if self.episodic_datei:
@@ -175,6 +180,44 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
     def speichere_embeddings(self):
         if self.embed_db:
             self.embed_db.save()
+
+    # -------------------------
+    # Goal Layer
+    # -------------------------
+
+    def set_goals(self, goals: List[str]):
+        self.goal_state = [g.strip() for g in (goals or []) if g and str(g).strip()]
+
+    def add_goal(self, goal: str):
+        g = (goal or "").strip()
+        if not g:
+            return
+        if g not in self.goal_state:
+            self.goal_state.append(g)
+
+    def clear_goals(self):
+        self.goal_state = []
+
+    def _goal_ids(self) -> List[str]:
+        ids: List[str] = []
+        for g in self.goal_state:
+            try:
+                cid = self._phrase_to_concept_id(g)
+            except Exception:
+                cid = ""
+            if cid and cid in self.konzepte and cid not in ids:
+                ids.append(cid)
+        return ids
+
+    def _goal_cues(self) -> Dict[str, float]:
+        out: Dict[str, float] = {}
+        for gid in self._goal_ids():
+            out[gid] = max(out.get(gid, 0.0), self.goal_boost)
+            for e in self.konzepte.get(gid, Konzept(gid)).verbindungen:
+                out[e.ziel] = max(out.get(e.ziel, 0.0), self.goal_neighbor_boost * e.gewicht)
+            for e in self.episodic_edges.get(gid, []):
+                out[e.ziel] = max(out.get(e.ziel, 0.0), self.goal_neighbor_boost * 0.9 * e.gewicht)
+        return out
 
 
     def _canon_type(self, t: str) -> str:
@@ -542,6 +585,10 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
                 for k, v in mcues.items():
                     cues[k] = max(cues.get(k, 0.0), min(0.99, v * boost))
 
+        # Goal Layer cues (soft bias)
+        for k, v in self._goal_cues().items():
+            cues[k] = max(cues.get(k, 0.0), v)
+
         if not cues:
             unknown = self._create_unknown_stub(frage)
             return {
@@ -791,6 +838,7 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
 
         for _ in range(steps):
             candidates = []
+            goal_ids = self._goal_ids()
             for kid, k in self.konzepte.items():
                 sem_strength = sum(e.gewicht for e in k.verbindungen)
                 epi_strength = sum(e.gewicht for e in self.episodic_edges.get(kid, []))
@@ -800,7 +848,16 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
                 candidates.append((kid, score))
 
             candidates.sort(key=lambda x: x[1], reverse=True)
-            seeds = [kid for kid, _ in candidates[:2]]
+            seeds = []
+            for g in goal_ids[:2]:
+                seeds.append(g)
+            if len(seeds) < 2:
+                for kid, _ in candidates:
+                    if kid in seeds:
+                        continue
+                    seeds.append(kid)
+                    if len(seeds) >= 2:
+                        break
             if not seeds:
                 break
 
