@@ -24,6 +24,12 @@ class BrocaMixin:
         self.focus_boost_src = 1.7
         self.focus_boost_dst = 1.3
         self.focus_penalty_other = 0.85
+        self.cause_boost = 1.35
+        self.cause_types = {
+            "verursacht", "durch", "streut", "verstärkt", "verstaerkt",
+            "ermöglicht", "ermoeglicht", "notwendig_für", "notwendig_für", "notwendig_fuer",
+            "benötigt", "benötigt", "benoetigt", "braucht",
+        }
 
     # -------------------------
     # Output
@@ -57,6 +63,7 @@ class BrocaMixin:
         trace: Optional[List[TraceItem]] = None,
         use_lm: bool = True,
         focus_ids: Optional[List[str]] = None,
+        memory_hits: Optional[List[Dict[str, object]]] = None,
     ) -> str:
         if not denkmuster:
             return "Ich weiß das nicht."
@@ -64,7 +71,7 @@ class BrocaMixin:
         context = [k for k, _ in denkmuster[2:8]]
 
         if use_lm:
-            lm_text = self._lm_generate(denkmuster, intent=intent, trace=trace, focus_ids=focus)
+            lm_text = self._lm_generate(denkmuster, intent=intent, trace=trace, focus_ids=focus, memory_hits=memory_hits)
             if lm_text:
                 if self.explain_output and trace:
                     t0 = trace[0]
@@ -121,11 +128,28 @@ class BrocaMixin:
         if extra:
             sentences.append("Daneben sind auch " + ", ".join(extra) + " relevant.")
 
+        # Optional: memory snippet for freieres Denken (ohne LM)
+        if memory_hits:
+            snippet = self._memory_snippet(memory_hits)
+            if snippet:
+                sentences.append(snippet)
+
         s1 = " ".join(sentences)
         if self.explain_output and trace:
             t0 = trace[0]
             s1 = s1.rstrip() + f" (Trace: {t0.src} → {t0.dst} / {t0.typ})"
         return s1
+
+    def _memory_snippet(self, memory_hits: List[Dict[str, object]]) -> str:
+        if not memory_hits:
+            return ""
+        text = str(memory_hits[0].get("text") or "").strip()
+        if not text:
+            return ""
+        # keep short
+        if len(text) > 160:
+            text = text[:157].rstrip() + "..."
+        return "Erinnerung: " + text
 
     def _is_symmetric_type(self, typ: str, template: str) -> bool:
         # Treat unknown templates as symmetric to avoid reversed duplicates
@@ -135,6 +159,10 @@ class BrocaMixin:
         if template == "{} und {} sind eng miteinander verbunden.":
             return True
         return False
+
+    def _is_cause_type(self, typ: str) -> bool:
+        t = self._nfc(typ) if hasattr(self, "_nfc") else typ
+        return t in self.cause_types
 
     def _template_for_type(self, typ: str) -> str:
         t = self._nfc(typ) if hasattr(self, "_nfc") else typ
@@ -157,6 +185,7 @@ class BrocaMixin:
             "notwendig_für": "{} ist notwendig für {}.",
             "notwendig_fuer": "{} ist notwendig für {}.",
             "gehört_zu": "{} gehört zu {}.",
+            "gehört_zu": "{} gehört zu {}.",
             "gehoert_zu": "{} gehört zu {}.",
             "lebt_in": "{} lebt in {}.",
             "gelernt": "{} und {} stehen in enger Beziehung.",
@@ -207,6 +236,8 @@ class BrocaMixin:
             for e in self.konzepte.get(src, Konzept(src)).verbindungen:
                 if e.ziel in aktive:
                     score = e.gewicht * self._gate(e.typ, intent)
+                    if intent == "CAUSE" and self._is_cause_type(e.typ):
+                        score *= self.cause_boost
                     if focus_set:
                         if src in focus_set:
                             score *= self.focus_boost_src
@@ -221,6 +252,8 @@ class BrocaMixin:
             for e in self.episodic_edges.get(src, []):
                 if e.ziel in aktive:
                     score = (e.gewicht * 0.9) * self._gate(e.typ, intent)
+                    if intent == "CAUSE" and self._is_cause_type(e.typ):
+                        score *= self.cause_boost
                     if focus_set:
                         if src in focus_set:
                             score *= self.focus_boost_src
@@ -246,9 +279,13 @@ class BrocaMixin:
             if src in self.konzepte:
                 for e in self.konzepte[src].verbindungen:
                     score = e.gewicht * self._gate(e.typ, intent)
+                    if intent == "CAUSE" and self._is_cause_type(e.typ):
+                        score *= self.cause_boost
                     out.append({"score": score, "src": src, "dst": e.ziel, "typ": e.typ, "layer": "semantic"})
             for e in self.episodic_edges.get(src, []):
                 score = (e.gewicht * 0.9) * self._gate(e.typ, intent)
+                if intent == "CAUSE" and self._is_cause_type(e.typ):
+                    score *= self.cause_boost
                 out.append({"score": score, "src": src, "dst": e.ziel, "typ": e.typ, "layer": "episodic"})
         out.sort(key=lambda x: x["score"], reverse=True)
         return out
@@ -270,6 +307,7 @@ class BrocaMixin:
         intent: str,
         trace: Optional[List[TraceItem]],
         focus_ids: Optional[List[str]] = None,
+        memory_hits: Optional[List[Dict[str, object]]] = None,
     ) -> Optional[str]:
         if not (self.lm_callable or self.lm_cmd):
             return None
@@ -283,6 +321,13 @@ class BrocaMixin:
             f"{self._label_for_output(r['src'])} -{r['typ']}-> {self._label_for_output(r['dst'])} (w={r['score']:.2f}, {r['layer']})"
             for r in rels
         ]
+        mem_lines = []
+        for hit in (memory_hits or [])[:3]:
+            txt = str(hit.get("text") or "").strip()
+            if txt:
+                if len(txt) > 140:
+                    txt = txt[:137].rstrip() + "..."
+                mem_lines.append(f"- {txt}")
         prompt = (
             "Du bist Broca und formulierst kurze, natürliche deutsche Sätze.\n"
             "Nutze die folgenden Konzepte und Relationen, erfinde keine neuen Fakten.\n"
@@ -291,6 +336,7 @@ class BrocaMixin:
             f"Fokus: {', '.join([self._label_for_output(k) for k in focus_ids])}\n"
             f"Konzepte: {', '.join(aktive)}\n"
             "Relationen:\n" + "\n".join(rel_lines) + "\n"
+            + ("Erinnerungen:\n" + "\n".join(mem_lines) + "\n" if mem_lines else "")
         )
 
         if self.lm_callable:

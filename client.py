@@ -47,6 +47,7 @@ def _chat_loop(engine: KognitivesModell, semantic_path: str, episodic_path: str,
             if cmd == "/save":
                 engine.speichere_model(semantic_path, episodic_datei=episodic_path)
                 engine.speichere_lexikon(lexikon_path)
+                engine.speichere_embeddings()
                 print("✓ Gespeichert")
                 continue
             if cmd == "/import":
@@ -147,6 +148,7 @@ def main():
     if args.save:
         engine.speichere_model(args.semantic, episodic_datei=args.episodic)
         engine.speichere_lexikon(args.lexikon)
+        engine.speichere_embeddings()
 
 
 if __name__ == "__main__":

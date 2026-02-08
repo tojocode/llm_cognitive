@@ -40,6 +40,7 @@ from datetime import datetime
 from typing import Callable, Dict, List, Tuple, Optional, Iterable
 
 from llm_core.types import Verbindung, Konzept, WMItem, TraceItem
+from llm_core.embedding_db import EmbeddingDB
 from llm_speech import BrocaMixin, WernickeMixin
 
 
@@ -51,6 +52,8 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
         lm_cmd: Optional[str] = None,
         lm_callable: Optional[Callable[[Dict[str, object]], str]] = None,
         lexikon_datei: Optional[str] = "data/lexikon.json",
+        embed_db_path: Optional[str] = "data/embeddings.json",
+        embed_dim: int = 512,
     ):
         self.konzepte: Dict[str, Konzept] = {}
         self.episodic_edges: Dict[str, List[Verbindung]] = {}
@@ -105,11 +108,21 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
         self._init_broca(lm_cmd, lm_callable)
         self._init_wernicke(lexikon_datei)
 
+        # Hybrid Memory (Embedding DB)
+        self.embed_enabled = True
+        self.embed_top_k = 3
+        self.embed_min_score = 0.18
+        self.embed_cue_boost = 0.45
+        self.embed_store_on_import = True
+        self.embed_db_path = embed_db_path
+        self.embed_db = None
+
         if self.semantic_datei:
             self.modell_laden(self.semantic_datei, episodic=False)
         if self.episodic_datei:
             self.modell_laden(self.episodic_datei, episodic=True)
         # Lexikon wird in _init_wernicke geladen
+        self._init_embeddings(embed_db_path, embed_dim)
 
     # -------------------------
     # Unicode / Pfade / Normalisierung
@@ -134,6 +147,34 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
         if os.path.isabs(p):
             return p
         return os.path.join(self.base_dir, p)
+
+    # -------------------------
+    # Hybrid Memory (Embedding DB)
+    # -------------------------
+
+    def _init_embeddings(self, path: Optional[str], dim: int):
+        if not path:
+            self.embed_db = None
+            return
+        try:
+            ep = self._resolve_path(path)
+            self.embed_db = EmbeddingDB(ep, dim=dim)
+        except Exception:
+            self.embed_db = None
+
+    def embed_add_text(self, text: str, meta: Optional[Dict[str, object]] = None) -> bool:
+        if not self.embed_enabled or not self.embed_db:
+            return False
+        return self.embed_db.add(text, meta=meta)
+
+    def embed_query(self, text: str) -> List[Dict[str, object]]:
+        if not self.embed_enabled or not self.embed_db:
+            return []
+        return self.embed_db.query(text, top_k=self.embed_top_k, min_score=self.embed_min_score)
+
+    def speichere_embeddings(self):
+        if self.embed_db:
+            self.embed_db.save()
 
 
     def _canon_type(self, t: str) -> str:
@@ -487,6 +528,19 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
         intent = self._erkenne_intent(frage)
         cues = self._cue_set(frage)
         focus_ids = [k for k, _ in sorted(cues.items(), key=lambda x: x[1], reverse=True)[:2]]
+        memory_hits: List[Dict[str, object]] = []
+
+        # Hybrid memory: retrieve similar texts and use as weak cues
+        if self.embed_enabled:
+            memory_hits = self.embed_query(frage)
+            for hit in memory_hits:
+                score = float(hit.get("score") or 0.0)
+                if score <= 0:
+                    continue
+                mcues = self._cue_set(str(hit.get("text") or ""))
+                boost = self.embed_cue_boost * score
+                for k, v in mcues.items():
+                    cues[k] = max(cues.get(k, 0.0), min(0.99, v * boost))
 
         if not cues:
             unknown = self._create_unknown_stub(frage)
@@ -496,6 +550,7 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
                 "unknown": unknown,
                 "denkmuster": [],
                 "focus": focus_ids,
+                "memories": memory_hits,
                 "trace": [],
                 "timestamp": datetime.now().isoformat(),
             }
@@ -515,6 +570,7 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
             "unknown": "",
             "denkmuster": pattern,
             "focus": focus_ids,
+            "memories": memory_hits,
             "trace": sorted(self.trace, key=lambda t: t.contrib, reverse=True)[:20],
             "timestamp": datetime.now().isoformat(),
         }
@@ -524,6 +580,7 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
         pattern = res["denkmuster"]
         trace = res.get("trace") or []
         focus_ids = res.get("focus") or []
+        memory_hits = res.get("memories") or []
 
         if not pattern:
             unk = res.get("unknown") or ""
@@ -539,7 +596,14 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
             self.lerne_aus_aktivierung(pattern, trace)
 
         use_lm_final = self.use_lm_default if use_lm is None else use_lm
-        return self.versprachliche(pattern, intent=res["intent"], trace=trace, use_lm=use_lm_final, focus_ids=focus_ids)
+        return self.versprachliche(
+            pattern,
+            intent=res["intent"],
+            trace=trace,
+            use_lm=use_lm_final,
+            focus_ids=focus_ids,
+            memory_hits=memory_hits,
+        )
 
     # -------------------------
     # Lernen (Hebb + Anti-Hebb + Decay)

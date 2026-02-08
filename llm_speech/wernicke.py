@@ -248,6 +248,12 @@ class WernickeMixin:
             if tag not in self.konzepte["Import"].semantische_features:
                 self.konzepte["Import"].semantische_features.append(tag)
 
+        if getattr(self, "embed_store_on_import", False):
+            try:
+                self.embed_add_text(text, meta={"source": source, "target": target})
+            except Exception:
+                pass
+
         nodes_after = len(self.konzepte)
         edges_after = sum(len(k.verbindungen) for k in self.konzepte.values()) + sum(len(v) for v in self.episodic_edges.values())
 

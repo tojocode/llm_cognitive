@@ -1,0 +1,38 @@
+# Glossar
+
+- **Aktivierung** — numerischer Wert, der die aktuelle Relevanz eines Konzepts im Denkvorgang beschreibt.
+- **Anti-Hebbian** — Lernregel, die Verbindungen abschwaecht, wenn sie nicht zum aktuellen Aktivierungsmuster passen.
+- **Autonomes Denken** — interner Denkzyklus ohne Frage von aussen; waehlt eigene Seeds und lernt daraus.
+- **Broca** — Sprachmodul, das Denkmuster in Saetze umsetzt (Templates oder LM).
+- **Cue** — Hinweisreiz aus der Frage, der bestimmte Konzepte aktiviert.
+- **Cue-Boost** — zusaetzlicher Aktivierungsfaktor, um aus Erinnerungen abgeleitete Cues zu verstaerken.
+- **Decay** — zeitabhaengiger Abfall der Aktivierung (z. B. exp(-dt/tau)).
+- **Denkmuster** — sortierte Liste aktivierter Konzepte, die die Antwort steuern.
+- **Embedding** — dichte oder sparse Vektorrepräsentation von Text fuer Aehnlichkeitsabfragen.
+- **Embedding-DB** — lokaler Speicher fuer Text + Embedding (hier JSON-basiert).
+- **Episodisches Gedaechtnis** — kurzlebige, ereignisnahe Verbindungen (schneller Verfall).
+- **Fokus** — die zentralen Konzepte einer Frage; sollen die Antwort steuern.
+- **Gate / Intent-Gating** — Gewichtung von Relationstypen je nach Fragetyp (Was/Warum/Wie).
+- **Gewicht (Edge Weight)** — Staerke einer Verbindung zwischen zwei Konzepten.
+- **Graph** — Netzwerk aus Knoten (Konzepten) und Kanten (Relationen).
+- **Hashing-Embedder** — Embedding-Strategie mit Hash-Funktionen statt trainierter Gewichte.
+- **Hebbian** — Lernregel, die Verbindungen staerkt, wenn Konzepte gemeinsam aktiv sind.
+- **Hybrid Cognition** — Kombination aus symbolischem Graph-Denken und neuronaler Repräsentation.
+- **Inhibition** — Absenkung der Aktivierung durch globale Konkurrenz (Winner-Take-Most).
+- **Kante / Relation** — gerichtete Verbindung zwischen zwei Konzepten mit Typ und Gewicht.
+- **Knoten / Konzept** — symbolische Einheit im Graphen (z. B. "Axolotl", "Lernen").
+- **Konsolidierung** — Ueberfuehrung episodischer Kanten in semantische Kanten.
+- **LM (Language Model)** — Sprachmodell zur natuerlichen Textgenerierung.
+- **Lexikon** — Alias-Liste fuer Wernicke (Text -> Konzept-ID).
+- **Memory Snippet** — kurze Erinnerungsaussage aus der Embedding-DB (wenn kein LM).
+- **Pattern Threshold** — Schwelle, ab der aktivierte Konzepte ins Denkmuster gelangen.
+- **Prompt** — Texteingabe fuer das LM (Steuerung der Ausgabe).
+- **Semantische Features** — Eigenschaften/Tags eines Konzepts (z. B. "Biologie", "Prozess").
+- **Semantisches Gedaechtnis** — stabilere, allgemeine Relationen (langsamer Verfall).
+- **Spreading Activation** — Ausbreitung von Aktivierung entlang von Kanten.
+- **Top-K Clamp** — Begrenzung auf die staerksten K aktivierten Konzepte.
+- **Trace** — Protokoll aktivierter Kanten, das die Antwort erklaerbar macht.
+- **Vector Memory** — Vektorbasierter Speicher fuer assoziatives Erinnern.
+- **Wernicke** — Verstehensmodul: Tokenisierung, Cues, Import, Lexikon.
+- **Winner-Take-Most** — Konkurrenzmechanismus: starke Aktivierungen unterdruecken schwache.
+- **Working Memory (WM)** — begrenzter Aktivierungspuffer fuer aktuelle Denkinhalte.
