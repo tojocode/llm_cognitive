@@ -40,7 +40,7 @@ from datetime import datetime
 from typing import Callable, Dict, List, Tuple, Optional, Iterable
 
 from llm_core.types import Verbindung, Konzept, WMItem, TraceItem
-from llm_core.embedding_db import EmbeddingDB
+from data.embedding_db import EmbeddingDB
 from llm_speech import BrocaMixin, WernickeMixin
 
 
