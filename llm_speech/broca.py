@@ -42,15 +42,16 @@ class BrocaMixin:
         labels = [l for l in k.labels if l]
         if not labels:
             return kid
-
         def score(lab: str) -> Tuple[int, int]:
             s = 0
-            if " " in lab:
+            if lab == kid:
+                s += 3
+            if lab[:1].isupper():
                 s += 2
-            if lab.lower() == lab:
+            if " " in lab:
                 s += 1
-            if lab != kid:
-                s += 1
+            if lab.islower():
+                s -= 1
             return (s, len(lab))
 
         labels.sort(key=score, reverse=True)
@@ -130,26 +131,55 @@ class BrocaMixin:
 
         # Optional: memory snippet for freieres Denken (ohne LM)
         if memory_hits:
-            snippet = self._memory_snippet(memory_hits)
+            snippet = self._memory_snippet(memory_hits, focus)
             if snippet:
                 sentences.append(snippet)
 
         s1 = " ".join(sentences)
         if self.explain_output and trace:
-            t0 = trace[0]
+            t0 = self._select_trace(trace, focus)
             s1 = s1.rstrip() + f" (Trace: {t0.src} → {t0.dst} / {t0.typ})"
         return s1
 
-    def _memory_snippet(self, memory_hits: List[Dict[str, object]]) -> str:
+    def _memory_snippet(self, memory_hits: List[Dict[str, object]], focus: List[str]) -> str:
         if not memory_hits:
             return ""
-        text = str(memory_hits[0].get("text") or "").strip()
+        focus_labels = set()
+        for f in focus or []:
+            focus_labels.add(self._label_for_output(f).lower())
+            focus_labels.add(f.lower())
+        text = ""
+        for hit in memory_hits:
+            score = float(hit.get("score") or 0.0)
+            if score < 0.3:
+                continue
+            t = str(hit.get("text") or "").strip()
+            if not t:
+                continue
+            if focus_labels:
+                tl = t.lower()
+                if not any(fl in tl for fl in focus_labels):
+                    continue
+            text = t
+            break
+        if not text:
+            return ""
         if not text:
             return ""
         # keep short
         if len(text) > 160:
             text = text[:157].rstrip() + "..."
         return "Erinnerung: " + text
+
+    def _select_trace(self, trace: List[TraceItem], focus: List[str]) -> TraceItem:
+        if not trace:
+            return TraceItem(tick=0, src="", dst="", typ="", contrib=0.0, layer="")
+        fset = set(focus or [])
+        if fset:
+            for t in trace:
+                if t.src in fset or t.dst in fset:
+                    return t
+        return trace[0]
 
     def _is_symmetric_type(self, typ: str, template: str) -> bool:
         # Treat unknown templates as symmetric to avoid reversed duplicates
