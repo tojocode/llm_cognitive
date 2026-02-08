@@ -63,6 +63,8 @@ def _interactive(engine: KognitivesModell, semantic_path: str, episodic_path: st
     print("  /import <pfad> [semantic|episodic]   -> Text importieren & lernen")
     print("  /save                               -> Memory speichern")
     print("  /think [n]                          -> Autonom denken (n Zyklen)")
+    print("  /lex add <id> <alias...>            -> Alias im Lexikon")
+    print("  /lex save                           -> Lexikon speichern")
     print("  /help                               -> Hilfe")
     print("  /exit                               -> Ende")
     print("-" * 70)
@@ -94,6 +96,8 @@ def _interactive(engine: KognitivesModell, semantic_path: str, episodic_path: st
                 print("  /import <pfad> [semantic|episodic]")
                 print("  /save")
                 print("  /think [n]")
+                print("  /lex add <id> <alias...>")
+                print("  /lex save")
                 print("  /exit")
                 continue
 
@@ -117,6 +121,30 @@ def _interactive(engine: KognitivesModell, semantic_path: str, episodic_path: st
                     print(f"❌ Datei nicht gefunden: {p}")
                 except Exception as e:
                     print(f"❌ Import-Fehler: {e}")
+                continue
+
+            if cmd == "/lex":
+                if len(parts) < 2:
+                    print("⚠️ Nutzung: /lex add <id> <alias...> | /lex save")
+                    continue
+                sub = parts[1].lower()
+                if sub == "add":
+                    if len(parts) < 4:
+                        print("⚠️ Nutzung: /lex add <id> <alias...>")
+                        continue
+                    cid = parts[2]
+                    alias = " ".join(parts[3:]).strip()
+                    ok = engine.lexikon_add(cid, alias)
+                    if ok:
+                        print(f"✓ Lexikon: {alias} -> {cid}")
+                    else:
+                        print("❌ Lexikon-Fehler: id/alias ungültig")
+                    continue
+                if sub == "save":
+                    engine.speichere_lexikon()
+                    print("✓ Lexikon gespeichert")
+                    continue
+                print("⚠️ Nutzung: /lex add <id> <alias...> | /lex save")
                 continue
 
             if cmd == "/think":
@@ -158,6 +186,7 @@ def main():
     parser.add_argument("--import", dest="import_path", default=None, help="Textdatei importieren (UTF-8)")
     parser.add_argument("--to", dest="import_target", default="episodic", choices=["semantic", "episodic"], help="Ziel-Layer für Import")
     parser.add_argument("--llm-cmd", dest="llm_cmd", default=None, help="Shell-Command für lokales LM (liest Prompt von STDIN)")
+    parser.add_argument("--lexikon", dest="lexikon_path", default=None, help="Pfad zu lexikon.json")
     parser.add_argument("--no-lm", action="store_true", help="LM-Output deaktivieren (Templates verwenden)")
     parser.add_argument("--no-tests", action="store_true", help="Starttests überspringen")
     parser.add_argument("--no-interactive", action="store_true", help="Interaktivmodus überspringen")
@@ -174,7 +203,13 @@ def main():
     _print_banner("3.1.4")
 
 
-    engine = KognitivesModell(semantic, episodic_datei=episodic, lm_cmd=args.llm_cmd)
+    lexikon_path = args.lexikon_path or "lexikon.json"
+    engine = KognitivesModell(
+        semantic,
+        episodic_datei=episodic,
+        lm_cmd=args.llm_cmd,
+        lexikon_datei=lexikon_path,
+    )
     if args.no_lm:
         engine.use_lm_default = False
 

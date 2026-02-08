@@ -84,6 +84,7 @@ class KognitivesModell:
         episodic_datei: Optional[str] = "memory_episodic.jsonl",
         lm_cmd: Optional[str] = None,
         lm_callable: Optional[Callable[[Dict[str, object]], str]] = None,
+        lexikon_datei: Optional[str] = "lexikon.json",
     ):
         self.konzepte: Dict[str, Konzept] = {}
         self.episodic_edges: Dict[str, List[Verbindung]] = {}
@@ -142,10 +143,16 @@ class KognitivesModell:
         self.explain_output = True
         self.broca_max_sents = 3
 
+        # Wernicke-Lexikon (Alias -> Konzept-ID)
+        self.lexikon_datei = lexikon_datei
+        self.lexikon: Dict[str, str] = {}
+
         if self.semantic_datei:
             self.modell_laden(self.semantic_datei, episodic=False)
         if self.episodic_datei:
             self.modell_laden(self.episodic_datei, episodic=True)
+        if self.lexikon_datei:
+            self.lade_lexikon(self.lexikon_datei)
 
     # -------------------------
     # Unicode / Pfade / Normalisierung
@@ -199,6 +206,49 @@ class KognitivesModell:
         if os.path.isabs(p):
             return p
         return os.path.join(self.base_dir, p)
+
+    def lade_lexikon(self, datei: str):
+        pfad = self._resolve_path(datei)
+        if not os.path.exists(pfad):
+            return
+        try:
+            with open(pfad, "r", encoding="utf-8") as f:
+                data = json.load(f)
+        except Exception:
+            return
+        lex: Dict[str, str] = {}
+        if isinstance(data, dict):
+            for alias, cid in data.items():
+                a = self._norm_label(str(alias))
+                c = self._nfc(str(cid)).strip()
+                if a and c:
+                    lex[a] = c
+        elif isinstance(data, list):
+            for item in data:
+                if not isinstance(item, dict):
+                    continue
+                alias = item.get("alias")
+                cid = item.get("id")
+                a = self._norm_label(str(alias)) if alias else ""
+                c = self._nfc(str(cid)).strip() if cid else ""
+                if a and c:
+                    lex[a] = c
+        self.lexikon = lex
+
+    def speichere_lexikon(self, datei: Optional[str] = None):
+        target = datei or self.lexikon_datei or "lexikon.json"
+        pfad = self._resolve_path(target)
+        with open(pfad, "w", encoding="utf-8") as f:
+            json.dump(self.lexikon, f, ensure_ascii=False, indent=2)
+
+    def lexikon_add(self, concept_id: str, alias: str) -> bool:
+        cid = self._nfc(concept_id).strip()
+        a = self._norm_label(alias)
+        if not cid or not a:
+            return False
+        self.lexikon[a] = cid
+        self._ensure_label(cid, alias)
+        return True
 
     def _canon_type(self, t: str) -> str:
         t0 = self._nfc(t).strip()
@@ -406,6 +456,22 @@ class KognitivesModell:
         tokset = {t for t in tokset if t not in stop}
 
         cues: Dict[str, float] = {}
+
+        if self.lexikon:
+            for alias, cid in self.lexikon.items():
+                if not alias:
+                    continue
+                parts = [p for p in alias.split(" ") if p]
+                if not parts:
+                    continue
+                if len(parts) == 1:
+                    if parts[0] in tokset:
+                        cues[cid] = max(cues.get(cid, 0.0), 0.93)
+                        self._ensure_label(cid, alias)
+                else:
+                    if all(p in tokset for p in parts):
+                        cues[cid] = max(cues.get(cid, 0.0), 0.90)
+                        self._ensure_label(cid, alias)
 
         for kid, k in self.konzepte.items():
             kname = kid.lower()
@@ -1029,6 +1095,10 @@ class KognitivesModell:
         if not p:
             return ""
         p_norm = self._norm_label(p)
+        if p_norm and p_norm in self.lexikon:
+            cid = self.lexikon[p_norm]
+            self._ensure_label(cid, p)
+            return cid
         if p_norm:
             for kid, k in self.konzepte.items():
                 for lab in (k.labels or []):
