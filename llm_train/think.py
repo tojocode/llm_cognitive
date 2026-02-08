@@ -12,6 +12,7 @@ if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
 from llm_core.engine import KognitivesModell
+from llm_core.types import Verbindung
 
 
 def _format_memory_event(result: dict) -> str:
@@ -63,7 +64,59 @@ def _jsonable(result: dict, idx: int) -> Dict[str, object]:
     }
 
 
+def _rebuild_from_semantic(semantic_path: str, episodic_path: str, lexikon_path: str, embeddings_path: str):
+    engine = KognitivesModell(
+        semantic_path,
+        episodic_datei=None,
+        lexikon_datei=None,
+        embed_db_path=embeddings_path,
+    )
+
+    # rebuild episodic from semantic
+    engine.episodic_edges = {}
+    for src, k in engine.konzepte.items():
+        for e in k.verbindungen:
+            engine.episodic_edges.setdefault(src, []).append(
+                Verbindung(ziel=e.ziel, gewicht=e.gewicht, typ=e.typ)
+            )
+
+    # rebuild lexikon from labels
+    lex = {}
+    for cid, k in engine.konzepte.items():
+        labels = k.labels or [cid]
+        for lab in labels:
+            norm = engine._norm_label(lab)
+            if norm and norm not in lex:
+                lex[norm] = cid
+    engine.lexikon = lex
+    engine.lexikon_datei = lexikon_path
+    engine.speichere_lexikon(lexikon_path)
+
+    # rebuild embeddings from semantic nodes/edges
+    if engine.embed_db:
+        engine.embed_db.items = []
+        for cid, k in engine.konzepte.items():
+            labels = k.labels or [cid]
+            feats = k.semantische_features or []
+            if feats:
+                text = f"{' / '.join(labels)}. Features: {', '.join(feats)}."
+            else:
+                text = f"{' / '.join(labels)}."
+            engine.embed_db.add(text, meta={"type": "node", "id": cid})
+        for src, k in engine.konzepte.items():
+            for e in k.verbindungen:
+                text = f"{src} {e.typ} {e.ziel}"
+                engine.embed_db.add(text, meta={"type": "edge", "src": src, "dst": e.ziel, "rel": e.typ})
+        engine.embed_db.save()
+
+    # save rebuilt semantic + episodic
+    engine.speichere_model(semantic_path, episodic_datei=episodic_path)
+
+
 def main():
+    # allow "/new" as alias for "--new"
+    sys.argv = ["--new" if a.lower() == "/new" else a for a in sys.argv]
+
     parser = argparse.ArgumentParser(description="Autonomous thinking controller")
     parser.add_argument("-n", "--iterations", type=int, default=5, help="number of think iterations")
     parser.add_argument("--seed", type=int, default=None, help="random seed for reproducibility")
@@ -71,6 +124,7 @@ def main():
     parser.add_argument("--episodic", default="data/memory_episodic.jsonl", help="path to episodic memory")
     parser.add_argument("--lexikon", default="data/lexikon.json", help="path to lexicon")
     parser.add_argument("--embeddings", default="data/embeddings.json", help="path to embeddings db")
+    parser.add_argument("--new", action="store_true", help="rebuild all json files from semantic memory")
     parser.add_argument("--no-learn", action="store_true", help="disable learning during think")
     parser.add_argument("--no-embed", action="store_true", help="disable embedding memory")
     parser.add_argument("--show-seeds", action="store_true", help="print selected seeds")
@@ -84,6 +138,10 @@ def main():
 
     if args.seed is not None:
         random.seed(args.seed)
+
+    if args.new:
+        _rebuild_from_semantic(args.semantic, args.episodic, args.lexikon, args.embeddings)
+        return
 
     engine = KognitivesModell(
         args.semantic,
