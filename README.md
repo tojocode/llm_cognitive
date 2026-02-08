@@ -15,6 +15,8 @@ llm_cognitive/
     lexikon.json
   main.py            # Interaktiver Runner
   client.py          # Minimaler CLI-Client
+  llm_train/
+    think_controler.py # Think-Controller (CLI)
   cognitive_engine.py# Legacy-Wrapper
 ```
 
@@ -22,4 +24,5 @@ llm_cognitive/
 ```
 python main.py
 python client.py "Warum ist der Himmel blau?"
+python llm_train/think_controler.py
 ```
