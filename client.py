@@ -19,13 +19,20 @@ def _read_stdin() -> str:
 def _run_think(engine: KognitivesModell, n: int):
     results = engine.autonom_denken(steps=n)
     for i, r in enumerate(results, 1):
-        text = engine.versprachliche(
-            r.get("denkmuster") or [],
-            intent="OTHER",
-            trace=r.get("trace") or [],
-            use_lm=engine.use_lm_default,
-        )
-        print(f"[THINK {i}] {text}")
+        mem = _format_memory_event(r)
+        print(f"[THINK {i}] {mem}")
+
+
+def _format_memory_event(result: dict) -> str:
+    trace = result.get("trace") or []
+    if trace:
+        t0 = trace[0]
+        return f"Erinnerung: {t0.src} -> {t0.dst} ({t0.typ}, {t0.layer})"
+    pattern = result.get("denkmuster") or []
+    if pattern:
+        top = [k for k, _ in pattern[:3]]
+        return "Erinnerung: aktiviert " + ", ".join(top)
+    return "Erinnerung: kein Ereignis"
 
 
 def _chat_loop(engine: KognitivesModell, semantic_path: str, episodic_path: str, lexikon_path: str):
