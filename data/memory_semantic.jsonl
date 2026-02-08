@@ -1,4 +1,4 @@
-{"t": "meta", "format": "memory_jsonl", "encoding": "utf-8", "umlaute": true, "created_at": "2026-02-08T15:59:03", "counts": {"nodes": 31, "edges": 129}, "source_rebuilt_from": "memory_semantic.jsonl"}
+{"t": "meta", "format": "memory_jsonl", "encoding": "utf-8", "umlaute": true, "created_at": "2026-02-08T15:59:03", "counts": {"nodes": 40, "edges": 138}, "source_rebuilt_from": "memory_semantic.jsonl"}
 {"t": "node", "id": "Atmosphäre", "features": ["Erde", "Gas", "Luft", "Schicht"]}
 {"t": "node", "id": "Atmung", "features": ["Biologie", "Chemie", "Prozess"]}
 {"t": "node", "id": "Auge", "features": ["Biologie", "Organ", "Sinnesorgan"]}
@@ -30,6 +30,15 @@
 {"t": "node", "id": "Wurzeln", "features": ["Natur", "Organ", "Pflanze", "Struktur"]}
 {"t": "node", "id": "Wärmie", "features": ["Energie", "Strahlung", "Temperatur"]}
 {"t": "node", "id": "Ökosystem", "features": ["Natur", "Organisation", "System"]}
+{"t": "node", "id": "Amphibie", "features": ["Biologie", "Lebewesen", "Tier", "Wirbeltier"]}
+{"t": "node", "id": "Axolotl", "features": ["Amphibie", "Salamander", "Tier", "Wasser"]}
+{"t": "node", "id": "Aufmerksamkeit", "features": ["Fokus", "Kognition", "Prozess"]}
+{"t": "node", "id": "Erfahrung", "features": ["Lernen", "Wissen"]}
+{"t": "node", "id": "Gedächtnis", "features": ["Gehirn", "Kognition", "Speicher"]}
+{"t": "node", "id": "Lernen", "features": ["Gedächtnis", "Kognition", "Prozess"]}
+{"t": "node", "id": "Salamander", "features": ["Amphibie", "Tier"]}
+{"t": "node", "id": "Tier", "features": ["Biologie", "Lebewesen"]}
+{"t": "node", "id": "Wiederholung", "features": ["Lernen", "Übung"]}
 {"t": "edge", "src": "Baum", "dst": "Wald", "w": 0.9, "type": "teil_von"}
 {"t": "edge", "src": "Baum", "dst": "Blätter", "w": 0.85, "type": "hat"}
 {"t": "edge", "src": "Baum", "dst": "Wurzeln", "w": 0.88, "type": "hat"}
@@ -159,3 +168,12 @@
 {"t": "edge", "src": "Lebensraum", "dst": "Organismen", "w": 0.9, "type": "brauchen"}
 {"t": "edge", "src": "Lebensraum", "dst": "Wald", "w": 0.85, "type": "ist_typ"}
 {"t": "edge", "src": "Lebensraum", "dst": "Biodiversität", "w": 0.8, "type": "unterstützt"}
+{"t": "edge", "src": "Axolotl", "dst": "Amphibie", "w": 0.95, "type": "ist"}
+{"t": "edge", "src": "Axolotl", "dst": "Salamander", "w": 0.9, "type": "gehört_zu"}
+{"t": "edge", "src": "Axolotl", "dst": "Wasser", "w": 0.85, "type": "lebt_in"}
+{"t": "edge", "src": "Salamander", "dst": "Amphibie", "w": 0.9, "type": "ist"}
+{"t": "edge", "src": "Amphibie", "dst": "Tier", "w": 0.9, "type": "ist"}
+{"t": "edge", "src": "Lernen", "dst": "Gedächtnis", "w": 0.92, "type": "prozess"}
+{"t": "edge", "src": "Lernen", "dst": "Wiederholung", "w": 0.9, "type": "benötigt"}
+{"t": "edge", "src": "Lernen", "dst": "Aufmerksamkeit", "w": 0.85, "type": "benötigt"}
+{"t": "edge", "src": "Lernen", "dst": "Erfahrung", "w": 0.85, "type": "benötigt"}
