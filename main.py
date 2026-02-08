@@ -17,7 +17,7 @@ import os
 import argparse
 
 
-from cognitive_engine import KognitivesModell
+from llm_core.engine import KognitivesModell
 
 
 
@@ -33,8 +33,8 @@ def _print_banner(ver: str):
 
 def _default_paths():
     base_dir = os.path.dirname(os.path.abspath(__file__))
-    semantic = os.path.join(base_dir, "memory_semantic.jsonl")
-    episodic = os.path.join(base_dir, "memory_episodic.jsonl")
+    semantic = os.path.join(base_dir, "data", "memory_semantic.jsonl")
+    episodic = os.path.join(base_dir, "data", "memory_episodic.jsonl")
     return semantic, episodic
 
 
@@ -203,7 +203,7 @@ def main():
     _print_banner("3.1.4")
 
 
-    lexikon_path = args.lexikon_path or "lexikon.json"
+    lexikon_path = args.lexikon_path or os.path.join("data", "lexikon.json")
     engine = KognitivesModell(
         semantic,
         episodic_datei=episodic,

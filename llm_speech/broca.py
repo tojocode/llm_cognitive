@@ -1,0 +1,161 @@
+# -*- coding: utf-8 -*-
+from __future__ import annotations
+
+import os
+import subprocess
+from typing import Dict, List, Optional, Tuple
+
+from llm_core.types import Konzept, TraceItem
+
+
+class BrocaMixin:
+    # -------------------------
+    # Init
+    # -------------------------
+
+    def _init_broca(self, lm_cmd: Optional[str], lm_callable):
+        self.lm_cmd = lm_cmd or os.environ.get("LLM_CMD")
+        self.lm_callable = lm_callable
+        self.lm_timeout = 12
+        self.use_lm_default = True
+        self.explain_output = True
+        self.broca_max_sents = 3
+
+    # -------------------------
+    # Output
+    # -------------------------
+
+    def _label_for_output(self, kid: str) -> str:
+        k = self.konzepte.get(kid)
+        if not k or not k.labels:
+            return kid
+        labels = [l for l in k.labels if l]
+        if not labels:
+            return kid
+
+        def score(lab: str) -> Tuple[int, int]:
+            s = 0
+            if " " in lab:
+                s += 2
+            if lab.lower() == lab:
+                s += 1
+            if lab != kid:
+                s += 1
+            return (s, len(lab))
+
+        labels.sort(key=score, reverse=True)
+        return labels[0]
+
+    def versprachliche(
+        self,
+        denkmuster: List[Tuple[str, float]],
+        intent: str = "OTHER",
+        trace: Optional[List[TraceItem]] = None,
+        use_lm: bool = True,
+    ) -> str:
+        if not denkmuster:
+            return "Ich weiß das nicht."
+        focus = [k for k, _ in denkmuster[:2]]
+        context = [k for k, _ in denkmuster[2:8]]
+
+        if use_lm:
+            lm_text = self._lm_generate(denkmuster, intent=intent, trace=trace)
+            if lm_text:
+                if self.explain_output and trace:
+                    t0 = trace[0]
+                    lm_text = lm_text.rstrip() + f" (Trace: {t0.src} → {t0.dst} / {t0.typ})"
+                return lm_text
+
+        sentences: List[str] = []
+        for rel in self._rank_candidate_edges(denkmuster, intent=intent)[: self.broca_max_sents]:
+            tpl = self._template_for_type(rel["typ"])
+            sentences.append(tpl.format(self._label_for_output(rel["src"]), self._label_for_output(rel["dst"])))
+
+        if not sentences and denkmuster:
+            sentences.append(f"Das zentrale Konzept ist {self._label_for_output(denkmuster[0][0])}.")
+
+        extra = [self._label_for_output(k) for k in context if k not in focus][:3]
+        if extra:
+            sentences.append("Daneben sind auch " + ", ".join(extra) + " relevant.")
+
+        s1 = " ".join(sentences)
+        if self.explain_output and trace:
+            t0 = trace[0]
+            s1 = s1.rstrip() + f" (Trace: {t0.src} → {t0.dst} / {t0.typ})"
+        return s1
+
+    def _template_for_type(self, typ: str) -> str:
+        templates = {
+            "teil_von": "{} ist ein wesentlicher Teil von {}.",
+            "hat": "{} hat oder besitzt {}.",
+            "ist": "{} ist im Grunde {}.",
+            "eigenschaft": "{} hat die charakteristische Eigenschaft {}.",
+            "prozess": "{} ist ein Prozess, in dem {} zentral ist.",
+            "ermöglicht": "{} ermöglicht {}.",
+            "besteht_aus": "{} setzt sich zusammen aus {}.",
+            "benötigt": "{} benötigt {} als Voraussetzung.",
+            "braucht": "{} braucht {} zum Funktionieren.",
+            "verursacht": "{} verursacht {}.",
+            "notwendig_für": "{} ist notwendig für {}.",
+            "gehört_zu": "{} gehört zu {}.",
+            "lebt_in": "{} lebt in {}.",
+            "gelernt": "{} und {} stehen in enger Beziehung.",
+            "assoziation": "{} steht in Zusammenhang mit {}.",
+        }
+        return templates.get(typ, "{} und {} sind eng miteinander verbunden.")
+
+    def _rank_candidate_edges(self, denkmuster: List[Tuple[str, float]], intent: str) -> List[Dict[str, object]]:
+        aktive = {k for k, _ in denkmuster}
+        out: List[Dict[str, object]] = []
+        for src in aktive:
+            for e in self.konzepte.get(src, Konzept(src)).verbindungen:
+                if e.ziel in aktive:
+                    score = e.gewicht * self._gate(e.typ, intent)
+                    out.append({"score": score, "src": src, "dst": e.ziel, "typ": e.typ, "layer": "semantic"})
+            for e in self.episodic_edges.get(src, []):
+                if e.ziel in aktive:
+                    score = (e.gewicht * 0.9) * self._gate(e.typ, intent)
+                    out.append({"score": score, "src": src, "dst": e.ziel, "typ": e.typ, "layer": "episodic"})
+        out.sort(key=lambda x: x["score"], reverse=True)
+        return out
+
+    def _lm_generate(self, denkmuster: List[Tuple[str, float]], intent: str, trace: Optional[List[TraceItem]]) -> Optional[str]:
+        if not (self.lm_callable or self.lm_cmd):
+            return None
+        aktive = [self._label_for_output(k) for k, _ in denkmuster[:8]]
+        rels = self._rank_candidate_edges(denkmuster, intent=intent)[:5]
+        rel_lines = [
+            f"{self._label_for_output(r['src'])} -{r['typ']}-> {self._label_for_output(r['dst'])} (w={r['score']:.2f}, {r['layer']})"
+            for r in rels
+        ]
+        prompt = (
+            "Du bist Broca und formulierst kurze, natürliche deutsche Sätze.\n"
+            "Nutze die folgenden Konzepte und Relationen, erfinde keine neuen Fakten.\n"
+            "Gib 1 bis 3 Sätze aus, keine Listen.\n\n"
+            f"Intent: {intent}\n"
+            f"Konzepte: {', '.join(aktive)}\n"
+            "Relationen:\n" + "\n".join(rel_lines) + "\n"
+        )
+
+        if self.lm_callable:
+            try:
+                txt = self.lm_callable({"prompt": prompt, "intent": intent, "concepts": aktive, "relations": rels, "trace": trace})
+                return txt.strip() if isinstance(txt, str) and txt.strip() else None
+            except Exception:
+                return None
+
+        try:
+            result = subprocess.run(
+                self.lm_cmd,
+                input=prompt,
+                text=True,
+                capture_output=True,
+                shell=True,
+                timeout=self.lm_timeout,
+            )
+            out = (result.stdout or "").strip()
+            if out:
+                return out
+        except Exception:
+            return None
+        return None
