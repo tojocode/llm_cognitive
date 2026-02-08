@@ -73,18 +73,27 @@ class BrocaMixin:
 
         sentences: List[str] = []
         seen = set()
+        used_ids = set()
         focus_edges = self._rank_focus_edges(focus, intent=intent)
         ranked = focus_edges if focus_edges else self._rank_candidate_edges(denkmuster, intent=intent, focus_ids=focus)
         for rel in ranked:
             if len(sentences) >= self.broca_max_sents:
                 break
             tpl = self._template_for_type(rel["typ"])
-            s = tpl.format(self._label_for_output(rel["src"]), self._label_for_output(rel["dst"]))
-            key = s.strip().lower()
+            src_label = self._label_for_output(rel["src"])
+            dst_label = self._label_for_output(rel["dst"])
+            s = tpl.format(src_label, dst_label)
+            sym = self._is_symmetric_type(rel["typ"], tpl)
+            if sym:
+                key = "sym:" + "|".join(sorted([src_label.lower(), dst_label.lower()]))
+            else:
+                key = f"dir:{src_label.lower()}->{dst_label.lower()}:{rel['typ']}"
             if key in seen:
                 continue
             seen.add(key)
             sentences.append(s)
+            used_ids.add(rel["src"])
+            used_ids.add(rel["dst"])
 
         if not sentences and denkmuster:
             sentences.append(f"Das zentrale Konzept ist {self._label_for_output(denkmuster[0][0])}.")
@@ -94,6 +103,8 @@ class BrocaMixin:
         if focus_set:
             for k in context:
                 if k in focus_set:
+                    continue
+                if k in used_ids:
                     continue
                 # only allow extras that are directly linked to focus concepts
                 linked = False
@@ -116,25 +127,71 @@ class BrocaMixin:
             s1 = s1.rstrip() + f" (Trace: {t0.src} → {t0.dst} / {t0.typ})"
         return s1
 
+    def _is_symmetric_type(self, typ: str, template: str) -> bool:
+        # Treat unknown templates as symmetric to avoid reversed duplicates
+        symmetric = {"assoziation", "gelernt"}
+        if typ in symmetric:
+            return True
+        if template == "{} und {} sind eng miteinander verbunden.":
+            return True
+        return False
+
     def _template_for_type(self, typ: str) -> str:
+        t = self._nfc(typ) if hasattr(self, "_nfc") else typ
         templates = {
             "teil_von": "{} ist ein wesentlicher Teil von {}.",
             "hat": "{} hat oder besitzt {}.",
             "ist": "{} ist im Grunde {}.",
             "eigenschaft": "{} hat die charakteristische Eigenschaft {}.",
+            "eigenschaft_von": "{} ist eine Eigenschaft von {}.",
             "prozess": "{} ist ein Prozess, in dem {} zentral ist.",
             "ermöglicht": "{} ermöglicht {}.",
+            "ermoeglicht": "{} ermöglicht {}.",
             "besteht_aus": "{} setzt sich zusammen aus {}.",
             "benötigt": "{} benötigt {} als Voraussetzung.",
+            "benötigt": "{} benötigt {} als Voraussetzung.",
+            "benoetigt": "{} benötigt {} als Voraussetzung.",
             "braucht": "{} braucht {} zum Funktionieren.",
             "verursacht": "{} verursacht {}.",
             "notwendig_für": "{} ist notwendig für {}.",
+            "notwendig_für": "{} ist notwendig für {}.",
+            "notwendig_fuer": "{} ist notwendig für {}.",
             "gehört_zu": "{} gehört zu {}.",
+            "gehoert_zu": "{} gehört zu {}.",
             "lebt_in": "{} lebt in {}.",
             "gelernt": "{} und {} stehen in enger Beziehung.",
             "assoziation": "{} steht in Zusammenhang mit {}.",
+            "farbe": "{} hat die Farbe {}.",
+            "enthält": "{} enthält {}.",
+            "enthält": "{} enthält {}.",
+            "enthaelt": "{} enthält {}.",
+            "durch": "{} ist durch {} geprägt.",
+            "streut": "{} streut {}.",
+            "verstärkt": "{} verstärkt {}.",
+            "verstaerkt": "{} verstärkt {}.",
+            "sichtbar_in": "{} ist sichtbar in {}.",
+            "sichtbar_für": "{} ist sichtbar für {}.",
+            "sichtbar_für": "{} ist sichtbar für {}.",
+            "sichtbar_fu": "{} ist sichtbar für {}.",
+            "durchlässig_für": "{} ist durchlässig für {}.",
+            "durchlässig_für": "{} ist durchlässig für {}.",
+            "durchlaessig_fuer": "{} ist durchlässig für {}.",
+            "kann_erleiden": "{} kann {} erleiden.",
+            "verursacht_durch": "{} wird durch {} verursacht.",
+            "verursacht_von": "{} wird durch {} verursacht.",
+            "zeigt": "{} zeigt {}.",
+            "filtert": "{} filtert {}.",
+            "ist_typ": "{} ist ein Typ von {}.",
+            "in": "{} ist in {}.",
+            "von": "{} stammt von {}.",
+            "absorbiert": "{} absorbiert {}.",
+            "wahrgenommen_als": "{} wird als {} wahrgenommen.",
+            "wahrgenommen_durch": "{} wird durch {} wahrgenommen.",
+            "bestimmt": "{} bestimmt {}.",
+            "bestimmt_durch": "{} wird durch {} bestimmt.",
+            "beeinflusst": "{} beeinflusst {}.",
         }
-        return templates.get(typ, "{} und {} sind eng miteinander verbunden.")
+        return templates.get(t, "{} und {} sind eng miteinander verbunden.")
 
     def _rank_candidate_edges(
         self,
