@@ -62,6 +62,7 @@ def _interactive(engine: KognitivesModell, semantic_path: str, episodic_path: st
     print("Commands:")
     print("  /import <pfad> [semantic|episodic]   -> Text importieren & lernen")
     print("  /save                               -> Memory speichern")
+    print("  /think [n]                          -> Autonom denken (n Zyklen)")
     print("  /help                               -> Hilfe")
     print("  /exit                               -> Ende")
     print("-" * 70)
@@ -92,6 +93,7 @@ def _interactive(engine: KognitivesModell, semantic_path: str, episodic_path: st
                 print("Commands:")
                 print("  /import <pfad> [semantic|episodic]")
                 print("  /save")
+                print("  /think [n]")
                 print("  /exit")
                 continue
 
@@ -117,6 +119,27 @@ def _interactive(engine: KognitivesModell, semantic_path: str, episodic_path: st
                     print(f"❌ Import-Fehler: {e}")
                 continue
 
+            if cmd == "/think":
+                n = 1
+                if len(parts) >= 2:
+                    try:
+                        n = int(parts[1])
+                    except Exception:
+                        n = 1
+                results = engine.autonom_denken(steps=n)
+                for i, r in enumerate(results, 1):
+                    seeds = [engine._label_for_output(s) for s in (r.get("seeds") or [])]
+                    if seeds:
+                        print(f"[THINK {i}] Seeds: {', '.join(seeds)}")
+                    text = engine.versprachliche(
+                        r.get("denkmuster") or [],
+                        intent="OTHER",
+                        trace=r.get("trace") or [],
+                        use_lm=engine.use_lm_default,
+                    )
+                    print(f"[THINK {i}] {text}")
+                continue
+
 
             print("⚠️ Unbekannter Command. /help")
             continue
@@ -134,6 +157,8 @@ def main():
     parser.add_argument("--episodic", default=None, help="Pfad zu memory_episodic.jsonl")
     parser.add_argument("--import", dest="import_path", default=None, help="Textdatei importieren (UTF-8)")
     parser.add_argument("--to", dest="import_target", default="episodic", choices=["semantic", "episodic"], help="Ziel-Layer für Import")
+    parser.add_argument("--llm-cmd", dest="llm_cmd", default=None, help="Shell-Command für lokales LM (liest Prompt von STDIN)")
+    parser.add_argument("--no-lm", action="store_true", help="LM-Output deaktivieren (Templates verwenden)")
     parser.add_argument("--no-tests", action="store_true", help="Starttests überspringen")
     parser.add_argument("--no-interactive", action="store_true", help="Interaktivmodus überspringen")
     args = parser.parse_args()
@@ -149,7 +174,9 @@ def main():
     _print_banner("3.1.4")
 
 
-    engine = KognitivesModell(semantic, episodic_datei=episodic)
+    engine = KognitivesModell(semantic, episodic_datei=episodic, lm_cmd=args.llm_cmd)
+    if args.no_lm:
+        engine.use_lm_default = False
 
 
     if args.import_path:

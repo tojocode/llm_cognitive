@@ -33,11 +33,13 @@ from __future__ import annotations
 import json
 import math
 import os
+import random
 import re
+import subprocess
 import unicodedata
 from dataclasses import dataclass, field
 from datetime import datetime
-from typing import Dict, List, Tuple, Optional, Iterable
+from typing import Callable, Dict, List, Tuple, Optional, Iterable
 
 
 @dataclass
@@ -50,6 +52,7 @@ class Verbindung:
 @dataclass
 class Konzept:
     id: str
+    labels: List[str] = field(default_factory=list)
     semantische_features: List[str] = field(default_factory=list)
     verbindungen: List[Verbindung] = field(default_factory=list)  # semantic outbound
     aktivierung: float = 0.0
@@ -75,7 +78,13 @@ class TraceItem:
 
 
 class KognitivesModell:
-    def __init__(self, modell_datei: str = "memory_semantic.jsonl", episodic_datei: Optional[str] = "memory_episodic.jsonl"):
+    def __init__(
+        self,
+        modell_datei: str = "memory_semantic.jsonl",
+        episodic_datei: Optional[str] = "memory_episodic.jsonl",
+        lm_cmd: Optional[str] = None,
+        lm_callable: Optional[Callable[[Dict[str, object]], str]] = None,
+    ):
         self.konzepte: Dict[str, Konzept] = {}
         self.episodic_edges: Dict[str, List[Verbindung]] = {}
         self.trace: List[TraceItem] = []
@@ -120,6 +129,19 @@ class KognitivesModell:
         self.triangle_boost = 1.05
         self.triangle_create_w = 0.18
 
+        # Konsolidierung episodic -> semantic
+        self.consolidate_threshold = 0.55
+        self.consolidate_ratio = 0.7
+        self.consolidate_boost = 0.04
+
+        # Broca / LM (Hybrid)
+        self.lm_cmd = lm_cmd or os.environ.get("LLM_CMD")
+        self.lm_callable = lm_callable
+        self.lm_timeout = 12
+        self.use_lm_default = True
+        self.explain_output = True
+        self.broca_max_sents = 3
+
         if self.semantic_datei:
             self.modell_laden(self.semantic_datei, episodic=False)
         if self.episodic_datei:
@@ -131,6 +153,45 @@ class KognitivesModell:
 
     def _nfc(self, s: str) -> str:
         return unicodedata.normalize("NFC", s) if isinstance(s, str) else ""
+
+    def _norm_label(self, s: str) -> str:
+        t = self._nfc(s).strip().lower()
+        t = re.sub(r"[\.,;:!?()\[\]{}<>\"'`]", " ", t)
+        t = re.sub(r"\s+", " ", t).strip()
+        for a in ["der ", "die ", "das ", "ein ", "eine ", "einen ", "einem ", "einer ", "den ", "dem ", "des "]:
+            if t.startswith(a):
+                t = t[len(a):].strip()
+                break
+        return t
+
+    def _ensure_label(self, kid: str, label: str):
+        if kid not in self.konzepte:
+            return
+        lab = self._nfc(label).strip()
+        if not lab:
+            return
+        labs = self.konzepte[kid].labels
+        if lab not in labs and len(labs) < 10:
+            labs.append(lab)
+
+    def _label_for_output(self, kid: str) -> str:
+        k = self.konzepte.get(kid)
+        if not k or not k.labels:
+            return kid
+        labels = [l for l in k.labels if l]
+        if not labels:
+            return kid
+        def score(lab: str) -> Tuple[int, int]:
+            s = 0
+            if " " in lab:
+                s += 2
+            if lab.lower() == lab:
+                s += 1
+            if lab != kid:
+                s += 1
+            return (s, len(lab))
+        labels.sort(key=score, reverse=True)
+        return labels[0]
 
     def _resolve_path(self, p: str) -> str:
         if not p:
@@ -212,7 +273,7 @@ class KognitivesModell:
                     verbindungs_str = teile[2].strip()
 
                     if konzept_id not in self.konzepte:
-                        self.konzepte[konzept_id] = Konzept(id=konzept_id, semantische_features=features)
+                        self.konzepte[konzept_id] = Konzept(id=konzept_id, labels=[konzept_id], semantische_features=features)
                     else:
                         if features:
                             existing = set(self.konzepte[konzept_id].semantische_features)
@@ -220,6 +281,8 @@ class KognitivesModell:
                                 if ft not in existing:
                                     self.konzepte[konzept_id].semantische_features.append(ft)
                                     existing.add(ft)
+                        if not self.konzepte[konzept_id].labels:
+                            self.konzepte[konzept_id].labels = [konzept_id]
 
                     edges = self._parse_verbindungen(verbindungs_str)
                     if episodic:
@@ -254,8 +317,12 @@ class KognitivesModell:
                             continue
                         feats = obj.get("features") or []
                         feats = [self._nfc(str(x)) for x in feats if str(x).strip()]
+                        labels = obj.get("labels") or []
+                        labels = [self._nfc(str(x)) for x in labels if str(x).strip()]
+                        if not labels:
+                            labels = [cid]
                         if cid not in self.konzepte:
-                            self.konzepte[cid] = Konzept(id=cid, semantische_features=feats)
+                            self.konzepte[cid] = Konzept(id=cid, labels=labels, semantische_features=feats)
                         else:
                             if feats:
                                 existing = set(self.konzepte[cid].semantische_features)
@@ -263,6 +330,12 @@ class KognitivesModell:
                                     if ft not in existing:
                                         self.konzepte[cid].semantische_features.append(ft)
                                         existing.add(ft)
+                            if labels:
+                                existing_l = set(self.konzepte[cid].labels or [])
+                                for lb in labels:
+                                    if lb not in existing_l:
+                                        self.konzepte[cid].labels.append(lb)
+                                        existing_l.add(lb)
                         continue
                     if t == "edge":
                         src = self._nfc(str(obj.get("src", "")))
@@ -276,9 +349,9 @@ class KognitivesModell:
                         w = max(0.0, min(w, 0.99))
                         typ = self._canon_type(str(obj.get("type", "")))
                         if src not in self.konzepte:
-                            self.konzepte[src] = Konzept(id=src)
+                            self.konzepte[src] = Konzept(id=src, labels=[src])
                         if dst not in self.konzepte:
-                            self.konzepte[dst] = Konzept(id=dst)
+                            self.konzepte[dst] = Konzept(id=dst, labels=[dst])
                         edge = Verbindung(ziel=dst, gewicht=w, typ=typ)
                         if episodic:
                             self.episodic_edges.setdefault(src, []).append(edge)
@@ -344,6 +417,16 @@ class KognitivesModell:
             if "_" in kname:
                 parts = [p for p in kname.split("_") if p]
                 if parts and all(p in tokset for p in parts):
+                    cues[kid] = max(cues.get(kid, 0.0), 0.90)
+
+            for lab in (k.labels or []):
+                lab_norm = self._norm_label(lab)
+                if not lab_norm:
+                    continue
+                lab_tokens = [t for t in lab_norm.split(" ") if t]
+                if len(lab_tokens) == 1 and lab_tokens[0] in tokset:
+                    cues[kid] = max(cues.get(kid, 0.0), 0.92)
+                elif lab_tokens and all(t in tokset for t in lab_tokens):
                     cues[kid] = max(cues.get(kid, 0.0), 0.90)
 
             for ft in k.semantische_features:
@@ -502,7 +585,7 @@ class KognitivesModell:
             now = datetime.now()
             for kid, val in nxt.items():
                 if kid not in self.konzepte:
-                    self.konzepte[kid] = Konzept(id=kid)
+                    self.konzepte[kid] = Konzept(id=kid, labels=[kid])
                 self.konzepte[kid].aktivierung = val
                 self.konzepte[kid].letzte_aktivierung = now
 
@@ -543,8 +626,9 @@ class KognitivesModell:
             return ""
         cid = self._make_concept_id(tok)
         if cid in self.konzepte:
+            self._ensure_label(cid, tok)
             return cid
-        self.konzepte[cid] = Konzept(id=cid, semantische_features=["unbekannt"])
+        self.konzepte[cid] = Konzept(id=cid, labels=[cid, tok], semantische_features=["unbekannt"])
         return cid
 
     # -------------------------
@@ -584,7 +668,7 @@ class KognitivesModell:
             "timestamp": datetime.now().isoformat(),
         }
 
-    def antworte(self, frage: str, auto_lernen: bool = True) -> str:
+    def antworte(self, frage: str, auto_lernen: bool = True, use_lm: Optional[bool] = None) -> str:
         res = self.denken(frage)
         pattern = res["denkmuster"]
         trace = res.get("trace") or []
@@ -602,44 +686,52 @@ class KognitivesModell:
         if auto_lernen:
             self.lerne_aus_aktivierung(pattern, trace)
 
-        return self.versprachliche(pattern, intent=res["intent"], trace=trace)
+        use_lm_final = self.use_lm_default if use_lm is None else use_lm
+        return self.versprachliche(pattern, intent=res["intent"], trace=trace, use_lm=use_lm_final)
 
     # -------------------------
     # Broca: Muster -> Satz
     # -------------------------
 
-    def versprachliche(self, denkmuster: List[Tuple[str, float]], intent: str = "OTHER", trace: Optional[List[TraceItem]] = None) -> str:
+    def versprachliche(
+        self,
+        denkmuster: List[Tuple[str, float]],
+        intent: str = "OTHER",
+        trace: Optional[List[TraceItem]] = None,
+        use_lm: bool = True,
+    ) -> str:
+        if not denkmuster:
+            return "Ich weiß das nicht."
         focus = [k for k, _ in denkmuster[:2]]
-        context = [k for k, _ in denkmuster[2:6]]
+        context = [k for k, _ in denkmuster[2:8]]
 
-        s1 = self._generiere_satz_aus_kanten(denkmuster, intent)
+        if use_lm:
+            lm_text = self._lm_generate(denkmuster, intent=intent, trace=trace)
+            if lm_text:
+                if self.explain_output and trace:
+                    t0 = trace[0]
+                    lm_text = lm_text.rstrip() + f" (Trace: {t0.src} → {t0.dst} / {t0.typ})"
+                return lm_text
 
-        extra = [k for k in context if k not in focus][:3]
+        sentences: List[str] = []
+        for rel in self._rank_candidate_edges(denkmuster, intent=intent)[: self.broca_max_sents]:
+            tpl = self._template_for_type(rel["typ"])
+            sentences.append(tpl.format(self._label_for_output(rel["src"]), self._label_for_output(rel["dst"])))
+
+        if not sentences and denkmuster:
+            sentences.append(f"Das zentrale Konzept ist {self._label_for_output(denkmuster[0][0])}.")
+
+        extra = [self._label_for_output(k) for k in context if k not in focus][:3]
         if extra:
-            s1 = s1.rstrip() + " Daneben sind auch " + ", ".join(extra) + " relevant."
+            sentences.append("Daneben sind auch " + ", ".join(extra) + " relevant.")
 
-        if trace:
+        s1 = " ".join(sentences)
+        if self.explain_output and trace:
             t0 = trace[0]
             s1 = s1.rstrip() + f" (Trace: {t0.src} → {t0.dst} / {t0.typ})"
-
         return s1
 
-    def _generiere_satz_aus_kanten(self, denkmuster: List[Tuple[str, float]], intent: str) -> str:
-        aktive = {k for k, _ in denkmuster}
-        best = None  # (score, src, dst, typ)
-
-        for src in aktive:
-            for e in self.konzepte.get(src, Konzept(src)).verbindungen:
-                if e.ziel in aktive:
-                    score = e.gewicht * self._gate(e.typ, intent)
-                    if best is None or score > best[0]:
-                        best = (score, src, e.ziel, e.typ)
-            for e in self.episodic_edges.get(src, []):
-                if e.ziel in aktive:
-                    score = (e.gewicht * 0.9) * self._gate(e.typ, intent)
-                    if best is None or score > best[0]:
-                        best = (score, src, e.ziel, e.typ)
-
+    def _template_for_type(self, typ: str) -> str:
         templates = {
             "teil_von": "{} ist ein wesentlicher Teil von {}.",
             "hat": "{} hat oder besitzt {}.",
@@ -647,28 +739,73 @@ class KognitivesModell:
             "eigenschaft": "{} hat die charakteristische Eigenschaft {}.",
             "prozess": "{} ist ein Prozess, in dem {} zentral ist.",
             "ermöglicht": "{} ermöglicht {}.",
-            "ermöglicht": "{} ermöglicht {}.",
             "besteht_aus": "{} setzt sich zusammen aus {}.",
-            "benötigt": "{} benötigt {} als Voraussetzung.",
             "benötigt": "{} benötigt {} als Voraussetzung.",
             "braucht": "{} braucht {} zum Funktionieren.",
             "verursacht": "{} verursacht {}.",
-            "notwendig_für": "{} ist notwendig für {}.",
             "notwendig_für": "{} ist notwendig für {}.",
             "gehört_zu": "{} gehört zu {}.",
             "lebt_in": "{} lebt in {}.",
             "gelernt": "{} und {} stehen in enger Beziehung.",
             "assoziation": "{} steht in Zusammenhang mit {}.",
         }
+        return templates.get(typ, "{} und {} sind eng miteinander verbunden.")
 
-        if best:
-            _, a, b, typ = best
-            tpl = templates.get(typ, "{} und {} sind eng miteinander verbunden.")
-            return tpl.format(a, b)
+    def _rank_candidate_edges(self, denkmuster: List[Tuple[str, float]], intent: str) -> List[Dict[str, object]]:
+        aktive = {k for k, _ in denkmuster}
+        out: List[Dict[str, object]] = []
+        for src in aktive:
+            for e in self.konzepte.get(src, Konzept(src)).verbindungen:
+                if e.ziel in aktive:
+                    score = e.gewicht * self._gate(e.typ, intent)
+                    out.append({"score": score, "src": src, "dst": e.ziel, "typ": e.typ, "layer": "semantic"})
+            for e in self.episodic_edges.get(src, []):
+                if e.ziel in aktive:
+                    score = (e.gewicht * 0.9) * self._gate(e.typ, intent)
+                    out.append({"score": score, "src": src, "dst": e.ziel, "typ": e.typ, "layer": "episodic"})
+        out.sort(key=lambda x: x["score"], reverse=True)
+        return out
 
-        if denkmuster:
-            return f"Das zentrale Konzept ist {denkmuster[0][0]}."
-        return "Ich weiß das nicht."
+    def _lm_generate(self, denkmuster: List[Tuple[str, float]], intent: str, trace: Optional[List[TraceItem]]) -> Optional[str]:
+        if not (self.lm_callable or self.lm_cmd):
+            return None
+        aktive = [self._label_for_output(k) for k, _ in denkmuster[:8]]
+        rels = self._rank_candidate_edges(denkmuster, intent=intent)[:5]
+        rel_lines = [
+            f"{self._label_for_output(r['src'])} -{r['typ']}-> {self._label_for_output(r['dst'])} (w={r['score']:.2f}, {r['layer']})"
+            for r in rels
+        ]
+        prompt = (
+            "Du bist Broca und formulierst kurze, natürliche deutsche Sätze.\n"
+            "Nutze die folgenden Konzepte und Relationen, erfinde keine neuen Fakten.\n"
+            "Gib 1 bis 3 Sätze aus, keine Listen.\n\n"
+            f"Intent: {intent}\n"
+            f"Konzepte: {', '.join(aktive)}\n"
+            "Relationen:\n" + "\n".join(rel_lines) + "\n"
+        )
+
+        if self.lm_callable:
+            try:
+                txt = self.lm_callable({"prompt": prompt, "intent": intent, "concepts": aktive, "relations": rels, "trace": trace})
+                return txt.strip() if isinstance(txt, str) and txt.strip() else None
+            except Exception:
+                return None
+
+        try:
+            result = subprocess.run(
+                self.lm_cmd,
+                input=prompt,
+                text=True,
+                capture_output=True,
+                shell=True,
+                timeout=self.lm_timeout,
+            )
+            out = (result.stdout or "").strip()
+            if out:
+                return out
+        except Exception:
+            return None
+        return None
 
     # -------------------------
     # Lernen (Hebb + Anti-Hebb + Decay)
@@ -728,6 +865,27 @@ class KognitivesModell:
                     kept.append(e)
             self.episodic_edges[src] = kept
 
+        self.konsolidiere_episodisch()
+
+    def _get_or_create_semantic_edge(self, src: str, dst: str, typ: str, w_init: float) -> Verbindung:
+        if src not in self.konzepte:
+            self.konzepte[src] = Konzept(id=src, labels=[src])
+        for e in self.konzepte[src].verbindungen:
+            if e.ziel == dst and e.typ == typ:
+                return e
+        e = Verbindung(ziel=dst, gewicht=max(0.01, min(w_init, 0.99)), typ=typ)
+        self.konzepte[src].verbindungen.append(e)
+        return e
+
+    def konsolidiere_episodisch(self):
+        for src, edges in self.episodic_edges.items():
+            for e in edges:
+                if e.gewicht < self.consolidate_threshold:
+                    continue
+                se = self._get_or_create_semantic_edge(src, e.ziel, self._canon_type(e.typ), w_init=e.gewicht * self.consolidate_ratio)
+                se.gewicht = min(0.99, max(se.gewicht, e.gewicht * self.consolidate_ratio))
+                se.gewicht = min(0.99, se.gewicht + self.consolidate_boost)
+
     # -------------------------
     # Lern-Interface: Text -> Nodes/Edges
     # -------------------------
@@ -756,13 +914,17 @@ class KognitivesModell:
             dst = rel["dst"]
             typ = rel["type"]
             w = rel["w"]
+            src_label = rel.get("src_label") or src
+            dst_label = rel.get("dst_label") or dst
 
             if src not in self.konzepte:
-                self.konzepte[src] = Konzept(id=src, semantische_features=["gelernt"])
+                self.konzepte[src] = Konzept(id=src, labels=[src_label, src], semantische_features=["gelernt"])
                 nodes_added += 1
             if dst not in self.konzepte:
-                self.konzepte[dst] = Konzept(id=dst, semantische_features=["gelernt"])
+                self.konzepte[dst] = Konzept(id=dst, labels=[dst_label, dst], semantische_features=["gelernt"])
                 nodes_added += 1
+            self._ensure_label(src, src_label)
+            self._ensure_label(dst, dst_label)
 
             if typ in {"ist", "klasse", "gehört_zu"}:
                 feats = set(self.konzepte[src].semantische_features or [])
@@ -853,6 +1015,8 @@ class KognitivesModell:
                         "dst": dst,
                         "type": self._canon_type(typ),
                         "w": max(0.01, min(w0 - 0.02 * j, 0.99)),
+                        "src_label": self._nfc(subj_raw).strip(),
+                        "dst_label": self._nfc(o).strip(),
                     })
                 break
 
@@ -864,6 +1028,12 @@ class KognitivesModell:
         p = re.sub(r"\s+", " ", p).strip()
         if not p:
             return ""
+        p_norm = self._norm_label(p)
+        if p_norm:
+            for kid, k in self.konzepte.items():
+                for lab in (k.labels or []):
+                    if self._norm_label(lab) == p_norm:
+                        return kid
         p_low = p.lower()
         for a in ["der ", "die ", "das ", "ein ", "eine ", "einen ", "einem ", "einer ", "den ", "dem ", "des "]:
             if p_low.startswith(a):
@@ -915,7 +1085,10 @@ class KognitivesModell:
             f.write(json.dumps(meta, ensure_ascii=False) + "\n")
             for cid in sorted(self.konzepte.keys()):
                 feats = list(self.konzepte[cid].semantische_features or [])
-                obj = {"t": "node", "id": cid, "features": sorted(set(feats))}
+                labels = list(self.konzepte[cid].labels or [])
+                if not labels:
+                    labels = [cid]
+                obj = {"t": "node", "id": cid, "features": sorted(set(feats)), "labels": sorted(set(labels))}
                 f.write(json.dumps(obj, ensure_ascii=False) + "\n")
             for src in sorted(self.konzepte.keys()):
                 for v in self.konzepte[src].verbindungen:
@@ -945,7 +1118,10 @@ class KognitivesModell:
                 f.write(json.dumps(meta2, ensure_ascii=False) + "\n")
                 for cid in sorted(self.konzepte.keys()):
                     feats = list(self.konzepte[cid].semantische_features or [])
-                    obj = {"t": "node", "id": cid, "features": sorted(set(feats))}
+                    labels = list(self.konzepte[cid].labels or [])
+                    if not labels:
+                        labels = [cid]
+                    obj = {"t": "node", "id": cid, "features": sorted(set(feats)), "labels": sorted(set(labels))}
                     f.write(json.dumps(obj, ensure_ascii=False) + "\n")
                 for src in sorted(self.episodic_edges.keys()):
                     for v in self.episodic_edges[src]:
@@ -978,6 +1154,54 @@ class KognitivesModell:
                     f.write(f"{src} | episodic | {verbindungen}\n")
 
         print(f"✓ Modelle gespeichert: {datei}" + (f" + {episodic_datei}" if episodic_datei else ""))
+
+    # -------------------------
+    # Autonomes Denken
+    # -------------------------
+
+    def autonom_denken(self, steps: int = 1) -> List[Dict[str, object]]:
+        results: List[Dict[str, object]] = []
+        steps = max(1, min(steps, 10))
+
+        for _ in range(steps):
+            candidates = []
+            for kid, k in self.konzepte.items():
+                sem_strength = sum(e.gewicht for e in k.verbindungen)
+                epi_strength = sum(e.gewicht for e in self.episodic_edges.get(kid, []))
+                novelty = 1.0 / (1.0 + sem_strength + epi_strength)
+                gap = max(0.0, epi_strength - sem_strength)
+                score = gap + 0.6 * novelty + random.uniform(0.0, 0.05)
+                candidates.append((kid, score))
+
+            candidates.sort(key=lambda x: x[1], reverse=True)
+            seeds = [kid for kid, _ in candidates[:2]]
+            if not seeds:
+                break
+
+            cues = {seeds[0]: 0.95}
+            if len(seeds) > 1:
+                cues[seeds[1]] = 0.75
+
+            self._wm_init(cues)
+            act = self.spreading_activation(intent="OTHER")
+            pattern = sorted(
+                [(k, v) for k, v in act.items() if v >= self.pattern_threshold],
+                key=lambda x: x[1],
+                reverse=True,
+            )
+
+            res = {
+                "mode": "autonomous",
+                "seeds": seeds,
+                "denkmuster": pattern,
+                "trace": sorted(self.trace, key=lambda t: t.contrib, reverse=True)[:20],
+                "timestamp": datetime.now().isoformat(),
+            }
+            if pattern:
+                self.lerne_aus_aktivierung(pattern, res["trace"])
+            results.append(res)
+
+        return results
 
 
 # ============================================================
