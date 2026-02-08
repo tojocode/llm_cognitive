@@ -72,7 +72,8 @@ class BrocaMixin:
                 return lm_text
 
         sentences: List[str] = []
-        ranked = self._rank_candidate_edges(denkmuster, intent=intent, focus_ids=focus)
+        focus_edges = self._rank_focus_edges(focus, intent=intent)
+        ranked = focus_edges if focus_edges else self._rank_candidate_edges(denkmuster, intent=intent, focus_ids=focus)
         for rel in ranked[: self.broca_max_sents]:
             tpl = self._template_for_type(rel["typ"])
             sentences.append(tpl.format(self._label_for_output(rel["src"]), self._label_for_output(rel["dst"])))
@@ -155,6 +156,21 @@ class BrocaMixin:
         out.sort(key=lambda x: x["score"], reverse=True)
         return out
 
+    def _rank_focus_edges(self, focus_ids: List[str], intent: str) -> List[Dict[str, object]]:
+        if not focus_ids:
+            return []
+        out: List[Dict[str, object]] = []
+        for src in focus_ids:
+            if src in self.konzepte:
+                for e in self.konzepte[src].verbindungen:
+                    score = e.gewicht * self._gate(e.typ, intent)
+                    out.append({"score": score, "src": src, "dst": e.ziel, "typ": e.typ, "layer": "semantic"})
+            for e in self.episodic_edges.get(src, []):
+                score = (e.gewicht * 0.9) * self._gate(e.typ, intent)
+                out.append({"score": score, "src": src, "dst": e.ziel, "typ": e.typ, "layer": "episodic"})
+        out.sort(key=lambda x: x["score"], reverse=True)
+        return out
+
     def _lm_generate(
         self,
         denkmuster: List[Tuple[str, float]],
@@ -166,7 +182,10 @@ class BrocaMixin:
             return None
         focus_ids = focus_ids or [k for k, _ in denkmuster[:2]]
         aktive = [self._label_for_output(k) for k, _ in denkmuster[:8]]
-        rels = self._rank_candidate_edges(denkmuster, intent=intent, focus_ids=focus_ids)[:5]
+        rels = self._rank_focus_edges(focus_ids, intent=intent)
+        if not rels:
+            rels = self._rank_candidate_edges(denkmuster, intent=intent, focus_ids=focus_ids)
+        rels = rels[:5]
         rel_lines = [
             f"{self._label_for_output(r['src'])} -{r['typ']}-> {self._label_for_output(r['dst'])} (w={r['score']:.2f}, {r['layer']})"
             for r in rels
