@@ -56,14 +56,15 @@ class BrocaMixin:
         intent: str = "OTHER",
         trace: Optional[List[TraceItem]] = None,
         use_lm: bool = True,
+        focus_ids: Optional[List[str]] = None,
     ) -> str:
         if not denkmuster:
             return "Ich weiß das nicht."
-        focus = [k for k, _ in denkmuster[:2]]
+        focus = focus_ids or [k for k, _ in denkmuster[:2]]
         context = [k for k, _ in denkmuster[2:8]]
 
         if use_lm:
-            lm_text = self._lm_generate(denkmuster, intent=intent, trace=trace)
+            lm_text = self._lm_generate(denkmuster, intent=intent, trace=trace, focus_ids=focus)
             if lm_text:
                 if self.explain_output and trace:
                     t0 = trace[0]
@@ -71,8 +72,7 @@ class BrocaMixin:
                 return lm_text
 
         sentences: List[str] = []
-        focus_ids = [k for k, _ in denkmuster[:2]]
-        ranked = self._rank_candidate_edges(denkmuster, intent=intent, focus_ids=focus_ids)
+        ranked = self._rank_candidate_edges(denkmuster, intent=intent, focus_ids=focus)
         for rel in ranked[: self.broca_max_sents]:
             tpl = self._template_for_type(rel["typ"])
             sentences.append(tpl.format(self._label_for_output(rel["src"]), self._label_for_output(rel["dst"])))
@@ -155,10 +155,16 @@ class BrocaMixin:
         out.sort(key=lambda x: x["score"], reverse=True)
         return out
 
-    def _lm_generate(self, denkmuster: List[Tuple[str, float]], intent: str, trace: Optional[List[TraceItem]]) -> Optional[str]:
+    def _lm_generate(
+        self,
+        denkmuster: List[Tuple[str, float]],
+        intent: str,
+        trace: Optional[List[TraceItem]],
+        focus_ids: Optional[List[str]] = None,
+    ) -> Optional[str]:
         if not (self.lm_callable or self.lm_cmd):
             return None
-        focus_ids = [k for k, _ in denkmuster[:2]]
+        focus_ids = focus_ids or [k for k, _ in denkmuster[:2]]
         aktive = [self._label_for_output(k) for k, _ in denkmuster[:8]]
         rels = self._rank_candidate_edges(denkmuster, intent=intent, focus_ids=focus_ids)[:5]
         rel_lines = [

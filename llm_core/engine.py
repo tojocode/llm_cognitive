@@ -486,6 +486,7 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
     def denken(self, frage: str) -> Dict:
         intent = self._erkenne_intent(frage)
         cues = self._cue_set(frage)
+        focus_ids = [k for k, _ in sorted(cues.items(), key=lambda x: x[1], reverse=True)[:2]]
 
         if not cues:
             unknown = self._create_unknown_stub(frage)
@@ -494,6 +495,7 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
                 "intent": intent,
                 "unknown": unknown,
                 "denkmuster": [],
+                "focus": focus_ids,
                 "trace": [],
                 "timestamp": datetime.now().isoformat(),
             }
@@ -512,6 +514,7 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
             "intent": intent,
             "unknown": "",
             "denkmuster": pattern,
+            "focus": focus_ids,
             "trace": sorted(self.trace, key=lambda t: t.contrib, reverse=True)[:20],
             "timestamp": datetime.now().isoformat(),
         }
@@ -520,6 +523,7 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
         res = self.denken(frage)
         pattern = res["denkmuster"]
         trace = res.get("trace") or []
+        focus_ids = res.get("focus") or []
 
         if not pattern:
             unk = res.get("unknown") or ""
@@ -535,7 +539,7 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
             self.lerne_aus_aktivierung(pattern, trace)
 
         use_lm_final = self.use_lm_default if use_lm is None else use_lm
-        return self.versprachliche(pattern, intent=res["intent"], trace=trace, use_lm=use_lm_final)
+        return self.versprachliche(pattern, intent=res["intent"], trace=trace, use_lm=use_lm_final, focus_ids=focus_ids)
 
     # -------------------------
     # Lernen (Hebb + Anti-Hebb + Decay)
