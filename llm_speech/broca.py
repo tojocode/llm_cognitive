@@ -72,16 +72,41 @@ class BrocaMixin:
                 return lm_text
 
         sentences: List[str] = []
+        seen = set()
         focus_edges = self._rank_focus_edges(focus, intent=intent)
         ranked = focus_edges if focus_edges else self._rank_candidate_edges(denkmuster, intent=intent, focus_ids=focus)
-        for rel in ranked[: self.broca_max_sents]:
+        for rel in ranked:
+            if len(sentences) >= self.broca_max_sents:
+                break
             tpl = self._template_for_type(rel["typ"])
-            sentences.append(tpl.format(self._label_for_output(rel["src"]), self._label_for_output(rel["dst"])))
+            s = tpl.format(self._label_for_output(rel["src"]), self._label_for_output(rel["dst"]))
+            key = s.strip().lower()
+            if key in seen:
+                continue
+            seen.add(key)
+            sentences.append(s)
 
         if not sentences and denkmuster:
             sentences.append(f"Das zentrale Konzept ist {self._label_for_output(denkmuster[0][0])}.")
 
-        extra = [self._label_for_output(k) for k in context if k not in focus][:3]
+        extra = []
+        focus_set = set(focus)
+        if focus_set:
+            for k in context:
+                if k in focus_set:
+                    continue
+                # only allow extras that are directly linked to focus concepts
+                linked = False
+                for f in focus_set:
+                    if self._has_edge_any(f, k) or self._has_edge_any(k, f):
+                        linked = True
+                        break
+                if linked:
+                    extra.append(self._label_for_output(k))
+                if len(extra) >= 3:
+                    break
+        else:
+            extra = [self._label_for_output(k) for k in context][:3]
         if extra:
             sentences.append("Daneben sind auch " + ", ".join(extra) + " relevant.")
 
@@ -170,6 +195,17 @@ class BrocaMixin:
                 out.append({"score": score, "src": src, "dst": e.ziel, "typ": e.typ, "layer": "episodic"})
         out.sort(key=lambda x: x["score"], reverse=True)
         return out
+
+    def _has_edge_any(self, src: str, dst: str) -> bool:
+        if src in self.konzepte:
+            for e in self.konzepte[src].verbindungen:
+                if e.ziel == dst:
+                    return True
+        if src in self.episodic_edges:
+            for e in self.episodic_edges[src]:
+                if e.ziel == dst:
+                    return True
+        return False
 
     def _lm_generate(
         self,
