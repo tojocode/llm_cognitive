@@ -113,71 +113,202 @@ def _rebuild_from_semantic(semantic_path: str, episodic_path: str, lexikon_path:
     engine.speichere_model(semantic_path, episodic_datei=episodic_path)
 
 
-def main():
-    # allow "/new" as alias for "--new"
-    sys.argv = ["--new" if a.lower() == "/new" else a for a in sys.argv]
-
-    parser = argparse.ArgumentParser(description="Autonomous thinking controller")
-    parser.add_argument("-n", "--iterations", type=int, default=5, help="number of think iterations")
-    parser.add_argument("--seed", type=int, default=None, help="random seed for reproducibility")
-    parser.add_argument("--semantic", default="data/memory_semantic.jsonl", help="path to semantic memory")
-    parser.add_argument("--episodic", default="data/memory_episodic.jsonl", help="path to episodic memory")
-    parser.add_argument("--lexikon", default="data/lexikon.json", help="path to lexicon")
-    parser.add_argument("--embeddings", default="data/embeddings.json", help="path to embeddings db")
-    parser.add_argument("--new", action="store_true", help="rebuild all json files from semantic memory")
-    parser.add_argument("--no-learn", action="store_true", help="disable learning during think")
-    parser.add_argument("--no-embed", action="store_true", help="disable embedding memory")
-    parser.add_argument("--show-seeds", action="store_true", help="print selected seeds")
-    parser.add_argument("--print-pattern", action="store_true", help="print top pattern concepts")
-    parser.add_argument("--max-pattern", type=int, default=5, help="max pattern items to print")
-    parser.add_argument("--print-trace", action="store_true", help="print trace items")
-    parser.add_argument("--max-trace", type=int, default=5, help="max trace items to print")
-    parser.add_argument("--json", action="store_true", help="json output per iteration")
-    parser.add_argument("--save", action="store_true", help="save memories after run")
-    args = parser.parse_args()
-
-    if args.seed is not None:
-        random.seed(args.seed)
-
-    if args.new:
-        _rebuild_from_semantic(args.semantic, args.episodic, args.lexikon, args.embeddings)
-        return
-
-    engine = KognitivesModell(
+def _make_engine(args) -> KognitivesModell:
+    return KognitivesModell(
         args.semantic,
         episodic_datei=args.episodic,
         lexikon_datei=args.lexikon,
         embed_db_path=args.embeddings,
     )
 
-    if args.no_embed:
-        engine.embed_enabled = False
 
-    if args.no_learn:
-        engine.lerne_aus_aktivierung = lambda *_, **__: None
+def _print_help():
+    print("Kommandos:")
+    print("  help                      -> diese Hilfe")
+    print("  think [n]                 -> autonom denken (n Iterationen, default 1)")
+    print("  new                       -> JSON neu aus memory_semantic aufbauen")
+    print("  reload                    -> Modell aus Dateien neu laden")
+    print("  save                      -> Modelle + Lexikon + Embeddings speichern")
+    print("  seed <n>                  -> Zufallssaat setzen")
+    print("  learn on|off              -> Lernen an/aus")
+    print("  embed on|off              -> Embedding-Memory an/aus")
+    print("  seeds on|off              -> Seeds anzeigen an/aus")
+    print("  pattern on|off|<n>         -> Pattern-Ausgabe an/aus, optional max n")
+    print("  trace on|off|<n>           -> Trace-Ausgabe an/aus, optional max n")
+    print("  json on|off               -> JSON-Ausgabe an/aus")
+    print("  config                    -> aktuelle Pfade und Werte")
+    print("  status                    -> aktuelle Einstellungen")
+    print("  exit                      -> beenden")
 
-    results = engine.autonom_denken(steps=max(1, args.iterations))
 
-    if args.json:
-        payload = [_jsonable(r, i + 1) for i, r in enumerate(results)]
-        print(json.dumps(payload, ensure_ascii=False, indent=2))
-    else:
-        for i, r in enumerate(results, 1):
-            msg = _format_memory_event(r)
-            if args.show_seeds:
-                seeds = r.get("seeds") or []
-                if seeds:
-                    msg += " | Seeds: " + ", ".join(seeds)
-            print(f"[THINK {i}] {msg}")
-            if args.print_pattern:
-                print(_format_pattern(r.get("denkmuster") or [], args.max_pattern))
-            if args.print_trace:
-                print(_format_trace(r.get("trace") or [], args.max_trace))
+def main():
+    parser = argparse.ArgumentParser(description="Think CLI")
+    parser.add_argument("--seed", type=int, default=None, help="random seed for reproducibility")
+    parser.add_argument("--semantic", default="data/memory_semantic.jsonl", help="path to semantic memory")
+    parser.add_argument("--episodic", default="data/memory_episodic.jsonl", help="path to episodic memory")
+    parser.add_argument("--lexikon", default="data/lexikon.json", help="path to lexicon")
+    parser.add_argument("--embeddings", default="data/embeddings.json", help="path to embeddings db")
+    args = parser.parse_args()
 
-    if args.save:
-        engine.speichere_model(args.semantic, episodic_datei=args.episodic)
-        engine.speichere_lexikon(args.lexikon)
-        engine.speichere_embeddings()
+    if args.seed is not None:
+        random.seed(args.seed)
+
+    engine = _make_engine(args)
+    learn_fn = engine.lerne_aus_aktivierung
+
+    state = {
+        "show_seeds": False,
+        "print_pattern": False,
+        "max_pattern": 5,
+        "print_trace": False,
+        "max_trace": 5,
+        "json": False,
+    }
+
+    _print_help()
+    while True:
+        try:
+            line = input("think> ").strip()
+        except (EOFError, KeyboardInterrupt):
+            print()
+            break
+        if not line:
+            continue
+        parts = line.split()
+        cmd = parts[0].lstrip("/").lower()
+
+        if cmd in {"exit", "quit"}:
+            break
+        if cmd in {"help", "commands", "?"}:
+            _print_help()
+            continue
+        if cmd == "status":
+            print(f"learn: {'on' if engine.lerne_aus_aktivierung == learn_fn else 'off'}")
+            print(f"embed: {'on' if engine.embed_enabled else 'off'}")
+            print(f"seeds: {'on' if state['show_seeds'] else 'off'}")
+            print(f"pattern: {'on' if state['print_pattern'] else 'off'} (max {state['max_pattern']})")
+            print(f"trace: {'on' if state['print_trace'] else 'off'} (max {state['max_trace']})")
+            print(f"json: {'on' if state['json'] else 'off'}")
+            continue
+        if cmd == "config":
+            print(f"semantic: {args.semantic}")
+            print(f"episodic: {args.episodic}")
+            print(f"lexikon: {args.lexikon}")
+            print(f"embeddings: {args.embeddings}")
+            print(f"embed_enabled: {engine.embed_enabled}")
+            print(f"embed_top_k: {engine.embed_top_k}")
+            print(f"embed_min_score: {engine.embed_min_score}")
+            print(f"embed_cue_boost: {engine.embed_cue_boost}")
+            print(f"embed_store_on_import: {engine.embed_store_on_import}")
+            continue
+        if cmd == "seed" and len(parts) >= 2:
+            try:
+                random.seed(int(parts[1]))
+                print("✓ seed gesetzt")
+            except Exception:
+                print("⚠️ ungültiger seed")
+            continue
+        if cmd == "learn" and len(parts) >= 2:
+            val = parts[1].lower()
+            if val == "on":
+                engine.lerne_aus_aktivierung = learn_fn
+                print("✓ learn on")
+            elif val == "off":
+                engine.lerne_aus_aktivierung = lambda *_, **__: None
+                print("✓ learn off")
+            else:
+                print("⚠️ learn on|off")
+            continue
+        if cmd == "embed" and len(parts) >= 2:
+            val = parts[1].lower()
+            if val == "on":
+                engine.embed_enabled = True
+                print("✓ embed on")
+            elif val == "off":
+                engine.embed_enabled = False
+                print("✓ embed off")
+            else:
+                print("⚠️ embed on|off")
+            continue
+        if cmd == "seeds" and len(parts) >= 2:
+            val = parts[1].lower()
+            state["show_seeds"] = (val == "on")
+            print(f"✓ seeds {val}")
+            continue
+        if cmd == "pattern" and len(parts) >= 2:
+            val = parts[1].lower()
+            if val in {"on", "off"}:
+                state["print_pattern"] = (val == "on")
+                print(f"✓ pattern {val}")
+            else:
+                try:
+                    state["max_pattern"] = max(1, int(val))
+                    state["print_pattern"] = True
+                    print(f"✓ pattern on (max {state['max_pattern']})")
+                except Exception:
+                    print("⚠️ pattern on|off|<n>")
+            continue
+        if cmd == "trace" and len(parts) >= 2:
+            val = parts[1].lower()
+            if val in {"on", "off"}:
+                state["print_trace"] = (val == "on")
+                print(f"✓ trace {val}")
+            else:
+                try:
+                    state["max_trace"] = max(1, int(val))
+                    state["print_trace"] = True
+                    print(f"✓ trace on (max {state['max_trace']})")
+                except Exception:
+                    print("⚠️ trace on|off|<n>")
+            continue
+        if cmd == "json" and len(parts) >= 2:
+            val = parts[1].lower()
+            state["json"] = (val == "on")
+            print(f"✓ json {val}")
+            continue
+        if cmd == "new":
+            _rebuild_from_semantic(args.semantic, args.episodic, args.lexikon, args.embeddings)
+            engine = _make_engine(args)
+            learn_fn = engine.lerne_aus_aktivierung
+            print("✓ rebuild abgeschlossen")
+            continue
+        if cmd == "reload":
+            engine = _make_engine(args)
+            learn_fn = engine.lerne_aus_aktivierung
+            print("✓ neu geladen")
+            continue
+        if cmd == "save":
+            engine.speichere_model(args.semantic, episodic_datei=args.episodic)
+            engine.speichere_lexikon(args.lexikon)
+            engine.speichere_embeddings()
+            print("✓ gespeichert")
+            continue
+        if cmd == "think":
+            n = 1
+            if len(parts) >= 2:
+                try:
+                    n = max(1, int(parts[1]))
+                except Exception:
+                    n = 1
+            results = engine.autonom_denken(steps=n)
+            if state["json"]:
+                payload = [_jsonable(r, i + 1) for i, r in enumerate(results)]
+                print(json.dumps(payload, ensure_ascii=False, indent=2))
+            else:
+                for i, r in enumerate(results, 1):
+                    msg = _format_memory_event(r)
+                    if state["show_seeds"]:
+                        seeds = r.get("seeds") or []
+                        if seeds:
+                            msg += " | Seeds: " + ", ".join(seeds)
+                    print(f"[THINK {i}] {msg}")
+                    if state["print_pattern"]:
+                        print(_format_pattern(r.get("denkmuster") or [], state["max_pattern"]))
+                    if state["print_trace"]:
+                        print(_format_trace(r.get("trace") or [], state["max_trace"]))
+            continue
+
+        print("⚠️ unbekanntes Kommando. 'help' zeigt alle Optionen.")
 
 
 if __name__ == "__main__":
