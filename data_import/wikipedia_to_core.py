@@ -1,10 +1,11 @@
 # -*- coding: utf-8 -*-
 # ============================================================
-# Wikipedia -> Memory Semantic Import
+# Wikipedia -> Memory Import (Semantic + Episodic)
 # Datei: data_import/wikipedia_to_core.py
 #
 # Liest alle .txt Dateien aus data_import/wikipedia und importiert
-# sie in data/memory_semantic.jsonl via KognitivesModell.import_text_file.
+# sie in data/memory_semantic.jsonl und data/memory_episodic.jsonl
+# via KognitivesModell.import_text_file.
 # Optional können einzelne Dateien per --files angegeben werden.
 # ============================================================
 
@@ -34,14 +35,19 @@ def main() -> int:
     wiki_dir, semantic, episodic, lexikon, embeddings = _default_paths()
 
     parser = argparse.ArgumentParser(
-        description="Importiert alle Wikipedia-TXT Dateien in memory_semantic.jsonl"
+        description="Importiert Wikipedia-TXT Dateien in memory_semantic.jsonl und memory_episodic.jsonl"
     )
     parser.add_argument("--wiki-dir", default=str(wiki_dir), help="Ordner mit .txt Dateien")
     parser.add_argument("--semantic", default=str(semantic), help="Pfad zu memory_semantic.jsonl")
     parser.add_argument("--episodic", default=str(episodic), help="Pfad zu memory_episodic.jsonl")
     parser.add_argument("--lexikon", default=str(lexikon), help="Pfad zu lexikon.json")
     parser.add_argument("--embeddings", default=str(embeddings), help="Pfad zu embeddings.json")
-    parser.add_argument("--target", choices=["semantic", "episodic"], default="semantic", help="Ziel-Layer")
+    parser.add_argument(
+        "--target",
+        choices=["semantic", "episodic", "both"],
+        default="both",
+        help="Ziel-Layer (default: both)",
+    )
     parser.add_argument("--limit", type=int, default=0, help="Max. Anzahl Dateien (0 = alle)")
     parser.add_argument(
         "--files",
@@ -83,14 +89,30 @@ def main() -> int:
     )
 
     total_nodes = 0
-    total_edges = 0
+    total_edges_sem = 0
+    total_edges_epi = 0
 
     for p in files:
         try:
-            stats = engine.import_text_file(str(p), target=args.target)
-            total_nodes += stats.get("nodes_added", 0)
-            total_edges += stats.get("edges_added", 0)
-            print(f"✓ {p.name}: +{stats['nodes_added']} nodes, +{stats['edges_added']} edges")
+            if args.target == "both":
+                stats_sem = engine.import_text_file(str(p), target="semantic")
+                stats_epi = engine.import_text_file(str(p), target="episodic")
+                total_nodes += stats_sem.get("nodes_added", 0)
+                total_edges_sem += stats_sem.get("edges_added", 0)
+                total_edges_epi += stats_epi.get("edges_added", 0)
+                print(
+                    f"✓ {p.name}: +{stats_sem['nodes_added']} nodes, "
+                    f"+{stats_sem['edges_added']} edges (semantic), "
+                    f"+{stats_epi['edges_added']} edges (episodic)"
+                )
+            else:
+                stats = engine.import_text_file(str(p), target=args.target)
+                total_nodes += stats.get("nodes_added", 0)
+                if args.target == "semantic":
+                    total_edges_sem += stats.get("edges_added", 0)
+                else:
+                    total_edges_epi += stats.get("edges_added", 0)
+                print(f"✓ {p.name}: +{stats['nodes_added']} nodes, +{stats['edges_added']} edges ({args.target})")
         except Exception as e:
             print(f"❌ {p.name}: {e}")
 
@@ -98,7 +120,11 @@ def main() -> int:
     engine.speichere_lexikon(args.lexikon)
     engine.speichere_embeddings()
 
-    print(f"=== Fertig: {len(files)} Dateien | +{total_nodes} nodes | +{total_edges} edges ===")
+    print(
+        "=== Fertig: "
+        f"{len(files)} Dateien | +{total_nodes} nodes | "
+        f"+{total_edges_sem} edges (semantic) | +{total_edges_epi} edges (episodic) ==="
+    )
     return 0
 
 
