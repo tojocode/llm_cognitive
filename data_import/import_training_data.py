@@ -59,6 +59,7 @@ from __future__ import annotations
 import os
 import re
 import json
+import unicodedata
 import urllib.request
 import urllib.parse
 from typing import Optional, List, Tuple
@@ -103,6 +104,9 @@ DEFAULT_CONFIG = {
     # Wiki-Listen + Abkürzungen reparieren
     "normalize_wiki_lists": True,
     "repair_common_abbrev": True,
+    "protect_abbrev_for_split": True,
+    "fix_camelcase_compounds": True,
+    "fix_glued_conjunctions": True,
 
     # Debug
     "print_normalize_stats": True,
@@ -147,6 +151,9 @@ def load_config() -> dict:
     cfg.setdefault("strip_dangling_hyphen_tokens", True)
     cfg.setdefault("normalize_wiki_lists", True)
     cfg.setdefault("repair_common_abbrev", True)
+    cfg.setdefault("protect_abbrev_for_split", True)
+    cfg.setdefault("fix_camelcase_compounds", True)
+    cfg.setdefault("fix_glued_conjunctions", True)
     cfg.setdefault("print_normalize_stats", True)
 
     # sentence_limit alias
@@ -203,6 +210,9 @@ _DASH_CHARS = ["\u2010", "\u2011", "\u2012", "\u2013", "\u2014", "\u2212"]  # hy
 _LOWER_EXTRA = "äöüß"
 _UPPER_EXTRA = "ÄÖÜ"
 
+# Placeholder, um Abkürzungs-Punkte beim Satzsplit zu schützen
+_SPLIT_DOT = "<DOT>"
+
 
 class _NormStats:
     def __init__(self):
@@ -220,6 +230,11 @@ class _NormStats:
         self.hyphen_space_fixed = 0
         self.abbrev_hyphen_restored = 0
         self.nonki_restored = 0
+
+        # Split/quality fixes
+        self.split_protected = 0
+        self.camel_hyphen_fixed = 0
+        self.glued_fixed = 0
 
 
 def _is_lower(ch: str) -> bool:
@@ -336,6 +351,90 @@ def _punctuation_cleanup(text: str, st: _NormStats) -> str:
     if t != before:
         st.punct_cleaned += 1
     return t
+
+
+# ------------------------------------------------------------
+# Split-Protection + CamelCase/Glue-Fixes
+# ------------------------------------------------------------
+
+_CAMEL_HYPHEN_RE = re.compile(r"\b([A-Za-zÄÖÜäöüß]{2,}[a-zäöüß])([A-ZÄÖÜ][a-zäöüß]{2,})\b")
+_GLUED_CONJ_RE = re.compile(r"\b([A-ZÄÖÜ][a-zäöüß]{2,})(und|oder|bzw)(\s+)")
+_GLUED_BIS_RE = re.compile(r"\b([A-ZÄÖÜ][a-zäöüß]{2,})bis(\s+)")
+
+
+def _fix_camelcase_compounds(text: str, st: _NormStats) -> str:
+    if not text:
+        return ""
+
+    def repl(m: re.Match) -> str:
+        st.camel_hyphen_fixed += 1
+        return f"{m.group(1)}-{m.group(2)}"
+
+    return _CAMEL_HYPHEN_RE.sub(repl, text)
+
+
+def _fix_glued_conjunctions(text: str, st: _NormStats) -> str:
+    if not text:
+        return ""
+
+    def repl_conj(m: re.Match) -> str:
+        st.glued_fixed += 1
+        return f"{m.group(1)} {m.group(2)}{m.group(3)}"
+
+    def repl_bis(m: re.Match) -> str:
+        st.glued_fixed += 1
+        return f"{m.group(1)} bis{m.group(2)}"
+
+    text = _GLUED_CONJ_RE.sub(repl_conj, text)
+    text = _GLUED_BIS_RE.sub(repl_bis, text)
+    return text
+
+
+def _protect_abbrev_for_split(text: str, st: _NormStats) -> str:
+    if not text:
+        return ""
+
+    t = text
+
+    # Zahlenbereiche: "10./11." -> "10./11<DOT>"
+    t, n = re.subn(r"\b(\d{1,2}\./\d{1,2})\.", r"\1" + _SPLIT_DOT, t)
+    st.split_protected += n
+
+    # Ordinale + Jahrhundert/Jh.
+    t, n = re.subn(r"\b(\d{1,2})\.\s*(Jahrhundert|Jh\.?)", r"\1" + _SPLIT_DOT + r" \2", t, flags=re.IGNORECASE)
+    st.split_protected += n
+
+    # Häufige Abkürzungen
+    abbrev_patterns = [
+        r"\bz\.\s*b\.",   # z. B.
+        r"\bu\.\s*a\.",   # u. a.
+        r"\bu\.\s*ä\.",   # u. Ä.
+        r"\bv\.\s*chr\.", # v. Chr.
+        r"\bn\.\s*chr\.", # n. Chr.
+        r"\bu\.\s*u\.",   # u. U.
+        r"\bz\.\s*t\.",   # z. T.
+    ]
+
+    for pat in abbrev_patterns:
+        rx = re.compile(pat, re.IGNORECASE)
+
+        def repl(m: re.Match) -> str:
+            st.split_protected += 1
+            return m.group(0).replace(".", _SPLIT_DOT)
+
+        t = rx.sub(repl, t)
+
+    # "u." als "und" in Aufzählungen: Schutz vor Satzsplit
+    t, n = re.subn(r"\bu\.\s+(?=[A-ZÄÖÜ])", "u" + _SPLIT_DOT + " ", t)
+    st.split_protected += n
+
+    return t
+
+
+def _restore_abbrev_after_split(text: str) -> str:
+    if not text:
+        return ""
+    return text.replace(_SPLIT_DOT, ".")
 
 
 # ------------------------------------------------------------
@@ -695,6 +794,9 @@ def normalize_import_text(text: str, config: dict, stats: _NormStats) -> str:
     if not text:
         return ""
 
+    # Unicode konsolidieren (NFC), um Kombinationszeichen zu vermeiden
+    text = unicodedata.normalize("NFC", text)
+
     if config.get("strip_invisible_unicode", True):
         text = _strip_invisible(text, stats)
 
@@ -718,6 +820,14 @@ def normalize_import_text(text: str, config: dict, stats: _NormStats) -> str:
 
     # Punctuation-Cleanup vor Satzsplit
     text = _punctuation_cleanup(text, stats)
+
+    # Glue-Fixes (z.B. "Texcocound", "Qinbis")
+    if config.get("fix_glued_conjunctions", True):
+        text = _fix_glued_conjunctions(text, stats)
+
+    # CamelCase-Komposita (z.B. "MexikoStadt" -> "Mexiko-Stadt")
+    if config.get("fix_camelcase_compounds", True):
+        text = _fix_camelcase_compounds(text, stats)
 
     if config.get("expand_dash_enumerations", True):
         text = _expand_dash_enumerations(text, stats)
@@ -766,8 +876,15 @@ def fetch_wikipedia(topic: str, config: dict) -> str:
         else:
             text = text.replace("\n", " ")
 
+        # Split-Protection (Abkürzungen/Zahlenbereiche)
+        if config.get("protect_abbrev_for_split", True):
+            text = _protect_abbrev_for_split(text, stats)
+
         # Satzsplit (grob)
         sentences = re.split(r"(?<=[.!?])\s+", text)
+
+        # Restore geschützte Abkürzungen
+        sentences = [_restore_abbrev_after_split(s) for s in sentences]
 
         # Repair: Abkürzungs-Fragmente nach Satzsplit wieder zusammenführen
         sentences = _repair_sentence_split_abbrev_fragments(sentences, stats)
@@ -786,6 +903,9 @@ def fetch_wikipedia(topic: str, config: dict) -> str:
                 f" splitfix={stats.split_abbrev_joined}"
                 f" hysp={stats.hyphen_space_fixed}"
                 f" abhy={stats.abbrev_hyphen_restored}"
+                f" splitprot={stats.split_protected}"
+                f" camel={stats.camel_hyphen_fixed}"
+                f" glue={stats.glued_fixed}"
             )
 
         limit = int(config.get("sentence_limit", config.get("line_limit", 10)) or 0)
@@ -840,6 +960,9 @@ def fetch_tatoeba_api_new(count: int, config: dict) -> Optional[str]:
                     f" splitfix={stats_all.split_abbrev_joined}"
                     f" hysp={stats_all.hyphen_space_fixed}"
                     f" abhy={stats_all.abbrev_hyphen_restored}"
+                    f" splitprot={stats_all.split_protected}"
+                    f" camel={stats_all.camel_hyphen_fixed}"
+                    f" glue={stats_all.glued_fixed}"
                 )
             print(f"      {len(results)} Sätze via API geladen.")
             return "\n".join(results)
@@ -888,6 +1011,9 @@ def run_import() -> None:
                         f" splitfix={stats.split_abbrev_joined}"
                         f" hysp={stats.hyphen_space_fixed}"
                         f" abhy={stats.abbrev_hyphen_restored}"
+                        f" splitprot={stats.split_protected}"
+                        f" camel={stats.camel_hyphen_fixed}"
+                        f" glue={stats.glued_fixed}"
                     )
             sentences = fallback
 
