@@ -171,15 +171,13 @@ def clean_filename(text: str) -> str:
 
 
 def setup_paths() -> dict:
-    # robust: wenn script in llm_training/import liegt, ist project root 2 levels hoch
+    # Script liegt in data_import; Pfade relativ dazu auflösen
     this_dir = os.path.dirname(os.path.abspath(__file__))
-    project_root = os.path.abspath(os.path.join(this_dir, "..", ".."))
+    base = os.path.abspath(os.path.join(this_dir, ".."))
 
-    # ✅ Vorgabe: Import schreibt nach 01_wikipedia-import
-    base = project_root
     paths = {
-        "knowledge": os.path.join(base, "llm_training", "data", "knowledge", "01_wikipedia-import"),
-        "form": os.path.join(base, "llm_training", "data", "form", "01_core"),
+        "knowledge": os.path.join(base, "data_import", "wikipedia"),
+        "form": os.path.join(base, "data_import", "form"),
     }
     for p in paths.values():
         os.makedirs(p, exist_ok=True)
