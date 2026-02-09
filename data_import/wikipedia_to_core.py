@@ -7,6 +7,7 @@
 # sie in data/memory_semantic.jsonl und data/memory_episodic.jsonl
 # via KognitivesModell.import_text_file.
 # Optional können einzelne Dateien per --files angegeben werden.
+# Zusätzlich wird ein sauberes Lexikon aus Labels aufgebaut.
 # ============================================================
 
 from __future__ import annotations
@@ -29,6 +30,64 @@ def _default_paths() -> tuple[Path, Path, Path, Path, Path]:
     lexikon = ROOT / "data" / "lexikon.json"
     embeddings = ROOT / "data" / "embeddings.json"
     return wiki_dir, semantic, episodic, lexikon, embeddings
+
+
+def _build_clean_lexikon(engine: KognitivesModell) -> tuple[dict, dict]:
+    stop_first = {
+        "bei", "in", "im", "am", "an", "von", "mit", "für", "fuer", "durch", "aus",
+        "auf", "unter", "über", "ueber", "zwischen", "ohne", "als", "seit", "nach",
+        "vor", "wegen", "gegen", "während", "waehrend", "wenn", "weil", "dass",
+        "was", "wie", "warum", "wieso", "weshalb", "welche", "welcher", "welches",
+    }
+    lex = {}
+    stats = {"candidates": 0, "added": 0, "skipped": 0, "collisions": 0}
+
+    for cid in sorted(engine.konzepte.keys()):
+        labels = engine.konzepte[cid].labels or []
+        uniq_labels = sorted(set(labels), key=lambda x: (len(x), x))
+        for lab in uniq_labels:
+            if "_" in lab:
+                stats["skipped"] += 1
+                continue
+            if len(lab) < 3 or len(lab) > 60:
+                stats["skipped"] += 1
+                continue
+            if lab and not lab[0].isalpha():
+                stats["skipped"] += 1
+                continue
+
+            stats["candidates"] += 1
+            norm = engine._norm_label(lab)
+            if not norm:
+                stats["skipped"] += 1
+                continue
+
+            if norm.isdigit():
+                stats["skipped"] += 1
+                continue
+
+            tokens = norm.split()
+            if not tokens:
+                stats["skipped"] += 1
+                continue
+            if len(tokens) > 3:
+                stats["skipped"] += 1
+                continue
+            if tokens[0] in stop_first:
+                stats["skipped"] += 1
+                continue
+            if any(len(t) < 2 for t in tokens):
+                stats["skipped"] += 1
+                continue
+
+            if norm in lex:
+                stats["collisions"] += 1
+                continue
+
+            lex[norm] = cid
+            stats["added"] += 1
+
+    return lex, stats
 
 
 def main() -> int:
@@ -55,6 +114,7 @@ def main() -> int:
         default=None,
         help="Eine oder mehrere .txt Dateien (überschreibt --wiki-dir/--limit)",
     )
+    parser.add_argument("--no-lexikon", action="store_true", help="Lexikon nicht neu aufbauen")
     args = parser.parse_args()
 
     if args.files:
@@ -117,7 +177,15 @@ def main() -> int:
             print(f"❌ {p.name}: {e}")
 
     engine.speichere_model(args.semantic, episodic_datei=args.episodic)
-    engine.speichere_lexikon(args.lexikon)
+    if not args.no_lexikon:
+        lex, lstats = _build_clean_lexikon(engine)
+        engine.lexikon = lex
+        engine.speichere_lexikon(args.lexikon)
+        print(
+            f"=== Lexikon: +{lstats['added']} Aliases | "
+            f"{lstats['collisions']} Kollisionen | "
+            f"{lstats['skipped']} verworfen ==="
+        )
     engine.speichere_embeddings()
 
     print(
