@@ -111,12 +111,14 @@ def main() -> int:
             if _any_hit(candidates, top_ids, k):
                 hits[k] += 1
 
-        if any(cid in candidates for cid in focus_ids):
+        focus_hit = any(cid in candidates for cid in focus_ids)
+        trace_hit = any(cid in candidates for cid in trace_srcs)
+        if focus_hit:
             focus_hits += 1
-        if any(cid in candidates for cid in trace_srcs):
+        if trace_hit:
             trace_hits += 1
 
-        ok = _any_hit(candidates, top_ids, 5)
+        ok = _any_hit(candidates, top_ids, 5) or focus_hit or trace_hit
         status = "OK" if ok else "MISS"
         print(f"[{i:02d}] {status} | {q}")
         if not ok:

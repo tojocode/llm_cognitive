@@ -46,18 +46,28 @@ def _build_clean_lexikon(engine: KognitivesModell) -> tuple[dict, dict]:
         labels = engine.konzepte[cid].labels or []
         uniq_labels = sorted(set(labels), key=lambda x: (len(x), x))
         for lab in uniq_labels:
-            if "_" in lab:
+            alias = lab.strip()
+            if "," in alias:
+                alias = alias.split(",", 1)[0].strip()
+            if "(" in alias:
+                alias = alias.split("(", 1)[0].strip()
+            if not alias:
                 stats["skipped"] += 1
                 continue
-            if len(lab) < 3 or len(lab) > 60:
+
+            if "_" in alias:
                 stats["skipped"] += 1
                 continue
-            if lab and not lab[0].isalpha():
+            is_acronym = len(alias) == 2 and alias.isalpha() and alias.isupper()
+            if (len(alias) < 3 and not is_acronym) or len(alias) > 60:
+                stats["skipped"] += 1
+                continue
+            if alias and not alias[0].isalpha():
                 stats["skipped"] += 1
                 continue
 
             stats["candidates"] += 1
-            norm = engine._norm_label(lab)
+            norm = engine._norm_label(alias)
             if not norm:
                 stats["skipped"] += 1
                 continue

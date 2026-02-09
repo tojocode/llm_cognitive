@@ -16,6 +16,7 @@ def main():
         "Warum ist Pluto ein Planet?",
         "Was ist ein Axolotl?",
         "Was ist Nachhaltigkeit?",
+        "Was ist künstliche Intelligenz?"
     ]
     for i, q in enumerate(questions, 1):
         print("\n" + "▬" * 86)

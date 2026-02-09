@@ -287,6 +287,10 @@ class WernickeMixin:
         rels: List[Dict[str, object]] = []
 
         patterns = [
+            (re.compile(r"^Als\s+(.+?)\s+bezeichnet\s+man\s+(.+?)\.?$", re.IGNORECASE), "ist", 0.92, False),
+            (re.compile(r"^(.+?)\s+wird\s+als\s+(.+?)\s+bezeichnet\.?$", re.IGNORECASE), "ist", 0.90, False),
+            (re.compile(r"^(.+?)\s+ist\s+die\s+bezeichnung\s+für\s+(.+?)\.?$", re.IGNORECASE), "ist", 0.90, False),
+            (re.compile(r"^(.+?)\s+bezeichnet\s+(?:man\s+)?(.+?)\.?$", re.IGNORECASE), "ist", 0.90, False),
             (re.compile(r"^(.+?)\s+ist\s+ein(?:e|en|em|er)?\s+(.+?)\.?$", re.IGNORECASE), "ist", 0.95, False),
             (re.compile(r"^(.+?)\s+ist\s+(.+?)\.?$", re.IGNORECASE), "ist", 0.85, False),
             (re.compile(r"^(.+?)\s+gehört\s+zu\s+(.+?)\.?$", re.IGNORECASE), "gehört_zu", 0.93, False),
