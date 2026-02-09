@@ -1,4 +1,4 @@
-{"t": "meta", "format": "memory_jsonl", "encoding": "utf-8", "umlaute": true, "created_at": "2026-02-09T23:21:01", "counts": {"nodes": 575, "edges": 367}}
+{"t": "meta", "format": "memory_jsonl", "encoding": "utf-8", "umlaute": true, "created_at": "2026-02-09T23:31:09", "counts": {"nodes": 575, "edges": 374}}
 {"t": "node", "id": "-", "features": ["gelernt"], "labels": ["-", "- während die Astronomie auf empirischer Basis die Beschaffenheit, Bewegungen und Beziehungen von Himmelskörpern untersucht"]}
 {"t": "node", "id": "-_Übernommen_Auch", "features": ["gelernt"], "labels": ["- übernommen auch von vielen alternativen Therapeuten - die ontologischen Vorstellungen früherer Jahrhunderte weitgehend abgelöst", "-_Übernommen_Auch"]}
 {"t": "node", "id": "/", "features": ["gelernt"], "labels": ["/", "/ ohne welche das Land in seinem Esse [Sein] nicht bleiben mag“"]}
@@ -55,7 +55,7 @@
 {"t": "node", "id": "Axolotl", "features": ["Schwanzlurch", "gelernt"], "labels": ["Axolotl", "Der Axolotl"]}
 {"t": "node", "id": "Ballsportart", "features": ["gelernt"], "labels": ["Ballsportart", "Ballsportart, bei der zwei Mannschaften mit dem Ziel gegeneinander antreten, mehr Tore als der Gegner zu erzielen und so das Spiel zu gewinnen"]}
 {"t": "node", "id": "Barbiere", "features": ["gelernt"], "labels": ["Barbiere", "die Barbiere"]}
-{"t": "node", "id": "Baukunst", "features": ["gelernt"], "labels": ["Baukunst", "Begriff", "der Begriff Baukunst heute nicht mehr sehr scharf", "die „Baukunst […] das wissende, genaue und großartige Spiel der Baukörper unter dem Licht“"]}
+{"t": "node", "id": "Baukunst", "features": ["Schwierig", "gelernt"], "labels": ["Baukunst", "Begriff", "Begriff für Formen der Herrschaftsorganisation auf der Grundlage der Partizipation bzw", "Der Begriff", "der Begriff Baukunst heute nicht mehr sehr scharf", "der deutsche Begriff stark von der Bedeutung des lateinischen ius beeinflusst, das ursprünglich die menschliche Ordnung gegenüber der überirdischen Ordnung bezeichnete", "die „Baukunst […] das wissende, genaue und großartige Spiel der Baukörper unter dem Licht“", "dieser Begriff des „modernen Sports“ umstritten, da die von Guttmann angeführten sieben Elemente auch bereits in früherer Zeit einzelne Sportarten charakterisierten"]}
 {"t": "node", "id": "Bedeutend", "features": ["gelernt"], "labels": ["Bedeutend", "bedeutend, dass diese ursprünglich als Spiel angesehen wurden, losgelöst von der Erwerbstätigkeit oder irgendwelchen feindseligen, kriegerischen Auseinandersetzungen"]}
 {"t": "node", "id": "Bedeutung_Des_Internets", "features": ["gelernt"], "labels": ["Bedeutung", "Bedeutung_Des_Internets", "die Bedeutung des Internets nochmal verstärkt"]}
 {"t": "node", "id": "Bedeutungswandel", "features": ["gelernt"], "labels": ["Bedeutungswandel", "Begriff", "der Begriff musica bis zum entscheidenden Bedeutungswandel, der den modernen Musikbegriff einführte, nicht allein als „Musiktheorie“ zu verstehen, er ergibt sich in seiner Definitionsvielfalt erst aus der Auffassung einzelner Epochen, ihrer Klassifikationen und Differenzierungen"]}
@@ -112,7 +112,7 @@
 {"t": "node", "id": "Definitionsgeschichte", "features": ["Musik", "gelernt"], "labels": ["Definitionsgeschichte", "Die Definitionsgeschichte"]}
 {"t": "node", "id": "Demgegenüber", "features": ["gelernt"], "labels": ["Demgegenüber", "demgegenüber seit dem 19"]}
 {"t": "node", "id": "Demnach", "features": ["gelernt"], "labels": ["Demnach", "demnach eng mit der des Kuipergürtels verknüpft, der aus Resten der Bildung des äußeren Planetensystems besteht"]}
-{"t": "node", "id": "Demokratie", "features": ["Begriff", "gelernt"], "labels": ["Demokratie"]}
+{"t": "node", "id": "Demokratie", "features": ["Baukunst", "Begriff", "gelernt"], "labels": ["Demokratie"]}
 {"t": "node", "id": "Denen_Er_„nichts", "features": ["gelernt"], "labels": ["Denen_Er_„nichts", "denen er „nichts Neues“ zu sagen hätte"]}
 {"t": "node", "id": "Dennoch", "features": ["Herbarts", "gelernt"], "labels": ["Dennoch"]}
 {"t": "node", "id": "Deren_Natürlichen_Satelliten", "features": ["gelernt"], "labels": ["Deren_Natürlichen_Satelliten", "deren natürlichen Satelliten"]}
@@ -279,7 +279,7 @@
 {"t": "node", "id": "In_Diesem_Umfassenden", "features": ["Lebewesen", "gelernt"], "labels": ["In diesem umfassenden Sinn", "In_Diesem_Umfassenden"]}
 {"t": "node", "id": "Informatik", "features": ["Wissenschaft", "gelernt"], "labels": ["Informatik"]}
 {"t": "node", "id": "Inhalt", "features": ["gelernt"], "labels": ["Inhalt", "der zentrale Inhalt der Architektur"]}
-{"t": "node", "id": "Inhaltlich", "features": ["Begriff", "gelernt"], "labels": ["Inhaltlich"]}
+{"t": "node", "id": "Inhaltlich", "features": ["Baukunst", "Begriff", "gelernt"], "labels": ["Inhaltlich"]}
 {"t": "node", "id": "Innenarchitektur", "features": ["gelernt"], "labels": ["Die Innenarchitektur", "Innenarchitektur"]}
 {"t": "node", "id": "Insbesondere_Seit_Der", "features": ["gelernt"], "labels": ["Insbesondere", "Insbesondere seit der Begründung der Evolutionstheorie", "Insbesondere_Seit_Der"]}
 {"t": "node", "id": "Internet", "features": ["Verb", "gelernt"], "labels": ["Das Internet, umgangssprachlich auch Netz,", "Internet"]}
@@ -315,7 +315,7 @@
 {"t": "node", "id": "Kunstform", "features": ["gelernt"], "labels": ["Kunstform", "Kunstform, die ihren Ausdruck in der auch als Filmen bezeichneten Produktion bewegter Bilder mittels Fotoik, Kameraik und Tontechnik findet, bei Stummfilmen war der Ton untergeordnet oder wurde durch unterschiedliche Möglichkeiten dargestellt"]}
 {"t": "node", "id": "Kunstgattung", "features": ["gelernt"], "labels": ["Kunstgattung", "Kunstgattung, deren Werke aus organisierten Klängen bestehen, die Empfindungen oder Assoziationen hervorrufen können"]}
 {"t": "node", "id": "Kunstgeschichte_Oder_Kunstwissenschaft", "features": ["Disziplin_Der_Physik", "gelernt"], "labels": ["Die Kunstgeschichte oder Kunstwissenschaft, veraltet auch Kunsthistorik,", "Kunstgeschichte", "Kunstgeschichte_Oder_Kunstwissenschaft"]}
-{"t": "node", "id": "Lebewesen", "features": ["gelernt"], "labels": ["Lebewesen", "Medizin", "Medizin die Lehre vom gesunden und kranken Lebewesen"]}
+{"t": "node", "id": "Lebewesen", "features": ["Erfahrungswissenschaft", "Wissenschaft", "gelernt"], "labels": ["Die Medizin", "Lebewesen", "Medizin", "Medizin die Lehre vom gesunden und kranken Lebewesen"]}
 {"t": "node", "id": "Literaturtheorie", "features": ["gelernt"], "labels": ["Literaturtheorie"]}
 {"t": "node", "id": "Literaturzeitschriften", "features": ["gelernt"], "labels": ["Literaturzeitschriften"]}
 {"t": "node", "id": "Ludwig_Wittgenstein", "features": ["gelernt"], "labels": ["Ludwig", "Ludwig Wittgenstein", "Ludwig_Wittgenstein"]}
@@ -381,7 +381,7 @@
 {"t": "node", "id": "Personen", "features": ["Bezeichnung", "gelernt"], "labels": ["Personen", "Personen, deren Berufsbild durch die Anwendung psychologischen Wissens charakterisiert"]}
 {"t": "node", "id": "Philosophie_Behandelt_Zumeist", "features": ["Staatsformen", "gelernt"], "labels": ["Die Philosophie behandelt zumeist Sachverhalte, die im Alltag zunächst einmal völlig selbstverständlich erscheinen: „Du sollst nicht töten“, „Demokratie", "Philosophie", "Philosophie_Behandelt_Zumeist"]}
 {"t": "node", "id": "Philosophische_Revolution_Für", "features": ["gelernt"], "labels": ["Philosophische_Revolution_Für", "die philosophische Revolution für Deutschland“"]}
-{"t": "node", "id": "Phonetisch_Naheliegend", "features": ["Wort_Oder_Glottonym", "gelernt"], "labels": ["Phonetisch", "Phonetisch naheliegend", "Phonetisch_Naheliegend"]}
+{"t": "node", "id": "Phonetisch_Naheliegend", "features": ["Wort_Literatur", "Wort_Oder_Glottonym", "gelernt"], "labels": ["Phonetisch", "Phonetisch naheliegend", "Phonetisch_Naheliegend"]}
 {"t": "node", "id": "Physik", "features": ["Naturwissenschaft", "gelernt"], "labels": ["Die Physik", "Physik"]}
 {"t": "node", "id": "Physikalische", "features": ["Geowissenschaften", "gelernt"], "labels": ["Die physikalische, chemische und biologische Erforschung ihrer Einzelerscheinungen", "Physikalische"]}
 {"t": "node", "id": "Planetensystem", "features": ["gelernt"], "labels": ["Planetensystem", "das Planetensystem, in dem sich die Erde befindet"]}
@@ -407,7 +407,7 @@
 {"t": "node", "id": "Schwierig", "features": ["gelernt"], "labels": ["Schwierig", "schwierig zu definieren, da es verschiedene Definitionen von Intelligenz gibt"]}
 {"t": "node", "id": "Seine_Zentrale_Bedeutung", "features": ["gelernt"], "labels": ["Seine_Zentrale_Bedeutung", "seine zentrale Bedeutung in Literaturgeschichten"]}
 {"t": "node", "id": "Seit", "features": ["gelernt"], "labels": ["Seit", "seit ca", "seit dem 8"]}
-{"t": "node", "id": "Seit_Der_Definition", "features": ["Begriff", "gelernt"], "labels": ["Seit", "Seit der Definition des modernen Sports von Allen Guttmann", "Seit_Der_Definition"]}
+{"t": "node", "id": "Seit_Der_Definition", "features": ["Baukunst", "Begriff", "gelernt"], "labels": ["Seit", "Seit der Definition des modernen Sports von Allen Guttmann", "Seit_Der_Definition"]}
 {"t": "node", "id": "Seit_Der_Wiedervereinigung", "features": ["gelernt"], "labels": ["Seit", "Seit der Wiedervereinigung 1990", "Seit_Der_Wiedervereinigung"]}
 {"t": "node", "id": "Seit_Jeher_Verschiedene", "features": ["gelernt"], "labels": ["Seit_Jeher_Verschiedene", "seit jeher verschiedene Formen von Energie zum leben"]}
 {"t": "node", "id": "Seitdem", "features": ["Bestandteil", "gelernt"], "labels": ["Seitdem"]}
@@ -541,7 +541,7 @@
 {"t": "node", "id": "Wissenschaft", "features": ["gelernt"], "labels": ["Philosophie", "Philosophie die Wissenschaft von den allgemeinen Bewegungsen und Strukturgesetzen der Natur, der Gesellschaft und des Denkens sowie der Stellung des Menschen in der Welt.“ Philosophischem Denken ist vielmehr eigentümlich, dass es in seiner Voraussetzungslosigkeit „immer wieder von vorne anfängt“, es lässt sich „weder befrieden, zivilisieren und forschrittsfähig machen noch ausrotten“, so die Charakterisierung Helmuth Plessners", "Wissenschaft", "die Wissenschaft der Gestirne", "die Wissenschaft der Vorbeugung, Erkennung und Behandlung von Krankheiten, Verletzungen und Behinderungen bei Menschen und Tieren", "die Wissenschaft von Aufbau, Zusammensetzung und Struktur der Erdkruste, der Eigenschaften ihrer Gesteine und ihrer Entwicklungsgeschichte sowie der Prozesse, welche die Erdkruste formten und bis heute formen", "die Wissenschaft von der belebten Materie, den Lebewesen", "die Wissenschaft von der systematischen Darstellung, Verarbeitung, Speicherung und Übertragung von Informationen, wobei die Verarbeitung automatisch mit Computern oder Mikrocontrollern geschieht", "die Wissenschaft, über die man nicht reden kann, ohne sie selbst zu betreiben.“ Daneben hat der Begriff in einem weiteren, übertragenen Sinn auch Bedeutungen wie Weltanschauung, Unternehmenskultur etc", "empirische Wissenschaft, deren Ziel es ist, menschliches Erleben und Verhalten, deren Entwicklung im Laufe des Lebens sowie alle dafür maßgeblichen inneren und äußeren Faktoren und Bedingungen sowie Verfahren zu ihrer Veränderung zu erforschen, zu beschreiben und zu erklären"]}
 {"t": "node", "id": "Wissenschaften", "features": ["gelernt"], "labels": ["Wissenschaften", "der ältesten Wissenschaften"]}
 {"t": "node", "id": "Wobei_Sich_Innerhalb", "features": ["gelernt"], "labels": ["Wobei_Sich_Innerhalb", "wobei sich innerhalb der Genetik die unterschiedlichen Teilbereich auf verschiedene Aspekte der genetischen Forschung konzentrieren"]}
-{"t": "node", "id": "Wort_Literatur", "features": ["Erst", "gelernt"], "labels": ["Das Wort Literatur", "Wort", "Wort_Literatur"]}
+{"t": "node", "id": "Wort_Literatur", "features": ["Erst", "gelernt"], "labels": ["Das Wort Literatur", "Wort", "Wort_Literatur", "demnach die Herkunft vom akkadischen oder phönizischen Wort erebu bzw"]}
 {"t": "node", "id": "Wort_Oder_Glottonym", "features": ["gelernt"], "labels": ["Das Wort oder Glottonym deutsch", "Wort", "Wort_Oder_Glottonym", "demnach die Herkunft vom akkadischen oder phönizischen Wort erebu bzw"]}
 {"t": "node", "id": "Wort_„Recht“", "features": ["Aus_Dem_Größten", "gelernt"], "labels": ["Das Wort „Recht“", "Wort", "Wort_„Recht“"]}
 {"t": "node", "id": "Wortbildung", "features": ["gelernt"], "labels": ["Wortbildung", "Wortbildung aus altgriechisch ψυχή psȳchḗ‚ deutsch Seele, Geist, Herz, Gemüt, Mut, Überzeugung, Denkvermögen sowie Hauch, Atem, Leben, Lebenskraft, Seele, Geist, Gemüt und λόγιος lógios, lateinisch doctus, deutsch gelehrt, bewandert"]}
@@ -608,6 +608,7 @@
 {"t": "edge", "src": "Außerdem", "dst": "Gerade_Stellung_Der", "w": 0.86, "type": "hat"}
 {"t": "edge", "src": "Außerdem", "dst": "Da_So_Die", "w": 0.84, "type": "hat"}
 {"t": "edge", "src": "Axolotl", "dst": "Schwanzlurch", "w": 0.95, "type": "ist"}
+{"t": "edge", "src": "Baukunst", "dst": "Schwierig", "w": 0.85, "type": "ist"}
 {"t": "edge", "src": "Begriff", "dst": "Schwierig", "w": 0.85, "type": "ist"}
 {"t": "edge", "src": "Begriff_Hat_Sich", "dst": "Tiefe", "w": 0.85, "type": "ist"}
 {"t": "edge", "src": "Bei_Der_Filmbasierten", "dst": "Schicht", "w": 0.85, "type": "ist"}
@@ -637,6 +638,7 @@
 {"t": "edge", "src": "Debatte_Über_Industrie", "dst": "Begriff_„vierte_Industrielle", "w": 0.86, "type": "hat"}
 {"t": "edge", "src": "Definitionsgeschichte", "dst": "Musik", "w": 0.85, "type": "ist"}
 {"t": "edge", "src": "Demokratie", "dst": "Begriff", "w": 0.95, "type": "ist"}
+{"t": "edge", "src": "Demokratie", "dst": "Baukunst", "w": 0.95, "type": "ist"}
 {"t": "edge", "src": "Dennoch", "dst": "Herbarts", "w": 0.85, "type": "ist"}
 {"t": "edge", "src": "Dennoch", "dst": "DOSB_Schach_Als", "w": 0.86, "type": "hat"}
 {"t": "edge", "src": "Dennoch", "dst": "Bridge", "w": 0.84, "type": "hat"}
@@ -775,6 +777,7 @@
 {"t": "edge", "src": "In_Diesem_Umfassenden", "dst": "Lebewesen", "w": 0.85, "type": "ist"}
 {"t": "edge", "src": "Informatik", "dst": "Wissenschaft", "w": 0.85, "type": "ist"}
 {"t": "edge", "src": "Inhaltlich", "dst": "Begriff", "w": 0.85, "type": "ist"}
+{"t": "edge", "src": "Inhaltlich", "dst": "Baukunst", "w": 0.85, "type": "ist"}
 {"t": "edge", "src": "Innenarchitektur", "dst": "Gestaltung_Von_Innenräumen", "w": 0.86, "type": "hat"}
 {"t": "edge", "src": "Insbesondere_Seit_Der", "dst": "Begriff_Der_Evolution", "w": 0.86, "type": "hat"}
 {"t": "edge", "src": "Insbesondere_Seit_Der", "dst": "Zu_Einer_Großen", "w": 0.84, "type": "hat"}
@@ -801,6 +804,8 @@
 {"t": "edge", "src": "Kosmologie", "dst": "Subatomaren_Bereich", "w": 0.8, "type": "hat"}
 {"t": "edge", "src": "Kosmologie", "dst": "Während_Die_Kosmogonie", "w": 0.78, "type": "hat"}
 {"t": "edge", "src": "Kunstgeschichte_Oder_Kunstwissenschaft", "dst": "Disziplin_Der_Physik", "w": 0.95, "type": "ist"}
+{"t": "edge", "src": "Lebewesen", "dst": "Wissenschaft", "w": 0.85, "type": "ist"}
+{"t": "edge", "src": "Lebewesen", "dst": "Erfahrungswissenschaft", "w": 0.95, "type": "ist"}
 {"t": "edge", "src": "Ludwig_Wittgenstein", "dst": "Unterschied_Einmal_So", "w": 0.86, "type": "hat"}
 {"t": "edge", "src": "Ludwig_Wittgenstein", "dst": "Denen_Er_„nichts", "w": 0.84, "type": "hat"}
 {"t": "edge", "src": "Ludwig_Wittgenstein", "dst": "Umschreibt_„Philosophie“_Als", "w": 0.82, "type": "hat"}
@@ -845,6 +850,7 @@
 {"t": "edge", "src": "Personen", "dst": "Bezeichnung", "w": 0.85, "type": "ist"}
 {"t": "edge", "src": "Philosophie_Behandelt_Zumeist", "dst": "Staatsformen", "w": 0.85, "type": "ist"}
 {"t": "edge", "src": "Phonetisch_Naheliegend", "dst": "Wort_Oder_Glottonym", "w": 0.85, "type": "ist"}
+{"t": "edge", "src": "Phonetisch_Naheliegend", "dst": "Wort_Literatur", "w": 0.85, "type": "ist"}
 {"t": "edge", "src": "Physik", "dst": "Naturwissenschaft", "w": 0.95, "type": "ist"}
 {"t": "edge", "src": "Physikalische", "dst": "Geowissenschaften", "w": 0.85, "type": "ist"}
 {"t": "edge", "src": "Planvolles_Entwerfen", "dst": "Inhalt", "w": 0.85, "type": "ist"}
@@ -861,6 +867,7 @@
 {"t": "edge", "src": "Sandwüste", "dst": "Wüste", "w": 0.95, "type": "ist"}
 {"t": "edge", "src": "Schon_Von_Anfang", "dst": "Film", "w": 0.85, "type": "ist"}
 {"t": "edge", "src": "Seit_Der_Definition", "dst": "Begriff", "w": 0.85, "type": "ist"}
+{"t": "edge", "src": "Seit_Der_Definition", "dst": "Baukunst", "w": 0.85, "type": "ist"}
 {"t": "edge", "src": "Seit_Der_Wiedervereinigung", "dst": "Sich_Deutschland_Zu", "w": 0.86, "type": "hat"}
 {"t": "edge", "src": "Seitdem", "dst": "Bestandteil", "w": 0.85, "type": "ist"}
 {"t": "edge", "src": "Selbst_Die_Mathematik", "dst": "Speziellen_Zweig", "w": 0.86, "type": "hat"}
