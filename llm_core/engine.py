@@ -72,6 +72,23 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
         self.ticks = 7
         self.damp = 0.7
 
+        # Predictive Activation
+        self.pred_enabled = True
+        self.pred_lr = 0.08
+        self.pred_error_gain = 0.35
+        self.pred_min_error = 0.02
+        self.pred_learning_only = True
+
+        # Sequenz-Kanten (zeitlicher Kontext)
+        self.seq_type = "folge"
+        self.seq_lr = 0.12
+        self.seq_boost = 1.1
+        self.seq_min_act = 0.2
+
+        # Global Workspace Gate
+        self.workspace_gate = True
+        self.workspace_topk = 12
+
         # Zeitlicher Decay: exp(-dt/tau_seconds)
         self.tau_seconds = 6.0
 
@@ -475,12 +492,14 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
     # Spreading Activation (lokal über WM)
     # -------------------------
 
-    def _iter_edges(self, src: str) -> Iterable[Tuple[str, Verbindung, str]]:
+    def _iter_edges(self, src: str, include_seq: bool = True) -> Iterable[Tuple[str, Verbindung, str]]:
         if src in self.konzepte:
             for e in self.konzepte[src].verbindungen:
                 yield src, e, "semantic"
         if src in self.episodic_edges:
             for e in self.episodic_edges[src]:
+                if not include_seq and e.typ == self.seq_type:
+                    continue
                 yield src, e, "episodic"
 
     def _has_edge(self, src: str, dst: str) -> bool:
@@ -490,6 +509,8 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
                     return True
         if src in self.episodic_edges:
             for e in self.episodic_edges[src]:
+                if e.typ == self.seq_type:
+                    continue
                 if e.ziel == dst:
                     return True
         return False
@@ -502,6 +523,13 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
             if self._has_edge(src, mid) and self._has_edge(mid, dst):
                 return self.triangle_boost
         return 1.0
+
+    def _update_seq_edge(self, src: str, dst: str, strength: float):
+        if not src or not dst or src == dst:
+            return
+        w_init = max(0.1, min(0.9, float(strength or 0.0)))
+        e = self._get_or_create_episodic_edge(src, dst, self.seq_type, w_init=w_init)
+        e.gewicht = max(0.01, min(0.99, e.gewicht + self.seq_lr * max(0.05, w_init)))
 
     def spreading_activation(self, intent: str = "OTHER") -> Dict[str, float]:
         act: Dict[str, float] = {}
@@ -564,6 +592,112 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
 
         return act
 
+    def predictive_activation(self, cues: Dict[str, float], intent: str = "OTHER") -> Dict[str, float]:
+        act: Dict[str, float] = {}
+        self.trace = []
+
+        self._wm_init(cues)
+        for w in self.wm:
+            act[w.id] = max(act.get(w.id, 0.0), w.a)
+            if w.id in self.konzepte:
+                self.konzepte[w.id].aktivierung = act[w.id]
+                self.konzepte[w.id].letzte_aktivierung = datetime.now()
+
+        prev_focus = self.wm[0].id if self.wm else ""
+
+        for tick in range(self.ticks):
+            pred: Dict[str, float] = {}
+            wm_ids = [w.id for w in self.wm]
+
+            for src in wm_ids:
+                src_a = act.get(src, 0.0)
+                if src_a <= self.cutoff:
+                    continue
+
+                for _, e, layer in self._iter_edges(src, include_seq=True):
+                    dst = e.ziel
+                    if not dst:
+                        continue
+
+                    gate = self._gate(e.typ, intent)
+                    if layer == "episodic" and e.typ == self.seq_type:
+                        gate = max(gate, self.seq_boost)
+
+                    tri = self._triangle_adjust(src, dst)
+                    incoming = src_a * e.gewicht * self.damp * gate * tri
+
+                    if dst in self.konzepte:
+                        incoming *= self._time_decay(self.konzepte[dst])
+
+                    if incoming > 0:
+                        pred[dst] = pred.get(dst, 0.0) + incoming
+
+                    if incoming > 0.05:
+                        self.trace.append(TraceItem(
+                            tick=tick + 1,
+                            src=src,
+                            dst=dst,
+                            typ=e.typ,
+                            contrib=float(incoming),
+                            layer=layer,
+                        ))
+
+            pred = self._normalize_max(pred)
+            pred = self._inhibit(pred)
+            pred = self._topk_clamp(pred, self.topk_global)
+
+            # Prediction error (observed - predicted)
+            error: Dict[str, float] = {}
+            for k in set(pred) | set(act):
+                error[k] = act.get(k, 0.0) - pred.get(k, 0.0)
+
+            # Lernupdate nur über Vorhersagefehler (ohne Sequenzkanten)
+            for src in wm_ids:
+                src_a = act.get(src, 0.0)
+                if src_a <= self.cutoff:
+                    continue
+                for _, e, layer in self._iter_edges(src, include_seq=True):
+                    if e.typ == self.seq_type:
+                        continue
+                    dst = e.ziel
+                    if not dst:
+                        continue
+                    err = error.get(dst, 0.0)
+                    if abs(err) < self.pred_min_error:
+                        continue
+                    delta = self.pred_lr * src_a * err
+                    e.gewicht = max(0.01, min(0.99, e.gewicht + delta))
+
+            # Next activation = prediction + sensory anchors + (optional) error injection
+            act = dict(pred)
+            for k, v in cues.items():
+                act[k] = max(act.get(k, 0.0), v)
+            if self.pred_error_gain > 0:
+                for k, err in error.items():
+                    if err > 0:
+                        val = min(0.99, err * self.pred_error_gain)
+                        if val > act.get(k, 0.0):
+                            act[k] = val
+
+            now = datetime.now()
+            for kid, val in act.items():
+                if kid not in self.konzepte:
+                    self.konzepte[kid] = Konzept(id=kid, labels=[kid])
+                self.konzepte[kid].aktivierung = val
+                self.konzepte[kid].letzte_aktivierung = now
+
+            self._wm_refresh(act)
+
+            # Sequenzkanten updaten (Focus -> Focus)
+            cur_focus = self.wm[0].id if self.wm else ""
+            if prev_focus and cur_focus and prev_focus != cur_focus:
+                strength = act.get(cur_focus, 0.0)
+                if strength >= self.seq_min_act:
+                    self._update_seq_edge(prev_focus, cur_focus, strength)
+            prev_focus = cur_focus
+
+        return act
+
     # -------------------------
     # Denken / Antworten
     # -------------------------
@@ -620,14 +754,31 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
                 "timestamp": datetime.now().isoformat(),
             }
 
-        self._wm_init(cues)
-        act = self.spreading_activation(intent=intent)
+        if self.pred_enabled:
+            act = self.predictive_activation(cues, intent=intent)
+            if self.wm:
+                focus_ids = [w.id for w in self.wm[:2]]
+        else:
+            self._wm_init(cues)
+            act = self.spreading_activation(intent=intent)
 
-        pattern = sorted(
+        pattern_all = sorted(
             [(k, v) for k, v in act.items() if v >= self.pattern_threshold],
             key=lambda x: x[1],
             reverse=True,
         )
+
+        if self.workspace_gate:
+            wm_ids = [w.id for w in self.wm]
+            wm_set = set(wm_ids)
+            pattern = [(k, v) for k, v in pattern_all if k in wm_set]
+            if not pattern and wm_ids:
+                pattern = [(k, act.get(k, 0.0)) for k in wm_ids if act.get(k, 0.0) >= self.pattern_threshold]
+                pattern.sort(key=lambda x: x[1], reverse=True)
+            if self.workspace_topk and len(pattern) > self.workspace_topk:
+                pattern = pattern[: self.workspace_topk]
+        else:
+            pattern = pattern_all
 
         return {
             "frage": frage,
@@ -653,7 +804,8 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
             return "Das weiß ich nicht. Bitte stelle mir eine neue Frage."
 
         if auto_lernen:
-            self.lerne_aus_aktivierung(pattern, trace)
+            if not (self.pred_enabled and self.pred_learning_only):
+                self.lerne_aus_aktivierung(pattern, trace)
 
         use_lm_final = self.use_lm_default if use_lm is None else use_lm
         return self.versprachliche(
@@ -900,8 +1052,11 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
             if len(seeds) > 1:
                 cues[seeds[1]] = 0.75
 
-            self._wm_init(cues)
-            act = self.spreading_activation(intent="OTHER")
+            if self.pred_enabled:
+                act = self.predictive_activation(cues, intent="OTHER")
+            else:
+                self._wm_init(cues)
+                act = self.spreading_activation(intent="OTHER")
             pattern = sorted(
                 [(k, v) for k, v in act.items() if v >= self.pattern_threshold],
                 key=lambda x: x[1],
@@ -916,7 +1071,8 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
                 "timestamp": datetime.now().isoformat(),
             }
             if pattern:
-                self.lerne_aus_aktivierung(pattern, res["trace"])
+                if not (self.pred_enabled and self.pred_learning_only):
+                    self.lerne_aus_aktivierung(pattern, res["trace"])
             results.append(res)
 
         return results
