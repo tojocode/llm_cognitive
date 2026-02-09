@@ -424,15 +424,20 @@ class WernickeMixin:
         if not p:
             return ""
 
-        nouns = re.findall(r"[A-ZÄÖÜ][a-zäöüß\-]+", p)
-        if nouns:
-            return nouns[-1]
-
         stop = {
             "der", "die", "das", "ein", "eine", "einen", "einem", "einer", "den", "dem", "des",
             "und", "oder", "zu", "im", "in", "am", "an", "von", "mit", "für", "fuer",
             "was", "wie", "warum", "wieso", "weshalb", "diese", "dieser", "dieses", "dabei",
+            "bei", "nach", "vor", "auf", "unter", "über", "ueber", "zwischen", "ohne", "als",
+            "seit", "aus", "durch", "wegen", "gegen", "während", "waehrend",
         }
+
+        nouns = re.findall(r"[A-ZÄÖÜ][a-zäöüß\-]+", p)
+        if nouns:
+            nouns = [n for n in nouns if n.lower() not in stop]
+            if nouns:
+                return nouns[-1]
+
         for t in re.split(r"\s+", p):
             t0 = re.sub(r"[^\wäöüß\-]+", "", t, flags=re.IGNORECASE)
             if len(t0) >= 3 and t0.lower() not in stop:
