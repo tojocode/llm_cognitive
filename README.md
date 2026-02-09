@@ -1,1 +1,1 @@
-# llm_cognitive
+# mindgraph_model
