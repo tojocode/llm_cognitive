@@ -107,6 +107,7 @@ DEFAULT_CONFIG = {
     "protect_abbrev_for_split": True,
     "fix_camelcase_compounds": True,
     "fix_glued_conjunctions": True,
+    "strip_parentheticals": True,
 
     # Debug
     "print_normalize_stats": True,
@@ -154,6 +155,7 @@ def load_config() -> dict:
     cfg.setdefault("protect_abbrev_for_split", True)
     cfg.setdefault("fix_camelcase_compounds", True)
     cfg.setdefault("fix_glued_conjunctions", True)
+    cfg.setdefault("strip_parentheticals", True)
     cfg.setdefault("print_normalize_stats", True)
 
     # sentence_limit alias
@@ -235,6 +237,7 @@ class _NormStats:
         self.split_protected = 0
         self.camel_hyphen_fixed = 0
         self.glued_fixed = 0
+        self.parentheticals_stripped = 0
 
 
 def _is_lower(ch: str) -> bool:
@@ -435,6 +438,26 @@ def _restore_abbrev_after_split(text: str) -> str:
     if not text:
         return ""
     return text.replace(_SPLIT_DOT, ".")
+
+
+def _strip_parentheticals(text: str, st: _NormStats) -> str:
+    """
+    Entfernt alle "(...)"-Inhalte inkl. Klammern (auch über mehrere Zeilen).
+    """
+    if not text:
+        return ""
+    t = text
+    guard = 0
+    while guard < 64:
+        guard += 1
+        t2, n = re.subn(r"\([^()]*\)", " ", t, flags=re.S)
+        if n == 0:
+            break
+        st.parentheticals_stripped += n
+        t = t2
+    if t != text:
+        t = re.sub(r"\s{2,}", " ", t).strip()
+    return t
 
 
 # ------------------------------------------------------------
@@ -871,6 +894,8 @@ def fetch_wikipedia(topic: str, config: dict) -> str:
         text = re.sub(r"={2,}.*?={2,}", "", text)
 
         stats = _NormStats()
+        if config.get("strip_parentheticals", True):
+            text = _strip_parentheticals(text, stats)
         if config.get("normalize_import_text", True):
             text = normalize_import_text(text, config, stats)
         else:
@@ -906,6 +931,7 @@ def fetch_wikipedia(topic: str, config: dict) -> str:
                 f" splitprot={stats.split_protected}"
                 f" camel={stats.camel_hyphen_fixed}"
                 f" glue={stats.glued_fixed}"
+                f" paren={stats.parentheticals_stripped}"
             )
 
         limit = int(config.get("sentence_limit", config.get("line_limit", 10)) or 0)

@@ -13,9 +13,9 @@ from llm_core.engine import KognitivesModell
 def main():
     engine = KognitivesModell()
     questions = [
-        "Warum ist der Himmel blau?",
+        "Warum ist Puto ein Planet?",
         "Was ist ein Axolotl?",
-        "Wie funktioniert Lernen?",
+        "Was ist Nachhaltigkeit?",
     ]
     for i, q in enumerate(questions, 1):
         print("\n" + "▬" * 86)
