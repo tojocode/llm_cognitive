@@ -1,4 +1,4 @@
-Pluto (IPA: [ˈpluːto] ) ist der größte und zweitmassivste bekannte Zwergplanet des Sonnensystems und das am längsten bekannte Objekt des Kuipergürtels.
+Pluto ist der größte und zweitmassivste bekannte Zwergplanet des Sonnensystems und das am längsten bekannte Objekt des Kuipergürtels.
 Er bewegt sich auf einer noch exzentrischeren Bahn um die Sonne als der Planet Merkur.
 Sein Volumen entspricht etwa einem Drittel des Erdmondes.
 Das astronomische Symbol des Pluto ist ♇.
@@ -6,9 +6,9 @@ Pluto ist nach dem römischen Gott der Unterwelt benannt.
 Nach dem Zwergplaneten wiederum wurden die neuen Klassen der Plutoiden und der Plutinos benannt.
 Von seiner Entdeckung am 18.
 Februar 1930 bis zur Neudefinition des Begriffs „Planet“ am 24.
-August 2006 durch die Internationale Astronomische Union (IAU) galt Pluto als der neunte und äußerste Planet des Sonnensystems.
+August 2006 durch die Internationale Astronomische Union galt Pluto als der neunte und äußerste Planet des Sonnensystems.
 Nachdem immer mehr Plutoiden - also ähnlich große Körper des Kuipergürtels - gefunden worden waren, wurde eine präzisere Begriffsdefinition entwickelt.
-Seither wird er der Kategorie Zwergplanet zugeordnet und erhielt die Kleinplanetennummer (134340) Pluto.
+Seither wird er der Kategorie Zwergplanet zugeordnet und erhielt die Kleinplanetennummer Pluto.
 Im Januar 2006 wurde mit New Horizons erstmals eine Raumsonde zu Pluto ausgesandt; sie passierte ihn am 14.
 Juli 2015 in 12.500 km Entfernung.
 Pluto benötigt für eine Sonnenumrundung 247,94 Jahre.
@@ -24,9 +24,9 @@ Das nächste Aphel wird er im Jahr 2113 erreichen.
 Dort beträgt die Sonnenstrahlung nur etwa 0,563 W/m².
 Auf der Erde ist sie 2430-mal so hoch.
 Vom Pluto aus betrachtet hat die Sonne einen scheinbaren Durchmesser von nur etwa 50″ und sieht damit wie ein blendend heller Stern etwa der -19.
-Größenklasse aus (150-mal heller als der Vollmond).
+Größenklasse aus.
 Sie schwankt während eines Plutojahres um etwa 1,1 Größenklassen.
-Wegen Plutos stark exzentrischer Bahn und der unterschiedlichen Albedo seiner zwei Hemisphären ändert sich seine Helligkeit, von der Erde aus gesehen, zwischen 13,8 mag (Erdnähe) und 16,5 mag (Erdferne).
+Wegen Plutos stark exzentrischer Bahn und der unterschiedlichen Albedo seiner zwei Hemisphären ändert sich seine Helligkeit, von der Erde aus gesehen, zwischen 13,8 mag und 16,5 mag.
 In der Zeit, in der Neptun dreimal die Sonne umrundet, bewegt sich Pluto genau zweimal um die Sonne.
 Man spricht daher von einer 3:2-Bahnresonanz.
 Viele Kuipergürtelobjekte befinden sich wie Pluto in einer solchen 3:2-Bahnresonanz mit Neptun, und sie werden deswegen als Plutinos bezeichnet.

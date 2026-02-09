@@ -1,24 +1,23 @@
-Biologie (von altgriechisch βίος bíos „Leben“ und λόγος lógos hier: „Lehre“, siehe auch -logie) oder historisch auch Lebenskunde ist die Wissenschaft von der belebten Materie, den Lebewesen.
+Biologie oder historisch auch Lebenskunde ist die Wissenschaft von der belebten Materie, den Lebewesen.
 Sie ist ein Teilgebiet der Naturwissenschaften und befasst sich sowohl mit den allgemeinen Gesetzmäßigkeiten des Lebendigen als auch mit den Besonderheiten der einzelnen Lebewesen: zum Beispiel mit ihrer Entwicklung, ihrem Bauplan und den physikalischen und biochemischen Vorgängen in ihrem Inneren.
 Im Fach Biologie wird in zahlreichen Teilgebieten geforscht.
 Zu den ganz allgemein auf das Verständnis des Lebendigen ausgerichteten Teilgebieten gehören insbesondere Biophysik, Genetik, Molekularbiologie, Ökologie, Physiologie, Theoretische Biologie und Zellbiologie.
-Mit großen Gruppen der Lebewesen befassen sich die Botanik (Pflanzen), die Zoologie (Tiere) und die Mikrobiologie (Kleinstlebewesen und Viren).
+Mit großen Gruppen der Lebewesen befassen sich die Botanik, die Zoologie und die Mikrobiologie.
 Die Betrachtungsobjekte der Biologie umfassen u. a. Moleküle, Organellen, Zellen und Zellverbände, Gewebe und Organe, aber auch das Verhalten einzelner Organismen sowie deren Zusammenspiel mit anderen Organismen in ihrer Umwelt.
 Diese Vielfalt an Betrachtungsobjekten hat zur Folge, dass im Fach Biologie eine Vielfalt an Methoden, Theorien und Modellen angewandt und gelehrt wird.
 Die Ausbildung von Biologen erfolgt an Universitäten im Rahmen eines Biologiestudiums, von BiologieLehramtsstudierenden zumindest zeitweise auch im Rahmen der Biologiedidaktik.
-In neuerer Zeit haben sich infolge der fließenden Übergänge in andere Wissenschaftsbereiche (z. b. Medizin, Psychologie und Ernährungswissenschaften) sowie wegen des interdisziplinären Charakters der Forschung neben der Bezeichnung Biologie weitere Bezeichnungen für die biologischen Forschungsrichtungen und Ausbildungsgänge etabliert wie zum Beispiel Biowissenschaften, Life Sciences und Lebenswissenschaften.
+In neuerer Zeit haben sich infolge der fließenden Übergänge in andere Wissenschaftsbereiche sowie wegen des interdisziplinären Charakters der Forschung neben der Bezeichnung Biologie weitere Bezeichnungen für die biologischen Forschungsrichtungen und Ausbildungsgänge etabliert wie zum Beispiel Biowissenschaften, Life Sciences und Lebenswissenschaften.
 Überlegungen zum Leben gab es bereits um 600 v. Chr. bei dem griechischen Naturphilosophen Thales von Milet, der das Wasser als den Anfang - den Urgr und - aller Dinge bezeichnet haben soll.
 Von der Antike bis ins Mittelalter beruhte die Biologie allerdings hauptsächlich auf der Beobachtung der Natur, also nicht auf Experimenten.
-In die Interpretation der Beobachtungen flossen zudem häufig Theorien wie die VierElementeLehre oder verschiedene spirituelle Haltungen ein, so auch der Schöpfungsmythos der biblischen Genesis, demzufolge „Gott der HERR den Menschen aus Staub von der Erde“ formte (Adam) und ihm „den Odem des Lebens in seine Nase“ blies - „und so ward der Mensch ein lebendiges Wesen.“.
-Erst mit Beginn der wissenschaftlichen Revolution in der frühen Neuzeit begannen Naturforscher, sich vom Übernatürlichen zu lösen.
+In die Interpretation der Beobachtungen flossen zudem häufig Theorien wie die VierElementeLehre oder verschiedene spirituelle Haltungen ein, so auch der Schöpfungsmythos der biblischen Genesis, demzufolge „Gott der HERR den Menschen aus Staub von der Erde“ formte und ihm „den Odem des Lebens in seine Nase“ blies - „und so ward der Mensch ein lebendiges Wesen.“ Erst mit Beginn der wissenschaftlichen Revolution in der frühen Neuzeit begannen Naturforscher, sich vom Übernatürlichen zu lösen.
 und 17. Jahrhundert erweiterte sich zum Beispiel das Wissen über die Anatomie durch die Wiederaufnahme von Sektionen und Erfindungen wie das Mikroskop ermöglichten ganz neue Einblicke in eine bis dahin nahezu unsichtbare Welt.
 Der Brüsseler Arzt und Philosoph Johan Baptista van Helmont gelangte, Gedanken von Paracelsus weiterentwickelnd, im 17. Jahrhundert zu einer biologischen Lebensng und Krankheitsauffassung.
 Die Entwicklung der Chemie brachte auch in der Biologie Fortschritte.
 Experimente, die zur Entdeckung von molekularen Lebensvorgängen wie der Fermentation und der Fotosynthese führten, wurden möglich.
 Im 19. Jahrhundert wurden die Grundsteine für zwei große neue Wissenschaftszweige der Naturforschung gelegt: Gregor Mendels Arbeiten an Pflanzenkreuzungen begründeten die Vererbungslehre und die spätere Genetik und Werke von JeanBaptiste de Lamarck, Charles Darwin und Alfred Russel Wallace begründeten die Evolutionstheorien.
 Die Bezeichnung Biologie, im modernen Sinne verwendet, scheint mehrfach unabhängig voneinander eingeführt worden zu sein.
-Gottfried Reinhold Treviranus (Biologie oder Philosophie der lebenden Natur, 1802) und JeanBaptiste Lamarck (Hydrogéologie, 1802) verwendeten und definierten ihn erstmals.
-Das Wort selbst wurde schon 1797 von Theodor Gustav August Roose (1771-1803) im Vorwort seiner Schrift Grundzüge der Lehre von der Lebenskraft verwendet und taucht im Titel des dritten Bands von Michael Christoph Hanows Philosophiae naturalis sive physicae dogmaticae: Geologia, biologia, phytologia generalis et dendrologia von 1766 auf.
+Gottfried Reinhold Treviranus und JeanBaptiste Lamarck verwendeten und definierten ihn erstmals.
+Das Wort selbst wurde schon 1797 von Theodor Gustav August Roose im Vorwort seiner Schrift Grundzüge der Lehre von der Lebenskraft verwendet und taucht im Titel des dritten Bands von Michael Christoph Hanows Philosophiae naturalis sive physicae dogmaticae: Geologia, biologia, phytologia generalis et dendrologia von 1766 auf.
 Zu den Ersten, die „Biologie“ in einem umfassenden Sinn prägten, gehörte der deutsche Anatom und Physiologe Karl Friedrich Burdach.
 Mit der Weiterentwicklung der Untersuchungsmethoden drang die Biologie in immer kleinere Dimensionen vor.
 Im 19. Jahrhundert erhielt die Medizin mit der von Theodor Schwann begründeten tierischen Zellenlehre eine neue biologische Grundlage.
@@ -36,5 +35,6 @@ So versuchten unter anderem E.
 Huschke, C.
 Möbius und T.
 von Bischoff die geistige Inferiorität von Frauen nachzuweisen, um deren Zulassung zum Studium zu verhindern.
-Hingegen waren die beschreibenden biologischen Naturwissenschaften (aber auch andere beschreibende Naturwissenschaften wie Physik und Mathematik) weiter.
+Hingegen waren die beschreibenden biologischen Naturwissenschaften weiter.
 Hier zeigten sich die noch ausschließlich männlichen Lehrenden in einer Studie A.
+Kirchhoffs zumeist offen für die Zulassung von Frauen zum Studium.

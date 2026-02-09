@@ -1,5 +1,5 @@
-Die Psychologie (von altgriechisch ψυχή psȳchḗ für „Seele, Gemüt“, und λόγιος lógios für „Kunde, Wissenschaft“), deutsch historisch auch Seelenkunde genannt, ist eine empirische Wissenschaft, deren Ziel es ist, menschliches Erleben und Verhalten, deren Entwicklung im Laufe des Lebens sowie alle dafür maßgeblichen inneren und äußeren Faktoren und Bedingungen sowie Verfahren zu ihrer Veränderung zu erforschen, zu beschreiben und zu erklären.
-Personen, deren Berufsbild durch die Anwendung psychologischen Wissens charakterisiert ist und deren Bezeichnung in Deutschland ein Hochschulstudium im Hauptfach Psychologie voraussetzt, sind Psychologen..
+Die Psychologie, deutsch historisch auch Seelenkunde genannt, ist eine empirische Wissenschaft, deren Ziel es ist, menschliches Erleben und Verhalten, deren Entwicklung im Laufe des Lebens sowie alle dafür maßgeblichen inneren und äußeren Faktoren und Bedingungen sowie Verfahren zu ihrer Veränderung zu erforschen, zu beschreiben und zu erklären.
+Personen, deren Berufsbild durch die Anwendung psychologischen Wissens charakterisiert ist und deren Bezeichnung in Deutschland ein Hochschulstudium im Hauptfach Psychologie voraussetzt, sind Psychologen.
 Die Psychologie lässt sich in ihrer gesamten Breite weder nur den Naturwissenschaften noch den Sozialwissenschaften oder Geisteswissenschaften zuordnen.
 Eine übliche, aus dem angelsächsischen Raum stammende Einteilung untergliedert Psychologie im Sinne der Behavioural sciences in Verhaltenswissenschaft, Kognitionswissenschaft und Neurowissenschaft.
 Da mittels rein naturwissenschaftlichempirischer Forschung nicht alle psychologischen Phänomene erfasst werden können, ist auch auf die Bedeutung der geisteswissenschaftlichen Anteile in der Psychologie zu verweisen.
@@ -13,7 +13,7 @@ Ihre Erkenntnisse genügen wissenschaftlichen Ansprüchen, etwa hinsichtlich ihr
 Das Vorverständnis der Alltagspsychologie ist jedoch nach wie vor eine wichtige Quelle für wissenschaftliche Hypothesen.
 Der Ausdruck Psychologie ist eine Wortbildung aus altgriechisch ψυχή psȳchḗ‚ deutsch Seele, Geist, Herz, Gemüt, Mut, Überzeugung, Denkvermögen sowie Hauch, Atem, Leben, Lebenskraft, Seele, Geist, Gemüt und λόγιος lógios, lateinisch doctus, deutsch gelehrt, bewandert.
 Der Begriff Psychologie findet sich erstmals 1517 im Buch Psichiologia de ratione animae humanae des kroatischen Humanisten Marko Marulić und gehört seit dem Anfang des 19. Jahrhunderts sowohl der Fachals auch Gemeinsprache an.
-Im Deutschen erscheint das Wort „Psychologie“ erstmals in den Schriften des Philosophen und Universalgelehrten Christian Wolff (1679-1754).
+Im Deutschen erscheint das Wort „Psychologie“ erstmals in den Schriften des Philosophen und Universalgelehrten Christian Wolff.
 Die Auffassung über Psychologie als Wissenschaftsdisziplin unterliegt einem historischen Wandlungsprozess, immer im Spannungsfeld zwischen Geistesen und Naturwissenschaften liegend.
 Psychologie wurde als eigenständige akademische Disziplin Ende des 19. Jahrhunderts in damaligen wissenschaftlichen Zentren Deutschlands wie Leipzig und Königsberg begründet.
 Bis weit ins 19. Jahrhundert hinein war die Psychologie ein Teil der Philosophie.
@@ -23,8 +23,8 @@ Wiewohl anfangs die Introspektion anerkannte Methode in den frühen psychologisc
 Im Unterschied zu den Begriffen Seele oder Geist als Synonyme für Psyche sind sie im metaphysischen beziehungsweise theologischen Sinn nicht Gegenstand der heutigen Psychologie.
 Bei ihrer Begründung im 19. Jahrhundert wurden metaphysische Elemente explizit ausgeklammert, jedoch deren Gegenstände - natürlich mit Beschränkung auf im gewählten methodischen Zugang auch untersuchbare Bereiche - in Kombination damals neuer Methoden der Biologie und Physik, später auch der modernen Inferenzstatistik, erforscht.
 Die Ausgestaltung der Psychologie als eine eigene akademische Disziplin geht einher mit der durchaus kompromisshaften Lösung methodologischer Probleme.
-Möglich wurde dies durch neue Erkenntnisse der Experimentalphysik und Neuerungen insbesondere der Biologie, genauer: der Sinnesphysiologie des 19. Jahrhunderts (Psychophysik).
-In Leipzig gründete Wilhelm Wundt gemeinsam mit Gustav Theodor Fechner 1879 (zunächst als Privatinstitut) das Institut für experimentelle Psychologie.
+Möglich wurde dies durch neue Erkenntnisse der Experimentalphysik und Neuerungen insbesondere der Biologie, genauer: der Sinnesphysiologie des 19. Jahrhunderts.
+In Leipzig gründete Wilhelm Wundt gemeinsam mit Gustav Theodor Fechner 1879 das Institut für experimentelle Psychologie.
 Um diese beiden sammelte sich binnen kurzer Zeit ein Kreis engagierter junger Forscher, zu denen unter anderem Emil Kraepelin, Hugo Münsterberg und James McKeen Cattell gehörten.
 1883 wurde das Institut offizielles Universitätsinstitut.
 Wundts Erkenntnistheorie und Methodologie waren fundamental von Gottfried Wilhelm Leibniz und dessen Erkenntnisre und Prinzipienlehre beeinflusst, außerdem von Immanuel Kant, und durch Kritik an Herbarts spekulativer Lehre - im Unterschied zu Gustav Theodor Fechners Psychophysik.
@@ -37,4 +37,4 @@ Beneke war einer der ersten deutschen Philosophen, die von einer empirischen Her
 Die Psychoanalyse stütze sich damals vornehmlich auf Praxisbeobachtungen, aus denen sie ihr wirkmächtiges Modell der Mechanismen des Erlebens und Verhaltens entwickelte.
 Im wissenschaftlichen Betrieb dominieren jedoch - nicht zuletzt wegen ihrer höheren methodischen Strenge - spätestens im letzten Drittel des 20. Jahrhunderts behavioristische Paradigmen, die sich auf reliabel beobachtbare Faktoren stützten.
 Die Psychoanalyse ist heute ein psychotherapeutisches Verfahren zur Behandlung psychischer Erkrankungen.
-Die Tierpsychologie (heute: Verhaltensforschung) sonderte sich im frühen 20. Jahrhundert unter Konrad Lorenz als eigenständiges Fach von der Psychologie ab.
+Die Tierpsychologie sonderte sich im frühen 20. Jahrhundert unter Konrad Lorenz als eigenständiges Fach von der Psychologie ab.

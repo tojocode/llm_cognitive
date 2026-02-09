@@ -1,5 +1,5 @@
-Als Literatur bezeichnet man seit dem 19. Jahrhundert den Bereich aller mündlich (etwa durch Versformen und Rhythmus) oder schriftlich fixierten sprachlichen Zeugnisse.
-Man spricht in diesem „weiten“ Begriffsverständnis im Hinblick auf die hier gegebene schriftliche Fixierung etwa von „Fachliteratur“ oder, im Bereich der Musik, von „Notenliteratur“ (etwa Partituren) bzw.
+Als Literatur bezeichnet man seit dem 19. Jahrhundert den Bereich aller mündlich oder schriftlich fixierten sprachlichen Zeugnisse.
+Man spricht in diesem „weiten“ Begriffsverständnis im Hinblick auf die hier gegebene schriftliche Fixierung etwa von „Fachliteratur“ oder, im Bereich der Musik, von „Notenliteratur“ bzw.
 ganz allgemein von „Literatur“ im Sinne der Gesamtheit oder von Teilen schriftlich notierter Musik.
 Die öffentliche Literaturdiskussion und -analyse ist demgegenüber seit dem 19. Jahrhundert auf Werke ausgerichtet, denen besondere Bedeutung als Kunst zugesprochen werden kann, und die man im selben Moment von Trivialliteratur und ähnlichen Werken ohne vergleichbare „literarische“, sprich künstlerische Qualität, abgrenzt.
 Die Literatur zählt zu den Gattungen der Kunst.
@@ -11,17 +11,16 @@ Nur eingeschränkt und nicht über den Buchhandel zugängliche Publikationen wer
 Die heutige begriffliche Differenzierung, die im weitesten Sinne alle sprachliche Überlieferung umfasst und dabei ein enges Feld „literarischer“ Kunstwerke konstituiert, richtete sich erst im Laufe des 19. Jahrhunderts ein.
 Das Wort stand zuvor für Gelehrsamkeit, die Wissenschaften, die Produktion der res publica literaria und der frühmodernen scientific community, seltener auch lediglich für Schriften der griechischen und lateinischen Antike.
 Die Neudefinition des Wortes geschah im Wesentlichen unter Einfluss neuer Literaturzeitschriften und ihnen folgender Literaturgeschichten, die zwischen 1730 und 1830 sich schrittweise den belles lettres, den schönen Wissenschaften öffneten, dem Bereich modischer und eleganter Bücher des internationalen Marktes und die dabei Werken der Poesie ein zentrales Interesse schenkten.
-Es wurde im selben Prozess selbstverständlich, dass Literatur.
-nach Überlieferungen in einzelnen Sprachen zergliedert wird in die „Literaturen“ der einzelnen Nationen oder Regionen, gruppiert wird unter den zentralen „literarischen Gattungen“, die im Blick auf die Aristotelische Poetik neu definiert wurden, zu verstehen ist in einem historischen Prozess, der Kulturte und Literaturgeschichte, nach dem Adressaten betrachtet wird in Kategorien wie Kinderur und Jugendliteratur, Frauenliteratur, grundsätzlich nach Anspruchsniveaus unterschieden wird in „hohe“ (oder „anspruchsvolle“) Literatur und „Trivialliteratur“.
-Besprochen wird in den nationalen Philologien (wie der Germanistik, der Romanistik, der Anglistik), die die Ausgestaltung der nationalen Literaturen im 19. Jahrhundert im Wesentlichen vorantrieben, nahezu ausschließlich „hohe“ Literatur.
+Es wurde im selben Prozess selbstverständlich, dass Literatur nach Überlieferungen in einzelnen Sprachen zergliedert wird in die „Literaturen“ der einzelnen Nationen oder Regionen, gruppiert wird unter den zentralen „literarischen Gattungen“, die im Blick auf die Aristotelische Poetik neu definiert wurden, zu verstehen ist in einem historischen Prozess, der Kulturte und Literaturgeschichte, nach dem Adressaten betrachtet wird in Kategorien wie Kinderur und Jugendliteratur, Frauenliteratur, grundsätzlich nach Anspruchsniveaus unterschieden wird in „hohe“ Literatur und „Trivialliteratur“.
+Besprochen wird in den nationalen Philologien, die die Ausgestaltung der nationalen Literaturen im 19. Jahrhundert im Wesentlichen vorantrieben, nahezu ausschließlich „hohe“ Literatur.
 Welche Werke unter welchen Gesichtspunkten besprochen werden, ist seitdem Gegenstand einer Debatte um die Bedeutung, die Werke in der jeweiligen Gesellschaft gewinnen.
-Der jeweilige „Kanon“ einer Nationalliteratur wird in der öffentlichen (und angreifbaren) Würdigung der „künstlerischen“ Qualität festgelegt, sowie in kontroversen Textinterpretationen der Fiktionen, die Titeln tiefere Bedeutung zusprechen.
+Der jeweilige „Kanon“ einer Nationalliteratur wird in der öffentlichen Würdigung der „künstlerischen“ Qualität festgelegt, sowie in kontroversen Textinterpretationen der Fiktionen, die Titeln tiefere Bedeutung zusprechen.
 In der neuen Ausgestaltung übernahm die Literatur im 19. Jahrhundert in den westlichen säkularen Nationen Funktionen, die zuvor die Religionen und ihre Textgrundlagen als Debattende und Bildungsgegenstände innehatten.
 In neuerer Zeit wurde das Thema der digitalen Schriftlichkeit ein Diskussionsgebiet der Literaturwissenschaft und Medienwissenschaft.
 Gerade bei dieser Art von Literatur ist es nicht mehr möglich, nach Kriterien zu beurteilen, die man für Literatur vergangener Jahrhunderte entwickelt hatte.
 Siehe dazu: Digitale Schriftlichkeit.
 Das Wort Literatur ist eine erst in der Frühmoderne in Mode kommende Ableitung des lateinischen littera, der „Buchstabe“.
-Der Plural litterae gewann bereits in der Antike eigene Bedeutungen als „Geschriebenes“, „Dokumente“, „Briefe“, „Gelehrsamkeit“, „Wissenschaft(en)“.
+Der Plural litterae gewann bereits in der Antike eigene Bedeutungen als „Geschriebenes“, „Dokumente“, „Briefe“, „Gelehrsamkeit“, „Wissenschaft “.
 Im Französischen und Englischen blieb diese Bedeutung erhalten in lettres und letters als Synonym für „Wissenschaften“.
 Das heutige Sprechen von Literatur entwickelte sich auf einem Umweg über das Deutsche und seine Äquivalente für die französische Wortfügung belles lettres.
 Im Laufe des 17. Jahrhunderts setzte sich die französische Wortkombination für einen neuen Bereich eleganter Bücher auf dem europäischen Markt durch.
@@ -38,3 +37,4 @@ Man kann innerhalb der Belletristik ein kleineres Feld der Klassiker der Literat
 Das Wort Literatur hat seine zentrale Bedeutung in Literaturgeschichten, Literaturzeitschriften, in der Literaturkritik und Literaturtheorie.
 In all diesen Bereichen geht es deutlich darum, Kontroversen über Literatur zu erzeugen.
 Mit der Belletristik wird im Deutschen eher ein unkontroverses, uneingeschränktes Feld ohne eigene Geschichte beibehalten.
+Es gibt bezeichnenderweise keine „Belletristikgeschichte“, keine „Belletristikkritik“ und keine nationalen „Belletristiken“, dafür jedoch „Literaturgeschichte“, und „Literaturkritik“ wie „Nationalliteraturen“.

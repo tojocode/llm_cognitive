@@ -1,9 +1,9 @@
-Das Wort Architektur (von lateinisch architectura ‚Baukunst‘; dieses von altgriechisch ἀρχιτεκτονία architektonía mit derselben Bedeutung) bezeichnet im weitesten Sinne die handwerkliche, industrielle und digitale Gestaltung sowie die ästhetische Auseinandersetzung des Menschen mit dem gebauten Raum.
+Das Wort Architektur bezeichnet im weitesten Sinne die handwerkliche, industrielle und digitale Gestaltung sowie die ästhetische Auseinandersetzung des Menschen mit dem gebauten Raum.
 Planvolles Entwerfen, Gestalten und Konstruieren von Bauwerken ist der zentrale Inhalt der Architektur.
 Es gibt eine Vielzahl von Definitionen des Begriffes, die der Architektur verschiedene Aufgaben, Inhalte und Bedeutungen zuschreiben.
 Einige werden im Folgenden dargestellt.
 Bereits Vitruv sprach von der „Mutter aller Künste“, womit sowohl die zeitliche Abfolge als auch die rangliche Einstufung der Architektur gegenüber Bildhauerei und Malerei gemeint sein kann.
-Im klassischen Verständnis seit Vitruvs De Architectura beruht Architektur auf den drei Prinzipien Stabilität (Firmitas), Nützlichkeit (Utilitas) und Anmut/Schönheit (Venustas).
+Im klassischen Verständnis seit Vitruvs De Architectura beruht Architektur auf den drei Prinzipien Stabilität, Nützlichkeit und Anmut/Schönheit.
 Bei dem Wort Architektur handelt es sich um die eingedeutschte Version des lateinischen architectura ‚Baukunst‘, das sich vom griechischen ἀρχιτέκτων architékton herleitet.
 Letzteres setzt sich zusammen aus αρχιarchi-, deutsch ‚Haupt-‘ und τέκτων tékton, deutsch ‚Baumeister‘ oder ‚Zimmermann‘ und ließe sich demnach etwa als ‚Oberster Handwerker’ oder ‚Hauptbaumeister’ übersetzen.
 Die Definition dessen, was Architektur heute ist, hängt demnach auch vom Betätigungsfeld des Architekten ab.
@@ -11,7 +11,7 @@ Der Begriff hat sich im Laufe der Geschichte immer wieder gewandelt und ist in s
 In der engeren Bedeutung des klassischen Architekturbegriffs meint Architektur die Wissenschaft und Kunst des planvollen Entwurfs der gebauten menschlichen Umwelt, d. h.
 die Auseinandersetzung mit dem vom Menschen geschaffenen Raum und insbesondere der Wechselbeziehung zwischen Mensch, Raum und Zeit.
 Dabei schließt der klassische Architekturbegriff verschiedene Bedeutungsfacetten mit ein.
-für die Baukunst, die Schaffung und ästhetische Gestaltung von Bauwerken / baulichen Anlagen aller Art.
+Er steht für die Baukunst, die Schaffung und ästhetische Gestaltung von Bauwerken / baulichen Anlagen aller Art.
 Allerdings ist der Begriff Baukunst heute nicht mehr sehr scharf.
 In einer Erweiterung des Begriffs steht der Begriff Architektur heute im akademischen Diskurs oft allgemein für die Kunst des Schaffens und Gestaltens von Räumen allgemein.
 Für Le Corbusier ist die „Baukunst […] das wissende, genaue und großartige Spiel der Baukörper unter dem Licht“.
@@ -33,7 +33,7 @@ Jeder Definitionsversuch - soweit er eine Reflexion enthält - ist bereits Archi
 Die Definition von Architektur beruht im Wesentlichen auf der jeweiligen Haltung und dem Wertesystem der definierenden Person, sei es Bauherr, Architekt oder Architekturtheoretiker.
 Dass die Bewertungen der jeweiligen Werke der Architekten meist kontrovers ausfallen, ist unvermeidlich, da es sich nicht nur um einen Wettbewerb von Talent und Kompetenz handelt, sondern auch um die Gültigkeit der individuellen Wertesysteme.
 Durch die Varianz der Architekturauffassungen ist heute ein großer Formenreichtum in der Architektur gegeben.
-Nach Vitruv (De Architectura) beruht Architektur auf drei Prinzipien: Stabilität (Firmitas), Nützlichkeit (Utilitas) und Anmut/Schönheit (Venustas).
+Nach Vitruv beruht Architektur auf drei Prinzipien: Stabilität, Nützlichkeit und Anmut/Schönheit.
 Dabei muss allen drei Kategorien gleichermaßen und gleichwertig Rechnung getragen werden.
 Sie sollen einerseits das architektonische Entwerfen bestimmen, andererseits als Kriterien zur Beurteilung der fertigen Gebäude dienen.
 Darüber hinaus definiert Vitruv sechs Grundbegriffe des Faches Architektur: „ordinatio“, „dispositio“, „eurythmia“, „symmetria“, „decor“ und „distributio“.

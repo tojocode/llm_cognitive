@@ -5,25 +5,24 @@ So können Abfolgen unterschiedlicher Einzeltöne, die sich durch zeitliche Gest
 Wie die Sprache ist die Musik eine Universalie der menschlichen Kultur.
 Gelegentlich führte die Annahme der Existenz von Universalien der Musikwahrnehmung sogar dazu, der Musik die Eigenschaften einer „universellen Sprache“ zuzuschreiben.
 Diese Sichtweise lässt jedoch außer Acht, dass die musikalischen Ausdrucksformen der Menschheit mindestens so vielgestaltig sind, wie die menschlichen Sprachen.
-So lassen sich kulturübergreifende Gemeinsamkeiten meist nur in einigen archetypischen Situationen des menschlichen Empfindens oder Verhaltens (Wiegenlieder, Kinderlieder, Liebeswerben) nachweisen.
+So lassen sich kulturübergreifende Gemeinsamkeiten meist nur in einigen archetypischen Situationen des menschlichen Empfindens oder Verhaltens nachweisen.
 Musik als Kulturgut war und ist immer auch Gegenstand der geistigen Reflexion, aus der dann auch die verschiedenen Disziplinen der Musikwissenschaft erwachsen konnten.
 Dabei obliegt beispielsweise die begriffliche Erfassung, systematische Darstellung der Zusammenhänge und deren Deutung der Musiktheorie, während sich die Musikpädagogik mit dem Lehren und Lernen von Musik befasst.
-Das Wort Musik leitet sich über lateinisch musica ab von altgriechisch μουσική τέχνη mousikḗ téchnē („musische Kunst“, d. h.
-„Kunst der Musen, Musenkunst“, besonders „Tonkunst, Musik“).
+Das Wort Musik leitet sich über lateinisch musica ab von altgriechisch μουσική τέχνη mousikḗ téchnē.
 Der Ausdruck mousikḗ téchnē wurde bereits in der Antike zu μουσῐκή mousikḗ verkürzt.
-Das altgriechische Adjektiv μουσικός mousikós (von μοῦσα moúsa „Muse“) ist in der weiblichen Form μουσῐκή mousikḗ zuerst 476 v. Chr. in Pindars erster Olympischer Ode überliefert.
-Das Adjektiv floss in die lateinische Sprache ein, wo musicus einerseits Adjektiv ist („die Musik betreffend, musikalisch“, auch „die Dichtkunst betreffend, dichterisch“), andererseits Substantiv („Musiker“, auch „Dichter“).
-Dazu kommen die lateinischen Wortbildungen musica mit der Variante musice („Musenkunst“ im antiken Sinne, einschließlich der Dichtkunst) und musicalis („musikalisch“).
+Das altgriechische Adjektiv μουσικός mousikós ist in der weiblichen Form μουσῐκή mousikḗ zuerst 476 v. Chr. in Pindars erster Olympischer Ode überliefert.
+Das Adjektiv floss in die lateinische Sprache ein, wo musicus einerseits Adjektiv ist, andererseits Substantiv.
+Dazu kommen die lateinischen Wortbildungen musica mit der Variante musice und musicalis.
 Das griechische μουσῐκή mousikḗ und das lateinische musica gingen schließlich als Fachwort in die theoretische Literatur ein.
-Von dort aus übernahmen fast alle europäischen Sprachen (etwa das Englische mit musick und music) und das Arabische das Wort in unterschiedlichen Schreibweisen und Betonungen.
+Von dort aus übernahmen fast alle europäischen Sprachen und das Arabische das Wort in unterschiedlichen Schreibweisen und Betonungen.
 Nur in wenigen Sprachen existieren eigene Prägungen, zum Beispiel tschechisch und slowakisch hudba, kroatisch glazba sowie chinesisch 音乐 yīnyuè, koreanisch 음악 ŭmak/eumak, japanisch 音楽 ongaku.
 In der deutschen Sprache erschien zunächst nur das Grundwort, althochdeutsch mûseke und mittelhochdeutsch mûsik.
 Ab dem 15. Jahrhundert wurden Ableitungen wie Musikant oder musizieren gebildet.
 Erst im 17.
 und 18. Jahrhundert änderte sich die Betonung unter dem Einfluss von französisch musique auf die zweite Silbe, so wie es noch heute in der deutschen Standardsprache gültig ist.
-Im Deutschen gibt es für Musik (insbesondere im Kontext musikalischer Kompositionstätigkeit) das Synonym Tonkunst.
-Dem entsprechen angelsächsisch swēgcræft (wörtlich „Klangkunst“) und isländisch tónlist.
-In anderen germanischen Sprachen gibt es ein Wort für Tonkunst, das wie im Deutschen neben einer Wortform von Musik gebraucht wird: niederländisch toonkunst (neben muziek), dänisch tonekunst (neben musik), norwegisch tonekunst (neben musik), schwedisch tonkonst (neben musik).
+Im Deutschen gibt es für Musik das Synonym Tonkunst.
+Dem entsprechen angelsächsisch swēgcræft und isländisch tónlist.
+In anderen germanischen Sprachen gibt es ein Wort für Tonkunst, das wie im Deutschen neben einer Wortform von Musik gebraucht wird: niederländisch toonkunst, dänisch tonekunst, norwegisch tonekunst, schwedisch tonkonst.
 Der Begriff Musik erlebte in den vergangenen Jahrtausenden mehrere Bedeutungswandlungen.
 Aus der Künsteeinheit μουσική löste sich im 4. Jahrhundert v. Chr. die musica heraus, deren Auffassung zunächst die einer theoriefähigen, mathematisch bestimmten Wissenschaft war.
 Unabhängig von der übrigen Entwicklung hin zur schönen Kunst blieb diese bis ins 17., in protestantischen Kreisen auch noch bis ins 18. Jahrhundert bestehen.
@@ -34,7 +33,8 @@ Trotz der zahlreichen historischen Versuche, zu einem allgemeinen und grundsätz
 Die bisherigen Begriffsbestimmungen stellten jeweils einen Bestandteil des Phänomens Musik in den Mittelpunkt.
 Die Definitionsgeschichte ist von vielen Widersprüchen geprägt: Musik als rationale, zahlenbezogene Wissenschaft, Musik als gefühlsbetonte Kunst, Musik im apollinischen oder dionysischen Verständnis, Musik als reine Theorie oder reine Praxis - oder als Einheit beider Bestandteile.
 Die Musikliteratur der Antike brachte zahlreiche Definitionen hervor, die das musikalische Material, die Tonleiter, und ihre mathematischen Grundlagen in den Mittelpunkt rückten und sie als die Natur des Tongefüges verstanden.
-Der sophistischperikleische Lehrplan basierte auf den beiden Säulen μουσική (Musenkunst) und γυμναστική (Gymnastik), die eine Bildung des Geistes und des Körpers vermitteln sollten.
-Platon betonte ebenfalls in Politeia (III.
-Buch), die »musische und gymnastische Bildung [als …] Grundsätze für Bildung und Erziehung«.
+Der sophistischperikleische Lehrplan basierte auf den beiden Säulen μουσική und γυμναστική, die eine Bildung des Geistes und des Körpers vermitteln sollten.
+Platon betonte ebenfalls in Politeia, die »musische und gymnastische Bildung [als …] Grundsätze für Bildung und Erziehung«.
 Schon bei der Mehrzahl der Sophisten im 5.
+vorchristlichen Jahrhundert wurden Rechenkunst, Astronomie, Geometrie und Musik integriert, die als Einheit genannt und später im Rahmen der Artes Liberales neben den trivialen als quadriviale Künste gelehrt wurden.
+Die Erkenntnis der Weltseele galt als höchstes Bildungsziel dieses antiken Lehrplans.

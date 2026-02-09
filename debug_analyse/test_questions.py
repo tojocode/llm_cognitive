@@ -13,7 +13,7 @@ from llm_core.engine import KognitivesModell
 def main():
     engine = KognitivesModell()
     questions = [
-        "Warum ist Puto ein Planet?",
+        "Warum ist Pluto ein Planet?",
         "Was ist ein Axolotl?",
         "Was ist Nachhaltigkeit?",
     ]

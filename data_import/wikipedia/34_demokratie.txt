@@ -1,11 +1,11 @@
-Demokratie (von altgriechisch δημοκρατία dēmokratía Volksherrschaft) ist ein Begriff für Formen der Herrschaftsorganisation auf der Grundlage der Partizipation bzw.
+Demokratie ist ein Begriff für Formen der Herrschaftsorganisation auf der Grundlage der Partizipation bzw.
 Teilhabe aller an der politischen Willensbildung.
 Es handelt sich um einen zentralen Begriff der Politikwissenschaft, der ursprünglich aus der Staatsformenlehre stammt und in der Demokratietheorie erörtert wird.
 Die erste begriffliche Erwähnung findet sich bezogen auf die Attische Demokratie bei Herodot.
 Ideengeschichtlich wegweisend für den Begriff war die Definition der Politie bei Aristoteles.
 Eine schlagwortartige Beschreibung aus der Moderne liefert Abraham Lincolns GettysburgFormel von 1863: „Regierung des Volkes, durch das Volk, für das Volk“.
 Für auf staatlicher Ebene existierende neuzeitliche Demokratien ist eine Kombination von liberalen und repräsentativen Elementen gängig.
-Zur liberalen Demokratie, wie sie sich nach westlichen Mustern herausgebildet hat, gehören allgemeine, freie und geheime Wahlen, die Aufteilung der Staatsgewalt bei Gesetzgebung, Regierung und Rechtsprechung auf voneinander unabhängige Organe (Gewaltenteilung) sowie die Garantie der Grundrechte.
+Zur liberalen Demokratie, wie sie sich nach westlichen Mustern herausgebildet hat, gehören allgemeine, freie und geheime Wahlen, die Aufteilung der Staatsgewalt bei Gesetzgebung, Regierung und Rechtsprechung auf voneinander unabhängige Organe sowie die Garantie der Grundrechte.
 In einer repräsentativen Demokratie, in der gewählte Repräsentanten zentrale politische Entscheidungen treffen, haben oft Parteien maßgeblichen Anteil an der politischen Willensbildung und an der durch Wahlen legitimierten Regierung.
 Die Opposition ist fester Bestandteil eines solchen demokratischen Systems, zu dem auch die freie Meinungsäußerung samt Pressefreiheit, die Möglichkeit friedlicher Regierungswechsel und der Minderheitenschutz gehören.
 In einer direkten Demokratie hingegen trifft das Stimmvolk politische Entscheidungen direkt.
@@ -18,7 +18,7 @@ Politische Systeme, die keine Demokratien sind, werden als autoritäre Systeme, 
 Die genaue Abgrenzung von Demokratien zu letzteren ist nicht einheitlich definiert, die Einordnung einzelner Staaten ist daher häufig umstritten.
 Teilweise werden politische Systeme im Übergangsbereich als Hybridregime bezeichnet.
 Laut einem von der Wochenzeitung The Economist publizierten Demokratieindex, einer Form der Demokratiemessung nach westlichliberalen Kriterien, lebten 2024 etwa 8 % der Weltbevölkerung in „vollständigen Demokratien“, weitere 38 % in „unvollständigen Demokratien“, 15 % in Hybridregimen und 39 % in Autokratien.
-Aus der ursprünglichen Wortbedeutung von Demokratie (Macht oder Herrschaft des Volkes) abgeleitet und um das Objekt der Herrschaftsausübung logisch erweitert folgert Giovanni Sartori: „Demokratie ist die Macht des Volkes über das Volk.“ Dabei zu beachten sei, dass die vom Volk nach oben ausgehende Macht - wiederum durch die Kontrolle des Volkes - auch die Machtausübung nach unten bestimme.
+Aus der ursprünglichen Wortbedeutung von Demokratie abgeleitet und um das Objekt der Herrschaftsausübung logisch erweitert folgert Giovanni Sartori: „Demokratie ist die Macht des Volkes über das Volk.“ Dabei zu beachten sei, dass die vom Volk nach oben ausgehende Macht - wiederum durch die Kontrolle des Volkes - auch die Machtausübung nach unten bestimme.
 Andernfalls bestehe die Gefahr, dass die Herrschaft über das Volk mit der Herrschaft des Volkes nichts zu tun habe.
 „Wer Macht delegiert, kann sie auch verlieren; Wahlen sind nicht notwendig frei; und die Repräsentation ist nicht unbedingt eine echte.“ Historisch veränderlich und umstritten war und ist, wer als dem „Volk“ zugehörig definiert wird und wie es seinen Willen bekunden könne.
 Der österreichischamerikanische Politikwissenschaftler Kurt Leo Shell nennt als Minimaldefinition für Demokratie ein System, das allen Staatsbürgern von einem bestimmten Alter an das gleiche Recht zubilligt, an den sie alle betreffenden Gesetzen zumindest indirekt zu partizipieren und ihren Willen ohne rechtliche Diskriminierung oder Unterdrückung zu bilden und auszudrücken.
@@ -29,12 +29,12 @@ Für Samuel Salzborn liegt es im Wesen der Demokratie selbst, sich einer verbind
 Was die Demokratie kennzeichne, müsse umstritten sein, weil es zum demokratischen Prozess gehöre, Interessenkonflikte zu organisieren und ihnen zur Artikulation zu verhelfen.
 In Anlehnung an Gunnar Folke Schuppert bezeichnet Salzborn Demokratie als „ein Verfahren der Legitimation, der Kontrolle und der Kritik politischer Herrschaft“.
 Im Unterschied zu einer vor allem auf normative Aspekte orientierten statischen Definition lasse sich so der funktionale Charakter von Demokratie fassen, und zwar vor allem durch eine negative Bestimmung im Verhältnis zur organisierten Herrschaft.
-„Demokratie fordert die Legitimation (ohne bereits genau zu bestimmen durch wen, von wem und auf welche Weise), sie fordert die Kontrolle (ebenfalls ohne eine substanzielle Erklärung darüber, wie und auf welche Weise) und sie zielt auf die Kritik von politischer Herrschaft - als dauerhaften und unabgeschlossenen Prozess.“.
-Der Ausdruck Demokratie ist auf altgriechisch δημοκρατία zurückzuführen, ein Kompositum aus δῆμος dḗmos ‚Volk‘ und κράτος krátos ‚Kraft; Macht; Herrschaft‘.
+„Demokratie fordert die Legitimation, sie fordert die Kontrolle und sie zielt auf die Kritik von politischer Herrschaft - als dauerhaften und unabgeschlossenen Prozess.“ Der Ausdruck Demokratie ist auf altgriechisch δημοκρατία zurückzuführen, ein Kompositum aus δῆμος dḗmos ‚Volk‘ und κράτος krátos ‚Kraft; Macht; Herrschaft‘.
 Die Endung -kratia bezeichnet dabei, anders als Wörter mit der Endung -archie, nicht die Zahl der jeweils Herrschenden, denen ein Amtsmonopol attestiert wird, sondern die Qualität des Regierungsprinzips.
 Die erste Erwähnung der Bezeichnung Demokratie findet sich bei Herodot um 430 v. Chr., als die so bezeichnete Herrschaftsform bereits mehrere Jahrzehnte praktiziert worden war.
-Zur Demokratie hinleitende Begriffe im Vorfeld waren die mit den Kleisthenischen Reformen in Verbindung stehenden Isonomie (ἰσονομία ‚Gleichheit vor dem Gesetz‘), Isegorie (ἰσηγορία ‚gleiches Rederecht‘) und Isokratie (ἰσοκρατία ‚gleicher Anspruch auf Herrschaft‘).
+Zur Demokratie hinleitende Begriffe im Vorfeld waren die mit den Kleisthenischen Reformen in Verbindung stehenden Isonomie, Isegorie und Isokratie.
 In der ursprünglichen Bedeutung ist Demokratie laut Giovanni Sartori „die Regierung oder Macht des Volkes“.
 Demos stand dabei für die Gemeinschaft, die in der Volksversammlung zusammentrat.
 Herodot lässt Otanes die Vorzüge dieser Herrschaft der Vielen wiedergeben: die Amtsbesetzung durch Losverfahren, die Rechenschaftspflicht der Amtsträger, die Vorlage aller Beschlüsse vor der Gesamtheit, die Rechtsgleichheit für alle und die Verwerfung jeder Willkürmacht.
 Doch umfasste der Demos in einer griechischen Polis nur die freien Männer, die als mündige Bürger an der Ekklesia, der Volksversammlung, teilnahmen, nicht also Frauen, Sklaven und Metöken.
+Bis ins späte 18. Jahrhundert stand Demokratie schwerpunktmäßig für die ursprüngliche Bedeutung eines Gemeinwesens, das sich unter Einbeziehung breiter Kreise seiner Bevölkerung selbst regiert.

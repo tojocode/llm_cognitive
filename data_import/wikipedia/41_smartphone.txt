@@ -1,22 +1,22 @@
-Smartphone ([ˈsmaːɐ̯tfoʊ̯n]; [ˈsmɑɹtfoʊ̯n] AE, [ˈsmɑːtˌfəʊ̯n] BE; englisch, etwa „schlaues Telefon“) nennt man ein Mobiltelefon (umgangssprachlich Handy) mit umfangreichen ComputerFunktionen.
+Smartphone nennt man ein Mobiltelefon mit umfangreichen ComputerFunktionen.
 Smartphones zeichnen sich vor allem durch die Bedienung über einen kapazitiven Touchscreen aus sowie die Möglichkeit der einfachen Installation vieler verschiedener Apps.
-Damit unterscheiden sie sich von FeaturePhones, die teilweise auch einen Internetzugang haben, aber über eine Tastatur bedient werden (oder allenfalls einen resistiven Touchscreen) und eine nur begrenzte Anzahl an Apps ausführen können.
+Damit unterscheiden sie sich von FeaturePhones, die teilweise auch einen Internetzugang haben, aber über eine Tastatur bedient werden und eine nur begrenzte Anzahl an Apps ausführen können.
 Der Begriff „Smartphone“ wurde erstmals 1999 von dem schwedischen Unternehmen Ericsson geprägt.
 Seit 2013 sind die jährlich weltweit neu verkauften Mobiltelefone mehrheitlich Smartphones.
 Als das meistverbreitete SmartphoneBetriebssystem setzte sich in den 2010er Jahren das inzwischen von fast allen Herstellern verwendete Android durch, mit einigem Abstand gefolgt von dem nur auf AppleGeräten eingesetzten iOS.
 Durch die Verbreitung des Smartphones veränderte sich der Alltag vieler Menschen.
-Erstmals trägt die Mehrzahl der Menschen dauerhaft ein Gerät mit Internetzugang mit sich (per mobiler Breitbandverbindung oder WLAN).
+Erstmals trägt die Mehrzahl der Menschen dauerhaft ein Gerät mit Internetzugang mit sich.
 Dies sorgte für einen starken Anstieg der Nutzung v.
 von sozialen Netzwerken und Instant Messaging im Alltag, aber auch von allen möglichen anderen Onlinediensten.
 Das Smartphone wurde so zum Inbegriff des Digital Lifestyle.
 Es verursacht aber auch viele psychische Gesundheitsschäden und ermöglicht Big Tech und manchen staatlichen Akteuren eine umfangreichere weltweite automatisierte Massenüberwachung als jemals zuvor.
 Smartphones können durch folgende Merkmale von klassischen Mobiltelefonen, PDAs und Electronic Organizern unterschieden werden: Smartphones sind bezüglich Konstruktion und Bedienung nicht nur für das Telefonieren optimiert, sondern sollen auf kleinem Raum die Bedienung einer breiten Palette von Anwendungen ermöglichen.
 Typische Merkmale sind daher im Vergleich zu älteren Mobiltelefonen relativ große und hochauflösende Bildschirme, alphanumerische Tastaturen und/oder Touchscreens.
-Smartphones verfügen meist über ein Betriebssystem mit offengelegter API (siehe Abschnitt Betriebssystem).
+Smartphones verfügen meist über ein Betriebssystem mit offengelegter API.
 Es ermöglicht dem Benutzer, Programme von Drittherstellern zu installieren.
 Mobiltelefone haben im Gegensatz dazu meist eine vordefinierte Programmoberfläche, die nur begrenzt, z. b. durch JavaAnwendungen, erweitert werden kann.
 Smartphones verfügen oft über unterschiedliche Sensoren, die in klassischen Mobiltelefonen seltener zu finden sind.
-Hierzu zählen insbesondere Bewegungs-, Lage-, Magnetfeld-, Licht-, Foto- (RGB und schwarzweiß), Barometeren und Näherungssensoren sowie GPS-Empfänger.
+Hierzu zählen insbesondere Bewegungsen, Lageen, Magnetfelden, Lichten, Fotoen, Barometeren und Näherungssensoren sowie GPS-Empfänger.
 Einzelne Modelle wie die 2013 erschienenen Samsung Galaxy S4 und Note 3 verfügen über Umgebungstemperaturen und Luftfeuchtigkeitssensoren.
 Bisher verfügt nur das 2014 erschienene Samsung Galaxy Note 4 über einen Sensor zur Messung von Ultraviolettstrahlung.
 Smartphones unterstützen diverse drahtlose Kommunikationsprotokolle, z. b. LTE, 5G, WLAN, Bluetooth und Satellitennavigation.
@@ -25,16 +25,16 @@ Der Speicherplatz mancher Mobiltelefone lässt sich mithilfe einer MicroSDSpeich
 Vorteile gegenüber CloudSpeichern sind Ortsunabhängigkeit von Mobilfunkstationen, Latenzfreiheit, Privatsphäre, höhere Übertragungsgeschwindigkeiten und keine durch den Mobilfunkvertrag benutzungsbedingte Herabsetzung dessen, sowie mögliche Datenrettung bei Defekt des Gerätes und Verschonung der Schreibzyklen der nichtwechselbaren internen Speicherplatine.
 Außerdem wird der USB-Anschluss nicht wie bei über USB OnthegoZubehör angeschlossenen Speichermedien belegt.
 Durch diese Merkmale bieten Smartphones die Grundlagen zur mobilen Büroon und Datenkommunikation in einem einzigen Gerät.
-Der Benutzer kann Daten (etwa Adressen, Texte und Termine) über die Tastatur oder einen Stift erfassen und zusätzliche Software selbst installieren.
+Der Benutzer kann Daten über die Tastatur oder einen Stift erfassen und zusätzliche Software selbst installieren.
 Die meisten Geräte verfügen über eine oder mehrere Digitalkameras zur Aufnahme unbewegter und bewegter Bilder sowie für die Bildtelefonie.
-Die bei PDAs z. b. zur Synchronisierung verwendeten Verbindungsarten, wie WLAN, Bluetooth, Infrarot oder die USB-Kabelverbindung, werden durch bislang in der Mobiltelefonie übliche Verbindungsprotokolle, wie GSM, UMTS (und HSDPA), GPRS und HSCSD, ergänzt.
-So ist es beispielsweise möglich, unterwegs neben der Mobiltelefonie auch SMS, MMS, E-Mails sowie, bei modernen Geräten, Videokonferenzen per UMTS oder InternetTelefonie (VoIP) mit WLAN über InternetZugriffspunkte zu nutzen.
-Theoretisch - und zum Teil auch in der praktischen Nutzung - können damit neben Audiogs und Videostreamings aus dem Internet (zum Beispiel über WLAN) auch Fernsehprogramme über DVB-H und mit entsprechender Hardware auch DVB-T empfangen werden.
-Ein weiteres Beispiel ist die eingebaute oder optionale JavaUnterstützung (auf CLDC-oder MIDP-Basis) - Mobiltelefone gelten als eine der populärsten Anwendungen von Embedded Java.
+Die bei PDAs z. b. zur Synchronisierung verwendeten Verbindungsarten, wie WLAN, Bluetooth, Infrarot oder die USB-Kabelverbindung, werden durch bislang in der Mobiltelefonie übliche Verbindungsprotokolle, wie GSM, UMTS, GPRS und HSCSD, ergänzt.
+So ist es beispielsweise möglich, unterwegs neben der Mobiltelefonie auch SMS, MMS, E-Mails sowie, bei modernen Geräten, Videokonferenzen per UMTS oder InternetTelefonie mit WLAN über InternetZugriffspunkte zu nutzen.
+Theoretisch - und zum Teil auch in der praktischen Nutzung - können damit neben Audiogs und Videostreamings aus dem Internet auch Fernsehprogramme über DVB-H und mit entsprechender Hardware auch DVB-T empfangen werden.
+Ein weiteres Beispiel ist die eingebaute oder optionale JavaUnterstützung - Mobiltelefone gelten als eine der populärsten Anwendungen von Embedded Java.
 Smartphones werden zunehmend auch für die Fernsteuerung von digitalen Geräten eingesetzt, wie zum Beispiel Kameras, ActionCamcordern, AV-Receivern, Fernsehgeräten oder Quadcoptern.
-Frühe SmartphoneVorläufer vereinigten etwa Ende der 1990er Jahre die Funktionen eines Personal Digital Assistant (PDA) bzw.
+Frühe SmartphoneVorläufer vereinigten etwa Ende der 1990er Jahre die Funktionen eines Personal Digital Assistant bzw.
 Organizers, mit dem man z. b. Kontakte und seinen Kalender verwalten konnte, mit der Funktionalität eines reinen Mobiltelefons.
-Später wurden dem kompakten Gerät die Funktionen eines transportablen Medienabspielgerätes, einer Digitalra und Videokamera und eines GPS-Navigationsgeräts hinzugefügt; noch später ein Internetzugang und ein (zunächst noch resistiver und nicht kapazitiver) Touchscreen.
+Später wurden dem kompakten Gerät die Funktionen eines transportablen Medienabspielgerätes, einer Digitalra und Videokamera und eines GPS-Navigationsgeräts hinzugefügt; noch später ein Internetzugang und ein Touchscreen.
 Als „das erste Smartphone“ wird rückblickend manchmal das 1992 von BellSouth und IBM vorgestellte und ab Mitte 1994 in einem Teil der USA als „Personal Communicator“ vertriebene Simon referenziert.
 Vorreiter der SmartphoneSysteme war das PEN/GEOS 3.0 des Herstellers GeoWorks, das in der 1996 eingeführten NokiaCommunicatorSerie eingesetzt wurde.
 Als Nokia für die CommunicatorReihe 92x0, 9300, 9300i und 9500 auf einen anderen Prozessor wechselte, bildete das Unternehmen mit Psion und dessen EPOC-System eine Allianz, um die SymbianPlattform zu entwickeln.

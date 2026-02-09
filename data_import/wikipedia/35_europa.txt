@@ -7,17 +7,15 @@ Mit über 740 Millionen Einwohnern, die auf einer Fläche von etwa 10,5 Millione
 Bedeutende politische Bündnisse Europas sind vor allem der Europarat und die Europäische Union.
 Die Eurozone besteht als größtes Währungsgebiet auf dem Kontinent.
 Zu den kulturellen und wissenschaftlichen Institutionen Europas gehören die UEFA, die ESA, das CERN, die Europäische Rundfunkunion, Erasmus+ und die Europäische Filmakademie.
-Der Name „Europa“ geht auf das altgriechische Εὐρώπη (Eurṓpē) zurück.
+Der Name „Europa“ geht auf das altgriechische Εὐρώπη zurück.
 Er wurde als Kompositum aus εὐρύς, eurýs, „weit, breit“ und ὄψ, óps, „Sicht, Gesicht“ aufgefasst, woraus sich die Bedeutungen „die mit der weiten Sicht“ oder „die Breitgesichtige“ ergeben.
 Später wurde der Begriff latinisiert.
 Nach der griechischen Mythologie war Eurṓpē eine phönizische Königstochter, die der in Stiergestalt auftretende Gott Zeus schwimmend auf seinem Rücken nach Kreta entführte.
 Nach Auffassung der Sprachwissenschaften stammt der Name aus dem Semitischen und wurde gräzisiert.
-Phonetisch naheliegend ist demnach die Herkunft vom akkadischen oder phönizischen Wort (ʕ)erebu bzw.
-(ʕ)arab „untergehen“ (bezogen auf die Sonne) sowie dem davon abgeleiteten phönizischen ʕerob „Abend, Westen“ (zur Assoziation des Abends mit der Himmelsrichtung vgl.
-Abendland sowie das arabische Maghreb, dem dieselbe semitische Wortwurzel zugrunde liegt wie offenbar Europa, nämlich ʕrb bzw.
-ġrb „vorübergehen“; zum ins Griechische nicht übernommenen semitischen Kehllaut am Anfang vgl.
+Phonetisch naheliegend ist demnach die Herkunft vom akkadischen oder phönizischen Wort erebu bzw.
+arab „untergehen“ sowie dem davon abgeleiteten phönizischen ʕerob „Abend, Westen“.
 Von Europa ist schon im 6. Jahrhundert v. Chr. bei Anaximander von Milet die Rede.
-Im 5. Jahrhundert vor Christus bezog der griechische Schriftsteller und Geograf Herodot den Begriff Eurṓpē, der als geografischer Begriff zunächst nur die Peloponnes bezeichnete, auch auf die Landmassen nördlich des Mittelmeers und des Schwarzen Meers, die er so von Asien (Asía) und Afrika (Libýe) unterschied.
+Im 5. Jahrhundert vor Christus bezog der griechische Schriftsteller und Geograf Herodot den Begriff Eurṓpē, der als geografischer Begriff zunächst nur die Peloponnes bezeichnete, auch auf die Landmassen nördlich des Mittelmeers und des Schwarzen Meers, die er so von Asien und Afrika unterschied.
 In den griechischlateinischen Texten der Antike, des Mittelalters und der Frühen Neuzeit blieb der geographische EuropaBegriff konstant.
 Die Meerenge von Gibraltar, das Mittelmeer, der Bosporus sowie der Fluss Don galten als Grenzen Europas; wenige Autoren sahen als kontinentale Grenze den Aras oder den Rioni, nicht den Don.
 Erst ab dem 18. Jahrhundert grenzte das Uralgebirge Europa von Asien ab, nicht mehr der Don.
@@ -31,10 +29,12 @@ Deshalb sind die „Grenzen Europas“ eine Frage gesellschaftlicher Übereinkun
 Heute folgt man bei der Grenzziehung zwischen Europa und Asien weitgehend der Definition von Philip Johan von Strahlenberg.
 Danach bilden Uralgebirge und -fluss die Ostgrenze Europas.
 Zwischen dem Kaspischen Meer und dem Schwarzen Meer verläuft die Grenzlinie durch die Manytschniederung nördlich des Kaukasusgebirges, da an ihrer Stelle einst eine Meeresstraße das Kaspische Meer mit dem Schwarzen Meer verband.
-Die oben im Artikel gezeigte Weltkugel zieht - davon leicht abweichend - die Grenze entlang des KaukasusHauptkammes; diese Grenzziehung wird im englischund französischsprachigen Raum bevorzugt (→ Innereurasische Grenze).
+Die oben im Artikel gezeigte Weltkugel zieht - davon leicht abweichend - die Grenze entlang des KaukasusHauptkammes; diese Grenzziehung wird im englischund französischsprachigen Raum bevorzugt.
 Der Kontinent liegt hauptsächlich in den gemäßigten Breiten.
 Das Klima ist in Europa im Vergleich mit Gebieten gleicher geographischer Breite in anderen Erdteilen wegen des Einflusses des relativ warmen Golfstroms milder.
 In großen Teilen Westeuropas stehen milden Wintern kühle Sommer gegenüber.
 In Gebieten, die weit vom Meer, also auch von dessen klimatisch ausgleichendem Einfluss entfernt liegen, sind die Temperaturunterschiede in verschiedenen Jahreszeiten stärker.
 In den größten Teilen Osteuropas ist das Klima durch das Fehlen des Meeres in unmittelbarer Nähe vorwiegend kontinental geprägt.
 Kalte Winter und heiße Sommer sind in diesen Regionen vorherrschend.
+Durch die Erdrotation und die damit verbundene ablenkende Kraft kommen Winde hauptsächlich aus westlicher Richtung.
+Da in den Küstengebieten Westeuropas deswegen Winde vornehmlich vom Atlantischen Ozean wehen, kommt es fast ganzjährig zu Regen.

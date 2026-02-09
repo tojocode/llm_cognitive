@@ -1,19 +1,19 @@
 Recht bezeichnet die Gesamtheit genereller Verhaltensregeln, die von der Gemeinschaft gewährleistet werden.
-Solche Verhaltensnormen entstehen entweder als Gewohnheitsrecht, indem Regeln, die von der Gemeinschaft als verbindlich akzeptiert werden, fortdauernd befolgt werden, oder als gesetztes („positives“) Recht, das von staatlichen oder überstaatlichen Gesetzgebungsorganen oder von satzungsgebenden Körperschaften geschaffen wird.
+Solche Verhaltensnormen entstehen entweder als Gewohnheitsrecht, indem Regeln, die von der Gemeinschaft als verbindlich akzeptiert werden, fortdauernd befolgt werden, oder als gesetztes Recht, das von staatlichen oder überstaatlichen Gesetzgebungsorganen oder von satzungsgebenden Körperschaften geschaffen wird.
 Das Recht umfasst damit alle Regeln zur Konfliktverhütung und -lösung, damit ein geordnetes und friedliches Miteinander möglich ist, weil sie von allen Mitgliedern einer Gesellschaft eingehalten werden sollen.
 Diese generellen Regeln werden als objektives Recht bezeichnet.
 Es ist zu unterscheiden von subjektiven Rechten, den konkreten Rechten des Einzelnen, etwas zu tun, zu unterlassen oder von einem anderen zu verlangen.
-Das subjektive Recht kann sich entweder unmittelbar aus dem allgemeinen objektiven Recht ergeben oder in ihm seine (Ermächtigungs-)Grundlage haben.
-Zu solchen subjektiven Rechten gehören insbesondere die individuellen Freiheitsrechte, die sich aus den generellen Grundrechtsgarantien ergeben (z. b. das Recht, seinen Beruf zu wählen), ferner Ermächtigungen zu rechtswirksamen Handlungen (z. b. ein Kündigungsrecht, durch das ein Mietvertrag beendet werden kann) und schließlich Ansprüche, von einem anderen etwas zu verlangen.
-Die rechtliche Gewährleistung für solches „Verlangenkönnen“ liegt darin, dass der Berechtigte vor Gericht klagen und dieses dadurch verpflichten kann, ihm zur Durchsetzung seines Rechts zu verhelfen (ubi actio ibi ius).
+Das subjektive Recht kann sich entweder unmittelbar aus dem allgemeinen objektiven Recht ergeben oder in ihm seine Grundlage haben.
+Zu solchen subjektiven Rechten gehören insbesondere die individuellen Freiheitsrechte, die sich aus den generellen Grundrechtsgarantien ergeben, ferner Ermächtigungen zu rechtswirksamen Handlungen und schließlich Ansprüche, von einem anderen etwas zu verlangen.
+Die rechtliche Gewährleistung für solches „Verlangenkönnen“ liegt darin, dass der Berechtigte vor Gericht klagen und dieses dadurch verpflichten kann, ihm zur Durchsetzung seines Rechts zu verhelfen.
 Eine wesentliche Komponente eines subjektiven Rechts ist also eine rechtlich gewährleistete Durchsetzungsinitiative.
 Objektives Recht und subjektives Recht gelten als „zwei verschiedene Seiten derselben Medaille“.
 Das Wort „Recht“ ist aus der indogermanischen Wurzel *h₃reĝ-, „aufrichten, gerade richten“ entstanden und somit aus etymologischer Sicht moralisch konnotiert.
-Der etymologische Hintergr und des deutschen Wortes (althochdeutsch reht, recht, rehd, riht, reth) ist der gleiche wie in vielen europäischen Sprachen (niederländisch recht, französisch droit, spanisch derecho, italienisch diritto, englisch right); auch in außereuropäischen Sprachen finden sich Entsprechungen.
-Inhaltlich ist der deutsche Begriff stark von der Bedeutung des lateinischen ius beeinflusst, das ursprünglich die menschliche Ordnung gegenüber der überirdischen Ordnung (fas) bezeichnete.
+Der etymologische Hintergr und des deutschen Wortes ist der gleiche wie in vielen europäischen Sprachen ; auch in außereuropäischen Sprachen finden sich Entsprechungen.
+Inhaltlich ist der deutsche Begriff stark von der Bedeutung des lateinischen ius beeinflusst, das ursprünglich die menschliche Ordnung gegenüber der überirdischen Ordnung bezeichnete.
 Diese mit ius bezeichnete Ordnung wurde durch leges konkretisiert, die zunächst Riten darstellten, später aber in die Form staatlicher Gesetze überführt wurden.
 Mit dieser Begriffswende der lex vom Ritus zum staatlichen Gesetz veränderte sich der Begriff des lateinischen ius und über die spätscholastische Philosophie und die Rezeption des römischen Rechts auch die Bedeutung des deutschen Worts „Recht“.
-In diesem etymologischen Dreiklang aus moralischem Anspruch, herkömmlichritueller Lebensordnung und staatlicher Gesetzgebung finden sich bereits drei wesentliche Eckpunkte des (modernen) Diskurses über den Rechtsbegriff, die noch um die geschichtliche Bedingtheit des Rechts ergänzt werden können.
+In diesem etymologischen Dreiklang aus moralischem Anspruch, herkömmlichritueller Lebensordnung und staatlicher Gesetzgebung finden sich bereits drei wesentliche Eckpunkte des Diskurses über den Rechtsbegriff, die noch um die geschichtliche Bedingtheit des Rechts ergänzt werden können.
 Vor dem Hintergr und dieses sprachgeschichtlich vielschichtigen Begriffs wird die Frage, was Recht ist, wie also „Recht“ von der Gesamtheit gesellschaftlicher Normen abzugrenzen ist, unterschiedlich beantwortet.
 Staatlich institutionalisiertes Recht ist im Gegensatz zu anderen Normenordnungen wie Moral, Sitte oder Brauch kodifiziert und unterliegt eigenen Entscheidungsln, Änderungsln und Anerkennensregeln.
 Essentialistische Ansätze versuchen, diese Frage allgemein verbindlich zu beantworten und beanspruchen damit den „wahren“ Begriff des Rechts.
@@ -21,10 +21,10 @@ Demgegenüber versuchen nominalistische Ansätze lediglich, eine praktikable Def
 Umstritten ist, ob Recht inhaltlich frei gesetzt werden kann.
 Bei Vertretern des Rechtspositivismus, die nur gesetztes Recht als Recht anerkennen, ist häufig unklar, inwieweit die Autoren eine essentialistische oder nominalistische Definition beabsichtigen.
 Das wohl gängigste Verständnis des Rechtsbegriffs in der Rechtsdogmatik geht von einer engen Verknüpfung des Rechts mit dem Staat aus.
-Danach gehören zum Recht die staatlich erlassenen Rechtssätze (Gesetze, Verordnungen, völkerrechtliche Verträge, Richterrecht etc.) sowie staatlich anerkannte Rechtssätze (Kirchenrecht, Handelsgewohnheitsrecht, in begrenztem Umfang auch Naturrecht).
+Danach gehören zum Recht die staatlich erlassenen Rechtssätze sowie staatlich anerkannte Rechtssätze.
 Eine solche Definition vermeidet insbesondere Abgrenzungsschwierigkeiten gegenüber moralischen und sittlichen Normen; diese können durch staatliche Akte zu Rechtsnormen werden.
-In der Rechtsethnologie (oder: Rechtsanthropologie) wurde gerade in den Anfängen ethnologischer Forschung darüber diskutiert, ob Konfliktlösungsmechanismen nichtstaatlicher Gesellschaften als Recht bezeichnet werden können.
-Die Frage, ob nichtstaatliche Gesellschaften über Recht (und nicht nur über Moral und Sitte) verfügen, wird inzwischen mehrheitlich bejaht.
+In der Rechtsethnologie wurde gerade in den Anfängen ethnologischer Forschung darüber diskutiert, ob Konfliktlösungsmechanismen nichtstaatlicher Gesellschaften als Recht bezeichnet werden können.
+Die Frage, ob nichtstaatliche Gesellschaften über Recht verfügen, wird inzwischen mehrheitlich bejaht.
 Die Rechtsphilosophie umfasst unter allen Disziplinen die wohl größte Spannbreite an unterschiedlich verstandenen Rechtsbegriffen.
 Während der Rechtspositivismus allein auf staatliche Normen abstellt, sehen Naturrechtslehren die staatlichen Gesetze - wenn überhaupt - als Teil des Rechts an.
 Eine Zwischenstellung nimmt die Historische Schule der Rechtswissenschaft ein, die das positive Recht gerade als geschichtlich gewachsene Ausprägung des Naturrechts ansieht.
@@ -36,5 +36,5 @@ Grundbausteine dieser Rechtsordnung sind Rechtsvorschriften, d. h.
 Verhaltensgebote, die zu einem bestimmten Tun oder Unterlassen verpflichten, und Rechtsentstehungsnormen, d. h.
 Regeln darüber, wer auf welche Weise generelle Vorschriften und konkrete Pflichten begründen kann.
 Rechtsentstehungsnormen waren in der Frühzeit des Rechts hauptsächlich Regeln über die Entstehung von Gewohnheitsrecht.
-Heute sind es vor allem gesetzliche Ermächtigungen, die bestimmen, wer auf welche Weise allgemeine Vorschriften erlassen oder konkrete Rechtspflichten begründen kann (letzteres z. b. durch eine staatliche Anordnung oder „privatautonom“, insbesondere durch Abschluss eines Vertrages).
+Heute sind es vor allem gesetzliche Ermächtigungen, die bestimmen, wer auf welche Weise allgemeine Vorschriften erlassen oder konkrete Rechtspflichten begründen kann.
 Je nach Gesellschaftsordnung und politischer Auffassung überschneiden sich Recht, Moral und Sitte unterschiedlich stark.

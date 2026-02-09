@@ -1,7 +1,7 @@
-Die Geologie (von altgriechisch γῆ gē „Erde“ und -logie) ist die Wissenschaft von Aufbau, Zusammensetzung und Struktur der Erdkruste, der Eigenschaften ihrer Gesteine und ihrer Entwicklungsgeschichte sowie der Prozesse, welche die Erdkruste formten und bis heute formen.
+Die Geologie ist die Wissenschaft von Aufbau, Zusammensetzung und Struktur der Erdkruste, der Eigenschaften ihrer Gesteine und ihrer Entwicklungsgeschichte sowie der Prozesse, welche die Erdkruste formten und bis heute formen.
 Der Begriff wird auch für den geologischen Aufbau verwendet, etwa Die Geologie der Alpen.
-Die Bezeichnung Geologie im heutigen Sinn findet sich erstmals 1778 bei JeanAndré Deluc (1727-1817).
-Als feststehenden Begriff führte sie 1779 HoraceBénédict de Saussure (1740-1799) ein.
+Die Bezeichnung Geologie im heutigen Sinn findet sich erstmals 1778 bei JeanAndré Deluc.
+Als feststehenden Begriff führte sie 1779 HoraceBénédict de Saussure ein.
 Vor allem in Deutschland war anfangs alternativ die Bezeichnung Geognosie gebräuchlich.
 Geologen beschäftigen sich mit der Erdkruste, Gesteinen sowie Erdöl und -gas.
 Sowohl die räumlichen Zusammenhänge zwischen verschiedenen Gesteinskörpern als auch die Zusammensetzung und innere Struktur der einzelnen Gesteine liefern Informationen zur Entschlüsselung der Bedingungen, unter denen diese entstanden sind.
@@ -9,10 +9,10 @@ Der Geologe ist dabei für den Nachweis und die Erschließung von Rohstoffen wie
 Darüber hinaus ist er auch für die Sicherung von Trinkwasser sowie von Energierohstoffen wie Erdöl bzw.
 -gas und Kohle tätig.
 Schließlich obliegt den Geologen die Erkundung des Baugrundes, insbesondere bei größeren Bauprojekten, um Setzungen, Rutschungen und Grundbrüche langfristig zu vermeiden.
-Im Gelände oder unter Tage gliedert der Geologe die aufgeschlossenen (offen zugänglichen) Gesteine anhand von äußeren Merkmalen in definierte Einheiten.
+Im Gelände oder unter Tage gliedert der Geologe die aufgeschlossenen Gesteine anhand von äußeren Merkmalen in definierte Einheiten.
 Diese Kartiereinheiten müssen sich bei dem gewählten Maßstab auf einer geologischen Karte, oder in einem geologischen Profil, darstellen lassen.
 Durch Extrapolation kann er so vorhersagen, wie die Gesteine im Untergr und mit großer Wahrscheinlichkeit gelagert sind.
-Die genauere Untersuchung der Gesteine (Petrographie, Petrologie) findet aber meist im Labor statt.
+Die genauere Untersuchung der Gesteine findet aber meist im Labor statt.
 Mit den einzelnen, teilweise mikroskopisch kleinen, Bestandteilen der Gesteine, den Mineralen, befasst sich die Mineralogie.
 Mit dem Fossilinhalt sedimentärer Gesteine beschäftigt sich die Paläontologie.
 Solche detaillierten Untersuchungen auf kleinem Maßstab liefern die Daten und Fakten für die großräumigen Untersuchungen der Allgemeinen Geologie.

@@ -1,10 +1,10 @@
-In der Philosophie (altgriechisch φιλοσοφία philosophía, latinisiert philosophia, wörtlich „Liebe zur Weisheit“), älter Weltweisheit, wird versucht, die Welt und die menschliche Existenz zu ergründen, zu deuten und zu verstehen.
+In der Philosophie, älter Weltweisheit, wird versucht, die Welt und die menschliche Existenz zu ergründen, zu deuten und zu verstehen.
 Von anderen Wissenschaftsdisziplinen unterscheidet sich die Philosophie dadurch, dass sie sich oft nicht auf ein spezielles Gebiet oder eine bestimmte Methodologie begrenzt, sondern durch die Art ihrer Fragestellungen und ihre besondere Herangehensweise an ihre vielfältigen Gegenstandsbereiche charakterisiert ist.
-In diesem Artikel geht es um die westliche (auch: abendländische) Philosophie, die im 6. Jahrhundert v. Chr. im antiken Griechenland entstand.
+In diesem Artikel geht es um die westliche Philosophie, die im 6. Jahrhundert v. Chr. im antiken Griechenland entstand.
 Nicht behandelt werden hier die mit der abendländischen Philosophie in einem mannigfaltigen Zusammenhang stehenden Traditionen der jüdischen und der islamischen Philosophie sowie die ursprünglich von ihr unabhängigen Traditionen der afrikanischen und der östlichen Philosophie.
 In der antiken Philosophie entfaltete sich das systematische und wissenschaftlich orientierte Denken.
 Im Laufe der Jahrhunderte differenzierten sich die unterschiedlichen Methoden und Disziplinen der Welterschließung und der Wissenschaften direkt oder mittelbar aus der Philosophie, zum Teil auch in Abgrenzung zu irrationalen oder religiösen Weltbildern oder Mythen.
-Kerngebiete der Philosophie sind die Logik (als die Wissenschaft des folgerichtigen Denkens), die Ethik (als die Wissenschaft des rechten Handelns) und die Metaphysik (als die Wissenschaft der ersten Gründe des Seins und der Wirklichkeit).
+Kerngebiete der Philosophie sind die Logik, die Ethik und die Metaphysik.
 Weitere Grunddisziplinen sind die Erkenntnistheorie und Wissenschaftstheorie, die sich mit den Möglichkeiten des Erkenntnisgewinns im Allgemeinen bzw.
 speziell mit den Erkenntnisweisen der unterschiedlichen Einzelwissenschaften beschäftigen.
 Es gibt Probleme, die sich nicht oder nur unzureichend mit Hilfe der exakten Wissenschaften bearbeiten lassen: die Fragen etwa nach dem, was „gut“ und „böse“ ist, was „Gerechtigkeit“ bedeutet, ob es einen Gott gibt, ob der Mensch eine unsterbliche Seele besitzt oder was der „Sinn des Lebens“ ist.
@@ -15,8 +15,7 @@ Was aber wünschenswerte Inhalte des Gesetzbuches sein sollten, übersteigt ihre
 Allgemein erhebt sich nicht nur hinsichtlich jeder Einzelwissenschaft, sondern grundsätzlich die Frage, wie wir mit dem daraus gewonnenen Wissen umgehen sollen.
 Zudem gibt es Fragestellungen, welche die Grenzen des Denkens berühren, wie etwa die Frage, ob die in diesem Moment individuell erlebte Wirklichkeit auch tatsächlich existiert.
 In allen solchen Fällen versagen die Erklärungsmodelle der Einzelwissenschaften, es sind philosophische Fragen.
-Der griechische Philosoph Platon (428/27-348/47 v.
-u. Z.) hegte deshalb Zweifel an dem Bild, das der Mensch von sich selbst und von der Welt entwickelte.
+Der griechische Philosoph Platon hegte deshalb Zweifel an dem Bild, das der Mensch von sich selbst und von der Welt entwickelte.
 In seinem berühmten Höhlengleichnis reflektierte er unter anderem die begrenzte Wahrnehmungsit und Erkenntnisfähigkeit des gewöhnlichen Menschen.
 Dieser sitzt mit seinesgleichen nebeneinander aufgereiht in einer Höhle, alle in einer Weise gefesselt, dass sie nur starr geradeaus die Höhlenwand vor sich betrachten können.
 Licht gibt ein Feuer, das weit im Rücken der Menschen im entfernten Teil der Höhle brennt.
@@ -28,13 +27,14 @@ Die Philosophie behandelt zumeist Sachverhalte, die im Alltag zunächst einmal v
 Für manche Philosophen ist erst der Augenblick, in dem solche Überzeugungen, in dem das bisher fraglos Hingenommene fragwürdig wird, der Geburtsmoment der Philosophie.
 Menschen, denen nichts fragwürdig erscheint, werden demnach nie Philosophie betreiben.
 Auch das kindliche Staunen wird oft als Beginn philosophischen Denkens angeführt: Anders als Religionen, religiöse Gemeinschaften und Weltanschauungen stützt sich die Philosophie bei der Bearbeitung der oben genannten „philosophischen“ Fragen allein auf die Vernunft, d. h.
-auf rationale Argumentation, die keine weiteren Voraussetzungen (wie z. b. den Glauben an eine bestimmte zugrundeliegende Lehre) erfordert.
+auf rationale Argumentation, die keine weiteren Voraussetzungen erfordert.
 „Philosophie“ lässt sich nicht allgemeingültig definieren, weil jeder, der philosophiert, eine eigene Sicht der Dinge entwickelt.
 Daher gibt es annähernd so viele mögliche Antworten auf die oben gestellte Frage wie Philosophen.
 Carl Friedrich von Weizsäcker hat einmal formuliert: „Philosophie ist die Wissenschaft, über die man nicht reden kann, ohne sie selbst zu betreiben.“ Daneben hat der Begriff in einem weiteren, übertragenen Sinn auch Bedeutungen wie Weltanschauung, Unternehmenskultur etc.
-Um zur Illustration einen zirkulären Versuch anzuführen, geht die folgende szientistische Fassung des Begriffes „Philosophie“ bereits auf die vorhergehende Kognition des philosophischen Gehaltes zurück: „In ihrer wissenschaftlich begründeten Gestalt als dialektischer und historischer Materialismus ist Philosophie die Wissenschaft von den allgemeinen Bewegungsen und Strukturgesetzen der Natur, der Gesellschaft und des Denkens (Erkennens) sowie der Stellung des Menschen in der Welt.“ Philosophischem Denken ist vielmehr eigentümlich, dass es in seiner Voraussetzungslosigkeit „immer wieder von vorne anfängt“, es lässt sich „weder befrieden, zivilisieren und forschrittsfähig machen noch ausrotten“, so die Charakterisierung Helmuth Plessners.
+Um zur Illustration einen zirkulären Versuch anzuführen, geht die folgende szientistische Fassung des Begriffes „Philosophie“ bereits auf die vorhergehende Kognition des philosophischen Gehaltes zurück: „In ihrer wissenschaftlich begründeten Gestalt als dialektischer und historischer Materialismus ist Philosophie die Wissenschaft von den allgemeinen Bewegungsen und Strukturgesetzen der Natur, der Gesellschaft und des Denkens sowie der Stellung des Menschen in der Welt.“ Philosophischem Denken ist vielmehr eigentümlich, dass es in seiner Voraussetzungslosigkeit „immer wieder von vorne anfängt“, es lässt sich „weder befrieden, zivilisieren und forschrittsfähig machen noch ausrotten“, so die Charakterisierung Helmuth Plessners.
 Frage nach dem Menschsein in der Welt: Das heißt, am philosophischen Wissen lässt sich arbeiten, es werden Ergebnisse sichtbar; an „Philosophie“ selbst hingegen nicht.
 Denn immer, so Plessmer, bleibt die philosophische Aussage „perspektivisch auf den Menschen bezogen, seine Stellung und Aufgabe in der Welt“.
 Wer kann schon wissen, ob eine „staatlich geschütze Philosophie“, wie etwa der Marxismus, unter besserem Vorzeichen stehe als eine Philosophie, die aus dem Geiste einer freiheitlichen Gesellschaftsordnung entsprungen ist?
 Immer können verschiedene „Denktypen“ ausfindig gemacht werden, die man in Thomisten, Hegelianer, Empiristen, Skeptiker usw.
 Ludwig Wittgenstein hat den Unterschied einmal so gefasst: Hans Joachim Störigs populärwissenschaftlicher Bestseller Kleine Weltgeschichte der Philosophie wendet sich dementsprechend nicht an „Fachphilosophen“, denen er „nichts Neues“ zu sagen hätte, und umschreibt „Philosophie“ als die Frage nach dem Menschsein in der Welt: Kennzeichnung durch Tätigkeitsfelder: Zu den philosophischen Arbeitsfeldern gehört zunächst die Untersuchung von Methoden, Prinzipien und der Gültigkeit jeglicher Erkenntnisgewinnung wie auch der Argumente und Theorien auf wissenschaftlicher Ebene.
+Philosophie kann in diesem Zusammenhang als Grundlagenwissenschaft verstanden werden.

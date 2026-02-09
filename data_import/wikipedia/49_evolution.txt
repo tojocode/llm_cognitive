@@ -1,40 +1,40 @@
-Unter Evolution (von lateinisch evolvere „herausrollen“, „auseinanderrollen“, „auswickeln“, „entwickeln“) versteht man im deutschsprachigen Raum in erster Linie die biologische Evolution.
-Darunter wird die von Generation zu Generation stattfindende allmähliche Veränderung der vererbbaren Merkmale einer Population von Lebewesen und von anderen organischen Strukturen (z. b. Viren) verstanden.
+Unter Evolution versteht man im deutschsprachigen Raum in erster Linie die biologische Evolution.
+Darunter wird die von Generation zu Generation stattfindende allmähliche Veränderung der vererbbaren Merkmale einer Population von Lebewesen und von anderen organischen Strukturen verstanden.
 Das Lehret und Forschungsgebiet der Evolution wird als Evolutionsbiologie bezeichnet und unterliegt, wie viele andere Wissenschaften, einem kontinuierlichen Erkenntnisfortschritt.
 Hierzu können insbesondere neue Einsichten durch die Entdeckung neuer Fossilien oder die Anwendung neuer Forschungsmethoden beitragen.
-Das Themenfeld der Evolution wurde zuweilen unterteilt in die Evolutionsgeschichte, in der die Veränderungen der Lebewesen im Laufe der Erdgeschichte beschrieben werden und bei dem es Überlappungen mit der Paläontologie gibt, sowie in die Evolutionstheorie, die naturwissenschaftliche Erklärungen (Hypothesen und Theorien) für das Gesamtphänomen der Evolution entwickelt.
+Das Themenfeld der Evolution wurde zuweilen unterteilt in die Evolutionsgeschichte, in der die Veränderungen der Lebewesen im Laufe der Erdgeschichte beschrieben werden und bei dem es Überlappungen mit der Paläontologie gibt, sowie in die Evolutionstheorie, die naturwissenschaftliche Erklärungen für das Gesamtphänomen der Evolution entwickelt.
 Die beiden Ansätze sind heutzutage in der Wissenschaft innig miteinander verwoben und befruchten sich wechselseitig.
 Wissenschaftler beschäftigen sich ebenfalls im Rahmen der theoretischen Biologie mit der biologischen Evolution.
 Die theoretische Biologie als interdisziplinäres Teilgebiet der Biologie entwickelt mathematische Modelle und führt statistische Hypothesentests und Laborexperimente durch, um den Erkenntnisgewinn zu fördern.
 Insbesondere seit der Begründung der Evolutionstheorie hat der Begriff der Evolution eine erheblich Ausweitung in viele verschiedene Wissenschaftsbereiche erfahren, die zu einer großen Zahl recht unterschiedlicher Definitionen geführt hat.
 Die Merkmale der Lebewesen sind in Form von Genen codiert, die bei der Fortpflanzung kopiert und an die Nachkommen weitergegeben werden.
-Durch Mutationen entstehen unterschiedliche Varianten (Allele) dieser Gene, die zur Entstehung veränderter oder neuer Merkmale führen können.
+Durch Mutationen entstehen unterschiedliche Varianten dieser Gene, die zur Entstehung veränderter oder neuer Merkmale führen können.
 Diese Varianten sowie Rekombinationen führen zu erblich bedingten Unterschieden in Form der genetischen Variabilität zwischen Individuen.
-Evolution findet statt, wenn sich die Häufigkeit bestimmter Allele in einer Population (die Allelfrequenz im Genpool) ändert und die entsprechenden Merkmale in der Population dadurch seltener oder häufiger werden.
-Dies geschieht entweder durch natürliche Selektion (unterschiedliche Überlebenste und Reproduktionsrate aufgrund dieser Merkmale), durch sexuelle Selektion oder zufällig durch Gendrift.
+Evolution findet statt, wenn sich die Häufigkeit bestimmter Allele in einer Population ändert und die entsprechenden Merkmale in der Population dadurch seltener oder häufiger werden.
+Dies geschieht entweder durch natürliche Selektion, durch sexuelle Selektion oder zufällig durch Gendrift.
 Der entscheidende Bruch mit dem früheren Konzept konstanter typologischer Klassen oder Typen der Biologie kam mit der Theorie der Evolution durch natürliche Selektion, die von Charles Darwin und Alfred Russel Wallace in Form von im Laufe der Zeit veränderlichen Populationen formuliert wurde.
 Diese Bedeutung der Variabilität und der durch natürliche Selektion in Gang gehaltene Prozess bei Lebewesen wurden dann erstmals ausführlich und fundiert von Charles Darwin in seinem 1859 erschienenen Buch The Origin of Species dargestellt.
-Um 1900 wurden die Prinzipien der Vererbung bekannt (da die früheren Untersuchungen von Gregor Mendel nicht weiter beachtet worden waren) und um 1910 die Bedeutung der Chromosomen.
+Um 1900 wurden die Prinzipien der Vererbung bekannt und um 1910 die Bedeutung der Chromosomen.
 Dadurch schienen sich die Konzepte des Darwinismus, der die Veränderungen hervorhob, und der Genetik, die die statische Weitergabe von Merkmalen lehrte, einander zu widersprechen.
 Erst ab den 1930er Jahren konnten die Selektionsprozesse mit den mendelschen Regeln zur Vererbung in Einklang gebracht werden, woraus sich die Synthetische Theorie der Evolution entwickelte.
-Sie definierte Evolution als die zeitliche Änderung der relativen Allelhäufigkeiten (Allelfrequenzen) in einer Population.
+Sie definierte Evolution als die zeitliche Änderung der relativen Allelhäufigkeiten in einer Population.
 Durch ihre deskriptiven und kausalen Aussagen wurde diese Theorie zum zentralen organisierenden Prinzip der modernen Biologie und lieferte eine fundierte Erklärung für die Entstehung der Vielfalt des Lebens auf der Erde.
 1944 lieferten die Arbeiten von Oswald Avery und seinen Kollegen ein starkes Indiz dafür, dass DNA der Träger genetischer Informationen ist, denn bislang hatte man eher Proteine „im Verdacht“, entsprechende Informationen zu beherbergen.
 Zusammen mit der Entschlüsselung der Struktur der DNA durch Rosalind Franklin, James Watson und Francis Crick im Jahr 1953 wurde die physische Basis der Vererbung geklärt.
 Seitdem ist auch die molekulare Genetik ein zentraler Bestandteil der Evolutionsbiologie.
-Gregor Mendel zeigte anhand von Erbsenpflanzen, dass Vererbung in eng definierten (diskreten) Einheiten erfolgt, indem Merkmale von der Elterngeneration an die Nachkommen vererbt werden, und dass diese Merkmale diskret sind: Wenn ein Elternteil runde und der andere faltige Erbsen bildete, dann bildete der Nachwuchs nicht ein Gemisch, sondern entweder runde oder faltige Erbsen.
+Gregor Mendel zeigte anhand von Erbsenpflanzen, dass Vererbung in eng definierten Einheiten erfolgt, indem Merkmale von der Elterngeneration an die Nachkommen vererbt werden, und dass diese Merkmale diskret sind: Wenn ein Elternteil runde und der andere faltige Erbsen bildete, dann bildete der Nachwuchs nicht ein Gemisch, sondern entweder runde oder faltige Erbsen.
 Mendel wies außerdem nach, dass die Merkmale der Eltern in einer genau definierten und vorhersagbaren Weise an die Nachkommen vererbt wurden, nämlich nach den mendelschen Regeln.
 Seine Forschungen waren die Basis für das Konzept der diskreten, erblichen Merkmale, der Gene.
 Mendels Arbeiten beantworteten die lange offene Frage, warum Merkmalsvarianten in Populationen stabil bleiben.
-Im Nachhinein muss man feststellen, dass es ein großer Zufall war, dass er lauter diskrete Merkmale gewählt hatte, denn bei vielen anderen Merkmalen (etwa bezüglich der erreichten Pflanzenhöhe) wären komplexere genetische Einflüsse (siehe Polygenie) und auch umweltbedingte Einflüsse (siehe Modifikation) wirksam geworden.
+Im Nachhinein muss man feststellen, dass es ein großer Zufall war, dass er lauter diskrete Merkmale gewählt hatte, denn bei vielen anderen Merkmalen wären komplexere genetische Einflüsse und auch umweltbedingte Einflüsse wirksam geworden.
 Spätere Forschungen enthüllten die physische Basis der Gene und identifizierten die DNA als das genetische Material.
 Gene wurden neu definiert als spezifische Regionen der DNA.
 DNA wird von Lebewesen als Chromosomen gelagert.
-Ein bestimmter Ort auf einem Chromosom wird als Genlocus (oder kurz Locus) bezeichnet, die Variante einer DNA-Sequenz auf einem bestimmten Locus bezeichnet man als Allel.
-Die Kopie der DNA erfolgt nicht perfekt und Änderungen (Mutationen) der Gene produzieren neue Allele und beeinflussen daher die Merkmale, die von diesen Genen kontrolliert werden.
-Diese einfache Beziehung zwischen einem Gen und einem Merkmal liegt in vielen Fällen vor, komplexe Merkmale, zum Beispiel die Widerstandsfähigkeit gegen Krankheiten, werden jedoch von vielen zusammenwirkenden Genen („polygen“) kontrolliert.
-Die genetische Variabilität oder Variation resultiert aus Mutationen der DNA, der Wanderung von Individuen zwischen Populationen (dem Genfluss), und der Durchmischung von Genen bei der sexuellen Fortpflanzung (Rekombination).
+Ein bestimmter Ort auf einem Chromosom wird als Genlocus bezeichnet, die Variante einer DNA-Sequenz auf einem bestimmten Locus bezeichnet man als Allel.
+Die Kopie der DNA erfolgt nicht perfekt und Änderungen der Gene produzieren neue Allele und beeinflussen daher die Merkmale, die von diesen Genen kontrolliert werden.
+Diese einfache Beziehung zwischen einem Gen und einem Merkmal liegt in vielen Fällen vor, komplexe Merkmale, zum Beispiel die Widerstandsfähigkeit gegen Krankheiten, werden jedoch von vielen zusammenwirkenden Genen kontrolliert.
+Die genetische Variabilität oder Variation resultiert aus Mutationen der DNA, der Wanderung von Individuen zwischen Populationen, und der Durchmischung von Genen bei der sexuellen Fortpflanzung.
 Bei einigen Lebensformen, wie Bakterien und Pflanzen, wird Variabilität auch durch die Mischung des genetischen Materials zwischen Arten durch horizontalen Genfluss und Hybridisierung erzeugt.
-Trotz all dieser Variabilität verursachenden Prozesse sind die meisten Bereiche der DNA einer Art (das Genom) bei allen Individuen einer Art identisch.
-Vergleichsweise kleine Änderungen des Genotyps (des Merkmale codierenden Teiles des Genoms), können jedoch erhebliche Auswirkungen auf den Phänotyp (die Gesamtheit der genetisch bedingten Merkmale eines Individuums; vereinfacht ausgedrückt, auf das genetisch bedingte äußere Erscheinungsbild) haben.
+Trotz all dieser Variabilität verursachenden Prozesse sind die meisten Bereiche der DNA einer Art bei allen Individuen einer Art identisch.
+Vergleichsweise kleine Änderungen des Genotyps, können jedoch erhebliche Auswirkungen auf den Phänotyp haben.
 Zum Beispiel beträgt der Unterschied der DNA-Sequenzen von Schimpanse und Mensch nur fünf Prozent.

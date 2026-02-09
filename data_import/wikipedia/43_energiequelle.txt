@@ -4,37 +4,37 @@ Die Energiequelle ist in einem abgeschlossenen System das Element, das die Energ
 Der Energieträger hingegen ist das mengenmäßig bilanzierfähige Mittel, das die Energie enthält und überträgt.
 Veranschaulichen lässt sich das an der Sonne, die mit ihren Kernfusionen die wichtigste Energiequelle für die Erde darstellt und die Energie mittels des Energieträgers Strahlung zur Verfügung stellt.
 Die auf der Erde nutzbaren Energiequellen entstammen zum größten Teil aus der Strahlung der Sonne.
-Die Sonnenstrahlung kann unmittelbar umgewandelt werden (Solarkollektor).
+Die Sonnenstrahlung kann unmittelbar umgewandelt werden.
 Meist erfolgt die Nutzung jedoch mittelbar, indem eine Wechselwirkung der Sonneneinstrahlung mit der Erdoberfläche eine Energiewandlung stattfindet.
-Biologisch umgesetzte Energie entsteht langfristig über das Pflanzenwachstum in unterschiedlichen Zeiträumen (Biomasse, Holz, Torf, Kohle, Erdöl).
-Wetterauswirkungen sind kurzund mittelfristig (Wind, Wasserkraft).
+Biologisch umgesetzte Energie entsteht langfristig über das Pflanzenwachstum in unterschiedlichen Zeiträumen.
+Wetterauswirkungen sind kurzund mittelfristig.
 Die Erde entspricht hinsichtlich des Lichtspektrums der auf die Erde einfallenden Sonnenstrahlung näherungsweise einem schwarzen Körper.
 Bezogen auf die mittlere Oberflächentemperatur der Erde beträgt der Carnotfaktor 0,95, so dass die Strahlungsenergie nahezu als reine Exergie angesehen werden kann.
 Damit Energiequellen genutzt werden können, muss eine Temperatursenke vorhanden sein, die die Erdoberfläche darstellt.
 Diese wiederum emittiert Wärmestrahlung.
-Die Bestandteile der Atmosphäre beeinflussen die Rückstrahlung durch Absorption (Erderwärmung).
+Die Bestandteile der Atmosphäre beeinflussen die Rückstrahlung durch Absorption.
 Der Weltraum selber ist über die gesamte Kugelraumfläche betrachtet ebenfalls nahezu schwarz, so dass die irdische Infrarotwärmestrahlung von der Erde in den Weltraum emittiert werden kann.
 Die auf die Erde einfallende Sonnenstrahlung und die emittierte Wärmestrahlung müssen im Mittel gleich groß sein, damit das Temperaturgleichgewicht der Erde gegeben ist.
 Die letztlich auf der Sonnenenergie basierenden Energiequellen werden mit Maschinen in eine dem Menschen nützende Energie umgewandelt, und die Energie wird letztendlich als Wärme in den Weltraum emittiert.
-Der Mensch braucht seit jeher verschiedene Formen von Energie zum (Über)leben.
+Der Mensch braucht seit jeher verschiedene Formen von Energie zum leben.
 Mit der Industrialisierung hat der Energiebedarf der Menschheit zugenommen und sich gewandelt.
 Die Hauptenergiequelle der Erde ist die Sonne.
 Die Sonnenenergie ist auch die treibende Kraft für viele andere Energieträger wie zum Beispiel Meeresströmungen und den Wasserkreislauf.
-Die verschiedenen Formen von Energiequellen sind im Einzelnen: Fossile Energie (Steinkohle, Braunkohle, Torf, Erdgas, Erdöl) Regenerative Energie Sonnenenergie (nutzbare solare Energieeinstrahlung: Licht, Wärme) Biomasse (biologischer Zerfall) Windenergie (atmosphärische Strömungen) Wasserkraft, einschließlich Gezeiten (Tidenhub) Wellenkraft (Wellenkraftwerk) Meeresströmung (Meeresströmungskraftwerk) Geothermie (Erdwärme) Kernenergie (Kernspaltung und Kernfusion).
-Anteil der einzelnen Energiequellen am Gesamtenergieverbrauch, unterschieden nach eingesetzter Primärenergie: Anteil der einzelnen Energiequellen an der Stromerzeugung in Deutschland: Fossile Energieträger sind aus Biomasse entstandene Stoffe, die - durch Sedimentschichten von der Atmosphäre abgeschlossen - unter Sauerstoffabschluss verrottet sind und so ihre chemische Energie erhielten.
+Die verschiedenen Formen von Energiequellen sind im Einzelnen: Fossile Energie Regenerative Energie Sonnenenergie Biomasse Windenergie Wasserkraft, einschließlich Gezeiten Wellenkraft Meeresströmung Geothermie Kernenergie Anteil der einzelnen Energiequellen am Gesamtenergieverbrauch, unterschieden nach eingesetzter Primärenergie: Anteil der einzelnen Energiequellen an der Stromerzeugung in Deutschland: Fossile Energieträger sind aus Biomasse entstandene Stoffe, die - durch Sedimentschichten von der Atmosphäre abgeschlossen - unter Sauerstoffabschluss verrottet sind und so ihre chemische Energie erhielten.
 Fossile Energieträger sind Kohle, Erdgas, Erdöl und Methanhydrat.
-Allen fossilen Energieträgern ist gemeinsam, dass sie nur in begrenztem Maß vorhanden sind und ihre Verwendung mit mehr oder weniger hohen CO2-Emissionen verbunden ist (siehe Treibhauseffekt, Klimawandel, Klimaschutz).
+Allen fossilen Energieträgern ist gemeinsam, dass sie nur in begrenztem Maß vorhanden sind und ihre Verwendung mit mehr oder weniger hohen CO2-Emissionen verbunden ist.
 Steinle und Braunkohle bildeten sich im Karbon bzw.
 Tertiär aus abgestorbenen Pflanzen, die im Morast absackten und langsam zusammengedrückt wurden.
 Der Prozess bei dem sich abgestorbenes organisches Material zuerst in Torf dann in Braunkohle und zuletzt in Steinkohle umwandelt wird als Inkohlung bezeichnet und ist durch Zunahme des relativen Kohlenstoffanteils gekennzeichnet.
 Daher hat Steinkohle einen höheren Heizwert als Braunkohle.
-Steinkohle wird in Deutschland unter Tage in Stollen und Schächten abgebaut, während die weiter oben liegende Braunkohle nach dem Abräumen der Deckschichten (Abraum) im Tagebau abgebaut werden kann.
+Steinkohle wird in Deutschland unter Tage in Stollen und Schächten abgebaut, während die weiter oben liegende Braunkohle nach dem Abräumen der Deckschichten im Tagebau abgebaut werden kann.
 Kohle wird zur Stromerzeugung in Dampfkraftwerken verfeuert.
-Weiterhin wird Steinkohle in der Stahlherstellung und in geringem Umfang, wie auch Braunkohle, zum Betrieb von Wohnraumheizungen (Kohleöfen) verwendet.
+Weiterhin wird Steinkohle in der Stahlherstellung und in geringem Umfang, wie auch Braunkohle, zum Betrieb von Wohnraumheizungen verwendet.
 Kohle ist ein heimischer Energieträger, sichert also Arbeitsplätze und vermindert die Importabhängigkeit.
 Außerdem ist Strom aus Kohlekraftwerken je nach Bedarf abrufbar, benötigt also keine Schattenkraftwerke zum Ausgleich von Schwankungen.
 Dies gilt für Braunkohlekraftwerke allerdings nur sehr eingeschränkt, da diese in der Grundlast, also mit konstanter Leistung betrieben werden.
 Heimische Steinkohle ist verglichen mit Importkohle sehr teuer und muss massiv subventioniert werden, um konkurrenzfähig zu bleiben.
 Kohle ist als fossiler Energieträger nur in begrenztem Umfang vorhanden und als Grundstoff für die chemische Industrie eigentlich zu schade zum Verbrennen.
 Außerdem ist die Verbrennung von Kohle im Vergleich mit anderen fossilen Energieträgern mit vergleichsweise hohen CO2-Emissionen verbunden, da Kohle im Wesentlichen aus Kohlenstoff besteht.
-Die Verbrennung von Kohle ist zudem - bedingt durch die enthaltenen Verunreinigungen - mit relativ hohen Schadstoffemissionen (Schwefelverbindungen, Stickstoffverbindungen, Stäube) verbunden, die in modernen Kohlekraftwerken mit hohem technischen Aufwand reduziert werden.
+Die Verbrennung von Kohle ist zudem - bedingt durch die enthaltenen Verunreinigungen - mit relativ hohen Schadstoffemissionen verbunden, die in modernen Kohlekraftwerken mit hohem technischen Aufwand reduziert werden.
+Der Tagebau bei der Braunkohle verursacht zunächst enorme Umweltschäden durch die Inanspruchnahme des Landes.

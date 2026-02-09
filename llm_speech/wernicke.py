@@ -287,24 +287,24 @@ class WernickeMixin:
         rels: List[Dict[str, object]] = []
 
         patterns = [
-            (re.compile(r"^(.+?)\s+ist\s+ein(?:e|en|em|er)?\s+(.+?)\.?$", re.IGNORECASE), "ist", 0.95),
-            (re.compile(r"^(.+?)\s+ist\s+(.+?)\.?$", re.IGNORECASE), "ist", 0.85),
-            (re.compile(r"^(.+?)\s+gehört\s+zu\s+(.+?)\.?$", re.IGNORECASE), "gehört_zu", 0.93),
-            (re.compile(r"^(.+?)\s+hat\s+(.+?)\.?$", re.IGNORECASE), "hat", 0.86),
-            (re.compile(r"^(.+?)\s+enthält\s+(.+?)\.?$", re.IGNORECASE), "enthält", 0.86),
-            (re.compile(r"^(.+?)\s+besteht\s+aus\s+(.+?)\.?$", re.IGNORECASE), "besteht_aus", 0.90),
-            (re.compile(r"^(.+?)\s+braucht\s+(.+?)\.?$", re.IGNORECASE), "braucht", 0.86),
-            (re.compile(r"^(.+?)\s+benötigt\s+(.+?)\.?$", re.IGNORECASE), "benötigt", 0.86),
-            (re.compile(r"^(.+?)\s+ermöglicht\s+(.+?)\.?$", re.IGNORECASE), "ermöglicht", 0.88),
-            (re.compile(r"^(.+?)\s+verursacht\s+(.+?)\.?$", re.IGNORECASE), "verursacht", 0.90),
-            (re.compile(r"^(.+?)\s+lebt\s+in\s+(.+?)\.?$", re.IGNORECASE), "lebt_in", 0.83),
+            (re.compile(r"^(.+?)\s+ist\s+ein(?:e|en|em|er)?\s+(.+?)\.?$", re.IGNORECASE), "ist", 0.95, False),
+            (re.compile(r"^(.+?)\s+ist\s+(.+?)\.?$", re.IGNORECASE), "ist", 0.85, False),
+            (re.compile(r"^(.+?)\s+gehört\s+zu\s+(.+?)\.?$", re.IGNORECASE), "gehört_zu", 0.93, False),
+            (re.compile(r"^(.+?)\s+hat\s+(.+?)\.?$", re.IGNORECASE), "hat", 0.86, True),
+            (re.compile(r"^(.+?)\s+enthält\s+(.+?)\.?$", re.IGNORECASE), "enthält", 0.86, True),
+            (re.compile(r"^(.+?)\s+besteht\s+aus\s+(.+?)\.?$", re.IGNORECASE), "besteht_aus", 0.90, True),
+            (re.compile(r"^(.+?)\s+braucht\s+(.+?)\.?$", re.IGNORECASE), "braucht", 0.86, True),
+            (re.compile(r"^(.+?)\s+benötigt\s+(.+?)\.?$", re.IGNORECASE), "benötigt", 0.86, True),
+            (re.compile(r"^(.+?)\s+ermöglicht\s+(.+?)\.?$", re.IGNORECASE), "ermöglicht", 0.88, True),
+            (re.compile(r"^(.+?)\s+verursacht\s+(.+?)\.?$", re.IGNORECASE), "verursacht", 0.90, True),
+            (re.compile(r"^(.+?)\s+lebt\s+in\s+(.+?)\.?$", re.IGNORECASE), "lebt_in", 0.83, False),
         ]
 
         for s in sentences:
             if len(s) < 5:
                 continue
             s0 = s.strip("•*- \t\"'")
-            for rx, typ, w0 in patterns:
+            for rx, typ, w0, split_conj in patterns:
                 m = rx.match(s0)
                 if not m:
                     continue
@@ -312,10 +312,11 @@ class WernickeMixin:
                 obj_raw = m.group(2)
 
                 src = self._phrase_to_concept_id(subj_raw)
-                objs = self._split_object_phrases(obj_raw)
+                objs = self._split_object_phrases(obj_raw, split_conjunctions=split_conj)
 
                 for j, o in enumerate(objs):
-                    dst = self._phrase_to_concept_id(o)
+                    o_head = self._object_head_phrase(o) if typ in {"ist", "gehört_zu"} else o
+                    dst = self._phrase_to_concept_id(o_head)
                     if not src or not dst or src == dst:
                         continue
                     rels.append({
@@ -359,16 +360,84 @@ class WernickeMixin:
             return self._make_concept_id(words[0])
         return "_".join([self._make_concept_id(w) for w in words])
 
-    def _split_object_phrases(self, obj: str) -> List[str]:
+    def _split_object_phrases(self, obj: str, split_conjunctions: bool = True) -> List[str]:
         o = self._nfc(obj).strip().strip(".")
         if not o:
             return []
         parts = []
-        for chunk in re.split(r",|\s+und\s+", o):
+        if split_conjunctions:
+            chunks = re.split(r",|\s+und\s+", o)
+        else:
+            chunks = [o]
+        for chunk in chunks:
             c = chunk.strip()
             if c:
                 parts.append(c)
         return parts if parts else [o]
+
+    def _cut_at_keywords(self, text: str, keywords: List[str]) -> str:
+        if not text:
+            return text
+        low = text.lower()
+        best = None
+        for kw in keywords:
+            k = kw.lower()
+            idx = low.find(k)
+            if idx > 0 and (best is None or idx < best):
+                best = idx
+        if best is None:
+            return text
+        return text[:best].strip()
+
+    def _object_head_phrase(self, obj: str) -> str:
+        """
+        Reduziert Objekt-Phrasen auf ein plausibles Kopfwort
+        (z. B. "Handlungsprinzip bei der Nutzung ..." -> "Handlungsprinzip").
+        """
+        if not obj:
+            return ""
+        p = self._nfc(obj)
+        p = re.sub(r"\([^)]*\)", " ", p)
+        p = re.sub(r"[\"'“”„]", " ", p)
+        p = re.sub(r"\s+", " ", p).strip()
+        if not p:
+            return ""
+
+        if "," in p:
+            p = p.split(",", 1)[0].strip()
+
+        p = self._cut_at_keywords(p, [
+            " bei ", " in ", " mit ", " für ", " fuer ", " von ", " durch ", " aus ", " auf ",
+            " unter ", " über ", " ueber ", " zwischen ", " ohne ", " als ", " seit ", " nach ",
+            " während ", " waehrend ",
+        ])
+        p = self._cut_at_keywords(p, [" des ", " der ", " dem ", " den ", " eines ", " einer "])
+
+        p_low = p.lower()
+        for a in [
+            "der ", "die ", "das ", "ein ", "eine ", "einen ", "einem ", "einer ", "den ", "dem ", "des "
+        ]:
+            if p_low.startswith(a):
+                p = p[len(a):].strip()
+                break
+
+        if not p:
+            return ""
+
+        nouns = re.findall(r"[A-ZÄÖÜ][a-zäöüß\-]+", p)
+        if nouns:
+            return nouns[-1]
+
+        stop = {
+            "der", "die", "das", "ein", "eine", "einen", "einem", "einer", "den", "dem", "des",
+            "und", "oder", "zu", "im", "in", "am", "an", "von", "mit", "für", "fuer",
+            "was", "wie", "warum", "wieso", "weshalb", "diese", "dieser", "dieses", "dabei",
+        }
+        for t in re.split(r"\s+", p):
+            t0 = re.sub(r"[^\wäöüß\-]+", "", t, flags=re.IGNORECASE)
+            if len(t0) >= 3 and t0.lower() not in stop:
+                return t0
+        return p
 
     def _head_alias(self, phrase: str) -> str:
         """

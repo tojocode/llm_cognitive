@@ -1,9 +1,9 @@
-Chemie (bundesdeutsches Hochdeutsch: [çeˈmiː]; süddeutsch, Schweizerdeutsch, österreichisches Hochdeutsch: [keˈmiː]) ist diejenige Naturwissenschaft, die sich mit dem Aufbau, den Eigenschaften und der Umwandlung von Stoffen (Substanzen oder Materialien) beschäftigt.
+Chemie ist diejenige Naturwissenschaft, die sich mit dem Aufbau, den Eigenschaften und der Umwandlung von Stoffen beschäftigt.
 Ein Stoff besteht aus Atomen, Molekülen oder Ionen.
 Zentrale Begriffe der Chemie sind chemische Reaktionen und chemische Bindungen.
 Durch chemische Reaktionen werden chemische Bindungen gebildet oder gespalten.
 Dabei verändert sich die Elektronenaufenthaltswahrscheinlichkeit in den Elektronenhüllen der beteiligten Stoffe und damit deren Eigenschaften.
-Die Herstellung von Stoffen (Synthese) mit von der Menschheit benötigten Eigenschaften ist heute das zentrale Anliegen der Chemie.
+Die Herstellung von Stoffen mit von der Menschheit benötigten Eigenschaften ist heute das zentrale Anliegen der Chemie.
 Traditionell wird die Chemie in Teilgebiete unterteilt.
 Die wichtigsten davon sind die organische Chemie, die kohlenstoffhaltige Verbindungen untersucht, die anorganische Chemie, die alle Elemente des Periodensystems und deren Verbindungen behandelt, sowie die physikalische Chemie, die sich mit den grundlegenden Phänomenen, die der Chemie zu Grunde liegen, beschäftigt.
 Die Chemie in ihrer heutigen Form als exakte Naturwissenschaft entstand im 17.
@@ -11,15 +11,15 @@ und 18. Jahrhundert allmählich aus der Anwendung rationalen Schlussfolgerns, ba
 der Alchemisten.
 Einige der ersten bedeutenden Chemiker waren Robert Boyle, Humphry Davy, Jöns Jakob Berzelius, Joseph Louis GayLussac, Joseph Louis Proust, Marie und Antoine Lavoisier und im 19. Jahrhundert Justus von Liebig.
 Die chemische Industrie zählt zu den wichtigsten Industriezweigen.
-Sie stellt Stoffe her, die zur Herstellung von Alltagsgegenständen (z. b. Grundchemikalien, Kunststoffe, Lacke), Lebensmitteln (auch als Hilfsmittel dazu wie Düngemittel und Pestizide) oder zur Verbesserung der Gesundheit (z. b. Pharmazeutika) benötigt werden.
+Sie stellt Stoffe her, die zur Herstellung von Alltagsgegenständen, Lebensmitteln oder zur Verbesserung der Gesundheit benötigt werden.
 Die Bezeichnung Chemie entstand aus dem von χέω, „gießen“, abgeleiteten altgriechischen Wort χύμεία chymeía bzw.
 χημεία chēmeía „[Kunst der Metall-]Gießerei“ im Sinne von „Umwandlung“.
-Die heutige Schreibweise Chemie wurde vermutlich erstmals von Johann Joachim Lange im Jahre 1750-1753 eingeführt und ersetzte zu Beginn des 19. Jahrhunderts das seit dem 17. Jahrhundert bestehende Wort Chymie, das wahrscheinlich eine Vereinfachung und Umdeutung des seit dem 13. Jahrhundert belegten Ausdrucks Alchemie „Kunst des Goldherstellens“ war, welches wiederum selbst eine mehrdeutige Etymologie aufweist (zu den Konnotationen vergleiche die Etymologie des Wortes Alchemie: Das Wort wurzelt wohl in arabisch alkīmiyá, welches unter anderem „Stein der Weisen“ bedeuten kann, eventuell aus altgriechisch χυμεία chymeía „Gießung“ oder aus koptisch/altägyptisch kemi „schwarz[e Erden]“, vergleiche hierzu auch Kemet).
+Die heutige Schreibweise Chemie wurde vermutlich erstmals von Johann Joachim Lange im Jahre 1750-1753 eingeführt und ersetzte zu Beginn des 19. Jahrhunderts das seit dem 17. Jahrhundert bestehende Wort Chymie, das wahrscheinlich eine Vereinfachung und Umdeutung des seit dem 13. Jahrhundert belegten Ausdrucks Alchemie „Kunst des Goldherstellens“ war, welches wiederum selbst eine mehrdeutige Etymologie aufweist.
 Bis zum Anfang des 19. Jahrhunderts galten die Begriffe „Scheidekunde“ und „Scheidekunst“ als Alternativen für das Wort Chemie.
 Die Chemie in der Antike bestand im angesammelten praktischen Wissen über Stoffumwandlungsprozesse und den naturphilosophischen Anschauungen der Antike.
 Die Chemie im Mittelalter entwickelte sich aus der Alchemie, die in China, Europa und Indien schon seit Jahrtausenden praktiziert wurde.
-Die Alchemisten beschäftigten sich sowohl mit der erhofften Veredlung der Metalle (Herstellung von Gold aus unedlen Metallen, siehe auch Transmutation) als auch mit der Suche nach Arzneimitteln.
-Insbesondere für die Herstellung von Gold suchten die Alchemisten nach einem Elixier (PhilosophenStein, Stein der Weisen), das die unedlen („kranken“) Metalle in edle („gesunde“) Metalle umwandeln sollte.
+Die Alchemisten beschäftigten sich sowohl mit der erhofften Veredlung der Metalle als auch mit der Suche nach Arzneimitteln.
+Insbesondere für die Herstellung von Gold suchten die Alchemisten nach einem Elixier, das die unedlen Metalle in edle Metalle umwandeln sollte.
 Im medizinischen Zweig der Alchemie wurde ebenfalls nach einem Elixier gesucht, dem Lebenselixier, einem Heilmittel für alle Krankheiten, das schließlich auch Unsterblichkeit verleihen sollte.
 Kein Alchemist hat allerdings je den Stein der Weisen oder das Lebenselixier entdeckt.
 Bis zum Ende des 16. Jahrhunderts basierte die Vorstellungswelt der Alchemisten in der Regel nicht auf wissenschaftlichen Untersuchungen, sondern auf Erfahrungstatsachen und empirischen Rezepten.
@@ -29,8 +29,8 @@ Die mysteriöse Art ihrer Tätigkeit und die dabei oftmals entstehenden farbigen
 Für ihre Experimente entwickelten die Alchemisten manche Apparaturen, die auch heute noch in der chemischen Verfahrenstechnik verwendet werden.
 Ein bekannter Alchemist war Albertus Magnus.
 Er befasste sich als Kleriker mit diesem Themenkomplex und fand bei seinen Experimenten ein neues chemisches Element, das Arsen.
-Erst mit den Arbeiten von Paracelsus und Robert Boyle (The sceptical chymist, 1661) wandelte sich die Alchemie von einer rein aristotelisch geprägten zu einer mehr empirischen und experimentellen Wissenschaft, die zur Basis der modernen Chemie wurde.
-Eine endgültige Trennung der Chemie von der Alchemie erfolgte zu der Zeit als John Dalton (1766-1844) seine Atomtheorie entwickelte.
+Erst mit den Arbeiten von Paracelsus und Robert Boyle wandelte sich die Alchemie von einer rein aristotelisch geprägten zu einer mehr empirischen und experimentellen Wissenschaft, die zur Basis der modernen Chemie wurde.
+Eine endgültige Trennung der Chemie von der Alchemie erfolgte zu der Zeit als John Dalton seine Atomtheorie entwickelte.
 Ihre quantitative Grundlage erhielt die Chemie, nachdem Antoine Lavoisier die Erkenntnisse zur Funktion des Sauerstoffs bei der Verbrennung zusammengefasst hatte.
 Die Chemie in der Neuzeit erhielt als Wissenschaft entscheidende Impulse im 18.
 und 19. Jahrhundert: Sie wurde auf die Basis von Messvorgängen und Experimenten gestellt, v.

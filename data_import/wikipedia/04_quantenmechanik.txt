@@ -20,16 +20,11 @@ Auf der Quantenmechanik und ihren Begriffen bauen ab ca.
 Mit diesen können auch die Prozesse der Erzeugung und Vernichtung von Teilchen analysiert werden.
 Genauere Informationen zum mathematischen Formalismus finden sich im Artikel Mathematische Struktur der Quantenmechanik.
 Anfang des 20. Jahrhunderts begann die Entwicklung der Quantenphysik zunächst mit den sogenannten alten Quantentheorien.
-Max Planck stellte 1900 zur Herleitung des nach ihm benannten Strahlungsgesetzes die Hypothese auf, dass ein Oszillator Energie nur in ganzzahligen Vielfachen des Energiequantums Δ.
-{\displaystyle \Delta E=hf} aufnehmen oder abgeben kann ( h.
-{\displaystyle h} ist die PlanckKonstante, f.
-{\displaystyle f} ist die Frequenz des Oszillators).
+Max Planck stellte 1900 zur Herleitung des nach ihm benannten Strahlungsgesetzes die Hypothese auf, dass ein Oszillator Energie nur in ganzzahligen Vielfachen des Energiequantums Δ E = h f {\displaystyle \Delta E=hf} aufnehmen oder abgeben kann.
 1905 erklärte Albert Einstein den photoelektrischen Effekt durch die Lichtquantenhypothese.
-Demnach besteht Licht aus diskreten Partikeln gleicher Energie E.
-{\displaystyle E}, denen mit der Frequenz f.
-{\displaystyle f=E/h} auch eine Welleneigenschaft zukommt.
+Demnach besteht Licht aus diskreten Partikeln gleicher Energie E {\displaystyle E}, denen mit der Frequenz f = E / h {\displaystyle f=E/h} auch eine Welleneigenschaft zukommt.
 Im Zeitraum ab 1913 entwickelte Niels Bohr das nach ihm benannte Atommodell.
-Dieses basiert auf der Annahme, dass Elektronen im Atom nur Zustände von ganz bestimmten Energien einnehmen können und dass die Elektronen bei der Emission oder Absorption von Licht von einem Energieniveau auf ein anderes „springen“ (siehe Quantensprung).
+Dieses basiert auf der Annahme, dass Elektronen im Atom nur Zustände von ganz bestimmten Energien einnehmen können und dass die Elektronen bei der Emission oder Absorption von Licht von einem Energieniveau auf ein anderes „springen“.
 Bei der Formulierung seiner Theorie nutzte Bohr das Korrespondenzprinzip, dem zufolge sich das quantentheoretisch berechnete optische Spektrum von Atomen im Grenzfall großer Quantenzahlen dem klassisch berechneten Spektrum annähern muss.
 Mit dem Bohrschen Atommodell und seinen Erweiterungen, dem Schalenmodell und dem BohrSommerfeldModell, gelangen einige große Erfolge, darunter die Erklärung des Wasserstoffspektrums, der Röntgenlinien und des StarkEffekts sowie die Erklärung des Aufbaus des Periodensystems der Elemente.
 Schnell erwiesen sich diese frühen Atommodelle jedoch als unzureichend.
@@ -38,3 +33,8 @@ Im Jahr 1924 veröffentlichte Louis de Broglie seine Theorie der Materiewellen, 
 Diese Arbeit führte die Quantenphänomene auf eine gemeinsame Erklärung zurück, die jedoch wieder heuristischer Natur war und auch keine Berechnung der Spektren von Atomen ermöglichte.
 Daher wird sie als letzte den alten Quantentheorien zugeordnet, war jedoch richtungsweisend für die Entwicklung der Quantenmechanik.
 Die moderne Quantenmechanik fand ihren Beginn im Jahr 1925 mit der Formulierung der Matrizenmechanik durch Werner Heisenberg, Max Born und Pascual Jordan.
+Schon vor der Fertigstellung der ersten Veröffentlichung prägte Heisenberg in einem Brief an Wolfgang Pauli den Begriff Quantenmechanik, um deutlich zu machen, dass die klassische Mechanik durch etwas grundlegend Neues abgelöst werden müsse.
+Wenige Monate später stellte Erwin Schrödinger über einen völlig anderen Ansatz - ausgehend von De Broglies Theorie der Materiewellen - die Wellenmechanik bzw.
+die Schrödingergleichung auf.
+Kurz darauf konnte Schrödinger nachweisen, dass die Wellenmechanik mit der Matrizenmechanik mathematisch äquivalent ist.
+Schon 1926 brachte John Hasbrouck Van Vleck in den USA unter dem Titel Quantum Principles and Line Spectra das erste Lehrbuch zur neuen Quantenmechanik heraus.

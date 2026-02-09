@@ -1,4 +1,4 @@
-Ein Vulkan ist eine geologische Struktur, die entsteht, wenn Magma (Gesteinsschmelze) bis an die Oberfläche eines Planeten (z. b. der Erde) aufsteigt.
+Ein Vulkan ist eine geologische Struktur, die entsteht, wenn Magma bis an die Oberfläche eines Planeten aufsteigt.
 Alle Begleiterscheinungen, die mit dem Aufstieg und Austritt der glutflüssigen Gesteinsschmelze verbunden sind, bezeichnet man als Vulkanismus.
 Bei einem Vulkanausbruch werden nicht nur glutflüssige, sondern auch feste und gasförmige Stoffe freigesetzt.
 Im Fall der Erde schmelzen Gesteine ab 100 km Tiefe bei Temperaturen zwischen 1000 und 1300 °C.
@@ -11,30 +11,30 @@ Der Begriff „Vulkan“ leitet sich von der italienischen Insel Vulcano ab.
 Diese ist eine der Liparischen Inseln im Tyrrhenischen Meer.
 In der römischen Mythologie galt diese Insel als die Schmiede des Vulcanus, des römischen Gottes des Feuers.
 Vulkane kann man nach ihrer äußeren Form, der Art ihres Magmenzufuhrsystems, dem Ort ihres Auftretens, der Art ihrer Tätigkeit sowie nach ihrem Zustand unterteilen.
-Unterteilung nach der äußeren Form: Schichtvulkane (auch Stratovulkane genannt) Schildvulkane Schlackenel und Aschenkegel Lavadom Maar Caldera Tafelvulkan Deckenan und Plateauvulkan (vergleiche auch Trapp und Flutbasalt) Unterteilung nach der Art des Magmenzufuhrsystems: Zentralvulkane Spaltenvulkane Unterteilung nach dem Ort ihres Auftretens: subaerische Vulkane (Vulkane an Land oder über Wasser) submarine Vulkane, Seamount, Guyot (Vulkane im Meer unter Wasser) subglaziale Vulkane (Vulkane unter einem Gletscher) extraterrestrische Vulkane (Vulkane auf anderen Himmelskörpern) Unterteilung nach der Art ihrer Tätigkeit: effusive Tätigkeit (ruhiges Ausfließen der Lava) explosive oder ejektive Tätigkeit gemischte effusive und explosive Tätigkeit Vulkane mit besonders heftiger explosiver Tätigkeit werden Supervulkane genannt Vulkane kann man schließlich auch nach ihrem Zustand oder der Häufigkeit ihrer Aktivität einordnen in aktive Vulkane (aktiver Vulkanismus) inaktive oder schlafende Vulkane (kein aktiver Vulkanismus, Voraussetzungen für erneute Aktivität sind jedoch gegeben) erloschene Vulkane (durch fehlende Magmazufuhr keine Aktivität mehr möglich) Viele Vulkane folgen allerdings nicht einem „reinen“ Ausbruchsmuster, sondern zeigen variierendes Verhalten entweder während einer Eruption oder während der Millionen Jahre ihrer Aktivität.
+Unterteilung nach der äußeren Form: Schichtvulkane Schildvulkane Schlackenel und Aschenkegel Lavadom Maar Caldera Tafelvulkan Deckenan und Plateauvulkan Unterteilung nach der Art des Magmenzufuhrsystems: Zentralvulkane Spaltenvulkane Unterteilung nach dem Ort ihres Auftretens: subaerische Vulkane submarine Vulkane, Seamount, Guyot subglaziale Vulkane extraterrestrische Vulkane Unterteilung nach der Art ihrer Tätigkeit: effusive Tätigkeit explosive oder ejektive Tätigkeit gemischte effusive und explosive Tätigkeit Vulkane mit besonders heftiger explosiver Tätigkeit werden Supervulkane genannt Vulkane kann man schließlich auch nach ihrem Zustand oder der Häufigkeit ihrer Aktivität einordnen in aktive Vulkane inaktive oder schlafende Vulkane erloschene Vulkane Viele Vulkane folgen allerdings nicht einem „reinen“ Ausbruchsmuster, sondern zeigen variierendes Verhalten entweder während einer Eruption oder während der Millionen Jahre ihrer Aktivität.
 Ein Beispiel dafür ist der Ätna auf Sizilien.
-Ein Paroxysmus (griech.
-παρα para „neben“, οξυς oxys „scharf“) ist eine Folge von sich steigernden Ausbrüchen eines Vulkans.
+Ein Paroxysmus ist eine Folge von sich steigernden Ausbrüchen eines Vulkans.
 Der durch die vulkanische Aktivität entstandene Berg wird je nach seiner Form Vulkankegel oder Vulkandom genannt, und die Öffnung, aus der Lava aus der Tiefe aufsteigt, heißt Vulkanschlot.
 Die mehr oder minder breite Öffnung an der Spitze eines Vulkans ist der Vulkankrater.
 Bricht ein Schlot über einer oberflächennahen Magmakammer zusammen, und es bildet sich ein großer Einbruchskrater, wird dieser als Caldera bezeichnet.
-Einen entscheidenden Einfluss auf die Ausbildung eines Vulkans hat neben dem Gaslt und Wassergehalt die Zusammensetzung seines Magmas, vor allem der Gehalt an Siliciumdioxid (SiO2).
+Einen entscheidenden Einfluss auf die Ausbildung eines Vulkans hat neben dem Gaslt und Wassergehalt die Zusammensetzung seines Magmas, vor allem der Gehalt an Siliciumdioxid.
 Die Zusammensetzung des Magmas bestimmt die Art der Vulkantätigkeit.
 Je mehr SiO2 das Magma enthält, desto explosiver ist der damit verbundene Vulkanismus.
-Es lassen sich vier Haupttypen unterscheiden: Felsisches Magma enthält mehr als 63 % SiO2 Intermediäres Magma enthält zwischen 52 und 63 % SiO2 Mafisches Magma enthält zwischen 45 und 52 % SiO2 Ultramafisches Magma enthält weniger als 45 % SiO2 Aus den vier Magmatypen entstehen charakteristische Gesteine: Rhyolith Andesit Basalt Pikrit Diese vier Typen können grob bestimmten geodynamischen Umfeldern zugeordnet werden: Aufschmelzen kontinentaler Kruste Subduktionszonen Mittelozeanischer Rücken, HotspotVulkanismus, RiftVulkanismus heute nicht mehr auftretender Vulkanismus früher Phasen der Geogenese.
-Vulkane können auch klassifiziert werden, indem sie nach der Farbe der austretenden Lava beschrieben werden.
+Es lassen sich vier Haupttypen unterscheiden: Felsisches Magma enthält mehr als 63 % SiO2 Intermediäres Magma enthält zwischen 52 und 63 % SiO2 Mafisches Magma enthält zwischen 45 und 52 % SiO2 Ultramafisches Magma enthält weniger als 45 % SiO2 Aus den vier Magmatypen entstehen charakteristische Gesteine: Rhyolith Andesit Basalt Pikrit Diese vier Typen können grob bestimmten geodynamischen Umfeldern zugeordnet werden: Aufschmelzen kontinentaler Kruste Subduktionszonen Mittelozeanischer Rücken, HotspotVulkanismus, RiftVulkanismus heute nicht mehr auftretender Vulkanismus früher Phasen der Geogenese Vulkane können auch klassifiziert werden, indem sie nach der Farbe der austretenden Lava beschrieben werden.
 Die Farbe der austretenden Lava hängt von der Temperatur ab, kann aber auch auf die chemische Zusammensetzung der Gesteinsschmelze zurückgeführt werden.
 Sowohl die entstehende Form des Vulkans als auch das Ausbruchsverhalten werden von der Zusammensetzung der Gesteinsschmelze entscheidend bestimmt: Rote Vulkane werden aufgrund der rot oder orangegelb glühenden, heißen Lava so bezeichnet, sie bilden Schildvulkane.
 Graue Vulkane besitzen eine vergleichsweise niedrige Lavatemperatur und bilden Schichtvulkane.
 Bei der Eruption von Vulkanen können durch Vermischung vulkanischen Materials mit anderen Stoffen wie Wasser oder Luft sowie durch das abrupte Austreten von Lava weitere Prozesse ausgelöst werden.
-Dazu zählen unter anderem: Lahar (Schlammme und Schuttströme) Pyroklastische Ströme (Glutlawine) Base Surge (partikelarmer Dichtestrom) Glutwolke Gletscherlauf Tsunami: Wenn bei einem Vulkanausbruch große Mengen Magma oder gar Teile der Bergflanken ins Meer stürzen, können Tsunamis ausgelöst werden.
+Dazu zählen unter anderem: Lahar Pyroklastische Ströme Base Surge Glutwolke Gletscherlauf Tsunami: Wenn bei einem Vulkanausbruch große Mengen Magma oder gar Teile der Bergflanken ins Meer stürzen, können Tsunamis ausgelöst werden.
 Dabei erreichen diese oft größere Höhen als die durch Seebeben erzeugten Tsunamis.
 Auch können Erdbeben vor oder nach dem Ausbruch eines Vulkans auftreten, da sie sich gegenseitig beeinflussen können.
-Nicht dem Vulkanismus sind andere aufsteigende Materialien zuzurechnen, die etwa für die sogenannten Schlammvulkane (besser als Schlammdiapire bezeichnet) verantwortlich sind.
+Nicht dem Vulkanismus sind andere aufsteigende Materialien zuzurechnen, die etwa für die sogenannten Schlammvulkane verantwortlich sind.
 Es gibt heute weltweit ca.
 1500 aktive, d. h.
 in den letzten 10.000 Jahren ausgebrochene Vulkane auf der Erdoberfläche, allerdings kennt man noch nicht die Anzahl der submarinen Vulkane, von denen es vermutlich vielfach mehr gibt.
-Davon sind 719 als Schichtvulkan, 176 als Schildvulkan, 66 als komplexer Vulkan, 86 als Caldera, 147 als einzelne Schlackenkegel, 27 als Spaltenvulkan oder Kraterreihe, 19 als Maar, 137 als submariner Vulkan und 100 als Vulkanfeld (mit teilweise mehreren hundert Einzelvulkanen) klassifiziert.
+Davon sind 719 als Schichtvulkan, 176 als Schildvulkan, 66 als komplexer Vulkan, 86 als Caldera, 147 als einzelne Schlackenkegel, 27 als Spaltenvulkan oder Kraterreihe, 19 als Maar, 137 als submariner Vulkan und 100 als Vulkanfeld klassifiziert.
 Die geographische Verteilung kann man mit Hilfe der Erkenntnisse der Plattentektonik verstehen: Vulkane der Spreizungszonen liegen mit wenigen Ausnahmen auf dem Meeresgrund, wo die Erdplatten auseinanderdriften.
-Das dort vorkommende Magma ist basaltisch und verarmt an Elementen, die sich schlecht in Kristallgitter integrieren lassen (inkompatible Elemente).
+Das dort vorkommende Magma ist basaltisch und verarmt an Elementen, die sich schlecht in Kristallgitter integrieren lassen.
 Hierzu gehören hauptsächlich rote Vulkane oder Schildvulkane.
+Vulkane über Subduktionszonen sind die sichtbarsten Vulkane.
+Sie treten bei Plattenkollisionen auf, an denen mindestens eine ozeanische Lithosphärenplatte beteiligt ist.
