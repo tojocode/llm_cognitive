@@ -59,8 +59,14 @@ from __future__ import annotations
 import os
 import re
 import json
-import requests
+import urllib.request
+import urllib.parse
 from typing import Optional, List, Tuple
+
+try:
+    import requests  # type: ignore
+except Exception:
+    requests = None
 
 
 # ============================================================
@@ -101,6 +107,23 @@ DEFAULT_CONFIG = {
     # Debug
     "print_normalize_stats": True,
 }
+
+
+def _http_get_json(url: str, params: dict, headers: dict, timeout: int) -> dict:
+    """
+    Small HTTP helper that uses requests when available, otherwise falls back to urllib.
+    Keeps the script runnable without external dependencies.
+    """
+    if requests is not None:
+        r = requests.get(url, params=params, headers=headers, timeout=timeout)
+        r.raise_for_status()
+        return r.json() if r is not None else {}
+
+    qs = urllib.parse.urlencode(params)
+    req = urllib.request.Request(f"{url}?{qs}", headers=headers)
+    with urllib.request.urlopen(req, timeout=timeout) as resp:
+        data = resp.read()
+        return json.loads(data.decode("utf-8"))
 
 
 def load_config() -> dict:
@@ -728,8 +751,12 @@ def fetch_wikipedia(topic: str, config: dict) -> str:
     }
 
     try:
-        r = requests.get(url, params=params, headers={"User-Agent": config["user_agent"]}, timeout=10)
-        data = r.json() if r is not None else {}
+        data = _http_get_json(
+            url,
+            params=params,
+            headers={"User-Agent": config["user_agent"]},
+            timeout=10,
+        )
         text = data.get("query", {}).get("pages", [{}])[0].get("extract", "") or ""
 
         # Überschriften weg
@@ -785,10 +812,7 @@ def fetch_tatoeba_api_new(count: int, config: dict) -> Optional[str]:
 
     try:
         print("      Probiere neue Tatoeba-API (unstable)...")
-        r = requests.get(url, params=params, headers=headers, timeout=15)
-        r.raise_for_status()
-
-        data = r.json() or {}
+        data = _http_get_json(url, params=params, headers=headers, timeout=15) or {}
         items = data.get("data", data.get("results", [])) or []
 
         results: List[str] = []
