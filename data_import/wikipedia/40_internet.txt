@@ -1,0 +1,40 @@
+Das Internet (von englisch interconnected networks ‚zusammengeschaltete Netzwerke‘, kurz net ‚Netz‘), umgangssprachlich auch Netz, ist ein weltweiter Verbund von Rechnernetzwerken, den autonomen Systemen.
+Über das Internet kann sich jeder Rechner mit jedem anderen Rechner verbinden.
+Der Datenaustausch zwischen den über das Internet verbundenen Rechnern erfolgt über Internetdienste wie bspw.
+World Wide Web, E-Mail und Instant Messaging, welche sich wiederum normierter Internetprotokolle wie bspw.
+IP, DNS und HTTPS bedienen.
+Der Vorläufer des Internets war das 1969 in den USA gegründete Arpanet, das der Informationsübertragung zwischen den vielen bis dahin noch voneinander getrennten Rechnernetzwerken bspw.
+einzelner Universitäten diente.
+In den 1980er Jahren wurden im Arpanet die wichtigsten der heute noch verwendeten Protokolle eingeführt und es verbreitete sich unter dem neuen Namen „Internet“ weltweit zunächst vor allem in der Wissenschaft.
+In den 1990er Jahren nahm das Internet seine heutige Form an: Weltweit wurden nun auch die meisten Firmennetzwerke und PCs an das Internet angeschlossen und das World Wide Web entstand.
+Die folgende exponentiell zunehmende Nutzung des Internets führte weltweit fundamentale Veränderungen herbei.
+Sie beschleunigte unter anderem die Digitale Revolution und die Globalisierung deutlich.
+Die Verbreitung des Smartphones seit 2007 hat die Bedeutung des Internets nochmal verstärkt.
+Seitdem haben immer mehr Menschen ständig Zugang zum Internet und nutzen täglich Onlinedienste.
+Dies hat zu Veränderungen in fast allen Lebensbereichen geführt, bspw.
+in der privaten Kommunikation, beim Medienkonsum und beim Einkaufen.
+Dieses neue, vom Internet durchwobene Alltagsleben wird auch als Digital Lifestyle bezeichnet.
+Die Verbreitung des Internets hat vielfältige Vorteile, wird aber auch kritisch betrachtet, u.
+weil sie Regierungen eine umfangreichere automatisierte Überwachung aller Menschen ermöglicht als jemals zuvor.
+Ebenso kritisiert wird die Kommerzialisierung des Internets seit den 1990er Jahren: Im neuen Plattformkapitalismus sind große Teile des Internets heute unter der Kontrolle von nur noch wenigen Unternehmen, genannt „Big Tech“, die nicht primär gemeinwohlorientiert handeln, sondern selbsterhaltungsund profitorientiert, und deshalb intensiv alle Internetnutzer verfolgen und manipulieren (bspw.
+von ihren „Diensten“ abhängig machen).
+Sie sind mittlerweile die größten Unternehmen der Welt und besitzen jeweils mindestens ein Monopol auf einen essentiellen Onlinedienst - daher ist es anderen kaum noch möglich, ihre Vormacht umzustoßen.
+Regierungen versuchen seit Kurzem, die derzeitige Situation wieder zu verbessern und die davon ausgehenden Gefahren einzuschränken, bspw.
+die EU mit den seit 2022 geltenden Gesetzen DSA und DMA.
+Der Ausdruck Internet ist ein Anglizismus.
+Er entstand als Kurzform der Bezeichnung interconnected networks (zusammengeschaltete Netzwerke) bzw.
+des daraus entwickelten Fachausdrucks internetwork, unter dem in den 1970er und 1980er Jahren die Entwicklung eines Systems zur Vernetzung von bestehenden, kleineren Rechnernetzen diskutiert wurde.
+Aus der allgemeinen englischen Fachbezeichnung für ein internetwork oder internet verbreitete sich das seit 1996 auch in den Duden aufgenommene Wort „Internet“ als Eigenname für das größte Netzwerk dieser Art, das aus dem Arpanet entstand.
+Mit der gesellschaftlichen Durchdringung des Internets etablierten sich die Bezeichnungen „Internet“ und umgangssprachlich „Netz“ auch in der Alltagssprache.
+„Netz“ bezeichnet aber in der Informatik nicht zwingend das Internet, sondern es gibt auch diverse andere NetzwerkInfrastrukturen.
+Sprachkritiker, wie beispielsweise verschiedene Sprachvereine und viele rechtsextreme Organisationen wie die Partei Die Heimat oder die NPD, verwenden anstelle des Worts Internet deutsche Wortschöpfungen wie Weltnetz, Zwischennetz oder Internetz.
+Obwohl seit Mitte der 1990er Jahre bekannt, sind diese Wortschöpfungen zwar in diversen sprachkritischen Publikationen zu finden, haben aber in der Alltagssprache keine praktische Bedeutung erlangt.
+Der Begriff Weltnetz wird heute bisweilen im rechtsextremen Umfeld verwendet.
+Das Internet begann am 29.
+Oktober 1969 als Arpanet.
+Es wurde zur Vernetzung der Großrechner von Universitäten und Forschungseinrichtungen genutzt.
+Das Ziel war zunächst, die Rechenleistungen dieser Großrechner effizienter zu nutzen, zuerst nur in den USA, später weltweit.
+Diese Großrechner waren untereinander über Interface Message Processors verbunden, die die Netzwerkkommunikation mittels Paketvermittlung übernahmen.
+Die verwendeten Protokolle waren in heterogenen Umgebungen unzuverlässig, weil sie für ein bestimmtes Übertragungsmedium optimiert waren.
+Cerf und Robert E.
+Kahn entwickelten 1973 und 1974 eine frühe Version von TCP, um andersartige Netze miteinander zu verbinden.

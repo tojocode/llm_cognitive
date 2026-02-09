@@ -1,0 +1,40 @@
+Künstliche Intelligenz (KI), englisch artificial intelligence, daher auch artifizielle Intelligenz (AI), bezeichnet im weitesten Sinne computerbasierte Systeme, die ihre (virtuelle oder reale) Umgebung analysieren können, um daraus relevante Informationen zu abstrahieren, welche sie nutzen, um Entscheidungen zu treffen, die ihre Chance erhöhen, definierte Ziele zu erreichen.
+Damit unterscheiden sich KI-gestützte Systeme von regelbasierten Systemen ohne Fähigkeit zur eigenständigen Anpassung ihres Verhaltens, die ausschließlich fest vorgegebene Anweisungen ausführen.
+KI ist außerdem die Bezeichnung für das Teilgebiet der Informatik, das sich mit der Entwicklung und Erforschung von Software und Methoden befasst, die besagte Systeme hervorbringen.
+Die KI als Forschungsfeld befasst sich in diesem Zusammenhang beispielsweise mit der Automatisierung intelligenten Verhaltens und dem maschinellen Lernen sowie der Formalisierung von Bewusstsein und Kreativität.
+Der Begriff ist schwierig zu definieren, da es verschiedene Definitionen von Intelligenz gibt.
+Mit der Zeit haben sich viele Bereiche zu den Methoden der KI entwickelt.
+Weiterhin wird unterschieden, welche Probleme mit den Methoden der KI beschrieben werden.
+Dabei entstanden zwei Bereiche: schwache KI und starke KI.
+Hier lassen sich viele Kategorien bilden und der wissenschaftliche Diskurs ist noch nicht sehr weit in der Zuordnung von Themen zu den Arten der Probleme.
+Der ingenieurwissenschaftliche Teil der Informatik befasst sich damit, wie solche Systeme realisiert werden können.
+Beispiele dafür sind Multiagentensysteme, Expertensysteme, Transformer oder serviceorientierte Architekturen.
+Versuchsweise wird Intelligenz definiert als die Eigenschaft, die ein Wesen befähigt, angemessen und vorausschauend in seiner Umgebung zu agieren.
+Dazu gehören die Fähigkeiten.
+Umgebungsdaten wahrzunehmen, d. h.
+auf Stimuli zu reagieren Informationen aufzunehmen, zu verarbeiten und als Wissen zu speichern, Sprache zu verstehen und zu erzeugen, Probleme zu lösen und zu handeln Ziele zu definieren, zu erreichen und zu modifizieren Autonom Entscheidungen zu treffen.
+Praktische Erfolge der KI werden schnell in die Anwendungsbereiche integriert und werden dann von vielen nicht mehr als KI angesehen, auch wenn sie deren Definition erfüllen.
+Dieses Phänomen wird auch als „AI effect“ bezeichnet.
+Der Begriff artificial intelligence (künstliche Intelligenz) wurde 1955 geprägt von dem US-amerikanischen Informatiker John McCarthy im Rahmen eines Förderantrags an die RockefellerStiftung für das Dartmouth Summer Research Project on Artificial Intelligence, einem Forschungsprojekt, bei dem sich im Sommer 1956 eine Gruppe von zehn Wissenschaftlern über ca.
+acht Wochen mit der Thematik befasste.
+Es existieren zahlreiche Definitionen für den Begriff der KI.
+Je nach Sichtweise wird die künstliche Intelligenz in Industrie, Forschung und Politik entweder über die zu erzielenden Anwendungen oder den Blick auf die wissenschaftlichen Grundlagen definiert: Die Definitionen für künstliche Intelligenz lassen sich nach Stuart J.
+Russell und Peter Norvig in vier Kategorien einteilen: Nachbildung von menschlichem Denken Nachbildung von rationalem Denken Nachbildung von menschlichem Verhalten Nachbildung von rationalem Verhalten.
+Die KI-Verordnung der EU definiert in Artikel 3 (Begriffsbestimmungen) ein „KI-System“ wie folgt: Diese Definition wird im Erwägungsgrund 12 etwas allgemeinverständlicher eingeordnet.
+Um ein System im Alltag konkret als „KI“ oder „nicht KI“ einordnen zu können, ist in vielen Unternehmen eine Annäherung über möglichst konkrete und verständliche Kriterien notwendig.
+Diese werden z. b.
+von ITce und ComplianceStakeholdern erarbeitet, stehen im Kontext vorhandener Informationssicherheits-, Complianceund/oder RisikomanagementSysteme und orientieren sich - Stand Dezember 2024 - beispielsweise an folgenden Definitionen: Ein System wird als „KI-System“ eingestuft, wenn es mindestens eine Komponente enthält, deren Ausgaben auf Verarbeitungsbzw.
+Entscheidungsmustern beruhen, die es zuvor in einer Lernphase auf Basis großer Datenmengen selbst generiert hat.
+Ebenfalls als eindeutiges Merkmal gilt, dass die Ausgabe eines KI-Systems zu einer spezifischen Eingabe nicht alleine über Programmierung, Konfiguration und Parametrisierung vorhergesagt werden kann, sondern bestenfalls auf Basis der Daten, mit denen das System angelernt wurde.
+Hier liegt ein risikobasierter Ansatz zugrunde, da die KI-Komponente als Black Box eingestuft wird, deren innere Funktionsweise nicht transparent ist.
+BlackBoxTest) Diese Annäherungen können sowohl auf generative als auch auf prädiktive KI angewendet werden.
+Ein NonKI-System, in dessen Algorithmen ein zuvor woanders erlerntes KI-Verarbeitungsmuster integriert ist, wird aufgrund der Risiken, die sich aus der o. g.
+Intransparenz ergeben, derzeit meist ebenfalls als KI-System eingeordnet.
+Dies betrifft beispielsweise die Mehrfachverwendung eines allgemeinen LLM-Modells in unterschiedlichen fachlichen Kontexten.
+(Stand Dezember 2024) Der Vorteil der vorgenannten Annäherungen liegt darin, dass sie die Unschärfen des „Intelligenz“-Begriffs sowie Interpretationsspielräume der o. g.
+EU-Verordnung vermeiden, indem ausschließlich bekannte technische Aspekte der in Frage kommenden Systeme zugrunde gelegt werden: Für jeden Quellcode (White Box) kann eine eindeutige Aussage abgeleitet werden, ob eine Lernfähigkeit (z. b.
+nach Art der unten aufgeführten Methoden) eingebaut ist oder nicht.
+Ist der Quellcode nicht einsehbar, kann der Hersteller/Programmierer konsultiert werden.
+Unterscheidungsbeispiel: Ein Navigationssystem ist ein KI-System, wenn es anhand von Daten zu einer Teilmenge aller möglichen Fahrten „angelernt“ wurde, für jede mögliche Fahrt die schnellste Route zu finden.
+Ein Navigationssystem ist kein KI-System, wenn es die schnellste Route aufgrund unveränderlicher*, mindestens dem Hersteller/Programmierer bekannter Algorithmen und einer zuvor nach ebenso bekannten Regeln optimierten, unveränderlichen* Datenbank ermittelt.
+(*unveränderlich mit Ausnahme herkömmlicher Updates, z. b.

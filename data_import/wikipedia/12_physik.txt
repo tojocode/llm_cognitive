@@ -1,0 +1,40 @@
+Die Physik (bundesdeutsches Hochdeutsch: [fyˈziːk], österreichisches Hochdeutsch: [fʏˈsɪk], Schweizer Hochdeutsch: auch [fɪˈziːk]) ist eine Naturwissenschaft, die grundlegende Phänomene der Natur untersucht.
+Um deren Eigenschaften und Verhalten anhand von quantitativen Modellen und Gesetzmäßigkeiten zu erklären, befasst sie sich insbesondere mit Materie und Energie und deren Wechselwirkungen in Raum und Zeit.
+Erklären bedeutet hier einordnen, vergleichen, allgemeineren Erscheinungen zuordnen oder aus allgemein gültigen Naturgesetzen folgern.
+Dazu ist häufig die Bildung neuer geeigneter Begriffe nötig, teilweise auch solcher, die der unmittelbaren Anschauung nicht mehr zugänglich sind.
+Erklärungen in dem philosophischen Sinn, „warum“ die Natur sich so verhält, kann die Physik nicht leisten.
+Stattdessen setzt sie sich mit dem „wie“ auseinander.
+Zum Beispiel kann sie nicht erklären, warum Massen einander anziehen.
+Dieses Verhalten kann lediglich mit verschiedenen Modellen beschrieben werden.
+Newton tat dies, indem er annahm, dass zwischen Körpern eine Anziehungskraft herrscht.
+Eine ganz andere Vorstellung hatte Einstein, der die Gravitation damit erklärte, dass Materie die Raumzeit krümmt.
+Die Arbeitsweise der Physik besteht in einem Zusammenwirken experimenteller Methoden und theoretischer Modellbildung.
+Physikalische Theorien bewähren sich in der Anwendung auf Systeme der Natur, indem sie Vorhersagen über spätere Zustände erlauben, wenn ein früherer Zustand bekannt ist.
+Erkenntnisfortschritte ergeben sich durch das Wechselspiel von Beobachtung oder Experiment mit der Theorie.
+Eine neue oder weiterentwickelte Theorie kann bekannte Ergebnisse besser oder überhaupt erstmals erklären und darüber hinaus neue Experimente und Beobachtungen anregen, deren Ergebnisse dann die Theorie bestätigen oder ihr widersprechen.
+Unerwartete Beobachtungsse und Versuchsergebnisse geben Anlass zur Theorieentwicklung in verschiedener Gestalt, von schrittweiser Verbesserung bis hin zur völligen Aufgabe einer lange Zeit akzeptierten Theorie.
+Erkenntnisse und Modelle der Physik werden intensiv in der Chemie, Geologie, Biologie, Medizin und den Ingenieurwissenschaften genutzt.
+Die Disziplin der Physik in ihrer heutigen Gestalt hat ihre Ursprünge in der Philosophie, die sich seit der Antike im weitesten Sinne mit den Gründen und Ursachen aller Dinge befasst.
+Von Aristoteles bis ins beginnende 19.
+Jahrhundert wurde die Physik als das Teilgebiet der Philosophie verstanden, das sich als Naturlehre, Naturgeschichte, Chemie oder angewandte Mathematik mit den Gegebenheiten der Natur beschäftigt.
+Gegenüber den rein philosophischen Erklärungsversuchen der Naturvorgänge spielte die Art von Erkenntnis, die durch systematische und genaue Beobachtung, also empirisch zu gewinnen ist, lange Zeit keine Rolle.
+Ab Mitte des 13.
+und im Laufe des 14.
+Jahrhunderts plädierten dann einige von den die Natur erforschenden Philosophen - wie etwa Roger Bacon - für ein größeres Gewicht der durch Beobachtung zu erlangenden Naturerkenntnis.
+Diese Tendenzen mündeten ab dem frühen 17.
+Jahrhundert, namentlich mit Galileo Galilei und Isaac Newton, in die Entwicklung einer Methodologie der physikalischen Erkenntnis, die vorrangig an empirischen und sogar experimentellen Standards orientiert ist und diesen vor überkommenen philosophischen Grundsätzen im Zweifelsfall sogar den Vorrang einräumt.
+Dieser Ansatz wurde zunächst als „experimentelle Philosophie“ bezeichnet und führte beim Verständnis vieler unterschiedlicher Naturvorgänge rasch zu bedeutenden Erfolgen.
+Dennoch dauerte es noch bis ins 19.
+Jahrhundert, dass er sich endgültig in der Physik durchsetzen konnte und sie damit als eigenständige Disziplin in ihrem heutigen Sinn etablierte.
+Hinsichtlich ihrer Methode, ihres Gegenstandsbereichs, ihrer wissenschaftssystematischen und institutionellen Verortung teilt sich die Physik im Wesentlichen in zwei große Gebiete auf.
+Die theoretische Physik beschäftigt sich vorwiegend mit formalen mathematischen Beschreibungen und den Naturgesetzen.
+Sie abstrahiert Vorgänge und Erscheinungen in der wirklichen Natur in Form eines Systems von Modellen, allgemeingültigen Theorien und Naturgesetzen sowie induktiv gewählten Hypothesen.
+Bei der Formulierung von Theorien und Gesetzen bedient sie sich vielfach der Methoden der Mathematik und der Logik.
+Ziel ist, das Verhalten eines Systems theoretisch vorherzusagen, damit dies durch Vergleich mit den Vorgängen und Erscheinungen in der wirklichen Natur überprüft werden kann.
+Diese Überprüfung in Form reproduzierbarer Messungen an gezielt gestalteten physikalischen Experimenten oder durch Beobachtung natürlicher Phänomene ist das Gebiet der Experimentalphysik.
+Das Ergebnis der Überprüfung bestimmt über die Gültigkeit und Vorhersagekraft des Modells und der darin gewählten Begriffe, Hypothesen und Methoden.
+Die Physik steht in enger Verbindung zu den Ingenieurwissenschaften und den anderen Naturwissenschaften von der Astronomie und Chemie bis zur Biologie und den Geowissenschaften.
+Die Physik wird dabei häufig als grundlegende oder fundamentale Naturwissenschaft aufgefasst, die sich am stärksten mit den Grundprinzipien befasst, die die natürlichen Vorgänge bestimmen.
+Die Grenzziehung zu den anderen Naturwissenschaften hat sich historisch ergeben, wird jedoch insbesondere mit dem Aufkommen neuer Wissenschaftsdisziplinen immer schwieriger.
+In der heutigen Physik ist vor allem die durch Atomik und Molekülphysik und Quantenchemie markierte Grenze zur Chemie fließend.
+Zur Abgrenzung gegenüber der Biologie wurde die Physik oftmals als die Wissenschaft von der unbelebten im Gegensatz zur belebten Natur bezeichnet, womit jedoch eine Beschränkung impliziert wird, die so in der Physik nicht existiert.

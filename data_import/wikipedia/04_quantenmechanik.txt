@@ -1,0 +1,40 @@
+Die Quantenmechanik ist eine physikalische Theorie, mit der die Eigenschaften und Gesetzmäßigkeiten von Zuständen und Vorgängen der Materie beschrieben werden.
+Im Gegensatz zu den Theorien der klassischen Physik erlaubt sie als Grundlage der Quantenphysik die zutreffende Berechnung physikalischer Eigenschaften von Materie bis zum Größenbereich der Atome herab und weiter darunter.
+Die Quantenmechanik ist eine der Hauptsäulen der modernen Physik.
+Sie bildet die Grundlage zur Beschreibung von Phänomenen der Atomphysik, der Festkörperphysik und der Kernik und Elementarteilchenphysik, aber auch verwandter Wissenschaften wie der Quantenchemie.
+Die Grundlagen der Quantenmechanik wurden zwischen 1925 und 1932 von Werner Heisenberg, Erwin Schrödinger, Max Born, Pascual Jordan, Wolfgang Pauli, Paul Dirac, John von Neumann und weiteren Physikern erarbeitet, nachdem erst die klassische Physik und dann die älteren Quantentheorien bei der systematischen Beschreibung der Vorgänge in den Atomen versagt hatten.
+Die Quantenmechanik erhielt ihren Namen sowohl in Anlehnung an die klassische Mechanik als auch in Abgrenzung von ihr.
+Die Quantenmechanik bleibt wie die klassische Mechanik auf die Bewegung von massebehafteten Teilchen unter der Wirkung von Kräften beschränkt.
+Jedoch werden einige zentrale Begriffe der klassischen Mechanik, unter anderem „Ort“ und „Bahn“ eines Teilchens, in der Quantenmechanik durch grundlegend andere, der Quantenphysik besser angepasste Konzepte ersetzt.
+Die für die Quantenphysik auch typischen Entstehungsse und Vernichtungsprozesse werden von der Quantenmechanik noch nicht behandelt.
+Die Quantenmechanik bezieht sich auf materielle Objekte und modelliert diese als einzelne Teilchen oder als Systeme, die aus einer bestimmten Anzahl von einzelnen Teilchen bestehen.
+Mit diesen Modellen können Elementarteilchen, Atome, Moleküle oder die makroskopische Materie detailliert beschrieben werden.
+Zur Berechnung deren möglicher Zustände mit ihren jeweiligen physikalischen Eigenschaften und Reaktionsweisen wird ein der Quantenmechanik eigener mathematischer Formalismus genutzt, der sich stark von der mathematischen Struktur der klassischen Mechanik unterscheidet.
+Die Quantenmechanik unterscheidet sich grundlegend von der klassischen Physik.
+Sie verwendet Begriffe und Konzepte, die sich der Anschaulichkeit entziehen und auch einigen Prinzipien widersprechen, die in der klassischen Physik als fundamental und selbstverständlich angesehen werden.
+Durch Anwendung von Korrespondenzregeln und Konzepten der Dekohärenztheorie können viele Gesetzmäßigkeiten der klassischen Physik, insbesondere die gesamte klassische Mechanik, als Grenzfälle der Quantenmechanik beschrieben werden.
+Allerdings gibt es auch zahlreiche Quanteneffekte ohne klassischen Grenzfall.
+Zur Deutung der Theorie wurde eine Reihe verschiedener Interpretationen der Quantenmechanik entwickelt, die sich insbesondere in ihrer Konzeption des Messprozesses und in ihren metaphysischen Prämissen unterscheiden.
+Auf der Quantenmechanik und ihren Begriffen bauen ab ca.
+1930 die weiterführenden Quantenfeldtheorien auf, angefangen mit der Quantenelektrodynamik.
+Mit diesen können auch die Prozesse der Erzeugung und Vernichtung von Teilchen analysiert werden.
+Genauere Informationen zum mathematischen Formalismus finden sich im Artikel Mathematische Struktur der Quantenmechanik.
+Anfang des 20.
+Jahrhunderts begann die Entwicklung der Quantenphysik zunächst mit den sogenannten alten Quantentheorien.
+Max Planck stellte 1900 zur Herleitung des nach ihm benannten Strahlungsgesetzes die Hypothese auf, dass ein Oszillator Energie nur in ganzzahligen Vielfachen des Energiequantums Δ.
+{\displaystyle \Delta E=hf} aufnehmen oder abgeben kann ( h.
+{\displaystyle h} ist die PlanckKonstante, f.
+{\displaystyle f} ist die Frequenz des Oszillators).
+1905 erklärte Albert Einstein den photoelektrischen Effekt durch die Lichtquantenhypothese.
+Demnach besteht Licht aus diskreten Partikeln gleicher Energie E.
+{\displaystyle E}, denen mit der Frequenz f.
+{\displaystyle f=E/h} auch eine Welleneigenschaft zukommt.
+Im Zeitraum ab 1913 entwickelte Niels Bohr das nach ihm benannte Atommodell.
+Dieses basiert auf der Annahme, dass Elektronen im Atom nur Zustände von ganz bestimmten Energien einnehmen können und dass die Elektronen bei der Emission oder Absorption von Licht von einem Energieniveau auf ein anderes „springen“ (siehe Quantensprung).
+Bei der Formulierung seiner Theorie nutzte Bohr das Korrespondenzprinzip, dem zufolge sich das quantentheoretisch berechnete optische Spektrum von Atomen im Grenzfall großer Quantenzahlen dem klassisch berechneten Spektrum annähern muss.
+Mit dem Bohrschen Atommodell und seinen Erweiterungen, dem Schalenmodell und dem BohrSommerfeldModell, gelangen einige große Erfolge, darunter die Erklärung des Wasserstoffspektrums, der Röntgenlinien und des StarkEffekts sowie die Erklärung des Aufbaus des Periodensystems der Elemente.
+Schnell erwiesen sich diese frühen Atommodelle jedoch als unzureichend.
+So versagten sie bereits beim Heliumatom mit zwei Elektronen, beim Wert des Bahndrehimpulses des elektronischen Grundzustandes im Wasserstoffatom und bei der Beschreibung verschiedener spektroskopischer Beobachtungen, wie z. b.
+des anomalen ZeemanEffekts oder der Feinstruktur.
+Im Jahr 1924 veröffentlichte Louis de Broglie seine Theorie der Materiewellen, wonach jegliche Materie einen Wellencharakter aufweisen kann, wie auch umgekehrt Wellen einen Teilchencharakter.
+Diese Arbeit führte die Quantenphänomene auf eine gemeinsame Erklärung zurück, die jedoch wieder heuristischer Natur war und auch keine Berechnung der Spektren von Atomen ermöglichte.

@@ -1,0 +1,192 @@
+{"t": "meta", "format": "memory_jsonl", "encoding": "utf-8", "umlaute": true, "created_at": "2026-02-09T00:00:26", "counts": {"nodes": 49, "edges": 142}}
+{"t": "node", "id": "Amphibie", "features": ["Biologie", "Lebewesen", "Tier", "Wirbeltier"], "labels": ["Amphibie"]}
+{"t": "node", "id": "Atmosphäre", "features": ["Erde", "Gas", "Luft", "Schicht"], "labels": ["Atmosphäre"]}
+{"t": "node", "id": "Atmung", "features": ["Biologie", "Chemie", "Prozess"], "labels": ["Atmung"]}
+{"t": "node", "id": "Aufmerksamkeit", "features": ["Fokus", "Kognition", "Prozess"], "labels": ["Aufmerksamkeit"]}
+{"t": "node", "id": "Auge", "features": ["Biologie", "Organ", "Sinnesorgan"], "labels": ["Auge"]}
+{"t": "node", "id": "Axolotl", "features": ["Amphibie", "Salamander", "Tier", "Wasser"], "labels": ["Axolotl"]}
+{"t": "node", "id": "Baum", "features": ["Grün", "Holz", "Lebewesen", "Natur", "Pflanze"], "labels": ["Baum"]}
+{"t": "node", "id": "Bewegung", "features": [], "labels": ["Bewegung"]}
+{"t": "node", "id": "Biodiversität", "features": ["Leben", "Natur", "Vielfalt"], "labels": ["Biodiversität"]}
+{"t": "node", "id": "Blau", "features": ["Farbe", "Licht", "Sichtbar", "Wellenlänge"], "labels": ["Blau"]}
+{"t": "node", "id": "Blaues_Licht", "features": [], "labels": ["Blaues_Licht"]}
+{"t": "node", "id": "Blätter", "features": ["Grün", "Organ", "Pflanze", "Photosynthese"], "labels": ["Blätter"]}
+{"t": "node", "id": "Boden", "features": ["Erde", "Natur", "Substrat"], "labels": ["Boden"]}
+{"t": "node", "id": "CO2", "features": ["Chemie", "Gas", "Substanz"], "labels": ["CO2"]}
+{"t": "node", "id": "Chlorophyll", "features": ["Grün", "Photosynthese", "Pigment"], "labels": ["Chlorophyll"]}
+{"t": "node", "id": "Energie", "features": ["Kraft", "Physik", "Prozess"], "labels": ["Energie"]}
+{"t": "node", "id": "Erde", "features": [], "labels": ["Erde"]}
+{"t": "node", "id": "Erfahrung", "features": ["Lernen", "Wissen"], "labels": ["Erfahrung"]}
+{"t": "node", "id": "Farbe", "features": ["Licht", "Sichtbar", "Wahrnehmung"], "labels": ["Farbe"]}
+{"t": "node", "id": "Gedächtnis", "features": ["Gehirn", "Kognition", "Speicher"], "labels": ["Gedächtnis"]}
+{"t": "node", "id": "Glucose", "features": ["Energie", "Kohlenhydrat", "Zucker"], "labels": ["Glucose"]}
+{"t": "node", "id": "Grün", "features": [], "labels": ["Grün"]}
+{"t": "node", "id": "Himmel", "features": ["Atmosphäre", "Blau", "Luft", "Sichtbar"], "labels": ["Himmel"]}
+{"t": "node", "id": "Leben", "features": ["Biologie", "Existenz", "Phänomen", "Prozess"], "labels": ["Leben"]}
+{"t": "node", "id": "Lebensraum", "features": ["Natur", "Ort", "Umwelt"], "labels": ["Lebensraum"]}
+{"t": "node", "id": "Lernen", "features": ["Gedächtnis", "Kognition", "Prozess"], "labels": ["Lernen"]}
+{"t": "node", "id": "Licht", "features": ["Energie", "Sichtbar", "Strahlung", "Welle"], "labels": ["Licht"]}
+{"t": "node", "id": "Nährstoffe", "features": ["Chemie", "Leben", "Substanz"], "labels": ["Nährstoffe"]}
+{"t": "node", "id": "Organismen", "features": ["Biologie", "Leben", "Lebewesen"], "labels": ["Organismen"]}
+{"t": "node", "id": "Pflanze", "features": [], "labels": ["Pflanze"]}
+{"t": "node", "id": "Photosynthese", "features": ["Chemie", "Energie", "Leben", "Prozess"], "labels": ["Photosynthese"]}
+{"t": "node", "id": "Rayleigh", "features": ["Effekt", "Physik", "Prozess"], "labels": ["Rayleigh"]}
+{"t": "node", "id": "Rot", "features": [], "labels": ["Rot"]}
+{"t": "node", "id": "Salamander", "features": ["Amphibie", "Tier"], "labels": ["Salamander"]}
+{"t": "node", "id": "Sauerstoff", "features": ["Chemie", "Gas", "Leben"], "labels": ["Sauerstoff"]}
+{"t": "node", "id": "Sonne", "features": ["Energie", "Licht", "Quelle", "Stern"], "labels": ["Sonne"]}
+{"t": "node", "id": "Streuung", "features": ["Effekt", "Licht", "Physik", "Prozess"], "labels": ["Streuung"]}
+{"t": "node", "id": "Tier", "features": ["Biologie", "Lebewesen"], "labels": ["Tier"]}
+{"t": "node", "id": "Tiere", "features": [], "labels": ["Tiere"]}
+{"t": "node", "id": "Wachstum", "features": ["Entwicklung", "Leben", "Prozess"], "labels": ["Wachstum"]}
+{"t": "node", "id": "Wald", "features": ["Grün", "Natur", "Pflanzen", "Ökosystem"], "labels": ["Wald"]}
+{"t": "node", "id": "Wasser", "features": ["Chemie", "Flüssigkeit", "Leben", "Molekül"], "labels": ["Wasser"]}
+{"t": "node", "id": "Wellenlänge", "features": ["Eigenschaft", "Licht", "Messung", "Physik"], "labels": ["Wellenlänge"]}
+{"t": "node", "id": "Wiederholung", "features": ["Lernen", "Übung"], "labels": ["Wiederholung"]}
+{"t": "node", "id": "Wurzeln", "features": ["Natur", "Organ", "Pflanze", "Struktur"], "labels": ["Wurzeln"]}
+{"t": "node", "id": "Wärme", "features": [], "labels": ["Wärme"]}
+{"t": "node", "id": "Wärmie", "features": ["Energie", "Strahlung", "Temperatur"], "labels": ["Wärmie"]}
+{"t": "node", "id": "Zeit", "features": [], "labels": ["Zeit"]}
+{"t": "node", "id": "Ökosystem", "features": ["Natur", "Organisation", "System"], "labels": ["Ökosystem"]}
+{"t": "edge", "src": "Amphibie", "dst": "Tier", "w": 0.99, "type": "ist"}
+{"t": "edge", "src": "Atmosphäre", "dst": "Erde", "w": 0.99, "type": "umgibt"}
+{"t": "edge", "src": "Atmosphäre", "dst": "Licht", "w": 0.8348, "type": "durchlässig_für"}
+{"t": "edge", "src": "Atmosphäre", "dst": "Streuung", "w": 0.99, "type": "verursacht"}
+{"t": "edge", "src": "Atmosphäre", "dst": "Blau", "w": 0.99, "type": "streut"}
+{"t": "edge", "src": "Atmosphäre", "dst": "Sonne", "w": 0.9748, "type": "filtert"}
+{"t": "edge", "src": "Atmosphäre", "dst": "Licht", "w": 0.8155, "type": "durchlässt"}
+{"t": "edge", "src": "Atmung", "dst": "Sauerstoff", "w": 0.99, "type": "braucht"}
+{"t": "edge", "src": "Atmung", "dst": "Energie", "w": 0.99, "type": "erzeugt"}
+{"t": "edge", "src": "Atmung", "dst": "Organismen", "w": 0.99, "type": "in"}
+{"t": "edge", "src": "Auge", "dst": "Licht", "w": 0.99, "type": "reagiert_auf"}
+{"t": "edge", "src": "Auge", "dst": "Blau", "w": 0.99, "type": "sieht"}
+{"t": "edge", "src": "Auge", "dst": "Farbe", "w": 0.99, "type": "nimmt_wahr"}
+{"t": "edge", "src": "Axolotl", "dst": "Amphibie", "w": 0.99, "type": "ist"}
+{"t": "edge", "src": "Axolotl", "dst": "Salamander", "w": 0.99, "type": "gehört_zu"}
+{"t": "edge", "src": "Axolotl", "dst": "Wasser", "w": 0.99, "type": "lebt_in"}
+{"t": "edge", "src": "Baum", "dst": "Wald", "w": 0.99, "type": "teil_von"}
+{"t": "edge", "src": "Baum", "dst": "Blätter", "w": 0.8348, "type": "hat"}
+{"t": "edge", "src": "Baum", "dst": "Wurzeln", "w": 0.99, "type": "hat"}
+{"t": "edge", "src": "Baum", "dst": "Grün", "w": 0.7857, "type": "eigenschaft"}
+{"t": "edge", "src": "Baum", "dst": "Wachstum", "w": 0.9748, "type": "prozess"}
+{"t": "edge", "src": "Baum", "dst": "Wasser", "w": 0.99, "type": "benötigt"}
+{"t": "edge", "src": "Baum", "dst": "Sonne", "w": 0.9748, "type": "benötigt"}
+{"t": "edge", "src": "Baum", "dst": "Boden", "w": 0.8155, "type": "wächst_in"}
+{"t": "edge", "src": "Biodiversität", "dst": "Wald", "w": 0.99, "type": "hat"}
+{"t": "edge", "src": "Biodiversität", "dst": "Ökosystem", "w": 0.8839, "type": "charakterisiert"}
+{"t": "edge", "src": "Biodiversität", "dst": "Organismen", "w": 0.99, "type": "vielfalt_von"}
+{"t": "edge", "src": "Blau", "dst": "Himmel", "w": 0.99, "type": "sichtbar_in"}
+{"t": "edge", "src": "Blau", "dst": "Licht", "w": 0.99, "type": "ist"}
+{"t": "edge", "src": "Blau", "dst": "Streuung", "w": 0.99, "type": "anfällig_für"}
+{"t": "edge", "src": "Blau", "dst": "Wellenlänge", "w": 0.8643, "type": "hat"}
+{"t": "edge", "src": "Blau", "dst": "Auge", "w": 0.99, "type": "wahrgenommen_als"}
+{"t": "edge", "src": "Blätter", "dst": "Baum", "w": 0.99, "type": "teil_von"}
+{"t": "edge", "src": "Blätter", "dst": "Chlorophyll", "w": 0.99, "type": "hat"}
+{"t": "edge", "src": "Blätter", "dst": "Sonne", "w": 0.99, "type": "benötigt"}
+{"t": "edge", "src": "Blätter", "dst": "Photosynthese", "w": 0.99, "type": "prozess"}
+{"t": "edge", "src": "Blätter", "dst": "Grün", "w": 0.7366, "type": "eigenschaft"}
+{"t": "edge", "src": "Boden", "dst": "Baum", "w": 0.99, "type": "nährt"}
+{"t": "edge", "src": "Boden", "dst": "Wurzeln", "w": 0.99, "type": "in"}
+{"t": "edge", "src": "Boden", "dst": "Nährstoffe", "w": 0.8348, "type": "enthält"}
+{"t": "edge", "src": "Boden", "dst": "Wasser", "w": 0.99, "type": "enthält"}
+{"t": "edge", "src": "CO2", "dst": "Photosynthese", "w": 0.99, "type": "braucht"}
+{"t": "edge", "src": "CO2", "dst": "Atmosphäre", "w": 0.7857, "type": "in"}
+{"t": "edge", "src": "CO2", "dst": "Pflanze", "w": 0.99, "type": "absorbiert"}
+{"t": "edge", "src": "Chlorophyll", "dst": "Blätter", "w": 0.8839, "type": "in"}
+{"t": "edge", "src": "Chlorophyll", "dst": "Sonne", "w": 0.99, "type": "absorbiert"}
+{"t": "edge", "src": "Chlorophyll", "dst": "Photosynthese", "w": 0.99, "type": "ermöglicht"}
+{"t": "edge", "src": "Energie", "dst": "Sonne", "w": 0.99, "type": "von"}
+{"t": "edge", "src": "Energie", "dst": "Photosynthese", "w": 0.99, "type": "braucht"}
+{"t": "edge", "src": "Energie", "dst": "Bewegung", "w": 0.99, "type": "ermöglicht"}
+{"t": "edge", "src": "Energie", "dst": "Wärme", "w": 0.8643, "type": "ist"}
+{"t": "edge", "src": "Energie", "dst": "Leben", "w": 0.99, "type": "notwendig_für"}
+{"t": "edge", "src": "Farbe", "dst": "Licht", "w": 0.99, "type": "eigenschaft_von"}
+{"t": "edge", "src": "Farbe", "dst": "Blau", "w": 0.99, "type": "ist"}
+{"t": "edge", "src": "Farbe", "dst": "Auge", "w": 0.99, "type": "wahrgenommen_durch"}
+{"t": "edge", "src": "Farbe", "dst": "Wellenlänge", "w": 0.8643, "type": "bestimmt_durch"}
+{"t": "edge", "src": "Glucose", "dst": "Photosynthese", "w": 0.99, "type": "von"}
+{"t": "edge", "src": "Glucose", "dst": "Pflanze", "w": 0.99, "type": "nährt"}
+{"t": "edge", "src": "Himmel", "dst": "Blau", "w": 0.99, "type": "farbe"}
+{"t": "edge", "src": "Himmel", "dst": "Licht", "w": 0.99, "type": "enthält"}
+{"t": "edge", "src": "Himmel", "dst": "Atmosphäre", "w": 0.933, "type": "ist"}
+{"t": "edge", "src": "Himmel", "dst": "Sonne", "w": 0.99, "type": "zeigt"}
+{"t": "edge", "src": "Himmel", "dst": "Streuung", "w": 0.99, "type": "durch"}
+{"t": "edge", "src": "Leben", "dst": "Sauerstoff", "w": 0.99, "type": "braucht"}
+{"t": "edge", "src": "Leben", "dst": "Wasser", "w": 0.99, "type": "braucht"}
+{"t": "edge", "src": "Leben", "dst": "Energie", "w": 0.99, "type": "braucht"}
+{"t": "edge", "src": "Leben", "dst": "Ökosystem", "w": 0.7857, "type": "in"}
+{"t": "edge", "src": "Lebensraum", "dst": "Ökosystem", "w": 0.8839, "type": "in"}
+{"t": "edge", "src": "Lebensraum", "dst": "Organismen", "w": 0.99, "type": "brauchen"}
+{"t": "edge", "src": "Lebensraum", "dst": "Wald", "w": 0.99, "type": "ist_typ"}
+{"t": "edge", "src": "Lebensraum", "dst": "Biodiversität", "w": 0.7857, "type": "unterstützt"}
+{"t": "edge", "src": "Lernen", "dst": "Gedächtnis", "w": 0.99, "type": "prozess"}
+{"t": "edge", "src": "Lernen", "dst": "Wiederholung", "w": 0.99, "type": "benötigt"}
+{"t": "edge", "src": "Lernen", "dst": "Aufmerksamkeit", "w": 0.99, "type": "benötigt"}
+{"t": "edge", "src": "Lernen", "dst": "Erfahrung", "w": 0.99, "type": "benötigt"}
+{"t": "edge", "src": "Licht", "dst": "Sonne", "w": 0.99, "type": "von"}
+{"t": "edge", "src": "Licht", "dst": "Farbe", "w": 0.99, "type": "hat"}
+{"t": "edge", "src": "Licht", "dst": "Blau", "w": 0.9748, "type": "teil"}
+{"t": "edge", "src": "Licht", "dst": "Streuung", "w": 0.99, "type": "kann_erleiden"}
+{"t": "edge", "src": "Licht", "dst": "Auge", "w": 0.7366, "type": "sichtbar_für"}
+{"t": "edge", "src": "Licht", "dst": "Auge", "w": 0.7476, "type": "sichtbar_fu"}
+{"t": "edge", "src": "Nährstoffe", "dst": "Boden", "w": 0.99, "type": "in"}
+{"t": "edge", "src": "Nährstoffe", "dst": "Wurzeln", "w": 0.99, "type": "absorbiert"}
+{"t": "edge", "src": "Nährstoffe", "dst": "Pflanze", "w": 0.99, "type": "nährt"}
+{"t": "edge", "src": "Nährstoffe", "dst": "Wachstum", "w": 0.99, "type": "ermöglicht"}
+{"t": "edge", "src": "Organismen", "dst": "Ökosystem", "w": 0.8348, "type": "in"}
+{"t": "edge", "src": "Organismen", "dst": "Photosynthese", "w": 0.7366, "type": "ermöglicht_durch"}
+{"t": "edge", "src": "Organismen", "dst": "Sauerstoff", "w": 0.99, "type": "braucht"}
+{"t": "edge", "src": "Organismen", "dst": "Photosynthese", "w": 0.7476, "type": "ermöglicht"}
+{"t": "edge", "src": "Photosynthese", "dst": "Blätter", "w": 0.933, "type": "in"}
+{"t": "edge", "src": "Photosynthese", "dst": "Sonne", "w": 0.99, "type": "braucht"}
+{"t": "edge", "src": "Photosynthese", "dst": "Wasser", "w": 0.99, "type": "braucht"}
+{"t": "edge", "src": "Photosynthese", "dst": "CO2", "w": 0.99, "type": "braucht"}
+{"t": "edge", "src": "Photosynthese", "dst": "Glucose", "w": 0.99, "type": "produziert"}
+{"t": "edge", "src": "Photosynthese", "dst": "Sauerstoff", "w": 0.99, "type": "produziert"}
+{"t": "edge", "src": "Rayleigh", "dst": "Streuung", "w": 0.99, "type": "ist"}
+{"t": "edge", "src": "Rayleigh", "dst": "Atmosphäre", "w": 0.8348, "type": "in"}
+{"t": "edge", "src": "Rayleigh", "dst": "Blaues_Licht", "w": 0.99, "type": "betrifft"}
+{"t": "edge", "src": "Salamander", "dst": "Amphibie", "w": 0.99, "type": "ist"}
+{"t": "edge", "src": "Sauerstoff", "dst": "Photosynthese", "w": 0.99, "type": "von"}
+{"t": "edge", "src": "Sauerstoff", "dst": "Atmung", "w": 0.99, "type": "ermöglicht"}
+{"t": "edge", "src": "Sauerstoff", "dst": "Leben", "w": 0.99, "type": "notwendig_für"}
+{"t": "edge", "src": "Sonne", "dst": "Licht", "w": 0.99, "type": "erzeugt"}
+{"t": "edge", "src": "Sonne", "dst": "Wärme", "w": 0.8839, "type": "erzeugt"}
+{"t": "edge", "src": "Sonne", "dst": "Erde", "w": 0.99, "type": "scheint_auf"}
+{"t": "edge", "src": "Sonne", "dst": "Photosynthese", "w": 0.99, "type": "ermöglicht"}
+{"t": "edge", "src": "Sonne", "dst": "Blätter", "w": 0.7366, "type": "bestrahlt"}
+{"t": "edge", "src": "Streuung", "dst": "Licht", "w": 0.99, "type": "betrifft"}
+{"t": "edge", "src": "Streuung", "dst": "Atmosphäre", "w": 0.933, "type": "in"}
+{"t": "edge", "src": "Streuung", "dst": "Wellenlänge", "w": 0.933, "type": "abhängig_von"}
+{"t": "edge", "src": "Streuung", "dst": "Blau", "w": 0.99, "type": "verstärkt"}
+{"t": "edge", "src": "Streuung", "dst": "Rayleigh", "w": 0.99, "type": "ist_typ"}
+{"t": "edge", "src": "Wachstum", "dst": "Baum", "w": 0.99, "type": "eigenschaft_von"}
+{"t": "edge", "src": "Wachstum", "dst": "Nährstoffe", "w": 0.8348, "type": "braucht"}
+{"t": "edge", "src": "Wachstum", "dst": "Sonne", "w": 0.9748, "type": "braucht"}
+{"t": "edge", "src": "Wachstum", "dst": "Zeit", "w": 0.9257, "type": "braucht"}
+{"t": "edge", "src": "Wald", "dst": "Baum", "w": 0.99, "type": "besteht_aus"}
+{"t": "edge", "src": "Wald", "dst": "Tiere", "w": 0.9257, "type": "enthält"}
+{"t": "edge", "src": "Wald", "dst": "Ökosystem", "w": 0.99, "type": "ist"}
+{"t": "edge", "src": "Wald", "dst": "Biodiversität", "w": 0.7857, "type": "hat"}
+{"t": "edge", "src": "Wasser", "dst": "Baum", "w": 0.99, "type": "nährt"}
+{"t": "edge", "src": "Wasser", "dst": "Photosynthese", "w": 0.99, "type": "braucht"}
+{"t": "edge", "src": "Wasser", "dst": "Leben", "w": 0.99, "type": "notwendig_für"}
+{"t": "edge", "src": "Wasser", "dst": "Pflanze", "w": 0.99, "type": "nährt"}
+{"t": "edge", "src": "Wasser", "dst": "Wurzeln", "w": 0.99, "type": "absorbiert_durch"}
+{"t": "edge", "src": "Wellenlänge", "dst": "Licht", "w": 0.99, "type": "eigenschaft_von"}
+{"t": "edge", "src": "Wellenlänge", "dst": "Blau", "w": 0.99, "type": "von"}
+{"t": "edge", "src": "Wellenlänge", "dst": "Rot", "w": 0.99, "type": "vs"}
+{"t": "edge", "src": "Wellenlänge", "dst": "Streuung", "w": 0.99, "type": "beeinflusst"}
+{"t": "edge", "src": "Wellenlänge", "dst": "Farbe", "w": 0.99, "type": "bestimmt"}
+{"t": "edge", "src": "Wurzeln", "dst": "Baum", "w": 0.99, "type": "teil_von"}
+{"t": "edge", "src": "Wurzeln", "dst": "Wasser", "w": 0.99, "type": "absorbiert"}
+{"t": "edge", "src": "Wurzeln", "dst": "Boden", "w": 0.99, "type": "in"}
+{"t": "edge", "src": "Wurzeln", "dst": "Nährstoffe", "w": 0.8348, "type": "absorbiert"}
+{"t": "edge", "src": "Wärmie", "dst": "Sonne", "w": 0.99, "type": "von"}
+{"t": "edge", "src": "Wärmie", "dst": "Leben", "w": 0.9257, "type": "beeinflusst"}
+{"t": "edge", "src": "Wärmie", "dst": "Energie", "w": 0.99, "type": "ist"}
+{"t": "edge", "src": "Wärmie", "dst": "Licht", "w": 0.9748, "type": "begleitet"}
+{"t": "edge", "src": "Ökosystem", "dst": "Wald", "w": 0.99, "type": "ist"}
+{"t": "edge", "src": "Ökosystem", "dst": "Organismen", "w": 0.99, "type": "enthält"}
+{"t": "edge", "src": "Ökosystem", "dst": "Lebensraum", "w": 0.99, "type": "ist"}
+{"t": "edge", "src": "Ökosystem", "dst": "Biodiversität", "w": 0.8839, "type": "hat"}

@@ -1,0 +1,40 @@
+Die Genetik (moderne Wortschöpfung zu altgriechisch γενεά geneá „Abstammung“ und γένεσις génesis, deutsch ‚Ursprung‘) oder Vererbungslehre (früher auch Erblehre und Erbbiologie) ist die Wissenschaft von der Vererbung und ein Teilgebiet der Biologie.
+der Genetiker befasst sich mit den Gesetzmäßigkeiten und materiellen Grundlagen der Ausbildung von erblichen Merkmalen und der Weitergabe von Erbanlagen (Genen) an die nächste Generation.
+Das Wissen, dass individuelle Merkmale über mehrere Generationen hinweg weitergegeben werden, ist relativ jung; Vorstellungen von solchen natürlichen Vererbungsprozessen prägten sich erst im 18.
+und frühen 19.
+Jahrhundert aus.
+Als Begründer der Genetik in diesem Sinn gilt der Augustinermönch Gregor Mendel, der in den Jahren 1856 bis 1865 im Garten seines Klosters systematisch Kreuzungsexperimente mit Erbsen durchführte und diese statistisch auswertete.
+So entdeckte er die später nach ihm benannten Mendelschen Regeln, die in der Wissenschaft allerdings erst im Jahr 1900 rezipiert und bestätigt wurden.
+Der heute weitaus bedeutendste Teilbereich der Genetik ist die Molekulargenetik, die sich mit den molekularen Grundlagen der Vererbung befasst.
+Aus ihr ging die Gentechnik hervor, in der die Erkenntnisse der Molekulargenetik praktisch angewendet werden.
+Das Adjektiv „genetisch“ wurde schon um 1800 von Johann Wolfgang von Goethe in dessen Arbeiten zur Morphologie der Pflanzen und in der Folgezeit häufig in der romantischen Naturphilosophie sowie in der deskriptiven Embryologie verwendet.
+Man meinte damit eine Methode („genetische Methode“) der Untersuchung und Beschreibung der Individualentwicklung (Ontogenese) von Organismen.
+Mit dem Adjektiv charakterisierte Carl Nägeli 1865 ihre stammesgeschichtliche Entwicklung.
+Das Substantiv „Genetik“ gebrauchte erstmals William Bateson 1905 zur Bezeichnung der neuen Forschungsdisziplin.
+In Deutschland wurde bis in die zweite Hälfte des 20.
+Jahrhunderts der Ausdruck „Erbbiologie“ bedeutungsgleich gebraucht, zumeist zur Unterscheidung der „Erbbiologie des Menschen“ (Humangenetik) von der allgemeinen Genetik.
+Die Bezeichnung „Humangenetik“ war dabei in Deutschland bereits um 1940 etabliert.
+Damit wurde ein Rückzug auf wissenschaftlich gebotene Grundlagenforschung angezeigt, während „Rassenhygiene“ angewandte Wissenschaft darstellte.
+Nach 1945 verschwanden die Bezeichnungen „Erbbiologie“ sowie „Rassenhygiene“, ebenso wie „Erbarzt“ und „Erbmedizin“ allmählich aus dem wissenschaftlichen Sprachgebrauch.
+Die Genetik befasst sich als wissenschaftliche Teildisziplin der Biologie mit der Vererbung und Variation von Organismen.
+In den letzten Jahrzehnten hat sich das Forschungsfeld immer weiter ausdifferenziert, wobei sich innerhalb der Genetik die unterschiedlichen Teilbereich auf verschiedene Aspekte der genetischen Forschung konzentrieren.
+Die wichtigsten Disziplinen der Genetik sind: Die von Mendel begründete klassische Genetik untersucht, in welchen Kombinationen die Gene bei Kreuzungsexperimenten bei den Nachkommen auftreten (Mendelsche Regeln) und wie das die Ausprägung bestimmter phänotypischer Merkmale beeinflusst.
+Zur klassischen Genetik gehört darüber hinaus die Zytogenetik, die im lichtmikroskopischen Größenbereich die Anzahl, Gestalt und Struktur der Chromosomen als Träger der genetischen Information untersucht.
+Die Molekulargenetik - ein Teilgebiet der Molekularbiologie - untersucht die molekularen Grundlagen der Vererbung: die Struktur der molekularen Träger der Erbinformation (gewöhnlich DNA, bei manchen Viren RNA), die Vervielfältigung dieser Makromoleküle (Replikation) und die dabei auftretenden Veränderungen des Informationsgehalts (Mutationen, Rekombination) sowie die Realisierung der Erbinformation im Zuge der Genexpression (Transkription und Translation).
+Zur Molekulargenetik gehört des Weiteren als angewandter Bereich die Gentechnik.
+Die Populationsgenetik, die Evolutionsgenetik und die Ökologische Genetik untersuchen genetische Strukturen und Prozesse auf der Ebene von Populationen und von anderen ökologischen Einheiten (z. b.
+ganzen Lebensgemeinschaften) sowie Analyse von Evolutionsprozessen wie natürliche Selektion, genetische Drift und Genfluss.
+Die Epigenetik beschäftigt sich mit der Weitergabe von Eigenschaften auf die Nachkommen, welche nicht auf Abweichungen in der DNA-Sequenz zurückgehen, sondern auf vererbbare Änderungen der Genregulation sowie Erforschung von Mechanismen wie DNA-Methylierung und Histonmodifikationen.
+Quantitative Genetik: Untersuchung der genetischen Grundlagen kontinuierlicher Merkmale, die von mehreren Genen beeinflusst werden sowie Anwendung statistischer Methoden zur Analyse der Vererbung komplexer Merkmale.
+Humangenetik: Untersuchung der genetischen Grundlagen menschlicher Merkmale und Krankheiten sowie die Erforschung von Erbkrankheiten, humangenetischer Beratung und der Entwicklung gentherapeutischer Ansätze.
+Entwicklungsgenetik: Untersuchung der genetischen Steuerung von Entwicklungsprozessen sowie die Erforschung, wie Gene die Entwicklung und Differenzierung von Organismen beeinflussen.
+Pharmakogenetik: Untersuchung der genetischen Grundlagen individueller Reaktionen auf Medikamente sowie Entwicklung personalisierter medizinischer Ansätze basierend auf genetischen Informationen.
+Tierik und Pflanzenzüchtungsgenetik: Anwendung genetischer Prinzipien zur Verbesserung des Genpools von Nutztieren und Kulturpflanzen sowie Entwicklung von Züchtungsprogrammen zur Erhöhung von Erträgen, Resistenz gegen Krankheiten und anderen wünschenswerten Eigenschaften.
+Diese Disziplinen überlappen sich und arbeiten zusammen, um ein tieferes Verständnis der genetischen Mechanismen und deren Anwendung in Medizin, Landwirtschaft, Evolution und vielen anderen Bereichen zu entwickeln.
+Weltweit gibt es mehrere führende Forschungsinstitute für Genetik, die für ihre herausragenden Beiträge zur genetischen Forschung bekannt sind.
+Hier sind einige der renommiertesten: Broad Institute of MIT and Harvard (Cambridge, USA): Dieses Institut ist führend in der Genomforschung und bekannt für seine Beiträge zum Humangenomprojekt und zur Entwicklung von CRISPR-Technologie.
+Wellcome Trust Sanger Institute (Hinxton in der Nähe von Cambridge, UK): Bekannt für seine Rolle im Humangenomprojekt, forscht dieses Institut intensiv zum Erbgut, zur Krankheitsgenetik und Evolutionsbiologie.
+MaxPlanckInstitut für molekulare Zellbiologie und Genetik (Dresden, Deutschland): Dieses Institut ist bekannt für seine bahnbrechende Forschung in den Bereichen Zellbiologie, Entwicklungsbiologie und Genetik.
+Cold Spring Harbor Laboratory (Laurel Hollow, New York, auf Long Island, USA): ein historisches Zentrum für Genetikforschung, bekannt für seine Entdeckungen in der Molekularbiologie und Genetik.
+National Institutes of Health (NIH) (Bethesda, Maryland, USA): Insbesondere das National Human Genome Research Institute (NHGRI) innerhalb der NIH ist weltweit führend in der Genomforschung.
+Institut Pasteur (Paris, Frankreich): Bekannt für seine Forschung in den Bereichen Infektionskrankheiten und Genetik, trägt das Institut Pasteur wesentlich zum Verständnis genetischer Grundlagen bei.
