@@ -28,3 +28,4 @@ mindgraph_model/
 python client.py "Warum ist der Himmel blau?"
 python llm_train/think_controler.py
 ```
+
