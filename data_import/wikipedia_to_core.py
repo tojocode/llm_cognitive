@@ -21,22 +21,24 @@ if str(ROOT) not in sys.path:
 from llm_core.engine import KognitivesModell
 
 
-def _default_paths() -> tuple[Path, Path, Path, Path]:
+def _default_paths() -> tuple[Path, Path, Path, Path, Path]:
     wiki_dir = ROOT / "data_import" / "wikipedia"
     semantic = ROOT / "data" / "memory_semantic.jsonl"
+    episodic = ROOT / "data" / "memory_episodic.jsonl"
     lexikon = ROOT / "data" / "lexikon.json"
     embeddings = ROOT / "data" / "embeddings.json"
-    return wiki_dir, semantic, lexikon, embeddings
+    return wiki_dir, semantic, episodic, lexikon, embeddings
 
 
 def main() -> int:
-    wiki_dir, semantic, lexikon, embeddings = _default_paths()
+    wiki_dir, semantic, episodic, lexikon, embeddings = _default_paths()
 
     parser = argparse.ArgumentParser(
         description="Importiert alle Wikipedia-TXT Dateien in memory_semantic.jsonl"
     )
     parser.add_argument("--wiki-dir", default=str(wiki_dir), help="Ordner mit .txt Dateien")
     parser.add_argument("--semantic", default=str(semantic), help="Pfad zu memory_semantic.jsonl")
+    parser.add_argument("--episodic", default=str(episodic), help="Pfad zu memory_episodic.jsonl")
     parser.add_argument("--lexikon", default=str(lexikon), help="Pfad zu lexikon.json")
     parser.add_argument("--embeddings", default=str(embeddings), help="Pfad zu embeddings.json")
     parser.add_argument("--target", choices=["semantic", "episodic"], default="semantic", help="Ziel-Layer")
@@ -75,7 +77,7 @@ def main() -> int:
 
     engine = KognitivesModell(
         args.semantic,
-        episodic_datei=None,
+        episodic_datei=args.episodic,
         lexikon_datei=args.lexikon,
         embed_db_path=args.embeddings,
     )
@@ -92,7 +94,7 @@ def main() -> int:
         except Exception as e:
             print(f"❌ {p.name}: {e}")
 
-    engine.speichere_model(args.semantic)
+    engine.speichere_model(args.semantic, episodic_datei=args.episodic)
     engine.speichere_lexikon(args.lexikon)
     engine.speichere_embeddings()
 
