@@ -1,0 +1,20 @@
+{
+    "knowledge_topics": [
+        "Künstliche Intelligenz", "Sonnensystem", "Geschichte Deutschlands", "Quantenmechanik", 
+        "Deutsche Sprache", "Axolotl", "Philosophie", "Psychologie", "Biologie", "Chemie", "Pluto",
+        "Physik", "Astronomie", "Geographie", "Geologie", "Informatik", "Mathematik",
+        "Medizin", "Architektur", "Musik", "Literatur", "Kunstgeschichte", "Film",
+        "Fotografie", "Kochen", "Sport", "Fußball", "Olympische Spiele", "Weltraumfahrt",
+        "Klimawandel", "Nachhaltigkeit", "Ökonomie", "Recht", "Demokratie", "Europa",
+        "Antike", "Mittelalter", "Renaissance", "Industrielle Revolution", "Internet",
+        "Smartphone", "Elektromobilität", "Energiequelle", "Ozean", "Wüste", "Regenwald",
+        "Vulkan", "Dinosaurier", "Evolution", "Genetik", "Menschlicher Körper", "Europa"
+    ],
+    "form_patterns": [
+        "Begrüßung", "Höflichkeit", "Fragemuster", "Erklärungsstil"
+    ],
+    "form_sentence_count": 200,
+    "line_limit": 40,
+    "user_agent": "MobileDataImporter/1.0 (Pythonista iOS)",
+    "force_update": true
+}
