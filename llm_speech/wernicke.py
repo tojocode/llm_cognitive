@@ -221,6 +221,13 @@ class WernickeMixin:
                 nodes_added += 1
             self._ensure_label(src, src_label)
             self._ensure_label(dst, dst_label)
+            # Kurze Aliase für bessere Cues (z. B. "Axolotl")
+            src_alias = self._head_alias(src_label)
+            if src_alias:
+                self._ensure_label(src, src_alias)
+            dst_alias = self._head_alias(dst_label)
+            if dst_alias:
+                self._ensure_label(dst, dst_alias)
 
             if typ in {"ist", "klasse", "gehört_zu"}:
                 feats = set(self.konzepte[src].semantische_features or [])
@@ -362,3 +369,42 @@ class WernickeMixin:
             if c:
                 parts.append(c)
         return parts if parts else [o]
+
+    def _head_alias(self, phrase: str) -> str:
+        """
+        Extrahiert ein kurzes Alias (Headword) aus einer Phrase, um Cues
+        bei Einzelwort-Fragen zu ermöglichen (z. B. "Axolotl").
+        """
+        if not phrase:
+            return ""
+        p = self._nfc(phrase)
+        p = re.sub(r"\([^)]*\)", " ", p)
+        p = re.sub(r"[,;:]", " ", p)
+        p = re.sub(r"\s+", " ", p).strip()
+        if not p:
+            return ""
+
+        p_low = p.lower()
+        for a in [
+            "der ", "die ", "das ", "ein ", "eine ", "einen ", "einem ", "einer ", "den ", "dem ", "des "
+        ]:
+            if p_low.startswith(a):
+                p = p[len(a):].strip()
+                break
+
+        if not p:
+            return ""
+        tok = p.split(" ")[0].strip()
+        tok = re.sub(r"[^\wäöüß\-]+", "", tok, flags=re.IGNORECASE)
+        if len(tok) < 3 or tok.isdigit():
+            return ""
+        stop = {
+            "der", "die", "das", "ein", "eine", "einen", "einem", "einer", "den", "dem", "des",
+            "und", "oder", "zu", "im", "in", "am", "an", "von", "mit", "für", "fuer",
+            "was", "wie", "warum", "wieso", "weshalb", "diese", "dieser", "dieses", "dabei",
+        }
+        if tok.lower() in stop:
+            return ""
+        if not tok[0].isalpha() or not tok[0].isupper():
+            return ""
+        return tok
