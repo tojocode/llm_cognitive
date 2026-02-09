@@ -1,11 +1,9 @@
 Elektromobilität beschreibt die Beförderung von Personen und Gütern mithilfe elektrischer Antriebe.
-Die zum Antrieb benötigte elektrischer Energie wird von außen zugeführt (z. b.
-per Stromschiene) oder in einer Antriebsbatterie im Fahrzeug mitgeführt.
+Die zum Antrieb benötigte elektrischer Energie wird von außen zugeführt (z. b. per Stromschiene) oder in einer Antriebsbatterie im Fahrzeug mitgeführt.
 Die Stromversorgung über Kabel, insbesondere über Oberleitungen bei Zügen, ist seit ca.
 100 Jahren etabliert.
 Fahrzeuge, die das „Kraftwerk“ an Bord haben, wie dieselelektrische Lokomotiven oder Hybridelektrokraftfahrzeuge, werden aufgrund der lokalen Emissionen nicht als vollwertig elektromobil betrachtet.
-Als möglichst lautlose und abgasfreie Energiespeicher wurden Bleibatterien auf Bleibasis, Druckluftspeicher, Schwungradspeicher u.
-ausprobiert, aber erst der LithiumIonenAkkumulator konnte zunächst Unterhaltungselektronik (1990er Jahre) und dann auch PKW kommerziell erfolgreich rein elektrisch antreiben.
+Als möglichst lautlose und abgasfreie Energiespeicher wurden Bleibatterien auf Bleibasis, Druckluftspeicher, Schwungradspeicher u. ä. ausprobiert, aber erst der LithiumIonenAkkumulator konnte zunächst Unterhaltungselektronik (1990er Jahre) und dann auch PKW kommerziell erfolgreich rein elektrisch antreiben.
 Die Elektromobilität gilt als zentraler Baustein eines nachhaltigen und klimaschonenden Verkehrssystems auf Basis erneuerbarer Energien, wie es mit der Verkehrswende angestrebt wird.
 Gemäß Weltklimarat IPCC besitzen Fahrzeuge mit elektrischem Antrieb, die mit Strom aus emissionsarmen Quellen angetrieben werden, über ihren gesamten Lebenszyklus das größte Klimaschutzpotential aller landgebundenen Transporttechnologien.
 Der Elektromotor war nach der Dampfmaschine die zweite maschinelle Antriebsart für Fahrzeuge.
@@ -34,7 +32,9 @@ Es wird davon ausgegangen, dass Elektroautos ab Akkukosten von ca.
 Im Juli 2024 lag der Preis für LithiumEisenphosphatAkkumulatoren in China bei 53 USD pro kWh.
 Dadurch sind zu diesem Zeitpunkt 2/3 der Elektroautos in China, dem weltweit größten Automarkt, günstiger als vergleichbare Autos mit Verbrennungsmotor.
 Ebenso haben Zyklenfestigkeit und Lebensdauer so zugenommen, dass die Akkus heute für ein Autoleben ausreichen.
-Aufgrund des vorrangig mit der Elektromobilität in Verbindung stehenden Anstiegs der Nachfrage nach Lithium stehen Fortschritten in der Akkumulatorentechnik jedoch zunehmend Preisanstiege bei den Rohstoffen entgegen, so hat sich der LithiumPreis innerhalb eines Jahres (Stand September 2017) verdoppelt.
+Aufgr und des vorrangig mit der Elektromobilität in Verbindung stehenden Anstiegs der Nachfrage nach Lithium stehen Fortschritten in der Akkumulatorentechnik jedoch zunehmend Preisanstiege bei den Rohstoffen entgegen, so hat sich der LithiumPreis innerhalb eines Jahres (Stand September 2017) verdoppelt.
 Gleichzeitig ist die erhebliche Steigerung des Lithiumabbaus im Zuge des erhöhten Bedarfs an LithiumIonenAkkumulatoren mit negativen Auswirkungen auf die Umwelt in den Ländern der Rohstoffgewinnung verbunden.
 Als Energiespeicher haben sich bis 2024 vor allem LithiumIonenAkkumulatoren der Typen NickelManganCobalt (NMC) und LithiumEisenphosphat (LFP) durchgesetzt.
 Als preisgünstige und umweltfreundliche Alternative werden immer häufiger NatriumIonenAkkumulatoren genutzt.
+Als Alternative batterieelektrischen Fahrzeugen werden immer wieder Brennstoffzellenfahrzeuge (englisch fuel cell electric vehicle, kurz FCEV) angeführt.
+Diese erzeugen die benötigte elektrische Energie durch die Umwandlung von Wasserstoff mithilfe einer Brennstoffzelle im Fahrzeug.

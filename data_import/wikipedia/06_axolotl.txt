@@ -16,7 +16,7 @@ Axolotl haben unter guten Bedingungen eine Lebenserwartung von bis zu 20 Jahren.
 Axolotl sind endemisch im XochimilcoSee und im benachbarten ChalcoSee innerhalb eines vulkanischen Beckens bei MexikoStadt beheimatet.
 Diese Seen sind Überbleibsel eines ausgedehnten Gewässersystems, das heute teilweise nur noch kanalartig ausgeprägt ist.
 Aus dem größten Teil des ursprünglichen Areals, etwa dem (ehemaligen) Texcocound dem ZumpangoSee, ist die Art inzwischen verschwunden.
-Die Tiere sind nachtaktiv, bevorzugen kühles, sauerstoffreiches Süßwasser und halten sich am Gewässergrund auf.
+Die Tiere sind nachtaktiv, bevorzugen kühles, sauerstoffreiches Süßwasser und halten sich am Gewässergr und auf.
 2013 wurde in Xochimilco eine Population von 0,3 Axolotl pro Quadratkilometer festgestellt.
 Eine Besonderheit, die der Axolotl etwa mit dem Grottenolm und manchen anderen sogenannten obligat pädomorphen Amphibien gemeinsam hat, ist, dass er keine Metamorphose durchläuft, sondern sein gesamtes Leben als Kiemenatmer im Wasser verbringt.
 Trotzdem erreicht er die Geschlechtsreife.
@@ -31,10 +31,10 @@ Ob das wiederhergestellte neuronale Netzwerk des Gehirns dann auch tatsächlich 
 Nach einer Verwundung bildet sich ein Wundepithel, das auch darunterliegendes Gewebe zur Heilung veranlasst.
 Nach wenigen Tagen bildet sich bei verlorenen Körperteilen eine Art Regenerationsknospe, aus welcher das Körperteil nachwächst.
 Die Regenerationsfähigkeit macht die Art zu einem lohnenden Forschungsobjekt.
-Untersucht werden die Mechanismen, die eine solche Regeneration ermöglichen, z. b.
-das Enzym LOXe.
+Untersucht werden die Mechanismen, die eine solche Regeneration ermöglichen, z. b. das Enzym LOXe.
 Bisher nahm man an, dass sich nach einer Verletzung zunächst die umliegenden Zellen in besonders variable, pluripotente Stammzellen zurückentwickeln und im nächsten Schritt aus diesen alle neuen Zellen entstehen.
 Neuere Forschungen haben ergeben, dass sich Gliedmaßen oder Organe aus Zellen regenerieren, die sich nur jeweils zu bestimmten Gewebetypen weiterentwickeln können.
 (Zu diesem Forschungsansatz siehe auch: Strudelwürmer).
 Die Regeneration erfolgt in einer zeitlich festgelegten Reihenfolge.
 Zur Untersuchung der genetischen Ursachen der Regenerationsfähigkeit wurde das Genom des Axolotls sequenziert.
+Dabei wurde festgestellt, dass dem Axolotl im Gegensatz zu anderen Salamandern das Gen Pax3 fehlt.

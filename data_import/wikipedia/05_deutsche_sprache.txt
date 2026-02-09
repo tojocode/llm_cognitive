@@ -1,24 +1,19 @@
 Die deutsche Sprache oder Deutsch [dɔɪ̯tʃ] ist eine westgermanische Sprache, die weltweit etwa 90 bis 105 Millionen Menschen als Muttersprache und weiteren rund 80 Millionen als Zweithe und Fremdsprache dient.
 Das Deutsche ist eine plurizentrische Sprache, enthält also mehrere Standardvarietäten in verschiedenen Regionen.
 Ihr Sprachgebiet umfasst Deutschland, Österreich, die Deutschschweiz, Liechtenstein, Luxemburg, Ostbelgien, Südtirol, das Elsass und den Nordosten Lothringens sowie Nordschleswig.
-Außerdem ist Deutsch eine Minderheitensprache in einigen europäischen und außereuropäischen Ländern, z. b.
-in Rumänien und Nationalsprache im afrikanischen Namibia.
+Außerdem ist Deutsch eine Minderheitensprache in einigen europäischen und außereuropäischen Ländern, z. b. in Rumänien und Nationalsprache im afrikanischen Namibia.
 Deutsch ist die meistgesprochene Muttersprache in der Europäischen Union (EU).
 Ursprünglich existierte ein Dialektkontinuum aus zahlreichen regionalen Varietäten, das sich aufgrund der zweiten Lautverschiebung in hochdeutsche (oberdeutsche und mitteldeutsche), niederfränkische und niederdeutsche Gruppen gliedern lässt.
 Die heutige deutsche Standardsprache entwickelte sich überwiegend aus den hochdeutschen Dialekten und fungiert als überregionale Dachsprache für sowohl hochals auch niederdeutsche Varietäten sowie für eine kleine Anzahl niederfränkischer Dialekte.
 Niederdeutsch („Platt“) wird historisch und genetisch häufig als eigenständige Sprache betrachtet; es kann jedoch, sofern es von der deutschen Standardsprache überdacht wird, auch als deutsche Varietät aufgefasst werden, während niederfränkische Dialekte die Grundlage der niederländischen Dialekte und Standardsprache bilden.
-Die deutsche Standardsprache mit ihren Standardvarietäten bundesdeutsches Deutsch, österreichisches Deutsch und schweizerisches Deutsch entwickelte sich seit Beginn der Neuzeit als Ergebnis komplexer Normierungsse und Ausgleichsprozesse, wobei seit dem 19.
-Jahrhundert die verbindliche Fixierung von Sprachnormen an Bedeutung gewann.
+Die deutsche Standardsprache mit ihren Standardvarietäten bundesdeutsches Deutsch, österreichisches Deutsch und schweizerisches Deutsch entwickelte sich seit Beginn der Neuzeit als Ergebnis komplexer Normierungsse und Ausgleichsprozesse, wobei seit dem 19. Jahrhundert die verbindliche Fixierung von Sprachnormen an Bedeutung gewann.
 Das Standarddeutsche überspannt als Dachsprache den Großteil der Mundarten des Dialektkontinuums.
-Eine Ausnahme sind z. b.
-die Luxemburger Dialekte, die nunmehr unter Letzebuergesch und somit nur noch indirekt als Deutsch zusammengefasst werden.
+Eine Ausnahme sind z. b. die Luxemburger Dialekte, die nunmehr unter Letzebuergesch und somit nur noch indirekt als Deutsch zusammengefasst werden.
 Die wissenschaftliche Disziplin, die die deutsche Sprache und deutschsprachige Literatur in ihren historischen und gegenwärtigen Formen behandelt, wird Germanistik genannt (dieser Ausdruck bezieht sich also meist nicht auf die germanischen Sprachen insgesamt).
 Unter dem Begriff „deutsche Sprache“ wird heute primär die auf der Grundlage von mitteldeutschen und oberdeutschen Dialekten entstandene hochdeutsche Standardsprache (Standardhochdeutsch) verstanden.
 Die Dialekte (Mundarten) des Dialektkontinuums werden dagegen nur teilweise von dieser Sprache überdacht.
-Zum Deutschen werden darüber hinaus die historischen Vorgängersprachen Althochdeutsch (Sprachcodes nach ISO 639-2, 639-3: goh) und Mittelhochdeutsch (Sprachcodes nach ISO 639-2, 639-3: gmh) gezählt sowie neuere umgangssprachliche Varietäten oder Mischsprachen (z. b.
-Missingsch) innerhalb des Geltungsbereiches der deutschen Standardsprache.
-Das Luxemburgische sowie manche Auswandererdialekte (z. b.
-Pennsylvania Dutch) oder Übergangsdialekte gehen zurück auf Varietäten des Dialektkontinuums.
+Zum Deutschen werden darüber hinaus die historischen Vorgängersprachen Althochdeutsch (Sprachcodes nach ISO 639-2, 639-3: goh) und Mittelhochdeutsch (Sprachcodes nach ISO 639-2, 639-3: gmh) gezählt sowie neuere umgangssprachliche Varietäten oder Mischsprachen (z. b. Missingsch) innerhalb des Geltungsbereiches der deutschen Standardsprache.
+Das Luxemburgische sowie manche Auswandererdialekte (z. b. Pennsylvania Dutch) oder Übergangsdialekte gehen zurück auf Varietäten des Dialektkontinuums.
 Das Jiddische, das auf das Mittelhochdeutsche zurückgeht, hat sich vor allem unter slawischen und hebräischen Einflüssen eigenständig und mit einer eigenen Schriftsprache weiterentwickelt; Ähnliches gilt für die lexikalisch auf dem Deutschen basierende Kreolsprache Unserdeutsch.
 Das Wort oder Glottonym deutsch hat sich aus dem germanischen *þeuðō ‚Volk‘, ahd.
 thiota, thiot und dem daraus abgeleiteten Adjektiv ahd.
@@ -37,4 +32,9 @@ So erscheint neben theodiscus seit etwa 880 auch mittellateinisch diutiscus, tiu
 Die „sprachliche Selbstbezeichnung“ deutsch war - im Gegensatz zur Entwicklung im Englischen und den nordgermanischen Sprachen - von der Karolingerzeit bis heute kein primär ethnischer Volksname.
 Stattdessen wurde sie als übergreifende Sprachbezeichnung verwendet für eine überregionale sprachliche Gemeinsamkeit der kontinentalsüdgermanischen Stammesdialekte gegenüber dem Lateinischen sowie den romanischen, slawischen und nordgermanischen Sprachen.
 Diese Bezeichnung war zunächst unabhängig von der späteren Unterscheidung zwischen Hochdeutsch, Niederdeutsch und Niederländisch sowie von politischen Gegebenheiten, die mit den sprachgeografischen Strukturen oft nicht übereinstimmten.
-Ein allgemeines, wenngleich vages Bewusstsein einer sprachlichen Zusammengehörigkeit - jedoch keineswegs einer Einheit - existierte vor der Entstehung der pränationalen Standardsprachen und der Nationalstaaten, aber bis ins 17./18.
+Ein allgemeines, wenngleich vages Bewusstsein einer sprachlichen Zusammengehörigkeit - jedoch keineswegs einer Einheit - existierte vor der Entstehung der pränationalen Standardsprachen und der Nationalstaaten, aber bis ins 17./18. Jahrhundert war dieses Bewusstsein vielmehr mit einem starken Gefühl für die (mündliche und schriftliche) Eigenständigkeit der jeweiligen Regionalsprachen verbunden.
+Diese waren zunächst Stammessprachen und gliederten sich seit dem Spätmittelalter zunehmend nach politischen Territorien sowie Verkehrsen und Siedlungsverhältnissen.
+Die Zusammenschreibung der Landesbezeichnung (zunächst im Sinne von „deutscher Sprachraum“) begegnet erstmals im spätmittelhochdeutschen Tiutschland und setzte sich seit dem 16. Jahrhundert allgemein durch.
+Aufgr und der wechselhaften politischen Geschichte des deutschen Sprachraums sowie seiner Mittellage zwischen den Gebieten romanischer und slawischer Sprachen gibt es mehr unterschiedliche Formen für den Namen der deutschen Sprache als für die meisten anderen Sprachen der Welt.
+Allgemein kann man die Namen der deutschen Sprache aber aufgrund ihrer Herkunft in sechs Gruppen zusammenfassen: Diese Gruppe wird zunächst von den anderen germanischen Sprachen gebildet: Daneben erscheinen Ableitungen vom Wort „deutsch“ auch in einigen romanischen Sprachen: Darüber hinaus: Chinesisch: déyǔ 德語 / 德语 oder déyìzhìyǔ 德意志語 / 德意志语 (dé[yìzhì] = Lautübertragung des Wortes „deutsch“; yǔ „Sprache“) Vietnamesisch: tiếng Đức oder Đức ngữ (tiếng oder ngữ „Sprache“; Đức ist die [sino-]vietnamesische Aussprache desselben Sinographems 德 wie im chinesischen Namen) Japanisch: doitsugo ドイツ語 oder 独逸語 (doitsu = Lautübertragung des Wortes „duits“ aus dem Niederländischen; go „Sprache“) Koreanisch: toich'wieo 도이취어 (in Nordkorea), sonst dogileo 독일어 (abgekürzt: 독어) (Die gleichen Sinographeme wie im japanischen Namen, aber in sinokoreanischer statt sinojapanischer Aussprache: 獨→독 dok, 逸→일 il, 語→어 eo.) Latein: (lingua) theodisca Nordsamisch: duiskkagiella oder tuiskkagiella Taiwanisch: dikgok ue (德國話 / 德国话).
+Mit „Sachsen“ ist das historische Volk der Sachsen gemeint, das den heutigen niedersächsischen Sprachraum besiedelte.

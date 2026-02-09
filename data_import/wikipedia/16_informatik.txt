@@ -17,7 +17,7 @@ Die Anfänge der modernen Informatik gehen in Deutschland bis ins Jahr 1952 zur�
 Die TU München entwickelte unter Leitung von Hans Piloty und Robert Sauer ebenfalls einen Röhrenrechner, die PERM, die 1956 in Betrieb ging, und lud 1954 zu einem Rundtischgespräch ein.
 Am Institut für praktische Mathematik (IPM) der Technischen Hochschule Darmstadt (TH Darmstadt), das der Mathematiker Alwin Walther seit 1928 aufbaute, konnten sich dann 1956 die ersten Studenten am Darmstädter Elektronischen Rechenautomaten mit den Problemen von Rechenautomaten befassen.
 Zeitgleich wurden an der TH Darmstadt die ersten Programmiervorlesungenund praktika angeboten.
-Aufgrund des Renommees, das die TH Darmstadt zu dem Zeitpunkt in der Rechenautomatenforschung hatte, fand ein Kongress zum Fachgebiet Informatik (elektronische Rechenmaschinen und Informationsverarbeitung) mit internationaler Beteiligung im Oktober 1955 an der TH Darmstadt statt, der als Geburtsstätte der Programmiersprache ALGOL gilt.
+Aufgr und des Renommees, das die TH Darmstadt zu dem Zeitpunkt in der Rechenautomatenforschung hatte, fand ein Kongress zum Fachgebiet Informatik (elektronische Rechenmaschinen und Informationsverarbeitung) mit internationaler Beteiligung im Oktober 1955 an der TH Darmstadt statt, der als Geburtsstätte der Programmiersprache ALGOL gilt.
 Der Bundesausschuss für wissenschaftliche Forschung verabschiedete am 26.
 April 1967 das Programm für die Förderung der Forschung und Entwicklung auf dem Gebiet der Datenverarbeitung für öffentliche Aufgaben.
 Für die Umsetzung war der sogenannte „Fachbeirat für Datenverarbeitung“ zuständig, der überwiegend aus Vertretern der Hochschulen und außeruniversitären Forschungseinrichtungen bestand.

@@ -12,16 +12,14 @@ Traditionell wird in wissenschaftlichen Texten und unter Fachleuten weiterhin h�
 So empfahl das Präsidium der Deutschen Gesellschaft für Geographie im Jahr 2003 einstimmig, die Schreibweise Geographie beizubehalten.
 Der Hinweis auf die Empfehlung wurde jedoch 2017 kommentarlos von der Website entfernt.
 Die Bedeutung geographischen Wissens wurde, soweit historisch überliefert, erstmals in der Antike von den Griechen erkannt.
-Vom Naturphilosophen Anaximander aus Milet wird berichtet, dass er als erster um 550 v.
-eine Karte der Erde und der Meere skizzierte.
-Herodot von Halikarnassos (484-424 v.
-Chr.) verfasste eine Vielzahl geographischer Berichte.
+Vom Naturphilosophen Anaximander aus Milet wird berichtet, dass er als erster um 550 v. Chr. eine Karte der Erde und der Meere skizzierte.
+Herodot von Halikarnassos (484-424 v. Chr.) verfasste eine Vielzahl geographischer Berichte.
 Die Eroberungen Alexander des Großen öffneten den Blick der griechischen Gelehrten bis weit nach Asien hinein.
 Es entstanden Itinerarien, also Beschreibungen der Straßen und Verzeichnisse der Stationen auf Reisen, sowie Periploi, praktische Reisehandbücher für Seefahrer und Kaufleute, die oft auf persischen oder parthischen Quellen fußten.
 Mit zunehmender Fernreisetätigkeit nahmen auch die Versuche der Erkundung der Gesamtgestalt der Welt zu.
 Neben der physikalischen Geographie und der Kulturgeographie entwickelten sich Anfänge einer mathematischen Geographie.
 Eine Berechnung des Erdumfangs gelang erstmals Eratosthenes (ca.
-Chr.), während der um die Zeitenwende lebende Strabon eines der heute am besten erhaltenen geographischen Werke der Antike verfasste.
+273-194 v. Chr.), während der um die Zeitenwende lebende Strabon eines der heute am besten erhaltenen geographischen Werke der Antike verfasste.
 Der Astronom Claudius Ptolemäus (ca.
 100-170) sammelte topografisches Wissen von Seefahrern und gab Anleitungen für das Zeichnen von Landkarten.
 Die Erkenntnisse der Griechen nutzten die Römer weiter.
@@ -32,9 +30,11 @@ Im Anschluss daran führte der Wiener Astronom Georg Tannstetter die physikalisc
 Die neuzeitliche Geographie wurde von Bartholomäus Keckermann (1572-1608) und Bernhard Varenius (1622-1650) begründet.
 Sie entwickelten ein Begriffssystem, unterschieden „Allgemeine Geographie“ (geographia generalis) und die „Regionale Geographie“ beziehungsweise Länderkunde (geographia specialis).
 Sie sahen Völker, Staaten und Orte in einem räumlichen, historischen und auch religiösen Kontext.
-Zu Beginn des 18.
-Jahrhunderts beförderten in Deutschland vor allem Johann Hübner (1668-1731) und Johann Gottfried Gregorii alias Melissantes (1685-1770) durch ihre Lehrbücher, thematischen Lexika und Atlanten die Verbreitung der Geographie in weite Teile der bildungsnahen Bevölkerung.
+Zu Beginn des 18. Jahrhunderts beförderten in Deutschland vor allem Johann Hübner (1668-1731) und Johann Gottfried Gregorii alias Melissantes (1685-1770) durch ihre Lehrbücher, thematischen Lexika und Atlanten die Verbreitung der Geographie in weite Teile der bildungsnahen Bevölkerung.
 Das Zeitalter der Aufklärung förderte Erklärungsversuche von Naturerscheinungen durch Wissenschaftler wie Johann Gottfried Herder (1744-1803) und Georg Forster (1754-1794).
 Anton Friedrich Büsching (1724-1793) verfasste die elfbändige Neue Erdbeschreibung mit Beschreibungen der Länder und deren Wirtschaft.
 Alexander von Humboldt (1769-1859) und Carl Ritter (1779-1859) begründeten schließlich die moderne wissenschaftliche Geographie, deren ursprüngliches länderund landschaftskundliches Forschungsprogramm auf Herders Kulturtheorie basiert.
-Im Laufe des 19.
+Im Laufe des 19. Jahrhunderts gründeten sich zunächst vielerorts „geographische Gesellschaften“, während die universitäre Institutionalisierung des Fachs vor allem mit der Gründung des Deutschen Reichs vorangetrieben wurde.
+Ferdinand von Richthofen (1833-1905) definierte die Geographie zu jener Zeit als „Wissenschaft von der Erdoberfläche und den mit ihr in ursächlichem Zusammenhang stehenden Dingen und Erscheinungen“.
+Dieser geodeterministische Betrachtung standen das von Paul Vidal de la Blache (1845-1918) geprägte Konzept des Possibilismus sowie die von Alfred Hettner (1859-1941) formulierte Chorologie gegenüber.
+Einzelne Fachvertreter wie Élisée Reclus (1830-1905) knüpften früh Verbindungen zur aufkommenden Soziologie.

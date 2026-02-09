@@ -15,17 +15,13 @@ Eine neue oder weiterentwickelte Theorie kann bekannte Ergebnisse besser oder ü
 Unerwartete Beobachtungsse und Versuchsergebnisse geben Anlass zur Theorieentwicklung in verschiedener Gestalt, von schrittweiser Verbesserung bis hin zur völligen Aufgabe einer lange Zeit akzeptierten Theorie.
 Erkenntnisse und Modelle der Physik werden intensiv in der Chemie, Geologie, Biologie, Medizin und den Ingenieurwissenschaften genutzt.
 Die Disziplin der Physik in ihrer heutigen Gestalt hat ihre Ursprünge in der Philosophie, die sich seit der Antike im weitesten Sinne mit den Gründen und Ursachen aller Dinge befasst.
-Von Aristoteles bis ins beginnende 19.
-Jahrhundert wurde die Physik als das Teilgebiet der Philosophie verstanden, das sich als Naturlehre, Naturgeschichte, Chemie oder angewandte Mathematik mit den Gegebenheiten der Natur beschäftigt.
+Von Aristoteles bis ins beginnende 19. Jahrhundert wurde die Physik als das Teilgebiet der Philosophie verstanden, das sich als Naturlehre, Naturgeschichte, Chemie oder angewandte Mathematik mit den Gegebenheiten der Natur beschäftigt.
 Gegenüber den rein philosophischen Erklärungsversuchen der Naturvorgänge spielte die Art von Erkenntnis, die durch systematische und genaue Beobachtung, also empirisch zu gewinnen ist, lange Zeit keine Rolle.
 Ab Mitte des 13.
-und im Laufe des 14.
-Jahrhunderts plädierten dann einige von den die Natur erforschenden Philosophen - wie etwa Roger Bacon - für ein größeres Gewicht der durch Beobachtung zu erlangenden Naturerkenntnis.
-Diese Tendenzen mündeten ab dem frühen 17.
-Jahrhundert, namentlich mit Galileo Galilei und Isaac Newton, in die Entwicklung einer Methodologie der physikalischen Erkenntnis, die vorrangig an empirischen und sogar experimentellen Standards orientiert ist und diesen vor überkommenen philosophischen Grundsätzen im Zweifelsfall sogar den Vorrang einräumt.
+und im Laufe des 14. Jahrhunderts plädierten dann einige von den die Natur erforschenden Philosophen - wie etwa Roger Bacon - für ein größeres Gewicht der durch Beobachtung zu erlangenden Naturerkenntnis.
+Diese Tendenzen mündeten ab dem frühen 17. Jahrhundert, namentlich mit Galileo Galilei und Isaac Newton, in die Entwicklung einer Methodologie der physikalischen Erkenntnis, die vorrangig an empirischen und sogar experimentellen Standards orientiert ist und diesen vor überkommenen philosophischen Grundsätzen im Zweifelsfall sogar den Vorrang einräumt.
 Dieser Ansatz wurde zunächst als „experimentelle Philosophie“ bezeichnet und führte beim Verständnis vieler unterschiedlicher Naturvorgänge rasch zu bedeutenden Erfolgen.
-Dennoch dauerte es noch bis ins 19.
-Jahrhundert, dass er sich endgültig in der Physik durchsetzen konnte und sie damit als eigenständige Disziplin in ihrem heutigen Sinn etablierte.
+Dennoch dauerte es noch bis ins 19. Jahrhundert, dass er sich endgültig in der Physik durchsetzen konnte und sie damit als eigenständige Disziplin in ihrem heutigen Sinn etablierte.
 Hinsichtlich ihrer Methode, ihres Gegenstandsbereichs, ihrer wissenschaftssystematischen und institutionellen Verortung teilt sich die Physik im Wesentlichen in zwei große Gebiete auf.
 Die theoretische Physik beschäftigt sich vorwiegend mit formalen mathematischen Beschreibungen und den Naturgesetzen.
 Sie abstrahiert Vorgänge und Erscheinungen in der wirklichen Natur in Form eines Systems von Modellen, allgemeingültigen Theorien und Naturgesetzen sowie induktiv gewählten Hypothesen.
@@ -38,3 +34,7 @@ Die Physik wird dabei häufig als grundlegende oder fundamentale Naturwissenscha
 Die Grenzziehung zu den anderen Naturwissenschaften hat sich historisch ergeben, wird jedoch insbesondere mit dem Aufkommen neuer Wissenschaftsdisziplinen immer schwieriger.
 In der heutigen Physik ist vor allem die durch Atomik und Molekülphysik und Quantenchemie markierte Grenze zur Chemie fließend.
 Zur Abgrenzung gegenüber der Biologie wurde die Physik oftmals als die Wissenschaft von der unbelebten im Gegensatz zur belebten Natur bezeichnet, womit jedoch eine Beschränkung impliziert wird, die so in der Physik nicht existiert.
+Die Ingenieurwissenschaften sind durch ihren engen Bezug zur praktischen technischen Anwendung von der Physik abgegrenzt, da in der Physik das Verständnis der grundlegenden Mechanismen im Vordergr und steht.
+Die Astronomie hat keine Möglichkeit, Laborexperimente durchzuführen, und ist daher allein auf Naturbeobachtung angewiesen, was hier zur Abgrenzung gegen die Physik herangezogen wird.
+Der Erkenntnisgewinn in der Physik verläuft in enger Verzahnung von Experiment und Theorie, besteht also aus empirischer Datengewinnung und -auswertung und gleichzeitig dem Erstellen theoretischer Modelle zu ihrer Erklärung.
+Dennoch haben sich im Verlauf des 20. Jahrhunderts Spezialisierungen herausgebildet, die insbesondere die professionell betriebene Physik heute prägen.

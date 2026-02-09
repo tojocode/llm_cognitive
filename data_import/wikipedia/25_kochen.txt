@@ -1,7 +1,6 @@
-Kochen (von lateinisch coquere, „kochen, sieden, reifen“ entlehnt) ist im engeren Sinne das Erhitzen einer Flüssigkeit bis zum und am Siedepunkt, im Weiteren das Garen oder Zubereiten von Lebensmitteln allgemein, unabhängig von der Zubereitungsart wie z. b.
-Backen (Garen von Teig oder in einem Teigmantel), Braten oder Grillen (trockenes Erhitzen).
+Kochen (von lateinisch coquere, „kochen, sieden, reifen“ entlehnt) ist im engeren Sinne das Erhitzen einer Flüssigkeit bis zum und am Siedepunkt, im Weiteren das Garen oder Zubereiten von Lebensmitteln allgemein, unabhängig von der Zubereitungsart wie z. b. Backen (Garen von Teig oder in einem Teigmantel), Braten oder Grillen (trockenes Erhitzen).
 Abgeleitet davon wird die Berufsbezeichnung Koch.
-Aufgrund der unterschiedlichen Siedepunkte verschiedener Stoffe, zum Beispiel von flüssigem Stickstoff bei 77,36 K (-195,79 °C) in der Molekularküche oder von Speisefett beim Frittieren bei 140 bis 190 °C, kann das Kochen in einem breiten Temperaturspektrum stattfinden.
+Aufgr und der unterschiedlichen Siedepunkte verschiedener Stoffe, zum Beispiel von flüssigem Stickstoff bei 77,36 K (-195,79 °C) in der Molekularküche oder von Speisefett beim Frittieren bei 140 bis 190 °C, kann das Kochen in einem breiten Temperaturspektrum stattfinden.
 Je nach Kontext werden die Begriffe „kochen“ und „sieden“ synonym verwendet.
 Das Kochen gehört zu den ältesten und wichtigsten Kulturtechniken des Menschen.
 Möglicherweise ist das „Kochen“ sogar wesentlich früher von den fossilen Vorfahren des anatomisch modernen Menschen (Homo sapiens) genutzt worden als der Umgang mit Feuer.
@@ -38,3 +37,4 @@ Eine Geschichte der Ernährung von der Steinzeit bis heute.
 Campus, Frankfurt am Main 2001, ISBN 3-593-36815-3.
 JeanClaude Kaufmann: Kochende Leidenschaft.
 Soziologie vom Kochen und Essen.
+UVK, Konstanz 2006, ISBN 3-89669-558-4.

@@ -12,8 +12,7 @@ Die Astronomie gilt als eine der ältesten Wissenschaften.
 Ihre Anfänge liegen im Nachdenken über die Himmelserscheinungen, in der kultischen Verehrung der Gestirne und im Erarbeiten von Kalender bzw.
 Zeitbestimmung.
 In einem jahrtausendelangen Prozess - besonders gut erkennbar in der Himmelskunde Mesopotamiens und Griechenlands - trennten sich zunächst Astronomie und („Natur“)-Religion, später Astronomie und Meteorologie, in der Frühmoderne dann Astronomie und Astrologie.
-Wesentliche Meilensteine für unser Wissen über das Weltall waren die Erfindung des Fernrohrs vor etwa 400 Jahren, das die kopernikanische Wende vollendete, sowie später im 19.
-Jahrhundert die Einführung der Fotografie und Spektroskopie.
+Wesentliche Meilensteine für unser Wissen über das Weltall waren die Erfindung des Fernrohrs vor etwa 400 Jahren, das die kopernikanische Wende vollendete, sowie später im 19. Jahrhundert die Einführung der Fotografie und Spektroskopie.
 Seit den 1960erJahren haben Astronomen mit der unbemannten und bemannten Raumfahrt die Möglichkeit, die Erdatmosphäre zu überwinden und ohne ihre Einschränkungen zu beobachten - also ohne Luftunruhe und in allen Bereichen des elektromagnetischen Spektrums.
 Dazu kommt erstmals die Möglichkeit, die untersuchten Objekte direkt zu besuchen und dort andere als nur rein beobachtende Messungen durchzuführen.
 Parallel dazu werden immer größere Teleskope für bodengebundene Beobachtungen gebaut.
@@ -38,3 +37,4 @@ Instrumentell und methodisch sind auch starke Bezüge zur Technik, Raumfahrt und
 Geodätische Methoden werden auch zur Bestimmung des Gravitationsfeldes sowie der Figur anderer Himmelskörper angewandt.
 In den letzten Jahrzehnten ist auch die Zusammenarbeit der Astronomie mit der modernen Geologie und der Geophysik immer wichtiger geworden, da sich das Arbeitsgebiet der Geowissenschaften mit Teilen der Planetologie deckt.
 Die Mineralogie analysiert die Gesteine der Erde mit ähnlichen Methoden wie jene anderer Himmelskörper.
+Die Kosmochemie als Teil der Chemie untersucht die Entstehung und Verteilung der chemischen Elemente und Verbindungen im Universum und die chemische Evolution, die Astrobiologie die Umstände von Entstehung, Ursprung und Existenz von Leben im Universum.

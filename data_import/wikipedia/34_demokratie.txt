@@ -22,9 +22,7 @@ Aus der ursprünglichen Wortbedeutung von Demokratie (Macht oder Herrschaft des 
 Andernfalls bestehe die Gefahr, dass die Herrschaft über das Volk mit der Herrschaft des Volkes nichts zu tun habe.
 „Wer Macht delegiert, kann sie auch verlieren; Wahlen sind nicht notwendig frei; und die Repräsentation ist nicht unbedingt eine echte.“ Historisch veränderlich und umstritten war und ist, wer als dem „Volk“ zugehörig definiert wird und wie es seinen Willen bekunden könne.
 Der österreichischamerikanische Politikwissenschaftler Kurt Leo Shell nennt als Minimaldefinition für Demokratie ein System, das allen Staatsbürgern von einem bestimmten Alter an das gleiche Recht zubilligt, an den sie alle betreffenden Gesetzen zumindest indirekt zu partizipieren und ihren Willen ohne rechtliche Diskriminierung oder Unterdrückung zu bilden und auszudrücken.
-Der in Athen im 5.
-Jahrhundert v.
-entwickelte Begriff der Demokratie hat nur noch wenig Ähnlichkeit mit der heutigen Verwendung des Begriffs.
+Der in Athen im 5. Jahrhundert v. Chr. entwickelte Begriff der Demokratie hat nur noch wenig Ähnlichkeit mit der heutigen Verwendung des Begriffs.
 Als markantesten Gegensatz zur Demokratie und geradezu als ihr Gegenteil bezeichnet Sartori die Autokratie.
 Dieser Abgrenzung gemäß ist Demokratie ein System nach dem Grundsatz, dass niemand sich selbst zum Herrscher erklären kann, niemand die Macht unwiderruflich im eigenen Namen innehaben kann.
 Für Samuel Salzborn liegt es im Wesen der Demokratie selbst, sich einer verbindlichen, konsensfähigen Definition zu entziehen.
@@ -34,7 +32,9 @@ Im Unterschied zu einer vor allem auf normative Aspekte orientierten statischen 
 „Demokratie fordert die Legitimation (ohne bereits genau zu bestimmen durch wen, von wem und auf welche Weise), sie fordert die Kontrolle (ebenfalls ohne eine substanzielle Erklärung darüber, wie und auf welche Weise) und sie zielt auf die Kritik von politischer Herrschaft - als dauerhaften und unabgeschlossenen Prozess.“.
 Der Ausdruck Demokratie ist auf altgriechisch δημοκρατία zurückzuführen, ein Kompositum aus δῆμος dḗmos ‚Volk‘ und κράτος krátos ‚Kraft; Macht; Herrschaft‘.
 Die Endung -kratia bezeichnet dabei, anders als Wörter mit der Endung -archie, nicht die Zahl der jeweils Herrschenden, denen ein Amtsmonopol attestiert wird, sondern die Qualität des Regierungsprinzips.
-Die erste Erwähnung der Bezeichnung Demokratie findet sich bei Herodot um 430 v.
-Chr., als die so bezeichnete Herrschaftsform bereits mehrere Jahrzehnte praktiziert worden war.
+Die erste Erwähnung der Bezeichnung Demokratie findet sich bei Herodot um 430 v. Chr., als die so bezeichnete Herrschaftsform bereits mehrere Jahrzehnte praktiziert worden war.
 Zur Demokratie hinleitende Begriffe im Vorfeld waren die mit den Kleisthenischen Reformen in Verbindung stehenden Isonomie (ἰσονομία ‚Gleichheit vor dem Gesetz‘), Isegorie (ἰσηγορία ‚gleiches Rederecht‘) und Isokratie (ἰσοκρατία ‚gleicher Anspruch auf Herrschaft‘).
 In der ursprünglichen Bedeutung ist Demokratie laut Giovanni Sartori „die Regierung oder Macht des Volkes“.
+Demos stand dabei für die Gemeinschaft, die in der Volksversammlung zusammentrat.
+Herodot lässt Otanes die Vorzüge dieser Herrschaft der Vielen wiedergeben: die Amtsbesetzung durch Losverfahren, die Rechenschaftspflicht der Amtsträger, die Vorlage aller Beschlüsse vor der Gesamtheit, die Rechtsgleichheit für alle und die Verwerfung jeder Willkürmacht.
+Doch umfasste der Demos in einer griechischen Polis nur die freien Männer, die als mündige Bürger an der Ekklesia, der Volksversammlung, teilnahmen, nicht also Frauen, Sklaven und Metöken.

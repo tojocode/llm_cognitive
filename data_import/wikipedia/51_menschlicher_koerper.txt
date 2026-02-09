@@ -25,8 +25,7 @@ Die meisten Elemente gehören der ersten, zweiten oder vierten Periode des Perio
 Die Tabelle zeigt außerdem, dass die Elemente Kohlenstoff, Sauerstoff und Wasserstoff mit Abstand den größten Anteil des Gewichts stellen: der Mensch ist zu 94,07 % aus drei genannten Elementen aufgebaut.
 Die Elemente setzen sich zu unterschiedlichen Verbindungen zusammen, wobei die folgenden die häufigsten sind: Wasser (welches als Reaktionsmedium und Lösungsmittel benötigt wird), Calciumphosphat und Calciumcarbonat (welche in Knochen die Gerüstsubstanz bilden), Natriumchlorid (fungiert als Elektrolyt) und vor allem Proteine, Zucker und Fette.
 Das Grundgerüst der Proteine, Zucker und Fette wird durch Kohlenwasserstoffverbindungen gebildet und macht den wesentlichen, organischen Teil des menschlichen Körpers aus.
-Andere Elemente, die in nur geringen Mengen enthalten sind, sogenannte Spurenelemente, fungieren häufig als aktive Zentren in Enzymen, z. b.
-Eisen im Hämoglobin.
+Andere Elemente, die in nur geringen Mengen enthalten sind, sogenannte Spurenelemente, fungieren häufig als aktive Zentren in Enzymen, z. b. Eisen im Hämoglobin.
 Die Verteilung der Häufigkeit der Elemente ist auf die Erdhülle zurückzuführen: während der Entwicklung der biologischen Spezies bedienten sich diese besonders häufiger und gut zugänglicher Elemente.
 In Bezug auf die Entstehung des Universums wird häufig die These formuliert, dass viele der in Menschen vorhandenen Elemente Teile ehemaliger Sterne darstellen, Menschen also aus Sternenstaub bestehen.
 Zu den Menschenrechten gehört das Recht auf körperliche Unversehrtheit.
@@ -38,3 +37,4 @@ zwischen Körper und Geist nimmt einen großen Raum ein in der europäischen Phi
 In der Gnosis und im hellenistischen Christentum wurde der Körper als „Kerker der Seele“ oder „Grab der Seele“ aufgefasst.
 Julien Offray de La Mettrie beschrieb den menschlichen Körper als Maschine (l’homme machine).
 Maurice MerleauPonty betont die Verknüpfung von Ich, Körper und dem Anderen: Der menschliche Körper vermittelt zwischen transzendentalem Ich und der Fremderfahrung der Umwelt.
+Michel Foucault setzte sich kritisch mit sozialen Techniken der Disziplinierung des Körpers auseinander.

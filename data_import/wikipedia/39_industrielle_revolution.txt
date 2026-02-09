@@ -1,7 +1,4 @@
-Als industrielle Revolution wird die tiefgreifende und dauerhafte Umgestaltung der wirtschaftlichen und sozialen Verhältnisse, der Arbeitsbedingungen und Lebensumstände bezeichnet, die in der zweiten Hälfte des 18.
-Jahrhunderts begann und verstärkt im 19.
-Jahrhundert, zunächst in England, dann in ganz Westeuropa und den USA, seit dem späten 19.
-Jahrhundert auch in Japan und weiteren Teilen Europas und Asiens zum Übergang von der Agrarzur Industriegesellschaft geführt hat.
+Als industrielle Revolution wird die tiefgreifende und dauerhafte Umgestaltung der wirtschaftlichen und sozialen Verhältnisse, der Arbeitsbedingungen und Lebensumstände bezeichnet, die in der zweiten Hälfte des 18. Jahrhunderts begann und verstärkt im 19. Jahrhundert, zunächst in England, dann in ganz Westeuropa und den USA, seit dem späten 19. Jahrhundert auch in Japan und weiteren Teilen Europas und Asiens zum Übergang von der Agrarzur Industriegesellschaft geführt hat.
 Als wichtigste an dieser Umwälzung beteiligte Gesellschaftsklassen standen sich kapitalistische Unternehmer und lohnabhängige Proletarier gegenüber.
 Die Industrielle Revolution führte zu einer stark beschleunigten Entwicklung von Technik, Produktivität und Wissenschaften, die, begleitet von einer starken Bevölkerungszunahme, mit einer neuartigen Zuspitzung sozialer Missstände einherging: Es kam zu einer Teilverlagerung des Pauperismus vom Lande in die Städte, ohne dass hinreichende Wohnunterkünfte vorhanden waren; und in den entstehenden Fabriken, für die Arbeitskräfte gebraucht wurden, konzentrierte sich ein Lohnarbeiterproletariat.
 Daraus ergab sich als ein gesellschaftspolitisches Kernproblem die soziale Frage, verbunden mit wiederkehrenden Arbeiterunruhen und Bemühungen von Sozialreformern, die akute Not zu lindern und deren Ursachen zu bekämpfen.
@@ -31,10 +28,13 @@ Außerhalb des frankophonen Sprachraums finden sich erste Erwähnungen 1843 bei 
 Auch Engels verglich die politische Revolution in Frankreich mit der industriellen Entwicklung in Großbritannien.
 Für ihn war die industrielle Revolution eine Epochenzäsur: „Die industrielle Revolution hat für England dieselbe Bedeutung wie die politische Revolution für Frankreich und die philosophische Revolution für Deutschland“.
 Während der Begriff hier auf die von England ausgehende industrielle Entwicklung begrenzt wurde, hatte Schulz ihn auch bereits auf frühere Epochen angewandt.
-Darin folgte ihm vor allem die angelsächsische Tradition, z. b.
-John Stuart Mill.
+Darin folgte ihm vor allem die angelsächsische Tradition, z. b. John Stuart Mill.
 Dieser verwandte den Begriff 1848 zur Kennzeichnung jedes schnellen technologischen und sozialen Wandels.
 Allgemeine Verbreitung fand der Begriff durch Arnold Toynbee (1852-1883), dem man deshalb lange auch die Prägung des Begriffs zugeschrieben hat.
-Jahrhundert trat das Begriffsverständnis im Sinne von „Zeitalter der Industrialisierung“ stärker hervor.
+Im 20. Jahrhundert trat das Begriffsverständnis im Sinne von „Zeitalter der Industrialisierung“ stärker hervor.
 Unter Historikern üblich ist die Verwendung des Begriffs industrielle Revolution für das Geschehen auf der britischen Hauptinsel etwa zwischen 1750 und 1850, während ansonsten von Industrialisierung gesprochen wird, sofern in einer Volkswirtschaft ein über mehrere Jahrzehnte stetig anhaltendes ProKopfWachstum der realen Erzeugung von mehr als 1,5 Prozent vorliegt.
 Es hat sich als eher zweifelhaft erwiesen, spezifische einzelne Ursachen der Industriellen Revolution bestimmen zu wollen.
+Nicht wenige davon haben auch andernorts bestanden, etwa in den Niederlanden, in Nordfrankreich oder in Zentraljapan, sodass auch umgekehrt gefragt worden ist, warum es nicht in einer dieser Regionen zu einer derartigen Umwälzung kam.
+Für das Vereinigte Königreich lässt sich ein Bedingungsgefüge aufzeigen, innerhalb dessen einzelne Faktoren spezifisch bedeutsam waren.
+Anzuführen sind: eine vorausgegangene, viele Jahrzehnte währende Friedensperiode; ein einheitliches Wirtschaftsgebiet ohne Zollschranken in Insellage; eine auf Großgrundbesitz ausgerichtete, verhältnismäßig produktive Landwirtschaft mit Arbeitskräfteüberschuss; eine für Verkehr und Transporte günstige Geographie und ergiebige, leicht erschließbare Kohlevorkommen; der für Rohstoffimport und Absatzmärkte sorgende Kolonienbesitz samt umfänglichem Kolonialhandel (teils als Tauschhandel); die entwickelte Feinmechanik und Werkzeugmacherei; eine partiell verbreitete Unternehmermentalität, besonders in einigen religiösen Milieus.
+Von eigener Bedeutung für den kontinuierlichen industriellen Aufschwung war zum einen die auf relativ breite Kreise sich stützende Binnennachfrage für den gehobenen Bedarf, war zudem der bereits fortgeschrittene Überseehandel insbesondere mit Nordamerika und im Weiteren die Ausbildung einer Technikkultur, basierend auf einem durch das britische Patentrecht flankierten Innovationsstrom.

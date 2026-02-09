@@ -19,8 +19,7 @@ Auf der Quantenmechanik und ihren Begriffen bauen ab ca.
 1930 die weiterführenden Quantenfeldtheorien auf, angefangen mit der Quantenelektrodynamik.
 Mit diesen können auch die Prozesse der Erzeugung und Vernichtung von Teilchen analysiert werden.
 Genauere Informationen zum mathematischen Formalismus finden sich im Artikel Mathematische Struktur der Quantenmechanik.
-Anfang des 20.
-Jahrhunderts begann die Entwicklung der Quantenphysik zunächst mit den sogenannten alten Quantentheorien.
+Anfang des 20. Jahrhunderts begann die Entwicklung der Quantenphysik zunächst mit den sogenannten alten Quantentheorien.
 Max Planck stellte 1900 zur Herleitung des nach ihm benannten Strahlungsgesetzes die Hypothese auf, dass ein Oszillator Energie nur in ganzzahligen Vielfachen des Energiequantums Δ.
 {\displaystyle \Delta E=hf} aufnehmen oder abgeben kann ( h.
 {\displaystyle h} ist die PlanckKonstante, f.
@@ -34,7 +33,8 @@ Dieses basiert auf der Annahme, dass Elektronen im Atom nur Zustände von ganz b
 Bei der Formulierung seiner Theorie nutzte Bohr das Korrespondenzprinzip, dem zufolge sich das quantentheoretisch berechnete optische Spektrum von Atomen im Grenzfall großer Quantenzahlen dem klassisch berechneten Spektrum annähern muss.
 Mit dem Bohrschen Atommodell und seinen Erweiterungen, dem Schalenmodell und dem BohrSommerfeldModell, gelangen einige große Erfolge, darunter die Erklärung des Wasserstoffspektrums, der Röntgenlinien und des StarkEffekts sowie die Erklärung des Aufbaus des Periodensystems der Elemente.
 Schnell erwiesen sich diese frühen Atommodelle jedoch als unzureichend.
-So versagten sie bereits beim Heliumatom mit zwei Elektronen, beim Wert des Bahndrehimpulses des elektronischen Grundzustandes im Wasserstoffatom und bei der Beschreibung verschiedener spektroskopischer Beobachtungen, wie z. b.
-des anomalen ZeemanEffekts oder der Feinstruktur.
+So versagten sie bereits beim Heliumatom mit zwei Elektronen, beim Wert des Bahndrehimpulses des elektronischen Grundzustandes im Wasserstoffatom und bei der Beschreibung verschiedener spektroskopischer Beobachtungen, wie z. b. des anomalen ZeemanEffekts oder der Feinstruktur.
 Im Jahr 1924 veröffentlichte Louis de Broglie seine Theorie der Materiewellen, wonach jegliche Materie einen Wellencharakter aufweisen kann, wie auch umgekehrt Wellen einen Teilchencharakter.
 Diese Arbeit führte die Quantenphänomene auf eine gemeinsame Erklärung zurück, die jedoch wieder heuristischer Natur war und auch keine Berechnung der Spektren von Atomen ermöglichte.
+Daher wird sie als letzte den alten Quantentheorien zugeordnet, war jedoch richtungsweisend für die Entwicklung der Quantenmechanik.
+Die moderne Quantenmechanik fand ihren Beginn im Jahr 1925 mit der Formulierung der Matrizenmechanik durch Werner Heisenberg, Max Born und Pascual Jordan.

@@ -17,17 +17,15 @@ Eine Epoche vergleichsweise kühlen Klimas wird in dem Zusammenhang manchmal Kli
 Optimum und Pessimum sind eine Konvention in der Klimasystematik und keine Wertung, können jedoch zu Fehlinterpretationen führen und werden deshalb in der neueren Fachliteratur durch den Begriff Klimaanomalie ersetzt.
 Die während des frühen Holozäns in Teilen der nördlichen Hemisphäre aufgetretene MisoxSchwankung (international 8.2 kiloyear event), wahrscheinlich verursacht von einem massiven SchmelzwasserEintrag in den Nordatlantik, war eine zeitlich scharf begrenzte, aber relativ ausgeprägte Klimaanomalie.
 Schon im 17.
-Jahrhundert wurde vereinzelt, wie zum Beispiel von dem Universalgelehrten Robert Hooke, die Idee eines veränderlichen Klimas vertreten, begründet vor allem durch Fossilfunde „tropischer“ Tiere und Pflanzen in gemäßigten Regionen Europas.
+und 18. Jahrhundert wurde vereinzelt, wie zum Beispiel von dem Universalgelehrten Robert Hooke, die Idee eines veränderlichen Klimas vertreten, begründet vor allem durch Fossilfunde „tropischer“ Tiere und Pflanzen in gemäßigten Regionen Europas.
 Einen bedeutenden Fortschritt verzeichnete die beginnende Erforschung des Erdklimasystems durch die Arbeiten von Jean Baptiste Joseph Fourier (1768-1830), der im Jahr 1824 den atmosphärischen Treibhauseffekt erstmals in seinen Grundzügen beschrieb.
 John Tyndall (1820-1893) identifizierte am Beginn der 1860erJahre auf der Basis von labortechnischen Messungen eine Reihe klimawirksamer Gase wie Wasserdampf, Kohlenstoffdioxid und Ozon und bestimmte darüber hinaus im Rahmen der damaligen Möglichkeiten ihr jeweiliges Treibhauspotential.
 Fast zur selben Zeit veröffentlichte der schottische Naturforscher James Croll (1821-1890) unter Einbeziehung der EisAlbedoRückkopplung die erste fundierte Theorie zur Entstehung der Quartären Kaltzeitzyklen.
-Crolls Theorie wurde in der ersten Hälfte des 20.
-Jahrhunderts von Milutin Milanković und Wladimir Köppen mittels umfangreicher Berechnungen erheblich erweitert und avancierte unter der Bezeichnung MilankovićZyklen ab etwa 1980 zu einem unverzichtbaren Bestandteil von Quartärforschung und Paläoklimatologie.
+Crolls Theorie wurde in der ersten Hälfte des 20. Jahrhunderts von Milutin Milanković und Wladimir Köppen mittels umfangreicher Berechnungen erheblich erweitert und avancierte unter der Bezeichnung MilankovićZyklen ab etwa 1980 zu einem unverzichtbaren Bestandteil von Quartärforschung und Paläoklimatologie.
 Mögliche Auswirkungen eines menschengemachten (anthropogenen) Klimawandels wurden von dem schwedischen Physiker und Chemiker Svante Arrhenius (1859-1927) zur Diskussion gestellt, der neben einer ersten Abschätzung der Klimasensitivität bereits 1906 prognostizierte, dass die industrielle Freisetzung von Kohlenstoffdioxid zwangsläufig zu einem Temperaturanstieg führen müsse.
 Allerdings ging er davon aus, dass unter Beibehaltung der damaligen CO2-Emissionen eine globale Erwärmung erst in Jahrhunderten nachweisbar sein würde.
 Direkte Belege für die Annahme einer stetig steigenden CO2-Konzentration und einer damit verbundenen Erwärmung konnte ab 1958 der US-amerikanische Forscher Charles David Keeling (1928-2005) vorweisen.
-Die nach ihm benannte KeelingKurve, basierend auf kontinuierlichen Messungen durch ein inzwischen weltweites Stationsnetz (in den letzten Jahrzehnten auch unter Einsatz von Erdsatelliten), nimmt in der Klimatologie einen besonderen Stellenwert ein und gilt als wichtigster Umweltdatensatz des 20.
-Jahrhunderts.
+Die nach ihm benannte KeelingKurve, basierend auf kontinuierlichen Messungen durch ein inzwischen weltweites Stationsnetz (in den letzten Jahrzehnten auch unter Einsatz von Erdsatelliten), nimmt in der Klimatologie einen besonderen Stellenwert ein und gilt als wichtigster Umweltdatensatz des 20. Jahrhunderts.
 Die Erde entstand vor 4,57 Milliarden Jahren aus mehreren Protoplaneten unterschiedlicher Größe.
 Ihre heutige Masse soll sie der Kollisionstheorie zufolge durch einen seitlichen Zusammenstoß mit einem marsgroßen Himmelskörper namens Theia vor 4,52 Milliarden Jahren erhalten haben.
 Dadurch wurden Teile des Erdmantels und zahlreiche Trümmerstücke von Theia in den damals noch sehr niedrigen Orbit geschleudert, aus denen sich innerhalb von 10.000 Jahren der zu Beginn glutflüssige Mond formte.
@@ -38,3 +36,5 @@ Die Erde besaß bei ihrer Entstehung wahrscheinlich eine Uratmosphäre mit den H
 Dieses Gasgemisch existierte nur relativ kurze Zeit, da sich durch die thermischen Auswirkungen einer möglichen Impaktserie sowie durch den Einfluss des Sonnenwindes und des solaren Magnetfelds leichte Elemente rasch verflüchtigten.
 Die erste Atmosphäre der Erde entstand vor mehr als vier Milliarden Jahren und war im Wesentlichen die Folge eines extrem starken Vulkanismus mit intensiven Ausgasungen von Kohlenstoffdioxid, Stickstoff und Schwefeldioxid.
 Da auf der erhitzten Erdoberfläche Niederschläge sofort verdampften, dominierte Wasserdampf mit einem Anteil von etwa 80 Prozent die sehr dichte und heiße Lufthülle.
+Danach folgten Kohlenstoffdioxid und Schwefelwasserstoff mit Anteilen von etwa 10 beziehungsweise 6 Prozent.
+Gegen Ende des Hadaikums, vor rund 4 Milliarden Jahren, bildeten sich die ersten ozeanischen Becken.

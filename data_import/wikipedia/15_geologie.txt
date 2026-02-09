@@ -11,7 +11,7 @@ Darüber hinaus ist er auch für die Sicherung von Trinkwasser sowie von Energie
 Schließlich obliegt den Geologen die Erkundung des Baugrundes, insbesondere bei größeren Bauprojekten, um Setzungen, Rutschungen und Grundbrüche langfristig zu vermeiden.
 Im Gelände oder unter Tage gliedert der Geologe die aufgeschlossenen (offen zugänglichen) Gesteine anhand von äußeren Merkmalen in definierte Einheiten.
 Diese Kartiereinheiten müssen sich bei dem gewählten Maßstab auf einer geologischen Karte, oder in einem geologischen Profil, darstellen lassen.
-Durch Extrapolation kann er so vorhersagen, wie die Gesteine im Untergrund mit großer Wahrscheinlichkeit gelagert sind.
+Durch Extrapolation kann er so vorhersagen, wie die Gesteine im Untergr und mit großer Wahrscheinlichkeit gelagert sind.
 Die genauere Untersuchung der Gesteine (Petrographie, Petrologie) findet aber meist im Labor statt.
 Mit den einzelnen, teilweise mikroskopisch kleinen, Bestandteilen der Gesteine, den Mineralen, befasst sich die Mineralogie.
 Mit dem Fossilinhalt sedimentärer Gesteine beschäftigt sich die Paläontologie.
@@ -25,16 +25,16 @@ Trotz der erhöhten Rechenleistung moderner Computer stoßen solche numerischen 
 Im Grenzgebiet zur Astronomie bewegt sich die Planetengeologie oder Astrogeologie als Teilgebiet der Planetologie, die sich mit der Zusammensetzung, dem inneren Aufbau und den formenden Prozessen auf fremden Himmelskörpern beschäftigt.
 Geologische Fragestellungen und die Anwendung geologischer Methoden außerhalb der Erde gewannen vor allem seit Beginn der Raumfahrt und der Erforschung unseres Sonnensystems mit Sonden und Satelliten an Bedeutung.
 Bereits in der Antike verfügten die Menschen schon seit langem über praktische Kenntnisse für die Suche nach mineralischen Rohstoffen, deren Abbau und Verwertung.
-Die ersten Versuche einer theoretischen Behandlung geologischer Fragestellungen, wie die Ursache von Erdbeben, oder die Herkunft von Fossilien, finden sich jedoch erst in der ionischen Naturphilosophie im 5.
-Jahrhundert v.
-Bis in die frühe Neuzeit hinein blieb die Lehre des Empedokles von den vier Elementen und die Lehre des Aristoteles von der Transmutation der Elemente auch richtungsweisend für die Vorstellungen über die Natur von Metallen, Mineralen und Gesteinen.
+Die ersten Versuche einer theoretischen Behandlung geologischer Fragestellungen, wie die Ursache von Erdbeben, oder die Herkunft von Fossilien, finden sich jedoch erst in der ionischen Naturphilosophie im 5. Jahrhundert v. Chr. Bis in die frühe Neuzeit hinein blieb die Lehre des Empedokles von den vier Elementen und die Lehre des Aristoteles von der Transmutation der Elemente auch richtungsweisend für die Vorstellungen über die Natur von Metallen, Mineralen und Gesteinen.
 Während des Niedergangs des Römischen Reiches in der Spätantike wurden diese Ansichten nur im östlichen, griechisch geprägten Teil überliefert, wo sie im frühen Mittelalter von arabischen Gelehrten, wie Ibn Sina, wieder aufgenommen wurden.
 In Westeuropa hingegen gingen selbst viele praktische Kenntnisse im Bergbau wieder verloren.
 Erst im 12.
-Jahrhundert begannen sich abendländische Alchemisten wieder mit der Bildung von Metallen und Gesteinen im Inneren der Erde zu befassen.
+und 13. Jahrhundert begannen sich abendländische Alchemisten wieder mit der Bildung von Metallen und Gesteinen im Inneren der Erde zu befassen.
 Im Laufe der Renaissance wurden solche Spekulationen nicht nur von humanistischen Gelehrten, wie Paracelsus, ausgebaut, sondern auch um umfangreiche empirische Daten und praktische Methoden ergänzt, besonders von Georgius Agricola.
-Aus solchen Ansätzen entwickelte sich bis ins 17.
-Jahrhundert eine Art „ProtoGeologie“, die viele Gemeinsamkeiten mit der „ProtoChemie“ des Ökonomen, Alchemisten und Bergbauingenieurs Johann Joachim Becher hatte.
+Aus solchen Ansätzen entwickelte sich bis ins 17. Jahrhundert eine Art „ProtoGeologie“, die viele Gemeinsamkeiten mit der „ProtoChemie“ des Ökonomen, Alchemisten und Bergbauingenieurs Johann Joachim Becher hatte.
 Einen wichtigen Schritt zur Etablierung der Geologie als eigenständige Wissenschaft ging der dänische Naturforscher Nicolaus Steno, indem er 1669 das stratigraphische Prinzip einführte.
 Hiermit begründete er den Grundsatz, dass die räumliche Lagerung von Sedimentschichten übereinander in Wirklichkeit einer zeitlichen Abfolge von Gesteinsablagerungen nacheinander entspricht.
 Auch Robert Hooke spekulierte etwa zur selben Zeit, ob man aus dem Fossilinhalt der Gesteine nicht den historischen Ablauf der Gesteinsbildung rekonstruieren könne.
+Im Lauf des 18. Jahrhunderts bemühten sich Bergwerksleiter und Ingenieure zunehmend um ein theoretisches Verständnis von geologischen Zusammenhängen.
+Hierbei entwickelten sie Mitte des Jahrhunderts die grundlegenden Methoden der geologischen Kartierung und der Erstellung stratigraphischer Profile.
+Der Beginn der Geologie als moderne Wissenschaft wird meist mit der Kontroverse zwischen den Denkrichtungen des Plutonismus und Neptunismus angesetzt.

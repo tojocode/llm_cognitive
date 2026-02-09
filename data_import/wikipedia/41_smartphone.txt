@@ -14,14 +14,12 @@ Smartphones können durch folgende Merkmale von klassischen Mobiltelefonen, PDAs
 Typische Merkmale sind daher im Vergleich zu älteren Mobiltelefonen relativ große und hochauflösende Bildschirme, alphanumerische Tastaturen und/oder Touchscreens.
 Smartphones verfügen meist über ein Betriebssystem mit offengelegter API (siehe Abschnitt Betriebssystem).
 Es ermöglicht dem Benutzer, Programme von Drittherstellern zu installieren.
-Mobiltelefone haben im Gegensatz dazu meist eine vordefinierte Programmoberfläche, die nur begrenzt, z. b.
-durch JavaAnwendungen, erweitert werden kann.
+Mobiltelefone haben im Gegensatz dazu meist eine vordefinierte Programmoberfläche, die nur begrenzt, z. b. durch JavaAnwendungen, erweitert werden kann.
 Smartphones verfügen oft über unterschiedliche Sensoren, die in klassischen Mobiltelefonen seltener zu finden sind.
 Hierzu zählen insbesondere Bewegungs-, Lage-, Magnetfeld-, Licht-, Foto- (RGB und schwarzweiß), Barometeren und Näherungssensoren sowie GPS-Empfänger.
 Einzelne Modelle wie die 2013 erschienenen Samsung Galaxy S4 und Note 3 verfügen über Umgebungstemperaturen und Luftfeuchtigkeitssensoren.
 Bisher verfügt nur das 2014 erschienene Samsung Galaxy Note 4 über einen Sensor zur Messung von Ultraviolettstrahlung.
-Smartphones unterstützen diverse drahtlose Kommunikationsprotokolle, z. b.
-LTE, 5G, WLAN, Bluetooth und Satellitennavigation.
+Smartphones unterstützen diverse drahtlose Kommunikationsprotokolle, z. b. LTE, 5G, WLAN, Bluetooth und Satellitennavigation.
 Mitte der 2020er Jahre haben SmartphoneHersteller damit begonnen, Satellitennachrichtenkonnektivität und Satellitennotdienste in Geräte zu integrieren, die in abgelegenen Regionen eingesetzt werden können, in denen es kein zuverlässiges Mobilfunknetz gibt.
 Der Speicherplatz mancher Mobiltelefone lässt sich mithilfe einer MicroSDSpeicherkarte erweitern.
 Vorteile gegenüber CloudSpeichern sind Ortsunabhängigkeit von Mobilfunkstationen, Latenzfreiheit, Privatsphäre, höhere Übertragungsgeschwindigkeiten und keine durch den Mobilfunkvertrag benutzungsbedingte Herabsetzung dessen, sowie mögliche Datenrettung bei Defekt des Gerätes und Verschonung der Schreibzyklen der nichtwechselbaren internen Speicherplatine.
@@ -29,12 +27,14 @@ Außerdem wird der USB-Anschluss nicht wie bei über USB OnthegoZubehör angesch
 Durch diese Merkmale bieten Smartphones die Grundlagen zur mobilen Büroon und Datenkommunikation in einem einzigen Gerät.
 Der Benutzer kann Daten (etwa Adressen, Texte und Termine) über die Tastatur oder einen Stift erfassen und zusätzliche Software selbst installieren.
 Die meisten Geräte verfügen über eine oder mehrere Digitalkameras zur Aufnahme unbewegter und bewegter Bilder sowie für die Bildtelefonie.
-Die bei PDAs z. b.
-zur Synchronisierung verwendeten Verbindungsarten, wie WLAN, Bluetooth, Infrarot oder die USB-Kabelverbindung, werden durch bislang in der Mobiltelefonie übliche Verbindungsprotokolle, wie GSM, UMTS (und HSDPA), GPRS und HSCSD, ergänzt.
+Die bei PDAs z. b. zur Synchronisierung verwendeten Verbindungsarten, wie WLAN, Bluetooth, Infrarot oder die USB-Kabelverbindung, werden durch bislang in der Mobiltelefonie übliche Verbindungsprotokolle, wie GSM, UMTS (und HSDPA), GPRS und HSCSD, ergänzt.
 So ist es beispielsweise möglich, unterwegs neben der Mobiltelefonie auch SMS, MMS, E-Mails sowie, bei modernen Geräten, Videokonferenzen per UMTS oder InternetTelefonie (VoIP) mit WLAN über InternetZugriffspunkte zu nutzen.
 Theoretisch - und zum Teil auch in der praktischen Nutzung - können damit neben Audiogs und Videostreamings aus dem Internet (zum Beispiel über WLAN) auch Fernsehprogramme über DVB-H und mit entsprechender Hardware auch DVB-T empfangen werden.
 Ein weiteres Beispiel ist die eingebaute oder optionale JavaUnterstützung (auf CLDC-oder MIDP-Basis) - Mobiltelefone gelten als eine der populärsten Anwendungen von Embedded Java.
 Smartphones werden zunehmend auch für die Fernsteuerung von digitalen Geräten eingesetzt, wie zum Beispiel Kameras, ActionCamcordern, AV-Receivern, Fernsehgeräten oder Quadcoptern.
 Frühe SmartphoneVorläufer vereinigten etwa Ende der 1990er Jahre die Funktionen eines Personal Digital Assistant (PDA) bzw.
-Organizers, mit dem man z. b.
-Kontakte und seinen Kalender verwalten konnte, mit der Funktionalität eines reinen Mobiltelefons.
+Organizers, mit dem man z. b. Kontakte und seinen Kalender verwalten konnte, mit der Funktionalität eines reinen Mobiltelefons.
+Später wurden dem kompakten Gerät die Funktionen eines transportablen Medienabspielgerätes, einer Digitalra und Videokamera und eines GPS-Navigationsgeräts hinzugefügt; noch später ein Internetzugang und ein (zunächst noch resistiver und nicht kapazitiver) Touchscreen.
+Als „das erste Smartphone“ wird rückblickend manchmal das 1992 von BellSouth und IBM vorgestellte und ab Mitte 1994 in einem Teil der USA als „Personal Communicator“ vertriebene Simon referenziert.
+Vorreiter der SmartphoneSysteme war das PEN/GEOS 3.0 des Herstellers GeoWorks, das in der 1996 eingeführten NokiaCommunicatorSerie eingesetzt wurde.
+Als Nokia für die CommunicatorReihe 92x0, 9300, 9300i und 9500 auf einen anderen Prozessor wechselte, bildete das Unternehmen mit Psion und dessen EPOC-System eine Allianz, um die SymbianPlattform zu entwickeln.

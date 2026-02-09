@@ -20,10 +20,9 @@ acht Wochen mit der Thematik befasste.
 Es existieren zahlreiche Definitionen für den Begriff der KI.
 Je nach Sichtweise wird die künstliche Intelligenz in Industrie, Forschung und Politik entweder über die zu erzielenden Anwendungen oder den Blick auf die wissenschaftlichen Grundlagen definiert: Die Definitionen für künstliche Intelligenz lassen sich nach Stuart J.
 Russell und Peter Norvig in vier Kategorien einteilen: Nachbildung von menschlichem Denken Nachbildung von rationalem Denken Nachbildung von menschlichem Verhalten Nachbildung von rationalem Verhalten.
-Die KI-Verordnung der EU definiert in Artikel 3 (Begriffsbestimmungen) ein „KI-System“ wie folgt: Diese Definition wird im Erwägungsgrund 12 etwas allgemeinverständlicher eingeordnet.
+Die KI-Verordnung der EU definiert in Artikel 3 (Begriffsbestimmungen) ein „KI-System“ wie folgt: Diese Definition wird im Erwägungsgr und 12 etwas allgemeinverständlicher eingeordnet.
 Um ein System im Alltag konkret als „KI“ oder „nicht KI“ einordnen zu können, ist in vielen Unternehmen eine Annäherung über möglichst konkrete und verständliche Kriterien notwendig.
-Diese werden z. b.
-von ITce und ComplianceStakeholdern erarbeitet, stehen im Kontext vorhandener Informationssicherheits-, Complianceund/oder RisikomanagementSysteme und orientieren sich - Stand Dezember 2024 - beispielsweise an folgenden Definitionen: Ein System wird als „KI-System“ eingestuft, wenn es mindestens eine Komponente enthält, deren Ausgaben auf Verarbeitungsbzw.
+Diese werden z. b. von ITce und ComplianceStakeholdern erarbeitet, stehen im Kontext vorhandener Informationssicherheits-, Complianceund/oder RisikomanagementSysteme und orientieren sich - Stand Dezember 2024 - beispielsweise an folgenden Definitionen: Ein System wird als „KI-System“ eingestuft, wenn es mindestens eine Komponente enthält, deren Ausgaben auf Verarbeitungsbzw.
 Entscheidungsmustern beruhen, die es zuvor in einer Lernphase auf Basis großer Datenmengen selbst generiert hat.
 Ebenfalls als eindeutiges Merkmal gilt, dass die Ausgabe eines KI-Systems zu einer spezifischen Eingabe nicht alleine über Programmierung, Konfiguration und Parametrisierung vorhergesagt werden kann, sondern bestenfalls auf Basis der Daten, mit denen das System angelernt wurde.
 Hier liegt ein risikobasierter Ansatz zugrunde, da die KI-Komponente als Black Box eingestuft wird, deren innere Funktionsweise nicht transparent ist.
@@ -32,9 +31,10 @@ Ein NonKI-System, in dessen Algorithmen ein zuvor woanders erlerntes KI-Verarbei
 Intransparenz ergeben, derzeit meist ebenfalls als KI-System eingeordnet.
 Dies betrifft beispielsweise die Mehrfachverwendung eines allgemeinen LLM-Modells in unterschiedlichen fachlichen Kontexten.
 (Stand Dezember 2024) Der Vorteil der vorgenannten Annäherungen liegt darin, dass sie die Unschärfen des „Intelligenz“-Begriffs sowie Interpretationsspielräume der o. g.
-EU-Verordnung vermeiden, indem ausschließlich bekannte technische Aspekte der in Frage kommenden Systeme zugrunde gelegt werden: Für jeden Quellcode (White Box) kann eine eindeutige Aussage abgeleitet werden, ob eine Lernfähigkeit (z. b.
-nach Art der unten aufgeführten Methoden) eingebaut ist oder nicht.
+EU-Verordnung vermeiden, indem ausschließlich bekannte technische Aspekte der in Frage kommenden Systeme zugrunde gelegt werden: Für jeden Quellcode (White Box) kann eine eindeutige Aussage abgeleitet werden, ob eine Lernfähigkeit (z. b. nach Art der unten aufgeführten Methoden) eingebaut ist oder nicht.
 Ist der Quellcode nicht einsehbar, kann der Hersteller/Programmierer konsultiert werden.
 Unterscheidungsbeispiel: Ein Navigationssystem ist ein KI-System, wenn es anhand von Daten zu einer Teilmenge aller möglichen Fahrten „angelernt“ wurde, für jede mögliche Fahrt die schnellste Route zu finden.
 Ein Navigationssystem ist kein KI-System, wenn es die schnellste Route aufgrund unveränderlicher*, mindestens dem Hersteller/Programmierer bekannter Algorithmen und einer zuvor nach ebenso bekannten Regeln optimierten, unveränderlichen* Datenbank ermittelt.
-(*unveränderlich mit Ausnahme herkömmlicher Updates, z. b.
+(*unveränderlich mit Ausnahme herkömmlicher Updates, z. b. für Sicherheit, Effizienzverbesserungen, neue Funktionen und Kartenaktualisierungen) Im vorgenannten Beispiel liegt der Fokus auf der Routenfindung.
+vorgeschaltete Sprachsteuerung wäre separat zu betrachten.
+Der Diskurs über KI ist stark von einer metaphorischen Sprache geprägt.

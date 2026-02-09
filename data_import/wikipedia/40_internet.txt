@@ -1,4 +1,4 @@
-Das Internet (von englisch interconnected networks ‚zusammengeschaltete Netzwerke‘, kurz net ‚Netz‘), umgangssprachlich auch Netz, ist ein weltweiter Verbund von Rechnernetzwerken, den autonomen Systemen.
+Das Internet (von englisch interconnected networks ‚zusammengeschaltete Netzwerke‘, kurz net ‚Netz‘), umgangssprachlich auch Netz, ist ein weltweiter Verb und von Rechnernetzwerken, den autonomen Systemen.
 Über das Internet kann sich jeder Rechner mit jedem anderen Rechner verbinden.
 Der Datenaustausch zwischen den über das Internet verbundenen Rechnern erfolgt über Internetdienste wie bspw.
 World Wide Web, E-Mail und Instant Messaging, welche sich wiederum normierter Internetprotokolle wie bspw.
@@ -14,8 +14,7 @@ Seitdem haben immer mehr Menschen ständig Zugang zum Internet und nutzen tägli
 Dies hat zu Veränderungen in fast allen Lebensbereichen geführt, bspw.
 in der privaten Kommunikation, beim Medienkonsum und beim Einkaufen.
 Dieses neue, vom Internet durchwobene Alltagsleben wird auch als Digital Lifestyle bezeichnet.
-Die Verbreitung des Internets hat vielfältige Vorteile, wird aber auch kritisch betrachtet, u.
-weil sie Regierungen eine umfangreichere automatisierte Überwachung aller Menschen ermöglicht als jemals zuvor.
+Die Verbreitung des Internets hat vielfältige Vorteile, wird aber auch kritisch betrachtet, u. a. weil sie Regierungen eine umfangreichere automatisierte Überwachung aller Menschen ermöglicht als jemals zuvor.
 Ebenso kritisiert wird die Kommerzialisierung des Internets seit den 1990er Jahren: Im neuen Plattformkapitalismus sind große Teile des Internets heute unter der Kontrolle von nur noch wenigen Unternehmen, genannt „Big Tech“, die nicht primär gemeinwohlorientiert handeln, sondern selbsterhaltungsund profitorientiert, und deshalb intensiv alle Internetnutzer verfolgen und manipulieren (bspw.
 von ihren „Diensten“ abhängig machen).
 Sie sind mittlerweile die größten Unternehmen der Welt und besitzen jeweils mindestens ein Monopol auf einen essentiellen Onlinedienst - daher ist es anderen kaum noch möglich, ihre Vormacht umzustoßen.
@@ -38,3 +37,4 @@ Diese Großrechner waren untereinander über Interface Message Processors verbun
 Die verwendeten Protokolle waren in heterogenen Umgebungen unzuverlässig, weil sie für ein bestimmtes Übertragungsmedium optimiert waren.
 Cerf und Robert E.
 Kahn entwickelten 1973 und 1974 eine frühe Version von TCP, um andersartige Netze miteinander zu verbinden.
+Nach Weiterentwicklungen in den folgenden Jahren wurde es als TCP/IP bekannt.

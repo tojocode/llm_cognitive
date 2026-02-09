@@ -4,19 +4,17 @@ Das Recht umfasst damit alle Regeln zur Konfliktverhütung und -lösung, damit e
 Diese generellen Regeln werden als objektives Recht bezeichnet.
 Es ist zu unterscheiden von subjektiven Rechten, den konkreten Rechten des Einzelnen, etwas zu tun, zu unterlassen oder von einem anderen zu verlangen.
 Das subjektive Recht kann sich entweder unmittelbar aus dem allgemeinen objektiven Recht ergeben oder in ihm seine (Ermächtigungs-)Grundlage haben.
-Zu solchen subjektiven Rechten gehören insbesondere die individuellen Freiheitsrechte, die sich aus den generellen Grundrechtsgarantien ergeben (z. b.
-das Recht, seinen Beruf zu wählen), ferner Ermächtigungen zu rechtswirksamen Handlungen (z. b.
-ein Kündigungsrecht, durch das ein Mietvertrag beendet werden kann) und schließlich Ansprüche, von einem anderen etwas zu verlangen.
+Zu solchen subjektiven Rechten gehören insbesondere die individuellen Freiheitsrechte, die sich aus den generellen Grundrechtsgarantien ergeben (z. b. das Recht, seinen Beruf zu wählen), ferner Ermächtigungen zu rechtswirksamen Handlungen (z. b. ein Kündigungsrecht, durch das ein Mietvertrag beendet werden kann) und schließlich Ansprüche, von einem anderen etwas zu verlangen.
 Die rechtliche Gewährleistung für solches „Verlangenkönnen“ liegt darin, dass der Berechtigte vor Gericht klagen und dieses dadurch verpflichten kann, ihm zur Durchsetzung seines Rechts zu verhelfen (ubi actio ibi ius).
 Eine wesentliche Komponente eines subjektiven Rechts ist also eine rechtlich gewährleistete Durchsetzungsinitiative.
 Objektives Recht und subjektives Recht gelten als „zwei verschiedene Seiten derselben Medaille“.
 Das Wort „Recht“ ist aus der indogermanischen Wurzel *h₃reĝ-, „aufrichten, gerade richten“ entstanden und somit aus etymologischer Sicht moralisch konnotiert.
-Der etymologische Hintergrund des deutschen Wortes (althochdeutsch reht, recht, rehd, riht, reth) ist der gleiche wie in vielen europäischen Sprachen (niederländisch recht, französisch droit, spanisch derecho, italienisch diritto, englisch right); auch in außereuropäischen Sprachen finden sich Entsprechungen.
+Der etymologische Hintergr und des deutschen Wortes (althochdeutsch reht, recht, rehd, riht, reth) ist der gleiche wie in vielen europäischen Sprachen (niederländisch recht, französisch droit, spanisch derecho, italienisch diritto, englisch right); auch in außereuropäischen Sprachen finden sich Entsprechungen.
 Inhaltlich ist der deutsche Begriff stark von der Bedeutung des lateinischen ius beeinflusst, das ursprünglich die menschliche Ordnung gegenüber der überirdischen Ordnung (fas) bezeichnete.
 Diese mit ius bezeichnete Ordnung wurde durch leges konkretisiert, die zunächst Riten darstellten, später aber in die Form staatlicher Gesetze überführt wurden.
 Mit dieser Begriffswende der lex vom Ritus zum staatlichen Gesetz veränderte sich der Begriff des lateinischen ius und über die spätscholastische Philosophie und die Rezeption des römischen Rechts auch die Bedeutung des deutschen Worts „Recht“.
 In diesem etymologischen Dreiklang aus moralischem Anspruch, herkömmlichritueller Lebensordnung und staatlicher Gesetzgebung finden sich bereits drei wesentliche Eckpunkte des (modernen) Diskurses über den Rechtsbegriff, die noch um die geschichtliche Bedingtheit des Rechts ergänzt werden können.
-Vor dem Hintergrund dieses sprachgeschichtlich vielschichtigen Begriffs wird die Frage, was Recht ist, wie also „Recht“ von der Gesamtheit gesellschaftlicher Normen abzugrenzen ist, unterschiedlich beantwortet.
+Vor dem Hintergr und dieses sprachgeschichtlich vielschichtigen Begriffs wird die Frage, was Recht ist, wie also „Recht“ von der Gesamtheit gesellschaftlicher Normen abzugrenzen ist, unterschiedlich beantwortet.
 Staatlich institutionalisiertes Recht ist im Gegensatz zu anderen Normenordnungen wie Moral, Sitte oder Brauch kodifiziert und unterliegt eigenen Entscheidungsln, Änderungsln und Anerkennensregeln.
 Essentialistische Ansätze versuchen, diese Frage allgemein verbindlich zu beantworten und beanspruchen damit den „wahren“ Begriff des Rechts.
 Demgegenüber versuchen nominalistische Ansätze lediglich, eine praktikable Definition aufzustellen, die den Rechtsbegriff für den jeweiligen Untersuchungsbereich zweckmäßig erfasst, während er „für andere Zwecke ganz anders abgegrenzt werden mag“.
@@ -38,3 +36,5 @@ Grundbausteine dieser Rechtsordnung sind Rechtsvorschriften, d. h.
 Verhaltensgebote, die zu einem bestimmten Tun oder Unterlassen verpflichten, und Rechtsentstehungsnormen, d. h.
 Regeln darüber, wer auf welche Weise generelle Vorschriften und konkrete Pflichten begründen kann.
 Rechtsentstehungsnormen waren in der Frühzeit des Rechts hauptsächlich Regeln über die Entstehung von Gewohnheitsrecht.
+Heute sind es vor allem gesetzliche Ermächtigungen, die bestimmen, wer auf welche Weise allgemeine Vorschriften erlassen oder konkrete Rechtspflichten begründen kann (letzteres z. b. durch eine staatliche Anordnung oder „privatautonom“, insbesondere durch Abschluss eines Vertrages).
+Je nach Gesellschaftsordnung und politischer Auffassung überschneiden sich Recht, Moral und Sitte unterschiedlich stark.

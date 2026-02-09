@@ -4,21 +4,17 @@ Druck von digitalen BildDateien vervielfältigt.
 Der entsprechende Beruf ist der Fotograf.
 Bilder, die zum Beispiel für das Kino aufgenommen werden.
 Beliebig viele fotografische Bilder werden in Reihen von Einzelbildern auf fotografischen Film aufgenommen, die später mit einem Filmprojektor als bewegte Bilder (Laufbilder) vorgeführt werden können (siehe Film).
-Bis ins 20.
-Jahrhundert bezeichnete Fotografie alle Bilder, die rein durch Licht auf einer Oberfläche entstehen.
+Bis ins 20. Jahrhundert bezeichnete Fotografie alle Bilder, die rein durch Licht auf einer Oberfläche entstehen.
 Die Fotografie ist ein Medium, das in sehr verschiedenen Zusammenhängen eingesetzt wird.
 Fotografische Abbildungen können beispielsweise Gegenstände mit primär künstlerischem (künstlerische Fotografie) oder primär kommerziellem Charakter sein (Industriefotografieie, Werbeie und Modefotografie).
 Die Fotografie kann unter künstlerischen, technischen (Fototechnik), ökonomischen (Fotowirtschaft) und gesellschaftlichsozialen (Amateurie, Arbeiterie und Dokumentarfotografie) Aspekten betrachtet werden.
 Des Weiteren werden Fotografien im Journalismus und in der Medizin verwendet.
 Die Fotografie ist teilweise ein Gegenstand der Forschung und Lehre in der Kunstgeschichte und der noch jungen Bildwissenschaft.
-Der mögliche Kunstcharakter der Fotografie war lange Zeit umstritten, ist jedoch seit der fotografischen Stilrichtung des Piktorialismus um die Wende zum 20.
-Jahrhundert letztlich nicht mehr bestritten.
+Der mögliche Kunstcharakter der Fotografie war lange Zeit umstritten, ist jedoch seit der fotografischen Stilrichtung des Piktorialismus um die Wende zum 20. Jahrhundert letztlich nicht mehr bestritten.
 Einige Forschungsrichtungen ordnen die Fotografie der Medienft und Kommunikationswissenschaft zu, auch diese Zuordnung ist umstritten.
-Im Zuge der technologischen Weiterentwicklung fand zu Beginn des 21.
-Jahrhunderts allmählich der Wandel von der klassischen analogen (Silber-)Fotografie hin zur Digitalfotografie statt.
+Im Zuge der technologischen Weiterentwicklung fand zu Beginn des 21. Jahrhunderts allmählich der Wandel von der klassischen analogen (Silber-)Fotografie hin zur Digitalfotografie statt.
 Der weltweite Zusammenbruch der damit in Zusammenhang stehenden Industrie für analoge Kameras aber auch für Verbrauchsmaterialien (Filme, Fotopapier, Fotochemie, Laborgeräte) führt dazu, dass die Fotografie mehr und mehr auch unter kulturwissenschaftlicher und kulturhistorischer Sicht erforscht wird.
-Allgemein kulturelle Aspekte in der Forschung sind z. b.
-Betrachtungen über den Erhalt und die Dokumentation der praktischen Kenntnis der fotografischen Verfahren für Aufnahme und Verarbeitung aber auch der Wandel im Umgang mit der Fotografie im Alltag.
+Allgemein kulturelle Aspekte in der Forschung sind z. b. Betrachtungen über den Erhalt und die Dokumentation der praktischen Kenntnis der fotografischen Verfahren für Aufnahme und Verarbeitung aber auch der Wandel im Umgang mit der Fotografie im Alltag.
 Zunehmend kulturhistorisch interessant werden die Archivierungsen und Erhaltungstechniken für analoge Aufnahmen aber auch die systemunabhängige langfristige digitale Datenspeicherung.
 Die Fotografie unterliegt dem komplexen und vielschichtigen Fotorecht; bei der Nutzung von vorhandenen Fotografien müssen die Bildrechte beachtet werden.
 Die Gesetzgebungen in verschiedenen Ländern unterscheiden sich teilweise stark.
@@ -30,11 +26,15 @@ Als vielseitigste Fotoapparatbauform hat sich sowohl im Analogals auch im Digita
 Für viele Aufgaben werden weiterhin die verschiedensten Spezialkameras benötigt und eingesetzt.
 2020 hat erstmals die spiegellose digitale Systemkamera die digitale Spiegelreflexkamera überholt und ist dabei, diese abzulösen.
 Bei der Digitalfotografie besteht das Äquivalent der lichtempfindlichen Schicht aus Chips wie CCD-oder CMOS-Sensoren.
-Bei der filmbasierten Fotografie (z. b.
-SilberFotografie) ist die lichtempfindliche Schicht auf der Bildebene eine Dispersion (im allgemeinen Sprachgebrauch Emulsion).
+Bei der filmbasierten Fotografie (z. b. SilberFotografie) ist die lichtempfindliche Schicht auf der Bildebene eine Dispersion (im allgemeinen Sprachgebrauch Emulsion).
 Sie besteht aus einem Gel, in dem gleichmäßig kleine Körnchen eines Silberhalogenids (zum Beispiel Silberbromid) verteilt sind.
 Je kleiner die Körnung ist, umso weniger lichtempfindlich ist die Schicht (siehe ISO-5800-Standard), umso besser ist allerdings die Auflösung („Korn“).
 Dieser lichtempfindlichen Schicht wird durch einen Träger Stabilität verliehen.
 Trägermaterialien sind Zelluloseacetat, früher diente dazu Zellulosenitrat (Zelluloid), Kunststofffolien, Metallplatten, Glasplatten und sogar Textilien (siehe Fotoplatte und Film).
 Die Cyanotypie beruht auf Eisen statt Silber für die lichtempfindliche Schicht.
 Mit Ausnahme von Rohdaten (RAW-Dateien) müssen digitale Bilddateien nicht entwickelt werden, um sie am Monitor betrachten oder verarbeiten zu können; sie werden elektronisch gespeichert und können anschließend mit der elektronischen Bildbearbeitung am Computer bearbeitet und bei Bedarf auf Fotopapier ausbelichtet oder beispielsweise mit einem Tintenstrahldrucker ausgedruckt werden.
+Rohdaten werden vorab mittels spezieller Entwicklungssoftware oder RAW-Konvertern am Computer in nutzbare Formate (z. b. JPG, TIF) gebracht, was als digitale Entwicklung bezeichnet wird.
+Durch das Entwickeln bei der filmbasierten Fotografie wird auf chemischem Wege das latente Bild sichtbar gemacht.
+Beim Fixieren werden die nicht belichteten SilberhalogenidKörnchen wasserlöslich gemacht und anschließend mit Wasser herausgewaschen, sodass ein Bild bei Tageslicht betrachtet werden kann, ohne dass es nachdunkelt.
+Ein weiteres älteres Verfahren ist das Staubverfahren, mit dem sich einbrennbare Bilder auf Glas und Porzellan herstellen lassen.
+Als Abzug bezeichnet man das Ergebnis einer Kontaktkopie, einer Vergrößerung oder einer Ausbelichtung; dabei entsteht in der Regel ein Papierbild.

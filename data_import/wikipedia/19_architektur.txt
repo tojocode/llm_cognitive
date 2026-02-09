@@ -24,12 +24,11 @@ Die Liste von Bauwerken nach Funktion gibt einen Überblick über die Vielfälti
 Der Städtebau beschäftigt sich in größerem Maßstab mit der Gestaltung von Städten und großen Gebäudekomplexen und dem Zusammenspiel von Gebäuden und ihrer Umgebung.
 Die Landschaftsarchitektur beschäftigt sich mit der gestalteten Landschaft und Grünanlagen unter architektonischen Gesichtspunkten.
 Die Innenarchitektur hat die Gestaltung von Innenräumen zum Ziel.
-Diese Definition ist aber insbesondere seit Beginn des 20.
-Jahrhunderts umstritten.
+Diese Definition ist aber insbesondere seit Beginn des 20. Jahrhunderts umstritten.
 Entsprechend werden die meisten Definitionsversuche nur im Kontext bestimmter Debatten um Inhalt, Aufgabe und Bedeutung der Architektur verständlich, wobei auch das jeweilige zeitgenössische Bauen mit seinen ästhetischen, technischen, ökonomischen und politischen Implikationen zu berücksichtigen ist.
 Ähnlich wie beim Begriff des Kunstwerkes scheint es beim Architekturbegriff nicht möglich, sich auf die bloße Beschreibung eines Wortes oder einer Sache zu beschränken.
 Jede differenziertere Begriffsbestimmung erweist sich bei näherer Betrachtung als ein Ringen um Definitionshoheit und Geltungsmacht.
-Aufgrund des so implizierten normativen Aspektes bleibt jede „inhaltliche“ Bestimmung von Architektur kontrovers und ist im Kern ideologisch geprägt.
+Aufgr und des so implizierten normativen Aspektes bleibt jede „inhaltliche“ Bestimmung von Architektur kontrovers und ist im Kern ideologisch geprägt.
 Jeder Definitionsversuch - soweit er eine Reflexion enthält - ist bereits Architekturtheorie.
 Die Definition von Architektur beruht im Wesentlichen auf der jeweiligen Haltung und dem Wertesystem der definierenden Person, sei es Bauherr, Architekt oder Architekturtheoretiker.
 Dass die Bewertungen der jeweiligen Werke der Architekten meist kontrovers ausfallen, ist unvermeidlich, da es sich nicht nur um einen Wettbewerb von Talent und Kompetenz handelt, sondern auch um die Gültigkeit der individuellen Wertesysteme.
@@ -38,3 +37,4 @@ Nach Vitruv (De Architectura) beruht Architektur auf drei Prinzipien: Stabilitä
 Dabei muss allen drei Kategorien gleichermaßen und gleichwertig Rechnung getragen werden.
 Sie sollen einerseits das architektonische Entwerfen bestimmen, andererseits als Kriterien zur Beurteilung der fertigen Gebäude dienen.
 Darüber hinaus definiert Vitruv sechs Grundbegriffe des Faches Architektur: „ordinatio“, „dispositio“, „eurythmia“, „symmetria“, „decor“ und „distributio“.
+„Ordinatio“, „eurythmia“ und „symmetria“ beziehen sich dabei auf die Proportionierung des Gebäudes.
