@@ -11,8 +11,8 @@ ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
-from llm_core.engine import KognitivesModell
-from llm_core.types import Verbindung
+from llm_core.engine import KognitivesModell  # noqa: E402
+from llm_core.types import Verbindung  # noqa: E402
 
 
 def _format_memory_event(result: dict) -> str:

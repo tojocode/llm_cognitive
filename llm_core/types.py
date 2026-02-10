@@ -19,7 +19,6 @@ class Konzept:
     labels: List[str] = field(default_factory=list)
     semantische_features: List[str] = field(default_factory=list)
     verbindungen: List[Verbindung] = field(default_factory=list)
-    aktivierung: float = 0.0
     letzte_aktivierung: datetime = field(default_factory=datetime.now)
 
 
@@ -28,7 +27,6 @@ class WMItem:
     id: str
     a: float
     role: str = "CONTEXT"
-    age: int = 0
 
 
 @dataclass

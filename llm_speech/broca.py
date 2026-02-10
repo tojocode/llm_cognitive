@@ -39,7 +39,7 @@ class BrocaMixin:
         k = self.konzepte.get(kid)
         if not k or not k.labels:
             return kid
-        labels = [l for l in k.labels if l]
+        labels = [lab for lab in k.labels if lab]
         if not labels:
             return kid
         def score(lab: str) -> Tuple[int, int]:

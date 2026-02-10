@@ -432,7 +432,7 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
         items = sorted(cues.items(), key=lambda x: x[1], reverse=True)[: self.wm_seed]
         for i, (kid, a) in enumerate(items):
             role = "FOCUS" if i < 2 else "CONTEXT"
-            self.wm.append(WMItem(id=kid, a=a, role=role, age=0))
+            self.wm.append(WMItem(id=kid, a=a, role=role))
 
     def _wm_refresh(self, act: Dict[str, float]):
         candidates = sorted(act.items(), key=lambda x: x[1], reverse=True)
@@ -442,7 +442,7 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
         used = set()
 
         for k, v in candidates[:2]:
-            new_wm.append(WMItem(id=k, a=v, role="FOCUS", age=0))
+            new_wm.append(WMItem(id=k, a=v, role="FOCUS"))
             used.add(k)
 
         for k, v in candidates[2:]:
@@ -450,7 +450,7 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
                 break
             if k in used:
                 continue
-            new_wm.append(WMItem(id=k, a=v, role="CONTEXT", age=0))
+            new_wm.append(WMItem(id=k, a=v, role="CONTEXT"))
             used.add(k)
 
         self.wm = new_wm
@@ -538,7 +538,6 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
         for w in self.wm:
             act[w.id] = max(act.get(w.id, 0.0), w.a)
             if w.id in self.konzepte:
-                self.konzepte[w.id].aktivierung = act[w.id]
                 self.konzepte[w.id].letzte_aktivierung = datetime.now()
 
         for tick in range(self.ticks):
@@ -584,7 +583,6 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
             for kid, val in nxt.items():
                 if kid not in self.konzepte:
                     self.konzepte[kid] = Konzept(id=kid, labels=[kid])
-                self.konzepte[kid].aktivierung = val
                 self.konzepte[kid].letzte_aktivierung = now
 
             act = nxt
@@ -600,7 +598,6 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
         for w in self.wm:
             act[w.id] = max(act.get(w.id, 0.0), w.a)
             if w.id in self.konzepte:
-                self.konzepte[w.id].aktivierung = act[w.id]
                 self.konzepte[w.id].letzte_aktivierung = datetime.now()
 
         prev_focus = self.wm[0].id if self.wm else ""
@@ -683,7 +680,6 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
             for kid, val in act.items():
                 if kid not in self.konzepte:
                     self.konzepte[kid] = Konzept(id=kid, labels=[kid])
-                self.konzepte[kid].aktivierung = val
                 self.konzepte[kid].letzte_aktivierung = now
 
             self._wm_refresh(act)
