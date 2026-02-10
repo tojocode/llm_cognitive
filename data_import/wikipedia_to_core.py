@@ -40,63 +40,75 @@ def _build_clean_lexikon(engine: KognitivesModell) -> tuple[dict, dict]:
         "vor", "wegen", "gegen", "während", "waehrend", "wenn", "weil", "dass",
         "was", "wie", "warum", "wieso", "weshalb", "welche", "welcher", "welches",
     }
+    stop_verbs = {
+        "ist", "sind", "war", "wurde", "werden", "behandelt", "gilt", "hat", "haben",
+        "beschreibt", "besteht", "gehört", "lebt", "kommt", "geht", "dient", "zeigt",
+        "gibt", "führt", "steht", "liegt", "heißt", "heisst",
+    }
     lex = {}
     stats = {"candidates": 0, "added": 0, "skipped": 0, "collisions": 0}
+
+    def _add_alias(raw: str, cid: str) -> bool:
+        alias = (raw or "").strip()
+        if not alias:
+            return False
+        if "," in alias:
+            alias = alias.split(",", 1)[0].strip()
+        if "(" in alias:
+            alias = alias.split("(", 1)[0].strip()
+        if not alias:
+            return False
+        if "_" in alias:
+            return False
+
+        is_acronym = len(alias) == 2 and alias.isalpha() and alias.isupper()
+        if (len(alias) < 3 and not is_acronym) or len(alias) > 60:
+            return False
+        if alias and not alias[0].isalpha():
+            return False
+
+        norm = engine._norm_label(alias)
+        if not norm or norm.isdigit():
+            return False
+
+        tokens = norm.split()
+        if not tokens or len(tokens) > 3:
+            return False
+        if tokens[0] in stop_first:
+            return False
+        if any(t in stop_verbs for t in tokens):
+            return False
+        if any(len(t) < 2 for t in tokens):
+            return False
+
+        if norm in lex:
+            stats["collisions"] += 1
+            return False
+
+        lex[norm] = cid
+        stats["added"] += 1
+        return True
 
     for cid in sorted(engine.konzepte.keys()):
         labels = engine.konzepte[cid].labels or []
         uniq_labels = sorted(set(labels), key=lambda x: (len(x), x))
         for lab in uniq_labels:
-            alias = lab.strip()
-            if "," in alias:
-                alias = alias.split(",", 1)[0].strip()
-            if "(" in alias:
-                alias = alias.split("(", 1)[0].strip()
-            if not alias:
-                stats["skipped"] += 1
-                continue
-
-            if "_" in alias:
-                stats["skipped"] += 1
-                continue
-            is_acronym = len(alias) == 2 and alias.isalpha() and alias.isupper()
-            if (len(alias) < 3 and not is_acronym) or len(alias) > 60:
-                stats["skipped"] += 1
-                continue
-            if alias and not alias[0].isalpha():
-                stats["skipped"] += 1
-                continue
-
             stats["candidates"] += 1
-            norm = engine._norm_label(alias)
-            if not norm:
-                stats["skipped"] += 1
+            if _add_alias(lab, cid):
                 continue
+            stats["skipped"] += 1
 
-            if norm.isdigit():
-                stats["skipped"] += 1
-                continue
-
-            tokens = norm.split()
-            if not tokens:
-                stats["skipped"] += 1
-                continue
-            if len(tokens) > 3:
-                stats["skipped"] += 1
-                continue
-            if tokens[0] in stop_first:
-                stats["skipped"] += 1
-                continue
-            if any(len(t) < 2 for t in tokens):
-                stats["skipped"] += 1
-                continue
-
-            if norm in lex:
-                stats["collisions"] += 1
-                continue
-
-            lex[norm] = cid
-            stats["added"] += 1
+        # Zusatz: Alias aus Concept-ID (underscores -> spaces)
+        if "_" in cid:
+            alias_from_id = cid.replace("_", " ")
+            ok = _add_alias(alias_from_id, cid)
+            if ok:
+                # Acronym aus Mehrwort-Alias (z.B. "Künstliche Intelligenz" -> "KI")
+                parts = [p for p in alias_from_id.split(" ") if p]
+                if 2 <= len(parts) <= 4:
+                    acronym = "".join([p[0] for p in parts if p and p[0].isalpha()]).upper()
+                    if 2 <= len(acronym) <= 4:
+                        _add_alias(acronym, cid)
 
     return lex, stats
 

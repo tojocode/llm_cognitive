@@ -1,4 +1,4 @@
-{"t": "meta", "format": "memory_jsonl", "encoding": "utf-8", "umlaute": true, "created_at": "2026-02-10T20:06:19", "counts": {"nodes": 563, "edges": 333}}
+{"t": "meta", "format": "memory_jsonl", "encoding": "utf-8", "umlaute": true, "created_at": "2026-02-10T20:18:40", "counts": {"nodes": 561, "edges": 333}}
 {"t": "node", "id": "-", "features": ["gelernt"], "labels": ["-"]}
 {"t": "node", "id": "-_Übernommen_Auch", "features": ["gelernt"], "labels": ["-_Übernommen_Auch"]}
 {"t": "node", "id": "/", "features": ["gelernt"], "labels": ["/"]}
@@ -22,7 +22,6 @@
 {"t": "node", "id": "Allgemein_Kann_Man", "features": ["Volk", "gelernt"], "labels": ["Allgemein", "Allgemein_Kann_Man"]}
 {"t": "node", "id": "Altertum_Folgende_Epoche", "features": ["Mittelalter", "gelernt"], "labels": ["Altertum", "Altertum folgende Epoche der europäischen Geschichte", "Altertum_Folgende_Epoche"]}
 {"t": "node", "id": "Altgriechisch", "features": ["gelernt"], "labels": ["Altgriechisch", "altgriechisch"]}
-{"t": "node", "id": "Altgriechische_Adjektiv_Μουσικός", "features": ["In", "gelernt"], "labels": ["Altgriechische_Adjektiv_Μουσικός", "Das altgriechische Adjektiv μουσικός mousikós"]}
 {"t": "node", "id": "Anderen", "features": ["gelernt"], "labels": ["Anderen", "anderen", "es anderen kaum noch möglich, ihre Vormacht umzustoßen"]}
 {"t": "node", "id": "Anderen_Kleinkörpern", "features": ["gelernt"], "labels": ["Anderen_Kleinkörpern", "anderen Kleinkörpern"]}
 {"t": "node", "id": "Anfang", "features": ["gelernt"], "labels": ["Anfang", "und wurde Anfang des 17"]}
@@ -527,7 +526,6 @@
 {"t": "node", "id": "Wort_Architektur", "features": ["Sinne", "gelernt"], "labels": ["Das Wort Architektur", "Wort", "Wort_Architektur", "demnach die Herkunft vom akkadischen oder phönizischen Wort erebu bzw"]}
 {"t": "node", "id": "Wort_Literatur", "features": ["Erst", "gelernt"], "labels": ["Das Wort Literatur", "Wort", "Wort_Literatur", "demnach die Herkunft vom akkadischen oder phönizischen Wort erebu bzw"]}
 {"t": "node", "id": "Wort_Oder_Glottonym", "features": ["gelernt"], "labels": ["Das Wort oder Glottonym deutsch", "Wort", "Wort_Oder_Glottonym", "demnach die Herkunft vom akkadischen oder phönizischen Wort erebu bzw"]}
-{"t": "node", "id": "Wort_„Recht“", "features": ["Aus_Dem_Größten", "gelernt"], "labels": ["Das Wort „Recht“", "Wort", "Wort_„Recht“"]}
 {"t": "node", "id": "Wortbildung", "features": ["gelernt"], "labels": ["Wortbildung"]}
 {"t": "node", "id": "Wurde", "features": ["gelernt"], "labels": ["Wurde", "wurde"]}
 {"t": "node", "id": "Wälder", "features": ["gelernt"], "labels": ["Wälder"]}
