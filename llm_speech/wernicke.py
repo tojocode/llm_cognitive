@@ -446,7 +446,7 @@ class WernickeMixin:
             t0 = re.sub(r"[^\wäöüß\-]+", "", t, flags=re.IGNORECASE)
             if len(t0) >= 3 and t0.lower() not in stop:
                 return t0
-        return p
+        return ""
 
     def _head_alias(self, phrase: str) -> str:
         """

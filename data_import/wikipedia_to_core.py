@@ -165,6 +165,11 @@ def _prune_engine(engine: KognitivesModell) -> dict:
         deg_in = incoming.get(cid, 0)
         degree = deg_out + deg_epi + deg_in
 
+        base = re.split(r"[_\-]", cid.lower(), maxsplit=1)[0]
+        if base in stop_first:
+            to_drop.add(cid)
+            continue
+
         if is_bad_id(cid) and degree <= 1:
             to_drop.add(cid)
             continue

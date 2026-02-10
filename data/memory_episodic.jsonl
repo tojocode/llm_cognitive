@@ -1,41 +1,35 @@
-{"t": "meta", "format": "memory_jsonl", "encoding": "utf-8", "umlaute": true, "created_at": "2026-02-10T19:35:01", "counts": {"nodes": 635, "edges": 416}}
-{"t": "node", "id": "-", "features": ["gelernt"], "labels": ["-", "- während die Astronomie auf empirischer Basis die Beschaffenheit, Bewegungen und Beziehungen von Himmelskörpern untersucht"]}
-{"t": "node", "id": "-_Übernommen_Auch", "features": ["gelernt"], "labels": ["- übernommen auch von vielen alternativen Therapeuten - die ontologischen Vorstellungen früherer Jahrhunderte weitgehend abgelöst", "-_Übernommen_Auch"]}
-{"t": "node", "id": "/", "features": ["gelernt"], "labels": ["/", "/ ohne welche das Land in seinem Esse [Sein] nicht bleiben mag“"]}
-{"t": "node", "id": "2020_Hat_Erstmals", "features": ["Dabei", "gelernt"], "labels": ["2020 hat erstmals die spiegellose digitale Systemkamera die digitale Spiegelreflexkamera überholt und", "2020_Hat_Erstmals"]}
-{"t": "node", "id": "Aber", "features": ["gelernt"], "labels": ["Aber", "aber", "aber in der Informatik nicht zwingend das Internet, sondern es gibt auch diverse andere NetzwerkInfrastrukturen", "aber insbesondere seit Beginn des 20"]}
-{"t": "node", "id": "Aber_Auch_Akademische", "features": ["gelernt"], "labels": ["Aber_Auch_Akademische", "aber auch akademische Mediziner früherer Zeit mit ihren oft erfolglosen Krankheitstheorien nicht hatten"]}
+{"t": "meta", "format": "memory_jsonl", "encoding": "utf-8", "umlaute": true, "created_at": "2026-02-10T20:06:19", "counts": {"nodes": 563, "edges": 333}}
+{"t": "node", "id": "-", "features": ["gelernt"], "labels": ["-"]}
+{"t": "node", "id": "-_Übernommen_Auch", "features": ["gelernt"], "labels": ["-_Übernommen_Auch"]}
+{"t": "node", "id": "/", "features": ["gelernt"], "labels": ["/"]}
+{"t": "node", "id": "2020_Hat_Erstmals", "features": ["Dabei", "gelernt"], "labels": ["2020_Hat_Erstmals"]}
+{"t": "node", "id": "Aber", "features": ["gelernt"], "labels": ["Aber", "aber", "aber insbesondere seit Beginn des 20"]}
+{"t": "node", "id": "Aber_Auch_Akademische", "features": ["gelernt"], "labels": ["Aber_Auch_Akademische"]}
 {"t": "node", "id": "Aber_Auch_Viele", "features": ["gelernt"], "labels": ["Aber_Auch_Viele", "aber auch viele psychische Gesundheitsschäden"]}
 {"t": "node", "id": "Aber_Relativ_Ausgeprägte", "features": ["gelernt"], "labels": ["Aber_Relativ_Ausgeprägte", "aber relativ ausgeprägte Klimaanomalie"]}
 {"t": "node", "id": "Abgeleitet", "features": ["gelernt"], "labels": ["Abgeleitet", "abgeleitet", "abgeleitet aus atl und Xolotl und bedeutet etwa „Wassermonster“"]}
 {"t": "node", "id": "Abgrenzung_Erfolgt_Auch", "features": ["-", "gelernt"], "labels": ["Abgrenzung", "Abgrenzung_Erfolgt_Auch", "Die Abgrenzung erfolgt auch, da die Astrologie eine Pseudowissenschaft"]}
 {"t": "node", "id": "Abzug", "features": ["Ergebnis", "gelernt"], "labels": ["Abzug"]}
 {"t": "node", "id": "Acht_Sie_Umkreisenden", "features": ["gelernt"], "labels": ["Acht_Sie_Umkreisenden", "acht sie umkreisenden Planeten"]}
-{"t": "node", "id": "Adverb", "features": ["gelernt"], "labels": ["Adverb", "schon im gotischen Adverb þiudiskō belegt, mit dem der altgriechische Ausdruck ethnikṓs ‚heidnisch‘ übersetzt wurde"]}
+{"t": "node", "id": "Adverb", "features": ["gelernt"], "labels": ["Adverb"]}
 {"t": "node", "id": "Ahd", "features": ["gelernt"], "labels": ["Ahd", "ahd"]}
-{"t": "node", "id": "Alle_Begleiterscheinungen", "features": ["Vulkanismus", "gelernt"], "labels": ["Alle", "Alle Begleiterscheinungen, die mit dem Aufstieg und Austritt der glutflüssigen Gesteinsschmelze verbunden sind,", "Alle_Begleiterscheinungen"]}
+{"t": "node", "id": "Alle_Begleiterscheinungen", "features": ["Vulkanismus", "gelernt"], "labels": ["Alle", "Alle_Begleiterscheinungen"]}
 {"t": "node", "id": "Allel", "features": ["gelernt"], "labels": ["Allel", "als Allel"]}
-{"t": "node", "id": "Allem", "features": ["gelernt"], "labels": ["Allem", "vor allem die durch Atomik und Molekülphysik und Quantenchemie markierte Grenze zur Chemie fließend"]}
+{"t": "node", "id": "Allem", "features": ["gelernt"], "labels": ["Allem", "allem"]}
 {"t": "node", "id": "Allen_Fossilen_Energieträgern", "features": ["Gemeinsam", "gelernt"], "labels": ["Allen", "Allen fossilen Energieträgern", "Allen_Fossilen_Energieträgern"]}
 {"t": "node", "id": "Allerdings", "features": ["Baukunst", "gelernt"], "labels": ["Allerdings"]}
 {"t": "node", "id": "Allerdings_Je_Den", "features": ["gelernt"], "labels": ["Allerdings_Je_Den", "allerdings je den Stein der Weisen oder das Lebenselixier entdeckt"]}
-{"t": "node", "id": "Allgemein_Kann_Man", "features": ["Volk", "gelernt"], "labels": ["Allgemein", "Allgemein kann man die Namen der deutschen Sprache aber aufgrund ihrer Herkunft in sechs Gruppen zusammenfassen: Diese Gruppe wird zunächst von den anderen germanischen Sprachen gebildet: Daneben erscheinen Ableitungen vom Wort „deutsch“ auch in einigen romanischen Sprachen: Darüber hinaus: Chinesisch: déyǔ 德語 / 德语 oder déyìzhìyǔ 德意志語 / 德意志语 Vietnamesisch: tiếng Đức oder Đức ngữ Japanisch: doitsugo ドイツ語 oder 独逸語 Koreanisch: toich'wieo 도이취어, sonst dogileo 독일어 Latein: theodisca Nordsamisch: duiskkagiella oder tuiskkagiella Taiwanisch: dikgok ue Mit „Sachsen“", "Allgemein_Kann_Man"]}
-{"t": "node", "id": "Als_Berühmtester_Olympionike", "features": ["Koroibos", "gelernt"], "labels": ["Als", "Als berühmtester Olympionike der Antike gilt der Ringer Milon von Kroton, der erste namentlich bekannte", "Als_Berühmtester_Olympionike"]}
-{"t": "node", "id": "Als_Epochenbezeichnung_Im", "features": ["gelernt"], "labels": ["Als", "Als Epochenbezeichnung im Sinne geschichtlicher Periodisierung", "Als_Epochenbezeichnung_Im"]}
-{"t": "node", "id": "Als_Geowissenschaften_Zusammengefasst", "features": ["gelernt"], "labels": ["Als_Geowissenschaften_Zusammengefasst", "die als Geowissenschaften zusammengefasst werden"]}
-{"t": "node", "id": "Als_Markantesten_Gegensatz", "features": ["Autokratie", "gelernt"], "labels": ["Als", "Als markantesten Gegensatz zur Demokratie und geradezu als ihr Gegenteil", "Als_Markantesten_Gegensatz"]}
-{"t": "node", "id": "Als_Vielseitigste_Fotoapparatbauform", "features": ["gelernt"], "labels": ["Als", "Als vielseitigste Fotoapparatbauform", "Als_Vielseitigste_Fotoapparatbauform"]}
+{"t": "node", "id": "Allgemein_Kann_Man", "features": ["Volk", "gelernt"], "labels": ["Allgemein", "Allgemein_Kann_Man"]}
 {"t": "node", "id": "Altertum_Folgende_Epoche", "features": ["Mittelalter", "gelernt"], "labels": ["Altertum", "Altertum folgende Epoche der europäischen Geschichte", "Altertum_Folgende_Epoche"]}
-{"t": "node", "id": "Altgriechisch", "features": ["gelernt"], "labels": ["Altgriechisch", "auf altgriechisch δημοκρατία zurückzuführen, ein Kompositum aus δῆμος dḗmos ‚Volk‘ und κράτος krátos ‚Kraft; Macht; Herrschaft‘"]}
+{"t": "node", "id": "Altgriechisch", "features": ["gelernt"], "labels": ["Altgriechisch", "altgriechisch"]}
 {"t": "node", "id": "Altgriechische_Adjektiv_Μουσικός", "features": ["In", "gelernt"], "labels": ["Altgriechische_Adjektiv_Μουσικός", "Das altgriechische Adjektiv μουσικός mousikós"]}
-{"t": "node", "id": "Am_Bedeutendsten", "features": ["Förderband", "gelernt"], "labels": ["Am bedeutendsten", "Am_Bedeutendsten"]}
 {"t": "node", "id": "Anderen", "features": ["gelernt"], "labels": ["Anderen", "anderen", "es anderen kaum noch möglich, ihre Vormacht umzustoßen"]}
 {"t": "node", "id": "Anderen_Kleinkörpern", "features": ["gelernt"], "labels": ["Anderen_Kleinkörpern", "anderen Kleinkörpern"]}
 {"t": "node", "id": "Anfang", "features": ["gelernt"], "labels": ["Anfang", "und wurde Anfang des 17"]}
 {"t": "node", "id": "Anglizismus", "features": ["gelernt"], "labels": ["Anglizismus"]}
 {"t": "node", "id": "Anhäufung_Von_Tausenden", "features": ["gelernt"], "labels": ["Anhäufung", "Anhäufung_Von_Tausenden", "einer Anhäufung von tausenden Asteroiden"]}
 {"t": "node", "id": "Anliegen", "features": ["gelernt"], "labels": ["Anliegen", "heute das zentrale Anliegen der Chemie"]}
-{"t": "node", "id": "Annäherung", "features": ["gelernt"], "labels": ["Annäherung", "in vielen Unternehmen eine Annäherung über möglichst konkrete und verständliche Kriterien notwendig"]}
+{"t": "node", "id": "Annäherung", "features": ["gelernt"], "labels": ["Annäherung"]}
 {"t": "node", "id": "Architekturgeschichte", "features": ["Bestandteil", "gelernt"], "labels": ["Architekturgeschichte", "Die Architekturgeschichte"]}
 {"t": "node", "id": "Architekturtheorie", "features": ["gelernt"], "labels": ["Architekturtheorie", "bereits Architekturtheorie"]}
 {"t": "node", "id": "Art", "features": ["gelernt"], "labels": ["Art", "die Art inzwischen verschwunden"]}
@@ -43,54 +37,45 @@
 {"t": "node", "id": "Astronomie_Oder_Sternkunde", "features": ["Wissenschaft", "gelernt"], "labels": ["Astronomie", "Astronomie_Oder_Sternkunde", "Die Astronomie oder Sternkunde"]}
 {"t": "node", "id": "Astronomische_Symbol_Des", "features": ["gelernt", "♇"], "labels": ["Astronomische_Symbol_Des", "Das astronomische Symbol des Pluto"]}
 {"t": "node", "id": "Atomen", "features": ["gelernt"], "labels": ["Atomen"]}
-{"t": "node", "id": "Auch", "features": ["gelernt"], "labels": ["Auch", "auch", "auch auf die Bedeutung der geisteswissenschaftlichen Anteile in der Psychologie zu verweisen", "er auch für die Sicherung von Trinkwasser sowie von Energierohstoffen wie Erdöl bzw"]}
+{"t": "node", "id": "Auch", "features": ["gelernt"], "labels": ["Auch", "auch"]}
 {"t": "node", "id": "Auch_Die_Rehabilitation", "features": ["Aufgabe", "gelernt"], "labels": ["Auch", "Auch die Rehabilitation der körperlichen und geistigen Fähigkeiten der Patienten", "Auch_Die_Rehabilitation"]}
-{"t": "node", "id": "Auch_Eine_Negative", "features": ["Etwa", "gelernt"], "labels": ["Auch", "Auch eine negative Antwort, der Beweis der Unlösbarkeit eines Problems, kann die Mathematik voranbringen: So", "Auch_Eine_Negative"]}
+{"t": "node", "id": "Auch_Eine_Negative", "features": ["Etwa", "gelernt"], "labels": ["Auch", "Auch_Eine_Negative"]}
 {"t": "node", "id": "Auch_In_Der", "features": ["Trennung", "gelernt"], "labels": ["Auch", "Auch in der modernen Wirbeltierpaläontologie", "Auch_In_Der"]}
-{"t": "node", "id": "Auf_Der_Erde", "features": ["Sie", "gelernt"], "labels": ["Auf", "Auf der Erde", "Auf_Der_Erde", "auf altgriechisch δημοκρατία zurückzuführen, ein Kompositum aus δῆμος dḗmos ‚Volk‘ und κράτος krátos ‚Kraft; Macht; Herrschaft‘"]}
-{"t": "node", "id": "Auf_Diese_Massenkompatibilität", "features": ["gelernt"], "labels": ["Auf_Diese_Massenkompatibilität", "auf diese Massenkompatibilität des Films früh reagiert"]}
 {"t": "node", "id": "Aufgabe", "features": ["gelernt"], "labels": ["Aufgabe", "Aufgabe der Medizin"]}
-{"t": "node", "id": "Aufgr_Und_Des", "features": ["Kern", "gelernt"], "labels": ["Aufgr", "Aufgr und des so implizierten normativen Aspektes bleibt jede „inhaltliche“ Bestimmung von Architektur kontrovers und", "Aufgr und des vorrangig mit der Elektromobilität in Verbindung stehenden Anstiegs der Nachfrage nach Lithium stehen Fortschritten in der Akkumulatorentechnik jedoch zunehmend Preisanstiege bei den Rohstoffen entgegen, so", "Aufgr_Und_Des"]}
+{"t": "node", "id": "Aufgr_Und_Des", "features": ["Kern", "gelernt"], "labels": ["Aufgr", "Aufgr_Und_Des"]}
 {"t": "node", "id": "Aufgr_Und_Dieses", "features": ["Sie", "gelernt"], "labels": ["Aufgr", "Aufgr und dieses Aufbaus der mathematischen Theorien", "Aufgr_Und_Dieses"]}
 {"t": "node", "id": "Aufwand_Für_Mittel", "features": ["Relativ", "gelernt"], "labels": ["Aufwand", "Aufwand_Für_Mittel", "Der Aufwand für Mittel und Ausrüstung"]}
-{"t": "node", "id": "Aus_Dem_Größten", "features": ["Art", "gelernt"], "labels": ["Aus", "Aus dem größten Teil des ursprünglichen Areals, etwa dem Texcocound dem ZumpangoSee,", "Aus_Dem_Größten", "aus der heutigen Mathematik ebenfalls nicht mehr wegzudenken, auch wenn sie durch die Paradoxien des naiven Mengenbegriffs zunächst deutlich machte, auf welch unsicherem Fundament die Mathematik vorher stand", "aus der indogermanischen Wurzel *h₃reĝ-, „aufrichten, gerade richten“ entstanden und somit aus etymologischer Sicht moralisch konnotiert"]}
-{"t": "node", "id": "Aus_Der_Ursprünglichen", "features": ["Macht", "gelernt"], "labels": ["Aus", "Aus der ursprünglichen Wortbedeutung von Demokratie abgeleitet und um das Objekt der Herrschaftsausübung logisch erweitert folgert Giovanni Sartori: „Demokratie", "Aus_Der_Ursprünglichen"]}
-{"t": "node", "id": "Aus_Unzähligen_Gasen", "features": ["gelernt"], "labels": ["Aus_Unzähligen_Gasen", "aus unzähligen Gasen"]}
 {"t": "node", "id": "Ausdruck_Internet", "features": ["Anglizismus", "gelernt"], "labels": ["Ausdruck", "Ausdruck_Internet", "Der Ausdruck Internet"]}
 {"t": "node", "id": "Ausdruck_Psychologie", "features": ["Wortbildung", "gelernt"], "labels": ["Ausdruck", "Ausdruck_Psychologie", "Der Ausdruck Psychologie"]}
 {"t": "node", "id": "Ausgenommen_Davon", "features": ["Konservierung", "gelernt"], "labels": ["Ausgenommen", "Ausgenommen davon", "Ausgenommen_Davon"]}
 {"t": "node", "id": "Autokratie", "features": ["gelernt"], "labels": ["Autokratie", "Sartori", "Sartori die Autokratie"]}
 {"t": "node", "id": "Außerdem", "features": ["Minderheitensprache", "Strom", "Verbrennung", "gelernt"], "labels": ["Außerdem"]}
 {"t": "node", "id": "Axolotl", "features": ["Schwanzlurch", "gelernt"], "labels": ["Axolotl", "Der Axolotl"]}
-{"t": "node", "id": "Ballsportart", "features": ["gelernt"], "labels": ["Ballsportart", "Ballsportart, bei der zwei Mannschaften mit dem Ziel gegeneinander antreten, mehr Tore als der Gegner zu erzielen und so das Spiel zu gewinnen"]}
+{"t": "node", "id": "Ballsportart", "features": ["gelernt"], "labels": ["Ballsportart"]}
 {"t": "node", "id": "Barbiere", "features": ["gelernt"], "labels": ["Barbiere", "die Barbiere"]}
-{"t": "node", "id": "Basketballspielen", "features": ["gelernt"], "labels": ["Basketballspielen", "und umfasst beispielsweise das Fußballen und Basketballspielen auf öffentlichen Plätzen, in Stadtparks, auf Bolzplätzen oder Hinterhöfen"]}
-{"t": "node", "id": "Baukunst", "features": ["Schwierig", "gelernt"], "labels": ["Baukunst", "Begriff", "Begriff für Formen der Herrschaftsorganisation auf der Grundlage der Partizipation bzw", "Der Begriff", "der Begriff Baukunst heute nicht mehr sehr scharf", "der deutsche Begriff stark von der Bedeutung des lateinischen ius beeinflusst, das ursprünglich die menschliche Ordnung gegenüber der überirdischen Ordnung bezeichnete", "die „Baukunst […] das wissende, genaue und großartige Spiel der Baukörper unter dem Licht“", "dieser Begriff des „modernen Sports“ umstritten, da die von Guttmann angeführten sieben Elemente auch bereits in früherer Zeit einzelne Sportarten charakterisierten"]}
-{"t": "node", "id": "Bedeutend", "features": ["gelernt"], "labels": ["Bedeutend", "bedeutend", "bedeutend, dass diese ursprünglich als Spiel angesehen wurden, losgelöst von der Erwerbstätigkeit oder irgendwelchen feindseligen, kriegerischen Auseinandersetzungen"]}
+{"t": "node", "id": "Basketballspielen", "features": ["gelernt"], "labels": ["Basketballspielen"]}
+{"t": "node", "id": "Baukunst", "features": ["Schwierig", "gelernt"], "labels": ["Baukunst", "Begriff", "Der Begriff", "der Begriff Baukunst heute nicht mehr sehr scharf"]}
+{"t": "node", "id": "Bedeutend", "features": ["gelernt"], "labels": ["Bedeutend", "bedeutend"]}
 {"t": "node", "id": "Bedeutung_Des_Internets", "features": ["gelernt"], "labels": ["Bedeutung", "Bedeutung_Des_Internets", "die Bedeutung des Internets nochmal verstärkt"]}
-{"t": "node", "id": "Bedeutungswandel", "features": ["gelernt"], "labels": ["Bedeutungswandel", "Begriff", "der Begriff musica bis zum entscheidenden Bedeutungswandel, der den modernen Musikbegriff einführte, nicht allein als „Musiktheorie“ zu verstehen, er ergibt sich in seiner Definitionsvielfalt erst aus der Auffassung einzelner Epochen, ihrer Klassifikationen und Differenzierungen"]}
-{"t": "node", "id": "Begriff", "features": ["Schwierig", "gelernt"], "labels": ["Begriff", "Begriff für Formen der Herrschaftsorganisation auf der Grundlage der Partizipation bzw", "Der Begriff", "der deutsche Begriff stark von der Bedeutung des lateinischen ius beeinflusst, das ursprünglich die menschliche Ordnung gegenüber der überirdischen Ordnung bezeichnete", "dieser Begriff des „modernen Sports“ umstritten, da die von Guttmann angeführten sieben Elemente auch bereits in früherer Zeit einzelne Sportarten charakterisierten"]}
-{"t": "node", "id": "Begriff_Der_Evolution", "features": ["gelernt"], "labels": ["Begriff", "Begriff_Der_Evolution", "der Begriff der Evolution eine erheblich Ausweitung in viele verschiedene Wissenschaftsbereiche erfahren"]}
+{"t": "node", "id": "Bedeutungswandel", "features": ["gelernt"], "labels": ["Bedeutungswandel", "Begriff"]}
+{"t": "node", "id": "Begriff", "features": ["Schwierig", "gelernt"], "labels": ["Begriff", "Der Begriff"]}
+{"t": "node", "id": "Begriff_Der_Evolution", "features": ["gelernt"], "labels": ["Begriff", "Begriff_Der_Evolution"]}
 {"t": "node", "id": "Begriff_Hat_Sich", "features": ["Tiefe", "gelernt"], "labels": ["Begriff", "Begriff_Hat_Sich", "Der Begriff hat sich im Laufe der Geschichte immer wieder gewandelt und"]}
 {"t": "node", "id": "Begriff_„vierte_Industrielle", "features": ["gelernt"], "labels": ["Begriff", "Begriff_„vierte_Industrielle", "den Begriff „vierte industrielle Revolution“ aufkommen lassen"]}
-{"t": "node", "id": "Begriffe", "features": ["gelernt"], "labels": ["Begriffe", "häufig die Bildung neuer geeigneter Begriffe nötig, teilweise auch solcher, die der unmittelbaren Anschauung nicht mehr zugänglich sind"]}
-{"t": "node", "id": "Bei_Dem_Griechischen", "features": ["Haben", "gelernt"], "labels": ["Bei_Dem_Griechischen", "bei dem griechischen Naturphilosophen Thales von Milet, der das Wasser als den Anfang - den Urgr und - aller Dinge"]}
-{"t": "node", "id": "Bei_Den_Nordamerikanischen", "features": ["Sprachgebrauch", "gelernt"], "labels": ["Bei", "Bei den nordamerikanischen Indianern Der Begriff „Medizin“ wird hier nicht im Sinne von Heilkunde oder Arznei gebraucht, sondern", "Bei_Den_Nordamerikanischen"]}
-{"t": "node", "id": "Bei_Der_Filmbasierten", "features": ["Schicht", "gelernt"], "labels": ["Bei", "Bei der filmbasierten Fotografie", "Bei_Der_Filmbasierten"]}
-{"t": "node", "id": "Bei_Vertretern_Des", "features": ["Häufig", "gelernt"], "labels": ["Bei", "Bei Vertretern des Rechtspositivismus, die nur gesetztes Recht als Recht anerkennen,", "Bei_Vertretern_Des"]}
+{"t": "node", "id": "Begriffe", "features": ["gelernt"], "labels": ["Begriffe"]}
 {"t": "node", "id": "Beide_Bahnen_Verlaufen", "features": ["Ekliptik", "gelernt"], "labels": ["Beide", "Beide Bahnen verlaufen nicht in derselben Ebene, die Ebene der Plutobahn", "Beide_Bahnen_Verlaufen"]}
-{"t": "node", "id": "Beispiel", "features": ["gelernt"], "labels": ["Beispiel", "Beispiel für einen sehr rasch verlaufenden, aber noch nicht abgeschlossenen Klimawandel"]}
+{"t": "node", "id": "Beispiel", "features": ["gelernt"], "labels": ["Beispiel"]}
 {"t": "node", "id": "Beispiel_Dafür", "features": ["gelernt", "Ätna"], "labels": ["Beispiel", "Beispiel_Dafür", "Ein Beispiel dafür"]}
-{"t": "node", "id": "Beispielsweise", "features": ["gelernt"], "labels": ["Beispielsweise", "beispielsweise", "es beispielsweise möglich, unterwegs neben der Mobiltelefonie auch SMS, MMS, E-Mails sowie, bei modernen Geräten, Videokonferenzen per UMTS oder InternetTelefonie mit WLAN über InternetZugriffspunkte zu nutzen"]}
-{"t": "node", "id": "Bekannt", "features": ["gelernt"], "labels": ["Bekannt", "bekannt", "bekannt für seine bahnbrechende Forschung in den Bereichen Zellbiologie, Entwicklungsbiologie und Genetik"]}
-{"t": "node", "id": "Beleg", "features": ["gelernt"], "labels": ["Beleg", "der erste Beleg aus dem kontinentalgermanischen Sprachgebiet, als in einer Anklage gegen den baierischen Herzog Tassilo III"]}
-{"t": "node", "id": "Besonders", "features": ["gelernt"], "labels": ["Besonders", "besonders", "der besonders in der englischsprachigen Geschichtsng und Frühgeschichtsforschung etablierte Begriff der „dunklen Jahrhunderte“, worunter allgemein Perioden fehlender oder in der Forschung noch nicht aufgearbeiteter schriftlicher bzw"]}
+{"t": "node", "id": "Beispielsweise", "features": ["gelernt"], "labels": ["Beispielsweise", "beispielsweise"]}
+{"t": "node", "id": "Bekannt", "features": ["gelernt"], "labels": ["Bekannt", "bekannt"]}
+{"t": "node", "id": "Beleg", "features": ["gelernt"], "labels": ["Beleg"]}
+{"t": "node", "id": "Besonders", "features": ["gelernt"], "labels": ["Besonders", "besonders"]}
 {"t": "node", "id": "Besonders_Im_Bergbau", "features": ["gelernt"], "labels": ["Besonders_Im_Bergbau", "der besonders im Bergbau Verwendung findet"]}
-{"t": "node", "id": "Bestandteil", "features": ["gelernt"], "labels": ["Bestandteil", "auch die molekulare Genetik ein zentraler Bestandteil der Evolutionsbiologie", "fester Bestandteil eines solchen demokratischen Systems, zu dem auch die freie Meinungsäußerung samt Pressefreiheit, die Möglichkeit friedlicher Regierungswechsel und der Minderheitenschutz gehören", "im Übrigen Bestandteil der Berufsordnungen", "zentraler Bestandteil der Kunstgeschichte"]}
-{"t": "node", "id": "Bestimmter_Ort_Auf", "features": ["Allel", "gelernt"], "labels": ["Bestimmter_Ort_Auf", "Ein bestimmter Ort auf einem Chromosom wird als Genlocus bezeichnet, die Variante einer DNA-Sequenz auf einem bestimmten Locus"]}
+{"t": "node", "id": "Bestandteil", "features": ["gelernt"], "labels": ["Bestandteil", "auch die molekulare Genetik ein zentraler Bestandteil der Evolutionsbiologie", "im Übrigen Bestandteil der Berufsordnungen", "zentraler Bestandteil der Kunstgeschichte"]}
+{"t": "node", "id": "Bestimmter_Ort_Auf", "features": ["Allel", "gelernt"], "labels": ["Bestimmter_Ort_Auf"]}
 {"t": "node", "id": "Beweis", "features": ["gelernt"], "labels": ["Beweis", "Beweis des Satzes"]}
-{"t": "node", "id": "Bezeichnung", "features": ["gelernt"], "labels": ["Bezeichnung", "Die Bezeichnung", "außerdem die Bezeichnung für das Teilgebiet der Informatik, das sich mit der Entwicklung und Erforschung von Software und Methoden befasst, die besagte Systeme hervorbringen", "und deren Bezeichnung in Deutschland ein Hochschulstudium im Hauptfach Psychologie voraussetzt, sind Psychologen"]}
-{"t": "node", "id": "Beziehung", "features": ["gelernt"], "labels": ["Beziehung", "die persönliche PatientArztBeziehung wesentlich, die immer dann entsteht, wenn jemand mit einem Gesundheitsproblem bei einem Arzt Hilfe sucht"]}
+{"t": "node", "id": "Bezeichnung", "features": ["gelernt"], "labels": ["Bezeichnung", "Die Bezeichnung"]}
+{"t": "node", "id": "Beziehung", "features": ["gelernt"], "labels": ["Beziehung"]}
 {"t": "node", "id": "Biologie_Oder_Historisch", "features": ["Wissenschaft", "gelernt"], "labels": ["Biologie", "Biologie oder historisch auch Lebenskunde", "Biologie_Oder_Historisch"]}
 {"t": "node", "id": "Bis", "features": ["gelernt"], "labels": ["Bis", "bis", "bis zu 24,88 % kleiner oder größer als die große Halbachse"]}
 {"t": "node", "id": "Boden_Eines_Ozeans", "features": ["Oberseite", "gelernt"], "labels": ["Boden", "Boden_Eines_Ozeans", "Der Boden eines Ozeans"]}
@@ -99,38 +84,35 @@
 {"t": "node", "id": "Bridge", "features": ["gelernt"], "labels": ["Bridge"]}
 {"t": "node", "id": "Bspw", "features": ["gelernt"], "labels": ["Bspw", "bspw"]}
 {"t": "node", "id": "Bürgerliche_Gesellschaft_Versucht", "features": ["gelernt"], "labels": ["Bürgerliche_Gesellschaft_Versucht", "die bürgerliche Gesellschaft versucht"]}
-{"t": "node", "id": "Carl_Friedrich_Von", "features": ["Wissenschaft", "gelernt"], "labels": ["Carl", "Carl Friedrich von Weizsäcker hat einmal formuliert: „Philosophie", "Carl_Friedrich_Von", "bei Hans Carl von Carlowitz 1713 in seinem Werk Sylvicultura oeconomica nachgewiesen"]}
-{"t": "node", "id": "Carlowitz_Fragte", "features": ["/", "gelernt"], "labels": ["Carlowitz", "Carlowitz fragte, „wie eine sothane [solche] Conservation und Anbau des Holzes anzustellen / daß es eine continuirliche beständige und nachhaltende Nutzung gebe / weil es eine unentbehrliche Sache", "Carlowitz_Fragte"]}
+{"t": "node", "id": "Carl_Friedrich_Von", "features": ["Wissenschaft", "gelernt"], "labels": ["Carl", "Carl Friedrich von Weizsäcker hat einmal formuliert: „Philosophie", "Carl_Friedrich_Von"]}
+{"t": "node", "id": "Carlowitz_Fragte", "features": ["/", "gelernt"], "labels": ["Carlowitz", "Carlowitz_Fragte"]}
 {"t": "node", "id": "Ceres", "features": ["Etwa", "gelernt"], "labels": ["Ceres"]}
 {"t": "node", "id": "Chali", "features": ["gelernt"], "labels": ["Chali", "Rub", "die Rub alChali in Arabien, und die zweitgrößte ist die Taklamakan"]}
 {"t": "node", "id": "Chemie", "features": ["Naturwissenschaft", "gelernt"], "labels": ["Chemie"]}
-{"t": "node", "id": "DOSB_Schach_Als", "features": ["gelernt"], "labels": ["DOSB", "DOSB_Schach_Als", "der DOSB Schach als Sportart anerkannt; das Internationale Olympische Komitee sogar Schach"]}
-{"t": "node", "id": "Da_Das_Oben", "features": ["Darauf", "gelernt"], "labels": ["Da das oben genannte Handlungsprinzip das Gegenteil, nämlich die Ressourcenerhaltung trotz Nutzung zum Ziel hat,", "Da_Das_Oben"]}
-{"t": "node", "id": "Da_Mittels_Rein", "features": ["Auch", "gelernt"], "labels": ["Da mittels rein naturwissenschaftlichempirischer Forschung nicht alle psychologischen Phänomene erfasst werden können,", "Da_Mittels_Rein"]}
+{"t": "node", "id": "DOSB_Schach_Als", "features": ["gelernt"], "labels": ["DOSB", "DOSB_Schach_Als"]}
+{"t": "node", "id": "Da_Das_Oben", "features": ["Darauf", "gelernt"], "labels": ["Da_Das_Oben"]}
+{"t": "node", "id": "Da_Mittels_Rein", "features": ["Auch", "gelernt"], "labels": ["Da_Mittels_Rein"]}
 {"t": "node", "id": "Da_Sie_99", "features": ["Sie", "gelernt"], "labels": ["Da sie 99,86 % der Gesamtmasse des Systems hat,", "Da_Sie_99"]}
 {"t": "node", "id": "Da_So_Die", "features": ["gelernt"], "labels": ["Da_So_Die", "da so die Beine entlastet wurden"]}
-{"t": "node", "id": "Dabei", "features": ["Beziehung", "gelernt"], "labels": ["Dabei", "dabei", "dabei für den Nachweis und die Erschließung von Rohstoffen wie Metallerzen, industriell genutzten Mineralien sowie Baustoffen wie Sanden, Kiesen und Tonen sowie neuerdings Silizium für die Solarindustrie zuständig, ohne die eine weitere wirtschaftliche Entwicklung nicht möglich wäre", "dabei, anders als Wörter mit der Endung -archie, nicht die Zahl der jeweils Herrschenden, denen ein Amtsmonopol attestiert wird, sondern die Qualität des Regierungsprinzips", "dabei, diese abzulösen"]}
-{"t": "node", "id": "Daher", "features": ["gelernt"], "labels": ["Daher", "daher", "daher allein auf Naturbeobachtung angewiesen, was hier zur Abgrenzung gegen die Physik herangezogen wird"]}
-{"t": "node", "id": "Damit", "features": ["Wirtschaftssektoren", "gelernt"], "labels": ["Damit", "damit", "damit nach Australien der zweitkleinste Kontinent", "damit zugleich eines der wichtigsten Elemente der modernen Kultur überhaupt geworden"]}
+{"t": "node", "id": "Dabei", "features": ["Beziehung", "gelernt"], "labels": ["Dabei", "dabei", "dabei, diese abzulösen"]}
+{"t": "node", "id": "Daher", "features": ["gelernt"], "labels": ["Daher", "daher"]}
+{"t": "node", "id": "Damit", "features": ["Wirtschaftssektoren", "gelernt"], "labels": ["Damit", "damit", "damit nach Australien der zweitkleinste Kontinent"]}
 {"t": "node", "id": "Damit_Verbundene_Pflicht", "features": ["Unangefochten", "gelernt"], "labels": ["Damit_Verbundene_Pflicht", "Die damit verbundene Pflicht zur ärztlichen Aufklärung"]}
-{"t": "node", "id": "Darauf", "features": ["gelernt"], "labels": ["Darauf", "darauf", "darauf zu achten, dass die erste und die hinzugekommene Bedeutung zueinander nicht widerspruchsfrei sind"]}
+{"t": "node", "id": "Darauf", "features": ["gelernt"], "labels": ["Darauf", "darauf"]}
 {"t": "node", "id": "Darüber_Hinaus", "features": ["Auch", "gelernt"], "labels": ["Darüber", "Darüber hinaus", "Darüber_Hinaus"]}
-{"t": "node", "id": "Darüber_Hinaus_Gibt", "features": ["Werden", "gelernt"], "labels": ["Darüber", "Darüber hinaus gibt es verschiedene weitere Merkmale, die viele Dinosaurier gemeinsam haben, aber nicht als gemeinsam abgeleitete Merkmale", "Darüber_Hinaus_Gibt"]}
+{"t": "node", "id": "Darüber_Hinaus_Gibt", "features": ["Werden", "gelernt"], "labels": ["Darüber", "Darüber_Hinaus_Gibt"]}
 {"t": "node", "id": "Das", "features": ["Differenz", "gelernt"], "labels": ["Das"]}
-{"t": "node", "id": "Dass_Die_Bewertungen", "features": ["Unvermeidlich", "gelernt"], "labels": ["Dass", "Dass die Bewertungen der jeweiligen Werke der Architekten meist kontrovers ausfallen,", "Dass_Die_Bewertungen"]}
-{"t": "node", "id": "Dass_Im_Fach", "features": ["gelernt"], "labels": ["Dass_Im_Fach", "dass im Fach Biologie eine Vielfalt an Methoden"]}
-{"t": "node", "id": "Dass_Pluto_Der", "features": ["gelernt"], "labels": ["Dass_Pluto_Der", "dass Pluto der größte"]}
 {"t": "node", "id": "Dazu", "features": ["Begriffe", "gelernt"], "labels": ["Dazu"]}
 {"t": "node", "id": "Debatte_Über_Industrie", "features": ["gelernt"], "labels": ["Debatte", "Debatte_Über_Industrie", "Die Debatte über Industrie 4.0"]}
-{"t": "node", "id": "Definiert", "features": ["gelernt"], "labels": ["Definiert", "definiert", "definiert als eine im Menschen innerlich wirkende geistige Macht, die ihn antreibt, bestimmte Dinge zu tun oder zu unterlassen, die aber durch eine äußere Macht unterstützt werden muss, um ein gedeihliches Zusammenleben der Menschen zu erzielen"]}
+{"t": "node", "id": "Definiert", "features": ["gelernt"], "labels": ["Definiert", "definiert"]}
 {"t": "node", "id": "Definitionsgeschichte", "features": ["Musik", "gelernt"], "labels": ["Definitionsgeschichte", "Die Definitionsgeschichte"]}
 {"t": "node", "id": "Demgegenüber", "features": ["gelernt"], "labels": ["Demgegenüber", "demgegenüber", "demgegenüber seit dem 19"]}
-{"t": "node", "id": "Demnach", "features": ["gelernt"], "labels": ["Demnach", "demnach", "demnach eng mit der des Kuipergürtels verknüpft, der aus Resten der Bildung des äußeren Planetensystems besteht"]}
-{"t": "node", "id": "Demokratie", "features": ["Baukunst", "Begriff", "gelernt"], "labels": ["Demokratie", "Salzborn", "Salzborn Demokratie als „ein Verfahren der Legitimation, der Kontrolle und der Kritik politischer Herrschaft“"]}
+{"t": "node", "id": "Demnach", "features": ["gelernt"], "labels": ["Demnach", "demnach"]}
+{"t": "node", "id": "Demokratie", "features": ["Baukunst", "Begriff", "gelernt"], "labels": ["Demokratie", "Salzborn"]}
 {"t": "node", "id": "Denen_Er_„nichts", "features": ["gelernt"], "labels": ["Denen_Er_„nichts", "denen er „nichts Neues“ zu sagen hätte"]}
 {"t": "node", "id": "Dennoch", "features": ["Herbarts", "gelernt"], "labels": ["Dennoch"]}
 {"t": "node", "id": "Deren_Natürlichen_Satelliten", "features": ["gelernt"], "labels": ["Deren_Natürlichen_Satelliten", "deren natürlichen Satelliten"]}
-{"t": "node", "id": "Deshalb", "features": ["gelernt"], "labels": ["Deshalb", "deshalb", "deshalb nicht so geläufig, da Herbart vornehmlich als Begründer der wissenschaftlichen Pädagogik gilt"]}
+{"t": "node", "id": "Deshalb", "features": ["gelernt"], "labels": ["Deshalb", "deshalb"]}
 {"t": "node", "id": "Deutsch", "features": ["Muttersprache", "gelernt"], "labels": ["Deutsch"]}
 {"t": "node", "id": "Deutsche", "features": ["Sprache", "gelernt"], "labels": ["Das Deutsche", "Deutsche"]}
 {"t": "node", "id": "Deutsche_Nachhaltigkeitsstrategie_In", "features": ["gelernt", "Überschrieben"], "labels": ["Deutsche", "Deutsche_Nachhaltigkeitsstrategie_In", "Die Deutsche Nachhaltigkeitsstrategie in der Neuauflage von 2016"]}
@@ -140,9 +122,9 @@
 {"t": "node", "id": "Diese", "features": ["Meer", "gelernt"], "labels": ["Diese"]}
 {"t": "node", "id": "Diese_Bedeutungsfacette_Auch", "features": ["gelernt"], "labels": ["Diese_Bedeutungsfacette_Auch", "diese Bedeutungsfacette auch historische Gründe"]}
 {"t": "node", "id": "Diese_Definition", "features": ["Aber", "gelernt"], "labels": ["Diese Definition", "Diese_Definition"]}
-{"t": "node", "id": "Diese_Mit_Entsprechenden", "features": ["gelernt"], "labels": ["Diese_Mit_Entsprechenden", "diese mit entsprechenden „leichten“ Produktionen als „Massenware“ kommerziell für sich zu nutzen gewusst"]}
+{"t": "node", "id": "Diese_Mit_Entsprechenden", "features": ["gelernt"], "labels": ["Diese_Mit_Entsprechenden"]}
 {"t": "node", "id": "Diese_Vielfalt_An", "features": ["gelernt"], "labels": ["Diese Vielfalt an Betrachtungsobjekten", "Diese_Vielfalt_An"]}
-{"t": "node", "id": "Diese_Überprüfung_In", "features": ["Gebiet", "gelernt"], "labels": ["Diese Überprüfung in Form reproduzierbarer Messungen an gezielt gestalteten physikalischen Experimenten oder durch Beobachtung natürlicher Phänomene", "Diese_Überprüfung_In"]}
+{"t": "node", "id": "Diese_Überprüfung_In", "features": ["Gebiet", "gelernt"], "labels": ["Diese_Überprüfung_In"]}
 {"t": "node", "id": "Dieser_Abgrenzung_Gemäß", "features": ["System", "gelernt"], "labels": ["Dieser Abgrenzung gemäß", "Dieser_Abgrenzung_Gemäß"]}
 {"t": "node", "id": "Dieser_Analytische_Krankheitsbegriff", "features": ["gelernt"], "labels": ["Dieser analytische Krankheitsbegriff der wissenschaftlichen Medizin", "Dieser_Analytische_Krankheitsbegriff"]}
 {"t": "node", "id": "Dieser_Ansatz_Wurde", "features": ["Erfolgen", "gelernt"], "labels": ["Dieser Ansatz wurde zunächst als „experimentelle Philosophie“", "Dieser_Ansatz_Wurde"]}
@@ -150,27 +132,25 @@
 {"t": "node", "id": "Dieses_Phänomen", "features": ["Neotenie", "gelernt"], "labels": ["Dieses Phänomen", "Dieses_Phänomen"]}
 {"t": "node", "id": "Differenz", "features": ["gelernt"], "labels": ["Differenz", "die interne Differenz des Sports als Spektakel und Körperkult"]}
 {"t": "node", "id": "Diskurs_Über_KI", "features": ["Stark", "gelernt"], "labels": ["Der Diskurs über KI", "Diskurs", "Diskurs_Über_KI"]}
-{"t": "node", "id": "Disziplin_Der_Physik", "features": ["gelernt"], "labels": ["Die Disziplin der Physik in ihrer heutigen Gestalt", "Disziplin", "Disziplin_Der_Physik", "geisteswissenschaftliche Disziplin, die Architektur, Bildkünste und -medien sowie kunsthandwerkliche Objekte einschließlich ihrer Theorien und Praktiken vom Mittelalter bis in die Gegenwart untersucht"]}
+{"t": "node", "id": "Disziplin_Der_Physik", "features": ["gelernt"], "labels": ["Die Disziplin der Physik in ihrer heutigen Gestalt", "Disziplin", "Disziplin_Der_Physik"]}
 {"t": "node", "id": "Dort_Vorkommende_Magma", "features": ["Elementen", "gelernt"], "labels": ["Das dort vorkommende Magma", "Dort_Vorkommende_Magma"]}
 {"t": "node", "id": "Dualismus", "features": ["gelernt"], "labels": ["Dualismus", "der Dualismus von Seele und Körper, manchmal auch Seele, Geist und Körper"]}
 {"t": "node", "id": "Dunkelgrau", "features": ["gelernt"], "labels": ["Dunkelgrau", "dunkelgrau", "dunkelgrau oder braun marmoriert, bauchseits etwas heller"]}
-{"t": "node", "id": "Durch_Die_Anziehungskraft", "features": ["gelernt"], "labels": ["Durch_Die_Anziehungskraft", "die durch die Anziehungskraft der Sonne an diese gebunden sind"]}
-{"t": "node", "id": "Durch_Die_Varianz", "features": ["Formenreichtum", "gelernt"], "labels": ["Durch", "Durch die Varianz der Architekturauffassungen", "Durch_Die_Varianz"]}
 {"t": "node", "id": "Durchmesser_Der_Sonne", "features": ["Etwa", "gelernt"], "labels": ["Der Durchmesser der Sonne", "Durchmesser", "Durchmesser_Der_Sonne"]}
 {"t": "node", "id": "Durchsetzungsinitiative", "features": ["gelernt"], "labels": ["Durchsetzungsinitiative", "also eine rechtlich gewährleistete Durchsetzungsinitiative"]}
-{"t": "node", "id": "EU-Verordnung_Vermeiden", "features": ["Nicht", "gelernt"], "labels": ["EU-Verordnung", "EU-Verordnung vermeiden, indem ausschließlich bekannte technische Aspekte der in Frage kommenden Systeme zugrunde gelegt werden: Für jeden Quellcode kann eine eindeutige Aussage abgeleitet werden, ob eine Lernfähigkeit eingebaut", "EU-Verordnung_Vermeiden"]}
+{"t": "node", "id": "EU-Verordnung_Vermeiden", "features": ["Nicht", "gelernt"], "labels": ["EU-Verordnung", "EU-Verordnung_Vermeiden"]}
 {"t": "node", "id": "Ebenso_Wie_In", "features": ["Mathematik", "gelernt"], "labels": ["Ebenso", "Ebenso wie in diesem elementaren Beispiel beim individuellen Erlernen", "Ebenso_Wie_In"]}
-{"t": "node", "id": "Einige_Forschungsrichtungen_Ordnen", "features": ["Umstritten", "gelernt"], "labels": ["Einige", "Einige Forschungsrichtungen ordnen die Fotografie der Medienft und Kommunikationswissenschaft zu, auch diese Zuordnung", "Einige_Forschungsrichtungen_Ordnen"]}
+{"t": "node", "id": "Einige_Forschungsrichtungen_Ordnen", "features": ["Umstritten", "gelernt"], "labels": ["Einige", "Einige_Forschungsrichtungen_Ordnen"]}
 {"t": "node", "id": "Ekliptik", "features": ["gelernt"], "labels": ["Ekliptik", "stärker gegen die Ekliptik geneigt als die der Neptunbahn"]}
-{"t": "node", "id": "Element", "features": ["gelernt"], "labels": ["Element", "in einem abgeschlossenen System das Element, das die Energie durch Umwandlung aus einer anderen Energieform zur Verfügung stellt"]}
-{"t": "node", "id": "Elementen", "features": ["gelernt"], "labels": ["Elementen", "basaltisch und verarmt an Elementen, die sich schlecht in Kristallgitter integrieren lassen"]}
+{"t": "node", "id": "Element", "features": ["gelernt"], "labels": ["Element"]}
+{"t": "node", "id": "Elementen", "features": ["gelernt"], "labels": ["Elementen"]}
 {"t": "node", "id": "Ende_Des_Mittelalters", "features": ["gelernt", "Ähnlich"], "labels": ["Das Ende des Mittelalters", "Ende", "Ende_Des_Mittelalters"]}
-{"t": "node", "id": "Endlich", "features": ["gelernt"], "labels": ["Endlich", "endlich", "endlich anzuführen, dass dessen Ausübung nicht um des Gelderwerbs wegen geschieht“, so kann dies heute wegen des professionellen Sports nicht mehr als Merkmal angesehen werden"]}
+{"t": "node", "id": "Endlich", "features": ["gelernt"], "labels": ["Endlich", "endlich"]}
 {"t": "node", "id": "Endung_-kratia", "features": ["Dabei", "gelernt"], "labels": ["Die Endung -kratia", "Endung", "Endung_-kratia"]}
 {"t": "node", "id": "Energiebedarf_Der_Menschheit", "features": ["gelernt"], "labels": ["Energiebedarf", "Energiebedarf_Der_Menschheit", "der Energiebedarf der Menschheit zugenommen"]}
 {"t": "node", "id": "Energiequelle", "features": ["Element", "gelernt"], "labels": ["Die Energiequelle", "Energiequelle"]}
-{"t": "node", "id": "Energieträger", "features": ["gelernt"], "labels": ["Energieträger", "als fossiler Energieträger nur in begrenztem Umfang vorhanden und als Grundstoff für die chemische Industrie eigentlich zu schade zum Verbrennen", "heimischer Energieträger, sichert also Arbeitsplätze und vermindert die Importabhängigkeit"]}
-{"t": "node", "id": "Energieträger_Hingegen", "features": ["Mittel", "gelernt"], "labels": ["Der Energieträger hingegen", "Energieträger", "Energieträger_Hingegen", "als fossiler Energieträger nur in begrenztem Umfang vorhanden und als Grundstoff für die chemische Industrie eigentlich zu schade zum Verbrennen", "heimischer Energieträger, sichert also Arbeitsplätze und vermindert die Importabhängigkeit"]}
+{"t": "node", "id": "Energieträger", "features": ["gelernt"], "labels": ["Energieträger"]}
+{"t": "node", "id": "Energieträger_Hingegen", "features": ["Mittel", "gelernt"], "labels": ["Der Energieträger hingegen", "Energieträger", "Energieträger_Hingegen"]}
 {"t": "node", "id": "Entdeckung_Zahlreicher_Weiterer", "features": ["gelernt"], "labels": ["Die Entdeckung zahlreicher weiterer transneptunischer Objekte im Sonnensystem", "Entdeckung", "Entdeckung_Zahlreicher_Weiterer"]}
 {"t": "node", "id": "Entfernung", "features": ["gelernt"], "labels": ["Entfernung", "die minimale Entfernung von Venus und Erde"]}
 {"t": "node", "id": "Entscheidenden_Einfluss_Auf", "features": ["gelernt"], "labels": ["Einen entscheidenden Einfluss auf die Ausbildung eines Vulkans", "Entscheidenden_Einfluss_Auf"]}
@@ -178,65 +158,55 @@
 {"t": "node", "id": "Entstehungsgeschichte_Von_Pluto", "features": ["Demnach", "gelernt"], "labels": ["Die Entstehungsgeschichte von Pluto", "Entstehungsgeschichte", "Entstehungsgeschichte_Von_Pluto"]}
 {"t": "node", "id": "Entwickelte_Begriff_Der", "features": ["gelernt"], "labels": ["Entwickelte_Begriff_Der", "entwickelte Begriff der Demokratie"]}
 {"t": "node", "id": "Entwicklung", "features": ["gelernt"], "labels": ["Entwicklung"]}
-{"t": "node", "id": "Er", "features": ["Damit", "gelernt"], "labels": ["Er", "er in der Lage, folgende Frage zu verstehen und durch Probieren zu beantworten: „Welche Zahl muss man zu 3 addieren, um 5 zu erhalten?“ Die systematische Lösung solcher Aufgaben aber erfordert die Einführung eines neuen Konzepts: der Subtraktion"]}
-{"t": "node", "id": "Erdhülle", "features": ["gelernt"], "labels": ["Erdhülle", "auf die Erdhülle zurückzuführen: während der Entwicklung der biologischen Spezies bedienten sich diese besonders häufiger und gut zugänglicher Elemente"]}
+{"t": "node", "id": "Er", "features": ["Damit", "gelernt"], "labels": ["Er"]}
+{"t": "node", "id": "Erdhülle", "features": ["gelernt"], "labels": ["Erdhülle"]}
 {"t": "node", "id": "Erdteil", "features": ["gelernt"], "labels": ["Erdteil", "Erdteil, der sich über das westliche Fünftel der eurasischen Landmasse erstreckt"]}
 {"t": "node", "id": "Erfahrungswissenschaft", "features": ["gelernt"], "labels": ["Erfahrungswissenschaft", "praxisorientierte Erfahrungswissenschaft"]}
-{"t": "node", "id": "Erfassung", "features": ["gelernt"], "labels": ["Erfassung", "die Erfassung, Beschreibung und Erklärung der Strukturen, Prozesse und Wechselwirkungen in der Geosphäre"]}
-{"t": "node", "id": "Erfolgen", "features": ["gelernt"], "labels": ["Erfolgen", "und führte beim Verständnis vieler unterschiedlicher Naturvorgänge rasch zu bedeutenden Erfolgen"]}
-{"t": "node", "id": "Ergebnis", "features": ["gelernt"], "labels": ["Ergebnis", "das Ergebnis einer Kontaktkopie, einer Vergrößerung oder einer Ausbelichtung; dabei entsteht in der Regel ein Papierbild"]}
-{"t": "node", "id": "Erhitzen", "features": ["gelernt"], "labels": ["Erhitzen", "im engeren Sinne das Erhitzen einer Flüssigkeit bis zum und am Siedepunkt, im Weiteren das Garen oder Zubereiten von Lebensmitteln allgemein, unabhängig von der Zubereitungsart wie z"]}
-{"t": "node", "id": "Erkrankungen", "features": ["gelernt"], "labels": ["Erkrankungen", "heute ein psychotherapeutisches Verfahren zur Behandlung psychischer Erkrankungen"]}
+{"t": "node", "id": "Erfassung", "features": ["gelernt"], "labels": ["Erfassung"]}
+{"t": "node", "id": "Erfolgen", "features": ["gelernt"], "labels": ["Erfolgen"]}
+{"t": "node", "id": "Ergebnis", "features": ["gelernt"], "labels": ["Ergebnis"]}
+{"t": "node", "id": "Erhitzen", "features": ["gelernt"], "labels": ["Erhitzen"]}
+{"t": "node", "id": "Erkrankungen", "features": ["gelernt"], "labels": ["Erkrankungen"]}
 {"t": "node", "id": "Ermöglicht_Big_Tech", "features": ["gelernt"], "labels": ["Ermöglicht_Big_Tech", "ermöglicht Big Tech"]}
-{"t": "node", "id": "Erst", "features": ["gelernt"], "labels": ["Erst", "erst", "erst der Augenblick, in dem solche Überzeugungen, in dem das bisher fraglos Hingenommene fragwürdig wird, der Geburtsmoment der Philosophie", "erst in der Frühmoderne in Mode kommende Ableitung des lateinischen littera, der „Buchstabe“"]}
-{"t": "node", "id": "Erstmalige_Verwendung_Der", "features": ["Carl_Friedrich_Von", "gelernt"], "labels": ["Eine erstmalige Verwendung der Bezeichnung „nachhaltend“ in deutscher Sprache im Sinne eines langfristig angelegten verantwortungsbewussten Umgangs mit einer Ressource", "Erstmalige_Verwendung_Der"]}
+{"t": "node", "id": "Erst", "features": ["gelernt"], "labels": ["Erst", "erst"]}
+{"t": "node", "id": "Erstmalige_Verwendung_Der", "features": ["Carl_Friedrich_Von", "gelernt"], "labels": ["Erstmalige_Verwendung_Der"]}
 {"t": "node", "id": "Erwiesen", "features": ["gelernt"], "labels": ["Erwiesen", "erwiesen"]}
-{"t": "node", "id": "Es", "features": ["Unterscheiden", "gelernt"], "labels": ["Es", "es, die künstlerischen Objekte nach ihren Inhalten zu befragen, ihre formale Gestaltung zu bestimmen, die Werke in Raum und Zeit einzuordnen und ihrer Rezeption nachzugehen; dabei werden einerseits stilistische Zusammenhänge besprochen, andererseits wird versucht, den historischen Kontext als Voraussetzung eines Kunstwerks zu verstehen oder ihn zum Verständnis des Werks miteinzubeziehen"]}
-{"t": "node", "id": "Es_Wurde_Im", "features": ["Prozess", "gelernt"], "labels": ["Es wurde im selben Prozess selbstverständlich, dass Literatur nach Überlieferungen in einzelnen Sprachen zergliedert wird in die „Literaturen“ der einzelnen Nationen oder Regionen, gruppiert wird unter den zentralen „literarischen Gattungen“, die im Blick auf die Aristotelische Poetik neu definiert wurden, zu verstehen", "Es_Wurde_Im"]}
-{"t": "node", "id": "Etwa", "features": ["gelernt"], "labels": ["Etwa", "etwa", "etwa aus gescheiterten Versuchen zur Auflösung algebraischer Gleichungen die Gruppentheorie entstanden", "etwa in der Zeit von ca", "mit etwa 1,39 Millionen Kilometern bei weitem größer als der Durchmesser aller anderen Objekte im System", "mit etwa 960 km der größte dieser Körper und gilt als Zwergplanet"]}
-{"t": "node", "id": "Etwa_Durch_Die", "features": ["gelernt"], "labels": ["Etwa_Durch_Die", "etwa durch die 1884 erstmals veröffentlichte juristische Einstufung ärztlicher Eingriffe als Körperverletzung"]}
+{"t": "node", "id": "Es", "features": ["Unterscheiden", "gelernt"], "labels": ["Es"]}
+{"t": "node", "id": "Es_Wurde_Im", "features": ["Prozess", "gelernt"], "labels": ["Es_Wurde_Im"]}
+{"t": "node", "id": "Etwa", "features": ["gelernt"], "labels": ["Etwa", "etwa", "etwa in der Zeit von ca", "mit etwa 960 km der größte dieser Körper und gilt als Zwergplanet"]}
+{"t": "node", "id": "Etwa_Durch_Die", "features": ["gelernt"], "labels": ["Etwa_Durch_Die"]}
 {"t": "node", "id": "Etymologische_Hintergr_Und", "features": ["Gleiche", "gelernt"], "labels": ["Der etymologische Hintergr und des deutschen Wortes", "Etymologische_Hintergr_Und"]}
 {"t": "node", "id": "Europa", "features": ["Erdteil", "gelernt"], "labels": ["Europa"]}
 {"t": "node", "id": "Europa_Hat_Eine", "features": ["Damit", "gelernt"], "labels": ["Europa", "Europa hat eine Fläche von etwa 10,5 Millionen Quadratkilometern und", "Europa_Hat_Eine"]}
 {"t": "node", "id": "Europäisches_Laboratorium_Für", "features": ["Führend", "gelernt"], "labels": ["Europäisches", "Europäisches Laboratorium für Molekularbiologie : Das EMBL", "Europäisches_Laboratorium_Für"]}
 {"t": "node", "id": "Expertenwissen_Und_Die", "features": ["gelernt"], "labels": ["Das Expertenwissen und die Fachautorität der einheitlich ausgebildeten Ärzte", "Expertenwissen", "Expertenwissen_Und_Die"]}
 {"t": "node", "id": "Facettenreiche_Begriffsgeschichte", "features": ["gelernt"], "labels": ["Facettenreiche_Begriffsgeschichte", "facettenreiche Begriffsgeschichte"]}
-{"t": "node", "id": "Februar_1999_Durchlief", "features": ["Neptunbahn", "gelernt"], "labels": ["Februar", "Februar 1999 durchlief Pluto zum letzten Mal den Bereich, in dem er der Sonne näher", "Februar_1999_Durchlief"]}
-{"t": "node", "id": "Film", "features": ["Gegenstand", "Kunstform", "gelernt"], "labels": ["Der Film", "Film", "Medium", "Medium, das in sehr verschiedenen Zusammenhängen eingesetzt wird", "das Medium Film mit der Kultur der breiten Masse verbunden, die sich ihm, sei es gemeinsam im Kinosaal oder jeweils einzeln im Wohnzimmer, von Beginn an bereitwillig hingab"]}
+{"t": "node", "id": "Februar_1999_Durchlief", "features": ["Neptunbahn", "gelernt"], "labels": ["Februar", "Februar_1999_Durchlief"]}
+{"t": "node", "id": "Film", "features": ["Gegenstand", "Kunstform", "gelernt"], "labels": ["Der Film", "Film", "Medium", "Medium, das in sehr verschiedenen Zusammenhängen eingesetzt wird"]}
 {"t": "node", "id": "Filmgeschichte", "features": ["gelernt"], "labels": ["Filmgeschichte", "unter Filmgeschichte ausführlich dargestellt"]}
 {"t": "node", "id": "Filmindustrie_-_Von", "features": ["Hat", "gelernt"], "labels": ["Die Filmindustrie - von Kritikern als „Kulturindustrie“", "Die Filmindustrie - von Kritikern als „Kulturindustrie“ bezeichnet -", "Filmindustrie", "Filmindustrie_-_Von"]}
 {"t": "node", "id": "Folge", "features": ["gelernt"], "labels": ["Folge", "Folge von sich steigernden Ausbrüchen eines Vulkans"]}
-{"t": "node", "id": "Formalwissenschaft", "features": ["gelernt"], "labels": ["Formalwissenschaft", "Formalwissenschaft, die aus der Untersuchung von geometrischen Figuren und dem Rechnen mit Zahlen entstand", "sowohl Grundlagenft und Formalwissenschaft als auch Ingenieurdisziplin"]}
-{"t": "node", "id": "Formen", "features": ["gelernt"], "labels": ["Formen", "die Formen der Rückbesinnung auf die Antike, die unter Karl dem Großen um 800 einsetzten"]}
+{"t": "node", "id": "Formalwissenschaft", "features": ["gelernt"], "labels": ["Formalwissenschaft", "sowohl Grundlagenft und Formalwissenschaft als auch Ingenieurdisziplin"]}
+{"t": "node", "id": "Formen", "features": ["gelernt"], "labels": ["Formen"]}
 {"t": "node", "id": "Formenreichtum", "features": ["gelernt"], "labels": ["Formenreichtum", "heute ein großer Formenreichtum in der Architektur gegeben"]}
-{"t": "node", "id": "Forschungsinstitut", "features": ["gelernt"], "labels": ["Forschungsinstitut", "Japans", "Japans führendes Forschungsinstitut und bekannt für seine Arbeiten in der Biotechnologie und Genetik"]}
-{"t": "node", "id": "Fortlaufende", "features": ["gelernt"], "labels": ["Beständige", "Fortlaufende", "das Beständige und Unablässige wie auch das ununterbrochen Fortlaufende, das Wirksame und Nachdrückliche oder einfach der Erfolg oder die Wirksamkeit einer Sache"]}
+{"t": "node", "id": "Forschungsinstitut", "features": ["gelernt"], "labels": ["Forschungsinstitut", "Japans"]}
+{"t": "node", "id": "Fortlaufende", "features": ["gelernt"], "labels": ["Beständige", "Fortlaufende"]}
 {"t": "node", "id": "Fotograf", "features": ["gelernt"], "labels": ["Fotograf", "der Fotograf"]}
 {"t": "node", "id": "Fotografie", "features": ["Film", "Gegenstand", "gelernt"], "labels": ["Die Fotografie", "Fotografie"]}
 {"t": "node", "id": "Frage", "features": ["Nachdenken", "gelernt"], "labels": ["Die Frage, was Musik sei oder nicht sei,", "Frage"]}
 {"t": "node", "id": "Frage_Lässt_Sich", "features": ["Subtraktion", "gelernt"], "labels": ["Die Frage lässt sich dann umformulieren zu: „Was", "Frage", "Frage_Lässt_Sich"]}
 {"t": "node", "id": "Fußball", "features": ["Ballsportart", "gelernt"], "labels": ["Fußball"]}
-{"t": "node", "id": "Förderband", "features": ["gelernt"], "labels": ["Förderband", "Globale", "das „Globale Förderband“, eine Kombination von Meeresströmungen, die vier der fünf Ozeane miteinander verbinden und bei dem Oberflächenströmungen und Tiefenströmungen einen globalen Wasserkreislauf bilden"]}
-{"t": "node", "id": "Führend", "features": ["gelernt"], "labels": ["Führend", "führend", "führend in der Genomforschung und bekannt für seine Beiträge zum Humangenomprojekt und zur Entwicklung von CRISPR-Technologie", "führend in der molekularen Biologie und Genetik und bietet Spitzenforschung in sechs europäischen Städten an"]}
-{"t": "node", "id": "Für_Auf_Staatlicher", "features": ["Kombination", "gelernt"], "labels": ["Für auf staatlicher Ebene existierende neuzeitliche Demokratien", "Für_Auf_Staatlicher"]}
-{"t": "node", "id": "Für_Das_Europäische", "features": ["Dualismus", "gelernt"], "labels": ["Für das europäische Denken charakteristisch", "Für_Das_Europäische"]}
-{"t": "node", "id": "Für_Die_Die", "features": ["gelernt"], "labels": ["Für_Die_Die", "für die die Zustimmung des Patienten unabdingbar ist"]}
-{"t": "node", "id": "Für_Die_Geschichte", "features": ["Bedeutend", "gelernt"], "labels": ["Für die Geschichte der „Körperkultur“ und des „Sports“", "Für_Die_Geschichte"]}
-{"t": "node", "id": "Für_Die_Maßgeblich", "features": ["Tätigkeit", "gelernt"], "labels": ["Für die maßgeblich an der Herstellung eines Films beteiligten Akteure - insbesondere Drehbuchautoren, Regisseure, Schauspieler, Kameraleute, Szenenbildner, Kostümbildner, Filmeditoren, Tongestalter und Filmkomponisten -", "Für_Die_Maßgeblich"]}
-{"t": "node", "id": "Für_England_Dieselbe", "features": ["gelernt"], "labels": ["Für_England_Dieselbe", "für England dieselbe Bedeutung wie die politische Revolution für Frankreich"]}
-{"t": "node", "id": "Für_Ihn_War", "features": ["gelernt"], "labels": ["Für ihn war die industrielle Revolution eine Epochenzäsur: „Die industrielle Revolution", "Für_Ihn_War"]}
-{"t": "node", "id": "Für_Le_Corbusier", "features": ["Baukunst", "gelernt"], "labels": ["Für Le Corbusier", "Für_Le_Corbusier"]}
-{"t": "node", "id": "Für_Manche_Philosophen", "features": ["Erst", "gelernt"], "labels": ["Für manche Philosophen", "Für_Manche_Philosophen"]}
-{"t": "node", "id": "Für_Verlage", "features": ["Geschäftsfeld", "gelernt"], "labels": ["Für Verlage", "Für_Verlage"]}
+{"t": "node", "id": "Förderband", "features": ["gelernt"], "labels": ["Förderband", "Globale"]}
+{"t": "node", "id": "Führend", "features": ["gelernt"], "labels": ["Führend", "führend"]}
 {"t": "node", "id": "Gebiet", "features": ["gelernt"], "labels": ["Gebiet", "das Gebiet der Experimentalphysik"]}
-{"t": "node", "id": "Gegenstand", "features": ["gelernt"], "labels": ["Gegenstand", "immer auch Gegenstand der geistigen Reflexion, aus der dann auch die verschiedenen Disziplinen der Musikwissenschaft erwachsen konnten", "seitdem Gegenstand einer Debatte um die Bedeutung, die Werke in der jeweiligen Gesellschaft gewinnen", "selbst vereinzelt Gegenstand der akademischen Disziplin", "teilweise ein Gegenstand der Forschung und Lehre in der Kunstgeschichte und der noch jungen Bildwissenschaft", "unter anderem Gegenstand der Filmwissenschaft und der Filmtheorie"]}
+{"t": "node", "id": "Gegenstand", "features": ["gelernt"], "labels": ["Gegenstand", "selbst vereinzelt Gegenstand der akademischen Disziplin", "unter anderem Gegenstand der Filmwissenschaft und der Filmtheorie"]}
 {"t": "node", "id": "Gegenstand_Der_Geographie", "features": ["Erfassung", "gelernt"], "labels": ["Gegenstand", "Gegenstand der Geographie", "Gegenstand_Der_Geographie"]}
 {"t": "node", "id": "Gegenwärtige", "features": ["Beispiel", "gelernt"], "labels": ["Die gegenwärtige, vor allem durch den Menschen verursachte globale Erwärmung", "Gegenwärtige"]}
-{"t": "node", "id": "Gegenüber_Ihren_Nächsten", "features": ["Verkleinerung", "gelernt"], "labels": ["Gegenüber", "Gegenüber ihren nächsten Verwandten innerhalb der Archosaurier zeichnen sich die Vertreter aller Dinosauriergruppen durch eine Anzahl gemeinsamer abgeleiteter Merkmale aus: Schädelmerkmale: Das Postfrontale fehlt; im Gaumen überlappt das Ectopterygoid das Flügelbein ; der Kopf des Quadratums", "Gegenüber_Ihren_Nächsten"]}
-{"t": "node", "id": "Geht", "features": ["gelernt"], "labels": ["Geht", "und geht in Verwesung über"]}
+{"t": "node", "id": "Gegenüber_Ihren_Nächsten", "features": ["Verkleinerung", "gelernt"], "labels": ["Gegenüber", "Gegenüber_Ihren_Nächsten"]}
+{"t": "node", "id": "Geht", "features": ["gelernt"], "labels": ["Geht", "geht", "und geht in Verwesung über"]}
 {"t": "node", "id": "Gel", "features": ["gelernt"], "labels": ["Gel", "einem Gel"]}
 {"t": "node", "id": "Gelehrt_Wird", "features": ["gelernt"], "labels": ["Gelehrt_Wird", "gelehrt wird"]}
-{"t": "node", "id": "Gemeinsam", "features": ["gelernt"], "labels": ["Gemeinsam", "gemeinsam", "gemeinsam, dass sie nur in begrenztem Maß vorhanden sind und ihre Verwendung mit mehr oder weniger hohen CO2-Emissionen verbunden ist"]}
+{"t": "node", "id": "Gemeinsam", "features": ["gelernt"], "labels": ["Gemeinsam", "gemeinsam"]}
 {"t": "node", "id": "Genaue_Abgrenzung_Von", "features": ["Nicht", "gelernt"], "labels": ["Die genaue Abgrenzung von Demokratien zu letzteren", "Genaue_Abgrenzung_Von"]}
 {"t": "node", "id": "Generalisierbarkeit", "features": ["gelernt"], "labels": ["Generalisierbarkeit", "ihre Generalisierbarkeit fraglich"]}
 {"t": "node", "id": "Genetik_Oder_Vererbungslehre", "features": ["Wissenschaft", "gelernt"], "labels": ["Die Genetik oder Vererbungslehre", "Genetik", "Genetik_Oder_Vererbungslehre"]}
@@ -248,21 +218,21 @@
 {"t": "node", "id": "Geostatistik", "features": ["gelernt"], "labels": ["Geostatistik", "die Geostatistik"]}
 {"t": "node", "id": "Geowissenschaften", "features": ["gelernt"], "labels": ["Gegenstand", "Gegenstand spezialisierter Geowissenschaften", "Geowissenschaften"]}
 {"t": "node", "id": "Gerade_Bei_Dieser", "features": ["Nicht", "gelernt"], "labels": ["Gerade", "Gerade bei dieser Art von Literatur", "Gerade_Bei_Dieser"]}
-{"t": "node", "id": "Gerade_Stellung_Der", "features": ["gelernt"], "labels": ["Gerade_Stellung_Der", "die gerade Stellung der Beine eventuell die Evolution des Gigantismus unterstützt"]}
+{"t": "node", "id": "Gerade_Stellung_Der", "features": ["gelernt"], "labels": ["Gerade_Stellung_Der"]}
 {"t": "node", "id": "Geringfügig_Größer", "features": ["Entfernung", "gelernt"], "labels": ["Geringfügig", "Geringfügig größer", "Geringfügig_Größer"]}
-{"t": "node", "id": "Geschlechter_Können_In", "features": ["Kloake", "gelernt"], "labels": ["Die Geschlechter können in erster Linie anhand der Kloakenregion unterschieden werden: Bei adulten Männchen", "Geschlechter", "Geschlechter_Können_In"]}
+{"t": "node", "id": "Geschlechter_Können_In", "features": ["Kloake", "gelernt"], "labels": ["Geschlechter", "Geschlechter_Können_In"]}
 {"t": "node", "id": "Geschäftsfeld", "features": ["gelernt"], "labels": ["Geschäftsfeld", "der internationale Markt unterhaltender Titel ein unverzichtbares Geschäftsfeld"]}
 {"t": "node", "id": "Gestaltung_Von_Innenräumen", "features": ["gelernt"], "labels": ["Gestaltung", "Gestaltung_Von_Innenräumen", "die Gestaltung von Innenräumen zum Ziel"]}
 {"t": "node", "id": "Gewöhnliche_Wildfärbung_Der", "features": ["Dunkelgrau", "gelernt"], "labels": ["Die gewöhnliche Wildfärbung der Tiere", "Gewöhnliche_Wildfärbung_Der"]}
-{"t": "node", "id": "Gleiche", "features": ["gelernt"], "labels": ["Gleiche", "der gleiche wie in vielen europäischen Sprachen ; auch in außereuropäischen Sprachen finden sich Entsprechungen", "gleiche"]}
+{"t": "node", "id": "Gleiche", "features": ["gelernt"], "labels": ["Gleiche", "gleiche"]}
 {"t": "node", "id": "Gleichzeitig", "features": ["Steigerung", "gelernt"], "labels": ["Gleichzeitig"]}
 {"t": "node", "id": "Grenzziehung_Zu_Den", "features": ["gelernt"], "labels": ["Die Grenzziehung zu den anderen Naturwissenschaften", "Grenzziehung", "Grenzziehung_Zu_Den"]}
 {"t": "node", "id": "Gültigkeit_Jeglicher_Erkenntnisgewinnung", "features": ["gelernt"], "labels": ["Gültigkeit", "Gültigkeit_Jeglicher_Erkenntnisgewinnung", "der Gültigkeit jeglicher Erkenntnisgewinnung wie auch der Argumente"]}
-{"t": "node", "id": "Haben", "features": ["gelernt"], "labels": ["Haben", "haben soll"]}
-{"t": "node", "id": "Hand", "features": ["gelernt"], "labels": ["Hand", "rückwärtig orientiert; die Hand ist asymmetrisch mit verkürzten äußeren Fingern, bei höheren Theropoden fehlen diese völlig; das Schienbein zeigt am vorderen oberen Ende eine kammartige Erhebung ; der Astragalus weist einen aufwärts abgehenden Fortsatz auf; der mittlere Mittelfußknochen ist S-förmig gebogen"]}
+{"t": "node", "id": "Haben", "features": ["gelernt"], "labels": ["Haben", "haben", "haben soll"]}
+{"t": "node", "id": "Hand", "features": ["gelernt"], "labels": ["Hand"]}
 {"t": "node", "id": "Handlungsprinzip", "features": ["gelernt"], "labels": ["Handlungsprinzip", "Handlungsprinzip bei der Nutzung von Ressourcen"]}
 {"t": "node", "id": "Handlungsprinzip_Der_Nachhaltigkeit", "features": ["Zielkonflikt", "gelernt"], "labels": ["Das Handlungsprinzip der Nachhaltigkeit", "Handlungsprinzip", "Handlungsprinzip_Der_Nachhaltigkeit"]}
-{"t": "node", "id": "Hat", "features": ["gelernt"], "labels": ["- hat auf diese Massenkompatibilität des Films früh reagiert und diese mit entsprechenden „leichten“ Produktionen als „Massenware“ kommerziell für sich zu nutzen gewusst", "Hat"]}
+{"t": "node", "id": "Hat", "features": ["gelernt"], "labels": ["Hat", "hat"]}
 {"t": "node", "id": "Hauptenergiequelle_Der_Erde", "features": ["Sonne", "gelernt"], "labels": ["Die Hauptenergiequelle der Erde", "Hauptenergiequelle", "Hauptenergiequelle_Der_Erde"]}
 {"t": "node", "id": "Hauptsäulen", "features": ["gelernt"], "labels": ["Hauptsäulen", "der Hauptsäulen der modernen Physik"]}
 {"t": "node", "id": "Hebräischen_Einflüssen_Eigenständig", "features": ["gelernt"], "labels": ["Hebräischen_Einflüssen_Eigenständig", "hebräischen Einflüssen eigenständig"]}
@@ -276,49 +246,33 @@
 {"t": "node", "id": "Heute_Die_Weitgehende", "features": ["gelernt"], "labels": ["Heute_Die_Weitgehende", "heute die weitgehende Definitionsmacht"]}
 {"t": "node", "id": "Heute_Weitaus_Bedeutendste", "features": ["Molekulargenetik", "gelernt"], "labels": ["Der heute weitaus bedeutendste Teilbereich der Genetik", "Heute_Weitaus_Bedeutendste"]}
 {"t": "node", "id": "Hier_Lassen_Sich", "features": ["Noch", "gelernt"], "labels": ["Hier", "Hier lassen sich viele Kategorien bilden und der wissenschaftliche Diskurs", "Hier_Lassen_Sich"]}
-{"t": "node", "id": "Hier_Sind_Einige", "features": ["Führend", "gelernt"], "labels": ["Hier", "Hier sind einige der renommiertesten: Broad Institute of MIT and Harvard : Dieses Institut", "Hier_Sind_Einige"]}
+{"t": "node", "id": "Hier_Sind_Einige", "features": ["Führend", "gelernt"], "labels": ["Hier", "Hier_Sind_Einige"]}
 {"t": "node", "id": "Hingegen", "features": ["gelernt"], "labels": ["Hingegen"]}
-{"t": "node", "id": "Historisch", "features": ["gelernt"], "labels": ["Historisch", "nicht unbedingt eine echte.“ Historisch veränderlich und umstritten war und ist, wer als dem „Volk“ zugehörig definiert wird und wie es seinen Willen bekunden könne"]}
+{"t": "node", "id": "Historisch", "features": ["gelernt"], "labels": ["Historisch"]}
 {"t": "node", "id": "Hobby", "features": ["gelernt"], "labels": ["Hobby", "sie ein verbreitetes Hobby"]}
 {"t": "node", "id": "Holz", "features": ["gelernt"], "labels": ["Holz", "nur so viel Holz zu schlagen wie permanent nachwächst"]}
-{"t": "node", "id": "Häufig", "features": ["gelernt"], "labels": ["Häufig", "häufig", "häufig unklar, inwieweit die Autoren eine essentialistische oder nominalistische Definition beabsichtigen"]}
+{"t": "node", "id": "Häufig", "features": ["gelernt"], "labels": ["Häufig", "häufig"]}
 {"t": "node", "id": "Höchsten_Sanddünen_Findet", "features": ["Muharek", "gelernt"], "labels": ["Die höchsten Sanddünen findet man in Algerien, die längste", "Höchsten_Sanddünen_Findet"]}
 {"t": "node", "id": "I", "features": ["gelernt"], "labels": ["I", "i"]}
-{"t": "node", "id": "Ihre_Erkenntnisse_Genügen", "features": ["Generalisierbarkeit", "gelernt"], "labels": ["Ihre", "Ihre Erkenntnisse genügen wissenschaftlichen Ansprüchen, etwa hinsichtlich ihrer Objektivität, Reliabilität und Validität jedoch nicht, selbst wo sie sich bestätigen lassen,", "Ihre_Erkenntnisse_Genügen"]}
+{"t": "node", "id": "Ihre_Erkenntnisse_Genügen", "features": ["Generalisierbarkeit", "gelernt"], "labels": ["Ihre", "Ihre_Erkenntnisse_Genügen"]}
 {"t": "node", "id": "Ihre_Ursprünge_In", "features": ["gelernt"], "labels": ["Ihre_Ursprünge_In", "ihre Ursprünge in der Philosophie"]}
 {"t": "node", "id": "Ihre_Vorgeschichte", "features": ["Etwa", "gelernt"], "labels": ["Ihre", "Ihre Vorgeschichte", "Ihre_Vorgeschichte"]}
-{"t": "node", "id": "Im_Duden", "features": ["Geografie", "Geografie_Oder_Erdkunde", "gelernt"], "labels": ["Im Duden", "Im_Duden"]}
-{"t": "node", "id": "Im_Entsprechenden_Englischen", "features": ["Sinne", "gelernt"], "labels": ["Im entsprechenden englischen Wort sustainable", "Im_Entsprechenden_Englischen"]}
-{"t": "node", "id": "Im_Osten_Gegenüber", "features": ["gelernt"], "labels": ["Im_Osten_Gegenüber", "im Osten gegenüber Asien keine eindeutige geographische oder geologische Grenze"]}
-{"t": "node", "id": "Im_Sinne_Der", "features": ["Zeit", "gelernt"], "labels": ["Im Sinne der klassischen Altertumswissenschaften", "Im_Sinne_Der"]}
-{"t": "node", "id": "Im_Vergleich_Zu", "features": ["Plutos", "gelernt"], "labels": ["Im Vergleich zu den Planetenbahnen", "Im_Vergleich_Zu"]}
 {"t": "node", "id": "Import", "features": ["Meta", "import:01_kuenstliche_intelligenz.txt:2026-02-09", "import:01_kuenstliche_intelligenz.txt:2026-02-10", "import:02_sonnensystem.txt:2026-02-09", "import:02_sonnensystem.txt:2026-02-10", "import:03_geschichte_deutschlands.txt:2026-02-09", "import:03_geschichte_deutschlands.txt:2026-02-10", "import:04_quantenmechanik.txt:2026-02-09", "import:04_quantenmechanik.txt:2026-02-10", "import:05_deutsche_sprache.txt:2026-02-09", "import:05_deutsche_sprache.txt:2026-02-10", "import:06_axolotl.txt:2026-02-09", "import:06_axolotl.txt:2026-02-10", "import:07_philosophie.txt:2026-02-09", "import:07_philosophie.txt:2026-02-10", "import:08_psychologie.txt:2026-02-09", "import:08_psychologie.txt:2026-02-10", "import:09_biologie.txt:2026-02-09", "import:09_biologie.txt:2026-02-10", "import:10_chemie.txt:2026-02-09", "import:10_chemie.txt:2026-02-10", "import:11_pluto.txt:2026-02-09", "import:11_pluto.txt:2026-02-10", "import:12_physik.txt:2026-02-09", "import:12_physik.txt:2026-02-10", "import:13_astronomie.txt:2026-02-09", "import:13_astronomie.txt:2026-02-10", "import:14_geographie.txt:2026-02-09", "import:14_geographie.txt:2026-02-10", "import:15_geologie.txt:2026-02-09", "import:15_geologie.txt:2026-02-10", "import:16_informatik.txt:2026-02-09", "import:16_informatik.txt:2026-02-10", "import:17_mathematik.txt:2026-02-09", "import:17_mathematik.txt:2026-02-10", "import:18_medizin.txt:2026-02-09", "import:18_medizin.txt:2026-02-10", "import:19_architektur.txt:2026-02-09", "import:19_architektur.txt:2026-02-10", "import:20_musik.txt:2026-02-09", "import:20_musik.txt:2026-02-10", "import:21_literatur.txt:2026-02-09", "import:21_literatur.txt:2026-02-10", "import:22_kunstgeschichte.txt:2026-02-09", "import:22_kunstgeschichte.txt:2026-02-10", "import:23_film.txt:2026-02-09", "import:23_film.txt:2026-02-10", "import:24_fotografie.txt:2026-02-09", "import:24_fotografie.txt:2026-02-10", "import:25_kochen.txt:2026-02-09", "import:25_kochen.txt:2026-02-10", "import:26_sport.txt:2026-02-09", "import:26_sport.txt:2026-02-10", "import:27_fussball.txt:2026-02-09", "import:27_fussball.txt:2026-02-10", "import:28_olympische_spiele.txt:2026-02-09", "import:28_olympische_spiele.txt:2026-02-10", "import:29_weltraumfahrt.txt:2026-02-09", "import:29_weltraumfahrt.txt:2026-02-10", "import:30_klimawandel.txt:2026-02-09", "import:30_klimawandel.txt:2026-02-10", "import:31_nachhaltigkeit.txt:2026-02-09", "import:31_nachhaltigkeit.txt:2026-02-10", "import:32_okonomie.txt:2026-02-09", "import:32_okonomie.txt:2026-02-10", "import:33_recht.txt:2026-02-09", "import:33_recht.txt:2026-02-10", "import:34_demokratie.txt:2026-02-09", "import:34_demokratie.txt:2026-02-10", "import:35_europa.txt:2026-02-09", "import:35_europa.txt:2026-02-10", "import:36_antike.txt:2026-02-09", "import:36_antike.txt:2026-02-10", "import:37_mittelalter.txt:2026-02-09", "import:37_mittelalter.txt:2026-02-10", "import:38_renaissance.txt:2026-02-09", "import:38_renaissance.txt:2026-02-10", "import:39_industrielle_revolution.txt:2026-02-09", "import:39_industrielle_revolution.txt:2026-02-10", "import:40_internet.txt:2026-02-09", "import:40_internet.txt:2026-02-10", "import:41_smartphone.txt:2026-02-09", "import:41_smartphone.txt:2026-02-10", "import:42_elektromobilitaet.txt:2026-02-09", "import:42_elektromobilitaet.txt:2026-02-10", "import:43_energiequelle.txt:2026-02-09", "import:43_energiequelle.txt:2026-02-10", "import:44_ozean.txt:2026-02-09", "import:44_ozean.txt:2026-02-10", "import:45_wueste.txt:2026-02-09", "import:45_wueste.txt:2026-02-10", "import:46_regenwald.txt:2026-02-09", "import:46_regenwald.txt:2026-02-10", "import:47_vulkan.txt:2026-02-09", "import:47_vulkan.txt:2026-02-10", "import:48_dinosaurier.txt:2026-02-09", "import:48_dinosaurier.txt:2026-02-10", "import:49_evolution.txt:2026-02-09", "import:49_evolution.txt:2026-02-10", "import:50_genetik.txt:2026-02-09", "import:50_genetik.txt:2026-02-10", "import:51_menschlicher_koerper.txt:2026-02-09", "import:51_menschlicher_koerper.txt:2026-02-10", "import:52_europa.txt:2026-02-09", "import:52_europa.txt:2026-02-10"], "labels": ["Import"]}
-{"t": "node", "id": "In", "features": ["gelernt"], "labels": ["In", "in der weiblichen Form μουσῐκή mousikḗ zuerst 476 v"]}
-{"t": "node", "id": "In_Anlehnung_An", "features": ["Demokratie", "gelernt"], "labels": ["In Anlehnung an Gunnar Folke Schuppert", "In_Anlehnung_An"]}
-{"t": "node", "id": "In_Dem_Gleichmäßig", "features": ["gelernt"], "labels": ["In_Dem_Gleichmäßig", "in dem gleichmäßig kleine Körnchen eines Silberhalogenids verteilt sind"]}
-{"t": "node", "id": "In_Den_Größten", "features": ["Klima", "gelernt"], "labels": ["In den größten Teilen Osteuropas", "In_Den_Größten"]}
-{"t": "node", "id": "In_Den_Letzten", "features": ["Zusammenarbeit", "gelernt"], "labels": ["In den letzten Jahrzehnten", "In_Den_Letzten"]}
-{"t": "node", "id": "In_Der_Heutigen", "features": ["Allem", "Vor", "gelernt"], "labels": ["In der heutigen Physik", "In_Der_Heutigen"]}
-{"t": "node", "id": "In_Der_Literaturkritik", "features": ["gelernt"], "labels": ["In_Der_Literaturkritik", "in der Literaturkritik"]}
-{"t": "node", "id": "In_Der_Rechtsethnologie", "features": ["Werden", "gelernt"], "labels": ["In der Rechtsethnologie wurde gerade in den Anfängen ethnologischer Forschung darüber diskutiert, ob Konfliktlösungsmechanismen nichtstaatlicher Gesellschaften als Recht", "In_Der_Rechtsethnologie"]}
-{"t": "node", "id": "In_Der_Ursprünglichen", "features": ["Macht", "gelernt"], "labels": ["In der ursprünglichen Bedeutung", "In_Der_Ursprünglichen"]}
-{"t": "node", "id": "In_Deutschland_Verpflichtet", "features": ["Bestandteil", "gelernt"], "labels": ["In Deutschland verpflichtet das Patientenrechtegesetz im § 630f BGB den Arzt oder Zahnarzt in der Patientenakte „sämtliche aus fachlicher Sicht für die derzeitige und künftige Behandlung wesentlichen Maßnahmen und deren Ergebnisse aufzuzeichnen, insbesondere die Anamnese, Diagnosen, Untersuchungen, Untersuchungsergebnisse, Befunde, Therapien und ihre Wirkungen, Eingriffe und ihre Wirkungen, Einwilligungen und Aufklärungen.“ Die Aufzeichnungspflicht der gesamten Krankengeschichte", "In_Deutschland_Verpflichtet"]}
-{"t": "node", "id": "In_Diesem_Umfassenden", "features": ["Lebewesen", "gelernt"], "labels": ["In diesem umfassenden Sinn", "In_Diesem_Umfassenden"]}
 {"t": "node", "id": "Informatik", "features": ["Wissenschaft", "gelernt"], "labels": ["Informatik"]}
 {"t": "node", "id": "Inhalt", "features": ["gelernt"], "labels": ["Inhalt", "der zentrale Inhalt der Architektur"]}
 {"t": "node", "id": "Inhaltlich", "features": ["Baukunst", "Begriff", "gelernt"], "labels": ["Inhaltlich"]}
 {"t": "node", "id": "Innenarchitektur", "features": ["gelernt"], "labels": ["Die Innenarchitektur", "Innenarchitektur"]}
 {"t": "node", "id": "Insbesondere_Seit_Der", "features": ["gelernt"], "labels": ["Insbesondere", "Insbesondere seit der Begründung der Evolutionstheorie", "Insbesondere_Seit_Der"]}
 {"t": "node", "id": "Internet", "features": ["Verb", "gelernt"], "labels": ["Das Internet, umgangssprachlich auch Netz,", "Internet"]}
-{"t": "node", "id": "Irrtum", "features": ["gelernt"], "labels": ["Irrtum", "somit - entgegen einem heute weit verbreiteten Irrtum - nicht synonym mit „Olympische Spiele“, sondern bezeichnet den Zeitraum von vier Jahren, der mit den Spielen beginnt"]}
-{"t": "node", "id": "Ist", "features": ["gelernt"], "labels": ["Ist", "und ist durch Zunahme des relativen Kohlenstoffanteils gekennzeichnet"]}
-{"t": "node", "id": "Jahrhundert", "features": ["Zweifelsfall", "gelernt"], "labels": ["Jahrhundert", "Jahrhundert, namentlich mit Galileo Galilei und Isaac Newton, in die Entwicklung einer Methodologie der physikalischen Erkenntnis, die vorrangig an empirischen und sogar experimentellen Standards orientiert"]}
+{"t": "node", "id": "Irrtum", "features": ["gelernt"], "labels": ["Irrtum"]}
+{"t": "node", "id": "Ist", "features": ["gelernt"], "labels": ["Ist", "ist", "und ist durch Zunahme des relativen Kohlenstoffanteils gekennzeichnet"]}
+{"t": "node", "id": "Jahrhundert", "features": ["Zweifelsfall", "gelernt"], "labels": ["Jahrhundert"]}
 {"t": "node", "id": "Jahrhunderts_Entwickelte_Mengenlehre", "features": ["Aus_Dem_Größten", "gelernt"], "labels": ["Jahrhunderts", "Jahrhunderts entwickelte Mengenlehre", "Jahrhunderts_Entwickelte_Mengenlehre"]}
 {"t": "node", "id": "Je_Kleiner_Die", "features": ["Schicht", "gelernt"], "labels": ["Je kleiner die Körnung ist, umso weniger lichtempfindlich", "Je_Kleiner_Die"]}
 {"t": "node", "id": "Je_Mehr_SiO2", "features": ["Vulkanismus", "gelernt"], "labels": ["Je mehr SiO2 das Magma enthält, desto explosiver", "Je_Mehr_SiO2"]}
 {"t": "node", "id": "Jedenfalls_Der_Hellste", "features": ["gelernt"], "labels": ["Jedenfalls_Der_Hellste", "jedenfalls der hellste Vertreter des Kuipergürtels ist"]}
 {"t": "node", "id": "Jeder_Definitionsversuch_-", "features": ["Architekturtheorie", "gelernt"], "labels": ["Jeder", "Jeder Definitionsversuch - soweit er eine Reflexion enthält -", "Jeder_Definitionsversuch_-"]}
-{"t": "node", "id": "Jedoch", "features": ["gelernt"], "labels": ["Jedoch", "jedoch", "jedoch nach wie vor eine wichtige Quelle für wissenschaftliche Hypothesen", "jedoch seit der fotografischen Stilrichtung des Piktorialismus um die Wende zum 20"]}
+{"t": "node", "id": "Jedoch", "features": ["gelernt"], "labels": ["Jedoch", "jedoch", "jedoch nach wie vor eine wichtige Quelle für wissenschaftliche Hypothesen"]}
 {"t": "node", "id": "Jiddische", "features": ["gelernt"], "labels": ["Das Jiddische, das auf das Mittelhochdeutsche zurückgeht,", "Jiddische"]}
 {"t": "node", "id": "KI", "features": ["Bezeichnung", "gelernt"], "labels": ["KI"]}
 {"t": "node", "id": "Karolingische_Renaissance_Beispielsweise", "features": ["Formen", "gelernt"], "labels": ["Karolingische", "Karolingische Renaissance beispielsweise", "Karolingische_Renaissance_Beispielsweise"]}
@@ -326,25 +280,25 @@
 {"t": "node", "id": "Kennzeichnend_Für_Die", "features": ["Weise", "gelernt"], "labels": ["Kennzeichnend", "Kennzeichnend für die Mathematik", "Kennzeichnend_Für_Die"]}
 {"t": "node", "id": "Kern", "features": ["gelernt"], "labels": ["Kern", "im Kern ideologisch geprägt"]}
 {"t": "node", "id": "Kinematographie", "features": ["gelernt"], "labels": ["Kinematographie", "dagegen Kinematographie, die Analogbildung zu Phonographie Tonaufzeichnung"]}
-{"t": "node", "id": "Kinnarodden", "features": ["gelernt"], "labels": ["Kinnarodden", "Kinnarodden auf der Nordkinnhalbinsel in Norwegen, der südlichste ist die Punta de Tarifa in Spanien, der westlichste das Cabo da Roca in Portugal"]}
-{"t": "node", "id": "Klima", "features": ["Vergleich", "gelernt"], "labels": ["Das Klima", "Klima", "das Klima durch das Fehlen des Meeres in unmittelbarer Nähe vorwiegend kontinental geprägt"]}
+{"t": "node", "id": "Kinnarodden", "features": ["gelernt"], "labels": ["Kinnarodden"]}
+{"t": "node", "id": "Klima", "features": ["Vergleich", "gelernt"], "labels": ["Das Klima", "Klima"]}
 {"t": "node", "id": "Klimawandel", "features": ["Veränderung", "gelernt"], "labels": ["Klimawandel", "Klimawandel, auch Klimaveränderung, Klimaänderung oder Klimawechsel,"]}
 {"t": "node", "id": "Kloake", "features": ["gelernt"], "labels": ["Kloake", "die Kloake etwas hervorgewölbt, bei den Weibchen hingegen flacher"]}
-{"t": "node", "id": "Kochen", "features": ["Erhitzen", "gelernt"], "labels": ["Kochen", "das „Kochen“ sogar wesentlich früher von den fossilen Vorfahren des anatomisch modernen Menschen genutzt worden als der Umgang mit Feuer"]}
+{"t": "node", "id": "Kochen", "features": ["Erhitzen", "gelernt"], "labels": ["Kochen"]}
 {"t": "node", "id": "Kohle", "features": ["Energieträger", "Energieträger_Hingegen", "gelernt"], "labels": ["Kohle"]}
 {"t": "node", "id": "Kombination", "features": ["gelernt"], "labels": ["Kombination", "Kombination von liberalen und repräsentativen Elementen gängig"]}
 {"t": "node", "id": "Kometenkernen_In_Einer", "features": ["gelernt"], "labels": ["Kometenkernen", "Kometenkernen in einer scheibenförmigen Region hinter der Neptunbahn", "Kometenkernen_In_Einer"]}
 {"t": "node", "id": "Komplexe", "features": ["gelernt"], "labels": ["Komplexe", "eine komplexe"]}
-{"t": "node", "id": "Konnte_In_Meyers", "features": ["Endlich", "gelernt"], "labels": ["Konnte", "Konnte in Meyers KonversationsLexikon von 1888 noch gesagt werden: „Als ein wesentliches Merkmal des Sports", "Konnte_In_Meyers"]}
+{"t": "node", "id": "Konnte_In_Meyers", "features": ["Endlich", "gelernt"], "labels": ["Konnte", "Konnte_In_Meyers"]}
 {"t": "node", "id": "Konservierung", "features": ["gelernt"], "labels": ["Konservierung", "die künstliche Konservierung als anatomisches Präparat oder als Mumie"]}
 {"t": "node", "id": "Koroibos", "features": ["gelernt"], "labels": ["Koroibos"]}
 {"t": "node", "id": "Kosmologie", "features": ["gelernt"], "labels": ["Die Kosmologie", "Kosmologie"]}
-{"t": "node", "id": "Kraft", "features": ["gelernt"], "labels": ["Kraft", "auch die treibende Kraft für viele andere Energieträger wie zum Beispiel Meeresströmungen und den Wasserkreislauf"]}
-{"t": "node", "id": "Kugelraumfläche", "features": ["gelernt"], "labels": ["Kugelraumfläche", "über die gesamte Kugelraumfläche betrachtet ebenfalls nahezu schwarz, so dass die irdische Infrarotwärmestrahlung von der Erde in den Weltraum emittiert werden kann"]}
-{"t": "node", "id": "Kunstform", "features": ["gelernt"], "labels": ["Kunstform", "Kunstform, die ihren Ausdruck in der auch als Filmen bezeichneten Produktion bewegter Bilder mittels Fotoik, Kameraik und Tontechnik findet, bei Stummfilmen war der Ton untergeordnet oder wurde durch unterschiedliche Möglichkeiten dargestellt"]}
-{"t": "node", "id": "Kunstgattung", "features": ["gelernt"], "labels": ["Kunstgattung", "Kunstgattung, deren Werke aus organisierten Klängen bestehen, die Empfindungen oder Assoziationen hervorrufen können"]}
+{"t": "node", "id": "Kraft", "features": ["gelernt"], "labels": ["Kraft"]}
+{"t": "node", "id": "Kugelraumfläche", "features": ["gelernt"], "labels": ["Kugelraumfläche"]}
+{"t": "node", "id": "Kunstform", "features": ["gelernt"], "labels": ["Kunstform"]}
+{"t": "node", "id": "Kunstgattung", "features": ["gelernt"], "labels": ["Kunstgattung"]}
 {"t": "node", "id": "Kunstgeschichte_Oder_Kunstwissenschaft", "features": ["Disziplin_Der_Physik", "gelernt"], "labels": ["Die Kunstgeschichte oder Kunstwissenschaft, veraltet auch Kunsthistorik,", "Kunstgeschichte", "Kunstgeschichte_Oder_Kunstwissenschaft"]}
-{"t": "node", "id": "Künstliche_Intelligenz", "features": ["Systeme", "gelernt"], "labels": ["Künstliche", "Künstliche Intelligenz, englisch artificial intelligence, daher auch artifizielle Intelligenz,", "Künstliche_Intelligenz"]}
+{"t": "node", "id": "Künstliche_Intelligenz", "features": ["Systeme", "gelernt"], "labels": ["Künstliche", "Künstliche_Intelligenz"]}
 {"t": "node", "id": "Lava", "features": ["gelernt"], "labels": ["Lava"]}
 {"t": "node", "id": "Lebewesen", "features": ["Erfahrungswissenschaft", "Wissenschaft", "gelernt"], "labels": ["Die Medizin", "Lebewesen", "Medizin", "Medizin die Lehre vom gesunden und kranken Lebewesen"]}
 {"t": "node", "id": "Lehret_Und_Forschungsgebiet", "features": ["Unterliegt", "gelernt"], "labels": ["Das Lehret und Forschungsgebiet der Evolution wird als Evolutionsbiologie", "Lehret", "Lehret_Und_Forschungsgebiet"]}
@@ -352,10 +306,10 @@
 {"t": "node", "id": "Literaturtheorie", "features": ["gelernt"], "labels": ["Literaturtheorie"]}
 {"t": "node", "id": "Literaturzeitschriften", "features": ["gelernt"], "labels": ["Literaturzeitschriften"]}
 {"t": "node", "id": "Ludwig_Wittgenstein", "features": ["gelernt"], "labels": ["Ludwig", "Ludwig Wittgenstein", "Ludwig_Wittgenstein"]}
-{"t": "node", "id": "Macht", "features": ["gelernt"], "labels": ["Demokratie", "Demokratie laut Giovanni Sartori „die Regierung oder Macht des Volkes“", "Macht", "die Macht des Volkes über das Volk.“ Dabei zu beachten sei, dass die vom Volk nach oben ausgehende Macht - wiederum durch die Kontrolle des Volkes - auch die Machtausübung nach unten bestimme"]}
+{"t": "node", "id": "Macht", "features": ["gelernt"], "labels": ["Demokratie", "Demokratie laut Giovanni Sartori „die Regierung oder Macht des Volkes“", "Macht"]}
 {"t": "node", "id": "Magma", "features": ["Lava", "gelernt"], "labels": ["Magma", "Magma, das an die Erdoberfläche gelangt,"]}
-{"t": "node", "id": "Manchen_Staatlichen_Akteuren", "features": ["gelernt"], "labels": ["Manchen_Staatlichen_Akteuren", "manchen staatlichen Akteuren eine umfangreichere weltweite automatisierte Massenüberwachung als jemals zuvor"]}
-{"t": "node", "id": "Mathematik", "features": ["Formalwissenschaft", "Wissenschaften", "gelernt"], "labels": ["Die Mathematik", "Mathematik", "die Mathematik auch in ihrer Geschichte fortgeschritten: Auf jedem erreichten Stand ist es möglich, wohldefinierte Aufgaben zu stellen, zu deren Lösung weitaus anspruchsvollere Mittel nötig sind"]}
+{"t": "node", "id": "Manchen_Staatlichen_Akteuren", "features": ["gelernt"], "labels": ["Manchen_Staatlichen_Akteuren"]}
+{"t": "node", "id": "Mathematik", "features": ["Formalwissenschaft", "Wissenschaften", "gelernt"], "labels": ["Die Mathematik", "Mathematik"]}
 {"t": "node", "id": "MaxPlanckInstitut_Für_Molekulare", "features": ["Bekannt", "gelernt"], "labels": ["MaxPlanckInstitut", "MaxPlanckInstitut für molekulare Zellbiologie und Genetik : Dieses Institut", "MaxPlanckInstitut_Für_Molekulare"]}
 {"t": "node", "id": "Medizin", "features": ["Erfahrungswissenschaft", "Wissenschaft", "gelernt"], "labels": ["Die Medizin", "Medizin"]}
 {"t": "node", "id": "Mediziner", "features": ["Person", "gelernt"], "labels": ["Mediziner"]}
@@ -367,39 +321,32 @@
 {"t": "node", "id": "Menschliche_Körper", "features": ["Teil", "gelernt"], "labels": ["Der menschliche Körper", "Menschliche_Körper"]}
 {"t": "node", "id": "Merkmale_Des_Postkranialen", "features": ["Hand", "gelernt"], "labels": ["Merkmale", "Merkmale des postkranialen Skeletts : Die Schultergelenkpfanne", "Merkmale_Des_Postkranialen"]}
 {"t": "node", "id": "Mikroelektronik", "features": ["gelernt"], "labels": ["Mikroelektronik", "jedoch weiterhin die Mikroelektronik"]}
-{"t": "node", "id": "Minderheitensprache", "features": ["Muttersprache", "gelernt"], "labels": ["Deutsch", "Deutsch eine Minderheitensprache in einigen europäischen und außereuropäischen Ländern, z", "Minderheitensprache"]}
-{"t": "node", "id": "Minuten", "features": ["gelernt"], "labels": ["Minuten", "üblicherweise zweimal 45 Minuten, zuzüglich Nachspielzeit sowie gegebenenfalls Verlängerung und/oder Elfmeterschießen"]}
-{"t": "node", "id": "Mit", "features": ["gelernt"], "labels": ["Mit", "mit der Problemlösung schließlich ein völlig neues Teilgebiet begründet worden: So konnten mit der Infinitesimalrechnung im 17"]}
-{"t": "node", "id": "Mit_Dem_Humanistischen", "features": ["Besonders", "gelernt"], "labels": ["Mit dem humanistischen Begriff der aetas obscura verwandt, aber in der Bedeutung abweichend", "Mit_Dem_Humanistischen"]}
-{"t": "node", "id": "Mit_Der_Experimentalpsychologie", "features": ["gelernt"], "labels": ["Mit der Experimentalpsychologie", "Mit_Der_Experimentalpsychologie"]}
-{"t": "node", "id": "Mit_Der_Industrialisierung", "features": ["gelernt"], "labels": ["Mit der Industrialisierung", "Mit_Der_Industrialisierung"]}
-{"t": "node", "id": "Mit_Einer_Eigenen", "features": ["gelernt"], "labels": ["Mit_Einer_Eigenen", "mit einer eigenen Schriftsprache weiterentwickelt; Ähnliches gilt für die lexikalisch auf dem Deutschen basierende Kreolsprache Unserdeutsch"]}
+{"t": "node", "id": "Minderheitensprache", "features": ["Muttersprache", "gelernt"], "labels": ["Deutsch", "Minderheitensprache"]}
+{"t": "node", "id": "Minuten", "features": ["gelernt"], "labels": ["Minuten"]}
 {"t": "node", "id": "Mittel", "features": ["gelernt"], "labels": ["Mittel", "das mengenmäßig bilanzierfähige Mittel, das die Energie enthält und überträgt"]}
-{"t": "node", "id": "Mittelalter", "features": ["gelernt"], "labels": ["Mittelalter", "das Mittelalter, das nach einem breiten, regional unterschiedlichen Übergangszeitraum einsetzt"]}
-{"t": "node", "id": "Mobiltelefone", "features": ["gelernt"], "labels": ["Mobiltelefone", "die eingebaute oder optionale JavaUnterstützung - Mobiltelefone gelten als eine der populärsten Anwendungen von Embedded Java"]}
+{"t": "node", "id": "Mittelalter", "features": ["gelernt"], "labels": ["Mittelalter"]}
+{"t": "node", "id": "Mobiltelefone", "features": ["gelernt"], "labels": ["Mobiltelefone"]}
 {"t": "node", "id": "Modellen_Angewandt", "features": ["gelernt"], "labels": ["Modellen", "Modellen angewandt", "Modellen_Angewandt"]}
-{"t": "node", "id": "Molekulargenetik", "features": ["gelernt"], "labels": ["Molekulargenetik", "die Molekulargenetik, die sich mit den molekularen Grundlagen der Vererbung befasst"]}
+{"t": "node", "id": "Molekulargenetik", "features": ["gelernt"], "labels": ["Molekulargenetik"]}
 {"t": "node", "id": "Molekülen_Oder_Ionen", "features": ["gelernt"], "labels": ["Molekülen", "Molekülen oder Ionen", "Molekülen_Oder_Ionen"]}
-{"t": "node", "id": "Moral", "features": ["gelernt"], "labels": ["Moral", "im Gegensatz zu anderen Normenordnungen wie Moral, Sitte oder Brauch kodifiziert und unterliegt eigenen Entscheidungsln, Änderungsln und Anerkennensregeln"]}
+{"t": "node", "id": "Moral", "features": ["gelernt"], "labels": ["Moral"]}
 {"t": "node", "id": "Muharek", "features": ["gelernt"], "labels": ["Abu", "Muharek", "der Abu Muharek mit ca"]}
-{"t": "node", "id": "Musik", "features": ["Kunstgattung", "gelernt"], "labels": ["Musik", "von vielen Widersprüchen geprägt: Musik als rationale, zahlenbezogene Wissenschaft, Musik als gefühlsbetonte Kunst, Musik im apollinischen oder dionysischen Verständnis, Musik als reine Theorie oder reine Praxis - oder als Einheit beider Bestandteile"]}
+{"t": "node", "id": "Musik", "features": ["Kunstgattung", "gelernt"], "labels": ["Musik"]}
 {"t": "node", "id": "Musik_Als_Kulturgut", "features": ["Gegenstand", "gelernt"], "labels": ["Musik", "Musik als Kulturgut war und", "Musik_Als_Kulturgut"]}
 {"t": "node", "id": "Muttersprache", "features": ["gelernt"], "labels": ["Muttersprache", "die meistgesprochene Muttersprache in der Europäischen Union"]}
 {"t": "node", "id": "Mögliche_Kunstcharakter_Der", "features": ["Jedoch", "gelernt"], "labels": ["Der mögliche Kunstcharakter der Fotografie war lange Zeit umstritten,", "Mögliche_Kunstcharakter_Der"]}
 {"t": "node", "id": "Möglicherweise", "features": ["Kochen", "gelernt"], "labels": ["Möglicherweise"]}
-{"t": "node", "id": "Nach", "features": ["gelernt"], "labels": ["Nach", "nach dem römischen Gott der Unterwelt benannt"]}
-{"t": "node", "id": "Nach_Ansicht_Der", "features": ["gelernt"], "labels": ["Nach", "Nach Ansicht der Medizinhistoriker", "Nach_Ansicht_Der"]}
 {"t": "node", "id": "Nachdenken", "features": ["gelernt"], "labels": ["Nachdenken", "so alt wie das Nachdenken über Musik selbst"]}
 {"t": "node", "id": "Nachhaltigkeit", "features": ["Handlungsprinzip", "gelernt"], "labels": ["Nachhaltigkeit"]}
-{"t": "node", "id": "Nachhaltigkeit_Gilt_In", "features": ["Fortlaufende", "gelernt"], "labels": ["Nachhaltigkeit", "Nachhaltigkeit gilt in einem Wörterbucheintrag von 1910 als Übersetzung von lateinisch perpetuitas und", "Nachhaltigkeit_Gilt_In"]}
+{"t": "node", "id": "Nachhaltigkeit_Gilt_In", "features": ["Fortlaufende", "gelernt"], "labels": ["Nachhaltigkeit", "Nachhaltigkeit_Gilt_In"]}
 {"t": "node", "id": "Nachhaltigkeitsbegriff_Als_Solcher", "features": ["Prinzip", "Prinzip_Wurde_Zuerst", "gelernt"], "labels": ["Der Nachhaltigkeitsbegriff als solcher, unabhängig vom Wort,", "Nachhaltigkeitsbegriff", "Nachhaltigkeitsbegriff_Als_Solcher"]}
-{"t": "node", "id": "National_Institutes_Of", "features": ["Weltweit", "gelernt"], "labels": ["National", "National Institutes of Health : Insbesondere das National Human Genome Research Institute innerhalb der NIH", "National_Institutes_Of"]}
-{"t": "node", "id": "Naturwissenschaft", "features": ["gelernt"], "labels": ["Naturwissenschaft", "Naturwissenschaft, die grundlegende Phänomene der Natur untersucht", "diejenige Naturwissenschaft, die sich mit dem Aufbau, den Eigenschaften und der Umwandlung von Stoffen beschäftigt"]}
+{"t": "node", "id": "National_Institutes_Of", "features": ["Weltweit", "gelernt"], "labels": ["National", "National_Institutes_Of"]}
+{"t": "node", "id": "Naturwissenschaft", "features": ["gelernt"], "labels": ["Naturwissenschaft", "Naturwissenschaft, die grundlegende Phänomene der Natur untersucht"]}
 {"t": "node", "id": "Navigationssystem", "features": ["System", "gelernt"], "labels": ["Ein Navigationssystem", "Navigationssystem"]}
 {"t": "node", "id": "Neben_Dem_Gaslt", "features": ["gelernt"], "labels": ["Neben_Dem_Gaslt", "neben dem Gaslt"]}
 {"t": "node", "id": "Neotenie", "features": ["gelernt"], "labels": ["Neotenie"]}
 {"t": "node", "id": "Neptunbahn", "features": ["gelernt"], "labels": ["Neptunbahn", "als die Neptunbahn"]}
-{"t": "node", "id": "Nicht", "features": ["gelernt"], "labels": ["Nicht", "es nicht mehr möglich, nach Kriterien zu beurteilen, die man für Literatur vergangener Jahrhunderte entwickelt hatte", "nicht", "nicht einheitlich definiert, die Einordnung einzelner Staaten ist daher häufig umstritten", "nicht einheitlich, sondern ändert sich mit der Tiefe", "oder nicht"]}
+{"t": "node", "id": "Nicht", "features": ["gelernt"], "labels": ["Nicht", "nicht", "nicht einheitlich, sondern ändert sich mit der Tiefe", "oder nicht"]}
 {"t": "node", "id": "Nichts", "features": ["gelernt"], "labels": ["Nichts", "nichts", "nichts bekannt"]}
 {"t": "node", "id": "Noch", "features": ["gelernt"], "labels": ["Noch", "noch", "noch nicht sehr weit in der Zuordnung von Themen zu den Arten der Probleme"]}
 {"t": "node", "id": "Nomen_Agentis", "features": ["Sportler", "gelernt"], "labels": ["Das Nomen Agentis", "Nomen", "Nomen_Agentis"]}
@@ -408,8 +355,8 @@
 {"t": "node", "id": "Nördlichste_Punkt_Des", "features": ["Kinnarodden", "gelernt"], "labels": ["Der nördlichste Punkt des europäischen Festlands", "Nördlichste_Punkt_Des"]}
 {"t": "node", "id": "Oberfläche_Dieses_Wüstentyps", "features": ["gelernt", "Übersät"], "labels": ["Die Oberfläche dieses Wüstentyps", "Oberfläche", "Oberfläche_Dieses_Wüstentyps"]}
 {"t": "node", "id": "Oberseite", "features": ["gelernt"], "labels": ["Oberseite", "die Oberseite eines Stücks ozeanischer Erdkruste"]}
-{"t": "node", "id": "Obwohl_Die_Astronomie", "features": ["Hobby", "gelernt"], "labels": ["Obwohl", "Obwohl die Astronomie nur an wenigen Schulen ein Unterrichtsfach ist, finden ihre Forschungsergebnisse in der Öffentlichkeit viel Interesse; als Amateurastronomie", "Obwohl_Die_Astronomie"]}
-{"t": "node", "id": "Oft_Sind_Zwischen", "features": ["Mit", "gelernt"], "labels": ["Oft", "Oft sind zwischen der Formulierung eines Problems und seiner Lösung viele Jahrhunderte vergangen und", "Oft_Sind_Zwischen"]}
+{"t": "node", "id": "Obwohl_Die_Astronomie", "features": ["Hobby", "gelernt"], "labels": ["Obwohl", "Obwohl_Die_Astronomie"]}
+{"t": "node", "id": "Oft_Sind_Zwischen", "features": ["Mit", "gelernt"], "labels": ["Oft", "Oft_Sind_Zwischen"]}
 {"t": "node", "id": "Olympische_Spiele", "features": ["Sammelbezeichnung", "gelernt"], "labels": ["Olympische", "Olympische Spiele", "Olympische_Spiele"]}
 {"t": "node", "id": "Opposition", "features": ["Bestandteil", "gelernt"], "labels": ["Die Opposition", "Opposition"]}
 {"t": "node", "id": "Ozean", "features": ["Meere", "gelernt"], "labels": ["Ozean"]}
@@ -417,64 +364,60 @@
 {"t": "node", "id": "Paroxysmus", "features": ["Folge", "gelernt"], "labels": ["Ein Paroxysmus", "Paroxysmus"]}
 {"t": "node", "id": "Paternalistischen_Ermessenspielraum_Der", "features": ["gelernt"], "labels": ["Paternalistischen_Ermessenspielraum_Der", "den paternalistischen Ermessenspielraum der Ärzte zurückzudrängen"]}
 {"t": "node", "id": "Person", "features": ["gelernt"], "labels": ["Person", "eine Person, die Medizin studiert hat"]}
-{"t": "node", "id": "Personen", "features": ["Bezeichnung", "gelernt"], "labels": ["Personen", "Personen, deren Berufsbild durch die Anwendung psychologischen Wissens charakterisiert"]}
-{"t": "node", "id": "Philosophie_Behandelt_Zumeist", "features": ["Staatsformen", "gelernt"], "labels": ["Die Philosophie behandelt zumeist Sachverhalte, die im Alltag zunächst einmal völlig selbstverständlich erscheinen: „Du sollst nicht töten“, „Demokratie", "Philosophie", "Philosophie_Behandelt_Zumeist"]}
+{"t": "node", "id": "Personen", "features": ["Bezeichnung", "gelernt"], "labels": ["Personen"]}
+{"t": "node", "id": "Philosophie_Behandelt_Zumeist", "features": ["Staatsformen", "gelernt"], "labels": ["Philosophie", "Philosophie_Behandelt_Zumeist"]}
 {"t": "node", "id": "Philosophische_Revolution_Für", "features": ["gelernt"], "labels": ["Philosophische_Revolution_Für", "die philosophische Revolution für Deutschland“"]}
-{"t": "node", "id": "Phonetisch_Naheliegend", "features": ["Wort_Literatur", "Wort_Oder_Glottonym", "gelernt"], "labels": ["Phonetisch", "Phonetisch naheliegend", "Phonetisch_Naheliegend"]}
+{"t": "node", "id": "Phonetisch_Naheliegend", "features": ["Wort_Architektur", "Wort_Literatur", "Wort_Oder_Glottonym", "gelernt"], "labels": ["Phonetisch", "Phonetisch naheliegend", "Phonetisch_Naheliegend"]}
 {"t": "node", "id": "Physik", "features": ["Naturwissenschaft", "gelernt"], "labels": ["Die Physik", "Physik"]}
-{"t": "node", "id": "Physikalische", "features": ["Geowissenschaften", "gelernt"], "labels": ["Die physikalische, chemische und biologische Erforschung ihrer Einzelerscheinungen", "Physikalische"]}
+{"t": "node", "id": "Physikalische", "features": ["Geowissenschaften", "gelernt"], "labels": ["Physikalische"]}
 {"t": "node", "id": "Planetensystem", "features": ["gelernt"], "labels": ["Planetensystem", "das Planetensystem, in dem sich die Erde befindet"]}
 {"t": "node", "id": "Planvolles_Entwerfen", "features": ["Inhalt", "gelernt"], "labels": ["Planvolles", "Planvolles Entwerfen, Gestalten und Konstruieren von Bauwerken", "Planvolles_Entwerfen"]}
 {"t": "node", "id": "Pluto", "features": ["Nach", "Zwergplanet", "gelernt"], "labels": ["Pluto"]}
 {"t": "node", "id": "Plutos", "features": ["gelernt"], "labels": ["Plutos", "Umlaufbahn", "die Umlaufbahn Plutos deutlich exzentrischer, mit einer Exzentrizität von 0,2488"]}
-{"t": "node", "id": "Prinzip", "features": ["gelernt"], "labels": ["Prinzip", "ebenfalls kein grundlegend neues Prinzip, sondern kann als Variante des römischen Rechtskonzepts des Nießbrauchs angesehen werden, bei dem es darum geht, eine Sache so zu gebrauchen, dass sie dabei nicht verbraucht wird, dass, mit anderen Worten, ihre Substanz erhalten bleibt"]}
-{"t": "node", "id": "Prinzip_Wurde_Zuerst", "features": ["Holz", "gelernt"], "labels": ["Das Prinzip wurde zuerst in der Forstwirtschaft angewendet: Im Wald", "Prinzip", "Prinzip_Wurde_Zuerst", "ebenfalls kein grundlegend neues Prinzip, sondern kann als Variante des römischen Rechtskonzepts des Nießbrauchs angesehen werden, bei dem es darum geht, eine Sache so zu gebrauchen, dass sie dabei nicht verbraucht wird, dass, mit anderen Worten, ihre Substanz erhalten bleibt"]}
+{"t": "node", "id": "Prinzip", "features": ["gelernt"], "labels": ["Prinzip"]}
+{"t": "node", "id": "Prinzip_Wurde_Zuerst", "features": ["Holz", "gelernt"], "labels": ["Das Prinzip wurde zuerst in der Forstwirtschaft angewendet: Im Wald", "Prinzip", "Prinzip_Wurde_Zuerst"]}
 {"t": "node", "id": "Prinzipien", "features": ["gelernt"], "labels": ["Prinzipien"]}
 {"t": "node", "id": "Problematik", "features": ["gelernt"], "labels": ["Problematik", "diese Problematik als LeibSeeleProblem"]}
-{"t": "node", "id": "Prozess", "features": ["gelernt"], "labels": ["Prozess", "in einem historischen Prozess, der Kulturte und Literaturgeschichte, nach dem Adressaten betrachtet wird in Kategorien wie Kinderur und Jugendliteratur, Frauenliteratur, grundsätzlich nach Anspruchsniveaus unterschieden wird in „hohe“ Literatur und „Trivialliteratur“"]}
-{"t": "node", "id": "Prozess_Bei_Dem", "features": ["Ist", "Zunahme", "gelernt"], "labels": ["Der Prozess bei dem sich abgestorbenes organisches Material zuerst in Torf dann in Braunkohle und zuletzt in Steinkohle umwandelt wird als Inkohlung", "Der Prozess bei dem sich abgestorbenes organisches Material zuerst in Torf dann in Braunkohle und zuletzt in Steinkohle umwandelt wird als Inkohlung bezeichnet und", "Prozess", "Prozess_Bei_Dem"]}
+{"t": "node", "id": "Prozess", "features": ["gelernt"], "labels": ["Prozess"]}
+{"t": "node", "id": "Prozess_Bei_Dem", "features": ["Ist", "Zunahme", "gelernt"], "labels": ["Prozess", "Prozess_Bei_Dem"]}
 {"t": "node", "id": "Psychoanalyse", "features": ["Erkrankungen", "gelernt"], "labels": ["Die Psychoanalyse", "Psychoanalyse"]}
 {"t": "node", "id": "Psychologie", "features": ["Wissenschaft", "gelernt"], "labels": ["Die Psychologie, deutsch historisch auch Seelenkunde genannt,", "Psychologie"]}
 {"t": "node", "id": "Quantenmechanik", "features": ["Hauptsäulen", "Theorie", "gelernt"], "labels": ["Die Quantenmechanik", "Quantenmechanik"]}
 {"t": "node", "id": "RIKEN_:_RIKEN", "features": ["Forschungsinstitut", "gelernt"], "labels": ["RIKEN", "RIKEN : RIKEN", "RIKEN_:_RIKEN"]}
 {"t": "node", "id": "Recht", "features": ["Definiert", "Verhaltensregeln", "gelernt"], "labels": ["Das Recht", "Recht"]}
 {"t": "node", "id": "Regenwald", "features": ["Wälder", "gelernt"], "labels": ["Regenwald"]}
-{"t": "node", "id": "Relativ", "features": ["gelernt"], "labels": ["Relativ", "relativ", "relativ gering, wodurch er auch in vielen Entwicklungsländern sehr populär wurde, und er ist für Neulinge und Zuschauer leicht verständlich"]}
+{"t": "node", "id": "Relativ", "features": ["gelernt"], "labels": ["Relativ", "relativ"]}
 {"t": "node", "id": "Renaissance", "features": ["Sich", "gelernt"], "labels": ["Renaissance"]}
-{"t": "node", "id": "Rohdaten_Werden_Vorab", "features": ["Wird", "gelernt"], "labels": ["Rohdaten", "Rohdaten werden vorab mittels spezieller Entwicklungssoftware oder RAW-Konvertern am Computer in nutzbare Formate gebracht, was als digitale Entwicklung", "Rohdaten_Werden_Vorab"]}
-{"t": "node", "id": "Sammelbezeichnung", "features": ["gelernt"], "labels": ["Sammelbezeichnung", "die Sammelbezeichnung für die regelmäßig ausgetragenen Sportwettkampfveranstaltungen - Olympische Sommerspiele und Olympische Winterspiele"]}
+{"t": "node", "id": "Rohdaten_Werden_Vorab", "features": ["Wird", "gelernt"], "labels": ["Rohdaten", "Rohdaten_Werden_Vorab"]}
+{"t": "node", "id": "Sammelbezeichnung", "features": ["gelernt"], "labels": ["Sammelbezeichnung"]}
 {"t": "node", "id": "Sandwüste", "features": ["Wüste", "gelernt"], "labels": ["Eine Sandwüste", "Sandwüste"]}
 {"t": "node", "id": "Schicht", "features": ["gelernt"], "labels": ["Schicht", "die Schicht, umso besser ist allerdings die Auflösung", "die lichtempfindliche Schicht auf der Bildebene eine Dispersion"]}
 {"t": "node", "id": "Schon_Von_Anfang", "features": ["Film", "gelernt"], "labels": ["Schon", "Schon von Anfang an", "Schon_Von_Anfang", "schon", "schon im 6"]}
-{"t": "node", "id": "Schwanzlurch", "features": ["gelernt"], "labels": ["Schwanzlurch", "in Mexiko rein aquatisch lebender Schwanzlurch aus der Familie der Querzahnmolche, der natürlicherweise nur als Dauerlarve auftritt"]}
+{"t": "node", "id": "Schwanzlurch", "features": ["gelernt"], "labels": ["Schwanzlurch"]}
 {"t": "node", "id": "Schwierig", "features": ["gelernt"], "labels": ["Schwierig", "schwierig", "schwierig zu definieren, da es verschiedene Definitionen von Intelligenz gibt"]}
 {"t": "node", "id": "Seine_Zentrale_Bedeutung", "features": ["gelernt"], "labels": ["Seine_Zentrale_Bedeutung", "seine zentrale Bedeutung in Literaturgeschichten"]}
-{"t": "node", "id": "Seit", "features": ["gelernt"], "labels": ["Seit", "seit ca", "seit dem 19", "seit dem 8"]}
-{"t": "node", "id": "Seit_Der_Definition", "features": ["Baukunst", "Begriff", "gelernt"], "labels": ["Seit", "Seit der Definition des modernen Sports von Allen Guttmann", "Seit_Der_Definition"]}
-{"t": "node", "id": "Seit_Der_Wiedervereinigung", "features": ["gelernt"], "labels": ["Seit", "Seit der Wiedervereinigung 1990", "Seit_Der_Wiedervereinigung"]}
-{"t": "node", "id": "Seit_Jeher_Verschiedene", "features": ["gelernt"], "labels": ["Seit_Jeher_Verschiedene", "seit jeher verschiedene Formen von Energie zum leben"]}
 {"t": "node", "id": "Seitdem", "features": ["Bestandteil", "gelernt"], "labels": ["Seitdem"]}
 {"t": "node", "id": "Selbst_Die_Mathematik", "features": ["gelernt"], "labels": ["Selbst", "Selbst die Mathematik", "Selbst_Die_Mathematik"]}
-{"t": "node", "id": "Sich", "features": ["gelernt"], "labels": ["Sich", "die sich mit der Erdoberfläche befassende Wissenschaft, sowohl in ihrer physischen Beschaffenheit wie auch als Raum und Ort des menschlichen Lebens und Handelns", "eine sich über drei Jahrhunderte erstreckende europäische Kulturepoche in der Zeit des Übergangs vom Mittelalter zur Neuzeit", "sich"]}
+{"t": "node", "id": "Sich", "features": ["gelernt"], "labels": ["Sich", "sich"]}
 {"t": "node", "id": "Sich_Als_Eher", "features": ["gelernt"], "labels": ["Sich_Als_Eher", "sich als eher zweifelhaft erwiesen"]}
 {"t": "node", "id": "Sich_Aus_Dem", "features": ["gelernt"], "labels": ["Sich_Aus_Dem", "sich aus dem germanischen *þeuðō ‚Volk‘"]}
-{"t": "node", "id": "Sich_Bereichsübergreifend_Des", "features": ["gelernt"], "labels": ["Sich_Bereichsübergreifend_Des", "der sich bereichsübergreifend des Experiments als wissenschaftlicher Methode bedient"]}
+{"t": "node", "id": "Sich_Bereichsübergreifend_Des", "features": ["gelernt"], "labels": ["Sich_Bereichsübergreifend_Des"]}
 {"t": "node", "id": "Sich_Das_Forschungsfeld", "features": ["gelernt"], "labels": ["Sich_Das_Forschungsfeld", "sich das Forschungsfeld immer weiter ausdifferenziert"]}
 {"t": "node", "id": "Sich_Der_LithiumPreis", "features": ["gelernt"], "labels": ["Sich_Der_LithiumPreis", "sich der LithiumPreis innerhalb eines Jahres verdoppelt"]}
 {"t": "node", "id": "Sich_Deutschland_Zu", "features": ["gelernt"], "labels": ["Sich_Deutschland_Zu", "sich Deutschland zu einer der führenden Wirtschaftsnationen weltweit entwickelt"]}
 {"t": "node", "id": "Sich_Die_Renaissance", "features": ["gelernt"], "labels": ["Sich_Die_Renaissance", "sich die Renaissance erst seit Mitte des 19"]}
-{"t": "node", "id": "Sich_Diese_Beziehung", "features": ["gelernt"], "labels": ["Sich_Diese_Beziehung", "sich diese Beziehung mit dem Aufkommen der modernen Medizin fundamental gewandelt"]}
+{"t": "node", "id": "Sich_Diese_Beziehung", "features": ["gelernt"], "labels": ["Sich_Diese_Beziehung"]}
 {"t": "node", "id": "Sich_Ein_Zweig", "features": ["gelernt"], "labels": ["Sich_Ein_Zweig", "sich ein Zweig der psychologischen Forschung etabliert"]}
 {"t": "node", "id": "Sich_Gewandelt", "features": ["gelernt"], "labels": ["Sich_Gewandelt", "sich gewandelt"]}
 {"t": "node", "id": "Sich_Historisch_Ergeben", "features": ["gelernt"], "labels": ["Sich_Historisch_Ergeben", "sich historisch ergeben"]}
 {"t": "node", "id": "Sich_Seit_Der", "features": ["gelernt"], "labels": ["Sich_Seit_Der", "die sich seit der Antike im weitesten Sinne mit den Gründen"]}
-{"t": "node", "id": "Sich_Sowohl_Im", "features": ["gelernt"], "labels": ["Sich_Sowohl_Im", "sich sowohl im Analogals auch im Digitalbereich die Spiegelreflexkamera durchgesetzt"]}
+{"t": "node", "id": "Sich_Sowohl_Im", "features": ["gelernt"], "labels": ["Sich_Sowohl_Im"]}
 {"t": "node", "id": "Sich_Vor_Allem", "features": ["gelernt"], "labels": ["Sich_Vor_Allem", "sich vor allem unter slawischen"]}
 {"t": "node", "id": "Sie", "features": ["Formalwissenschaft", "Teilgebiet", "gelernt"], "labels": ["Sie", "sie", "sie 2430-mal so hoch", "sie als axiomatische Theorien", "sie sehr nahe dem Baryzentrum des Sonnensystems"]}
 {"t": "node", "id": "Sie_In_Eine", "features": ["gelernt"], "labels": ["Sie_In_Eine", "sie in eine dominante Rolle erhoben"]}
-{"t": "node", "id": "Sie_Sind_Mittlerweile", "features": ["Anderen", "gelernt"], "labels": ["Sie", "Sie sind mittlerweile die größten Unternehmen der Welt und besitzen jeweils mindestens ein Monopol auf einen essentiellen Onlinedienst - daher", "Sie_Sind_Mittlerweile"]}
+{"t": "node", "id": "Sie_Sind_Mittlerweile", "features": ["Anderen", "gelernt"], "labels": ["Sie", "Sie_Sind_Mittlerweile"]}
 {"t": "node", "id": "Sieht_Damit_Wie", "features": ["gelernt"], "labels": ["Sieht_Damit_Wie", "sieht damit wie ein blendend heller Stern etwa der -19"]}
-{"t": "node", "id": "Sinne", "features": ["gelernt"], "labels": ["Sinne", "dieses Prinzip wörtlich erkennbar: to sustain im Sinne von „aufrechterhalten“ bzw", "im weitesten Sinne die handwerkliche, industrielle und digitale Gestaltung sowie die ästhetische Auseinandersetzung des Menschen mit dem gebauten Raum"]}
+{"t": "node", "id": "Sinne", "features": ["gelernt"], "labels": ["Sinne"]}
 {"t": "node", "id": "So", "features": ["Bedeutungswandel", "Beispielsweise", "gelernt"], "labels": ["So"]}
 {"t": "node", "id": "Sobald_Ein_Grundschüler", "features": ["Er", "gelernt"], "labels": ["Sobald", "Sobald ein Grundschüler das Addieren natürlicher Zahlen gelernt hat,", "Sobald_Ein_Grundschüler"]}
 {"t": "node", "id": "Sogenannte_Alltagspsychologie_Hingegen", "features": ["Gegenstand", "gelernt"], "labels": ["Die sogenannte Alltagspsychologie hingegen", "Sogenannte_Alltagspsychologie_Hingegen"]}
@@ -486,153 +429,138 @@
 {"t": "node", "id": "Spezifische_Einzelne_Ursachen", "features": ["gelernt"], "labels": ["Spezifische_Einzelne_Ursachen", "spezifische einzelne Ursachen der Industriellen Revolution bestimmen zu wollen"]}
 {"t": "node", "id": "Spielzeit", "features": ["Minuten", "gelernt"], "labels": ["Die Spielzeit", "Spielzeit"]}
 {"t": "node", "id": "Sportler", "features": ["gelernt"], "labels": ["Sportler", "der einen Sport ausübende Sportler"]}
-{"t": "node", "id": "Sprache", "features": ["gelernt"], "labels": ["Sprache", "plurizentrische Sprache, enthält also mehrere Standardvarietäten in verschiedenen Regionen", "westgermanische Sprache, die weltweit etwa 90 bis 105 Millionen Menschen als Muttersprache und weiteren rund 80 Millionen als Zweithe und Fremdsprache dient"]}
-{"t": "node", "id": "Sprachgebrauch", "features": ["gelernt"], "labels": ["Sprachgebrauch", "im europäischenglischen Sprachgebrauch eine „geheimnisvolle, transzendente Kraft hinter allen sichtbaren Erscheinungen“"]}
+{"t": "node", "id": "Sprache", "features": ["gelernt"], "labels": ["Sprache"]}
+{"t": "node", "id": "Sprachgebrauch", "features": ["gelernt"], "labels": ["Sprachgebrauch"]}
 {"t": "node", "id": "Spätrenaissance_Als_Epoche", "features": ["Anfang", "gelernt"], "labels": ["Die Spätrenaissance als Epoche der Kunstgeschichte wird auch als Manierismus", "Spätrenaissance", "Spätrenaissance_Als_Epoche"]}
 {"t": "node", "id": "Staatlich_Institutionalisiertes_Recht", "features": ["Moral", "gelernt"], "labels": ["Staatlich", "Staatlich institutionalisiertes Recht", "Staatlich_Institutionalisiertes_Recht"]}
-{"t": "node", "id": "Staatsformen", "features": ["gelernt"], "labels": ["Staatsformen", "die beste aller Staatsformen“, „Wahrheit ist, was nachprüfbar stimmt“, „Die Welt ist, was sich im Universum vorfindet“ oder „Die Gedanken sind frei“"]}
+{"t": "node", "id": "Staatsformen", "features": ["gelernt"], "labels": ["Staatsformen"]}
 {"t": "node", "id": "Stark", "features": ["gelernt"], "labels": ["Stark", "stark", "stark von einer metaphorischen Sprache geprägt"]}
 {"t": "node", "id": "Staubteilchen", "features": ["gelernt"], "labels": ["Staubteilchen"]}
-{"t": "node", "id": "Staubverfahren", "features": ["gelernt"], "labels": ["Staubverfahren", "das Staubverfahren, mit dem sich einbrennbare Bilder auf Glas und Porzellan herstellen lassen"]}
-{"t": "node", "id": "Steigerung", "features": ["gelernt"], "labels": ["Steigerung", "die erhebliche Steigerung des Lithiumabbaus im Zuge des erhöhten Bedarfs an LithiumIonenAkkumulatoren mit negativen Auswirkungen auf die Umwelt in den Ländern der Rohstoffgewinnung verbunden"]}
+{"t": "node", "id": "Staubverfahren", "features": ["gelernt"], "labels": ["Staubverfahren"]}
+{"t": "node", "id": "Steigerung", "features": ["gelernt"], "labels": ["Steigerung"]}
 {"t": "node", "id": "Steinkohle_Einen_Höheren", "features": ["gelernt"], "labels": ["Steinkohle", "Steinkohle einen höheren Heizwert als Braunkohle", "Steinkohle_Einen_Höheren"]}
 {"t": "node", "id": "Steinschneider", "features": ["gelernt"], "labels": ["Steinschneider"]}
 {"t": "node", "id": "Stoff", "features": ["gelernt"], "labels": ["Ein Stoff", "Stoff"]}
-{"t": "node", "id": "Strom", "features": ["gelernt"], "labels": ["Strom", "Strom aus Kohlekraftwerken je nach Bedarf abrufbar, benötigt also keine Schattenkraftwerke zum Ausgleich von Schwankungen"]}
+{"t": "node", "id": "Strom", "features": ["gelernt"], "labels": ["Strom"]}
 {"t": "node", "id": "Stromversorgung_Über_Kabel", "features": ["Seit", "gelernt"], "labels": ["Die Stromversorgung über Kabel, insbesondere über Oberleitungen bei Zügen,", "Stromversorgung", "Stromversorgung_Über_Kabel"]}
-{"t": "node", "id": "Struktur_Des_Gesamten", "features": ["gelernt"], "labels": ["Struktur", "Struktur des gesamten Universums zum Gegenstand", "Struktur_Des_Gesamten", "geologische Struktur, die entsteht, wenn Magma bis an die Oberfläche eines Planeten aufsteigt"]}
+{"t": "node", "id": "Struktur_Des_Gesamten", "features": ["gelernt"], "labels": ["Struktur", "Struktur des gesamten Universums zum Gegenstand", "Struktur_Des_Gesamten"]}
 {"t": "node", "id": "Subatomaren_Bereich", "features": ["gelernt"], "labels": ["Subatomaren_Bereich", "subatomaren Bereich"]}
 {"t": "node", "id": "Subkontinent", "features": ["gelernt"], "labels": ["Europa", "Europa ein Subkontinent, der mit Asien zusammen den Kontinent Eurasien bildet", "Subkontinent"]}
-{"t": "node", "id": "Subtraktion", "features": ["gelernt"], "labels": ["5 minus 3?“ Sobald aber die Subtraktion definiert ist, kann man auch die Frage stellen: „Was ist 3 minus 5?“, die auf eine negative Zahl und damit bereits über die Grundschulmathematik hinaus führt", "Subtraktion"]}
-{"t": "node", "id": "System", "features": ["Begriff", "gelernt"], "labels": ["Demokratie", "Demokratie ein System nach dem Grundsatz, dass niemand sich selbst zum Herrscher erklären kann, niemand die Macht unwiderruflich im eigenen Namen innehaben kann", "KI-System", "KI-System, wenn es anhand von Daten zu einer Teilmenge aller möglichen Fahrten „angelernt“ wurde, für jede mögliche Fahrt die schnellste Route zu finden", "System", "kein KI-System, wenn es die schnellste Route aufgrund unveränderlicher*, mindestens dem Hersteller/Programmierer bekannter Algorithmen und einer zuvor nach ebenso bekannten Regeln optimierten, unveränderlichen* Datenbank ermittelt"]}
-{"t": "node", "id": "Systeme", "features": ["gelernt"], "labels": ["Systeme", "im weitesten Sinne computerbasierte Systeme, die ihre Umgebung analysieren können, um daraus relevante Informationen zu abstrahieren, welche sie nutzen, um Entscheidungen zu treffen, die ihre Chance erhöhen, definierte Ziele zu erreichen"]}
-{"t": "node", "id": "Tabelle_Zeigt_Außerdem", "features": ["Zu_94", "gelernt"], "labels": ["Die Tabelle zeigt außerdem, dass die Elemente Kohlenstoff, Sauerstoff und Wasserstoff mit Abstand den größten Anteil des Gewichts stellen: der Mensch", "Tabelle", "Tabelle_Zeigt_Außerdem"]}
+{"t": "node", "id": "Subtraktion", "features": ["gelernt"], "labels": ["Subtraktion"]}
+{"t": "node", "id": "System", "features": ["Begriff", "gelernt"], "labels": ["Demokratie", "KI-System", "System"]}
+{"t": "node", "id": "Systeme", "features": ["gelernt"], "labels": ["Systeme"]}
+{"t": "node", "id": "Tabelle_Zeigt_Außerdem", "features": ["Zu_94", "gelernt"], "labels": ["Tabelle", "Tabelle_Zeigt_Außerdem"]}
 {"t": "node", "id": "Tagebau_Bei_Der", "features": ["gelernt"], "labels": ["Der Tagebau bei der Braunkohle", "Tagebau", "Tagebau_Bei_Der"]}
-{"t": "node", "id": "Technische", "features": ["Filmgeschichte", "gelernt"], "labels": ["Die technische, kulturelle und künstlerische Entwicklung dieses optischen Mediums seit den Anfängen um 1900", "Technische"]}
-{"t": "node", "id": "Technologische_Grundlage_Der", "features": ["Mikroelektronik", "gelernt"], "labels": ["Die technologische Grundlage der beschriebenen Informatisierung der Fertigungstechnik und engeren Vernetzung zwischen Produktion und Logistik", "Technologische_Grundlage_Der"]}
+{"t": "node", "id": "Technische", "features": ["Filmgeschichte", "gelernt"], "labels": ["Technische"]}
+{"t": "node", "id": "Technologische_Grundlage_Der", "features": ["Mikroelektronik", "gelernt"], "labels": ["Technologische_Grundlage_Der"]}
 {"t": "node", "id": "Teil", "features": ["gelernt"], "labels": ["Teil", "der materielle Teil des Menschen"]}
-{"t": "node", "id": "Teilgebiet", "features": ["gelernt"], "labels": ["Teilgebiet", "Teilgebiet der Naturwissenschaften und befasst sich sowohl mit den allgemeinen Gesetzmäßigkeiten des Lebendigen als auch mit den Besonderheiten der einzelnen Lebewesen: zum Beispiel mit ihrer Entwicklung, ihrem Bauplan und den physikalischen und biochemischen Vorgängen in ihrem Inneren"]}
-{"t": "node", "id": "Theorie", "features": ["gelernt"], "labels": ["Theorie", "physikalische Theorie, mit der die Eigenschaften und Gesetzmäßigkeiten von Zuständen und Vorgängen der Materie beschrieben werden"]}
+{"t": "node", "id": "Teilgebiet", "features": ["gelernt"], "labels": ["Teilgebiet"]}
+{"t": "node", "id": "Theorie", "features": ["gelernt"], "labels": ["Theorie"]}
 {"t": "node", "id": "Theorien_Auf_Wissenschaftlicher", "features": ["gelernt"], "labels": ["Theorien", "Theorien auf wissenschaftlicher Ebene", "Theorien_Auf_Wissenschaftlicher"]}
 {"t": "node", "id": "Tiefe", "features": ["gelernt"], "labels": ["Tiefe", "in seiner ganzen Tiefe nur historisch fassbar"]}
 {"t": "node", "id": "Traditionell", "features": ["Zusammenarbeit", "gelernt"], "labels": ["Traditionell"]}
 {"t": "node", "id": "Trennung", "features": ["gelernt"], "labels": ["Trennung", "informelle Trennung von Vögeln und Dinosauriern im klassischen Sinn üblich"]}
-{"t": "node", "id": "Trivialname_Axolotl_Stammt", "features": ["Abgeleitet", "gelernt"], "labels": ["Der Trivialname Axolotl stammt aus der aztekischen Sprache Nahuatl: āxōlōtl [aː'ʃoːloːt͡ɬ]", "Trivialname", "Trivialname_Axolotl_Stammt"]}
+{"t": "node", "id": "Trivialname_Axolotl_Stammt", "features": ["Abgeleitet", "gelernt"], "labels": ["Trivialname", "Trivialname_Axolotl_Stammt"]}
 {"t": "node", "id": "Tätigkeit", "features": ["gelernt"], "labels": ["Film", "Tätigkeit", "der Film zudem ein Mittel künstlerischen Ausdrucks und kultureller Tätigkeit"]}
 {"t": "node", "id": "U", "features": ["gelernt"], "labels": ["U", "u"]}
 {"t": "node", "id": "Um_Ein_System", "features": ["Annäherung", "gelernt"], "labels": ["Um ein System im Alltag konkret als „KI“ oder „nicht KI“ einordnen zu können,", "Um_Ein_System"]}
-{"t": "node", "id": "Um_Zur_Illustration", "features": ["Wissenschaft", "gelernt"], "labels": ["Um zur Illustration einen zirkulären Versuch anzuführen, geht die folgende szientistische Fassung des Begriffes „Philosophie“ bereits auf die vorhergehende Kognition des philosophischen Gehaltes zurück: „In ihrer wissenschaftlich begründeten Gestalt als dialektischer und historischer Materialismus", "Um_Zur_Illustration"]}
-{"t": "node", "id": "Umschreibt_„Philosophie“_Als", "features": ["gelernt"], "labels": ["Umschreibt_„Philosophie“_Als", "umschreibt „Philosophie“ als die Frage nach dem Menschsein in der Welt: Kennzeichnung durch Tätigkeitsfelder: Zu den philosophischen Arbeitsfeldern gehört zunächst die Untersuchung von Methoden"]}
+{"t": "node", "id": "Um_Zur_Illustration", "features": ["Wissenschaft", "gelernt"], "labels": ["Um_Zur_Illustration"]}
+{"t": "node", "id": "Umschreibt_„Philosophie“_Als", "features": ["gelernt"], "labels": ["Umschreibt_„Philosophie“_Als"]}
 {"t": "node", "id": "Umstritten", "features": ["gelernt"], "labels": ["Umstritten", "umstritten"]}
-{"t": "node", "id": "Unangefochten", "features": ["gelernt"], "labels": ["Unangefochten", "unangefochten", "unangefochten; sowohl in international gültigen Dokumenten wie der Deklaration von Helsinki als auch im nationalen Strafrecht und den Berufsordnungen der Medizinalberufe findet sie ihren Niederschlag"]}
+{"t": "node", "id": "Unangefochten", "features": ["gelernt"], "labels": ["Unangefochten", "unangefochten"]}
 {"t": "node", "id": "Unbelebte_Menschliche_Körper", "features": ["Geht", "gelernt"], "labels": ["Der unbelebte menschliche Körper wird als Leichnam", "Unbelebte_Menschliche_Körper"]}
 {"t": "node", "id": "Und_Die_Möglichkeiten", "features": ["gelernt"], "labels": ["Und_Die_Möglichkeiten", "und die Möglichkeiten der Vorratshaltung verbessert"]}
 {"t": "node", "id": "Universalie", "features": ["gelernt"], "labels": ["Musik", "Universalie", "die Musik eine Universalie der menschlichen Kultur"]}
-{"t": "node", "id": "Unter_Historikern_Üblich", "features": ["Verwendung", "gelernt"], "labels": ["Unter", "Unter Historikern üblich", "Unter_Historikern_Üblich"]}
-{"t": "node", "id": "Unterliegt", "features": ["gelernt"], "labels": ["Unterliegt", "und unterliegt, wie viele andere Wissenschaften, einem kontinuierlichen Erkenntnisfortschritt"]}
-{"t": "node", "id": "Unterscheiden", "features": ["gelernt"], "labels": ["Unterscheiden", "unterscheiden", "zu unterscheiden von subjektiven Rechten, den konkreten Rechten des Einzelnen, etwas zu tun, zu unterlassen oder von einem anderen zu verlangen"]}
+{"t": "node", "id": "Unterliegt", "features": ["gelernt"], "labels": ["Unterliegt", "unterliegt"]}
+{"t": "node", "id": "Unterscheiden", "features": ["gelernt"], "labels": ["Unterscheiden", "unterscheiden"]}
 {"t": "node", "id": "Unterscheidungsbeispiel:_Ein_Navigationssystem", "features": ["System", "gelernt"], "labels": ["Unterscheidungsbeispiel", "Unterscheidungsbeispiel: Ein Navigationssystem", "Unterscheidungsbeispiel:_Ein_Navigationssystem"]}
-{"t": "node", "id": "Unterschied_Einmal_So", "features": ["gelernt"], "labels": ["Unterschied", "Unterschied_Einmal_So", "den Unterschied einmal so gefasst: Hans Joachim Störigs populärwissenschaftlicher Bestseller Kleine Weltgeschichte der Philosophie wendet sich dementsprechend nicht an „Fachphilosophen“"]}
-{"t": "node", "id": "Unterständig", "features": ["gelernt"], "labels": ["Unterständig", "unterständig", "unterständig, die Schnauze ist abgerundet, die kleinen lidlosen Augen stehen weit auseinander"]}
+{"t": "node", "id": "Unterschied_Einmal_So", "features": ["gelernt"], "labels": ["Unterschied", "Unterschied_Einmal_So"]}
+{"t": "node", "id": "Unterständig", "features": ["gelernt"], "labels": ["Unterständig", "unterständig"]}
 {"t": "node", "id": "Untersucht_Mit_Hilfe", "features": ["gelernt"], "labels": ["Untersucht_Mit_Hilfe", "untersucht mit Hilfe der Quantenphysik das Universum auch im atomaren"]}
-{"t": "node", "id": "Unvermeidlich", "features": ["gelernt"], "labels": ["Unvermeidlich", "unvermeidlich", "unvermeidlich, da es sich nicht nur um einen Wettbewerb von Talent und Kompetenz handelt, sondern auch um die Gültigkeit der individuellen Wertesysteme"]}
+{"t": "node", "id": "Unvermeidlich", "features": ["gelernt"], "labels": ["Unvermeidlich", "unvermeidlich"]}
 {"t": "node", "id": "Ursache_Der_Neotenen", "features": ["Veränderung", "gelernt"], "labels": ["Ursache", "Ursache der neotenen Entwicklung des Axolotl", "Ursache_Der_Neotenen"]}
 {"t": "node", "id": "Ursachen_Aller_Dinge", "features": ["gelernt"], "labels": ["Ursachen", "Ursachen aller Dinge befasst", "Ursachen_Aller_Dinge"]}
 {"t": "node", "id": "Ursprüngliche_Wort_Für", "features": ["Kinematographie", "gelernt"], "labels": ["Das ursprüngliche Wort für Filmen", "Ursprüngliche_Wort_Für"]}
 {"t": "node", "id": "Verb", "features": ["gelernt"], "labels": ["Verb", "weltweiter Verb und von Rechnernetzwerken, den autonomen Systemen"]}
 {"t": "node", "id": "Verbreitung_Des_Internets", "features": ["gelernt"], "labels": ["Die Verbreitung des Internets", "Verbreitung", "Verbreitung_Des_Internets"]}
 {"t": "node", "id": "Verbreitung_Des_Smartphones", "features": ["gelernt"], "labels": ["Die Verbreitung des Smartphones seit 2007", "Verbreitung", "Verbreitung_Des_Smartphones"]}
-{"t": "node", "id": "Verbrennung", "features": ["gelernt"], "labels": ["Verbrennung", "die Verbrennung von Kohle im Vergleich mit anderen fossilen Energieträgern mit vergleichsweise hohen CO2-Emissionen verbunden, da Kohle im Wesentlichen aus Kohlenstoff besteht"]}
+{"t": "node", "id": "Verbrennung", "features": ["gelernt"], "labels": ["Verbrennung"]}
 {"t": "node", "id": "Verbrennung_Von_Kohle", "features": ["Zudem", "gelernt"], "labels": ["Die Verbrennung von Kohle", "Verbrennung", "Verbrennung_Von_Kohle"]}
-{"t": "node", "id": "Vergleich", "features": ["gelernt"], "labels": ["Vergleich", "in Europa im Vergleich mit Gebieten gleicher geographischer Breite in anderen Erdteilen wegen des Einflusses des relativ warmen Golfstroms milder"]}
-{"t": "node", "id": "Verglichen", "features": ["gelernt"], "labels": ["Verglichen", "verglichen", "verglichen mit Importkohle sehr teuer und muss massiv subventioniert werden, um konkurrenzfähig zu bleiben"]}
-{"t": "node", "id": "Verhaltensregeln", "features": ["gelernt"], "labels": ["Gesamtheit", "Verhaltensregeln", "die Gesamtheit genereller Verhaltensregeln, die von der Gemeinschaft gewährleistet werden"]}
+{"t": "node", "id": "Vergleich", "features": ["gelernt"], "labels": ["Vergleich"]}
+{"t": "node", "id": "Verglichen", "features": ["gelernt"], "labels": ["Verglichen", "verglichen"]}
+{"t": "node", "id": "Verhaltensregeln", "features": ["gelernt"], "labels": ["Gesamtheit", "Verhaltensregeln"]}
 {"t": "node", "id": "Verkleinerung", "features": ["gelernt"], "labels": ["Verkleinerung", "in seitlicher Ansicht exponiert; Verkleinerung der Posttemporalöffnung"]}
 {"t": "node", "id": "Verteilung_Der_Häufigkeit", "features": ["Erdhülle", "gelernt"], "labels": ["Die Verteilung der Häufigkeit der Elemente", "Verteilung", "Verteilung_Der_Häufigkeit"]}
-{"t": "node", "id": "Verwendung", "features": ["gelernt"], "labels": ["Verwendung", "die Verwendung des Begriffs industrielle Revolution für das Geschehen auf der britischen Hauptinsel etwa zwischen 1750 und 1850, während ansonsten von Industrialisierung gesprochen wird, sofern in einer Volkswirtschaft ein über mehrere Jahrzehnte stetig anhaltendes ProKopfWachstum der realen Erzeugung von mehr als 1,5 Prozent vorliegt"]}
-{"t": "node", "id": "Veränderung", "features": ["gelernt"], "labels": ["Veränderung", "evolutionär erworbene Veränderung der Schilddrüsenfunktion: Die für die Metamorphose der meisten Amphibien verantwortlichen Hormone werden beim Axolotl nicht ausgeschüttet", "weltweit auftretende Veränderung des Klimas auf der Erde oder erdähnlichen Planeten oder Monden, die eine Atmosphäre besitzen"]}
+{"t": "node", "id": "Verwendung", "features": ["gelernt"], "labels": ["Verwendung"]}
+{"t": "node", "id": "Veränderung", "features": ["gelernt"], "labels": ["Veränderung"]}
 {"t": "node", "id": "Vielfältige_Berührungspunkte_Mit", "features": ["gelernt"], "labels": ["Vielfältige_Berührungspunkte_Mit", "vielfältige Berührungspunkte mit anderen Naturwissenschaften"]}
 {"t": "node", "id": "Vielfältige_Vorteile", "features": ["gelernt"], "labels": ["Vielfältige_Vorteile", "vielfältige Vorteile"]}
-{"t": "node", "id": "Volk", "features": ["gelernt"], "labels": ["Volk", "das historische Volk der Sachsen gemeint, das den heutigen niedersächsischen Sprachraum besiedelte"]}
-{"t": "node", "id": "Volkswirtschaft", "features": ["gelernt"], "labels": ["Deutschland", "Deutschland die größte Volkswirtschaft der EU und eine der bedeutendsten Exportnationen weltweit", "Volkswirtschaft"]}
+{"t": "node", "id": "Volk", "features": ["gelernt"], "labels": ["Volk"]}
+{"t": "node", "id": "Volkswirtschaft", "features": ["gelernt"], "labels": ["Deutschland", "Volkswirtschaft"]}
 {"t": "node", "id": "Vom_Pluto_Aus", "features": ["gelernt"], "labels": ["Vom", "Vom Pluto aus betrachtet", "Vom_Pluto_Aus"]}
-{"t": "node", "id": "Von_Einem_Massiven", "features": ["gelernt"], "labels": ["Von_Einem_Massiven", "von einem massiven SchmelzwasserEintrag in den Nordatlantik"]}
-{"t": "node", "id": "Von_Europa", "features": ["Schon_Von_Anfang", "gelernt"], "labels": ["Von Europa", "Von_Europa"]}
-{"t": "node", "id": "Vor", "features": ["gelernt"], "labels": ["Vor", "vor allem die durch Atomik und Molekülphysik und Quantenchemie markierte Grenze zur Chemie fließend"]}
-{"t": "node", "id": "Vor_Allem_Der", "features": ["gelernt"], "labels": ["Vor_Allem_Der", "vor allem der Gehalt an Siliciumdioxid"]}
-{"t": "node", "id": "Vorstellungen", "features": ["gelernt"], "labels": ["Vorstellungen", "relativ jung; Vorstellungen von solchen natürlichen Vererbungsprozessen prägten sich erst im 18"]}
+{"t": "node", "id": "Vorstellungen", "features": ["gelernt"], "labels": ["Vorstellungen"]}
 {"t": "node", "id": "Vorverständnis_Der_Alltagspsychologie", "features": ["Jedoch", "gelernt"], "labels": ["Das Vorverständnis der Alltagspsychologie", "Vorverständnis", "Vorverständnis_Der_Alltagspsychologie"]}
 {"t": "node", "id": "Vulkan", "features": ["Struktur_Des_Gesamten", "gelernt"], "labels": ["Ein Vulkan", "Vulkan"]}
 {"t": "node", "id": "Vulkanismus", "features": ["gelernt"], "labels": ["Vulkanismus", "als Vulkanismus", "der damit verbundene Vulkanismus"]}
 {"t": "node", "id": "Vulkankrater", "features": ["gelernt"], "labels": ["Vulkankrater", "der Vulkankrater"]}
 {"t": "node", "id": "War_Eine_Zeitlich", "features": ["gelernt"], "labels": ["War_Eine_Zeitlich", "war eine zeitlich scharf begrenzte"]}
-{"t": "node", "id": "Was_Krankheit_Ausmacht", "features": ["gelernt"], "labels": ["Was_Krankheit_Ausmacht", "was Krankheit ausmacht"]}
 {"t": "node", "id": "Wassergehalt_Die_Zusammensetzung", "features": ["gelernt"], "labels": ["Wassergehalt", "Wassergehalt die Zusammensetzung seines Magmas", "Wassergehalt_Die_Zusammensetzung"]}
 {"t": "node", "id": "Wasserkörper_Eines_Ozeans", "features": ["Nicht", "gelernt"], "labels": ["Der Wasserkörper eines Ozeans", "Wasserkörper", "Wasserkörper_Eines_Ozeans"]}
-{"t": "node", "id": "Weise", "features": ["gelernt"], "labels": ["Weise", "auch die Weise, wie sie durch das Bearbeiten von „eigentlich zu schweren“ Problemen voranschreitet"]}
-{"t": "node", "id": "Weiter_Wirkt_Kochen", "features": ["gelernt"], "labels": ["Weiter", "Weiter wirkt Kochen sterilisierend und konservierend, was unmittelbaren Einfluss auf die Gesundheit", "Weiter_Wirkt_Kochen"]}
+{"t": "node", "id": "Weise", "features": ["gelernt"], "labels": ["Weise"]}
+{"t": "node", "id": "Weiter_Wirkt_Kochen", "features": ["gelernt"], "labels": ["Weiter", "Weiter_Wirkt_Kochen"]}
 {"t": "node", "id": "Weitere_Gängige_Metapher", "features": ["Box", "gelernt"], "labels": ["Eine weitere gängige Metapher", "Weitere_Gängige_Metapher"]}
 {"t": "node", "id": "Weiteres_Beispiel", "features": ["Mobiltelefone", "gelernt"], "labels": ["Ein weiteres Beispiel", "Weiteres_Beispiel"]}
 {"t": "node", "id": "Weiteres_Älteres_Verfahren", "features": ["Staubverfahren", "gelernt"], "labels": ["Ein weiteres älteres Verfahren", "Weiteres_Älteres_Verfahren"]}
-{"t": "node", "id": "Welche_Medizinischen", "features": ["gelernt"], "labels": ["Welche_Medizinischen", "welche medizinischen"]}
-{"t": "node", "id": "Welche_Werke_Unter", "features": ["Gegenstand", "gelernt"], "labels": ["Welche", "Welche Werke unter welchen Gesichtspunkten besprochen werden,", "Welche_Werke_Unter"]}
 {"t": "node", "id": "Weltraum_Selber", "features": ["Kugelraumfläche", "gelernt"], "labels": ["Der Weltraum selber", "Weltraum", "Weltraum_Selber"]}
 {"t": "node", "id": "Weltweit", "features": ["gelernt"], "labels": ["Weltweit", "weltweit", "weltweit führend in der Genomforschung"]}
 {"t": "node", "id": "Weltweit_Größte_Sandwüste", "features": ["Chali", "gelernt"], "labels": ["Die weltweit größte Sandwüste", "Weltweit_Größte_Sandwüste"]}
-{"t": "node", "id": "Wenn_Vom_Menschlichen", "features": ["I", "gelernt"], "labels": ["Wenn", "Wenn vom menschlichen Körper die Rede ist,", "Wenn_Vom_Menschlichen"]}
-{"t": "node", "id": "Werden", "features": ["gelernt"], "labels": ["Werden", "werden können", "werden, da sie sich gleichfalls bei einigen NichtDinosauriern finden oder nicht bei allen frühen Dinosauriern auftreten"]}
+{"t": "node", "id": "Werden", "features": ["gelernt"], "labels": ["Werden", "werden", "werden können"]}
 {"t": "node", "id": "Wesentliche_Komponente_Eines", "features": ["Durchsetzungsinitiative", "gelernt"], "labels": ["Eine wesentliche Komponente eines subjektiven Rechts", "Wesentliche_Komponente_Eines"]}
-{"t": "node", "id": "Wie_Die_Sprache", "features": ["Universalie", "gelernt"], "labels": ["Wie die Sprache", "Wie_Die_Sprache"]}
-{"t": "node", "id": "Wie_Gut_Der", "features": ["Umstritten", "gelernt"], "labels": ["Wie gut der oft als erster Vogel bezeichnete, aber noch recht dinosaurierhafte Archaeopteryx aktiv fliegen konnte,", "Wie_Gut_Der"]}
 {"t": "node", "id": "Wird", "features": ["gelernt"], "labels": ["Wird", "wird"]}
 {"t": "node", "id": "Wird_Aber_Auch", "features": ["gelernt"], "labels": ["Wird_Aber_Auch", "wird aber auch kritisch betrachtet"]}
-{"t": "node", "id": "Wird_Jedoch_Insbesondere", "features": ["gelernt"], "labels": ["Wird_Jedoch_Insbesondere", "wird jedoch insbesondere mit dem Aufkommen neuer Wissenschaftsdisziplinen immer schwieriger"]}
-{"t": "node", "id": "Wirtschaftssektoren", "features": ["gelernt"], "labels": ["Wirtschaftssektoren", "die umfassende Transformation sämtlicher Wirtschaftssektoren mit dem Ziel der Dekarbonisierung bzw"]}
-{"t": "node", "id": "Wissen", "features": ["Vorstellungen", "gelernt"], "labels": ["Das Wissen, dass individuelle Merkmale über mehrere Generationen hinweg weitergegeben werden,", "Wissen"]}
-{"t": "node", "id": "Wissenschaft", "features": ["gelernt"], "labels": ["Philosophie", "Philosophie die Wissenschaft von den allgemeinen Bewegungsen und Strukturgesetzen der Natur, der Gesellschaft und des Denkens sowie der Stellung des Menschen in der Welt.“ Philosophischem Denken ist vielmehr eigentümlich, dass es in seiner Voraussetzungslosigkeit „immer wieder von vorne anfängt“, es lässt sich „weder befrieden, zivilisieren und forschrittsfähig machen noch ausrotten“, so die Charakterisierung Helmuth Plessners", "Wissenschaft", "die Wissenschaft der Gestirne", "die Wissenschaft der Vorbeugung, Erkennung und Behandlung von Krankheiten, Verletzungen und Behinderungen bei Menschen und Tieren", "die Wissenschaft von Aufbau, Zusammensetzung und Struktur der Erdkruste, der Eigenschaften ihrer Gesteine und ihrer Entwicklungsgeschichte sowie der Prozesse, welche die Erdkruste formten und bis heute formen", "die Wissenschaft von der belebten Materie, den Lebewesen", "die Wissenschaft von der systematischen Darstellung, Verarbeitung, Speicherung und Übertragung von Informationen, wobei die Verarbeitung automatisch mit Computern oder Mikrocontrollern geschieht", "die Wissenschaft, über die man nicht reden kann, ohne sie selbst zu betreiben.“ Daneben hat der Begriff in einem weiteren, übertragenen Sinn auch Bedeutungen wie Weltanschauung, Unternehmenskultur etc", "empirische Wissenschaft, deren Ziel es ist, menschliches Erleben und Verhalten, deren Entwicklung im Laufe des Lebens sowie alle dafür maßgeblichen inneren und äußeren Faktoren und Bedingungen sowie Verfahren zu ihrer Veränderung zu erforschen, zu beschreiben und zu erklären"]}
+{"t": "node", "id": "Wird_Jedoch_Insbesondere", "features": ["gelernt"], "labels": ["Wird_Jedoch_Insbesondere"]}
+{"t": "node", "id": "Wirtschaftssektoren", "features": ["gelernt"], "labels": ["Wirtschaftssektoren"]}
+{"t": "node", "id": "Wissen", "features": ["Vorstellungen", "gelernt"], "labels": ["Wissen"]}
+{"t": "node", "id": "Wissenschaft", "features": ["gelernt"], "labels": ["Philosophie", "Wissenschaft", "die Wissenschaft der Gestirne", "die Wissenschaft von der belebten Materie, den Lebewesen"]}
 {"t": "node", "id": "Wissenschaften", "features": ["gelernt"], "labels": ["Wissenschaften", "der ältesten Wissenschaften"]}
-{"t": "node", "id": "Wobei_Sich_Innerhalb", "features": ["gelernt"], "labels": ["Wobei_Sich_Innerhalb", "wobei sich innerhalb der Genetik die unterschiedlichen Teilbereich auf verschiedene Aspekte der genetischen Forschung konzentrieren"]}
-{"t": "node", "id": "Wort_Architektur", "features": ["Sinne", "gelernt"], "labels": ["Das Wort Architektur", "Wort", "Wort_Architektur"]}
+{"t": "node", "id": "Wobei_Sich_Innerhalb", "features": ["gelernt"], "labels": ["Wobei_Sich_Innerhalb"]}
+{"t": "node", "id": "Wort_Architektur", "features": ["Sinne", "gelernt"], "labels": ["Das Wort Architektur", "Wort", "Wort_Architektur", "demnach die Herkunft vom akkadischen oder phönizischen Wort erebu bzw"]}
 {"t": "node", "id": "Wort_Literatur", "features": ["Erst", "gelernt"], "labels": ["Das Wort Literatur", "Wort", "Wort_Literatur", "demnach die Herkunft vom akkadischen oder phönizischen Wort erebu bzw"]}
 {"t": "node", "id": "Wort_Oder_Glottonym", "features": ["gelernt"], "labels": ["Das Wort oder Glottonym deutsch", "Wort", "Wort_Oder_Glottonym", "demnach die Herkunft vom akkadischen oder phönizischen Wort erebu bzw"]}
 {"t": "node", "id": "Wort_„Recht“", "features": ["Aus_Dem_Größten", "gelernt"], "labels": ["Das Wort „Recht“", "Wort", "Wort_„Recht“"]}
-{"t": "node", "id": "Wortbildung", "features": ["gelernt"], "labels": ["Wortbildung", "Wortbildung aus altgriechisch ψυχή psȳchḗ‚ deutsch Seele, Geist, Herz, Gemüt, Mut, Überzeugung, Denkvermögen sowie Hauch, Atem, Leben, Lebenskraft, Seele, Geist, Gemüt und λόγιος lógios, lateinisch doctus, deutsch gelehrt, bewandert"]}
+{"t": "node", "id": "Wortbildung", "features": ["gelernt"], "labels": ["Wortbildung"]}
 {"t": "node", "id": "Wurde", "features": ["gelernt"], "labels": ["Wurde", "wurde"]}
-{"t": "node", "id": "Während_Des_Frühen", "features": ["gelernt"], "labels": ["Die während des frühen Holozäns in Teilen der nördlichen Hemisphäre aufgetretene MisoxSchwankung, wahrscheinlich", "Während_Des_Frühen"]}
-{"t": "node", "id": "Während_Die_Kosmogonie", "features": ["gelernt"], "labels": ["Während_Die_Kosmogonie", "während die Kosmogonie die Entstehung des Universums beinhaltet"]}
-{"t": "node", "id": "Wälder", "features": ["gelernt"], "labels": ["Wälder", "Wälder, die durch ganzjährig fallende, große Niederschlagsmengen gekennzeichnet sind"]}
-{"t": "node", "id": "Wüste", "features": ["gelernt"], "labels": ["Wüste", "Wüste mit einer Oberfläche, die überwiegend aus Quarzsand besteht, der durch die Bodenerosion einer Kieswüste entstand oder aus anderen Regionen eingeweht wurde"]}
+{"t": "node", "id": "Wälder", "features": ["gelernt"], "labels": ["Wälder"]}
+{"t": "node", "id": "Wüste", "features": ["gelernt"], "labels": ["Wüste"]}
 {"t": "node", "id": "Zehn_Bis_100", "features": ["gelernt"], "labels": ["Zehn_Bis_100", "zehn bis 100 Billionen Zellen"]}
-{"t": "node", "id": "Zeit", "features": ["gelernt"], "labels": ["Zeit", "der historische Begriff Antike meist die Zeit von der allmählichen Herausbildung der griechischen Staatenwelt im achten vorchristlichen Jahrhundert bis zum Tod des oströmischen Kaisers Justinian im Jahr 565 n"]}
+{"t": "node", "id": "Zeit", "features": ["gelernt"], "labels": ["Zeit"]}
 {"t": "node", "id": "Zeitraum", "features": ["gelernt"], "labels": ["Zeitraum", "den Zeitraum von vier Jahren, der mit den Spielen beginnt", "einen sich wiederholenden Zeitraum von vier Kalenderjahren, der erstmals am 1"]}
 {"t": "node", "id": "Zentralstern", "features": ["gelernt"], "labels": ["Zentralstern", "der Zentralstern des Sonnensystems"]}
 {"t": "node", "id": "Ziel_Des_Faches", "features": ["Es", "gelernt"], "labels": ["Ziel", "Ziel des Faches Kunstgeschichte", "Ziel_Des_Faches"]}
-{"t": "node", "id": "Zielkonflikt", "features": ["gelernt"], "labels": ["Zielkonflikt", "Zielkonflikt, ein veränderlicher bestmöglicher Zustand, in dem es nicht möglich ist, die ZielEigenschaft Ressourcennutzung zu verbessern, ohne zugleich die andere Eigenschaft des RessourcenErhalts verschlechtern zu müssen"]}
+{"t": "node", "id": "Zielkonflikt", "features": ["gelernt"], "labels": ["Zielkonflikt"]}
 {"t": "node", "id": "Zu_94", "features": ["gelernt"], "labels": ["Zu_94", "zu 94,07 % aus drei genannten Elementen aufgebaut"]}
 {"t": "node", "id": "Zu_Einer_Großen", "features": ["gelernt"], "labels": ["Zu_Einer_Großen", "die zu einer großen Zahl recht unterschiedlicher Definitionen geführt hat"]}
 {"t": "node", "id": "Zu_Veränderungen_In", "features": ["gelernt"], "labels": ["Zu_Veränderungen_In", "zu Veränderungen in fast allen Lebensbereichen geführt"]}
-{"t": "node", "id": "Zudem", "features": ["gelernt"], "labels": ["Zudem", "zudem", "zudem - bedingt durch die enthaltenen Verunreinigungen - mit relativ hohen Schadstoffemissionen verbunden, die in modernen Kohlekraftwerken mit hohem technischen Aufwand reduziert werden"]}
+{"t": "node", "id": "Zudem", "features": ["gelernt"], "labels": ["Zudem", "zudem"]}
 {"t": "node", "id": "Zunahme", "features": ["gelernt"], "labels": ["Zunahme", "durch Zunahme des relativen Kohlenstoffanteils gekennzeichnet"]}
 {"t": "node", "id": "Zunächst_Enorme_Umweltschäden", "features": ["gelernt"], "labels": ["Zunächst_Enorme_Umweltschäden", "zunächst enorme Umweltschäden durch die Inanspruchnahme des Landes"]}
 {"t": "node", "id": "Zur_Folge", "features": ["gelernt"], "labels": ["Zur_Folge", "zur Folge"]}
-{"t": "node", "id": "Zusammenarbeit", "features": ["gelernt"], "labels": ["Zusammenarbeit", "auch die Zusammenarbeit der Astronomie mit der modernen Geologie und der Geophysik immer wichtiger geworden, da sich das Arbeitsgebiet der Geowissenschaften mit Teilen der Planetologie deckt", "die Zusammenarbeit der Astronomie mit der Geodäsie, mit der Zeitng und Kalenderrechnung sowie mit der Optik"]}
-{"t": "node", "id": "Zweifelsfall", "features": ["gelernt"], "labels": ["Zweifelsfall", "und diesen vor überkommenen philosophischen Grundsätzen im Zweifelsfall sogar den Vorrang einräumt"]}
-{"t": "node", "id": "Zwergplanet", "features": ["gelernt"], "labels": ["Zwergplanet", "der größte und zweitmassivste bekannte Zwergplanet des Sonnensystems und das am längsten bekannte Objekt des Kuipergürtels"]}
+{"t": "node", "id": "Zusammenarbeit", "features": ["gelernt"], "labels": ["Zusammenarbeit"]}
+{"t": "node", "id": "Zweifelsfall", "features": ["gelernt"], "labels": ["Zweifelsfall"]}
+{"t": "node", "id": "Zwergplanet", "features": ["gelernt"], "labels": ["Zwergplanet"]}
 {"t": "node", "id": "Zwergplaneten", "features": ["gelernt"], "labels": ["Zwergplaneten", "den Zwergplaneten"]}
-{"t": "node", "id": "Zwischen_Körper_Und", "features": ["Problematik", "gelernt"], "labels": ["Zwischen_Körper_Und", "zwischen Körper und Geist nimmt einen großen Raum ein in der europäischen Philosophiegeschichte, man"]}
-{"t": "node", "id": "Ähnlich", "features": ["gelernt"], "labels": ["dabei ähnlich schwierig zu bestimmen wie der Anfang; traditionell werden hier Ereignisse wie die Entdeckung Amerikas durch Christoph Kolumbus 1492 oder der Beginn der Reformation 1517 als wichtige Zäsuren betrachtet", "Ähnlich", "ähnlich"]}
+{"t": "node", "id": "Ähnlich", "features": ["gelernt"], "labels": ["Ähnlich", "ähnlich"]}
 {"t": "node", "id": "Ärzteschaft", "features": ["gelernt"], "labels": ["Die Ärzteschaft", "Ärzteschaft"]}
 {"t": "node", "id": "Ätna", "features": ["gelernt"], "labels": ["der Ätna auf Sizilien", "Ätna"]}
 {"t": "node", "id": "Öffentliche_Literaturdiskussion_Und", "features": ["Demgegenüber", "gelernt"], "labels": ["Die öffentliche Literaturdiskussion und -analyse", "Öffentliche_Literaturdiskussion_Und"]}
-{"t": "node", "id": "Über_Die_Damaligen", "features": ["Nichts", "gelernt"], "labels": ["Über", "Über die damaligen Regeln des Spiels", "Über_Die_Damaligen"]}
 {"t": "node", "id": "Überschrieben", "features": ["gelernt"], "labels": ["Überschrieben", "überschrieben", "überschrieben mit dem Slogan „Der Weg in eine enkelgerechte Zukunft“"]}
-{"t": "node", "id": "Übersät", "features": ["gelernt"], "labels": ["Übersät", "übersät", "übersät mit dicht blockigem, kantigem Schuttal und Felsmaterial, angesammelt als Ergebnis der physikalischen Verwitterung und der Auswehung des Feinmaterials"]}
-{"t": "node", "id": "Übertragen_Wurde_Der", "features": ["Wurde", "gelernt"], "labels": ["Übertragen", "Übertragen wurde der Begriff auf Szenen bewegter Bilder auf derartigem Material, bis schließlich die ganze Kunstform als Film", "Übertragen_Wurde_Der"]}
-{"t": "node", "id": "„Demokratie_Fordert_Die", "features": ["Altgriechisch", "Auf_Der_Erde", "gelernt"], "labels": ["Demokratie", "„Demokratie fordert die Legitimation, sie fordert die Kontrolle und sie zielt auf die Kritik von politischer Herrschaft - als dauerhaften und unabgeschlossenen Prozess.“ Der Ausdruck Demokratie", "„Demokratie_Fordert_Die"]}
+{"t": "node", "id": "Übersät", "features": ["gelernt"], "labels": ["Übersät", "übersät"]}
+{"t": "node", "id": "Übertragen_Wurde_Der", "features": ["Wurde", "gelernt"], "labels": ["Übertragen", "Übertragen_Wurde_Der"]}
+{"t": "node", "id": "„Demokratie_Fordert_Die", "features": ["Altgriechisch", "Auf_Der_Erde", "gelernt"], "labels": ["Demokratie", "„Demokratie_Fordert_Die"]}
 {"t": "node", "id": "„Netz“", "features": ["Aber", "gelernt"], "labels": ["Netz", "„Netz“"]}
 {"t": "node", "id": "„Olympiade“", "features": ["Irrtum", "Zeitraum", "gelernt"], "labels": ["Die Olympiade", "Olympiade", "„Olympiade“"]}
-{"t": "node", "id": "„Olympiade“_Ist_Somit", "features": ["Zeitraum", "gelernt"], "labels": ["Olympiade", "„Olympiade“ ist somit - entgegen einem heute weit verbreiteten Irrtum - nicht synonym mit „Olympische Spiele“, sondern", "„Olympiade“_Ist_Somit"]}
-{"t": "node", "id": "„Wer_Macht_Delegiert", "features": ["Historisch", "gelernt"], "labels": ["Wer", "„Wer Macht delegiert, kann sie auch verlieren; Wahlen sind nicht notwendig frei; und die Repräsentation", "„Wer_Macht_Delegiert"]}
+{"t": "node", "id": "„Olympiade“_Ist_Somit", "features": ["Zeitraum", "gelernt"], "labels": ["Olympiade", "„Olympiade“_Ist_Somit"]}
+{"t": "node", "id": "„Wer_Macht_Delegiert", "features": ["Historisch", "gelernt"], "labels": ["Wer", "„Wer_Macht_Delegiert"]}
 {"t": "node", "id": "♇", "features": ["gelernt"], "labels": ["♇"]}
 {"t": "edge", "src": "2020_Hat_Erstmals", "dst": "Dabei", "w": 0.85, "type": "ist"}
 {"t": "edge", "src": "Abgrenzung_Erfolgt_Auch", "dst": "-", "w": 0.85, "type": "ist"}
@@ -641,13 +569,7 @@
 {"t": "edge", "src": "Allen_Fossilen_Energieträgern", "dst": "Gemeinsam", "w": 0.85, "type": "ist"}
 {"t": "edge", "src": "Allerdings", "dst": "Baukunst", "w": 0.85, "type": "ist"}
 {"t": "edge", "src": "Allgemein_Kann_Man", "dst": "Volk", "w": 0.85, "type": "ist"}
-{"t": "edge", "src": "Als_Berühmtester_Olympionike", "dst": "Koroibos", "w": 0.85, "type": "ist"}
-{"t": "edge", "src": "Als_Epochenbezeichnung_Im", "dst": "Sich_Die_Renaissance", "w": 0.86, "type": "hat"}
-{"t": "edge", "src": "Als_Markantesten_Gegensatz", "dst": "Autokratie", "w": 0.9, "type": "ist"}
-{"t": "edge", "src": "Als_Vielseitigste_Fotoapparatbauform", "dst": "Sich_Sowohl_Im", "w": 0.86, "type": "hat"}
 {"t": "edge", "src": "Altertum_Folgende_Epoche", "dst": "Mittelalter", "w": 0.85, "type": "ist"}
-{"t": "edge", "src": "Altgriechische_Adjektiv_Μουσικός", "dst": "In", "w": 0.85, "type": "ist"}
-{"t": "edge", "src": "Am_Bedeutendsten", "dst": "Förderband", "w": 0.85, "type": "ist"}
 {"t": "edge", "src": "Architekturgeschichte", "dst": "Bestandteil", "w": 0.85, "type": "ist"}
 {"t": "edge", "src": "Astronomie_Hat_Keine", "dst": "Daher", "w": 0.85, "type": "ist"}
 {"t": "edge", "src": "Astronomie_Oder_Sternkunde", "dst": "Wissenschaft", "w": 0.85, "type": "ist"}
@@ -655,13 +577,10 @@
 {"t": "edge", "src": "Auch_Die_Rehabilitation", "dst": "Aufgabe", "w": 0.85, "type": "ist"}
 {"t": "edge", "src": "Auch_Eine_Negative", "dst": "Etwa", "w": 0.85, "type": "ist"}
 {"t": "edge", "src": "Auch_In_Der", "dst": "Trennung", "w": 0.95, "type": "ist"}
-{"t": "edge", "src": "Auf_Der_Erde", "dst": "Sie", "w": 0.85, "type": "ist"}
 {"t": "edge", "src": "Aufgr_Und_Des", "dst": "Kern", "w": 0.85, "type": "ist"}
 {"t": "edge", "src": "Aufgr_Und_Des", "dst": "Sich_Der_LithiumPreis", "w": 0.86, "type": "hat"}
 {"t": "edge", "src": "Aufgr_Und_Dieses", "dst": "Sie", "w": 0.9, "type": "ist"}
 {"t": "edge", "src": "Aufwand_Für_Mittel", "dst": "Relativ", "w": 0.85, "type": "ist"}
-{"t": "edge", "src": "Aus_Dem_Größten", "dst": "Art", "w": 0.85, "type": "ist"}
-{"t": "edge", "src": "Aus_Der_Ursprünglichen", "dst": "Macht", "w": 0.85, "type": "ist"}
 {"t": "edge", "src": "Ausdruck_Internet", "dst": "Anglizismus", "w": 0.95, "type": "ist"}
 {"t": "edge", "src": "Ausdruck_Psychologie", "dst": "Wortbildung", "w": 0.95, "type": "ist"}
 {"t": "edge", "src": "Ausgenommen_Davon", "dst": "Konservierung", "w": 0.85, "type": "ist"}
@@ -675,10 +594,6 @@
 {"t": "edge", "src": "Baukunst", "dst": "Schwierig", "w": 0.85, "type": "ist"}
 {"t": "edge", "src": "Begriff", "dst": "Schwierig", "w": 0.85, "type": "ist"}
 {"t": "edge", "src": "Begriff_Hat_Sich", "dst": "Tiefe", "w": 0.85, "type": "ist"}
-{"t": "edge", "src": "Bei_Dem_Griechischen", "dst": "Haben", "w": 0.9, "type": "ist"}
-{"t": "edge", "src": "Bei_Den_Nordamerikanischen", "dst": "Sprachgebrauch", "w": 0.9, "type": "ist"}
-{"t": "edge", "src": "Bei_Der_Filmbasierten", "dst": "Schicht", "w": 0.85, "type": "ist"}
-{"t": "edge", "src": "Bei_Vertretern_Des", "dst": "Häufig", "w": 0.85, "type": "ist"}
 {"t": "edge", "src": "Beide_Bahnen_Verlaufen", "dst": "Ekliptik", "w": 0.85, "type": "ist"}
 {"t": "edge", "src": "Beispiel_Dafür", "dst": "Ätna", "w": 0.85, "type": "ist"}
 {"t": "edge", "src": "Bestimmter_Ort_Auf", "dst": "Allel", "w": 0.9, "type": "ist"}
@@ -701,7 +616,6 @@
 {"t": "edge", "src": "Darüber_Hinaus", "dst": "Auch", "w": 0.85, "type": "ist"}
 {"t": "edge", "src": "Darüber_Hinaus_Gibt", "dst": "Werden", "w": 0.9, "type": "ist"}
 {"t": "edge", "src": "Das", "dst": "Differenz", "w": 0.85, "type": "ist"}
-{"t": "edge", "src": "Dass_Die_Bewertungen", "dst": "Unvermeidlich", "w": 0.85, "type": "ist"}
 {"t": "edge", "src": "Dazu", "dst": "Begriffe", "w": 0.85, "type": "ist"}
 {"t": "edge", "src": "Debatte_Über_Industrie", "dst": "Begriff_„vierte_Industrielle", "w": 0.86, "type": "hat"}
 {"t": "edge", "src": "Definitionsgeschichte", "dst": "Musik", "w": 0.85, "type": "ist"}
@@ -712,7 +626,6 @@
 {"t": "edge", "src": "Deutsch", "dst": "Muttersprache", "w": 0.85, "type": "ist"}
 {"t": "edge", "src": "Deutsche", "dst": "Sprache", "w": 0.95, "type": "ist"}
 {"t": "edge", "src": "Deutsche_Nachhaltigkeitsstrategie_In", "dst": "Überschrieben", "w": 0.85, "type": "ist"}
-{"t": "edge", "src": "Deutsche_Sprache", "dst": "Seit", "w": 0.85, "type": "ist"}
 {"t": "edge", "src": "Deutsche_Sprache_Oder", "dst": "Sprache", "w": 0.95, "type": "ist"}
 {"t": "edge", "src": "Dies", "dst": "Deshalb", "w": 0.85, "type": "ist"}
 {"t": "edge", "src": "Dies", "dst": "Zu_Veränderungen_In", "w": 0.86, "type": "hat"}
@@ -720,7 +633,6 @@
 {"t": "edge", "src": "Diese", "dst": "Meer", "w": 0.95, "type": "ist"}
 {"t": "edge", "src": "Diese_Definition", "dst": "Aber", "w": 0.85, "type": "ist"}
 {"t": "edge", "src": "Diese_Vielfalt_An", "dst": "Zur_Folge", "w": 0.86, "type": "hat"}
-{"t": "edge", "src": "Diese_Vielfalt_An", "dst": "Dass_Im_Fach", "w": 0.84, "type": "hat"}
 {"t": "edge", "src": "Diese_Vielfalt_An", "dst": "Theorien_Auf_Wissenschaftlicher", "w": 0.82, "type": "hat"}
 {"t": "edge", "src": "Diese_Vielfalt_An", "dst": "Modellen_Angewandt", "w": 0.8, "type": "hat"}
 {"t": "edge", "src": "Diese_Vielfalt_An", "dst": "Gelehrt_Wird", "w": 0.78, "type": "hat"}
@@ -735,7 +647,6 @@
 {"t": "edge", "src": "Disziplin_Der_Physik", "dst": "Sich_Seit_Der", "w": 0.84, "type": "hat"}
 {"t": "edge", "src": "Disziplin_Der_Physik", "dst": "Ursachen_Aller_Dinge", "w": 0.82, "type": "hat"}
 {"t": "edge", "src": "Dort_Vorkommende_Magma", "dst": "Elementen", "w": 0.85, "type": "ist"}
-{"t": "edge", "src": "Durch_Die_Varianz", "dst": "Formenreichtum", "w": 0.85, "type": "ist"}
 {"t": "edge", "src": "Durchmesser_Der_Sonne", "dst": "Etwa", "w": 0.85, "type": "ist"}
 {"t": "edge", "src": "EU-Verordnung_Vermeiden", "dst": "Nicht", "w": 0.85, "type": "ist"}
 {"t": "edge", "src": "Ebenso_Wie_In", "dst": "Mathematik", "w": 0.85, "type": "ist"}
@@ -745,13 +656,11 @@
 {"t": "edge", "src": "Energiequelle", "dst": "Element", "w": 0.85, "type": "ist"}
 {"t": "edge", "src": "Energieträger_Hingegen", "dst": "Mittel", "w": 0.85, "type": "ist"}
 {"t": "edge", "src": "Entdeckung_Zahlreicher_Weiterer", "dst": "Erwiesen", "w": 0.86, "type": "hat"}
-{"t": "edge", "src": "Entdeckung_Zahlreicher_Weiterer", "dst": "Dass_Pluto_Der", "w": 0.84, "type": "hat"}
 {"t": "edge", "src": "Entdeckung_Zahlreicher_Weiterer", "dst": "Jedenfalls_Der_Hellste", "w": 0.82, "type": "hat"}
 {"t": "edge", "src": "Entdeckung_Zahlreicher_Weiterer", "dst": "Anhäufung_Von_Tausenden", "w": 0.8, "type": "hat"}
 {"t": "edge", "src": "Entdeckung_Zahlreicher_Weiterer", "dst": "Kometenkernen_In_Einer", "w": 0.78, "type": "hat"}
 {"t": "edge", "src": "Entscheidenden_Einfluss_Auf", "dst": "Neben_Dem_Gaslt", "w": 0.86, "type": "hat"}
 {"t": "edge", "src": "Entscheidenden_Einfluss_Auf", "dst": "Wassergehalt_Die_Zusammensetzung", "w": 0.84, "type": "hat"}
-{"t": "edge", "src": "Entscheidenden_Einfluss_Auf", "dst": "Vor_Allem_Der", "w": 0.82, "type": "hat"}
 {"t": "edge", "src": "Entsprechende_Beruf", "dst": "Fotograf", "w": 0.85, "type": "ist"}
 {"t": "edge", "src": "Entstehungsgeschichte_Von_Pluto", "dst": "Demnach", "w": 0.85, "type": "ist"}
 {"t": "edge", "src": "Entwickelte_Begriff_Der", "dst": "Nur_Noch_Wenig", "w": 0.86, "type": "hat"}
@@ -762,9 +671,7 @@
 {"t": "edge", "src": "Es", "dst": "Deren_Natürlichen_Satelliten", "w": 0.86, "type": "besteht_aus"}
 {"t": "edge", "src": "Es", "dst": "Zwergplaneten", "w": 0.84, "type": "besteht_aus"}
 {"t": "edge", "src": "Es", "dst": "Anderen_Kleinkörpern", "w": 0.82, "type": "besteht_aus"}
-{"t": "edge", "src": "Es", "dst": "Aus_Unzähligen_Gasen", "w": 0.8, "type": "besteht_aus"}
 {"t": "edge", "src": "Es", "dst": "Staubteilchen", "w": 0.78, "type": "besteht_aus"}
-{"t": "edge", "src": "Es", "dst": "Durch_Die_Anziehungskraft", "w": 0.76, "type": "besteht_aus"}
 {"t": "edge", "src": "Es", "dst": "Unterscheiden", "w": 0.85, "type": "ist"}
 {"t": "edge", "src": "Es", "dst": "Sich_Als_Eher", "w": 0.86, "type": "hat"}
 {"t": "edge", "src": "Es", "dst": "Spezifische_Einzelne_Ursachen", "w": 0.84, "type": "hat"}
@@ -774,7 +681,6 @@
 {"t": "edge", "src": "Es_Wurde_Im", "dst": "Prozess", "w": 0.85, "type": "ist"}
 {"t": "edge", "src": "Etymologische_Hintergr_Und", "dst": "Gleiche", "w": 0.85, "type": "ist"}
 {"t": "edge", "src": "Europa", "dst": "Erdteil", "w": 0.95, "type": "ist"}
-{"t": "edge", "src": "Europa", "dst": "Im_Osten_Gegenüber", "w": 0.86, "type": "hat"}
 {"t": "edge", "src": "Europa_Hat_Eine", "dst": "Damit", "w": 0.85, "type": "ist"}
 {"t": "edge", "src": "Europäisches_Laboratorium_Für", "dst": "Führend", "w": 0.85, "type": "ist"}
 {"t": "edge", "src": "Expertenwissen_Und_Die", "dst": "Sie_In_Eine", "w": 0.86, "type": "hat"}
@@ -784,7 +690,6 @@
 {"t": "edge", "src": "Februar_1999_Durchlief", "dst": "Neptunbahn", "w": 0.85, "type": "ist"}
 {"t": "edge", "src": "Film", "dst": "Kunstform", "w": 0.95, "type": "ist"}
 {"t": "edge", "src": "Film", "dst": "Gegenstand", "w": 0.85, "type": "ist"}
-{"t": "edge", "src": "Filmindustrie_-_Von", "dst": "Auf_Diese_Massenkompatibilität", "w": 0.86, "type": "hat"}
 {"t": "edge", "src": "Filmindustrie_-_Von", "dst": "Diese_Mit_Entsprechenden", "w": 0.84, "type": "hat"}
 {"t": "edge", "src": "Filmindustrie_-_Von", "dst": "Hat", "w": 0.9, "type": "ist"}
 {"t": "edge", "src": "Fotografie", "dst": "Film", "w": 0.95, "type": "ist"}
@@ -792,15 +697,6 @@
 {"t": "edge", "src": "Frage", "dst": "Nachdenken", "w": 0.85, "type": "ist"}
 {"t": "edge", "src": "Frage_Lässt_Sich", "dst": "Subtraktion", "w": 0.85, "type": "ist"}
 {"t": "edge", "src": "Fußball", "dst": "Ballsportart", "w": 0.95, "type": "ist"}
-{"t": "edge", "src": "Für_Auf_Staatlicher", "dst": "Kombination", "w": 0.95, "type": "ist"}
-{"t": "edge", "src": "Für_Das_Europäische", "dst": "Dualismus", "w": 0.85, "type": "ist"}
-{"t": "edge", "src": "Für_Die_Geschichte", "dst": "Bedeutend", "w": 0.85, "type": "ist"}
-{"t": "edge", "src": "Für_Die_Maßgeblich", "dst": "Tätigkeit", "w": 0.85, "type": "ist"}
-{"t": "edge", "src": "Für_Ihn_War", "dst": "Für_England_Dieselbe", "w": 0.86, "type": "hat"}
-{"t": "edge", "src": "Für_Ihn_War", "dst": "Philosophische_Revolution_Für", "w": 0.84, "type": "hat"}
-{"t": "edge", "src": "Für_Le_Corbusier", "dst": "Baukunst", "w": 0.85, "type": "ist"}
-{"t": "edge", "src": "Für_Manche_Philosophen", "dst": "Erst", "w": 0.85, "type": "ist"}
-{"t": "edge", "src": "Für_Verlage", "dst": "Geschäftsfeld", "w": 0.85, "type": "ist"}
 {"t": "edge", "src": "Gegenstand_Der_Geographie", "dst": "Erfassung", "w": 0.85, "type": "ist"}
 {"t": "edge", "src": "Gegenwärtige", "dst": "Beispiel", "w": 0.95, "type": "ist"}
 {"t": "edge", "src": "Gegenüber_Ihren_Nächsten", "dst": "Verkleinerung", "w": 0.85, "type": "ist"}
@@ -811,7 +707,6 @@
 {"t": "edge", "src": "Geologe", "dst": "Dabei", "w": 0.85, "type": "ist"}
 {"t": "edge", "src": "Geologie", "dst": "Wissenschaft", "w": 0.85, "type": "ist"}
 {"t": "edge", "src": "Geologie", "dst": "Vielfältige_Berührungspunkte_Mit", "w": 0.86, "type": "hat"}
-{"t": "edge", "src": "Geologie", "dst": "Als_Geowissenschaften_Zusammengefasst", "w": 0.84, "type": "hat"}
 {"t": "edge", "src": "Gerade_Bei_Dieser", "dst": "Nicht", "w": 0.85, "type": "ist"}
 {"t": "edge", "src": "Geringfügig_Größer", "dst": "Entfernung", "w": 0.85, "type": "ist"}
 {"t": "edge", "src": "Geschlechter_Können_In", "dst": "Kloake", "w": 0.85, "type": "ist"}
@@ -832,26 +727,9 @@
 {"t": "edge", "src": "Hingegen", "dst": "Bürgerliche_Gesellschaft_Versucht", "w": 0.86, "type": "hat"}
 {"t": "edge", "src": "Hingegen", "dst": "Paternalistischen_Ermessenspielraum_Der", "w": 0.84, "type": "hat"}
 {"t": "edge", "src": "Hingegen", "dst": "Etwa_Durch_Die", "w": 0.82, "type": "hat"}
-{"t": "edge", "src": "Hingegen", "dst": "Für_Die_Die", "w": 0.8, "type": "hat"}
 {"t": "edge", "src": "Höchsten_Sanddünen_Findet", "dst": "Muharek", "w": 0.85, "type": "ist"}
 {"t": "edge", "src": "Ihre_Erkenntnisse_Genügen", "dst": "Generalisierbarkeit", "w": 0.85, "type": "ist"}
 {"t": "edge", "src": "Ihre_Vorgeschichte", "dst": "Etwa", "w": 0.85, "type": "ist"}
-{"t": "edge", "src": "Im_Duden", "dst": "Geografie_Oder_Erdkunde", "w": 0.85, "type": "ist"}
-{"t": "edge", "src": "Im_Duden", "dst": "Geografie", "w": 0.85, "type": "ist"}
-{"t": "edge", "src": "Im_Entsprechenden_Englischen", "dst": "Sinne", "w": 0.85, "type": "ist"}
-{"t": "edge", "src": "Im_Sinne_Der", "dst": "Zeit", "w": 0.9, "type": "ist"}
-{"t": "edge", "src": "Im_Vergleich_Zu", "dst": "Plutos", "w": 0.85, "type": "ist"}
-{"t": "edge", "src": "In_Anlehnung_An", "dst": "Demokratie", "w": 0.9, "type": "ist"}
-{"t": "edge", "src": "In_Den_Größten", "dst": "Klima", "w": 0.85, "type": "ist"}
-{"t": "edge", "src": "In_Den_Letzten", "dst": "Zusammenarbeit", "w": 0.85, "type": "ist"}
-{"t": "edge", "src": "In_Den_Letzten", "dst": "Sich_Das_Forschungsfeld", "w": 0.86, "type": "hat"}
-{"t": "edge", "src": "In_Den_Letzten", "dst": "Wobei_Sich_Innerhalb", "w": 0.84, "type": "hat"}
-{"t": "edge", "src": "In_Der_Heutigen", "dst": "Vor", "w": 0.85, "type": "ist"}
-{"t": "edge", "src": "In_Der_Heutigen", "dst": "Allem", "w": 0.85, "type": "ist"}
-{"t": "edge", "src": "In_Der_Rechtsethnologie", "dst": "Werden", "w": 0.9, "type": "ist"}
-{"t": "edge", "src": "In_Der_Ursprünglichen", "dst": "Macht", "w": 0.85, "type": "ist"}
-{"t": "edge", "src": "In_Deutschland_Verpflichtet", "dst": "Bestandteil", "w": 0.85, "type": "ist"}
-{"t": "edge", "src": "In_Diesem_Umfassenden", "dst": "Lebewesen", "w": 0.85, "type": "ist"}
 {"t": "edge", "src": "Informatik", "dst": "Wissenschaft", "w": 0.85, "type": "ist"}
 {"t": "edge", "src": "Inhaltlich", "dst": "Begriff", "w": 0.85, "type": "ist"}
 {"t": "edge", "src": "Inhaltlich", "dst": "Baukunst", "w": 0.85, "type": "ist"}
@@ -860,13 +738,11 @@
 {"t": "edge", "src": "Insbesondere_Seit_Der", "dst": "Zu_Einer_Großen", "w": 0.84, "type": "hat"}
 {"t": "edge", "src": "Internet", "dst": "Verb", "w": 0.95, "type": "ist"}
 {"t": "edge", "src": "Jahrhundert", "dst": "Zweifelsfall", "w": 0.85, "type": "ist"}
-{"t": "edge", "src": "Jahrhunderts_Entwickelte_Mengenlehre", "dst": "Aus_Dem_Größten", "w": 0.85, "type": "ist"}
 {"t": "edge", "src": "Je_Kleiner_Die", "dst": "Schicht", "w": 0.85, "type": "ist"}
 {"t": "edge", "src": "Je_Mehr_SiO2", "dst": "Vulkanismus", "w": 0.85, "type": "ist"}
 {"t": "edge", "src": "Jeder_Definitionsversuch_-", "dst": "Architekturtheorie", "w": 0.85, "type": "ist"}
 {"t": "edge", "src": "Jiddische", "dst": "Sich_Vor_Allem", "w": 0.86, "type": "hat"}
 {"t": "edge", "src": "Jiddische", "dst": "Hebräischen_Einflüssen_Eigenständig", "w": 0.84, "type": "hat"}
-{"t": "edge", "src": "Jiddische", "dst": "Mit_Einer_Eigenen", "w": 0.82, "type": "hat"}
 {"t": "edge", "src": "KI", "dst": "Bezeichnung", "w": 0.85, "type": "ist"}
 {"t": "edge", "src": "Karolingische_Renaissance_Beispielsweise", "dst": "Formen", "w": 0.92, "type": "ist"}
 {"t": "edge", "src": "Kein_Alchemist", "dst": "Allerdings_Je_Den", "w": 0.86, "type": "hat"}
@@ -881,13 +757,11 @@
 {"t": "edge", "src": "Kosmologie", "dst": "Struktur_Des_Gesamten", "w": 0.84, "type": "hat"}
 {"t": "edge", "src": "Kosmologie", "dst": "Untersucht_Mit_Hilfe", "w": 0.82, "type": "hat"}
 {"t": "edge", "src": "Kosmologie", "dst": "Subatomaren_Bereich", "w": 0.8, "type": "hat"}
-{"t": "edge", "src": "Kosmologie", "dst": "Während_Die_Kosmogonie", "w": 0.78, "type": "hat"}
 {"t": "edge", "src": "Kunstgeschichte_Oder_Kunstwissenschaft", "dst": "Disziplin_Der_Physik", "w": 0.95, "type": "ist"}
 {"t": "edge", "src": "Künstliche_Intelligenz", "dst": "Systeme", "w": 0.9, "type": "ist"}
 {"t": "edge", "src": "Lebewesen", "dst": "Wissenschaft", "w": 0.85, "type": "ist"}
 {"t": "edge", "src": "Lebewesen", "dst": "Erfahrungswissenschaft", "w": 0.95, "type": "ist"}
 {"t": "edge", "src": "Lehret_Und_Forschungsgebiet", "dst": "Unterliegt", "w": 0.9, "type": "ist"}
-{"t": "edge", "src": "Literatur", "dst": "Seit", "w": 0.92, "type": "ist"}
 {"t": "edge", "src": "Ludwig_Wittgenstein", "dst": "Unterschied_Einmal_So", "w": 0.86, "type": "hat"}
 {"t": "edge", "src": "Ludwig_Wittgenstein", "dst": "Denen_Er_„nichts", "w": 0.84, "type": "hat"}
 {"t": "edge", "src": "Ludwig_Wittgenstein", "dst": "Umschreibt_„Philosophie“_Als", "w": 0.82, "type": "hat"}
@@ -902,21 +776,14 @@
 {"t": "edge", "src": "Medizin", "dst": "Erfahrungswissenschaft", "w": 0.95, "type": "ist"}
 {"t": "edge", "src": "Mediziner", "dst": "Person", "w": 0.92, "type": "ist"}
 {"t": "edge", "src": "Mehr_Oder_Minder", "dst": "Vulkankrater", "w": 0.85, "type": "ist"}
-{"t": "edge", "src": "Mensch", "dst": "Seit_Jeher_Verschiedene", "w": 0.86, "type": "braucht"}
 {"t": "edge", "src": "Menschliche_Körper", "dst": "Teil", "w": 0.85, "type": "ist"}
 {"t": "edge", "src": "Menschliche_Körper", "dst": "Zehn_Bis_100", "w": 0.9, "type": "besteht_aus"}
 {"t": "edge", "src": "Merkmale_Des_Postkranialen", "dst": "Hand", "w": 0.85, "type": "ist"}
 {"t": "edge", "src": "Minderheitensprache", "dst": "Muttersprache", "w": 0.85, "type": "ist"}
-{"t": "edge", "src": "Mit_Dem_Humanistischen", "dst": "Besonders", "w": 0.85, "type": "ist"}
-{"t": "edge", "src": "Mit_Der_Experimentalpsychologie", "dst": "Sich_Ein_Zweig", "w": 0.86, "type": "hat"}
-{"t": "edge", "src": "Mit_Der_Experimentalpsychologie", "dst": "Sich_Bereichsübergreifend_Des", "w": 0.84, "type": "hat"}
-{"t": "edge", "src": "Mit_Der_Industrialisierung", "dst": "Energiebedarf_Der_Menschheit", "w": 0.86, "type": "hat"}
-{"t": "edge", "src": "Mit_Der_Industrialisierung", "dst": "Sich_Gewandelt", "w": 0.84, "type": "hat"}
 {"t": "edge", "src": "Musik", "dst": "Kunstgattung", "w": 0.95, "type": "ist"}
 {"t": "edge", "src": "Musik_Als_Kulturgut", "dst": "Gegenstand", "w": 0.85, "type": "ist"}
 {"t": "edge", "src": "Mögliche_Kunstcharakter_Der", "dst": "Jedoch", "w": 0.85, "type": "ist"}
 {"t": "edge", "src": "Möglicherweise", "dst": "Kochen", "w": 0.85, "type": "ist"}
-{"t": "edge", "src": "Nach_Ansicht_Der", "dst": "Sich_Diese_Beziehung", "w": 0.86, "type": "hat"}
 {"t": "edge", "src": "Nachhaltigkeit", "dst": "Handlungsprinzip", "w": 0.95, "type": "ist"}
 {"t": "edge", "src": "Nachhaltigkeit_Gilt_In", "dst": "Fortlaufende", "w": 0.85, "type": "ist"}
 {"t": "edge", "src": "Nachhaltigkeitsbegriff_Als_Solcher", "dst": "Prinzip_Wurde_Zuerst", "w": 0.85, "type": "ist"}
@@ -928,7 +795,6 @@
 {"t": "edge", "src": "Nördlichste_Punkt_Des", "dst": "Kinnarodden", "w": 0.85, "type": "ist"}
 {"t": "edge", "src": "Oberfläche_Dieses_Wüstentyps", "dst": "Übersät", "w": 0.85, "type": "ist"}
 {"t": "edge", "src": "Obwohl_Die_Astronomie", "dst": "Hobby", "w": 0.85, "type": "ist"}
-{"t": "edge", "src": "Oft_Sind_Zwischen", "dst": "Mit", "w": 0.85, "type": "ist"}
 {"t": "edge", "src": "Olympische_Spiele", "dst": "Sammelbezeichnung", "w": 0.85, "type": "ist"}
 {"t": "edge", "src": "Opposition", "dst": "Bestandteil", "w": 0.85, "type": "ist"}
 {"t": "edge", "src": "Ozean", "dst": "Meere", "w": 0.92, "type": "ist"}
@@ -938,11 +804,11 @@
 {"t": "edge", "src": "Philosophie_Behandelt_Zumeist", "dst": "Staatsformen", "w": 0.85, "type": "ist"}
 {"t": "edge", "src": "Phonetisch_Naheliegend", "dst": "Wort_Oder_Glottonym", "w": 0.85, "type": "ist"}
 {"t": "edge", "src": "Phonetisch_Naheliegend", "dst": "Wort_Literatur", "w": 0.85, "type": "ist"}
+{"t": "edge", "src": "Phonetisch_Naheliegend", "dst": "Wort_Architektur", "w": 0.85, "type": "ist"}
 {"t": "edge", "src": "Physik", "dst": "Naturwissenschaft", "w": 0.95, "type": "ist"}
 {"t": "edge", "src": "Physikalische", "dst": "Geowissenschaften", "w": 0.85, "type": "ist"}
 {"t": "edge", "src": "Planvolles_Entwerfen", "dst": "Inhalt", "w": 0.85, "type": "ist"}
 {"t": "edge", "src": "Pluto", "dst": "Zwergplanet", "w": 0.85, "type": "ist"}
-{"t": "edge", "src": "Pluto", "dst": "Nach", "w": 0.85, "type": "ist"}
 {"t": "edge", "src": "Prinzip_Wurde_Zuerst", "dst": "Holz", "w": 0.85, "type": "ist"}
 {"t": "edge", "src": "Prozess_Bei_Dem", "dst": "Zunahme", "w": 0.85, "type": "ist"}
 {"t": "edge", "src": "Prozess_Bei_Dem", "dst": "Ist", "w": 0.9, "type": "ist"}
@@ -958,9 +824,6 @@
 {"t": "edge", "src": "Rohdaten_Werden_Vorab", "dst": "Wird", "w": 0.9, "type": "ist"}
 {"t": "edge", "src": "Sandwüste", "dst": "Wüste", "w": 0.95, "type": "ist"}
 {"t": "edge", "src": "Schon_Von_Anfang", "dst": "Film", "w": 0.85, "type": "ist"}
-{"t": "edge", "src": "Seit_Der_Definition", "dst": "Begriff", "w": 0.85, "type": "ist"}
-{"t": "edge", "src": "Seit_Der_Definition", "dst": "Baukunst", "w": 0.85, "type": "ist"}
-{"t": "edge", "src": "Seit_Der_Wiedervereinigung", "dst": "Sich_Deutschland_Zu", "w": 0.86, "type": "hat"}
 {"t": "edge", "src": "Seitdem", "dst": "Bestandteil", "w": 0.85, "type": "ist"}
 {"t": "edge", "src": "Selbst_Die_Mathematik", "dst": "Speziellen_Zweig", "w": 0.86, "type": "hat"}
 {"t": "edge", "src": "Selbst_Die_Mathematik", "dst": "Geostatistik", "w": 0.84, "type": "hat"}
@@ -969,7 +832,6 @@
 {"t": "edge", "src": "Sie", "dst": "Teilgebiet", "w": 0.95, "type": "ist"}
 {"t": "edge", "src": "Sie", "dst": "Formalwissenschaft", "w": 0.85, "type": "ist"}
 {"t": "edge", "src": "Sie", "dst": "Gel", "w": 0.9, "type": "besteht_aus"}
-{"t": "edge", "src": "Sie", "dst": "In_Dem_Gleichmäßig", "w": 0.88, "type": "besteht_aus"}
 {"t": "edge", "src": "Sie_Sind_Mittlerweile", "dst": "Anderen", "w": 0.85, "type": "ist"}
 {"t": "edge", "src": "So", "dst": "Bedeutungswandel", "w": 0.85, "type": "ist"}
 {"t": "edge", "src": "So", "dst": "Beispielsweise", "w": 0.85, "type": "ist"}
@@ -983,7 +845,6 @@
 {"t": "edge", "src": "Staatlich_Institutionalisiertes_Recht", "dst": "Moral", "w": 0.85, "type": "ist"}
 {"t": "edge", "src": "Stoff", "dst": "Atomen", "w": 0.9, "type": "besteht_aus"}
 {"t": "edge", "src": "Stoff", "dst": "Molekülen_Oder_Ionen", "w": 0.88, "type": "besteht_aus"}
-{"t": "edge", "src": "Stromversorgung_Über_Kabel", "dst": "Seit", "w": 0.85, "type": "ist"}
 {"t": "edge", "src": "System", "dst": "Begriff", "w": 0.95, "type": "ist"}
 {"t": "edge", "src": "Tabelle_Zeigt_Außerdem", "dst": "Zu_94", "w": 0.85, "type": "ist"}
 {"t": "edge", "src": "Tagebau_Bei_Der", "dst": "Zunächst_Enorme_Umweltschäden", "w": 0.9, "type": "verursacht"}
@@ -994,7 +855,6 @@
 {"t": "edge", "src": "Um_Ein_System", "dst": "Annäherung", "w": 0.85, "type": "ist"}
 {"t": "edge", "src": "Um_Zur_Illustration", "dst": "Wissenschaft", "w": 0.85, "type": "ist"}
 {"t": "edge", "src": "Unbelebte_Menschliche_Körper", "dst": "Geht", "w": 0.9, "type": "ist"}
-{"t": "edge", "src": "Unter_Historikern_Üblich", "dst": "Verwendung", "w": 0.85, "type": "ist"}
 {"t": "edge", "src": "Unterscheidungsbeispiel:_Ein_Navigationssystem", "dst": "System", "w": 0.95, "type": "ist"}
 {"t": "edge", "src": "Ursache_Der_Neotenen", "dst": "Veränderung", "w": 0.95, "type": "ist"}
 {"t": "edge", "src": "Ursprüngliche_Wort_Für", "dst": "Kinematographie", "w": 0.85, "type": "ist"}
@@ -1006,7 +866,6 @@
 {"t": "edge", "src": "Verteilung_Der_Häufigkeit", "dst": "Erdhülle", "w": 0.85, "type": "ist"}
 {"t": "edge", "src": "Vom_Pluto_Aus", "dst": "Sonne_Einen_Scheinbaren", "w": 0.86, "type": "hat"}
 {"t": "edge", "src": "Vom_Pluto_Aus", "dst": "Sieht_Damit_Wie", "w": 0.84, "type": "hat"}
-{"t": "edge", "src": "Von_Europa", "dst": "Schon_Von_Anfang", "w": 0.85, "type": "ist"}
 {"t": "edge", "src": "Vorverständnis_Der_Alltagspsychologie", "dst": "Jedoch", "w": 0.85, "type": "ist"}
 {"t": "edge", "src": "Vulkan", "dst": "Struktur_Des_Gesamten", "w": 0.95, "type": "ist"}
 {"t": "edge", "src": "Wasserkörper_Eines_Ozeans", "dst": "Nicht", "w": 0.85, "type": "ist"}
@@ -1014,36 +873,22 @@
 {"t": "edge", "src": "Weitere_Gängige_Metapher", "dst": "Box", "w": 0.85, "type": "ist"}
 {"t": "edge", "src": "Weiteres_Beispiel", "dst": "Mobiltelefone", "w": 0.85, "type": "ist"}
 {"t": "edge", "src": "Weiteres_Älteres_Verfahren", "dst": "Staubverfahren", "w": 0.85, "type": "ist"}
-{"t": "edge", "src": "Welche_Werke_Unter", "dst": "Gegenstand", "w": 0.85, "type": "ist"}
 {"t": "edge", "src": "Weltraum_Selber", "dst": "Kugelraumfläche", "w": 0.85, "type": "ist"}
 {"t": "edge", "src": "Weltweit_Größte_Sandwüste", "dst": "Chali", "w": 0.85, "type": "ist"}
-{"t": "edge", "src": "Wenn_Vom_Menschlichen", "dst": "I", "w": 0.85, "type": "ist"}
 {"t": "edge", "src": "Wesentliche_Komponente_Eines", "dst": "Durchsetzungsinitiative", "w": 0.85, "type": "ist"}
-{"t": "edge", "src": "Wie_Die_Sprache", "dst": "Universalie", "w": 0.85, "type": "ist"}
-{"t": "edge", "src": "Wie_Gut_Der", "dst": "Umstritten", "w": 0.85, "type": "ist"}
 {"t": "edge", "src": "Wissen", "dst": "Vorstellungen", "w": 0.85, "type": "ist"}
 {"t": "edge", "src": "Wort_Architektur", "dst": "Sinne", "w": 0.9, "type": "ist"}
 {"t": "edge", "src": "Wort_Literatur", "dst": "Erst", "w": 0.95, "type": "ist"}
 {"t": "edge", "src": "Wort_Literatur", "dst": "Seine_Zentrale_Bedeutung", "w": 0.86, "type": "hat"}
 {"t": "edge", "src": "Wort_Literatur", "dst": "Literaturzeitschriften", "w": 0.84, "type": "hat"}
-{"t": "edge", "src": "Wort_Literatur", "dst": "In_Der_Literaturkritik", "w": 0.82, "type": "hat"}
 {"t": "edge", "src": "Wort_Literatur", "dst": "Literaturtheorie", "w": 0.8, "type": "hat"}
 {"t": "edge", "src": "Wort_Oder_Glottonym", "dst": "Sich_Aus_Dem", "w": 0.86, "type": "hat"}
 {"t": "edge", "src": "Wort_Oder_Glottonym", "dst": "Ahd", "w": 0.84, "type": "hat"}
-{"t": "edge", "src": "Wort_„Recht“", "dst": "Aus_Dem_Größten", "w": 0.85, "type": "ist"}
-{"t": "edge", "src": "Während_Des_Frühen", "dst": "Von_Einem_Massiven", "w": 0.9, "type": "verursacht"}
-{"t": "edge", "src": "Während_Des_Frühen", "dst": "War_Eine_Zeitlich", "w": 0.88, "type": "verursacht"}
-{"t": "edge", "src": "Während_Des_Frühen", "dst": "Aber_Relativ_Ausgeprägte", "w": 0.86, "type": "verursacht"}
 {"t": "edge", "src": "Ziel_Des_Faches", "dst": "Es", "w": 0.85, "type": "ist"}
-{"t": "edge", "src": "Zwischen_Körper_Und", "dst": "Problematik", "w": 0.9, "type": "ist"}
 {"t": "edge", "src": "Ärzteschaft", "dst": "Heute_Die_Weitgehende", "w": 0.86, "type": "hat"}
-{"t": "edge", "src": "Ärzteschaft", "dst": "Was_Krankheit_Ausmacht", "w": 0.84, "type": "hat"}
-{"t": "edge", "src": "Ärzteschaft", "dst": "Welche_Medizinischen", "w": 0.82, "type": "hat"}
 {"t": "edge", "src": "Ärzteschaft", "dst": "Medizinischpolitischen_Maßnahmen_Dagegen", "w": 0.8, "type": "hat"}
 {"t": "edge", "src": "Öffentliche_Literaturdiskussion_Und", "dst": "Demgegenüber", "w": 0.85, "type": "ist"}
-{"t": "edge", "src": "Über_Die_Damaligen", "dst": "Nichts", "w": 0.85, "type": "ist"}
 {"t": "edge", "src": "Übertragen_Wurde_Der", "dst": "Wurde", "w": 0.9, "type": "ist"}
-{"t": "edge", "src": "„Demokratie_Fordert_Die", "dst": "Auf_Der_Erde", "w": 0.85, "type": "ist"}
 {"t": "edge", "src": "„Demokratie_Fordert_Die", "dst": "Altgriechisch", "w": 0.85, "type": "ist"}
 {"t": "edge", "src": "„Netz“", "dst": "Aber", "w": 0.9, "type": "ist"}
 {"t": "edge", "src": "„Olympiade“", "dst": "Irrtum", "w": 0.85, "type": "ist"}
