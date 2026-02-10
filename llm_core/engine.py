@@ -87,13 +87,16 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
 
         # Global Workspace Gate
         self.workspace_gate = True
-        self.workspace_topk = 12
+        self.workspace_topk = 6
+        self.workspace_focus_boost = 1.8
 
         # Zeitlicher Decay: exp(-dt/tau_seconds)
         self.tau_seconds = 6.0
 
         # Inhibition / Winner-Take-Most
-        self.inhib_lambda = 0.15
+        self.inhib_lambda = 0.22
+        self.inhib_degree_boost = 0.8
+        self.inhib_degree_norm = 10.0
         self.topk_global = 80
         self.cutoff = 0.01
 
@@ -509,7 +512,23 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
             return act
         mean_val = sum(act.values()) / max(1, len(act))
         lam = self.inhib_lambda
-        return {k: max(0.0, v - lam * mean_val) for k, v in act.items()}
+        out = {}
+        for k, v in act.items():
+            deg_scale = 1.0
+            if self.inhib_degree_boost > 0:
+                deg = self._degree(k)
+                norm = max(1.0, float(self.inhib_degree_norm))
+                deg_scale = 1.0 + min(1.0, deg / norm) * self.inhib_degree_boost
+            out[k] = max(0.0, v - lam * mean_val * deg_scale)
+        return out
+
+    def _degree(self, kid: str) -> int:
+        deg = 0
+        k = self.konzepte.get(kid)
+        if k:
+            deg += len(k.verbindungen)
+        deg += len(self.episodic_edges.get(kid, []))
+        return deg
 
     def _topk_clamp(self, act: Dict[str, float], k: int) -> Dict[str, float]:
         if not act or k <= 0:
@@ -752,6 +771,7 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
 
         base_cues = self._cue_set(frage)
         cues = dict(base_cues)
+        seed_set = set(base_cues.keys())
         focus_ids = [k for k, _ in sorted(cues.items(), key=lambda x: x[1], reverse=True)[:2]]
         memory_hits: List[Dict[str, object]] = []
 
@@ -811,7 +831,14 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
                     for k in wm_ids
                     if act.get(k, 0.0) >= self.pattern_threshold
                 ]
-                pattern.sort(key=lambda x: x[1], reverse=True)
+            def _ws_score(item: Tuple[str, float]) -> Tuple[int, float]:
+                kid, val = item
+                boosted = val * (self.workspace_focus_boost if kid in seed_set else 1.0)
+                if intent == "DEF" and kid in seed_set:
+                    return (1, boosted)
+                return (0, boosted)
+
+            pattern.sort(key=_ws_score, reverse=True)
             if self.workspace_topk and len(pattern) > self.workspace_topk:
                 pattern = pattern[: self.workspace_topk]
         else:
