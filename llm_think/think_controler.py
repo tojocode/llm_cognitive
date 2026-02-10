@@ -148,10 +148,10 @@ def _print_help():
 def main():
     parser = argparse.ArgumentParser(description="Think CLI")
     parser.add_argument("--seed", type=int, default=None, help="random seed for reproducibility")
-    parser.add_argument("--semantic", default="data/memory_semantic.jsonl", help="path to semantic memory")
-    parser.add_argument("--episodic", default="data/memory_episodic.jsonl", help="path to episodic memory")
-    parser.add_argument("--lexikon", default="data/lexikon.json", help="path to lexicon")
-    parser.add_argument("--embeddings", default="data/embeddings.json", help="path to embeddings db")
+    parser.add_argument("--semantic", default="llm_memory/memory_semantic.jsonl", help="path to semantic memory")
+    parser.add_argument("--episodic", default="llm_memory/memory_episodic.jsonl", help="path to episodic memory")
+    parser.add_argument("--lexikon", default="llm_memory/lexikon.json", help="path to lexicon")
+    parser.add_argument("--embeddings", default="llm_memory/embeddings.json", help="path to embeddings db")
     args = parser.parse_args()
 
     if args.seed is not None:

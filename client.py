@@ -145,9 +145,9 @@ def _chat_loop(engine: KognitivesModell, semantic_path: str, episodic_path: str,
 def main():
     parser = argparse.ArgumentParser(description="Minimaler CLI-Client für das kognitive Modell")
     parser.add_argument("query", nargs="*", help="Frage als Text (oder über STDIN)")
-    parser.add_argument("--semantic", default="data/memory_semantic.jsonl", help="Pfad zu memory_semantic.jsonl")
-    parser.add_argument("--episodic", default="data/memory_episodic.jsonl", help="Pfad zu memory_episodic.jsonl")
-    parser.add_argument("--lexikon", default="data/lexikon.json", help="Pfad zu lexikon.json")
+    parser.add_argument("--semantic", default="llm_memory/memory_semantic.jsonl", help="Pfad zu memory_semantic.jsonl")
+    parser.add_argument("--episodic", default="llm_memory/memory_episodic.jsonl", help="Pfad zu memory_episodic.jsonl")
+    parser.add_argument("--lexikon", default="llm_memory/lexikon.json", help="Pfad zu lexikon.json")
     parser.add_argument("--llm-cmd", dest="llm_cmd", default=None, help="Shell-Command für lokales LM (liest Prompt von STDIN)")
     parser.add_argument("--no-lm", action="store_true", help="LM-Output deaktivieren (Templates verwenden)")
     parser.add_argument("--import", dest="import_path", default=None, help="Textdatei importieren (UTF-8)")

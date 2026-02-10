@@ -9,7 +9,7 @@ mindgraph_model/
   llm_speech/
     wernicke.py      # Verstehen / Lexikon / Import
     broca.py         # Ausgabe / LM-Hybrid
-  data/
+  llm_memory/
     memory_semantic.jsonl
     memory_episodic.jsonl
     lexikon.json

@@ -40,19 +40,19 @@ from datetime import datetime
 from typing import Callable, Dict, List, Tuple, Optional, Iterable
 
 from llm_core.types import Verbindung, Konzept, WMItem, TraceItem
-from data.embedding_db import EmbeddingDB
+from llm_memory.embedding_db import EmbeddingDB
 from llm_speech import BrocaMixin, WernickeMixin
 
 
 class KognitivesModell(WernickeMixin, BrocaMixin):
     def __init__(
         self,
-        modell_datei: str = "data/memory_semantic.jsonl",
-        episodic_datei: Optional[str] = "data/memory_episodic.jsonl",
+        modell_datei: str = "llm_memory/memory_semantic.jsonl",
+        episodic_datei: Optional[str] = "llm_memory/memory_episodic.jsonl",
         lm_cmd: Optional[str] = None,
         lm_callable: Optional[Callable[[Dict[str, object]], str]] = None,
-        lexikon_datei: Optional[str] = "data/lexikon.json",
-        embed_db_path: Optional[str] = "data/embeddings.json",
+        lexikon_datei: Optional[str] = "llm_memory/lexikon.json",
+        embed_db_path: Optional[str] = "llm_memory/embeddings.json",
         embed_dim: int = 512,
     ):
         self.konzepte: Dict[str, Konzept] = {}

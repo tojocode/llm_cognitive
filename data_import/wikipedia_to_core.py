@@ -4,7 +4,7 @@
 # Datei: data_import/wikipedia_to_core.py
 #
 # Liest alle .txt Dateien aus data_import/wikipedia und importiert
-# sie in data/memory_semantic.jsonl und data/memory_episodic.jsonl
+# sie in llm_memory/memory_semantic.jsonl und llm_memory/memory_episodic.jsonl
 # via KognitivesModell.import_text_file.
 # Optional können einzelne Dateien per --files angegeben werden.
 # Zusätzlich wird ein sauberes Lexikon aus Labels aufgebaut.
@@ -26,10 +26,10 @@ from llm_core.engine import KognitivesModell
 
 def _default_paths() -> tuple[Path, Path, Path, Path, Path]:
     wiki_dir = ROOT / "data_import" / "wikipedia"
-    semantic = ROOT / "data" / "memory_semantic.jsonl"
-    episodic = ROOT / "data" / "memory_episodic.jsonl"
-    lexikon = ROOT / "data" / "lexikon.json"
-    embeddings = ROOT / "data" / "embeddings.json"
+    semantic = ROOT / "llm_memory" / "memory_semantic.jsonl"
+    episodic = ROOT / "llm_memory" / "memory_episodic.jsonl"
+    lexikon = ROOT / "llm_memory" / "lexikon.json"
+    embeddings = ROOT / "llm_memory" / "embeddings.json"
     return wiki_dir, semantic, episodic, lexikon, embeddings
 
 
