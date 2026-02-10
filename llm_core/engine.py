@@ -143,6 +143,14 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
         self.goal_boost = 0.55
         self.goal_neighbor_boost = 0.35
 
+        # Autonomes Denken (Diversität)
+        self.think_topk = 40
+        self.think_recent_max = 24
+        self.think_cooldown = 8
+        self.think_link_penalty = 0.6
+        self.think_low_degree_penalty = 0.25
+        self._think_recent: List[str] = []
+
         if self.semantic_datei:
             self.modell_laden(self.semantic_datei, episodic=False)
         if self.episodic_datei:
@@ -1224,27 +1232,80 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
         steps = max(1, min(steps, 10))
 
         for _ in range(steps):
+            recent = self._think_recent if isinstance(self._think_recent, list) else []
+            cooldown = max(0, int(self.think_cooldown))
+            recent_set = set(recent[-cooldown:]) if cooldown > 0 else set()
+
             candidates = []
             goal_ids = self._goal_ids()
             for kid, k in self.konzepte.items():
+                if self._is_junk_concept_id(kid):
+                    continue
+                deg = self._degree(kid)
+                if deg <= 0:
+                    continue
                 sem_strength = sum(e.gewicht for e in k.verbindungen)
                 epi_strength = sum(e.gewicht for e in self.episodic_edges.get(kid, []))
                 novelty = 1.0 / (1.0 + sem_strength + epi_strength)
                 gap = max(0.0, epi_strength - sem_strength)
                 score = gap + 0.6 * novelty + random.uniform(0.0, 0.05)
-                candidates.append((kid, score))
 
-            candidates.sort(key=lambda x: x[1], reverse=True)
-            seeds = []
-            for g in goal_ids[:2]:
-                seeds.append(g)
-            if len(seeds) < 2:
-                for kid, _ in candidates:
-                    if kid in seeds:
+                # Penalties: low-degree noise + cooldown to prevent repetition
+                if deg <= 2:
+                    score -= self.think_low_degree_penalty * (2 - deg + 1) * 0.5
+                if kid in recent_set:
+                    score *= 0.2
+
+                candidates.append((score, kid, sem_strength, epi_strength, deg))
+
+            candidates.sort(key=lambda x: x[0], reverse=True)
+
+            def _weighted_pick(items, exclude=None, diversity_base=None) -> str:
+                exclude = exclude or set()
+                weights = []
+                pool = []
+                for s, kid, _, _, _ in items:
+                    if kid in exclude:
                         continue
-                    seeds.append(kid)
-                    if len(seeds) >= 2:
-                        break
+                    w = max(0.0, s)
+                    if diversity_base and diversity_base(kid):
+                        w *= self.think_link_penalty
+                    if w <= 0.0:
+                        continue
+                    pool.append(kid)
+                    weights.append(w)
+                if not pool:
+                    return ""
+                total = sum(weights)
+                r = random.random() * total
+                acc = 0.0
+                for kid, w in zip(pool, weights):
+                    acc += w
+                    if acc >= r:
+                        return kid
+                return pool[-1]
+
+            topk = self.think_topk if self.think_topk and self.think_topk > 0 else len(candidates)
+            top = candidates[:topk]
+
+            seeds: List[str] = []
+            for g in goal_ids[:2]:
+                if g and g not in seeds:
+                    seeds.append(g)
+
+            if len(seeds) < 2:
+                s1 = _weighted_pick(top, exclude=set(seeds))
+                if s1 and s1 not in seeds:
+                    seeds.append(s1)
+
+            if len(seeds) < 2:
+                def _is_linked(kid: str) -> bool:
+                    return any(self._has_edge(kid, s) or self._has_edge(s, kid) for s in seeds)
+
+                s2 = _weighted_pick(top, exclude=set(seeds), diversity_base=_is_linked)
+                if s2 and s2 not in seeds:
+                    seeds.append(s2)
+
             if not seeds:
                 break
 
@@ -1274,6 +1335,15 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
                 if not (self.pred_enabled and self.pred_learning_only):
                     self.lerne_aus_aktivierung(pattern, res["trace"])
             results.append(res)
+
+            # Update diversity memory
+            for s in seeds:
+                if s:
+                    recent.append(s)
+            if self.think_recent_max and len(recent) > self.think_recent_max:
+                self._think_recent = recent[-self.think_recent_max:]
+            else:
+                self._think_recent = recent
 
         return results
 
