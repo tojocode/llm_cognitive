@@ -2,7 +2,9 @@
 from __future__ import annotations
 
 import os
+import re
 import subprocess
+from pathlib import Path
 from typing import Dict, List, Optional, Tuple
 
 from llm_core.types import Konzept, TraceItem
@@ -29,6 +31,7 @@ class BrocaMixin:
             "verursacht", "durch", "streut", "verstärkt", "verstaerkt",
             "ermöglicht", "ermoeglicht", "notwendig_für", "notwendig_für", "notwendig_fuer",
             "benötigt", "benötigt", "benoetigt", "braucht",
+            "verursacht_durch", "verursacht_von",
         }
 
     # -------------------------
@@ -79,6 +82,12 @@ class BrocaMixin:
             "daher",
             "deshalb",
             "daneben",
+            "außerdem",
+            "ausserdem",
+            "hierbei",
+            "dabei",
+            "somit",
+            "jedoch",
         }
         if low in junk_ids:
             return True
@@ -125,6 +134,12 @@ class BrocaMixin:
             "deshalb",
             "daher",
             "daneben",
+            "außerdem",
+            "ausserdem",
+            "hierbei",
+            "dabei",
+            "somit",
+            "jedoch",
         }
         junk_count = 0
         for t in tokens:
@@ -146,6 +161,16 @@ class BrocaMixin:
             return "Ich weiß das nicht."
         focus = focus_ids or [k for k, _ in denkmuster[:2]]
         context = [k for k, _ in denkmuster[2:8]]
+        primary_memory = self._best_memory_text(memory_hits or [], focus)
+        intent_memory = self._best_intent_sentence(memory_hits or [], focus, intent)
+        wiki_snip = self._wiki_snippet_for_focus(focus, intent=intent)
+        if intent_memory:
+            primary_memory = intent_memory
+        elif wiki_snip and (not primary_memory or len(primary_memory) < 60):
+            primary_memory = wiki_snip
+        if primary_memory:
+            if intent in {"CAUSE", "HOW", "WHERE", "PARTS", "PROPS", "DEF"}:
+                return primary_memory
 
         if use_lm:
             lm_text = self._lm_generate(
@@ -240,32 +265,229 @@ class BrocaMixin:
     def _memory_snippet(self, memory_hits: List[Dict[str, object]], focus: List[str]) -> str:
         if not memory_hits:
             return ""
+        text = self._best_memory_text(memory_hits, focus)
+        if not text:
+            return ""
+        if len(text) > 160:
+            text = text[:157].rstrip() + "..."
+        return "Erinnerung: " + text
+
+    def _clean_snippet_text(self, text: str) -> str:
+        t = (text or "").strip()
+        if not t:
+            return ""
+        # fix common OCR artifacts seen in imports
+        t = t.replace("Verb und", "Verbund")
+        t = t.replace("Grundlagenft", "Grundlagen- und")
+        t = re.sub(r"Grundlagen- und\s+und", "Grundlagen- und", t)
+        t = re.sub(r"\s+", " ", t)
+        return t.strip()
+
+    def _is_bad_sentence(self, text: str) -> bool:
+        s = (text or "").strip()
+        if not s:
+            return True
+        low = s.lower()
+        if " ist i." in low or low.endswith(" i.") or low.endswith(" i"):
+            return True
+        if s[:1].islower():
+            return True
+        if len(s) < 20:
+            return True
+        return False
+
+    def _select_snippet(self, text: str) -> str:
+        clean = self._clean_snippet_text(text)
+        if not clean:
+            return ""
+        parts = re.split(r"(?<=[.!?])\s+", clean)
+        good = []
+        for p in parts:
+            p = p.strip()
+            if not p:
+                continue
+            if self._is_bad_sentence(p):
+                continue
+            good.append(p)
+            if len(good) >= 2:
+                break
+        if good:
+            return " ".join(good).strip()
+        return clean
+
+    def _intent_keywords(self, intent: str) -> List[str]:
+        if intent == "PARTS":
+            return ["besteht aus", "setzt sich zusammen", "umfasst"]
+        if intent == "CAUSE":
+            return ["verursacht", "bedingt", "entsteht durch", "führt zu"]
+        if intent == "WHERE":
+            return ["lebt in", "kommt in", "ist in", "vorkommt in"]
+        if intent == "PROPS":
+            return ["eigenschaft", "zeichnet sich", "hat", "weist", "charakteristisch"]
+        return []
+
+    def _select_sentence_by_keywords(self, text: str, keywords: List[str]) -> str:
+        if not text or not keywords:
+            return ""
+        clean = self._clean_snippet_text(text)
+        if not clean:
+            return ""
+        parts = re.split(r"(?<=[.!?])\s+", clean)
+        for p in parts:
+            s = p.strip()
+            if not s:
+                continue
+            low = s.lower()
+            if any(k in low for k in keywords) and not self._is_bad_sentence(s):
+                return s
+        return ""
+
+    def _best_intent_sentence(
+        self,
+        memory_hits: List[Dict[str, object]],
+        focus: List[str],
+        intent: str,
+    ) -> str:
+        if not memory_hits:
+            return ""
+        keywords = self._intent_keywords(intent)
+        if not keywords:
+            return ""
         focus_labels = set()
+        primary_labels = set()
         for f in focus or []:
-            focus_labels.add(self._label_for_output(f).lower())
+            lab = self._label_for_output(f).lower()
+            focus_labels.add(lab)
             focus_labels.add(f.lower())
-        text = ""
+        if focus:
+            f0 = focus[0]
+            primary_labels.add(self._label_for_output(f0).lower())
+            primary_labels.add(f0.lower())
+
         for hit in memory_hits:
             score = float(hit.get("score") or 0.0)
-            if score < 0.3:
+            if score < 0.2:
                 continue
             t = str(hit.get("text") or "").strip()
             if not t:
                 continue
-            if focus_labels:
-                tl = t.lower()
-                if not any(fl in tl for fl in focus_labels):
+            tl = t.lower()
+            if "features:" in tl:
+                continue
+            if focus_labels and not any(fl in tl for fl in focus_labels):
+                continue
+            if primary_labels and not any(pl in tl for pl in primary_labels):
+                continue
+            sent = self._select_sentence_by_keywords(t, keywords)
+            if sent:
+                return sent
+        return ""
+
+    def _best_memory_text(
+        self,
+        memory_hits: List[Dict[str, object]],
+        focus: List[str],
+    ) -> str:
+        if not memory_hits:
+            return ""
+        focus_labels = set()
+        primary_labels = set()
+        for f in focus or []:
+            lab = self._label_for_output(f).lower()
+            focus_labels.add(lab)
+            focus_labels.add(f.lower())
+        if focus:
+            f0 = focus[0]
+            primary_labels.add(self._label_for_output(f0).lower())
+            primary_labels.add(f0.lower())
+        preferred = []
+        secondary = []
+        fallback = []
+        for hit in memory_hits:
+            score = float(hit.get("score") or 0.0)
+            if score < 0.25:
+                continue
+            meta = hit.get("meta") or {}
+            t = str(hit.get("text") or "").strip()
+            if not t:
+                continue
+            tl = t.lower()
+            if "features:" in tl:
+                continue
+            if focus_labels and not any(fl in tl for fl in focus_labels):
+                continue
+            is_primary = bool(primary_labels) and any(pl in tl for pl in primary_labels)
+            if meta.get("type") in {"node", "edge"}:
+                fallback.append(t)
+            elif is_primary:
+                preferred.append(t)
+            else:
+                secondary.append(t)
+        for bucket in (preferred, secondary, fallback):
+            for t in bucket:
+                if len(t) >= 40:
+                    clean = t.replace("\n", " ").strip()
+                    short = self._select_snippet(clean)
+                    return short if short else clean
+        return ""
+
+    def _wiki_file_map(self) -> Dict[str, Path]:
+        if hasattr(self, "_wiki_cache") and isinstance(self._wiki_cache, dict):
+            return self._wiki_cache
+        wiki_dir = Path(getattr(self, "base_dir", ".")) / "data_import" / "wikipedia"
+        mapping: Dict[str, Path] = {}
+        if wiki_dir.exists():
+            for p in wiki_dir.glob("*.txt"):
+                stem = p.stem
+                stem = re.sub(r"^\d+_", "", stem)
+                base = stem.lower()
+                mapping[base] = p
+                # simple adjective ending variants (menschlicher -> menschliche)
+                parts = base.split("_")
+                for i, part in enumerate(parts):
+                    if part.endswith("er") and len(part) > 3:
+                        alt = part[:-1]
+                        v = parts[:]
+                        v[i] = alt
+                        mapping.setdefault("_".join(v), p)
+        self._wiki_cache = mapping
+        return mapping
+
+    def _slugify_label(self, text: str) -> str:
+        t = (text or "").strip().lower()
+        if not t:
+            return ""
+        t = t.replace("ä", "ae").replace("ö", "oe").replace("ü", "ue").replace("ß", "ss")
+        t = re.sub(r"[^a-z0-9]+", "_", t)
+        t = re.sub(r"_+", "_", t).strip("_")
+        return t
+
+    def _wiki_snippet_for_focus(self, focus: List[str], intent: Optional[str] = None) -> str:
+        if not focus:
+            return ""
+        mapping = self._wiki_file_map()
+        for kid in focus:
+            k = self.konzepte.get(kid)
+            candidates = [kid] + (k.labels or [])
+            for cand in candidates:
+                slug = self._slugify_label(cand)
+                if not slug:
                     continue
-            text = t
-            break
-        if not text:
-            return ""
-        if not text:
-            return ""
-        # keep short
-        if len(text) > 160:
-            text = text[:157].rstrip() + "..."
-        return "Erinnerung: " + text
+                path = mapping.get(slug)
+                if not path:
+                    continue
+                try:
+                    raw = path.read_text(encoding="utf-8")
+                except Exception:
+                    continue
+                text = raw.replace("\r", " ").replace("\n", " ").strip()
+                if intent:
+                    sent = self._select_sentence_by_keywords(text, self._intent_keywords(intent))
+                    if sent:
+                        return sent
+                short = self._select_snippet(text)
+                return short if short else text
+        return ""
 
     def _select_trace(self, trace: List[TraceItem], focus: List[str]) -> TraceItem:
         if not trace:

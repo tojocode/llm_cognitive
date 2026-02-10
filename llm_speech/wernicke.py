@@ -22,6 +22,114 @@ ARTICLES = [
     "dem ",
     "des ",
 ]
+JUNK_IDS = {
+    "es",
+    "er",
+    "sie",
+    "man",
+    "dies",
+    "diese",
+    "dieser",
+    "dieses",
+    "aber",
+    "auch",
+    "denn",
+    "dann",
+    "daher",
+    "deshalb",
+    "daneben",
+    "außerdem",
+    "ausserdem",
+    "hierbei",
+    "dabei",
+    "somit",
+    "jedoch",
+    "hat",
+    "ist",
+    "sind",
+    "wird",
+    "werden",
+    "verb",
+}
+JUNK_TOKENS = {
+    "der",
+    "die",
+    "das",
+    "ein",
+    "eine",
+    "einen",
+    "einem",
+    "einer",
+    "den",
+    "dem",
+    "des",
+    "und",
+    "oder",
+    "zu",
+    "im",
+    "in",
+    "am",
+    "an",
+    "von",
+    "mit",
+    "für",
+    "fuer",
+    "auch",
+    "aber",
+    "sowie",
+    "manche",
+    "einige",
+    "viele",
+    "mehr",
+    "weniger",
+    "andere",
+    "anderen",
+    "dies",
+    "diese",
+    "dieser",
+    "dieses",
+    "deshalb",
+    "daher",
+    "daneben",
+    "außerdem",
+    "ausserdem",
+    "hierbei",
+    "dabei",
+    "somit",
+    "jedoch",
+    "begriff",
+    "teil",
+    "gegenstand",
+    "definitionsgeschichte",
+}
+VERB_TOKENS = {
+    "ist",
+    "sind",
+    "war",
+    "wird",
+    "werden",
+    "hat",
+    "haben",
+    "behandelt",
+    "zeigt",
+    "gibt",
+    "gibt_es",
+    "heißt",
+    "heisst",
+    "bedeutet",
+    "entsteht",
+    "verursacht",
+    "führt",
+    "fuehrt",
+    "besteht",
+    "bestehen",
+    "setzt",
+    "umfasst",
+    "enthält",
+    "enthaelt",
+    "lebt",
+    "kommt",
+}
 
 
 class WernickeMixin:
@@ -102,13 +210,68 @@ class WernickeMixin:
         txt = re.sub(r"\s+", " ", txt).strip()
         return txt.split() if txt else []
 
+    def _normalize_import_text(self, text: str) -> str:
+        if not text:
+            return ""
+        t = text.replace("\r\n", "\n").replace("\r", "\n")
+        # join hyphenated line breaks
+        t = re.sub(r"(?<=[A-Za-zÄÖÜäöüß])-\n(?=[A-Za-zÄÖÜäöüß])", "", t)
+        # join broken words across line breaks
+        t = re.sub(r"(?<=[A-Za-zÄÖÜäöüß])\n(?=[a-zäöüß])", "", t)
+        # fix common OCR/line-break artifacts seen in imports
+        t = re.sub(r"\bVerb und\b", "Verbund", t)
+        t = t.replace("Grundlagenft", "Grundlagen- und")
+        return t
+
+    def _is_junk_concept_id(self, cid: str) -> bool:
+        if not cid:
+            return True
+        low = cid.lower()
+        if low in JUNK_IDS:
+            return True
+        if cid.isdigit():
+            return True
+        if len(cid) <= 2 and not cid.isupper():
+            return True
+        tokens = [t for t in cid.split("_") if t]
+        if not tokens:
+            return True
+        junk_count = 0
+        alpha_count = 0
+        has_verb = False
+        for t in tokens:
+            t_low = t.lower()
+            if any(ch.isalpha() for ch in t_low):
+                alpha_count += 1
+            if t_low in VERB_TOKENS:
+                has_verb = True
+                junk_count += 1
+                continue
+            if t_low in JUNK_TOKENS:
+                junk_count += 1
+            if t_low.isdigit():
+                junk_count += 1
+            if re.fullmatch(r"\d+(\.\d+)?", t_low):
+                junk_count += 1
+        if alpha_count == 0:
+            return True
+        if has_verb:
+            return True
+        if any(t.lower() in {"oder", "und"} for t in tokens):
+            return True
+        return (junk_count / len(tokens)) >= 0.4
+
     def _cue_set(self, frage: str) -> Dict[str, float]:
         tokens = self._tokenize(frage)
         tokset = set(tokens)
         stop = {
             "der","die","das","ein","eine","einen","einem","einer","ist","sind",
             "und","oder","zu","im","in","am","an","von","mit","für","für","den","dem","des",
-            "was","wie","warum","wieso","weshalb"
+            "hat","haben","besteht","bestehen","lebt","gibt",
+            "was","wie","warum","wieso","weshalb","woraus","womit","wodurch","wo","wann",
+            "wer","wen","wem","wessen","welche","welcher","welches","welchen","welchem",
+            "auch","aber","denn","dann","daher","deshalb","daneben",
+            "außerdem","ausserdem","hierbei","dabei","somit","jedoch"
         }
         tokset = {t for t in tokset if t not in stop}
 
@@ -180,7 +343,11 @@ class WernickeMixin:
         stop = {
             "der","die","das","ein","eine","einen","einem","einer","ist","sind",
             "und","oder","zu","im","in","am","an","von","mit","für","für","den","dem","des",
-            "was","wie","warum","wieso","weshalb"
+            "hat","haben","besteht","bestehen","lebt","gibt",
+            "was","wie","warum","wieso","weshalb","woraus","womit","wodurch","wo","wann",
+            "wer","wen","wem","wessen","welche","welcher","welches","welchen","welchem",
+            "auch","aber","denn","dann","daher","deshalb","daneben",
+            "außerdem","ausserdem","hierbei","dabei","somit","jedoch"
         }
         cand = [t for t in tokens if t not in stop and len(t) >= 3]
         return cand[-1] if cand else ""
@@ -212,6 +379,7 @@ class WernickeMixin:
         target: str = "episodic",
         source: str = "import",
     ) -> Dict[str, int]:
+        text = self._normalize_import_text(text)
         target = (target or "episodic").strip().lower()
         if target not in {"semantic", "episodic"}:
             target = "episodic"
@@ -349,6 +517,54 @@ class WernickeMixin:
                 False,
             ),
             (
+                re.compile(r"^(.+?)\s+setzt\s+sich\s+zusammen\s+aus\s+(.+?)\.?$", re.IGNORECASE),
+                "besteht_aus",
+                0.90,
+                True,
+            ),
+            (
+                re.compile(r"^(.+?)\s+umfasst\s+(.+?)\.?$", re.IGNORECASE),
+                "enthält",
+                0.86,
+                True,
+            ),
+            (
+                re.compile(r"^(.+?)\s+enthält\s+(.+?)\.?$", re.IGNORECASE),
+                "enthält",
+                0.86,
+                True,
+            ),
+            (
+                re.compile(r"^(.+?)\s+führt\s+zu\s+(.+?)\.?$", re.IGNORECASE),
+                "verursacht",
+                0.88,
+                True,
+            ),
+            (
+                re.compile(r"^(.+?)\s+wird\s+durch\s+(.+?)\s+verursacht\.?$", re.IGNORECASE),
+                "verursacht_durch",
+                0.90,
+                True,
+            ),
+            (
+                re.compile(r"^(.+?)\s+ist\s+durch\s+(.+?)\s+bedingt\.?$", re.IGNORECASE),
+                "verursacht_durch",
+                0.88,
+                True,
+            ),
+            (
+                re.compile(r"^(.+?)\s+entsteht\s+durch\s+(.+?)\.?$", re.IGNORECASE),
+                "verursacht_durch",
+                0.86,
+                True,
+            ),
+            (
+                re.compile(r"^(.+?)\s+entsteht\s+aus\s+(.+?)\.?$", re.IGNORECASE),
+                "besteht_aus",
+                0.86,
+                True,
+            ),
+            (
                 re.compile(r"^(.+?)\s+ist\s+ein(?:e|en|em|er)?\s+(.+?)\.?$", re.IGNORECASE),
                 "ist",
                 0.95,
@@ -369,12 +585,6 @@ class WernickeMixin:
             (
                 re.compile(r"^(.+?)\s+hat\s+(.+?)\.?$", re.IGNORECASE),
                 "hat",
-                0.86,
-                True,
-            ),
-            (
-                re.compile(r"^(.+?)\s+enthält\s+(.+?)\.?$", re.IGNORECASE),
-                "enthält",
                 0.86,
                 True,
             ),
@@ -414,12 +624,44 @@ class WernickeMixin:
                 0.83,
                 False,
             ),
+            (
+                re.compile(r"^(.+?)\s+kommt\s+in\s+(.+?)\s+vor\.?$", re.IGNORECASE),
+                "lebt_in",
+                0.80,
+                False,
+            ),
         ]
 
         for s in sentences:
             if len(s) < 5:
                 continue
             s0 = s.strip("•*- \t\"'")
+            live_rx = re.compile(
+                r"^(.+?)\s+ist\s+ein\s+in\s+(.+?)\s+lebend(?:e[rn]?|)\b",
+                re.IGNORECASE,
+            )
+            m_live = live_rx.match(s0)
+            if m_live:
+                src = self._phrase_to_concept_id(m_live.group(1))
+                place_tokens = [t for t in re.split(r"\s+", m_live.group(2)) if t][:3]
+                place = " ".join(place_tokens)
+                dst = self._phrase_to_concept_id(place)
+                if (
+                    src
+                    and dst
+                    and not self._is_junk_concept_id(src)
+                    and not self._is_junk_concept_id(dst)
+                ):
+                    rels.append(
+                        {
+                            "src": src,
+                            "dst": dst,
+                            "type": "lebt_in",
+                            "w": 0.82,
+                            "src_label": self._nfc(m_live.group(1)).strip(),
+                            "dst_label": self._nfc(place).strip(),
+                        }
+                    )
             for rx, typ, w0, split_conj in patterns:
                 m = rx.match(s0)
                 if not m:
@@ -433,7 +675,13 @@ class WernickeMixin:
                 for j, o in enumerate(objs):
                     o_head = self._object_head_phrase(o) if typ in {"ist", "gehört_zu"} else o
                     dst = self._phrase_to_concept_id(o_head)
-                    if not src or not dst or src == dst:
+                    if (
+                        not src
+                        or not dst
+                        or src == dst
+                        or self._is_junk_concept_id(src)
+                        or self._is_junk_concept_id(dst)
+                    ):
                         continue
                     rels.append({
                         "src": src,
@@ -457,12 +705,12 @@ class WernickeMixin:
         if p_norm and p_norm in self.lexikon:
             cid = self.lexikon[p_norm]
             self._ensure_label(cid, p)
-            return cid
+            return cid if not self._is_junk_concept_id(cid) else ""
         if p_norm:
             for kid, k in self.konzepte.items():
                 for lab in (k.labels or []):
                     if self._norm_label(lab) == p_norm:
-                        return kid
+                        return kid if not self._is_junk_concept_id(kid) else ""
         p_low = p.lower()
         for a in ARTICLES:
             if p_low.startswith(a):
@@ -473,8 +721,10 @@ class WernickeMixin:
         if not words:
             return ""
         if len(words) == 1:
-            return self._make_concept_id(words[0])
-        return "_".join([self._make_concept_id(w) for w in words])
+            cid = self._make_concept_id(words[0])
+        else:
+            cid = "_".join([self._make_concept_id(w) for w in words])
+        return cid if not self._is_junk_concept_id(cid) else ""
 
     def _split_object_phrases(self, obj: str, split_conjunctions: bool = True) -> List[str]:
         o = self._nfc(obj).strip().strip(".")

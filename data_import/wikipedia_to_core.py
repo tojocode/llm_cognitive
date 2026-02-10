@@ -253,11 +253,11 @@ def main() -> int:
             if p.exists():
                 files.append(p)
             else:
-                print(f"⚠️ Datei nicht gefunden: {p}")
+                print(f"WARN Datei nicht gefunden: {p}")
     else:
         wdir = Path(args.wiki_dir)
         if not wdir.exists():
-            print(f"❌ Ordner nicht gefunden: {wdir}")
+            print(f"FEHLER Ordner nicht gefunden: {wdir}")
             return 1
         files = sorted(wdir.glob("*.txt"))
         if args.limit and args.limit > 0:
@@ -265,9 +265,9 @@ def main() -> int:
 
     if not files:
         if args.files:
-            print("⚠️ Keine gültigen Dateien angegeben.")
+            print("WARN Keine gültigen Dateien angegeben.")
         else:
-            print(f"⚠️ Keine .txt Dateien in: {wdir}")
+            print(f"WARN Keine .txt Dateien in: {wdir}")
         return 1
 
     engine = KognitivesModell(
@@ -290,7 +290,7 @@ def main() -> int:
                 total_edges_sem += stats_sem.get("edges_added", 0)
                 total_edges_epi += stats_epi.get("edges_added", 0)
                 print(
-                    f"✓ {p.name}: +{stats_sem['nodes_added']} nodes, "
+                    f"OK {p.name}: +{stats_sem['nodes_added']} nodes, "
                     f"+{stats_sem['edges_added']} edges (semantic), "
                     f"+{stats_epi['edges_added']} edges (episodic)"
                 )
@@ -302,11 +302,11 @@ def main() -> int:
                 else:
                     total_edges_epi += stats.get("edges_added", 0)
                 print(
-                    f"✓ {p.name}: +{stats['nodes_added']} nodes, "
+                    f"OK {p.name}: +{stats['nodes_added']} nodes, "
                     f"+{stats['edges_added']} edges ({args.target})"
                 )
         except Exception as e:
-            print(f"❌ {p.name}: {e}")
+            print(f"FEHLER {p.name}: {e}")
 
     if not args.no_prune:
         pstats = _prune_engine(engine)

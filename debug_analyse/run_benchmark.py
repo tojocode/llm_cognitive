@@ -75,7 +75,7 @@ def _extract_trace_src_ids(res: dict) -> List[str]:
 def main() -> int:
     bench_path = Path(__file__).with_name("benchmark_questions.json")
     if not bench_path.exists():
-        print(f"❌ Benchmark-Datei fehlt: {bench_path}")
+        print(f"FEHLER Benchmark-Datei fehlt: {bench_path}")
         return 1
 
     cases = _load_cases(bench_path)
@@ -135,7 +135,7 @@ def main() -> int:
             print(f"     expect: {', '.join(str(x) for x in expect)}")
 
     if total == 0:
-        print("⚠️ Keine gültigen Fälle im Benchmark.")
+        print("WARN Keine gültigen Fälle im Benchmark.")
         return 1
 
     print("\n=== Benchmark Summary ===")
@@ -145,7 +145,7 @@ def main() -> int:
     print(f"Hit@focus: {focus_hits}/{total} = {focus_hits / max(1, total):.2%}")
     print(f"Hit@trace-src: {trace_hits}/{total} = {trace_hits / max(1, total):.2%}")
     if missing:
-        print(f"⚠️ Fehlende Aliase (nicht im Lexikon/Labels gefunden): {missing}")
+        print(f"WARN Fehlende Aliase (nicht im Lexikon/Labels gefunden): {missing}")
         for m in missing_list:
             exp = ", ".join(str(x) for x in (m.get("expect") or []))
             print(f"   - {m.get('q')}: {exp}")

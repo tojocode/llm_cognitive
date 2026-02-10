@@ -269,11 +269,19 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
 
     def _erkenne_intent(self, frage: str) -> str:
         f = frage.strip().lower()
-        if f.startswith(("warum", "weshalb", "wieso")):
+        if f.startswith(("warum", "weshalb", "wieso", "wodurch", "womit")):
             return "CAUSE"
+        if f.startswith(("wo ", "wohin", "woher")):
+            return "WHERE"
+        if f.startswith(("woraus", "woraus besteht", "woraus setzt", "woraus besteht")):
+            return "PARTS"
+        if f.startswith(("welche eigenschaften", "welche merkmale", "welche eigenschaft")):
+            return "PROPS"
         if f.startswith("wie"):
             return "HOW"
         if f.startswith("was"):
+            return "DEF"
+        if f.startswith(("ist ", "sind ", "hat ", "haben ")):
             return "DEF"
         return "OTHER"
 
@@ -292,10 +300,18 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
             preferred = {
                 "ermöglicht",
                 "verursacht",
+                "verursacht_durch",
+                "verursacht_von",
                 "notwendig_für",
                 "benötigt",
                 "braucht",
             }
+        elif intent == "WHERE":
+            preferred = {"lebt_in", "in", "von"}
+        elif intent == "PARTS":
+            preferred = {"besteht_aus", "enthält", "hat", "teil_von"}
+        elif intent == "PROPS":
+            preferred = {"eigenschaft", "eigenschaft_von", "hat", "ist"}
         elif intent == "HOW":
             preferred = {
                 "prozess",
@@ -357,10 +373,10 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
                         self.konzepte[konzept_id].verbindungen.extend(edges)
 
             layer = "episodic" if episodic else "semantic"
-            print(f"✓ Modell geladen ({layer}): {datei} | Konzepte: {len(self.konzepte)}")
+            print(f"OK Modell geladen ({layer}): {datei} | Konzepte: {len(self.konzepte)}")
         except FileNotFoundError:
             layer = "episodic" if episodic else "semantic"
-            print(f"❌ Modell-Datei nicht gefunden ({layer}): {datei}")
+            print(f"FEHLER Modell-Datei nicht gefunden ({layer}): {datei}")
 
     def _modell_laden_jsonl(self, datei: str, episodic: bool = False):
         pfad = self._resolve_path(datei)
@@ -430,10 +446,10 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
                         continue
 
             layer = "episodic" if episodic else "semantic"
-            print(f"✓ Modell geladen ({layer}): {datei} | Konzepte: {len(self.konzepte)}")
+            print(f"OK Modell geladen ({layer}): {datei} | Konzepte: {len(self.konzepte)}")
         except FileNotFoundError:
             layer = "episodic" if episodic else "semantic"
-            print(f"❌ Modell-Datei nicht gefunden ({layer}): {datei}")
+            print(f"FEHLER Modell-Datei nicht gefunden ({layer}): {datei}")
 
     def _parse_verbindungen(self, verbindungs_str: str) -> List[Verbindung]:
         out: List[Verbindung] = []
@@ -809,8 +825,6 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
 
         if self.pred_enabled:
             act = self.predictive_activation(cues, intent=intent)
-            if self.wm:
-                focus_ids = [w.id for w in self.wm[:2]]
         else:
             self._wm_init(cues)
             act = self.spreading_activation(intent=intent)
@@ -843,6 +857,18 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
                 pattern = pattern[: self.workspace_topk]
         else:
             pattern = pattern_all
+
+        # Focus should stay anchored to the question (seed_set), not drift in WM.
+        focus_ids = self._focus_from_question(frage, seed_set)
+        if not focus_ids and self.wm:
+            focus_ids = [w.id for w in self.wm[:2]]
+        elif self.wm and len(focus_ids) < 2:
+            for w in self.wm:
+                if w.id in focus_ids:
+                    continue
+                focus_ids.append(w.id)
+                if len(focus_ids) >= 2:
+                    break
 
         return {
             "frage": frage,
@@ -902,6 +928,58 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
         if len(toks) < 2 and len(text.strip()) < 6:
             return False
         return True
+
+    def _focus_from_question(self, frage: str, seed_set: set[str]) -> List[str]:
+        if not seed_set:
+            return []
+        tokens = self._tokenize(frage)
+        if not tokens:
+            return []
+        stop = {
+            "der", "die", "das", "ein", "eine", "einen", "einem", "einer",
+            "ist", "sind", "und", "oder", "zu", "im", "in", "am", "an", "von", "mit",
+            "fuer", "für", "den", "dem", "des", "hat", "haben", "besteht", "bestehen",
+            "lebt", "gibt", "was", "wie", "warum", "wieso", "weshalb",
+            "woraus", "womit", "wodurch", "wo", "wann", "wer", "wen", "wem", "wessen",
+            "welche", "welcher", "welches", "welchen", "welchem",
+            "außerdem", "ausserdem", "hierbei", "dabei", "somit", "jedoch",
+        }
+        tokens = [t for t in tokens if t not in stop]
+        if not tokens:
+            return []
+
+        focus: List[str] = []
+        used = set()
+
+        # Prefer longest lexikon phrase matches in token order.
+        i = 0
+        while i < len(tokens):
+            match = ""
+            match_len = 0
+            if self.lexikon:
+                for ln in range(min(3, len(tokens) - i), 0, -1):
+                    phrase = " ".join(tokens[i:i + ln])
+                    cid = self.lexikon.get(phrase)
+                    if cid and cid in seed_set:
+                        match = cid
+                        match_len = ln
+                        break
+            if match:
+                if match not in used:
+                    focus.append(match)
+                    used.add(match)
+                i += match_len
+            else:
+                i += 1
+
+        if not focus and self.lexikon:
+            for tok in tokens:
+                cid = self.lexikon.get(tok)
+                if cid and cid in seed_set and cid not in used:
+                    focus.append(cid)
+                    used.add(cid)
+
+        return focus[:2]
 
     # -------------------------
     # Lernen (Hebb + Anti-Hebb + Decay)
@@ -1097,7 +1175,7 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
                         }
                         f.write(json.dumps(obj, ensure_ascii=False) + "\n")
 
-        msg = f"✓ Modelle gespeichert: {datei}"
+        msg = f"OK Modelle gespeichert: {datei}"
         if episodic_datei:
             msg = f"{msg} + {episodic_datei}"
         print(msg)
@@ -1132,7 +1210,7 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
                     )
                     f.write(f"{src} | episodic | {verbindungen}\n")
 
-        msg = f"✓ Modelle gespeichert: {datei}"
+        msg = f"OK Modelle gespeichert: {datei}"
         if episodic_datei:
             msg = f"{msg} + {episodic_datei}"
         print(msg)
