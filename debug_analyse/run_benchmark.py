@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 
-from pathlib import Path
 import json
 import sys
+from pathlib import Path
 from typing import Dict, Iterable, List, Set
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -30,7 +30,11 @@ def _build_label_index(engine: KognitivesModell) -> Dict[str, Set[str]]:
     return label_map
 
 
-def _candidate_ids(engine: KognitivesModell, label_map: Dict[str, Set[str]], alias: str) -> Set[str]:
+def _candidate_ids(
+    engine: KognitivesModell,
+    label_map: Dict[str, Set[str]],
+    alias: str,
+) -> Set[str]:
     norm = engine._norm_label(alias)
     if not norm:
         return set()

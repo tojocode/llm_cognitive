@@ -37,9 +37,9 @@ import random
 import re
 import unicodedata
 from datetime import datetime
-from typing import Callable, Dict, List, Tuple, Optional, Iterable
+from typing import Callable, Dict, Iterable, List, Optional, Tuple
 
-from llm_core.types import Verbindung, Konzept, WMItem, TraceItem
+from llm_core.types import Konzept, TraceItem, Verbindung, WMItem
 from llm_memory.embedding_db import EmbeddingDB
 from llm_speech import BrocaMixin, WernickeMixin
 
@@ -277,11 +277,32 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
     def _gate(self, edge_type: str, intent: str) -> float:
         t = edge_type.strip().lower()
         if intent == "DEF":
-            preferred = {"ist", "teil_von", "klasse", "gehört_zu", "besteht_aus", "eigenschaft"}
+            preferred = {
+                "ist",
+                "teil_von",
+                "klasse",
+                "gehört_zu",
+                "besteht_aus",
+                "eigenschaft",
+            }
         elif intent == "CAUSE":
-            preferred = {"ermöglicht", "ermöglicht", "verursacht", "notwendig_für", "notwendig_für", "benötigt", "benötigt", "braucht"}
+            preferred = {
+                "ermöglicht",
+                "verursacht",
+                "notwendig_für",
+                "benötigt",
+                "braucht",
+            }
         elif intent == "HOW":
-            preferred = {"prozess", "besteht_aus", "benötigt", "benötigt", "in", "von", "schritt", "lebt_in"}
+            preferred = {
+                "prozess",
+                "besteht_aus",
+                "benötigt",
+                "in",
+                "von",
+                "schritt",
+                "lebt_in",
+            }
         else:
             preferred = set()
         return self.gate_match if t in preferred else self.gate_mismatch
@@ -311,7 +332,11 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
                     verbindungs_str = teile[2].strip()
 
                     if konzept_id not in self.konzepte:
-                        self.konzepte[konzept_id] = Konzept(id=konzept_id, labels=[konzept_id], semantische_features=features)
+                        self.konzepte[konzept_id] = Konzept(
+                            id=konzept_id,
+                            labels=[konzept_id],
+                            semantische_features=features,
+                        )
                     else:
                         if features:
                             existing = set(self.konzepte[konzept_id].semantische_features)
@@ -360,7 +385,11 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
                         if not labels:
                             labels = [cid]
                         if cid not in self.konzepte:
-                            self.konzepte[cid] = Konzept(id=cid, labels=labels, semantische_features=feats)
+                            self.konzepte[cid] = Konzept(
+                                id=cid,
+                                labels=labels,
+                                semantische_features=feats,
+                            )
                         else:
                             if feats:
                                 existing = set(self.konzepte[cid].semantische_features)
@@ -492,7 +521,11 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
     # Spreading Activation (lokal über WM)
     # -------------------------
 
-    def _iter_edges(self, src: str, include_seq: bool = True) -> Iterable[Tuple[str, Verbindung, str]]:
+    def _iter_edges(
+        self,
+        src: str,
+        include_seq: bool = True,
+    ) -> Iterable[Tuple[str, Verbindung, str]]:
         if src in self.konzepte:
             for e in self.konzepte[src].verbindungen:
                 yield src, e, "semantic"
@@ -590,7 +623,11 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
 
         return act
 
-    def predictive_activation(self, cues: Dict[str, float], intent: str = "OTHER") -> Dict[str, float]:
+    def predictive_activation(
+        self,
+        cues: Dict[str, float],
+        intent: str = "OTHER",
+    ) -> Dict[str, float]:
         act: Dict[str, float] = {}
         self.trace = []
 
@@ -769,7 +806,11 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
             wm_set = set(wm_ids)
             pattern = [(k, v) for k, v in pattern_all if k in wm_set]
             if not pattern and wm_ids:
-                pattern = [(k, act.get(k, 0.0)) for k in wm_ids if act.get(k, 0.0) >= self.pattern_threshold]
+                pattern = [
+                    (k, act.get(k, 0.0))
+                    for k in wm_ids
+                    if act.get(k, 0.0) >= self.pattern_threshold
+                ]
                 pattern.sort(key=lambda x: x[1], reverse=True)
             if self.workspace_topk and len(pattern) > self.workspace_topk:
                 pattern = pattern[: self.workspace_topk]
@@ -839,7 +880,13 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
     # Lernen (Hebb + Anti-Hebb + Decay)
     # -------------------------
 
-    def _get_or_create_episodic_edge(self, src: str, dst: str, typ: str, w_init: float) -> Verbindung:
+    def _get_or_create_episodic_edge(
+        self,
+        src: str,
+        dst: str,
+        typ: str,
+        w_init: float,
+    ) -> Verbindung:
         self.episodic_edges.setdefault(src, [])
         for e in self.episodic_edges[src]:
             if e.ziel == dst and e.typ == typ:
@@ -856,8 +903,14 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
             if t.contrib <= 0:
                 continue
             w0 = 0.25 + min(0.6, t.contrib)
-            e = self._get_or_create_episodic_edge(t.src, t.dst, self._canon_type(t.typ), w_init=w0)
-            e.gewicht = min(0.99, e.gewicht + self.lr_hebb * max(act_map.get(t.src, 0.0), act_map.get(t.dst, 0.0)))
+            e = self._get_or_create_episodic_edge(
+                t.src,
+                t.dst,
+                self._canon_type(t.typ),
+                w_init=w0,
+            )
+            boost = max(act_map.get(t.src, 0.0), act_map.get(t.dst, 0.0))
+            e.gewicht = min(0.99, e.gewicht + self.lr_hebb * boost)
 
         act_sorted = sorted(pattern, key=lambda x: x[1], reverse=True)[:10]
         ids = [k for k, _ in act_sorted]
@@ -869,7 +922,12 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
                     if c in (a, b):
                         continue
                     if self._has_edge(a, b) and self._has_edge(b, c) and not self._has_edge(a, c):
-                        self._get_or_create_episodic_edge(a, c, "assoziation", w_init=self.triangle_create_w)
+                        self._get_or_create_episodic_edge(
+                            a,
+                            c,
+                            "assoziation",
+                            w_init=self.triangle_create_w,
+                        )
 
         for src, src_a in act_map.items():
             if src_a < self.pattern_threshold:
@@ -895,7 +953,13 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
 
         self.konsolidiere_episodisch()
 
-    def _get_or_create_semantic_edge(self, src: str, dst: str, typ: str, w_init: float) -> Verbindung:
+    def _get_or_create_semantic_edge(
+        self,
+        src: str,
+        dst: str,
+        typ: str,
+        w_init: float,
+    ) -> Verbindung:
         if src not in self.konzepte:
             self.konzepte[src] = Konzept(id=src, labels=[src])
         for e in self.konzepte[src].verbindungen:
@@ -910,8 +974,14 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
             for e in edges:
                 if e.gewicht < self.consolidate_threshold:
                     continue
-                se = self._get_or_create_semantic_edge(src, e.ziel, self._canon_type(e.typ), w_init=e.gewicht * self.consolidate_ratio)
-                se.gewicht = min(0.99, max(se.gewicht, e.gewicht * self.consolidate_ratio))
+                w_init = e.gewicht * self.consolidate_ratio
+                se = self._get_or_create_semantic_edge(
+                    src,
+                    e.ziel,
+                    self._canon_type(e.typ),
+                    w_init=w_init,
+                )
+                se.gewicht = min(0.99, max(se.gewicht, w_init))
                 se.gewicht = min(0.99, se.gewicht + self.consolidate_boost)
 
     # -------------------------
@@ -944,7 +1014,12 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
                 labels = list(self.konzepte[cid].labels or [])
                 if not labels:
                     labels = [cid]
-                obj = {"t": "node", "id": cid, "features": sorted(set(feats)), "labels": sorted(set(labels))}
+                obj = {
+                    "t": "node",
+                    "id": cid,
+                    "features": sorted(set(feats)),
+                    "labels": sorted(set(labels)),
+                }
                 f.write(json.dumps(obj, ensure_ascii=False) + "\n")
             for src in sorted(self.konzepte.keys()):
                 for v in self.konzepte[src].verbindungen:
@@ -977,7 +1052,12 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
                     labels = list(self.konzepte[cid].labels or [])
                     if not labels:
                         labels = [cid]
-                    obj = {"t": "node", "id": cid, "features": sorted(set(feats)), "labels": sorted(set(labels))}
+                    obj = {
+                        "t": "node",
+                        "id": cid,
+                        "features": sorted(set(feats)),
+                        "labels": sorted(set(labels)),
+                    }
                     f.write(json.dumps(obj, ensure_ascii=False) + "\n")
                 for src in sorted(self.episodic_edges.keys()):
                     for v in self.episodic_edges[src]:
@@ -990,15 +1070,26 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
                         }
                         f.write(json.dumps(obj, ensure_ascii=False) + "\n")
 
-        print(f"✓ Modelle gespeichert: {datei}" + (f" + {episodic_datei}" if episodic_datei else ""))
+        msg = f"✓ Modelle gespeichert: {datei}"
+        if episodic_datei:
+            msg = f"{msg} + {episodic_datei}"
+        print(msg)
 
     def _speichere_txt(self, datei: str, episodic_datei: Optional[str] = None):
         with open(self._resolve_path(datei), "w", encoding="utf-8") as f:
             f.write("# KOGNITIVES MODELL (SEMANTIC) - AUTO-GENERIERT\n")
             f.write("# Format: konzept | features | verbindungen\n\n")
             for konzept_id, konzept in sorted(self.konzepte.items()):
-                features = ",".join(konzept.semantische_features) if konzept.semantische_features else "gelernt"
-                verbindungen = ", ".join([f"{v.ziel}:{v.gewicht:.2f}:{self._canon_type(v.typ)}" for v in konzept.verbindungen])
+                if konzept.semantische_features:
+                    features = ",".join(konzept.semantische_features)
+                else:
+                    features = "gelernt"
+                verbindungen = ", ".join(
+                    [
+                        f"{v.ziel}:{v.gewicht:.2f}:{self._canon_type(v.typ)}"
+                        for v in konzept.verbindungen
+                    ]
+                )
                 f.write(f"{konzept_id} | {features} | {verbindungen}\n")
 
         if episodic_datei:
@@ -1006,10 +1097,18 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
                 f.write("# KOGNITIVES MODELL (EPISODIC) - AUTO-GENERIERT\n")
                 f.write("# Format: konzept | features | verbindungen\n\n")
                 for src, edges in sorted(self.episodic_edges.items()):
-                    verbindungen = ", ".join([f"{v.ziel}:{v.gewicht:.2f}:{self._canon_type(v.typ)}" for v in edges])
+                    verbindungen = ", ".join(
+                        [
+                            f"{v.ziel}:{v.gewicht:.2f}:{self._canon_type(v.typ)}"
+                            for v in edges
+                        ]
+                    )
                     f.write(f"{src} | episodic | {verbindungen}\n")
 
-        print(f"✓ Modelle gespeichert: {datei}" + (f" + {episodic_datei}" if episodic_datei else ""))
+        msg = f"✓ Modelle gespeichert: {datei}"
+        if episodic_datei:
+            msg = f"{msg} + {episodic_datei}"
+        print(msg)
 
     # -------------------------
     # Autonomes Denken

@@ -1,7 +1,8 @@
 # -*- coding: utf-8 -*-
+import importlib.util
 import os
 import re as _re
-import importlib.util
+
 import requests
 
 THIS_DIR = os.path.dirname(os.path.abspath(__file__))

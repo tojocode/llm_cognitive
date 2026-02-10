@@ -37,7 +37,10 @@ def _format_memory_event(result: dict) -> str:
 
 def _chat_loop(engine: KognitivesModell, semantic_path: str, episodic_path: str, lexikon_path: str):
     print("Chat-Modus (ENTER ignoriert / /exit beendet)")
-    print("Commands: /import <pfad> [semantic|episodic], /save, /think [n], /lex add <id> <alias...>, /lex save, /exit")
+    print(
+        "Commands: /import <pfad> [semantic|episodic], /save, /think [n], "
+        "/lex add <id> <alias...>, /lex save, /exit"
+    )
     while True:
         try:
             q = input("> ").strip()
@@ -65,7 +68,10 @@ def _chat_loop(engine: KognitivesModell, semantic_path: str, episodic_path: str,
                 target = parts[2].lower() if len(parts) >= 3 else "episodic"
                 try:
                     stats = engine.import_text_file(p, target=target)
-                    print(f"✓ Import ok: +{stats['nodes_added']} nodes, +{stats['edges_added']} edges ({target})")
+                    print(
+                        f"✓ Import ok: +{stats['nodes_added']} nodes, "
+                        f"+{stats['edges_added']} edges ({target})"
+                    )
                 except FileNotFoundError:
                     print(f"❌ Datei nicht gefunden: {p}")
                 except Exception as e:
@@ -145,13 +151,45 @@ def _chat_loop(engine: KognitivesModell, semantic_path: str, episodic_path: str,
 def main():
     parser = argparse.ArgumentParser(description="Minimaler CLI-Client für das kognitive Modell")
     parser.add_argument("query", nargs="*", help="Frage als Text (oder über STDIN)")
-    parser.add_argument("--semantic", default="llm_memory/memory_semantic.jsonl", help="Pfad zu memory_semantic.jsonl")
-    parser.add_argument("--episodic", default="llm_memory/memory_episodic.jsonl", help="Pfad zu memory_episodic.jsonl")
-    parser.add_argument("--lexikon", default="llm_memory/lexikon.json", help="Pfad zu lexikon.json")
-    parser.add_argument("--llm-cmd", dest="llm_cmd", default=None, help="Shell-Command für lokales LM (liest Prompt von STDIN)")
-    parser.add_argument("--no-lm", action="store_true", help="LM-Output deaktivieren (Templates verwenden)")
-    parser.add_argument("--import", dest="import_path", default=None, help="Textdatei importieren (UTF-8)")
-    parser.add_argument("--to", dest="import_target", default="episodic", choices=["semantic", "episodic"], help="Ziel-Layer für Import")
+    parser.add_argument(
+        "--semantic",
+        default="llm_memory/memory_semantic.jsonl",
+        help="Pfad zu memory_semantic.jsonl",
+    )
+    parser.add_argument(
+        "--episodic",
+        default="llm_memory/memory_episodic.jsonl",
+        help="Pfad zu memory_episodic.jsonl",
+    )
+    parser.add_argument(
+        "--lexikon",
+        default="llm_memory/lexikon.json",
+        help="Pfad zu lexikon.json",
+    )
+    parser.add_argument(
+        "--llm-cmd",
+        dest="llm_cmd",
+        default=None,
+        help="Shell-Command für lokales LM (liest Prompt von STDIN)",
+    )
+    parser.add_argument(
+        "--no-lm",
+        action="store_true",
+        help="LM-Output deaktivieren (Templates verwenden)",
+    )
+    parser.add_argument(
+        "--import",
+        dest="import_path",
+        default=None,
+        help="Textdatei importieren (UTF-8)",
+    )
+    parser.add_argument(
+        "--to",
+        dest="import_target",
+        default="episodic",
+        choices=["semantic", "episodic"],
+        help="Ziel-Layer für Import",
+    )
     parser.add_argument("--think", type=int, default=0, help="Autonom denken (n Zyklen)")
     parser.add_argument("--chat", action="store_true", help="Interaktiver Chat-Modus")
     parser.add_argument("--save", action="store_true", help="Memory/lexikon speichern")
@@ -168,7 +206,10 @@ def main():
 
     if args.import_path:
         stats = engine.import_text_file(args.import_path, target=args.import_target)
-        print(f"✓ Import ok: +{stats['nodes_added']} nodes, +{stats['edges_added']} edges ({args.import_target})")
+        print(
+            f"✓ Import ok: +{stats['nodes_added']} nodes, "
+            f"+{stats['edges_added']} edges ({args.import_target})"
+        )
 
     if args.think and args.think > 0:
         _run_think(engine, args.think)

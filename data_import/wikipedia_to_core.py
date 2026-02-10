@@ -12,10 +12,10 @@
 
 from __future__ import annotations
 
-from pathlib import Path
 import argparse
 import re
 import sys
+from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
@@ -219,7 +219,10 @@ def main() -> int:
     wiki_dir, semantic, episodic, lexikon, embeddings = _default_paths()
 
     parser = argparse.ArgumentParser(
-        description="Importiert Wikipedia-TXT Dateien in memory_semantic.jsonl und memory_episodic.jsonl"
+        description=(
+            "Importiert Wikipedia-TXT Dateien in memory_semantic.jsonl "
+            "und memory_episodic.jsonl"
+        )
     )
     parser.add_argument("--wiki-dir", default=str(wiki_dir), help="Ordner mit .txt Dateien")
     parser.add_argument("--semantic", default=str(semantic), help="Pfad zu memory_semantic.jsonl")
@@ -298,7 +301,10 @@ def main() -> int:
                     total_edges_sem += stats.get("edges_added", 0)
                 else:
                     total_edges_epi += stats.get("edges_added", 0)
-                print(f"✓ {p.name}: +{stats['nodes_added']} nodes, +{stats['edges_added']} edges ({args.target})")
+                print(
+                    f"✓ {p.name}: +{stats['nodes_added']} nodes, "
+                    f"+{stats['edges_added']} edges ({args.target})"
+                )
         except Exception as e:
             print(f"❌ {p.name}: {e}")
 

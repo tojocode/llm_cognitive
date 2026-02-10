@@ -36,12 +36,14 @@
 #              "... d." + "auf ..." -> "... d. h. auf ..."
 #              "... z." + "b. ..."  -> "... z. b. ..."
 #              "... z." + "von ..." -> "... z. b. von ..."
-# 1.2.4 – FIX: Satzsplit-Repair für Abkürzungs-Fragmente: "..., d." + "auf ..." -> "..., d. h. auf ...".
+# 1.2.4 – FIX: Satzsplit-Repair für Abkürzungs-Fragmente:
+#         "..., d." + "auf ..." -> "..., d. h. auf ...".
 # 1.2.3 – FIX: FORM wird vor KNOWLEDGE importiert.
 #         FIX: Wiki-Listen/Bullets werden vor Satzsplit in saubere Satzgrenzen überführt.
-#         FIX: Repariert häufige Abkürzungen über Zeilenumbruchs
+#         FIX: Repariert häufige Abkürzungen über Zeilenumbrüche
 #              (z. B. "d.\n h." -> "d. h.", "z.\n b." -> "z. b.").
-#         FIX: Rettet häufige Fragment-Fälle "d.\n auf" -> "d. h. auf" und "z.\n von" -> "z. b. von".
+#         FIX: Rettet häufige Fragment-Fälle "d.\n auf" -> "d. h. auf"
+#              und "z.\n von" -> "z. b. von".
 #         ADD: sentence_limit als Alias für line_limit (tatsächlich: Satz-Limit nach Split).
 #         ADD: Punctuation-Cleanup (". .", "..", ":.") um Split-Müll zu vermeiden.
 # 1.2.2 – FIX: Enum-Expansion nur noch bei echten Dash-Fragmenten.
@@ -56,13 +58,13 @@
 
 from __future__ import annotations
 
+import json
 import os
 import re
-import json
 import unicodedata
-import urllib.request
 import urllib.parse
-from typing import Optional, List, Tuple
+import urllib.request
+from typing import List, Optional, Tuple
 
 try:
     import requests  # type: ignore
@@ -206,7 +208,15 @@ _INVISIBLE_CHARS = [
 ]
 
 # Normalisiere verschiedene Striche auf ASCII-Hyphen, weil Wikipedia gern "–" (en dash) nutzt
-_DASH_CHARS = ["\u2010", "\u2011", "\u2012", "\u2013", "\u2014", "\u2212"]  # hyphen, non-breaking, figure, en, em, minus
+# hyphen, non-breaking, figure, en, em, minus
+_DASH_CHARS = [
+    "\u2010",
+    "\u2011",
+    "\u2012",
+    "\u2013",
+    "\u2014",
+    "\u2212",
+]
 
 # Letter-Set (inkl. Umlaute/ß) für simple Prüfungen
 _LOWER_EXTRA = "äöüß"
@@ -404,7 +414,12 @@ def _protect_abbrev_for_split(text: str, st: _NormStats) -> str:
     st.split_protected += n
 
     # Ordinale + Jahrhundert/Jh.
-    t, n = re.subn(r"\b(\d{1,2})\.\s*(Jahrhundert|Jh\.?)", r"\1" + _SPLIT_DOT + r" \2", t, flags=re.IGNORECASE)
+    t, n = re.subn(
+        r"\b(\d{1,2})\.\s*(Jahrhundert|Jh\.?)",
+        r"\1" + _SPLIT_DOT + r" \2",
+        t,
+        flags=re.IGNORECASE,
+    )
     st.split_protected += n
 
     # Häufige Abkürzungen
@@ -508,7 +523,8 @@ def _restore_abbrev_hyphens(text: str, st: _NormStats) -> str:
     # ABBR + TargetWord ohne Bindestrich: KIVerordnung, KIgestützte, EUVerordnung, LLMModell
     for abbr in _ABBREV_PREFIXES:
         for tw in _ABBREV_TARGET_WORDS:
-            # exakt (Case-insensitive) aber Abk. soll in Originalform bleiben -> wir setzen abbr wie im Pattern
+            # exakt (Case-insensitive) aber Abk. soll in Originalform bleiben
+            # -> wir setzen abbr wie im Pattern
             rx = re.compile(rf"\b{re.escape(abbr)}{re.escape(tw)}\b", re.IGNORECASE)
             text = rx.sub(lambda m: f"{abbr}-{m.group(0)[len(abbr):]}", text)
 
@@ -745,7 +761,12 @@ def _expand_dash_enumerations(text: str, st: _NormStats) -> str:
                 pos = m.end()
                 continue
 
-            conj = "und" if " und " in stems_block else ("oder" if " oder " in stems_block else "und")
+            if " und " in stems_block:
+                conj = "und"
+            elif " oder " in stems_block:
+                conj = "oder"
+            else:
+                conj = "und"
 
             suffix = None
             last_stem = stems[-1]
@@ -773,7 +794,10 @@ def _expand_dash_enumerations(text: str, st: _NormStats) -> str:
             if expanded_left:
                 expanded = f"{expanded_left} {conj} {expanded_right}"
             else:
-                expanded = f"{stems[0]}{suffix} {conj} {expanded_right}" if stems else f"{expanded_right}"
+                if stems:
+                    expanded = f"{stems[0]}{suffix} {conj} {expanded_right}"
+                else:
+                    expanded = f"{expanded_right}"
 
             start, end = m.span()
             s2 = s2[:start] + expanded + s2[end:]
@@ -973,7 +997,10 @@ def fetch_tatoeba_api_new(count: int, config: dict) -> Optional[str]:
                 results.append(t)
 
         if results:
-            if config.get("print_normalize_stats", True) and config.get("normalize_import_text", True):
+            if (
+                config.get("print_normalize_stats", True)
+                and config.get("normalize_import_text", True)
+            ):
                 print(
                     "      [norm] tatoeba:"
                     f" strip={stats_all.strip_invisible}"

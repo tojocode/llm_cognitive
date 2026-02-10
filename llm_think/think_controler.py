@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
 
-from pathlib import Path
 import argparse
 import json
 import random
 import sys
+from pathlib import Path
 from typing import Dict, List
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -64,7 +64,12 @@ def _jsonable(result: dict, idx: int) -> Dict[str, object]:
     }
 
 
-def _rebuild_from_semantic(semantic_path: str, episodic_path: str, lexikon_path: str, embeddings_path: str):
+def _rebuild_from_semantic(
+    semantic_path: str,
+    episodic_path: str,
+    lexikon_path: str,
+    embeddings_path: str,
+):
     engine = KognitivesModell(
         semantic_path,
         episodic_datei=None,
@@ -106,7 +111,15 @@ def _rebuild_from_semantic(semantic_path: str, episodic_path: str, lexikon_path:
         for src, k in engine.konzepte.items():
             for e in k.verbindungen:
                 text = f"{src} {e.typ} {e.ziel}"
-                engine.embed_db.add(text, meta={"type": "edge", "src": src, "dst": e.ziel, "rel": e.typ})
+                engine.embed_db.add(
+                    text,
+                    meta={
+                        "type": "edge",
+                        "src": src,
+                        "dst": e.ziel,
+                        "rel": e.typ,
+                    },
+                )
         engine.embed_db.save()
 
     # save rebuilt semantic + episodic
@@ -148,10 +161,26 @@ def _print_help():
 def main():
     parser = argparse.ArgumentParser(description="Think CLI")
     parser.add_argument("--seed", type=int, default=None, help="random seed for reproducibility")
-    parser.add_argument("--semantic", default="llm_memory/memory_semantic.jsonl", help="path to semantic memory")
-    parser.add_argument("--episodic", default="llm_memory/memory_episodic.jsonl", help="path to episodic memory")
-    parser.add_argument("--lexikon", default="llm_memory/lexikon.json", help="path to lexicon")
-    parser.add_argument("--embeddings", default="llm_memory/embeddings.json", help="path to embeddings db")
+    parser.add_argument(
+        "--semantic",
+        default="llm_memory/memory_semantic.jsonl",
+        help="path to semantic memory",
+    )
+    parser.add_argument(
+        "--episodic",
+        default="llm_memory/memory_episodic.jsonl",
+        help="path to episodic memory",
+    )
+    parser.add_argument(
+        "--lexikon",
+        default="llm_memory/lexikon.json",
+        help="path to lexicon",
+    )
+    parser.add_argument(
+        "--embeddings",
+        default="llm_memory/embeddings.json",
+        help="path to embeddings db",
+    )
     args = parser.parse_args()
 
     if args.seed is not None:
@@ -190,7 +219,8 @@ def main():
             print(f"learn: {'on' if engine.lerne_aus_aktivierung == learn_fn else 'off'}")
             print(f"embed: {'on' if engine.embed_enabled else 'off'}")
             print(f"seeds: {'on' if state['show_seeds'] else 'off'}")
-            print(f"pattern: {'on' if state['print_pattern'] else 'off'} (max {state['max_pattern']})")
+            pattern_state = "on" if state["print_pattern"] else "off"
+            print(f"pattern: {pattern_state} (max {state['max_pattern']})")
             print(f"trace: {'on' if state['print_trace'] else 'off'} (max {state['max_trace']})")
             print(f"json: {'on' if state['json'] else 'off'}")
             continue

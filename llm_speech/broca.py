@@ -72,7 +72,13 @@ class BrocaMixin:
         context = [k for k, _ in denkmuster[2:8]]
 
         if use_lm:
-            lm_text = self._lm_generate(denkmuster, intent=intent, trace=trace, focus_ids=focus, memory_hits=memory_hits)
+            lm_text = self._lm_generate(
+                denkmuster,
+                intent=intent,
+                trace=trace,
+                focus_ids=focus,
+                memory_hits=memory_hits,
+            )
             if lm_text:
                 if self.explain_output and trace:
                     t0 = trace[0]
@@ -83,7 +89,14 @@ class BrocaMixin:
         seen = set()
         used_ids = set()
         focus_edges = self._rank_focus_edges(focus, intent=intent)
-        ranked = focus_edges if focus_edges else self._rank_candidate_edges(denkmuster, intent=intent, focus_ids=focus)
+        if focus_edges:
+            ranked = focus_edges
+        else:
+            ranked = self._rank_candidate_edges(
+                denkmuster,
+                intent=intent,
+                focus_ids=focus,
+            )
         for rel in ranked:
             if len(sentences) >= self.broca_max_sents:
                 break
@@ -104,7 +117,9 @@ class BrocaMixin:
             used_ids.add(rel["dst"])
 
         if not sentences and denkmuster:
-            sentences.append(f"Das zentrale Konzept ist {self._label_for_output(denkmuster[0][0])}.")
+            sentences.append(
+                f"Das zentrale Konzept ist {self._label_for_output(denkmuster[0][0])}."
+            )
 
         extra = []
         focus_set = set(focus)
@@ -275,7 +290,13 @@ class BrocaMixin:
                             score *= self.focus_boost_dst
                         else:
                             score *= self.focus_penalty_other
-                    item = {"score": score, "src": src, "dst": e.ziel, "typ": e.typ, "layer": "semantic"}
+                    item = {
+                        "score": score,
+                        "src": src,
+                        "dst": e.ziel,
+                        "typ": e.typ,
+                        "layer": "semantic",
+                    }
                     out.append(item)
                     if focus_set and (src in focus_set or e.ziel in focus_set):
                         focus_edges.append(item)
@@ -291,7 +312,13 @@ class BrocaMixin:
                             score *= self.focus_boost_dst
                         else:
                             score *= self.focus_penalty_other
-                    item = {"score": score, "src": src, "dst": e.ziel, "typ": e.typ, "layer": "episodic"}
+                    item = {
+                        "score": score,
+                        "src": src,
+                        "dst": e.ziel,
+                        "typ": e.typ,
+                        "layer": "episodic",
+                    }
                     out.append(item)
                     if focus_set and (src in focus_set or e.ziel in focus_set):
                         focus_edges.append(item)
@@ -311,12 +338,28 @@ class BrocaMixin:
                     score = e.gewicht * self._gate(e.typ, intent)
                     if intent == "CAUSE" and self._is_cause_type(e.typ):
                         score *= self.cause_boost
-                    out.append({"score": score, "src": src, "dst": e.ziel, "typ": e.typ, "layer": "semantic"})
+                    out.append(
+                        {
+                            "score": score,
+                            "src": src,
+                            "dst": e.ziel,
+                            "typ": e.typ,
+                            "layer": "semantic",
+                        }
+                    )
             for e in self.episodic_edges.get(src, []):
                 score = (e.gewicht * 0.9) * self._gate(e.typ, intent)
                 if intent == "CAUSE" and self._is_cause_type(e.typ):
                     score *= self.cause_boost
-                out.append({"score": score, "src": src, "dst": e.ziel, "typ": e.typ, "layer": "episodic"})
+                out.append(
+                    {
+                        "score": score,
+                        "src": src,
+                        "dst": e.ziel,
+                        "typ": e.typ,
+                        "layer": "episodic",
+                    }
+                )
         out.sort(key=lambda x: x["score"], reverse=True)
         return out
 
@@ -348,7 +391,11 @@ class BrocaMixin:
             rels = self._rank_candidate_edges(denkmuster, intent=intent, focus_ids=focus_ids)
         rels = rels[:5]
         rel_lines = [
-            f"{self._label_for_output(r['src'])} -{r['typ']}-> {self._label_for_output(r['dst'])} (w={r['score']:.2f}, {r['layer']})"
+            (
+                f"{self._label_for_output(r['src'])} -{r['typ']}-> "
+                f"{self._label_for_output(r['dst'])} "
+                f"(w={r['score']:.2f}, {r['layer']})"
+            )
             for r in rels
         ]
         mem_lines = []
@@ -371,7 +418,15 @@ class BrocaMixin:
 
         if self.lm_callable:
             try:
-                txt = self.lm_callable({"prompt": prompt, "intent": intent, "concepts": aktive, "relations": rels, "trace": trace})
+                txt = self.lm_callable(
+                    {
+                        "prompt": prompt,
+                        "intent": intent,
+                        "concepts": aktive,
+                        "relations": rels,
+                        "trace": trace,
+                    }
+                )
                 return txt.strip() if isinstance(txt, str) and txt.strip() else None
             except Exception:
                 return None

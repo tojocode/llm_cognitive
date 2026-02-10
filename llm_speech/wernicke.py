@@ -9,6 +9,20 @@ from typing import Dict, List
 
 from llm_core.types import Konzept, Verbindung
 
+ARTICLES = [
+    "der ",
+    "die ",
+    "das ",
+    "ein ",
+    "eine ",
+    "einen ",
+    "einem ",
+    "einer ",
+    "den ",
+    "dem ",
+    "des ",
+]
+
 
 class WernickeMixin:
     # -------------------------
@@ -29,7 +43,7 @@ class WernickeMixin:
         t = self._nfc(s).strip().lower()
         t = re.sub(r"[\.,;:!?()\[\]{}<>\"'`]", " ", t)
         t = re.sub(r"\s+", " ", t).strip()
-        for a in ["der ", "die ", "das ", "ein ", "eine ", "einen ", "einem ", "einer ", "den ", "dem ", "des "]:
+        for a in ARTICLES:
             if t.startswith(a):
                 t = t[len(a):].strip()
                 break
@@ -192,13 +206,20 @@ class WernickeMixin:
             txt = f.read()
         return self.import_text(txt, target=target, source=os.path.basename(p))
 
-    def import_text(self, text: str, target: str = "episodic", source: str = "import") -> Dict[str, int]:
+    def import_text(
+        self,
+        text: str,
+        target: str = "episodic",
+        source: str = "import",
+    ) -> Dict[str, int]:
         target = (target or "episodic").strip().lower()
         if target not in {"semantic", "episodic"}:
             target = "episodic"
 
         nodes_before = len(self.konzepte)
-        edges_before = sum(len(k.verbindungen) for k in self.konzepte.values()) + sum(len(v) for v in self.episodic_edges.values())
+        edges_before = sum(len(k.verbindungen) for k in self.konzepte.values()) + sum(
+            len(v) for v in self.episodic_edges.values()
+        )
 
         extracted = self._extract_relations_from_text(text)
 
@@ -214,10 +235,18 @@ class WernickeMixin:
             dst_label = rel.get("dst_label") or dst
 
             if src not in self.konzepte:
-                self.konzepte[src] = Konzept(id=src, labels=[src_label, src], semantische_features=["gelernt"])
+                self.konzepte[src] = Konzept(
+                    id=src,
+                    labels=[src_label, src],
+                    semantische_features=["gelernt"],
+                )
                 nodes_added += 1
             if dst not in self.konzepte:
-                self.konzepte[dst] = Konzept(id=dst, labels=[dst_label, dst], semantische_features=["gelernt"])
+                self.konzepte[dst] = Konzept(
+                    id=dst,
+                    labels=[dst_label, dst],
+                    semantische_features=["gelernt"],
+                )
                 nodes_added += 1
             self._ensure_label(src, src_label)
             self._ensure_label(dst, dst_label)
@@ -235,7 +264,9 @@ class WernickeMixin:
                     self.konzepte[src].semantische_features.append(dst)
 
             if target == "semantic":
-                exists = any(e.ziel == dst and e.typ == typ for e in self.konzepte[src].verbindungen)
+                exists = any(
+                    e.ziel == dst and e.typ == typ for e in self.konzepte[src].verbindungen
+                )
                 if not exists:
                     self.konzepte[src].verbindungen.append(Verbindung(ziel=dst, gewicht=w, typ=typ))
                     edges_added += 1
@@ -250,7 +281,11 @@ class WernickeMixin:
             stamp = datetime.now().strftime("%Y-%m-%d")
             tag = f"import:{source}:{stamp}"
             if "Import" not in self.konzepte:
-                self.konzepte["Import"] = Konzept(id="Import", labels=["Import"], semantische_features=["Meta"])
+                self.konzepte["Import"] = Konzept(
+                    id="Import",
+                    labels=["Import"],
+                    semantische_features=["Meta"],
+                )
                 nodes_added += 1
             if tag not in self.konzepte["Import"].semantische_features:
                 self.konzepte["Import"].semantische_features.append(tag)
@@ -262,7 +297,9 @@ class WernickeMixin:
                 pass
 
         nodes_after = len(self.konzepte)
-        edges_after = sum(len(k.verbindungen) for k in self.konzepte.values()) + sum(len(v) for v in self.episodic_edges.values())
+        edges_after = sum(len(k.verbindungen) for k in self.konzepte.values()) + sum(
+            len(v) for v in self.episodic_edges.values()
+        )
 
         return {
             "nodes_before": nodes_before,
@@ -287,21 +324,96 @@ class WernickeMixin:
         rels: List[Dict[str, object]] = []
 
         patterns = [
-            (re.compile(r"^Als\s+(.+?)\s+bezeichnet\s+man\s+(.+?)\.?$", re.IGNORECASE), "ist", 0.92, False),
-            (re.compile(r"^(.+?)\s+wird\s+als\s+(.+?)\s+bezeichnet\.?$", re.IGNORECASE), "ist", 0.90, False),
-            (re.compile(r"^(.+?)\s+ist\s+die\s+bezeichnung\s+für\s+(.+?)\.?$", re.IGNORECASE), "ist", 0.90, False),
-            (re.compile(r"^(.+?)\s+bezeichnet\s+(?:man\s+)?(.+?)\.?$", re.IGNORECASE), "ist", 0.90, False),
-            (re.compile(r"^(.+?)\s+ist\s+ein(?:e|en|em|er)?\s+(.+?)\.?$", re.IGNORECASE), "ist", 0.95, False),
-            (re.compile(r"^(.+?)\s+ist\s+(.+?)\.?$", re.IGNORECASE), "ist", 0.85, False),
-            (re.compile(r"^(.+?)\s+gehört\s+zu\s+(.+?)\.?$", re.IGNORECASE), "gehört_zu", 0.93, False),
-            (re.compile(r"^(.+?)\s+hat\s+(.+?)\.?$", re.IGNORECASE), "hat", 0.86, True),
-            (re.compile(r"^(.+?)\s+enthält\s+(.+?)\.?$", re.IGNORECASE), "enthält", 0.86, True),
-            (re.compile(r"^(.+?)\s+besteht\s+aus\s+(.+?)\.?$", re.IGNORECASE), "besteht_aus", 0.90, True),
-            (re.compile(r"^(.+?)\s+braucht\s+(.+?)\.?$", re.IGNORECASE), "braucht", 0.86, True),
-            (re.compile(r"^(.+?)\s+benötigt\s+(.+?)\.?$", re.IGNORECASE), "benötigt", 0.86, True),
-            (re.compile(r"^(.+?)\s+ermöglicht\s+(.+?)\.?$", re.IGNORECASE), "ermöglicht", 0.88, True),
-            (re.compile(r"^(.+?)\s+verursacht\s+(.+?)\.?$", re.IGNORECASE), "verursacht", 0.90, True),
-            (re.compile(r"^(.+?)\s+lebt\s+in\s+(.+?)\.?$", re.IGNORECASE), "lebt_in", 0.83, False),
+            (
+                re.compile(r"^Als\s+(.+?)\s+bezeichnet\s+man\s+(.+?)\.?$", re.IGNORECASE),
+                "ist",
+                0.92,
+                False,
+            ),
+            (
+                re.compile(r"^(.+?)\s+wird\s+als\s+(.+?)\s+bezeichnet\.?$", re.IGNORECASE),
+                "ist",
+                0.90,
+                False,
+            ),
+            (
+                re.compile(r"^(.+?)\s+ist\s+die\s+bezeichnung\s+für\s+(.+?)\.?$", re.IGNORECASE),
+                "ist",
+                0.90,
+                False,
+            ),
+            (
+                re.compile(r"^(.+?)\s+bezeichnet\s+(?:man\s+)?(.+?)\.?$", re.IGNORECASE),
+                "ist",
+                0.90,
+                False,
+            ),
+            (
+                re.compile(r"^(.+?)\s+ist\s+ein(?:e|en|em|er)?\s+(.+?)\.?$", re.IGNORECASE),
+                "ist",
+                0.95,
+                False,
+            ),
+            (
+                re.compile(r"^(.+?)\s+ist\s+(.+?)\.?$", re.IGNORECASE),
+                "ist",
+                0.85,
+                False,
+            ),
+            (
+                re.compile(r"^(.+?)\s+gehört\s+zu\s+(.+?)\.?$", re.IGNORECASE),
+                "gehört_zu",
+                0.93,
+                False,
+            ),
+            (
+                re.compile(r"^(.+?)\s+hat\s+(.+?)\.?$", re.IGNORECASE),
+                "hat",
+                0.86,
+                True,
+            ),
+            (
+                re.compile(r"^(.+?)\s+enthält\s+(.+?)\.?$", re.IGNORECASE),
+                "enthält",
+                0.86,
+                True,
+            ),
+            (
+                re.compile(r"^(.+?)\s+besteht\s+aus\s+(.+?)\.?$", re.IGNORECASE),
+                "besteht_aus",
+                0.90,
+                True,
+            ),
+            (
+                re.compile(r"^(.+?)\s+braucht\s+(.+?)\.?$", re.IGNORECASE),
+                "braucht",
+                0.86,
+                True,
+            ),
+            (
+                re.compile(r"^(.+?)\s+benötigt\s+(.+?)\.?$", re.IGNORECASE),
+                "benötigt",
+                0.86,
+                True,
+            ),
+            (
+                re.compile(r"^(.+?)\s+ermöglicht\s+(.+?)\.?$", re.IGNORECASE),
+                "ermöglicht",
+                0.88,
+                True,
+            ),
+            (
+                re.compile(r"^(.+?)\s+verursacht\s+(.+?)\.?$", re.IGNORECASE),
+                "verursacht",
+                0.90,
+                True,
+            ),
+            (
+                re.compile(r"^(.+?)\s+lebt\s+in\s+(.+?)\.?$", re.IGNORECASE),
+                "lebt_in",
+                0.83,
+                False,
+            ),
         ]
 
         for s in sentences:
@@ -352,7 +464,7 @@ class WernickeMixin:
                     if self._norm_label(lab) == p_norm:
                         return kid
         p_low = p.lower()
-        for a in ["der ", "die ", "das ", "ein ", "eine ", "einen ", "einem ", "einer ", "den ", "dem ", "des "]:
+        for a in ARTICLES:
             if p_low.startswith(a):
                 p = p[len(a):].strip()
                 break
@@ -418,9 +530,7 @@ class WernickeMixin:
         p = self._cut_at_keywords(p, [" des ", " der ", " dem ", " den ", " eines ", " einer "])
 
         p_low = p.lower()
-        for a in [
-            "der ", "die ", "das ", "ein ", "eine ", "einen ", "einem ", "einer ", "den ", "dem ", "des "
-        ]:
+        for a in ARTICLES:
             if p_low.startswith(a):
                 p = p[len(a):].strip()
                 break
@@ -463,9 +573,7 @@ class WernickeMixin:
             return ""
 
         p_low = p.lower()
-        for a in [
-            "der ", "die ", "das ", "ein ", "eine ", "einen ", "einem ", "einer ", "den ", "dem ", "des "
-        ]:
+        for a in ARTICLES:
             if p_low.startswith(a):
                 p = p[len(a):].strip()
                 break
