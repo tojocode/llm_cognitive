@@ -57,6 +57,82 @@ class BrocaMixin:
         labels.sort(key=score, reverse=True)
         return labels[0]
 
+    def _is_junk_node(self, kid: str) -> bool:
+        if not kid:
+            return True
+        if len(kid) <= 2 and not kid.isupper():
+            return True
+        low = kid.lower()
+        junk_ids = {
+            "es",
+            "er",
+            "sie",
+            "man",
+            "dies",
+            "diese",
+            "dieser",
+            "dieses",
+            "aber",
+            "auch",
+            "denn",
+            "dann",
+            "daher",
+            "deshalb",
+            "daneben",
+        }
+        if low in junk_ids:
+            return True
+        tokens = [t for t in kid.split("_") if t]
+        if not tokens:
+            return True
+        junk_tokens = {
+            "der",
+            "die",
+            "das",
+            "ein",
+            "eine",
+            "einen",
+            "einem",
+            "einer",
+            "den",
+            "dem",
+            "des",
+            "und",
+            "oder",
+            "zu",
+            "im",
+            "in",
+            "am",
+            "an",
+            "von",
+            "mit",
+            "für",
+            "fuer",
+            "auch",
+            "aber",
+            "sowie",
+            "manche",
+            "einige",
+            "viele",
+            "mehr",
+            "weniger",
+            "andere",
+            "anderen",
+            "dies",
+            "diese",
+            "dieser",
+            "dieses",
+            "deshalb",
+            "daher",
+            "daneben",
+        }
+        junk_count = 0
+        for t in tokens:
+            t_low = t.lower()
+            if len(t_low) <= 2 or t_low in junk_tokens:
+                junk_count += 1
+        return (junk_count / len(tokens)) >= 0.6
+
     def versprachliche(
         self,
         denkmuster: List[Tuple[str, float]],
@@ -123,9 +199,13 @@ class BrocaMixin:
 
         extra = []
         focus_set = set(focus)
-        if focus_set:
+        if intent == "CAUSE":
+            extra = []
+        elif focus_set:
             for k in context:
                 if k in focus_set:
+                    continue
+                if self._is_junk_node(k):
                     continue
                 if k in used_ids:
                     continue
@@ -153,7 +233,8 @@ class BrocaMixin:
         s1 = " ".join(sentences)
         if self.explain_output and trace:
             t0 = self._select_trace(trace, focus)
-            s1 = s1.rstrip() + f" (Trace: {t0.src} → {t0.dst} / {t0.typ})"
+            if t0.src and t0.dst:
+                s1 = s1.rstrip() + f" (Trace: {t0.src} → {t0.dst} / {t0.typ})"
         return s1
 
     def _memory_snippet(self, memory_hits: List[Dict[str, object]], focus: List[str]) -> str:
@@ -192,9 +273,15 @@ class BrocaMixin:
         fset = set(focus or [])
         if fset:
             for t in trace:
+                if self._is_junk_node(t.src) or self._is_junk_node(t.dst):
+                    continue
                 if t.src in fset or t.dst in fset:
                     return t
-        return trace[0]
+        for t in trace:
+            if self._is_junk_node(t.src) or self._is_junk_node(t.dst):
+                continue
+            return t
+        return TraceItem(tick=0, src="", dst="", typ="", contrib=0.0, layer="")
 
     def _is_symmetric_type(self, typ: str, template: str) -> bool:
         # Treat unknown templates as symmetric to avoid reversed duplicates
@@ -278,8 +365,12 @@ class BrocaMixin:
         out: List[Dict[str, object]] = []
         focus_edges: List[Dict[str, object]] = []
         for src in aktive:
+            if self._is_junk_node(src):
+                continue
             for e in self.konzepte.get(src, Konzept(src)).verbindungen:
                 if e.ziel in aktive:
+                    if self._is_junk_node(e.ziel):
+                        continue
                     score = e.gewicht * self._gate(e.typ, intent)
                     if intent == "CAUSE" and self._is_cause_type(e.typ):
                         score *= self.cause_boost
@@ -302,6 +393,8 @@ class BrocaMixin:
                         focus_edges.append(item)
             for e in self.episodic_edges.get(src, []):
                 if e.ziel in aktive:
+                    if self._is_junk_node(e.ziel):
+                        continue
                     score = (e.gewicht * 0.9) * self._gate(e.typ, intent)
                     if intent == "CAUSE" and self._is_cause_type(e.typ):
                         score *= self.cause_boost
@@ -333,8 +426,12 @@ class BrocaMixin:
             return []
         out: List[Dict[str, object]] = []
         for src in focus_ids:
+            if self._is_junk_node(src):
+                continue
             if src in self.konzepte:
                 for e in self.konzepte[src].verbindungen:
+                    if self._is_junk_node(e.ziel):
+                        continue
                     score = e.gewicht * self._gate(e.typ, intent)
                     if intent == "CAUSE" and self._is_cause_type(e.typ):
                         score *= self.cause_boost
@@ -348,6 +445,8 @@ class BrocaMixin:
                         }
                     )
             for e in self.episodic_edges.get(src, []):
+                if self._is_junk_node(e.ziel):
+                    continue
                 score = (e.gewicht * 0.9) * self._gate(e.typ, intent)
                 if intent == "CAUSE" and self._is_cause_type(e.typ):
                     score *= self.cause_boost
