@@ -14,6 +14,7 @@ from __future__ import annotations
 
 from pathlib import Path
 import argparse
+import re
 import sys
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -100,6 +101,103 @@ def _build_clean_lexikon(engine: KognitivesModell) -> tuple[dict, dict]:
     return lex, stats
 
 
+def _prune_engine(engine: KognitivesModell) -> dict:
+    punct_start = set("-/\"'“”.,:;!?()[]{}")
+    stop_first = {
+        "bei", "in", "im", "am", "an", "von", "mit", "für", "fuer", "durch", "aus",
+        "auf", "unter", "über", "ueber", "zwischen", "ohne", "als", "seit", "nach",
+        "vor", "wegen", "gegen", "während", "waehrend", "wenn", "weil", "dass",
+        "was", "wie", "warum", "wieso", "weshalb", "welche", "welcher", "welches",
+    }
+
+    def is_bad_id(cid: str) -> bool:
+        if not cid:
+            return True
+        if cid[0] in punct_start:
+            return True
+        if cid.isdigit():
+            return True
+        if len(cid) < 3 and not (cid.isalpha() and cid.isupper()):
+            return True
+        if re.search(r"[^A-Za-zÄÖÜäöüß0-9_\-]", cid):
+            return True
+        base = re.split(r"[_\-]", cid.lower(), maxsplit=1)[0]
+        if base in stop_first:
+            return True
+        return False
+
+    # Incoming degree
+    incoming = {cid: 0 for cid in engine.konzepte.keys()}
+    for src, k in engine.konzepte.items():
+        for e in k.verbindungen:
+            incoming[e.ziel] = incoming.get(e.ziel, 0) + 1
+    for src, edges in engine.episodic_edges.items():
+        for e in edges:
+            incoming[e.ziel] = incoming.get(e.ziel, 0) + 1
+
+    # Label cleanup
+    labels_removed = 0
+    for cid, k in engine.konzepte.items():
+        new_labels = []
+        for lab in (k.labels or []):
+            if not lab:
+                labels_removed += 1
+                continue
+            if len(lab) > 80:
+                labels_removed += 1
+                continue
+            if lab[0] in punct_start:
+                labels_removed += 1
+                continue
+            if "\n" in lab or "\r" in lab:
+                labels_removed += 1
+                continue
+            new_labels.append(lab)
+        if not new_labels:
+            new_labels = [cid]
+        k.labels = list(dict.fromkeys(new_labels))
+
+    # Node pruning
+    to_drop = set()
+    for cid, k in engine.konzepte.items():
+        deg_out = len(k.verbindungen)
+        deg_epi = len(engine.episodic_edges.get(cid, []))
+        deg_in = incoming.get(cid, 0)
+        degree = deg_out + deg_epi + deg_in
+
+        if is_bad_id(cid) and degree <= 1:
+            to_drop.add(cid)
+            continue
+
+        if degree == 0 and len((k.labels or [])) == 0:
+            to_drop.add(cid)
+
+    # Remove nodes
+    for cid in to_drop:
+        engine.konzepte.pop(cid, None)
+        engine.episodic_edges.pop(cid, None)
+
+    # Remove edges to pruned nodes
+    edges_removed_sem = 0
+    for cid, k in list(engine.konzepte.items()):
+        new_edges = [e for e in k.verbindungen if e.ziel not in to_drop]
+        edges_removed_sem += max(0, len(k.verbindungen) - len(new_edges))
+        k.verbindungen = new_edges
+
+    edges_removed_epi = 0
+    for src, edges in list(engine.episodic_edges.items()):
+        new_edges = [e for e in edges if e.ziel not in to_drop]
+        edges_removed_epi += max(0, len(edges) - len(new_edges))
+        engine.episodic_edges[src] = new_edges
+
+    return {
+        "nodes_removed": len(to_drop),
+        "edges_removed_sem": edges_removed_sem,
+        "edges_removed_epi": edges_removed_epi,
+        "labels_removed": labels_removed,
+    }
+
+
 def main() -> int:
     wiki_dir, semantic, episodic, lexikon, embeddings = _default_paths()
 
@@ -125,6 +223,7 @@ def main() -> int:
         help="Eine oder mehrere .txt Dateien (überschreibt --wiki-dir/--limit)",
     )
     parser.add_argument("--no-lexikon", action="store_true", help="Lexikon nicht neu aufbauen")
+    parser.add_argument("--no-prune", action="store_true", help="Pruning nicht ausführen")
     args = parser.parse_args()
 
     if args.files:
@@ -185,6 +284,16 @@ def main() -> int:
                 print(f"✓ {p.name}: +{stats['nodes_added']} nodes, +{stats['edges_added']} edges ({args.target})")
         except Exception as e:
             print(f"❌ {p.name}: {e}")
+
+    if not args.no_prune:
+        pstats = _prune_engine(engine)
+        print(
+            "=== Prune: "
+            f"-{pstats['nodes_removed']} nodes | "
+            f"-{pstats['edges_removed_sem']} sem-edges | "
+            f"-{pstats['edges_removed_epi']} epi-edges | "
+            f"-{pstats['labels_removed']} labels ==="
+        )
 
     engine.speichere_model(args.semantic, episodic_datei=args.episodic)
     if not args.no_lexikon:
