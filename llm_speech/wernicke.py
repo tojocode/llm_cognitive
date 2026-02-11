@@ -281,6 +281,8 @@ class WernickeMixin:
             for alias, cid in self.lexikon.items():
                 if not alias:
                     continue
+                if self._is_junk_concept_id(cid):
+                    continue
                 parts = [p for p in alias.split(" ") if p]
                 if not parts:
                     continue

@@ -103,6 +103,8 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
         # Intent-Gating
         self.gate_match = 1.15
         self.gate_mismatch = 0.70
+        self.cause_gate_match = 1.5
+        self.cause_gate_mismatch = 0.3
 
         # Pattern-Threshold (Antwort)
         self.pattern_threshold = 0.12
@@ -155,6 +157,9 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
         self.value_gate_enabled = True
         self.value_goal_boost = 0.6
         self.value_low_degree_penalty = 0.25
+
+        # Frage-Anker (Warum)
+        self.cause_focus_boost = 0.22
 
         # Planning (Lookahead)
         self.plan_enabled = True
@@ -343,6 +348,8 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
             }
         else:
             preferred = set()
+        if intent == "CAUSE":
+            return self.cause_gate_match if t in preferred else self.cause_gate_mismatch
         return self.gate_match if t in preferred else self.gate_mismatch
 
     # -------------------------
@@ -582,10 +589,14 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
     ) -> Iterable[Tuple[str, Verbindung, str]]:
         if src in self.konzepte:
             for e in self.konzepte[src].verbindungen:
+                if self._is_junk_concept_id(e.ziel):
+                    continue
                 yield src, e, "semantic"
         if src in self.episodic_edges:
             for e in self.episodic_edges[src]:
                 if not include_seq and e.typ == self.seq_type:
+                    continue
+                if self._is_junk_concept_id(e.ziel):
                     continue
                 yield src, e, "episodic"
 
@@ -810,11 +821,29 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
         focus_ids = [k for k, _ in sorted(cues.items(), key=lambda x: x[1], reverse=True)[:2]]
         memory_hits: List[Dict[str, object]] = []
 
+        anchored: List[str] = []
+        if intent == "CAUSE":
+            anchored = self._anchor_from_question(frage)
+            for kid in anchored:
+                cues[kid] = max(cues.get(kid, 0.0), 0.95 + self.cause_focus_boost)
+                seed_set.add(kid)
+
+        if cues:
+            cues = {k: v for k, v in cues.items() if not self._is_junk_concept_id(k)}
+            seed_set = {k for k in seed_set if k in cues}
+
         # Hybrid memory: retrieve similar texts and use as weak cues
-        if self.embed_enabled and self._use_embeddings_for(frage):
+        allow_embed = True
+        embed_strong = self.embed_min_score_strong
+        if intent == "CAUSE":
+            if not base_cues and not anchored:
+                allow_embed = False
+            embed_strong = max(embed_strong, self.embed_min_score_strong * 1.4)
+
+        if allow_embed and self.embed_enabled and self._use_embeddings_for(frage):
             memory_hits = self.embed_query(frage)
             top_score = float(memory_hits[0].get("score") or 0.0) if memory_hits else 0.0
-            if not base_cues and top_score < self.embed_min_score_strong:
+            if not base_cues and top_score < embed_strong:
                 memory_hits = []
             for hit in memory_hits:
                 score = float(hit.get("score") or 0.0)
@@ -849,7 +878,11 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
             act = self.spreading_activation(intent=intent)
 
         pattern_all = sorted(
-            [(k, v) for k, v in act.items() if v >= self.pattern_threshold],
+            [
+                (k, v)
+                for k, v in act.items()
+                if v >= self.pattern_threshold and not self._is_junk_concept_id(k)
+            ],
             key=lambda x: x[1],
             reverse=True,
         )
@@ -1080,7 +1113,7 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
                 for ln in range(min(3, len(tokens) - i), 0, -1):
                     phrase = " ".join(tokens[i:i + ln])
                     cid = self.lexikon.get(phrase)
-                    if cid and cid in seed_set:
+                    if cid and cid in seed_set and not self._is_junk_concept_id(cid):
                         match = cid
                         match_len = ln
                         break
@@ -1095,7 +1128,55 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
         if not focus and self.lexikon:
             for tok in tokens:
                 cid = self.lexikon.get(tok)
-                if cid and cid in seed_set and cid not in used:
+                if cid and cid in seed_set and cid not in used and not self._is_junk_concept_id(cid):
+                    focus.append(cid)
+                    used.add(cid)
+
+        return focus[:2]
+
+    def _anchor_from_question(self, frage: str) -> List[str]:
+        tokens = self._tokenize(frage)
+        if not tokens or not self.lexikon:
+            return []
+        stop = {
+            "der", "die", "das", "ein", "eine", "einen", "einem", "einer",
+            "ist", "sind", "und", "oder", "zu", "im", "in", "am", "an", "von", "mit",
+            "fuer", "für", "den", "dem", "des", "hat", "haben", "besteht", "bestehen",
+            "lebt", "gibt", "was", "wie", "warum", "wieso", "weshalb",
+            "woraus", "womit", "wodurch", "wo", "wann", "wer", "wen", "wem", "wessen",
+            "welche", "welcher", "welches", "welchen", "welchem",
+            "außerdem", "ausserdem", "hierbei", "dabei", "somit", "jedoch",
+        }
+        tokens = [t for t in tokens if t not in stop]
+        if not tokens:
+            return []
+
+        focus: List[str] = []
+        used = set()
+
+        i = 0
+        while i < len(tokens):
+            match = ""
+            match_len = 0
+            for ln in range(min(3, len(tokens) - i), 0, -1):
+                phrase = " ".join(tokens[i:i + ln])
+                cid = self.lexikon.get(phrase)
+                if cid and not self._is_junk_concept_id(cid):
+                    match = cid
+                    match_len = ln
+                    break
+            if match:
+                if match not in used:
+                    focus.append(match)
+                    used.add(match)
+                i += match_len
+            else:
+                i += 1
+
+        if not focus:
+            for tok in tokens:
+                cid = self.lexikon.get(tok)
+                if cid and cid not in used and not self._is_junk_concept_id(cid):
                     focus.append(cid)
                     used.add(cid)
 
