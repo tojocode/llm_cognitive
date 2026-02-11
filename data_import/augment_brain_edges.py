@@ -303,6 +303,73 @@ def _add_clusters(engine: KognitivesModell, min_cluster_size: int, max_clusters:
     return added
 
 
+def run_augmentation(
+    semantic: str = "llm_memory/memory_semantic.jsonl",
+    episodic: str = "llm_memory/memory_episodic.jsonl",
+    wiki_dir: str = "data_import/wikipedia",
+    *,
+    co_min_count: int = 2,
+    co_max_tokens: int = 3,
+    co_max_nodes: int = 6,
+    co_weight_base: float = 0.05,
+    co_weight_scale: float = 0.02,
+    ca_min_count: int = 2,
+    ca_weight_base: float = 0.04,
+    ca_weight_scale: float = 0.02,
+    sim_min: float = 0.78,
+    sim_topk: int = 3,
+    sim_weight_scale: float = 0.35,
+    cluster_min_size: int = 6,
+    cluster_max: int = 20,
+) -> dict:
+    engine = KognitivesModell(semantic, episodic_datei=episodic)
+
+    removed = _remove_augmented(engine)
+
+    wdir = Path(wiki_dir)
+    if not wdir.exists():
+        raise FileNotFoundError(f"Ordner nicht gefunden: {wdir}")
+
+    co = _add_cooccurrence(
+        engine,
+        wdir,
+        max_tokens=co_max_tokens,
+        max_nodes_per_sentence=co_max_nodes,
+        min_count=co_min_count,
+        weight_base=co_weight_base,
+        weight_scale=co_weight_scale,
+    )
+    ca = _add_coactivation(
+        engine,
+        wdir,
+        max_tokens=co_max_tokens,
+        max_nodes_per_sentence=co_max_nodes,
+        min_count=ca_min_count,
+        weight_base=ca_weight_base,
+        weight_scale=ca_weight_scale,
+    )
+    sim = _add_similarity(
+        engine,
+        min_score=sim_min,
+        top_k=sim_topk,
+        weight_scale=sim_weight_scale,
+    )
+    clu = _add_clusters(
+        engine,
+        min_cluster_size=cluster_min_size,
+        max_clusters=cluster_max,
+    )
+
+    engine.speichere_model(semantic, episodic_datei=episodic)
+    return {
+        "removed": removed,
+        "cooccur": co,
+        "coactive": ca,
+        "similar": sim,
+        "cluster": clu,
+    }
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description="Augment MindGraph with structured edges")
     parser.add_argument("--semantic", default="llm_memory/memory_semantic.jsonl")
@@ -332,50 +399,33 @@ def main() -> int:
 
     args = parser.parse_args()
 
-    engine = KognitivesModell(args.semantic, episodic_datei=args.episodic)
-
-    removed = _remove_augmented(engine)
-
-    wiki_dir = Path(args.wiki_dir)
-    if not wiki_dir.exists():
-        print(f"FEHLER Ordner nicht gefunden: {wiki_dir}")
+    try:
+        stats = run_augmentation(
+            semantic=args.semantic,
+            episodic=args.episodic,
+            wiki_dir=args.wiki_dir,
+            co_min_count=args.co_min_count,
+            co_max_tokens=args.co_max_tokens,
+            co_max_nodes=args.co_max_nodes,
+            co_weight_base=args.co_weight_base,
+            co_weight_scale=args.co_weight_scale,
+            ca_min_count=args.ca_min_count,
+            ca_weight_base=args.ca_weight_base,
+            ca_weight_scale=args.ca_weight_scale,
+            sim_min=args.sim_min,
+            sim_topk=args.sim_topk,
+            sim_weight_scale=args.sim_weight_scale,
+            cluster_min_size=args.cluster_min_size,
+            cluster_max=args.cluster_max,
+        )
+    except FileNotFoundError as e:
+        print(f"FEHLER {e}")
         return 1
-
-    co = _add_cooccurrence(
-        engine,
-        wiki_dir,
-        max_tokens=args.co_max_tokens,
-        max_nodes_per_sentence=args.co_max_nodes,
-        min_count=args.co_min_count,
-        weight_base=args.co_weight_base,
-        weight_scale=args.co_weight_scale,
-    )
-    ca = _add_coactivation(
-        engine,
-        wiki_dir,
-        max_tokens=args.co_max_tokens,
-        max_nodes_per_sentence=args.co_max_nodes,
-        min_count=args.ca_min_count,
-        weight_base=args.ca_weight_base,
-        weight_scale=args.ca_weight_scale,
-    )
-    sim = _add_similarity(
-        engine,
-        min_score=args.sim_min,
-        top_k=args.sim_topk,
-        weight_scale=args.sim_weight_scale,
-    )
-    clu = _add_clusters(
-        engine,
-        min_cluster_size=args.cluster_min_size,
-        max_clusters=args.cluster_max,
-    )
-
-    engine.speichere_model(args.semantic, episodic_datei=args.episodic)
     print(
         "OK Augment: "
-        f"-removed {removed} | +cooccur {co} | +coactive {ca} | "
-        f"+similar {sim} | +cluster {clu}"
+        f"-removed {stats['removed']} | +cooccur {stats['cooccur']} | "
+        f"+coactive {stats['coactive']} | +similar {stats['similar']} | "
+        f"+cluster {stats['cluster']}"
     )
     return 0
 
