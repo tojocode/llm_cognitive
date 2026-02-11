@@ -12,15 +12,33 @@ from llm_core.engine import KognitivesModell  # noqa: E402
 
 def _rebuild_lexikon(engine: KognitivesModell) -> None:
     lex = {}
+    def _add_alias(cid: str, alias: str) -> None:
+        a = engine._norm_label(alias)
+        if not a or a in lex:
+            return
+        if len(a) < 2:
+            return
+        lex[a] = cid
+
     for cid, k in engine.konzepte.items():
         if engine._is_junk_concept_id(cid):
             continue
         labels = k.labels or [cid]
         for lab in labels:
-            norm = engine._norm_label(lab)
-            if not norm or norm in lex:
+            if not lab or engine._is_junk_concept_id(lab):
                 continue
-            lex[norm] = cid
+            _add_alias(cid, lab)
+
+        # Zusatz: Alias aus Concept-ID (underscores -> spaces)
+        if "_" in cid:
+            alias_from_id = cid.replace("_", " ")
+            _add_alias(cid, alias_from_id)
+            # Acronym aus Mehrwort-Alias
+            parts = [p for p in alias_from_id.split(" ") if p]
+            if 2 <= len(parts) <= 4:
+                acronym = "".join([p[0] for p in parts if p and p[0].isalpha()]).upper()
+                if len(acronym) >= 2:
+                    _add_alias(cid, acronym)
     engine.lexikon = lex
 
 

@@ -151,6 +151,17 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
         self.think_low_degree_penalty = 0.25
         self._think_recent: List[str] = []
 
+        # Value-System / Gating (Ziele)
+        self.value_gate_enabled = True
+        self.value_goal_boost = 0.6
+        self.value_low_degree_penalty = 0.25
+
+        # Planning (Lookahead)
+        self.plan_enabled = True
+        self.plan_width = 8
+        self.plan_boost = 0.35
+        self.plan_intent_bonus = 0.15
+
         if self.semantic_datei:
             self.modell_laden(self.semantic_datei, episodic=False)
         if self.episodic_datei:
@@ -866,6 +877,17 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
         else:
             pattern = pattern_all
 
+        # Value-Gating: sortiere nach Frage-/Ziel-Passung
+        goal_tokens = self._goal_tokens(frage)
+        if self.value_gate_enabled and goal_tokens:
+            scored = []
+            for kid, val in pattern:
+                v = self._value_score(kid, goal_tokens)
+                bonus = self._plan_bonus(kid, goal_tokens, intent) if self.plan_enabled else 0.0
+                scored.append((kid, val * v * (1.0 + bonus)))
+            scored.sort(key=lambda x: x[1], reverse=True)
+            pattern = scored
+
         # Focus should stay anchored to the question (seed_set), not drift in WM.
         focus_ids = self._focus_from_question(frage, seed_set)
         if not focus_ids and self.wm:
@@ -936,6 +958,96 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
         if len(toks) < 2 and len(text.strip()) < 6:
             return False
         return True
+
+    def _goal_tokens(self, frage: str) -> set[str]:
+        tokens = self._tokenize(frage)
+        if not tokens:
+            return set()
+        stop = {
+            "der", "die", "das", "ein", "eine", "einen", "einem", "einer",
+            "ist", "sind", "und", "oder", "zu", "im", "in", "am", "an", "von", "mit",
+            "fuer", "für", "den", "dem", "des", "hat", "haben", "besteht", "bestehen",
+            "lebt", "gibt", "was", "wie", "warum", "wieso", "weshalb",
+            "woraus", "womit", "wodurch", "wo", "wann", "wer", "wen", "wem", "wessen",
+            "welche", "welcher", "welches", "welchen", "welchem",
+            "außerdem", "ausserdem", "hierbei", "dabei", "somit", "jedoch",
+        }
+        return {t for t in tokens if t not in stop}
+
+    def _value_score(self, kid: str, goal_tokens: set[str]) -> float:
+        if not kid:
+            return 0.5
+        if self._is_junk_concept_id(kid):
+            return 0.3
+        if not goal_tokens:
+            return 1.0
+        k = self.konzepte.get(kid)
+        labels = (k.labels if k and k.labels else [kid])
+        best = 0.0
+        for lab in labels:
+            norm = self._norm_label(lab)
+            if not norm:
+                continue
+            toks = set(norm.split())
+            if not toks:
+                continue
+            overlap = len(goal_tokens.intersection(toks))
+            best = max(best, overlap / max(1, len(goal_tokens)))
+        value = 1.0 + self.value_goal_boost * best
+        if self._degree(kid) <= 1:
+            value *= (1.0 - self.value_low_degree_penalty)
+        return max(0.5, min(1.8, value))
+
+    def _intent_rel_types(self, intent: str) -> set[str]:
+        if intent == "DEF":
+            return {"ist", "klasse", "gehört_zu", "gehört_zu", "gehoert_zu"}
+        if intent == "CAUSE":
+            return {"verursacht", "verursacht_durch", "verursacht_von", "durch"}
+        if intent == "PARTS":
+            return {"besteht_aus", "enthält", "enthält", "enthaelt", "teil_von"}
+        if intent == "WHERE":
+            return {"lebt_in", "sichtbar_in", "gehört_zu", "gehört_zu", "gehoert_zu"}
+        if intent == "PROPS":
+            return {"eigenschaft", "eigenschaft_von", "zeigt", "hat"}
+        if intent == "HOW":
+            return {"prozess", "verursacht", "durch"}
+        return set()
+
+    def _label_match_ratio(self, kid: str, goal_tokens: set[str]) -> float:
+        if not goal_tokens:
+            return 0.0
+        k = self.konzepte.get(kid)
+        labels = (k.labels if k and k.labels else [kid])
+        best = 0.0
+        for lab in labels:
+            norm = self._norm_label(lab)
+            if not norm:
+                continue
+            toks = set(norm.split())
+            if not toks:
+                continue
+            overlap = len(goal_tokens.intersection(toks))
+            best = max(best, overlap / max(1, len(goal_tokens)))
+        return best
+
+    def _plan_bonus(self, kid: str, goal_tokens: set[str], intent: str) -> float:
+        if not goal_tokens:
+            return 0.0
+        rel_types = self._intent_rel_types(intent)
+        bonus = 0.0
+        edges = list(self._iter_edges(kid, include_seq=False))
+        if not edges:
+            return 0.0
+        edges.sort(key=lambda x: x[1].gewicht, reverse=True)
+        for _, e, _layer in edges[: max(1, int(self.plan_width))]:
+            dst = e.ziel
+            if not dst:
+                continue
+            if self._label_match_ratio(dst, goal_tokens) > 0:
+                bonus += self.plan_boost * float(e.gewicht)
+            if rel_types and e.typ in rel_types:
+                bonus += self.plan_intent_bonus * float(e.gewicht)
+        return min(0.6, bonus)
 
     def _focus_from_question(self, frage: str, seed_set: set[str]) -> List[str]:
         if not seed_set:

@@ -1,4 +1,4 @@
-{"t": "meta", "format": "memory_jsonl", "encoding": "utf-8", "umlaute": true, "created_at": "2026-02-10T22:50:31", "counts": {"nodes": 512, "edges": 257}}
+{"t": "meta", "format": "memory_jsonl", "encoding": "utf-8", "umlaute": true, "created_at": "2026-02-11T18:12:20", "counts": {"nodes": 512, "edges": 257}}
 {"t": "node", "id": "-_Übernommen_Auch", "features": ["gelernt"], "labels": ["-_Übernommen_Auch"]}
 {"t": "node", "id": "-lösung", "features": ["gelernt"], "labels": ["-lösung"]}
 {"t": "node", "id": "Aber_Relativ_Ausgeprägte", "features": ["gelernt"], "labels": ["Aber_Relativ_Ausgeprägte", "aber relativ ausgeprägte Klimaanomalie"]}
