@@ -235,6 +235,11 @@ def main() -> int:
         default="both",
         help="Ziel-Layer (default: both)",
     )
+    parser.add_argument(
+        "--augment",
+        action="store_true",
+        help="Zusätzliche Kanten (cooccur/coactive/similar/cluster) nach dem Import aufbauen",
+    )
     parser.add_argument("--limit", type=int, default=0, help="Max. Anzahl Dateien (0 = alle)")
     parser.add_argument(
         "--files",
@@ -329,6 +334,26 @@ def main() -> int:
             f"{lstats['skipped']} verworfen ==="
         )
     engine.speichere_embeddings()
+
+    if args.augment:
+        try:
+            from data_import.augment_brain_edges import run_augmentation
+
+            astats = run_augmentation(
+                semantic=args.semantic,
+                episodic=args.episodic,
+                wiki_dir=args.wiki_dir,
+            )
+            print(
+                "=== Augment: "
+                f"-removed {astats['removed']} | "
+                f"+cooccur {astats['cooccur']} | "
+                f"+coactive {astats['coactive']} | "
+                f"+similar {astats['similar']} | "
+                f"+cluster {astats['cluster']} ==="
+            )
+        except Exception as e:
+            print(f"WARN Augment fehlgeschlagen: {e}")
 
     print(
         "=== Fertig: "

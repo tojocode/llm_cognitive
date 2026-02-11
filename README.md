@@ -3,12 +3,18 @@
 ## Struktur
 ```
 mindgraph_model/
+  data_import/
+    wikipedia_to_core.py     # Wikipedia-TXT -> Memory (semantic/episodic)
+    augment_brain_edges.py   # Zusätzliche Kanten (cooccur/coactive/similar/cluster)
+    wikipedia/
   llm_core/
     engine.py        # Denk-Kern
     types.py         # Datentypen
   llm_speech/
     wernicke.py      # Verstehen / Lexikon / Import
     broca.py         # Ausgabe / LM-Hybrid
+  llm_export/
+    cytoscape_view.html
   llm_memory/
     memory_semantic.jsonl
     memory_episodic.jsonl
@@ -16,16 +22,22 @@ mindgraph_model/
     embeddings.json
     embedding_db.py
   client.py          # Minimaler CLI-Client
-  llm_train/
+  llm_think/
     think_controler.py # Think-Controller (CLI)
   cognitive_engine.py# Legacy-Wrapper
   debug_analyse/
     test_questions.py
+    run_benchmark.py
+    export_cytoscape.py
 ```
 
 ## Kurzstart
 ```
 python client.py "Warum ist der Himmel blau?"
-python llm_train/think_controler.py
+python llm_think/think_controler.py
+python data_import/wikipedia_to_core.py
+python data_import/wikipedia_to_core.py --augment
+python debug_analyse/run_benchmark.py
+python debug_analyse/export_cytoscape.py
 ```
 
