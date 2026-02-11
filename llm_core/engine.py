@@ -160,6 +160,9 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
 
         # Frage-Anker (Warum)
         self.cause_focus_boost = 0.22
+        self.question_anchor_boost = 0.12
+        self.question_anchor_rank_boost = 0.35
+        self.def_single_token_penalty = 0.85
 
         # Planning (Lookahead)
         self.plan_enabled = True
@@ -820,10 +823,15 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
         seed_set = set(base_cues.keys())
         focus_ids = [k for k, _ in sorted(cues.items(), key=lambda x: x[1], reverse=True)[:2]]
         memory_hits: List[Dict[str, object]] = []
+        question_anchors = self._anchor_from_question(frage)
+
+        for kid in question_anchors:
+            cues[kid] = max(cues.get(kid, 0.0), 0.95 + self.question_anchor_boost)
+            seed_set.add(kid)
 
         anchored: List[str] = []
         if intent == "CAUSE":
-            anchored = self._anchor_from_question(frage)
+            anchored = question_anchors
             for kid in anchored:
                 cues[kid] = max(cues.get(kid, 0.0), 0.95 + self.cause_focus_boost)
                 seed_set.add(kid)
@@ -914,10 +922,16 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
         goal_tokens = self._goal_tokens(frage)
         if self.value_gate_enabled and goal_tokens:
             scored = []
+            anchor_set = set(question_anchors)
             for kid, val in pattern:
                 v = self._value_score(kid, goal_tokens)
                 bonus = self._plan_bonus(kid, goal_tokens, intent) if self.plan_enabled else 0.0
-                scored.append((kid, val * v * (1.0 + bonus)))
+                score = val * v * (1.0 + bonus)
+                if kid in anchor_set:
+                    score *= (1.0 + self.question_anchor_rank_boost)
+                if intent == "DEF" and len(goal_tokens) >= 2 and self._best_label_token_len(kid) <= 1:
+                    score *= self.def_single_token_penalty
+                scored.append((kid, score))
             scored.sort(key=lambda x: x[1], reverse=True)
             pattern = scored
 
@@ -933,6 +947,26 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
                 if len(focus_ids) >= 2:
                     break
 
+        trace_out = sorted(self.trace, key=lambda t: t.contrib, reverse=True)[:20]
+        if question_anchors:
+            trace_srcs = {t.src for t in trace_out if getattr(t, "src", None)}
+            for anchor in question_anchors:
+                if anchor in trace_srcs:
+                    continue
+                trace_out.insert(
+                    0,
+                    TraceItem(
+                        tick=0,
+                        src=anchor,
+                        dst=anchor,
+                        typ="focus",
+                        contrib=1.0,
+                        layer="anchor",
+                    ),
+                )
+                break
+            trace_out = trace_out[:20]
+
         return {
             "frage": frage,
             "intent": intent,
@@ -940,7 +974,7 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
             "denkmuster": pattern,
             "focus": focus_ids,
             "memories": memory_hits,
-            "trace": sorted(self.trace, key=lambda t: t.contrib, reverse=True)[:20],
+            "trace": trace_out,
             "timestamp": datetime.now().isoformat(),
         }
 
@@ -1181,6 +1215,20 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
                     used.add(cid)
 
         return focus[:2]
+
+    def _best_label_token_len(self, kid: str) -> int:
+        if not kid:
+            return 1
+        k = self.konzepte.get(kid)
+        labels = (k.labels if k and k.labels else [kid])
+        best = 0
+        for lab in labels:
+            norm = self._norm_label(lab)
+            if not norm:
+                continue
+            toks = [t for t in norm.split() if t]
+            best = max(best, len(toks))
+        return best if best > 0 else 1
 
     # -------------------------
     # Lernen (Hebb + Anti-Hebb + Decay)

@@ -45,4 +45,5 @@ python debug_analyse/export_cytoscape.py
 - Warum-Fragen nutzen ein stärkeres Ursache-Gating und eine feste Fokus-Ankerung auf den Frageterm.
 - Junk-Knoten werden in Frage-Cues und Antwortmustern gefiltert.
 - Warum-Fragen ohne passende Anker vermeiden Embedding-Antworten (lieber „unbekannt“ als Drift).
+- `trace` enthält einen expliziten Fokus-Anker (`layer=anchor`) für besseres Debugging.
 

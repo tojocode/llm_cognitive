@@ -264,6 +264,7 @@ class WernickeMixin:
     def _cue_set(self, frage: str) -> Dict[str, float]:
         tokens = self._tokenize(frage)
         tokset = set(tokens)
+        token_text = " " + " ".join(tokens) + " " if tokens else " "
         stop = {
             "der","die","das","ein","eine","einen","einem","einer","ist","sind",
             "und","oder","zu","im","in","am","an","von","mit","für","für","den","dem","des",
@@ -291,7 +292,11 @@ class WernickeMixin:
                         cues[cid] = max(cues.get(cid, 0.0), 0.93)
                         self._ensure_label(cid, alias)
                 else:
-                    if all(p in tokset for p in parts):
+                    phrase = " ".join(parts)
+                    if f" {phrase} " in token_text:
+                        cues[cid] = max(cues.get(cid, 0.0), 0.97)
+                        self._ensure_label(cid, alias)
+                    elif all(p in tokset for p in parts):
                         cues[cid] = max(cues.get(cid, 0.0), 0.90)
                         self._ensure_label(cid, alias)
 
