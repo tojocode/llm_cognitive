@@ -162,7 +162,9 @@ def _html_template(elements_json: str) -> str:
       <label>Suche <input id="search" type="text" placeholder="Knotenlabel..."></label>
       <label><input id="toggle-sem" type="checkbox" checked> Semantik</label>
       <label><input id="toggle-epi" type="checkbox" checked> Episodisch</label>
-      <label>Min Weight <input id="weight" type="range" min="0" max="1" step="0.05" value="0"></label>
+      <label>Min Weight
+        <input id="weight" type="range" min="0" max="1" step="0.05" value="0">
+      </label>
       <label><input id="toggle-community" type="checkbox" checked> Community-Farben</label>
       <button id="btn-cluster">Cluster</button>
       <button id="btn-reset">Reset Fokus</button>

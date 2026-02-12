@@ -1,11 +1,12 @@
 # -*- coding: utf-8 -*-
+# ruff: noqa: I001
 
 import argparse
 import re
 import sys
 from collections import Counter, defaultdict
 from pathlib import Path
-from typing import Dict, Iterable, List, Set, Tuple
+from typing import Dict, Iterable, List, Tuple
 
 ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
@@ -55,7 +56,10 @@ def _remove_augmented(engine: KognitivesModell) -> int:
     return removed + len(cluster_nodes)
 
 
-def _alias_index(engine: KognitivesModell, max_tokens: int = 3) -> Dict[str, List[Tuple[List[str], str]]]:
+def _alias_index(
+    engine: KognitivesModell,
+    max_tokens: int = 3,
+) -> Dict[str, List[Tuple[List[str], str]]]:
     idx: Dict[str, List[Tuple[List[str], str]]] = defaultdict(list)
     for alias, cid in engine.lexikon.items():
         if not alias or len(alias) < 3:

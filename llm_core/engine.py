@@ -929,7 +929,11 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
                 score = val * v * (1.0 + bonus)
                 if kid in anchor_set:
                     score *= (1.0 + self.question_anchor_rank_boost)
-                if intent == "DEF" and len(goal_tokens) >= 2 and self._best_label_token_len(kid) <= 1:
+                if (
+                    intent == "DEF"
+                    and len(goal_tokens) >= 2
+                    and self._best_label_token_len(kid) <= 1
+                ):
                     score *= self.def_single_token_penalty
                 scored.append((kid, score))
             scored.sort(key=lambda x: x[1], reverse=True)
@@ -1162,7 +1166,12 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
         if not focus and self.lexikon:
             for tok in tokens:
                 cid = self.lexikon.get(tok)
-                if cid and cid in seed_set and cid not in used and not self._is_junk_concept_id(cid):
+                if (
+                    cid
+                    and cid in seed_set
+                    and cid not in used
+                    and not self._is_junk_concept_id(cid)
+                ):
                     focus.append(cid)
                     used.add(cid)
                     continue
@@ -1170,7 +1179,12 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
                     if alt == tok:
                         continue
                     cid = self.lexikon.get(alt)
-                    if cid and cid in seed_set and cid not in used and not self._is_junk_concept_id(cid):
+                    if (
+                        cid
+                        and cid in seed_set
+                        and cid not in used
+                        and not self._is_junk_concept_id(cid)
+                    ):
                         focus.append(cid)
                         used.add(cid)
                         break
