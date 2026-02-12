@@ -1165,6 +1165,15 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
                 if cid and cid in seed_set and cid not in used and not self._is_junk_concept_id(cid):
                     focus.append(cid)
                     used.add(cid)
+                    continue
+                for alt in self._token_variants(tok):
+                    if alt == tok:
+                        continue
+                    cid = self.lexikon.get(alt)
+                    if cid and cid in seed_set and cid not in used and not self._is_junk_concept_id(cid):
+                        focus.append(cid)
+                        used.add(cid)
+                        break
 
         return focus[:2]
 
@@ -1213,6 +1222,15 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
                 if cid and cid not in used and not self._is_junk_concept_id(cid):
                     focus.append(cid)
                     used.add(cid)
+                    continue
+                for alt in self._token_variants(tok):
+                    if alt == tok:
+                        continue
+                    cid = self.lexikon.get(alt)
+                    if cid and cid not in used and not self._is_junk_concept_id(cid):
+                        focus.append(cid)
+                        used.add(cid)
+                        break
 
         return focus[:2]
 

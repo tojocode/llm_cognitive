@@ -46,4 +46,6 @@ python debug_analyse/export_cytoscape.py
 - Junk-Knoten werden in Frage-Cues und Antwortmustern gefiltert.
 - Warum-Fragen ohne passende Anker vermeiden Embedding-Antworten (lieber „unbekannt“ als Drift).
 - `trace` enthält einen expliziten Fokus-Anker (`layer=anchor`) für besseres Debugging.
+- Der Benchmark (`debug_analyse/benchmark_questions.json`) enthält jetzt Fragetypen: Definition, Warum, Wie, Vergleich, Abgrenzung, Ursache/Wirkung, Mehrhop.
+- Query-Matching nutzt einen leichten Plural/Singular-Fallback (z. B. `Vulkane` -> `Vulkan`) in Cues und Fokus-Ankerung.
 

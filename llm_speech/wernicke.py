@@ -210,6 +210,20 @@ class WernickeMixin:
         txt = re.sub(r"\s+", " ", txt).strip()
         return txt.split() if txt else []
 
+    def _token_variants(self, token: str) -> List[str]:
+        tok = (token or "").strip().lower()
+        if not tok:
+            return []
+        out = [tok]
+        if len(tok) >= 5:
+            # very small German plural/inflection fallback for query matching
+            for suf in ("en", "er", "e", "n", "s"):
+                if tok.endswith(suf) and len(tok) - len(suf) >= 4:
+                    base = tok[:-len(suf)]
+                    if base and base not in out:
+                        out.append(base)
+        return out
+
     def _normalize_import_text(self, text: str) -> str:
         if not text:
             return ""
@@ -275,6 +289,9 @@ class WernickeMixin:
             "außerdem","ausserdem","hierbei","dabei","somit","jedoch"
         }
         tokset = {t for t in tokset if t not in stop}
+        expanded_tokset = set()
+        for t in tokset:
+            expanded_tokset.update(self._token_variants(t))
 
         cues: Dict[str, float] = {}
 
@@ -288,7 +305,7 @@ class WernickeMixin:
                 if not parts:
                     continue
                 if len(parts) == 1:
-                    if parts[0] in tokset:
+                    if parts[0] in expanded_tokset:
                         cues[cid] = max(cues.get(cid, 0.0), 0.93)
                         self._ensure_label(cid, alias)
                 else:
@@ -296,20 +313,20 @@ class WernickeMixin:
                     if f" {phrase} " in token_text:
                         cues[cid] = max(cues.get(cid, 0.0), 0.97)
                         self._ensure_label(cid, alias)
-                    elif all(p in tokset for p in parts):
+                    elif all(p in expanded_tokset for p in parts):
                         cues[cid] = max(cues.get(cid, 0.0), 0.90)
                         self._ensure_label(cid, alias)
 
         for kid, k in self.konzepte.items():
             kname = kid.lower()
 
-            if kname in tokset:
+            if kname in expanded_tokset:
                 cues[kid] = max(cues.get(kid, 0.0), 0.95)
                 continue
 
             if "_" in kname:
                 parts = [p for p in kname.split("_") if p]
-                if parts and all(p in tokset for p in parts):
+                if parts and all(p in expanded_tokset for p in parts):
                     cues[kid] = max(cues.get(kid, 0.0), 0.90)
 
             for lab in (k.labels or []):
@@ -317,14 +334,14 @@ class WernickeMixin:
                 if not lab_norm:
                     continue
                 lab_tokens = [t for t in lab_norm.split(" ") if t]
-                if len(lab_tokens) == 1 and lab_tokens[0] in tokset:
+                if len(lab_tokens) == 1 and lab_tokens[0] in expanded_tokset:
                     cues[kid] = max(cues.get(kid, 0.0), 0.92)
-                elif lab_tokens and all(t in tokset for t in lab_tokens):
+                elif lab_tokens and all(t in expanded_tokset for t in lab_tokens):
                     cues[kid] = max(cues.get(kid, 0.0), 0.90)
 
             for ft in k.semantische_features:
                 ftl = ft.lower()
-                if ftl in tokset:
+                if ftl in expanded_tokset:
                     cues[kid] = max(cues.get(kid, 0.0), 0.75)
 
         return cues
