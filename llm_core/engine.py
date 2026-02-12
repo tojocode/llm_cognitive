@@ -163,6 +163,8 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
         self.question_anchor_boost = 0.12
         self.question_anchor_rank_boost = 0.35
         self.def_single_token_penalty = 0.85
+        self.answer_min_relevance = 0.18
+        self.answer_min_relevance_cause = 0.26
 
         # Planning (Lookahead)
         self.plan_enabled = True
@@ -812,6 +814,7 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
                 "unknown": "",
                 "denkmuster": [],
                 "focus": [],
+                "anchors": [],
                 "memories": [],
                 "trace": [],
                 "smalltalk": "greeting",
@@ -874,6 +877,7 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
                 "unknown": unknown,
                 "denkmuster": [],
                 "focus": focus_ids,
+                "anchors": question_anchors,
                 "memories": memory_hits,
                 "trace": [],
                 "timestamp": datetime.now().isoformat(),
@@ -977,10 +981,42 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
             "unknown": "",
             "denkmuster": pattern,
             "focus": focus_ids,
+            "anchors": question_anchors,
             "memories": memory_hits,
             "trace": trace_out,
             "timestamp": datetime.now().isoformat(),
         }
+
+    def _is_answer_confident(self, frage: str, res: Dict) -> bool:
+        pattern = res.get("denkmuster") or []
+        if not pattern:
+            return False
+        goal_tokens = self._goal_tokens(frage)
+        if not goal_tokens:
+            return True
+        intent = str(res.get("intent") or "OTHER")
+        focus_ids = res.get("focus") or []
+        anchors = res.get("anchors") or []
+
+        top_ids = [kid for kid, _ in pattern[:5]]
+        rel_top = 0.0
+        for kid in top_ids:
+            rel_top = max(rel_top, self._label_match_ratio(kid, goal_tokens))
+
+        rel_focus = 0.0
+        for kid in focus_ids:
+            rel_focus = max(rel_focus, self._label_match_ratio(str(kid), goal_tokens))
+
+        rel_anchor = 0.0
+        for kid in anchors:
+            rel_anchor = max(rel_anchor, self._label_match_ratio(str(kid), goal_tokens))
+
+        if intent == "CAUSE":
+            if not anchors and rel_top < self.answer_min_relevance_cause:
+                return False
+            return max(rel_top, rel_focus, rel_anchor) >= self.answer_min_relevance_cause
+
+        return max(rel_top, rel_focus, rel_anchor) >= self.answer_min_relevance
 
     def antworte(self, frage: str, auto_lernen: bool = True, use_lm: Optional[bool] = None) -> str:
         if self._is_greeting(frage):
@@ -992,6 +1028,9 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
         memory_hits = res.get("memories") or []
 
         if not pattern:
+            return "Das weiß ich nicht. Bitte stelle mir eine neue Frage."
+
+        if not self._is_answer_confident(frage, res):
             return "Das weiß ich nicht. Bitte stelle mir eine neue Frage."
 
         if auto_lernen:
