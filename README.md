@@ -49,4 +49,6 @@ python debug_analyse/export_cytoscape.py
 - Der Benchmark (`debug_analyse/benchmark_questions.json`) enthält jetzt Fragetypen: Definition, Warum, Wie, Vergleich, Abgrenzung, Ursache/Wirkung, Mehrhop.
 - Query-Matching nutzt einen leichten Plural/Singular-Fallback (z. B. `Vulkane` -> `Vulkan`) in Cues und Fokus-Ankerung.
 - Antworten nutzen ein Relevanz-Gate: bei zu geringer Fragepassung wird sauber mit "Das weiß ich nicht..." abgebrochen statt Schrottantwort.
+- Import extrahiert Farb-Relationen (`type=farbe`) aus Formulierungen wie "... Färbung ... ist ...", kontextualisiert über den Dateitopic-Knoten.
+- `PROPS` priorisiert Eigenschaft/Farbe stärker als reine `ist`-Kanten, und blendet Rausch-Extras in der Ausgabe aus.
 

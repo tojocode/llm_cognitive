@@ -304,7 +304,16 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
             return "WHERE"
         if f.startswith(("woraus", "woraus besteht", "woraus setzt", "woraus besteht")):
             return "PARTS"
-        if f.startswith(("welche eigenschaften", "welche merkmale", "welche eigenschaft")):
+        if f.startswith(
+            (
+                "welche eigenschaften",
+                "welche merkmale",
+                "welche eigenschaft",
+                "welche farbe",
+                "welche färbung",
+                "welche faerbung",
+            )
+        ):
             return "PROPS"
         if f.startswith("wie"):
             return "HOW"
@@ -340,7 +349,7 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
         elif intent == "PARTS":
             preferred = {"besteht_aus", "enthält", "hat", "teil_von"}
         elif intent == "PROPS":
-            preferred = {"eigenschaft", "eigenschaft_von", "hat", "ist"}
+            preferred = {"eigenschaft", "eigenschaft_von", "hat", "ist", "farbe"}
         elif intent == "HOW":
             preferred = {
                 "prozess",
@@ -355,6 +364,14 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
             preferred = set()
         if intent == "CAUSE":
             return self.cause_gate_match if t in preferred else self.cause_gate_mismatch
+        if intent == "PROPS":
+            if t in {"farbe", "eigenschaft", "eigenschaft_von"}:
+                return max(self.gate_match, 1.35)
+            if t == "hat":
+                return max(self.gate_match, 1.2)
+            if t == "ist":
+                return min(self.gate_mismatch, 0.55)
+            return self.gate_mismatch
         return self.gate_match if t in preferred else self.gate_mismatch
 
     # -------------------------
@@ -1118,7 +1135,7 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
         if intent == "WHERE":
             return {"lebt_in", "sichtbar_in", "gehört_zu", "gehört_zu", "gehoert_zu"}
         if intent == "PROPS":
-            return {"eigenschaft", "eigenschaft_von", "zeigt", "hat"}
+            return {"eigenschaft", "eigenschaft_von", "zeigt", "hat", "farbe"}
         if intent == "HOW":
             return {"prozess", "verursacht", "durch"}
         return set()

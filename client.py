@@ -8,6 +8,11 @@ import sys
 
 from llm_core.engine import KognitivesModell
 
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+if hasattr(sys.stderr, "reconfigure"):
+    sys.stderr.reconfigure(encoding="utf-8", errors="replace")
+
 
 def _read_stdin() -> str:
     if sys.stdin.isatty():

@@ -161,6 +161,7 @@ class BrocaMixin:
             return "Ich weiß das nicht."
         focus = focus_ids or [k for k, _ in denkmuster[:2]]
         context = [k for k, _ in denkmuster[2:8]]
+        focus_edges_for_intent = self._rank_focus_edges(focus, intent=intent)
         primary_memory = self._best_memory_text(memory_hits or [], focus)
         intent_memory = self._best_intent_sentence(memory_hits or [], focus, intent)
         wiki_snip = self._wiki_snippet_for_focus(focus, intent=intent)
@@ -170,7 +171,10 @@ class BrocaMixin:
             primary_memory = wiki_snip
         if primary_memory:
             if intent in {"CAUSE", "HOW", "WHERE", "PARTS", "PROPS", "DEF"}:
-                return primary_memory
+                if intent == "PROPS" and focus_edges_for_intent:
+                    primary_memory = ""
+                else:
+                    return primary_memory
 
         if use_lm:
             lm_text = self._lm_generate(
@@ -189,7 +193,7 @@ class BrocaMixin:
         sentences: List[str] = []
         seen = set()
         used_ids = set()
-        focus_edges = self._rank_focus_edges(focus, intent=intent)
+        focus_edges = focus_edges_for_intent
         if focus_edges:
             ranked = focus_edges
         else:
@@ -224,7 +228,7 @@ class BrocaMixin:
 
         extra = []
         focus_set = set(focus)
-        if intent == "CAUSE":
+        if intent in {"CAUSE", "PROPS"}:
             extra = []
         elif focus_set:
             for k in context:

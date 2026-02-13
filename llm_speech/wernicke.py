@@ -413,7 +413,7 @@ class WernickeMixin:
             len(v) for v in self.episodic_edges.values()
         )
 
-        extracted = self._extract_relations_from_text(text)
+        extracted = self._extract_relations_from_text(text, source=source)
 
         nodes_added = 0
         edges_added = 0
@@ -502,8 +502,14 @@ class WernickeMixin:
             "edges_added": edges_added,
         }
 
-    def _extract_relations_from_text(self, text: str) -> List[Dict[str, object]]:
+    def _extract_relations_from_text(self, text: str, source: str = "") -> List[Dict[str, object]]:
         txt = self._nfc(text)
+        source_stem = (source or "").rsplit(".", 1)[0]
+        source_stem = re.sub(r"^\d+_", "", source_stem).strip().lower()
+        doc_topic = ""
+        if source_stem:
+            topic_phrase = source_stem.replace("_", " ")
+            doc_topic = self._phrase_to_concept_id(topic_phrase)
 
         parts = re.split(r"[\n\r]+", txt)
         sentences: List[str] = []
@@ -660,6 +666,35 @@ class WernickeMixin:
             if len(s) < 5:
                 continue
             s0 = s.strip("•*- \t\"'")
+
+            color_rx = re.compile(
+                r"^(?:Die|Der|Das)\s+.+?(?:färbung|faerbung|farbe).+?\s+ist\s+(.+?)\.?$",
+                re.IGNORECASE,
+            )
+            m_color = color_rx.match(s0)
+            if m_color and doc_topic:
+                color_raw = m_color.group(1).strip()
+                color_raw = color_raw.split(",", 1)[0].strip()
+                colors = self._split_object_phrases(color_raw, split_conjunctions=True)
+                for j, color in enumerate(colors):
+                    color = color.strip()
+                    if not color:
+                        continue
+                    color = re.sub(r"\s+oder\s+", " ", color, flags=re.IGNORECASE).strip()
+                    dst = self._phrase_to_concept_id(color)
+                    if not dst or self._is_junk_concept_id(dst):
+                        continue
+                    rels.append(
+                        {
+                            "src": doc_topic,
+                            "dst": dst,
+                            "type": "farbe",
+                            "w": max(0.01, min(0.88 - 0.04 * j, 0.99)),
+                            "src_label": self._label_for_output(doc_topic),
+                            "dst_label": self._nfc(color),
+                        }
+                    )
+
             live_rx = re.compile(
                 r"^(.+?)\s+ist\s+ein\s+in\s+(.+?)\s+lebend(?:e[rn]?|)\b",
                 re.IGNORECASE,
