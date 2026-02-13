@@ -165,6 +165,7 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
         self.def_single_token_penalty = 0.85
         self.answer_min_relevance = 0.18
         self.answer_min_relevance_cause = 0.26
+        self.value_generic_penalty = 0.28
 
         # Planning (Lookahead)
         self.plan_enabled = True
@@ -300,6 +301,13 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
         f = frage.strip().lower()
         if f.startswith(("warum", "weshalb", "wieso", "wodurch", "womit")):
             return "CAUSE"
+        if (
+            f.startswith("worin unterscheidet sich")
+            or "unterschied zwischen" in f
+            or f.startswith("was ist der unterschied")
+            or "vergleich" in f
+        ):
+            return "COMPARE"
         if f.startswith(("wo ", "wohin", "woher")):
             return "WHERE"
         if f.startswith(("woraus", "woraus besteht", "woraus setzt", "woraus besteht")):
@@ -359,6 +367,16 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
                 "von",
                 "schritt",
                 "lebt_in",
+            }
+        elif intent == "COMPARE":
+            preferred = {
+                "ist",
+                "klasse",
+                "gehört_zu",
+                "teil_von",
+                "eigenschaft",
+                "farbe",
+                "hat",
             }
         else:
             preferred = set()
@@ -1098,6 +1116,7 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
             "woraus", "womit", "wodurch", "wo", "wann", "wer", "wen", "wem", "wessen",
             "welche", "welcher", "welches", "welchen", "welchem",
             "außerdem", "ausserdem", "hierbei", "dabei", "somit", "jedoch",
+            "sich",
         }
         return {t for t in tokens if t not in stop}
 
@@ -1123,7 +1142,38 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
         value = 1.0 + self.value_goal_boost * best
         if self._degree(kid) <= 1:
             value *= (1.0 - self.value_low_degree_penalty)
+        if self._is_generic_concept(kid):
+            value *= (1.0 - self.value_generic_penalty)
         return max(0.5, min(1.8, value))
+
+    def _is_generic_concept(self, kid: str) -> bool:
+        generic = {
+            "system",
+            "wissenschaft",
+            "begriff",
+            "prinzip",
+            "prozess",
+            "modell",
+            "struktur",
+            "theorie",
+            "methode",
+            "form",
+            "art",
+        }
+        if not kid:
+            return False
+        k = self.konzepte.get(kid)
+        labels = (k.labels if k and k.labels else [kid])
+        for lab in labels:
+            norm = self._norm_label(lab)
+            if not norm:
+                continue
+            toks = [t for t in norm.split() if t]
+            if len(toks) != 1:
+                return False
+            if toks[0] not in generic:
+                return False
+        return True
 
     def _intent_rel_types(self, intent: str) -> set[str]:
         if intent == "DEF":
@@ -1138,6 +1188,8 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
             return {"eigenschaft", "eigenschaft_von", "zeigt", "hat", "farbe"}
         if intent == "HOW":
             return {"prozess", "verursacht", "durch"}
+        if intent == "COMPARE":
+            return {"ist", "klasse", "gehört_zu", "teil_von", "eigenschaft", "hat"}
         return set()
 
     def _label_match_ratio(self, kid: str, goal_tokens: set[str]) -> float:
@@ -1190,6 +1242,7 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
             "woraus", "womit", "wodurch", "wo", "wann", "wer", "wen", "wem", "wessen",
             "welche", "welcher", "welches", "welchen", "welchem",
             "außerdem", "ausserdem", "hierbei", "dabei", "somit", "jedoch",
+            "sich",
         }
         tokens = [t for t in tokens if t not in stop]
         if not tokens:
@@ -1259,6 +1312,7 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
             "woraus", "womit", "wodurch", "wo", "wann", "wer", "wen", "wem", "wessen",
             "welche", "welcher", "welches", "welchen", "welchem",
             "außerdem", "ausserdem", "hierbei", "dabei", "somit", "jedoch",
+            "sich",
         }
         tokens = [t for t in tokens if t not in stop]
         if not tokens:

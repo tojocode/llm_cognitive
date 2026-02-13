@@ -228,7 +228,7 @@ class BrocaMixin:
 
         extra = []
         focus_set = set(focus)
-        if intent in {"CAUSE", "PROPS"}:
+        if intent in {"CAUSE", "PROPS", "COMPARE"}:
             extra = []
         elif focus_set:
             for k in context:
@@ -328,6 +328,8 @@ class BrocaMixin:
             return ["lebt in", "kommt in", "ist in", "vorkommt in"]
         if intent == "PROPS":
             return ["eigenschaft", "zeichnet sich", "hat", "weist", "charakteristisch"]
+        if intent == "COMPARE":
+            return ["unterschied", "im unterschied", "im gegensatz", "während"]
         return []
 
     def _select_sentence_by_keywords(self, text: str, keywords: List[str]) -> str:

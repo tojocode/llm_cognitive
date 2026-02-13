@@ -51,4 +51,7 @@ python debug_analyse/export_cytoscape.py
 - Antworten nutzen ein Relevanz-Gate: bei zu geringer Fragepassung wird sauber mit "Das weiß ich nicht..." abgebrochen statt Schrottantwort.
 - Import extrahiert Farb-Relationen (`type=farbe`) aus Formulierungen wie "... Färbung ... ist ...", kontextualisiert über den Dateitopic-Knoten.
 - `PROPS` priorisiert Eigenschaft/Farbe stärker als reine `ist`-Kanten, und blendet Rausch-Extras in der Ausgabe aus.
+- Import hat robustere Subjektauflösung (Pronomen/Alternativen wie `... oder ...`) und zusätzliche Muster (`gilt als`, `zählt zu`, `befasst sich mit`, `Zu den ... gehören ...`, `wird ... genannt`).
+- Vergleichsfragen werden als eigener Intent (`COMPARE`) behandelt; generische Knoten (`System`, `Wissenschaft` usw.) werden im Ranking stärker abgewertet.
+- Zusätzliche Junk-Filter reduzieren Rauschknoten wie `Sich`, `Wurde`, `Nicht`.
 

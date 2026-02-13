@@ -49,6 +49,9 @@ JUNK_IDS = {
     "sind",
     "wird",
     "werden",
+    "wurde",
+    "sich",
+    "nicht",
     "verb",
 }
 JUNK_TOKENS = {
@@ -80,6 +83,9 @@ JUNK_TOKENS = {
     "manche",
     "einige",
     "viele",
+    "nicht",
+    "sich",
+    "wurde",
     "mehr",
     "weniger",
     "andere",
@@ -108,6 +114,7 @@ VERB_TOKENS = {
     "war",
     "wird",
     "werden",
+    "wurde",
     "hat",
     "haben",
     "behandelt",
@@ -517,7 +524,18 @@ class WernickeMixin:
             p = p.strip()
             if not p:
                 continue
-            sentences.extend([s.strip() for s in re.split(r"(?<=[\.!\?])\s+", p) if s.strip()])
+            raw_sent = [s.strip() for s in re.split(r"(?<=[\.!\?])\s+", p) if s.strip()]
+            merged: List[str] = []
+            for s in raw_sent:
+                low = s.lower()
+                if merged and (
+                    re.match(r"^(und|oder|sowie)\b", low)
+                    or re.match(r"^(?:und\s+)?\d{1,4}\.\s*", low)
+                ):
+                    merged[-1] = merged[-1].rstrip() + " " + s
+                    continue
+                merged.append(s)
+            sentences.extend(merged)
 
         rels: List[Dict[str, object]] = []
 
@@ -607,15 +625,33 @@ class WernickeMixin:
                 False,
             ),
             (
+                re.compile(r"^(.+?)\s+sind\s+(.+?)\.?$", re.IGNORECASE),
+                "ist",
+                0.80,
+                False,
+            ),
+            (
                 re.compile(r"^(.+?)\s+gehört\s+zu\s+(.+?)\.?$", re.IGNORECASE),
                 "gehört_zu",
                 0.93,
                 False,
             ),
             (
+                re.compile(r"^(.+?)\s+z[aä]hlt\s+zu\s+(.+?)\.?$", re.IGNORECASE),
+                "gehört_zu",
+                0.88,
+                False,
+            ),
+            (
                 re.compile(r"^(.+?)\s+hat\s+(.+?)\.?$", re.IGNORECASE),
                 "hat",
                 0.86,
+                True,
+            ),
+            (
+                re.compile(r"^(.+?)\s+befasst\s+sich\s+mit\s+(.+?)\.?$", re.IGNORECASE),
+                "enthält",
+                0.82,
                 True,
             ),
             (
@@ -649,6 +685,12 @@ class WernickeMixin:
                 True,
             ),
             (
+                re.compile(r"^(.+?)\s+gilt\s+als\s+(.+?)\.?$", re.IGNORECASE),
+                "ist",
+                0.88,
+                False,
+            ),
+            (
                 re.compile(r"^(.+?)\s+lebt\s+in\s+(.+?)\.?$", re.IGNORECASE),
                 "lebt_in",
                 0.83,
@@ -666,6 +708,25 @@ class WernickeMixin:
             if len(s) < 5:
                 continue
             s0 = s.strip("•*- \t\"'")
+
+            group_rx = re.compile(r"^Zu\s+den\s+.+?\s+geh[oö]ren\s+(.+?)\.?$", re.IGNORECASE)
+            m_group = group_rx.match(s0)
+            if m_group and doc_topic:
+                objs = self._split_object_phrases(m_group.group(1), split_conjunctions=True)
+                for j, o in enumerate(objs):
+                    dst = self._phrase_to_concept_id(o)
+                    if not dst or self._is_junk_concept_id(dst) or dst == doc_topic:
+                        continue
+                    rels.append(
+                        {
+                            "src": doc_topic,
+                            "dst": dst,
+                            "type": "enthält",
+                            "w": max(0.01, min(0.78 - 0.03 * j, 0.99)),
+                            "src_label": self._label_for_output(doc_topic),
+                            "dst_label": self._nfc(o).strip(),
+                        }
+                    )
 
             color_rx = re.compile(
                 r"^(?:Die|Der|Das)\s+.+?(?:färbung|faerbung|farbe).+?\s+ist\s+(.+?)\.?$",
@@ -694,6 +755,24 @@ class WernickeMixin:
                             "dst_label": self._nfc(color),
                         }
                     )
+
+            named_rx = re.compile(r"^.+?\bwird\s+(.+?)\s+genannt\.?$", re.IGNORECASE)
+            m_named = named_rx.match(s0)
+            if m_named and doc_topic:
+                obj = m_named.group(1).strip()
+                if len(obj) <= 80:
+                    dst = self._phrase_to_concept_id(obj)
+                    if dst and not self._is_junk_concept_id(dst) and dst != doc_topic:
+                        rels.append(
+                            {
+                                "src": doc_topic,
+                                "dst": dst,
+                                "type": "ist",
+                                "w": 0.78,
+                                "src_label": self._label_for_output(doc_topic),
+                                "dst_label": self._nfc(obj).strip(),
+                            }
+                        )
 
             live_rx = re.compile(
                 r"^(.+?)\s+ist\s+ein\s+in\s+(.+?)\s+lebend(?:e[rn]?|)\b",
@@ -728,7 +807,7 @@ class WernickeMixin:
                 subj_raw = m.group(1)
                 obj_raw = m.group(2)
 
-                src = self._phrase_to_concept_id(subj_raw)
+                src, src_label = self._resolve_subject(subj_raw, doc_topic)
                 objs = self._split_object_phrases(obj_raw, split_conjunctions=split_conj)
 
                 for j, o in enumerate(objs):
@@ -747,12 +826,59 @@ class WernickeMixin:
                         "dst": dst,
                         "type": self._canon_type(typ),
                         "w": max(0.01, min(w0 - 0.02 * j, 0.99)),
-                        "src_label": self._nfc(subj_raw).strip(),
+                        "src_label": src_label,
                         "dst_label": self._nfc(o).strip(),
                     })
                 break
 
         return rels
+
+    def _resolve_subject(self, subj_raw: str, doc_topic: str) -> tuple[str, str]:
+        s = self._nfc(subj_raw).strip()
+        if not s:
+            return "", ""
+
+        pronouns = {"sie", "er", "es", "dies", "diese", "dieser", "dieses"}
+        s_norm = self._norm_label(s)
+        if s_norm in pronouns and doc_topic:
+            return doc_topic, self._label_for_output(doc_topic)
+
+        s_clean = s.split(",", 1)[0].strip()
+        s_clean = re.split(r"\s+oder\s+", s_clean, maxsplit=1, flags=re.IGNORECASE)[0].strip()
+        s_clean = re.split(r"\s+sowie\s+", s_clean, maxsplit=1, flags=re.IGNORECASE)[0].strip()
+        s_head = self._subject_head_phrase(s_clean)
+        src = self._phrase_to_concept_id(s_head or s_clean)
+        if not src and doc_topic and s_norm in pronouns:
+            return doc_topic, self._label_for_output(doc_topic)
+        label = self._nfc(s_head or s_clean or s).strip()
+        return src, label
+
+    def _subject_head_phrase(self, subj: str) -> str:
+        if not subj:
+            return ""
+        p = self._nfc(subj)
+        p = re.sub(r"\([^)]*\)", " ", p)
+        p = re.sub(r"[\"'“”„]", " ", p)
+        p = re.sub(r"\s+", " ", p).strip()
+        if not p:
+            return ""
+
+        p_low = p.lower()
+        for a in ARTICLES:
+            if p_low.startswith(a):
+                p = p[len(a):].strip()
+                break
+
+        if not p:
+            return ""
+
+        nouns = re.findall(r"[A-ZÄÖÜ][a-zäöüß\-]+", p)
+        if nouns:
+            return nouns[0]
+
+        tok = p.split(" ", 1)[0].strip()
+        tok = re.sub(r"[^\wäöüß\-]+", "", tok, flags=re.IGNORECASE)
+        return tok
 
     def _phrase_to_concept_id(self, phrase: str) -> str:
         p = self._nfc(phrase)
