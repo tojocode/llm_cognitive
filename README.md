@@ -25,6 +25,7 @@ mindgraph_model/
   llm_think/
     think_controler.py # Think-Controller (CLI)
   cognitive_engine.py# Legacy-Wrapper
+  architecture.md   # Systemarchitektur und Laufzeitfluss
   debug_analyse/
     test_questions.py
     run_benchmark.py
@@ -71,3 +72,5 @@ python debug_analyse/export_cytoscape.py
 - Schema-Layer ist aktiv: Relationstypen werden auf Kernschemata (`is_a`, `part_of`, `causes`, `has_property`, ...) gemappt und intent-sensitiv gegatet.
 - Generic-Gating reduziert zu generische Antwortknoten; Fokus-nahe generische Knoten bleiben bei starker Ankerung weiterhin möglich.
 - Erweiterter Qualitäts-Benchmark: `debug_analyse/benchmark_quality_extended.json` prüft zusätzlich Unknown-Precision und Leakage-Freiheit (`forbid`-Labels).
+
+- Vollstaendige Architektur-Doku: `architecture.md` (Komponenten, Datenmodell, Laufzeitpipeline, Lernen/Konsolidierung).
