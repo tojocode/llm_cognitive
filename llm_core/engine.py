@@ -173,10 +173,53 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
         self.plan_boost = 0.35
         self.plan_intent_bonus = 0.15
 
+        # Cluster-First Memory (hierarchische Themenräume)
+        self.cluster_mode_enabled = True
+        self.cluster_lp_iters = 8
+        self.cluster_min_size = 4
+        self.cluster_core_edge_min_w = 0.14
+        self.cluster_aug_edge_min_w = 0.28
+        self.cluster_weak_types = {"cooccur", "coactive", "similar", "cluster_of"}
+        self.cluster_bridge_types = {
+            "ist",
+            "hat",
+            "teil_von",
+            "klasse",
+            "gehört_zu",
+            "gehört_zu",
+            "besteht_aus",
+            "enthält",
+            "enthält",
+            "verursacht",
+            "verursacht_durch",
+            "lebt_in",
+            "farbe",
+            "eigenschaft",
+        }
+        self.cluster_bridge_min_w = 0.26
+        self.cluster_bridge_max_per_node = 2
+        self.cluster_bridge_strict = True
+        self.cluster_local_bias = 1.08
+        self.cluster_cross_bias = 0.72
+        self.cluster_cue_cross_penalty = 0.86
+        self.cluster_inhib_competitor = 0.24
+        self.cluster_allow_top = 1
+
+        self.cluster_of: Dict[str, str] = {}
+        self.cluster_members: Dict[str, set[str]] = {}
+        self.cluster_bridges: Dict[str, set[str]] = {}
+        self.allowed_bridge_edges: set[tuple[str, str, str]] = set()
+        self.active_clusters: set[str] = set()
+        self._cluster_intent = "OTHER"
+
         if self.semantic_datei:
             self.modell_laden(self.semantic_datei, episodic=False)
         if self.episodic_datei:
             self.modell_laden(self.episodic_datei, episodic=True)
+
+        self._rebuild_cluster_index()
+        self._rebuild_cluster_bridges()
+
         # Lexikon wird in _init_wernicke geladen
         self._init_embeddings(embed_db_path, embed_dim)
 
@@ -203,6 +246,313 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
         if os.path.isabs(p):
             return p
         return os.path.join(self.base_dir, p)
+
+    def _cluster_for(self, kid: str) -> str:
+        if not kid:
+            return ""
+        c = self.cluster_of.get(kid, "")
+        if c:
+            return c
+        k = self.konzepte.get(kid)
+        if not k:
+            return ""
+        return (getattr(k, "cluster_id", "") or "").strip()
+
+    def _is_cluster_candidate_node(self, kid: str) -> bool:
+        if not kid:
+            return False
+        if kid.startswith("Cluster_"):
+            return False
+        if self._is_junk_concept_id(kid):
+            return False
+        return kid in self.konzepte
+
+    def _iter_cluster_edges(self) -> Iterable[Tuple[str, str, float]]:
+        for src, k in self.konzepte.items():
+            if not self._is_cluster_candidate_node(src):
+                continue
+            for e in k.verbindungen:
+                dst = e.ziel
+                if not self._is_cluster_candidate_node(dst):
+                    continue
+                typ = self._canon_type(e.typ)
+                w = float(e.gewicht or 0.0)
+                if typ in self.cluster_weak_types:
+                    if w < self.cluster_aug_edge_min_w:
+                        continue
+                    w *= 0.65
+                else:
+                    if w < self.cluster_core_edge_min_w:
+                        continue
+                if w <= 0.0:
+                    continue
+                yield src, dst, min(1.0, w)
+
+    def _rebuild_cluster_index(self):
+        self.cluster_of = {}
+        self.cluster_members = {}
+
+        if not self.cluster_mode_enabled or not self.konzepte:
+            for k in self.konzepte.values():
+                k.cluster_id = ""
+            return
+
+        nodes = [cid for cid in self.konzepte if self._is_cluster_candidate_node(cid)]
+        if not nodes:
+            for k in self.konzepte.values():
+                k.cluster_id = ""
+            return
+
+        neighbors: Dict[str, Dict[str, float]] = {cid: {} for cid in nodes}
+        for src, dst, w in self._iter_cluster_edges():
+            if src == dst:
+                continue
+            prev = neighbors[src].get(dst, 0.0)
+            if w > prev:
+                neighbors[src][dst] = w
+            prev_r = neighbors[dst].get(src, 0.0)
+            if w > prev_r:
+                neighbors[dst][src] = w
+
+        labels = {cid: cid for cid in nodes}
+        ordered_nodes = sorted(nodes)
+        for _ in range(max(1, int(self.cluster_lp_iters))):
+            changed = 0
+            for cid in ordered_nodes:
+                neigh = neighbors.get(cid) or {}
+                if not neigh:
+                    continue
+                scores: Dict[str, float] = {}
+                for nb, w in neigh.items():
+                    lb = labels.get(nb, nb)
+                    scores[lb] = scores.get(lb, 0.0) + float(w)
+                if not scores:
+                    continue
+                best = sorted(scores.items(), key=lambda x: (x[1], x[0]), reverse=True)[0][0]
+                if best != labels[cid]:
+                    labels[cid] = best
+                    changed += 1
+            if changed == 0:
+                break
+
+        groups: Dict[str, List[str]] = {}
+        for cid, lb in labels.items():
+            groups.setdefault(lb, []).append(cid)
+
+        large = {lb for lb, members in groups.items() if len(members) >= self.cluster_min_size}
+        if large:
+            for cid in ordered_nodes:
+                lb = labels[cid]
+                if lb in large:
+                    continue
+                neigh = neighbors.get(cid) or {}
+                cand: Dict[str, float] = {}
+                for nb, w in neigh.items():
+                    nb_lb = labels.get(nb, "")
+                    if nb_lb not in large:
+                        continue
+                    cand[nb_lb] = cand.get(nb_lb, 0.0) + float(w)
+                if cand:
+                    best_cand = sorted(
+                        cand.items(),
+                        key=lambda x: (x[1], x[0]),
+                        reverse=True,
+                    )[0][0]
+                    labels[cid] = best_cand
+
+        groups = {}
+        for cid, lb in labels.items():
+            groups.setdefault(lb, []).append(cid)
+
+        sorted_groups = sorted(groups.values(), key=lambda g: (-len(g), min(g)))
+        for i, members in enumerate(sorted_groups, 1):
+            cluster_id = f"C{i:03d}"
+            for cid in members:
+                self.cluster_of[cid] = cluster_id
+                self.konzepte[cid].cluster_id = cluster_id
+                self.cluster_members.setdefault(cluster_id, set()).add(cid)
+
+        for cid, k in self.konzepte.items():
+            if cid in self.cluster_of:
+                continue
+            k.cluster_id = ""
+
+    def _rebuild_cluster_bridges(self):
+        self.cluster_bridges = {}
+        self.allowed_bridge_edges = set()
+
+        if not self.cluster_mode_enabled or not self.cluster_of:
+            return
+
+        pair_count: Dict[Tuple[str, str], int] = {}
+        pair_weight: Dict[Tuple[str, str], float] = {}
+        raw: Dict[str, List[Tuple[float, str, str]]] = {}
+
+        for src, k in self.konzepte.items():
+            c_src = self._cluster_for(src)
+            if not c_src:
+                continue
+            for e in k.verbindungen:
+                dst = e.ziel
+                c_dst = self._cluster_for(dst)
+                if not c_dst or c_dst == c_src:
+                    continue
+                typ = self._canon_type(e.typ)
+                w = float(e.gewicht or 0.0)
+                if typ not in self.cluster_bridge_types or w < self.cluster_bridge_min_w:
+                    continue
+                pair = tuple(sorted((c_src, c_dst)))
+                pair_count[pair] = pair_count.get(pair, 0) + 1
+                pair_weight[pair] = pair_weight.get(pair, 0.0) + w
+                raw.setdefault(src, []).append((w, dst, typ))
+
+        strong_pairs = {
+            pair
+            for pair, cnt in pair_count.items()
+            if cnt >= 2 or pair_weight.get(pair, 0.0) >= 0.85
+        }
+        if not strong_pairs:
+            strong_pairs = set(pair_count.keys())
+
+        max_per_node = max(1, int(self.cluster_bridge_max_per_node))
+        for src, cand in raw.items():
+            c_src = self._cluster_for(src)
+            if not c_src:
+                continue
+            cand.sort(key=lambda x: x[0], reverse=True)
+            used_clusters: set[str] = set()
+            kept = 0
+            for w, dst, typ in cand:
+                c_dst = self._cluster_for(dst)
+                if not c_dst or c_dst == c_src:
+                    continue
+                pair = tuple(sorted((c_src, c_dst)))
+                if pair not in strong_pairs:
+                    continue
+                if c_dst in used_clusters:
+                    continue
+                self.allowed_bridge_edges.add((src, dst, typ))
+                self.cluster_bridges.setdefault(c_src, set()).add(c_dst)
+                self.cluster_bridges.setdefault(c_dst, set()).add(c_src)
+                used_clusters.add(c_dst)
+                kept += 1
+                if kept >= max_per_node:
+                    break
+
+    def _clear_cluster_context(self):
+        self.active_clusters = set()
+        self._cluster_intent = "OTHER"
+
+    def _set_active_clusters_from_cues(
+        self,
+        cues: Dict[str, float],
+        anchors: List[str],
+        intent: str,
+    ):
+        self.active_clusters = set()
+        if not self.cluster_mode_enabled:
+            return
+
+        scores: Dict[str, float] = {}
+        for kid, val in cues.items():
+            c = self._cluster_for(kid)
+            if not c:
+                continue
+            w = float(val)
+            if self._is_generic_concept(kid):
+                w *= 0.45
+            scores[c] = scores.get(c, 0.0) + w
+
+        anchor_noise = {"unterschied", "vergleich", "differenz", "abgrenzung"}
+        for kid in anchors or []:
+            c = self._cluster_for(kid)
+            if not c:
+                continue
+            norm = self._norm_label(self._label_for_output(kid))
+            toks = set(norm.split()) if norm else set()
+            if toks.intersection(anchor_noise):
+                continue
+            boost = 0.8 if self._is_generic_concept(kid) else 1.2
+            scores[c] = scores.get(c, 0.0) + boost
+
+        if not scores:
+            return
+
+        max_clusters = 2 if intent == "COMPARE" else max(1, int(self.cluster_allow_top))
+        ranked = sorted(scores.items(), key=lambda x: x[1], reverse=True)[:max_clusters]
+        self.active_clusters = {c for c, s in ranked if s > 0}
+
+    def _cluster_node_bias(self, kid: str, *, cue_mode: bool = False) -> float:
+        if not self.cluster_mode_enabled or not self.active_clusters:
+            return 1.0
+        c = self._cluster_for(kid)
+        if not c:
+            return 1.0
+        if c in self.active_clusters:
+            return max(1.0, self.cluster_local_bias)
+        if cue_mode:
+            return max(0.05, min(1.0, self.cluster_cue_cross_penalty))
+        return max(0.05, min(1.0, self.cluster_cross_bias))
+
+    def _is_bridge_transition_allowed(
+        self,
+        src: str,
+        dst: str,
+        edge_typ: str,
+        edge_w: float,
+        c_src: str,
+        c_dst: str,
+    ) -> bool:
+        if not self.cluster_bridge_strict:
+            return True
+
+        typ = self._canon_type(edge_typ)
+        edge_key = (src, dst, typ)
+        if edge_key in self.allowed_bridge_edges:
+            return True
+
+        if (
+            self._cluster_intent == "COMPARE"
+            and c_src in self.active_clusters
+            and c_dst in self.active_clusters
+        ):
+            if typ in self.cluster_bridge_types and edge_w >= 0.20:
+                return True
+
+        if c_dst not in self.cluster_bridges.get(c_src, set()):
+            return False
+
+        if typ in self.cluster_bridge_types and edge_w >= self.cluster_bridge_min_w * 0.9:
+            return True
+        if typ not in self.cluster_weak_types and edge_w >= max(self.cluster_bridge_min_w, 0.34):
+            return True
+        return False
+
+    def _cluster_transition_bias(
+        self,
+        src: str,
+        dst: str,
+        edge_typ: str,
+        edge_w: float,
+    ) -> float:
+        if not self.cluster_mode_enabled or not self.active_clusters:
+            return 1.0
+        c_src = self._cluster_for(src)
+        c_dst = self._cluster_for(dst)
+        if not c_src or not c_dst:
+            return 1.0
+
+        if c_src == c_dst:
+            if c_src in self.active_clusters:
+                return max(1.0, self.cluster_local_bias)
+            return 1.0
+
+        if not self._is_bridge_transition_allowed(src, dst, edge_typ, edge_w, c_src, c_dst):
+            return 0.0
+
+        if c_src in self.active_clusters or c_dst in self.active_clusters:
+            return max(0.05, min(1.0, self.cluster_cross_bias))
+        return max(0.03, min(0.9, self.cluster_cross_bias * 0.9))
 
     # -------------------------
     # Hybrid Memory (Embedding DB)
@@ -308,6 +658,8 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
             or "vergleich" in f
         ):
             return "COMPARE"
+        if f.startswith(("zu welchem", "zu welcher", "zu welchem system", "zu welcher klasse")):
+            return "PARTS"
         if f.startswith(("wo ", "wohin", "woher")):
             return "WHERE"
         if f.startswith(("woraus", "woraus besteht", "woraus setzt", "woraus besteht")):
@@ -467,6 +819,7 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
                         feats = [self._nfc(str(x)) for x in feats if str(x).strip()]
                         labels = obj.get("labels") or []
                         labels = [self._nfc(str(x)) for x in labels if str(x).strip()]
+                        cluster_id = self._nfc(str(obj.get("cluster", ""))).strip()
                         if not labels:
                             labels = [cid]
                         if cid not in self.konzepte:
@@ -474,6 +827,7 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
                                 id=cid,
                                 labels=labels,
                                 semantische_features=feats,
+                                cluster_id=cluster_id,
                             )
                         else:
                             if feats:
@@ -488,6 +842,8 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
                                     if lb not in existing_l:
                                         self.konzepte[cid].labels.append(lb)
                                         existing_l.add(lb)
+                            if cluster_id:
+                                self.konzepte[cid].cluster_id = cluster_id
                         continue
                     if t == "edge":
                         src = self._nfc(str(obj.get("src", "")))
@@ -602,6 +958,36 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
                 norm = max(1.0, float(self.inhib_degree_norm))
                 deg_scale = 1.0 + min(1.0, deg / norm) * self.inhib_degree_boost
             out[k] = max(0.0, v - lam * mean_val * deg_scale)
+
+        if self.cluster_mode_enabled and self.cluster_inhib_competitor > 0 and out:
+            c_scores: Dict[str, float] = {}
+            for kid, val in out.items():
+                c = self._cluster_for(kid)
+                if not c:
+                    continue
+                c_scores[c] = c_scores.get(c, 0.0) + float(val)
+
+            if c_scores:
+                ranked = sorted(c_scores.items(), key=lambda x: x[1], reverse=True)
+                if self.active_clusters:
+                    active_ranked = [(c, s) for c, s in ranked if c in self.active_clusters]
+                    if active_ranked:
+                        ranked = active_ranked
+                keep_n = (
+                    2
+                    if self._cluster_intent == "COMPARE"
+                    else max(1, int(self.cluster_allow_top))
+                )
+                keep = {c for c, _ in ranked[:keep_n]}
+
+                if keep:
+                    damp = max(0.0, min(0.9, float(self.cluster_inhib_competitor)))
+                    for kid, val in list(out.items()):
+                        c = self._cluster_for(kid)
+                        if not c or c in keep:
+                            continue
+                        out[kid] = max(0.0, val * (1.0 - damp))
+
         return out
 
     def _degree(self, kid: str) -> int:
@@ -699,6 +1085,7 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
 
                     if dst in self.konzepte:
                         incoming *= self._time_decay(self.konzepte[dst])
+                    incoming *= self._cluster_transition_bias(src, dst, e.typ, e.gewicht)
 
                     if incoming > 0:
                         nxt[dst] = nxt.get(dst, 0.0) + incoming
@@ -767,6 +1154,7 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
 
                     if dst in self.konzepte:
                         incoming *= self._time_decay(self.konzepte[dst])
+                    incoming *= self._cluster_transition_bias(src, dst, e.typ, e.gewicht)
 
                     if incoming > 0:
                         pred[dst] = pred.get(dst, 0.0) + incoming
@@ -842,6 +1230,8 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
 
     def denken(self, frage: str) -> Dict:
         intent = self._erkenne_intent(frage)
+        self._clear_cluster_context()
+        self._cluster_intent = intent
         if self._is_greeting(frage):
             return {
                 "frage": frage,
@@ -903,6 +1293,18 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
         # Goal Layer cues (soft bias)
         for k, v in self._goal_cues().items():
             cues[k] = max(cues.get(k, 0.0), v)
+
+        self._set_active_clusters_from_cues(cues, question_anchors, intent)
+        if self.active_clusters and cues:
+            biased: Dict[str, float] = {}
+            for kid, val in cues.items():
+                fac = self._cluster_node_bias(kid, cue_mode=True)
+                v2 = float(val) * fac
+                if v2 > self.cutoff * 0.5:
+                    biased[kid] = v2
+            if biased:
+                cues = biased
+                seed_set = {k for k in seed_set if k in cues}
 
         if not cues:
             unknown = self._create_unknown_stub(frage)
@@ -966,6 +1368,7 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
                 v = self._value_score(kid, goal_tokens)
                 bonus = self._plan_bonus(kid, goal_tokens, intent) if self.plan_enabled else 0.0
                 score = val * v * (1.0 + bonus)
+                score *= self._cluster_node_bias(kid, cue_mode=False)
                 if kid in anchor_set:
                     score *= (1.0 + self.question_anchor_rank_boost)
                 if (
@@ -977,6 +1380,12 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
                 scored.append((kid, score))
             scored.sort(key=lambda x: x[1], reverse=True)
             pattern = scored
+        elif self.active_clusters and pattern:
+            pattern = [
+                (kid, val * self._cluster_node_bias(kid, cue_mode=False))
+                for kid, val in pattern
+            ]
+            pattern.sort(key=lambda x: x[1], reverse=True)
 
         # Focus should stay anchored to the question (seed_set), not drift in WM.
         focus_ids = self._focus_from_question(frage, seed_set)
@@ -1117,6 +1526,14 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
             "welche", "welcher", "welches", "welchen", "welchem",
             "außerdem", "ausserdem", "hierbei", "dabei", "somit", "jedoch",
             "sich",
+            "unterschied",
+            "vergleich",
+            "differenz",
+            "abgrenzung",
+            "system",
+            "wissenschaft",
+            "modell",
+            "prinzip",
         }
         return {t for t in tokens if t not in stop}
 
@@ -1243,6 +1660,14 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
             "welche", "welcher", "welches", "welchen", "welchem",
             "außerdem", "ausserdem", "hierbei", "dabei", "somit", "jedoch",
             "sich",
+            "unterschied",
+            "vergleich",
+            "differenz",
+            "abgrenzung",
+            "system",
+            "wissenschaft",
+            "modell",
+            "prinzip",
         }
         tokens = [t for t in tokens if t not in stop]
         if not tokens:
@@ -1313,6 +1738,14 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
             "welche", "welcher", "welches", "welchen", "welchem",
             "außerdem", "ausserdem", "hierbei", "dabei", "somit", "jedoch",
             "sich",
+            "unterschied",
+            "vergleich",
+            "differenz",
+            "abgrenzung",
+            "system",
+            "wissenschaft",
+            "modell",
+            "prinzip",
         }
         tokens = [t for t in tokens if t not in stop]
         if not tokens:
@@ -1485,6 +1918,9 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
     # -------------------------
 
     def speichere_model(self, datei: str, episodic_datei: Optional[str] = None):
+        if self.cluster_mode_enabled:
+            self._rebuild_cluster_index()
+            self._rebuild_cluster_bridges()
         if datei.lower().endswith(".jsonl"):
             self._speichere_jsonl(datei, episodic_datei=episodic_datei)
         else:
@@ -1515,6 +1951,7 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
                     "id": cid,
                     "features": sorted(set(feats)),
                     "labels": sorted(set(labels)),
+                    "cluster": (self.konzepte[cid].cluster_id or ""),
                 }
                 f.write(json.dumps(obj, ensure_ascii=False) + "\n")
             for src in sorted(self.konzepte.keys()):
@@ -1553,6 +1990,7 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
                         "id": cid,
                         "features": sorted(set(feats)),
                         "labels": sorted(set(labels)),
+                    "cluster": (self.konzepte[cid].cluster_id or ""),
                     }
                     f.write(json.dumps(obj, ensure_ascii=False) + "\n")
                 for src in sorted(self.episodic_edges.keys()):

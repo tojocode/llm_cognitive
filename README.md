@@ -38,6 +38,7 @@ python llm_think/think_controler.py
 python data_import/wikipedia_to_core.py
 python data_import/wikipedia_to_core.py --augment
 python debug_analyse/run_benchmark.py
+python debug_analyse/run_benchmark.py --file debug_analyse/benchmark_cluster_context.json
 python debug_analyse/export_cytoscape.py
 ```
 
@@ -56,4 +57,10 @@ python debug_analyse/export_cytoscape.py
 - Zusätzliche Junk-Filter reduzieren Rauschknoten wie `Sich`, `Wurde`, `Nicht`.
 - Import-IDs werden aus **Content-Tokens** aufgebaut: Füllwörter und Hilfsverben (`der`, `die`, `ist`, `so`, `etwa`, `noch`, ...) werden bei der Knotenbildung aktiv entfernt.
 - Broca blendet schwache Strukturkanten (`cooccur`, `coactive`, `similar`, `cluster_of`) in der Sprachausgabe aus, damit Antworten primär auf Wissensrelationen basieren.
-
+- Cluster-First ist aktiv: jeder Knoten bekommt beim Laden/Speichern eine `cluster_id` (persistiert in `memory_*.jsonl` als `cluster`).
+- Retrieval arbeitet cluster-lokal: aktive Fragecluster werden bevorzugt, clusterfremde Kandidaten werden gedämpft.
+- Cluster-Wechsel läuft über Bridge-Gating: Cross-Cluster-Aktivierung wird nur über starke, kuratierte Übergänge zugelassen.
+- Konkurrenz-Inhibition auf Cluster-Ebene reduziert themenfremde Aktivierungen im selben Denkzyklus.
+- Intent-Erkennung deckt auch Formen wie `Zu welchem ... gehört ...?` ab (wird als `PARTS` behandelt).
+- Benchmark-Runner akzeptiert `--file`, damit mehrere Benchmark-Sets gefahren werden können.
+- Neuer Kontext-Benchmark: `debug_analyse/benchmark_cluster_context.json` (Eigenschaft, Ursache/Wirkung, Vergleich, Mehrhop).

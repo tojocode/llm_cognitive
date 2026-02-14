@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 
+import argparse
 import json
 import sys
 from pathlib import Path
@@ -73,7 +74,17 @@ def _extract_trace_src_ids(res: dict) -> List[str]:
 
 
 def main() -> int:
-    bench_path = Path(__file__).with_name("benchmark_questions.json")
+    parser = argparse.ArgumentParser(description="Benchmark für den Denk-Kern")
+    parser.add_argument(
+        "--file",
+        default=str(Path(__file__).with_name("benchmark_questions.json")),
+        help="Pfad zur Benchmark-JSON-Datei",
+    )
+    args = parser.parse_args()
+
+    bench_path = Path(args.file)
+    if not bench_path.is_absolute():
+        bench_path = (ROOT / bench_path).resolve()
     if not bench_path.exists():
         print(f"FEHLER Benchmark-Datei fehlt: {bench_path}")
         return 1

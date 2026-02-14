@@ -1,685 +1,685 @@
-{"t": "meta", "format": "memory_jsonl", "encoding": "utf-8", "umlaute": true, "created_at": "2026-02-14T01:10:02", "counts": {"nodes": 681, "edges": 1123}}
-{"t": "node", "id": "Abgeleitet", "features": ["gelernt"], "labels": ["Abgeleitet", "abgeleitet aus atl Xolotl"]}
-{"t": "node", "id": "Abgrenzung", "features": ["Astronomie", "Einordnung", "gelernt"], "labels": ["Abgrenzung"]}
-{"t": "node", "id": "Ableitungen", "features": ["gelernt"], "labels": ["Ableitungen", "zahlreiche Ableitungen wie filmen"]}
-{"t": "node", "id": "Abzug", "features": ["Ausbelichtung", "gelernt"], "labels": ["Abzug"]}
-{"t": "node", "id": "Abzulösen", "features": ["gelernt"], "labels": ["Abzulösen", "abzulösen"]}
-{"t": "node", "id": "Acht_Sie_Umkreisenden", "features": ["gelernt"], "labels": ["Acht_Sie_Umkreisenden", "acht sie umkreisenden Planeten"]}
-{"t": "node", "id": "Adjektiv", "features": ["Form", "gelernt"], "labels": ["Adjektiv"]}
-{"t": "node", "id": "Adverb", "features": ["gelernt"], "labels": ["Adverb", "gotischen Adverb iudisk belegt"]}
-{"t": "node", "id": "Ahd", "features": ["gelernt"], "labels": ["Ahd", "ahd"]}
-{"t": "node", "id": "Akademische_Mediziner_Früherer", "features": ["gelernt"], "labels": ["Akademische_Mediziner_Früherer", "akademische Mediziner früherer Zeit"]}
-{"t": "node", "id": "Albrecht_Dürer", "features": ["gelernt"], "labels": ["Albrecht", "Albrecht Dürer", "Albrecht_Dürer"]}
-{"t": "node", "id": "Alle", "features": ["Vulkanismus", "gelernt"], "labels": ["Alle"]}
-{"t": "node", "id": "Alle_Bereiche_Films", "features": ["gelernt"], "labels": ["Alle_Bereiche_Films", "alle Bereiche Films Filmherstellung"]}
-{"t": "node", "id": "Alle_Regeln_Zur", "features": ["gelernt"], "labels": ["Alle_Regeln_Zur", "alle Regeln zur Konfliktverhütung"]}
-{"t": "node", "id": "Allein", "features": ["gelernt"], "labels": ["Allein", "allein auf Naturbeobachtung angewiesen"]}
-{"t": "node", "id": "Allel", "features": ["gelernt"], "labels": ["Allel", "als Allel"]}
-{"t": "node", "id": "Allen", "features": ["Maß", "gelernt"], "labels": ["Allen"]}
-{"t": "node", "id": "Allgemein", "features": ["Sachsen", "gelernt"], "labels": ["Allgemein"]}
-{"t": "node", "id": "Alltagspsychologie", "features": ["Disziplin", "gelernt"], "labels": ["Alltagspsychologie"]}
-{"t": "node", "id": "Altertum", "features": ["Mittelalter", "gelernt"], "labels": ["Altertum"]}
-{"t": "node", "id": "Anders", "features": ["gelernt"], "labels": ["Anders", "anders als Wörter Endung"]}
-{"t": "node", "id": "Anfang", "features": ["gelernt"], "labels": ["Anfang"]}
-{"t": "node", "id": "Anglizismus", "features": ["gelernt"], "labels": ["Anglizismus"]}
-{"t": "node", "id": "Anhäufung_Tausenden_Asteroiden", "features": ["gelernt"], "labels": ["Anhäufung", "Anhäufung tausenden Asteroiden", "Anhäufung_Tausenden_Asteroiden"]}
-{"t": "node", "id": "Annäherung", "features": ["gelernt"], "labels": ["Annäherung", "vielen Unternehmen Annäherung über"]}
-{"t": "node", "id": "Ansätze", "features": ["Wissenschaft", "gelernt"], "labels": ["Ansätze"]}
-{"t": "node", "id": "Antike", "features": ["gelernt"], "labels": ["Antike"]}
-{"t": "node", "id": "Anwendungsbezogene_Forschung_Ihrer", "features": ["gelernt"], "labels": ["Anwendungsbezogene_Forschung_Ihrer", "anwendungsbezogene Forschung ihrer Vertreter"]}
-{"t": "node", "id": "Arabien", "features": ["gelernt"], "labels": ["Arabien", "Rub", "Rub alChali Arabien zweitgrößte"]}
-{"t": "node", "id": "Archi", "features": ["gelernt"], "labels": ["Archi", "archi"]}
-{"t": "node", "id": "Architektur", "features": ["gelernt"], "labels": ["Architektur", "heute großer Formenreichtum Architektur", "zentrale Inhalt Architektur"]}
-{"t": "node", "id": "Architekturgeschichte", "features": ["Kunstgeschichte", "gelernt"], "labels": ["Architekturgeschichte"]}
-{"t": "node", "id": "Architekturtheorie", "features": ["gelernt"], "labels": ["Architekturtheorie"]}
-{"t": "node", "id": "Art", "features": ["gelernt"], "labels": ["Art", "Art inzwischen verschwunden", "meisten Bereiche DNA Art"]}
-{"t": "node", "id": "Asien", "features": ["gelernt"], "labels": ["Asien", "Europa", "Europa Subkontinent Asien zusammen"]}
-{"t": "node", "id": "Asteroiden", "features": ["Kilometer", "gelernt"], "labels": ["Asteroiden", "neben Zwergplaneten Millionen Asteroiden"]}
-{"t": "node", "id": "Astronomie", "features": ["Allein", "Gestirne", "Wissenschaften", "gelernt"], "labels": ["Astronomie", "während Astronomie auf empirischer"]}
-{"t": "node", "id": "Atomen", "features": ["gelernt"], "labels": ["Atomen"]}
-{"t": "node", "id": "Aufgr", "features": ["Kern", "gelernt"], "labels": ["Aufgr"]}
-{"t": "node", "id": "Aufwand", "features": ["Relativ", "gelernt"], "labels": ["Aufwand"]}
-{"t": "node", "id": "Ausbelichtung", "features": ["gelernt"], "labels": ["Ausbelichtung", "Ergebnis", "Ergebnis Kontaktkopie Vergrößerung Ausbelichtung"]}
-{"t": "node", "id": "Ausbrüchen", "features": ["gelernt"], "labels": ["Ausbrüchen", "Folge", "Folge steigernden Ausbrüchen eines"]}
-{"t": "node", "id": "Ausdruck", "features": ["Anglizismus", "Wortbildung", "gelernt"], "labels": ["Ausdruck", "Kunstform", "Kunstform ihren Ausdruck als"]}
-{"t": "node", "id": "Ausgenommen", "features": ["Konservierung", "gelernt"], "labels": ["Ausgenommen"]}
-{"t": "node", "id": "Autokratie", "features": ["gelernt"], "labels": ["Autokratie", "Sartori", "Sartori Autokratie"]}
-{"t": "node", "id": "Autoren", "features": ["gelernt"], "labels": ["Autoren", "häufig unklar inwieweit Autoren"]}
-{"t": "node", "id": "Axolotl", "features": ["Mexiko", "Mexiko_Rein_Aquatisch", "See", "gelernt"], "labels": ["Axolotl", "Der Axolotl"]}
-{"t": "node", "id": "Bahnen", "features": ["Teilweise", "gelernt"], "labels": ["Bahnen"]}
-{"t": "node", "id": "Ballspielen", "features": ["gelernt"], "labels": ["Abbildungen", "Abbildungen Ballspielen auf Reliefs", "Ballspielen"]}
-{"t": "node", "id": "Ballsportart", "features": ["gelernt"], "labels": ["Ballsportart", "Ballsportart bei zwei Mannschaften"]}
-{"t": "node", "id": "Barbiere", "features": ["gelernt"], "labels": ["Barbiere"]}
-{"t": "node", "id": "Baustein", "features": ["gelernt"], "labels": ["Baustein", "zentraler Baustein eines nachhaltigen"]}
-{"t": "node", "id": "Bedeutende", "features": ["Union", "gelernt"], "labels": ["Bedeutende"]}
-{"t": "node", "id": "Bedeutung_Internets_Nochmal", "features": ["gelernt"], "labels": ["Bedeutung", "Bedeutung Internets nochmal verstärkt", "Bedeutung_Internets_Nochmal"]}
-{"t": "node", "id": "Bedeutungen", "features": ["gelernt"], "labels": ["Bedeutungen", "Wesentlichen", "Wesentlichen drei Bedeutungen unterscheiden"]}
-{"t": "node", "id": "Begriffe", "features": ["Metaphern", "gelernt"], "labels": ["Begriffe"]}
-{"t": "node", "id": "Begriffe_Wie_Künstliche", "features": ["Metaphern", "gelernt"], "labels": ["Begriffe", "Begriffe wie künstliche", "Begriffe_Wie_Künstliche"]}
-{"t": "node", "id": "Behandlung", "features": ["gelernt"], "labels": ["Behandlung", "Wissenschaft", "Wissenschaft Vorbeugung Erkennung Behandlung"]}
-{"t": "node", "id": "Beide", "features": ["Ekliptik", "gelernt"], "labels": ["Beide"]}
-{"t": "node", "id": "Beispiel", "features": ["Mobiltelefone", "gelernt", "Ätna"], "labels": ["Beispiel", "Beispiel sehr rasch verlaufenden"]}
-{"t": "node", "id": "Beispiele", "features": ["Kalahari", "Transformer", "gelernt"], "labels": ["Beispiele"]}
-{"t": "node", "id": "Beispiele_Dafür", "features": ["Transformer", "gelernt"], "labels": ["Beispiele", "Beispiele dafür", "Beispiele_Dafür"]}
-{"t": "node", "id": "Beruf", "features": ["Fotograf", "gelernt"], "labels": ["Beruf"]}
-{"t": "node", "id": "Besonders_Bergbau_Verwendung", "features": ["gelernt"], "labels": ["Besonders_Bergbau_Verwendung", "besonders Bergbau Verwendung findet"]}
-{"t": "node", "id": "Bestandteil", "features": ["gelernt"], "labels": ["Bestandteil", "fester Bestandteil eines solchen", "molekulare Genetik zentraler Bestandteil"]}
-{"t": "node", "id": "Beziehung_Aufkommen_Modernen", "features": ["gelernt"], "labels": ["Beziehung", "Beziehung Aufkommen modernen Medizin", "Beziehung_Aufkommen_Modernen"]}
-{"t": "node", "id": "Bezug", "features": ["gelernt"], "labels": ["Bezug", "durch ihren engen Bezug"]}
-{"t": "node", "id": "Bilden", "features": ["gelernt"], "labels": ["Bilden", "bilden stabile dauerhafte also"]}
-{"t": "node", "id": "Bilder", "features": ["gelernt"], "labels": ["Bilder", "Staubverfahren", "Staubverfahren einbrennbare Bilder auf"]}
-{"t": "node", "id": "Bildkünste", "features": ["gelernt"], "labels": ["Bildkünste", "geisteswissenschaftliche Disziplin Architektur Bildkünste"]}
-{"t": "node", "id": "Bildung", "features": ["Adverb", "gelernt"], "labels": ["Bildung", "häufig Bildung neuer geeigneter"]}
-{"t": "node", "id": "Bindungen", "features": ["gelernt"], "labels": ["Bindungen", "chemische Reaktionen chemische Bindungen"]}
-{"t": "node", "id": "Biologie", "features": ["Lebewesen", "Naturwissenschaften", "gelernt"], "labels": ["Biologie", "Wissenschaft", "Wissenschaft Vererbung Teilgebiet Biologie"]}
-{"t": "node", "id": "Boden", "features": ["Oberseite", "gelernt"], "labels": ["Boden"]}
-{"t": "node", "id": "Botticelli", "features": ["gelernt"], "labels": ["Botticelli"]}
-{"t": "node", "id": "Braun_Marmoriert", "features": ["gelernt"], "labels": ["Braun_Marmoriert", "braun marmoriert"]}
-{"t": "node", "id": "Bridge", "features": ["gelernt"], "labels": ["Bridge"]}
-{"t": "node", "id": "Bspw", "features": ["gelernt"], "labels": ["Bspw", "bspw"]}
-{"t": "node", "id": "Bürgerliche_Gesellschaft_Versucht", "features": ["gelernt"], "labels": ["Bürgerliche_Gesellschaft_Versucht", "bürgerliche Gesellschaft versucht"]}
-{"t": "node", "id": "CERN", "features": ["gelernt"], "labels": ["CERN"]}
-{"t": "node", "id": "Carl", "features": ["Wissenschaft", "gelernt"], "labels": ["Carl"]}
-{"t": "node", "id": "Carlowitz", "features": ["Land", "gelernt"], "labels": ["Carlowitz", "bei Hans Carl Carlowitz"]}
-{"t": "node", "id": "Ceres", "features": ["Körper", "gelernt"], "labels": ["Ceres"]}
-{"t": "node", "id": "Chemie", "features": ["Eigenschaften", "gelernt"], "labels": ["Chemie", "heute zentrale Anliegen Chemie"]}
-{"t": "node", "id": "China", "features": ["gelernt"], "labels": ["China", "diesem Zeitpunkt Elektroautos China"]}
-{"t": "node", "id": "Cluster_1", "features": ["cluster"], "labels": ["Cluster 1"]}
-{"t": "node", "id": "Cluster_10", "features": ["cluster"], "labels": ["Cluster 10"]}
-{"t": "node", "id": "Cluster_11", "features": ["cluster"], "labels": ["Cluster 11"]}
-{"t": "node", "id": "Cluster_12", "features": ["cluster"], "labels": ["Cluster 12"]}
-{"t": "node", "id": "Cluster_13", "features": ["cluster"], "labels": ["Cluster 13"]}
-{"t": "node", "id": "Cluster_14", "features": ["cluster"], "labels": ["Cluster 14"]}
-{"t": "node", "id": "Cluster_15", "features": ["cluster"], "labels": ["Cluster 15"]}
-{"t": "node", "id": "Cluster_16", "features": ["cluster"], "labels": ["Cluster 16"]}
-{"t": "node", "id": "Cluster_2", "features": ["cluster"], "labels": ["Cluster 2"]}
-{"t": "node", "id": "Cluster_3", "features": ["cluster"], "labels": ["Cluster 3"]}
-{"t": "node", "id": "Cluster_4", "features": ["cluster"], "labels": ["Cluster 4"]}
-{"t": "node", "id": "Cluster_5", "features": ["cluster"], "labels": ["Cluster 5"]}
-{"t": "node", "id": "Cluster_6", "features": ["cluster"], "labels": ["Cluster 6"]}
-{"t": "node", "id": "Cluster_7", "features": ["cluster"], "labels": ["Cluster 7"]}
-{"t": "node", "id": "Cluster_8", "features": ["cluster"], "labels": ["Cluster 8"]}
-{"t": "node", "id": "Cluster_9", "features": ["cluster"], "labels": ["Cluster 9"]}
-{"t": "node", "id": "DOSB_Schach_Als", "features": ["gelernt"], "labels": ["DOSB", "DOSB Schach als Sportart", "DOSB_Schach_Als"]}
-{"t": "node", "id": "Dadurch", "features": ["China", "gelernt"], "labels": ["Dadurch"]}
-{"t": "node", "id": "Damals_Eher_Unter", "features": ["gelernt"], "labels": ["Damals_Eher_Unter", "damals eher unter Turnen"]}
-{"t": "node", "id": "Darüber", "features": ["Dritter", "Energierohstoffen", "gelernt"], "labels": ["Darüber"]}
-{"t": "node", "id": "Daten", "features": ["gelernt"], "labels": ["Daten", "KI-System", "KI-System wenn anhand Daten", "mangels valider Daten keine"]}
-{"t": "node", "id": "Davon", "features": ["Schichtvulkan", "gelernt"], "labels": ["Davon"]}
-{"t": "node", "id": "Dazu", "features": ["Bildung", "gelernt"], "labels": ["Dazu"]}
-{"t": "node", "id": "Debatte", "features": ["gelernt"], "labels": ["Debatte"]}
-{"t": "node", "id": "Definiert", "features": ["gelernt"], "labels": ["Definiert", "definiert als Menschen innerlich"]}
-{"t": "node", "id": "Definition", "features": ["gelernt"], "labels": ["Behinderungen", "Behinderungen psychische Erkrankungen Definition", "Definition"]}
-{"t": "node", "id": "Demgegenüber", "features": ["gelernt"], "labels": ["Demgegenüber", "demgegenüber seit"]}
-{"t": "node", "id": "Demokratie", "features": ["Herrschaftsorganisation", "Kompositum", "gelernt"], "labels": ["Demokratie"]}
-{"t": "node", "id": "Denen_Nichts_Neues", "features": ["gelernt"], "labels": ["Denen_Nichts_Neues", "denen nichts Neues sagen"]}
-{"t": "node", "id": "Dennoch", "features": ["Disziplinen", "gelernt"], "labels": ["Dennoch"]}
-{"t": "node", "id": "Deutsch", "features": ["Union", "gelernt"], "labels": ["Deutsch"]}
-{"t": "node", "id": "Deutsch_Baumeister", "features": ["gelernt"], "labels": ["Deutsch_Baumeister", "deutsch Baumeister"]}
-{"t": "node", "id": "Deutsch_Haupt", "features": ["gelernt"], "labels": ["Deutsch_Haupt", "deutsch Haupt"]}
-{"t": "node", "id": "Deutsche", "features": ["Sprache", "Weg", "gelernt"], "labels": ["Deutsche"]}
-{"t": "node", "id": "Deutsche_Sprache", "features": ["Germanistik", "gelernt"], "labels": ["Deutsche_Sprache"]}
-{"t": "node", "id": "Deutschland_Führenden_Wirtschaftsnationen", "features": ["gelernt"], "labels": ["Deutschland", "Deutschland führenden Wirtschaftsnationen weltweit", "Deutschland_Führenden_Wirtschaftsnationen"]}
-{"t": "node", "id": "Deutschschweiz", "features": ["gelernt"], "labels": ["Deutschschweiz"]}
-{"t": "node", "id": "Differenzierung", "features": ["gelernt"], "labels": ["Differenzierung"]}
-{"t": "node", "id": "Dinosaurier", "features": ["Oberen", "Popkultur", "Schulterblatt", "gelernt"], "labels": ["Dinosaurier"]}
-{"t": "node", "id": "Diskurs", "features": ["Sprache", "gelernt"], "labels": ["Diskurs"]}
-{"t": "node", "id": "Diskurs_Über", "features": ["Sprache", "gelernt"], "labels": ["Diskurs", "Diskurs über", "Diskurs_Über"]}
-{"t": "node", "id": "Diskussion", "features": ["gelernt"], "labels": ["Diskussion", "wissenschaftlichen Diskussion recht unterschiedlich"]}
-{"t": "node", "id": "Disziplin", "features": ["gelernt"], "labels": ["Disziplin", "selbst vereinzelt akademischen Disziplin"]}
-{"t": "node", "id": "Disziplin_Computer_Science", "features": ["gelernt"], "labels": ["Disziplin", "Disziplin_Computer_Science", "die Disziplin computer science"]}
-{"t": "node", "id": "Disziplinen", "features": ["gelernt"], "labels": ["Bedeutung", "Bedeutung Herbarts beide Disziplinen", "Disziplinen", "deutsche stark Bedeutung lateinischen"]}
-{"t": "node", "id": "Dritter", "features": ["gelernt"], "labels": ["Dritter", "kommerziellen Interessen mächtiger Dritter"]}
-{"t": "node", "id": "Dunkelgrau", "features": ["gelernt"], "labels": ["Dunkelgrau", "dunkelgrau", "dunkelgrau braun marmoriert bauchseits"]}
-{"t": "node", "id": "Durchmesser", "features": ["Kilometern", "gelernt"], "labels": ["Durchmesser"]}
-{"t": "node", "id": "Durchsetzungsinitiative", "features": ["gelernt"], "labels": ["Durchsetzungsinitiative", "also rechtlich gewährleistete Durchsetzungsinitiative"]}
-{"t": "node", "id": "ESA", "features": ["gelernt"], "labels": ["ESA"]}
-{"t": "node", "id": "Ebenfalls", "features": ["gelernt"], "labels": ["Ebenfalls", "ebenfalls kein grundlegend neues"]}
-{"t": "node", "id": "Ebenso", "features": ["Geschichte", "Internets", "gelernt"], "labels": ["Ebenso"]}
-{"t": "node", "id": "Eigenen_Schriftsprache_Weiterentwickelt", "features": ["gelernt"], "labels": ["Eigenen_Schriftsprache_Weiterentwickelt", "eigenen Schriftsprache weiterentwickelt Ähnliches"]}
-{"t": "node", "id": "Eigenschaften", "features": ["gelernt"], "labels": ["Eigenschaften", "Elemente", "Elemente Guttmanns Eigenschaften eines", "diejenige Naturwissenschaft Aufbau Eigenschaften"]}
-{"t": "node", "id": "Einfluss", "features": ["gelernt"], "labels": ["Einfluss"]}
-{"t": "node", "id": "Einordnung", "features": ["gelernt"], "labels": ["Einordnung", "einheitlich definiert Einordnung einzelner"]}
-{"t": "node", "id": "Einzelne", "features": ["Wellen", "gelernt"], "labels": ["Einzelne"]}
-{"t": "node", "id": "Ekliptik", "features": ["gelernt"], "labels": ["Ekliptik", "stärker gegen Ekliptik geneigt"]}
-{"t": "node", "id": "Elektromobilität", "features": ["Baustein", "gelernt"], "labels": ["Elektromobilität"]}
-{"t": "node", "id": "Elementen", "features": ["gelernt"], "labels": ["Elementen", "aus drei genannten Elementen", "basaltisch verarmt Elementen schlecht"]}
-{"t": "node", "id": "Elsass", "features": ["gelernt"], "labels": ["Elsass"]}
-{"t": "node", "id": "Ende", "features": ["gelernt", "Ähnlich"], "labels": ["Ende"]}
-{"t": "node", "id": "Endung", "features": ["Anders", "gelernt"], "labels": ["Endung"]}
-{"t": "node", "id": "Energie", "features": ["gelernt"], "labels": ["Energie", "abgeschlossenen System Element Energie", "mengenmäßig bilanzierfähige Mittel Energie"]}
-{"t": "node", "id": "Energiequelle", "features": ["Energie", "gelernt"], "labels": ["Energiequelle"]}
-{"t": "node", "id": "Energierohstoffen", "features": ["gelernt"], "labels": ["Energierohstoffen", "Sicherung", "Sicherung Trinkwasser Energierohstoffen wie"]}
-{"t": "node", "id": "Energieträger", "features": ["Energie", "gelernt"], "labels": ["Energieträger", "als fossiler Energieträger begrenztem", "heimischer Energieträger sichert also", "treibende Kraft Energieträger wie"]}
-{"t": "node", "id": "Enges_Feld_Literarischer", "features": ["gelernt"], "labels": ["Enges_Feld_Literarischer", "enges Feld literarischer Kunstwerke"]}
-{"t": "node", "id": "Entdeckung", "features": ["gelernt"], "labels": ["Entdeckung"]}
-{"t": "node", "id": "Entstehungsgeschichte", "features": ["Kuipergürtels", "gelernt"], "labels": ["Entstehungsgeschichte"]}
-{"t": "node", "id": "Entwicklung", "features": ["gelernt"], "labels": ["Entwicklung"]}
-{"t": "node", "id": "Erasmus", "features": ["gelernt"], "labels": ["Erasmus"]}
-{"t": "node", "id": "Erdbahnebene", "features": ["gelernt"], "labels": ["Erdbahnebene", "wenig gegenüber Erdbahnebene geneigt"]}
-{"t": "node", "id": "Erde", "features": ["gelernt"], "labels": ["Erde", "Planetensystem", "Planetensystem Erde befindet", "größten Meere Erde", "minimale Entfernung Venus Erde"]}
-{"t": "node", "id": "Erdhülle", "features": ["gelernt"], "labels": ["Erdhülle", "auf Erdhülle zurückzuführen während"]}
-{"t": "node", "id": "Erdteil", "features": ["gelernt"], "labels": ["Erdteil", "Erdteil über westliche Fünftel"]}
-{"t": "node", "id": "Erdöfen", "features": ["Lebensmittel", "gelernt"], "labels": ["Erdöfen"]}
-{"t": "node", "id": "Erfahrungswissenschaft", "features": ["gelernt"], "labels": ["Erfahrungswissenschaft", "praxisorientierte Erfahrungswissenschaft"]}
-{"t": "node", "id": "Erkenntnisgewinns", "features": ["gelernt"], "labels": ["Erkenntnisgewinns", "Erkenntnistheorie", "Erkenntnistheorie Wissenschaftstheorie Möglichkeiten Erkenntnisgewinns"]}
-{"t": "node", "id": "Ermächtigungen", "features": ["gelernt"], "labels": ["Ermächtigungen", "gesetzliche Ermächtigungen bestimmen wer"]}
-{"t": "node", "id": "Ermöglicht_Big_Tech", "features": ["gelernt"], "labels": ["Ermöglicht_Big_Tech", "ermöglicht Big Tech"]}
-{"t": "node", "id": "Erwiesen", "features": ["gelernt"], "labels": ["Erwiesen", "erwiesen"]}
-{"t": "node", "id": "Europa", "features": ["Erdteil", "Kontinent", "gelernt"], "labels": ["Europa"]}
-{"t": "node", "id": "Europäische_Filmakademie", "features": ["gelernt"], "labels": ["Europäische", "Europäische Filmakademie", "Europäische_Filmakademie"]}
-{"t": "node", "id": "Europäische_Rundfunkunion", "features": ["gelernt"], "labels": ["Europäische", "Europäische Rundfunkunion", "Europäische_Rundfunkunion"]}
-{"t": "node", "id": "Europäisches", "features": ["Genetik", "gelernt"], "labels": ["Europäisches"]}
-{"t": "node", "id": "Evolution_Erheblich_Ausweitung", "features": ["gelernt"], "labels": ["Evolution", "Evolution erheblich Ausweitung verschiedene", "Evolution_Erheblich_Ausweitung"]}
-{"t": "node", "id": "Expertenwissen", "features": ["gelernt"], "labels": ["Expertenwissen"]}
-{"t": "node", "id": "Facettenreiche_Begriffsgeschichte", "features": ["gelernt"], "labels": ["Facettenreiche_Begriffsgeschichte", "facettenreiche Begriffsgeschichte"]}
-{"t": "node", "id": "Februar", "features": ["Neptunbahn", "gelernt"], "labels": ["Februar"]}
-{"t": "node", "id": "Film", "features": ["Ableitungen", "Ausdruck", "Filmtheorie", "Zugleich", "gelernt"], "labels": ["Film"]}
-{"t": "node", "id": "Filmgeschichte", "features": ["gelernt"], "labels": ["Filmgeschichte", "unter Filmgeschichte ausführlich dargestellt"]}
-{"t": "node", "id": "Filmindustrie", "features": ["Films", "gelernt"], "labels": ["Filmindustrie"]}
-{"t": "node", "id": "Films", "features": ["gelernt"], "labels": ["Films", "auf Massenkompatibilität Films früh"]}
-{"t": "node", "id": "Filmtheorie", "features": ["gelernt"], "labels": ["Filmtheorie", "unter anderem Filmwissenschaft Filmtheorie"]}
-{"t": "node", "id": "Filmwirtschaft", "features": ["gelernt"], "labels": ["Filmwirtschaft"]}
-{"t": "node", "id": "Fließend", "features": ["gelernt"], "labels": ["Fließend", "fließend"]}
-{"t": "node", "id": "Flüssigkeit", "features": ["gelernt"], "labels": ["Flüssigkeit", "engeren Sinne Erhitzen Flüssigkeit"]}
-{"t": "node", "id": "Form", "features": ["Klimawechsel", "gelernt"], "labels": ["Form", "weiblichen Form mousik zuerst"]}
-{"t": "node", "id": "Formalwissenschaft", "features": ["gelernt"], "labels": ["Formalwissenschaft", "Formalwissenschaft aus Untersuchung geometrischen", "sowohl Grundlagen Formalwissenschaft als"]}
-{"t": "node", "id": "Forschung", "features": ["gelernt"], "labels": ["Forschung", "bekannt seine bahnbrechende Forschung"]}
-{"t": "node", "id": "Forschungsinstitut", "features": ["gelernt"], "labels": ["Forschungsinstitut", "Japans", "Japans führendes Forschungsinstitut bekannt"]}
-{"t": "node", "id": "Fossile", "features": ["Methanhydrat", "gelernt"], "labels": ["Fossile"]}
-{"t": "node", "id": "Fotograf", "features": ["gelernt"], "labels": ["Fotograf"]}
-{"t": "node", "id": "Fotografie", "features": ["Kunstgeschichte", "Zusammenhängen", "gelernt"], "labels": ["Fotografie"]}
-{"t": "node", "id": "Frage", "features": ["Nachdenken", "Subtraktion", "gelernt"], "labels": ["Frage", "Lage", "Lage folgende Frage verstehen"]}
-{"t": "node", "id": "Friedliches_Miteinander_Möglich", "features": ["gelernt"], "labels": ["Friedliches_Miteinander_Möglich", "friedliches Miteinander möglich"]}
-{"t": "node", "id": "Frühere", "features": ["Rheische", "gelernt"], "labels": ["Frühere"]}
-{"t": "node", "id": "Funde", "features": ["Jahre", "gelernt"], "labels": ["Funde"]}
-{"t": "node", "id": "Funktion_Menschlichen", "features": ["gelernt"], "labels": ["Funktion", "Funktion menschlichen", "Funktion_Menschlichen"]}
-{"t": "node", "id": "Fussball", "features": ["Mannschaftssportart", "gelernt"], "labels": ["Fussball"]}
-{"t": "node", "id": "Fußball", "features": ["Ballsportart", "gelernt"], "labels": ["Fußball"]}
-{"t": "node", "id": "Garen", "features": ["gelernt"], "labels": ["Garen", "sicherlich Grillen Garen heißer"]}
-{"t": "node", "id": "Gebieten", "features": ["gelernt"], "labels": ["Europa", "Europa Vergleich Gebieten gleicher", "Gebieten"]}
-{"t": "node", "id": "Gedrungen", "features": ["gelernt"], "labels": ["Gedrungen", "gedrungen gebaut weisen meist"]}
-{"t": "node", "id": "Gegenwärtige", "features": ["Beispiel", "gelernt"], "labels": ["Gegenwärtige", "gegenwärtige"]}
-{"t": "node", "id": "Gegenüber", "features": ["Verkleinerung", "gelernt"], "labels": ["Gegenüber"]}
-{"t": "node", "id": "Gehalt_Siliciumdioxid", "features": ["gelernt"], "labels": ["Gehalt", "Gehalt Siliciumdioxid", "Gehalt_Siliciumdioxid"]}
-{"t": "node", "id": "Geistige_Aktivitäten", "features": ["gelernt"], "labels": ["Geistige_Aktivitäten", "geistige Aktivitäten"]}
-{"t": "node", "id": "Gekennzeichnet", "features": ["gelernt"], "labels": ["Gekennzeichnet", "gekennzeichnet durch effiziente langsame"]}
-{"t": "node", "id": "Gel", "features": ["gelernt"], "labels": ["Gel"]}
-{"t": "node", "id": "Gelderwerbs", "features": ["gelernt"], "labels": ["Gelderwerbs", "endlich anzuführen Ausübung Gelderwerbs"]}
-{"t": "node", "id": "Gemeinschaft", "features": ["gelernt"], "labels": ["Gemeinschaft", "Gesamtheit", "Gesamtheit genereller Verhaltensregeln Gemeinschaft"]}
-{"t": "node", "id": "Genen", "features": ["gelernt"], "labels": ["Form", "Form Genen codiert bei", "Genen"]}
-{"t": "node", "id": "Generalisierbarkeit", "features": ["gelernt"], "labels": ["Generalisierbarkeit", "ihre Generalisierbarkeit fraglich"]}
-{"t": "node", "id": "Genetik", "features": ["Biologie", "gelernt"], "labels": ["Genetik", "führend molekularen Biologie Genetik"]}
-{"t": "node", "id": "Genetiker", "features": ["gelernt"], "labels": ["Genetiker"]}
-{"t": "node", "id": "Genomforschung", "features": ["gelernt"], "labels": ["Genomforschung", "weltweit führend Genomforschung"]}
-{"t": "node", "id": "Geografie", "features": ["Wissenschaft", "gelernt"], "labels": ["Geografie"]}
-{"t": "node", "id": "Geographisch", "features": ["Asien", "gelernt"], "labels": ["Geographisch"]}
-{"t": "node", "id": "Geologe", "features": ["Rohstoffen", "gelernt"], "labels": ["Geologe"]}
-{"t": "node", "id": "Geologie", "features": ["Struktur_Gesamten_Universums", "gelernt"], "labels": ["Geologie"]}
-{"t": "node", "id": "Geologische_Grenze", "features": ["gelernt"], "labels": ["Geologische_Grenze", "geologische Grenze"]}
-{"t": "node", "id": "Geordnetes", "features": ["gelernt"], "labels": ["Geordnetes", "geordnetes"]}
-{"t": "node", "id": "Geostatistik", "features": ["gelernt"], "labels": ["Geostatistik"]}
-{"t": "node", "id": "Geowissenschaften", "features": ["gelernt"], "labels": ["Geowissenschaften", "spezialisierter Geowissenschaften"]}
-{"t": "node", "id": "Gerade", "features": ["Möglich", "gelernt"], "labels": ["Gerade"]}
-{"t": "node", "id": "Geringfügig", "features": ["Erde", "gelernt"], "labels": ["Geringfügig"]}
-{"t": "node", "id": "Germanistik", "features": ["gelernt"], "labels": ["Germanistik"]}
-{"t": "node", "id": "Geschichte", "features": ["gelernt"], "labels": ["Geschichte", "Mathematik", "Mathematik ihrer Geschichte fortgeschritten"]}
-{"t": "node", "id": "Geschichte_Antiken_Griechenlands", "features": ["gelernt"], "labels": ["Geschichte", "Geschichte antiken Griechenlands", "Geschichte_Antiken_Griechenlands"]}
-{"t": "node", "id": "Geschlechter", "features": ["Kloake", "gelernt"], "labels": ["Geschlechter"]}
-{"t": "node", "id": "Geschlechtsreife", "features": ["Gedrungen", "gelernt"], "labels": ["Geschlechtsreife"]}
-{"t": "node", "id": "Gesetzmäßigkeiten", "features": ["gelernt"], "labels": ["Gesetzmäßigkeiten", "physikalische Theorie Eigenschaften Gesetzmäßigkeiten"]}
-{"t": "node", "id": "Gestaltung_Innenräumen_Zum", "features": ["gelernt"], "labels": ["Gestaltung", "Gestaltung Innenräumen zum Ziel", "Gestaltung_Innenräumen_Zum"]}
-{"t": "node", "id": "Gestirne", "features": ["gelernt"], "labels": ["Gestirne", "Wissenschaft", "Wissenschaft Gestirne"]}
-{"t": "node", "id": "Gleiche", "features": ["gelernt"], "labels": ["Gleiche", "gleiche wie vielen europäischen"]}
-{"t": "node", "id": "Gleichmäßig_Kleine_Körnchen", "features": ["gelernt"], "labels": ["Gleichmäßig_Kleine_Körnchen", "gleichmäßig kleine Körnchen eines"]}
-{"t": "node", "id": "Gleichzeitig", "features": ["Zuge", "gelernt"], "labels": ["Gleichzeitig"]}
-{"t": "node", "id": "Gliedmaßen", "features": ["Recht", "gelernt"], "labels": ["Gliedmaßen"]}
-{"t": "node", "id": "Grenzziehung", "features": ["gelernt"], "labels": ["Grenzziehung"]}
-{"t": "node", "id": "Große", "features": ["Leon", "gelernt"], "labels": ["Große"]}
-{"t": "node", "id": "Großen_Zahl_Recht", "features": ["gelernt"], "labels": ["Großen_Zahl_Recht", "großen Zahl recht unterschiedlicher"]}
-{"t": "node", "id": "Grundbausteine", "features": ["Rechtsvorschriften", "gelernt"], "labels": ["Grundbausteine"]}
-{"t": "node", "id": "Grundlage", "features": ["Mikroelektronik", "gelernt"], "labels": ["Grundlage"]}
-{"t": "node", "id": "Grundsätzen", "features": ["gelernt"], "labels": ["Grundsätzen", "diesen überkommenen philosophischen Grundsätzen"]}
-{"t": "node", "id": "Gut", "features": ["Sandebenen", "gelernt"], "labels": ["Gut", "gut passierbar"]}
-{"t": "node", "id": "Guttmann", "features": ["gelernt"], "labels": ["Guttmann", "modernen Sports umstritten Guttmann"]}
-{"t": "node", "id": "Gültigkeit_Jeglicher_Erkenntnisgewinnung", "features": ["gelernt"], "labels": ["Gültigkeit", "Gültigkeit jeglicher Erkenntnisgewinnung wie", "Gültigkeit_Jeglicher_Erkenntnisgewinnung"]}
-{"t": "node", "id": "Hand", "features": ["gelernt"], "labels": ["Hand", "rückwärtig orientiert Hand asymmetrisch"]}
-{"t": "node", "id": "Handlungsprinzip", "features": ["Zustand", "gelernt"], "labels": ["Handlungsprinzip", "Handlungsprinzip bei Nutzung Ressourcen"]}
-{"t": "node", "id": "Hauptbaumeister_Übersetzen", "features": ["gelernt"], "labels": ["Hauptbaumeister", "Hauptbaumeister übersetzen", "Hauptbaumeister_Übersetzen"]}
-{"t": "node", "id": "Hauptenergiequelle", "features": ["Sonne", "gelernt"], "labels": ["Hauptenergiequelle"]}
-{"t": "node", "id": "Hauptfach", "features": ["gelernt"], "labels": ["Bezeichnung", "Bezeichnung Deutschland Hochschulstudium Hauptfach", "Hauptfach"]}
-{"t": "node", "id": "Hebräischen_Einflüssen_Eigenständig", "features": ["gelernt"], "labels": ["Hebräischen_Einflüssen_Eigenständig", "hebräischen Einflüssen eigenständig"]}
-{"t": "node", "id": "Heimische", "features": ["Importkohle", "gelernt"], "labels": ["Heimische"]}
-{"t": "node", "id": "Herbart", "features": ["gelernt"], "labels": ["Herbart", "geläufig Herbart vornehmlich als"]}
-{"t": "node", "id": "Herkunft", "features": ["gelernt"], "labels": ["Herkunft", "demnach Herkunft vom akkadischen"]}
-{"t": "node", "id": "Herleitung", "features": ["Satzes", "gelernt"], "labels": ["Herleitung"]}
-{"t": "node", "id": "Herrschaftsorganisation", "features": ["Regenerative", "gelernt"], "labels": ["Formen", "Formen Herrschaftsorganisation auf Grundlage", "Herrschaftsorganisation"]}
-{"t": "node", "id": "Herstellung", "features": ["Chemie", "gelernt"], "labels": ["Herstellung"]}
-{"t": "node", "id": "Hervorgebracht", "features": ["gelernt"], "labels": ["Hervorgebracht", "hervorgebracht"]}
-{"t": "node", "id": "Heute", "features": ["Ermächtigungen", "Volkswirtschaft", "gelernt"], "labels": ["Heute"]}
-{"t": "node", "id": "Heute_Weitgehende_Definitionsmacht", "features": ["gelernt"], "labels": ["Heute_Weitgehende_Definitionsmacht", "heute weitgehende Definitionsmacht"]}
-{"t": "node", "id": "Heutzutage", "features": ["Bedeutungen", "gelernt"], "labels": ["Heutzutage"]}
-{"t": "node", "id": "Hingegen", "features": ["gelernt"], "labels": ["Hingegen"]}
-{"t": "node", "id": "Hintergr", "features": ["Gleiche", "gelernt"], "labels": ["Hintergr"]}
-{"t": "node", "id": "Historisch", "features": ["gelernt"], "labels": ["Historisch", "unbedingt echte Historisch veränderlich"]}
-{"t": "node", "id": "Historisch_Ergeben", "features": ["gelernt"], "labels": ["Historisch_Ergeben", "historisch ergeben"]}
-{"t": "node", "id": "Hobby", "features": ["gelernt"], "labels": ["Hobby", "sie verbreitetes Hobby"]}
-{"t": "node", "id": "Hochflächen", "features": ["gelernt"], "labels": ["Geröll", "Geröll bedeckte Hochflächen", "Hochflächen"]}
-{"t": "node", "id": "Holozäns", "features": ["gelernt"], "labels": ["Holozäns"]}
-{"t": "node", "id": "Holz", "features": ["gelernt"], "labels": ["Holz", "viel Holz schlagen wie"]}
-{"t": "node", "id": "Hydrografischen", "features": ["gelernt"], "labels": ["Hydrografischen", "laut Beschluss Internationalen Hydrografischen"]}
-{"t": "node", "id": "Härter", "features": ["gelernt"], "labels": ["Härter", "härter als"]}
-{"t": "node", "id": "Ihr", "features": ["gelernt"], "labels": ["Ihr"]}
-{"t": "node", "id": "Ihre", "features": ["Generalisierbarkeit", "Zeit", "gelernt"], "labels": ["Ihre"]}
-{"t": "node", "id": "Ihre_Ursprünge_Philosophie", "features": ["gelernt"], "labels": ["Ihre_Ursprünge_Philosophie", "ihre Ursprünge Philosophie"]}
-{"t": "node", "id": "Import", "features": ["Meta", "import:01_kuenstliche_intelligenz.txt:2026-02-14", "import:02_sonnensystem.txt:2026-02-14", "import:03_geschichte_deutschlands.txt:2026-02-14", "import:04_quantenmechanik.txt:2026-02-14", "import:05_deutsche_sprache.txt:2026-02-14", "import:06_axolotl.txt:2026-02-14", "import:07_philosophie.txt:2026-02-14", "import:08_psychologie.txt:2026-02-14", "import:09_biologie.txt:2026-02-14", "import:10_chemie.txt:2026-02-14", "import:11_pluto.txt:2026-02-14", "import:12_physik.txt:2026-02-14", "import:13_astronomie.txt:2026-02-14", "import:14_geographie.txt:2026-02-14", "import:15_geologie.txt:2026-02-14", "import:16_informatik.txt:2026-02-14", "import:17_mathematik.txt:2026-02-14", "import:18_medizin.txt:2026-02-14", "import:19_architektur.txt:2026-02-14", "import:20_musik.txt:2026-02-14", "import:21_literatur.txt:2026-02-14", "import:22_kunstgeschichte.txt:2026-02-14", "import:23_film.txt:2026-02-14", "import:24_fotografie.txt:2026-02-14", "import:25_kochen.txt:2026-02-14", "import:26_sport.txt:2026-02-14", "import:27_fussball.txt:2026-02-14", "import:28_olympische_spiele.txt:2026-02-14", "import:29_weltraumfahrt.txt:2026-02-14", "import:30_klimawandel.txt:2026-02-14", "import:31_nachhaltigkeit.txt:2026-02-14", "import:32_okonomie.txt:2026-02-14", "import:33_recht.txt:2026-02-14", "import:34_demokratie.txt:2026-02-14", "import:35_europa.txt:2026-02-14", "import:36_antike.txt:2026-02-14", "import:37_mittelalter.txt:2026-02-14", "import:38_renaissance.txt:2026-02-14", "import:39_industrielle_revolution.txt:2026-02-14", "import:40_internet.txt:2026-02-14", "import:41_smartphone.txt:2026-02-14", "import:42_elektromobilitaet.txt:2026-02-14", "import:43_energiequelle.txt:2026-02-14", "import:44_ozean.txt:2026-02-14", "import:45_wueste.txt:2026-02-14", "import:46_regenwald.txt:2026-02-14", "import:47_vulkan.txt:2026-02-14", "import:48_dinosaurier.txt:2026-02-14", "import:49_evolution.txt:2026-02-14", "import:50_genetik.txt:2026-02-14", "import:51_menschlicher_koerper.txt:2026-02-14", "import:52_europa.txt:2026-02-14"], "labels": ["Import"]}
-{"t": "node", "id": "Importkohle", "features": ["gelernt"], "labels": ["Importkohle", "verglichen Importkohle sehr teuer"]}
-{"t": "node", "id": "Industrie", "features": ["gelernt"], "labels": ["Industrie"]}
-{"t": "node", "id": "Industrielle_Revolution", "features": ["gelernt"], "labels": ["Industrielle_Revolution"]}
-{"t": "node", "id": "Industriezweigen", "features": ["gelernt"], "labels": ["Industriezweigen", "wichtigsten Industriezweigen"]}
-{"t": "node", "id": "Informatik", "features": ["Disziplin_Computer_Science", "Formalwissenschaft", "Verarbeitung", "gelernt"], "labels": ["Informatik"]}
-{"t": "node", "id": "Ingenieurwissenschaften", "features": ["Bezug", "gelernt"], "labels": ["Ingenieurwissenschaften"]}
-{"t": "node", "id": "Inhaltlich", "features": ["Disziplinen", "gelernt"], "labels": ["Inhaltlich"]}
-{"t": "node", "id": "Innenarchitektur", "features": ["gelernt"], "labels": ["Innenarchitektur"]}
-{"t": "node", "id": "Insbesondere", "features": ["gelernt"], "labels": ["Insbesondere"]}
-{"t": "node", "id": "Insbesondere_Aufkommen_Neuer", "features": ["gelernt"], "labels": ["Insbesondere_Aufkommen_Neuer", "insbesondere Aufkommen neuer Wissenschaftsdisziplinen"]}
-{"t": "node", "id": "Insbesondere_Biophysik", "features": ["gelernt"], "labels": ["Insbesondere_Biophysik", "insbesondere Biophysik"]}
-{"t": "node", "id": "Insgesamt", "features": ["Meeren", "gelernt"], "labels": ["Insgesamt"]}
-{"t": "node", "id": "Instrumentell", "features": ["Technik", "gelernt"], "labels": ["Instrumentell"]}
-{"t": "node", "id": "Internet", "features": ["Rechnernetzwerken", "gelernt"], "labels": ["Informatik", "Informatik zwingend Internet sondern", "Internet"]}
-{"t": "node", "id": "Internets", "features": ["gelernt"], "labels": ["Internets", "große Teile Internets heute"]}
-{"t": "node", "id": "Intransparenz", "features": ["gelernt"], "labels": ["Black", "Black Box Intransparenz vieler", "Intransparenz"]}
-{"t": "node", "id": "Ionen", "features": ["gelernt"], "labels": ["Ionen"]}
-{"t": "node", "id": "Jahre", "features": ["gelernt"], "labels": ["Jahre", "über Millionen Jahre alt"]}
-{"t": "node", "id": "Jahrhundert", "features": ["Grundsätzen", "gelernt"], "labels": ["Jahrhundert"]}
-{"t": "node", "id": "Jahrhunderte", "features": ["gelernt"], "labels": ["Jahrhunderte", "über drei Jahrhunderte erstreckende"]}
-{"t": "node", "id": "Jahrhunderts", "features": ["Mathematik", "gelernt"], "labels": ["Jahrhunderts"]}
-{"t": "node", "id": "Jedenfalls_Hellste_Vertreter", "features": ["gelernt"], "labels": ["Jedenfalls_Hellste_Vertreter", "jedenfalls hellste Vertreter Kuipergürtels"]}
-{"t": "node", "id": "Jeder", "features": ["Architekturtheorie", "gelernt"], "labels": ["Jeder"]}
-{"t": "node", "id": "Jiddische", "features": ["gelernt"], "labels": ["Jiddische"]}
-{"t": "node", "id": "Jupitermonde", "features": ["gelernt"], "labels": ["Jupitermonde", "acht Planeten vier Jupitermonde"]}
-{"t": "node", "id": "Jährlich", "features": ["gelernt"], "labels": ["Jährlich", "jährlich weltweit neu verkauften"]}
-{"t": "node", "id": "Kalahari", "features": ["gelernt"], "labels": ["Kalahari", "größten Teile Sahara Kalahari"]}
-{"t": "node", "id": "Kalenderjahren", "features": ["gelernt"], "labels": ["Kalenderjahren", "wiederholenden Zeitraum vier Kalenderjahren"]}
-{"t": "node", "id": "Kalte", "features": ["Regionen", "gelernt"], "labels": ["Kalte"]}
-{"t": "node", "id": "Karolingische", "features": ["Rückbesinnung", "gelernt"], "labels": ["Karolingische"]}
-{"t": "node", "id": "Keeling", "features": ["Umweltdatensatz", "gelernt"], "labels": ["Keeling"]}
-{"t": "node", "id": "Kein", "features": ["gelernt"], "labels": ["Kein"]}
-{"t": "node", "id": "Kennzeichnend", "features": ["Weise", "gelernt"], "labels": ["Kennzeichnend"]}
-{"t": "node", "id": "Kern", "features": ["gelernt"], "labels": ["Kern", "Kern ideologisch geprägt"]}
-{"t": "node", "id": "Kerngebiete", "features": ["Metaphysik", "gelernt"], "labels": ["Kerngebiete"]}
-{"t": "node", "id": "Kieswüsten", "features": ["Gut", "gelernt"], "labels": ["Kieswüsten"]}
-{"t": "node", "id": "Kilometer", "features": ["gelernt"], "labels": ["Kilometer", "wenige Kilometer groß wenige"]}
-{"t": "node", "id": "Kilometern", "features": ["gelernt"], "labels": ["Kilometern", "Millionen", "Millionen Kilometern bei weitem"]}
-{"t": "node", "id": "Kinnarodden", "features": ["gelernt"], "labels": ["Kinnarodden", "Kinnarodden auf Nordkinnhalbinsel Norwegen"]}
-{"t": "node", "id": "Kleinkörpern", "features": ["gelernt"], "labels": ["Kleinkörpern"]}
-{"t": "node", "id": "Klima", "features": ["Gebieten", "gelernt"], "labels": ["Klima"]}
-{"t": "node", "id": "Klimas", "features": ["gelernt"], "labels": ["Klimas", "weltweit auftretende Veränderung Klimas"]}
-{"t": "node", "id": "Klimawandel", "features": ["Klimas", "gelernt"], "labels": ["Klimawandel"]}
-{"t": "node", "id": "Klimawechsel", "features": ["gelernt"], "labels": ["Klimawechsel", "abrupte Klimawechsel"]}
-{"t": "node", "id": "Kloake", "features": ["gelernt"], "labels": ["Kloake", "Kloake etwas hervorgewölbt bei"]}
-{"t": "node", "id": "Kochen", "features": ["Flüssigkeit", "gelernt"], "labels": ["Kochen", "Kochen sogar wesentlich früher"]}
-{"t": "node", "id": "Kohle", "features": ["Energieträger", "gelernt"], "labels": ["Kohle"]}
-{"t": "node", "id": "Kohlenstoffanteils", "features": ["gelernt"], "labels": ["Kohlenstoffanteils", "durch Zunahme relativen Kohlenstoffanteils"]}
-{"t": "node", "id": "Kometenkernen_Scheibenförmigen_Region", "features": ["gelernt"], "labels": ["Kometenkernen", "Kometenkernen scheibenförmigen Region hinter", "Kometenkernen_Scheibenförmigen_Region"]}
-{"t": "node", "id": "Komplexe", "features": ["gelernt"], "labels": ["Komplexe", "komplexe"]}
-{"t": "node", "id": "Komponente", "features": ["Durchsetzungsinitiative", "gelernt"], "labels": ["Komponente"]}
-{"t": "node", "id": "Kompositum", "features": ["gelernt"], "labels": ["Kompositum", "auf altgriechisch zurückzuführen Kompositum"]}
-{"t": "node", "id": "Konnte", "features": ["Gelderwerbs", "gelernt"], "labels": ["Konnte"]}
-{"t": "node", "id": "Konservierung", "features": ["gelernt"], "labels": ["Konservierung", "künstliche Konservierung als anatomisches"]}
-{"t": "node", "id": "Kontinent", "features": ["gelernt"], "labels": ["Kontinent", "nach Australien zweitkleinste Kontinent"]}
-{"t": "node", "id": "Kontinenten", "features": ["gelernt"], "labels": ["Kontinenten", "auf allen Kontinenten gefunden"]}
-{"t": "node", "id": "Koroibos", "features": ["gelernt"], "labels": ["Koroibos"]}
-{"t": "node", "id": "Kosmologie", "features": ["gelernt"], "labels": ["Kosmologie"]}
-{"t": "node", "id": "Krankem_Zustand", "features": ["gelernt"], "labels": ["Krankem_Zustand", "krankem Zustand"]}
-{"t": "node", "id": "Kritisch_Betrachtet", "features": ["gelernt"], "labels": ["Kritisch_Betrachtet", "kritisch betrachtet"]}
-{"t": "node", "id": "Kton", "features": ["gelernt"], "labels": ["Kton", "kton"]}
-{"t": "node", "id": "Kugelraumfläche", "features": ["gelernt"], "labels": ["Kugelraumfläche", "über gesamte Kugelraumfläche betrachtet"]}
-{"t": "node", "id": "Kuipergürtels", "features": ["gelernt"], "labels": ["Kuipergürtels", "demnach eng Kuipergürtels verknüpft"]}
-{"t": "node", "id": "Kultur", "features": ["gelernt"], "labels": ["Kultur", "Musik", "Musik Universalie menschlichen Kultur"]}
-{"t": "node", "id": "Kunst", "features": ["gelernt"], "labels": ["Gattungen", "Gattungen Kunst", "Kunst"]}
-{"t": "node", "id": "Kunstcharakter", "features": ["Piktorialismus", "gelernt"], "labels": ["Kunstcharakter"]}
-{"t": "node", "id": "Kunstgeschichte", "features": ["Bildkünste", "gelernt"], "labels": ["Kunstgeschichte", "teilweise Forschung Lehre Kunstgeschichte", "zentraler Bestandteil Kunstgeschichte"]}
-{"t": "node", "id": "Kuration", "features": ["gelernt"], "labels": ["Kuration", "Prävention", "Prävention Erkrankungen Komplikationen Kuration"]}
-{"t": "node", "id": "Kurzund", "features": ["gelernt"], "labels": ["Kurzund", "kurzund mittelfristig"]}
-{"t": "node", "id": "Körper", "features": ["Menschen", "Problematik", "Verwesung", "gelernt"], "labels": ["Körper", "größte Körper gilt als"]}
-{"t": "node", "id": "Körper_Fordernde_Konzentration", "features": ["gelernt"], "labels": ["Körper", "Körper fordernde Konzentration beziehungsweise", "Körper_Fordernde_Konzentration"]}
-{"t": "node", "id": "Künstliche", "features": ["Systeme", "gelernt"], "labels": ["Künstliche"]}
-{"t": "node", "id": "Künstliche_Intelligenz", "features": ["Systeme", "gelernt"], "labels": ["Künstliche", "Künstliche Intelligenz", "Künstliche_Intelligenz"]}
-{"t": "node", "id": "Land", "features": ["gelernt"], "labels": ["Land", "ohne welche Land seinem"]}
-{"t": "node", "id": "Lassen_Kategorien_Bilden", "features": ["Themen", "gelernt"], "labels": ["Lassen_Kategorien_Bilden", "lassen Kategorien bilden"]}
-{"t": "node", "id": "Lava", "features": ["gelernt"], "labels": ["Lava"]}
-{"t": "node", "id": "Lebensbedingungen", "features": ["Härter", "gelernt"], "labels": ["Lebensbedingungen"]}
-{"t": "node", "id": "Lebenselixier_Entdeckt", "features": ["gelernt"], "labels": ["Lebenselixier", "Lebenselixier entdeckt", "Lebenselixier_Entdeckt"]}
-{"t": "node", "id": "Lebensmittel", "features": ["gelernt"], "labels": ["Lebensmittel", "heute Gebrauch denen Lebensmittel"]}
-{"t": "node", "id": "Lebewesen", "features": ["gelernt"], "labels": ["Lebewesen", "Wissenschaft", "Wissenschaft belebten Materie Lebewesen"]}
-{"t": "node", "id": "Lehret", "features": ["Wissenschaften", "gelernt"], "labels": ["Lehret"]}
-{"t": "node", "id": "Leon", "features": ["gelernt"], "labels": ["Leon", "insbesondere Filippo Brunelleschi Leon"]}
-{"t": "node", "id": "Leonardo_Vinci", "features": ["gelernt"], "labels": ["Leonardo", "Leonardo Vinci", "Leonardo_Vinci"]}
-{"t": "node", "id": "Letzteres", "features": ["gelernt"], "labels": ["Letzteres"]}
-{"t": "node", "id": "Liechtenstein", "features": ["gelernt"], "labels": ["Liechtenstein"]}
-{"t": "node", "id": "Ließe_Demnach_Als", "features": ["gelernt"], "labels": ["Ließe_Demnach_Als", "ließe demnach als Oberster"]}
-{"t": "node", "id": "Literatur", "features": ["gelernt"], "labels": ["Literatur"]}
-{"t": "node", "id": "Literaturdiskussion", "features": ["Demgegenüber", "gelernt"], "labels": ["Literaturdiskussion"]}
-{"t": "node", "id": "Literaturkritik", "features": ["gelernt"], "labels": ["Literaturkritik"]}
-{"t": "node", "id": "Literaturtheorie", "features": ["gelernt"], "labels": ["Literaturtheorie"]}
-{"t": "node", "id": "Literaturzeitschriften", "features": ["gelernt"], "labels": ["Literaturzeitschriften"]}
-{"t": "node", "id": "LithiumPreis_Innerhalb_Eines", "features": ["gelernt"], "labels": ["LithiumPreis", "LithiumPreis innerhalb eines Jahres", "LithiumPreis_Innerhalb_Eines"]}
-{"t": "node", "id": "Ludwig", "features": ["gelernt"], "labels": ["Ludwig"]}
-{"t": "node", "id": "Luxemburg", "features": ["gelernt"], "labels": ["Luxemburg"]}
-{"t": "node", "id": "Lösung", "features": ["gelernt"], "labels": ["Lösung", "lösung"]}
-{"t": "node", "id": "Magma", "features": ["Elementen", "Lava", "gelernt"], "labels": ["Magma", "geologische Struktur wenn Magma"]}
-{"t": "node", "id": "Malerei", "features": ["gelernt"], "labels": ["Malerei", "europäische vorderasiatische Werke Malerei"]}
-{"t": "node", "id": "Manchen_Staatlichen_Akteuren", "features": ["gelernt"], "labels": ["Manchen_Staatlichen_Akteuren", "manchen staatlichen Akteuren umfangreichere"]}
-{"t": "node", "id": "Mannschaftssportart", "features": ["gelernt"], "labels": ["Mannschaftssportart", "weltweit beliebteste Mannschaftssportart"]}
-{"t": "node", "id": "Massiven_SchmelzwasserEintrag_Nordatlantik", "features": ["gelernt"], "labels": ["Massiven_SchmelzwasserEintrag_Nordatlantik", "massiven SchmelzwasserEintrag Nordatlantik"]}
-{"t": "node", "id": "Materiellen_Grundlagen_Ausbildung", "features": ["gelernt"], "labels": ["Materiellen_Grundlagen_Ausbildung", "materiellen Grundlagen Ausbildung erblichen"]}
-{"t": "node", "id": "Mathematik", "features": ["Formalwissenschaft", "Wissenschaften", "gelernt"], "labels": ["Mathematik", "aus heutigen Mathematik ebenfalls"]}
-{"t": "node", "id": "Maul", "features": ["Schnauze", "gelernt"], "labels": ["Maul"]}
-{"t": "node", "id": "Max", "features": ["Forschung", "gelernt"], "labels": ["Max"]}
-{"t": "node", "id": "Maß", "features": ["gelernt"], "labels": ["Maß", "gemeinsam sie begrenztem Maß"]}
-{"t": "node", "id": "Medizin", "features": ["Behandlung", "Erfahrungswissenschaft", "Selten_Iatrik", "gelernt"], "labels": ["Medizin", "Person", "Person Medizin studiert"]}
-{"t": "node", "id": "Mediziner", "features": ["Medizin", "gelernt"], "labels": ["Mediziner"]}
-{"t": "node", "id": "Medizinischpolitischen_Maßnahmen_Dagegen", "features": ["gelernt"], "labels": ["Medizinischpolitischen_Maßnahmen_Dagegen", "medizinischpolitischen Maßnahmen dagegen ergriffen"]}
-{"t": "node", "id": "Meer", "features": ["gelernt"], "labels": ["Liparischen", "Liparischen Inseln Tyrrhenischen Meer", "Meer"]}
-{"t": "node", "id": "Meeren", "features": ["gelernt"], "labels": ["Meeren", "Prozent", "Prozent Erdoberfläche Meeren bedeckt"]}
-{"t": "node", "id": "Meist", "features": ["Hochflächen", "gelernt"], "labels": ["Meist"]}
-{"t": "node", "id": "Mensch", "features": ["gelernt"], "labels": ["Mensch"]}
-{"t": "node", "id": "Menschen", "features": ["gelernt"], "labels": ["Menschen", "materielle Menschen"]}
-{"t": "node", "id": "Merkmale", "features": ["Genen", "Hand", "gelernt"], "labels": ["Merkmale"]}
-{"t": "node", "id": "Metapher", "features": ["Intransparenz", "gelernt"], "labels": ["Metapher"]}
-{"t": "node", "id": "Metaphern", "features": ["gelernt"], "labels": ["Metaphern", "selbst anthropomorphe Metaphern auf"]}
-{"t": "node", "id": "Metaphysik", "features": ["gelernt"], "labels": ["Logik", "Logik Ethik Metaphysik", "Metaphysik"]}
-{"t": "node", "id": "Methanhydrat", "features": ["Energieträger", "gelernt"], "labels": ["Kohle", "Kohle Erdgas Erdöl Methanhydrat", "Methanhydrat"]}
-{"t": "node", "id": "Methoden", "features": ["Weiterhin", "gelernt"], "labels": ["Methoden"]}
-{"t": "node", "id": "Mexiko", "features": ["gelernt"], "labels": ["Mexiko", "Mexiko rein aquatisch lebender"]}
-{"t": "node", "id": "Mexiko_Rein_Aquatisch", "features": ["gelernt"], "labels": ["Mexiko", "Mexiko rein aquatisch", "Mexiko rein aquatisch lebender", "Mexiko_Rein_Aquatisch"]}
-{"t": "node", "id": "Mikroelektronik", "features": ["gelernt"], "labels": ["Mikroelektronik", "weiterhin Mikroelektronik"]}
-{"t": "node", "id": "Minuten", "features": ["gelernt"], "labels": ["Minuten", "üblicherweise zweimal Minuten zuzüglich"]}
-{"t": "node", "id": "Mittelalter", "features": ["gelernt"], "labels": ["Mittelalter", "Mittelalter nach breiten regional"]}
-{"t": "node", "id": "Mobiltelefone", "features": ["gelernt"], "labels": ["Mobiltelefone", "eingebaute optionale JavaUnterstützung Mobiltelefone"]}
-{"t": "node", "id": "Mobiltelefonen", "features": ["gelernt"], "labels": ["Mobiltelefonen", "Vergleich", "Vergleich älteren Mobiltelefonen relativ"]}
-{"t": "node", "id": "Mode", "features": ["gelernt"], "labels": ["Mode", "erst Frühmoderne Mode kommende"]}
-{"t": "node", "id": "Molekularbiologie", "features": ["gelernt"], "labels": ["Molekularbiologie"]}
-{"t": "node", "id": "Molekülen", "features": ["gelernt"], "labels": ["Molekülen"]}
-{"t": "node", "id": "Mondlose", "features": ["Venus", "gelernt"], "labels": ["Mondlose"]}
-{"t": "node", "id": "Moral", "features": ["gelernt"], "labels": ["Gegensatz", "Gegensatz Normenordnungen wie Moral", "Moral"]}
-{"t": "node", "id": "Muharek", "features": ["gelernt"], "labels": ["Abu", "Abu Muharek", "Muharek"]}
-{"t": "node", "id": "Musik", "features": ["Reflexion", "Werke", "gelernt"], "labels": ["Musik"]}
-{"t": "node", "id": "Möglich", "features": ["gelernt"], "labels": ["Möglich", "möglich nach Kriterien beurteilen"]}
-{"t": "node", "id": "Möglicherweise", "features": ["Kochen", "gelernt"], "labels": ["Möglicherweise"]}
-{"t": "node", "id": "Möglichkeiten_Vorratshaltung_Verbessert", "features": ["gelernt"], "labels": ["Möglichkeiten", "Möglichkeiten Vorratshaltung verbessert", "Möglichkeiten_Vorratshaltung_Verbessert"]}
-{"t": "node", "id": "Nachdenken", "features": ["gelernt"], "labels": ["Nachdenken", "alt wie Nachdenken über"]}
-{"t": "node", "id": "Nachhaltigkeit", "features": ["Gekennzeichnet", "Handlungsprinzip", "Unablässige", "gelernt"], "labels": ["Nachhaltigkeit"]}
-{"t": "node", "id": "Nachhaltigkeitsbegriff", "features": ["Ebenfalls", "gelernt"], "labels": ["Nachhaltigkeitsbegriff"]}
-{"t": "node", "id": "Nachtaktiv", "features": ["gelernt"], "labels": ["Nachtaktiv", "nachtaktiv bevorzugen kühles sauerstoffreiches"]}
-{"t": "node", "id": "Namen", "features": ["Situation", "gelernt"], "labels": ["Namen"]}
-{"t": "node", "id": "National", "features": ["Genomforschung", "gelernt"], "labels": ["National"]}
-{"t": "node", "id": "Natur", "features": ["gelernt"], "labels": ["Natur", "Naturwissenschaft", "Naturwissenschaft grundlegende Phänomene Natur"]}
-{"t": "node", "id": "Naturphilosophen", "features": ["Soll", "gelernt"], "labels": ["Naturphilosophen"]}
-{"t": "node", "id": "Naturwissenschaften", "features": ["gelernt"], "labels": ["Naturwissenschaften", "Teilgebiet", "Teilgebiet Naturwissenschaften befasst sowohl"]}
-{"t": "node", "id": "Natürlichen_Satelliten", "features": ["gelernt"], "labels": ["Natürlichen_Satelliten", "natürlichen Satelliten"]}
-{"t": "node", "id": "Navigationssystem", "features": ["System", "gelernt"], "labels": ["Navigationssystem"]}
-{"t": "node", "id": "Neben_Gaslt", "features": ["gelernt"], "labels": ["Neben_Gaslt", "neben Gaslt"]}
-{"t": "node", "id": "Neptunbahn", "features": ["gelernt"], "labels": ["Neptunbahn", "als Neptunbahn"]}
-{"t": "node", "id": "Netz", "features": ["Internet", "gelernt"], "labels": ["Netz"]}
-{"t": "node", "id": "Nichts", "features": ["gelernt"], "labels": ["Nichts", "nichts bekannt"]}
-{"t": "node", "id": "Nimmt", "features": ["Planeten", "gelernt"], "labels": ["Nimmt"]}
-{"t": "node", "id": "Nomen", "features": ["Sportler", "gelernt"], "labels": ["Nomen"]}
-{"t": "node", "id": "Norder", "features": ["Treibeis", "gelernt"], "labels": ["Norder"]}
-{"t": "node", "id": "Nordosten_Lothringens", "features": ["gelernt"], "labels": ["Nordosten", "Nordosten Lothringens", "Nordosten_Lothringens"]}
-{"t": "node", "id": "Nordschleswig", "features": ["gelernt"], "labels": ["Nordschleswig"]}
-{"t": "node", "id": "Oberen", "features": ["gelernt"], "labels": ["Gruppe", "Gruppe Landwirbeltiere Erdmittelalter Oberen", "Oberen"]}
-{"t": "node", "id": "Oberfläche", "features": ["gelernt", "Übersät"], "labels": ["Oberfläche", "Wüste", "Wüste Oberfläche überwiegend aus"]}
-{"t": "node", "id": "Oberseite", "features": ["gelernt"], "labels": ["Oberseite", "Oberseite eines Stücks ozeanischer"]}
-{"t": "node", "id": "Objekte", "features": ["Jupitermonde", "gelernt"], "labels": ["Objekte", "künstlerischen Objekte nach ihren"]}
-{"t": "node", "id": "Obwohl", "features": ["Hobby", "Publikationen", "Zonen", "gelernt"], "labels": ["Obwohl"]}
-{"t": "node", "id": "Oft", "features": ["Problemlösung", "gelernt"], "labels": ["Oft"]}
-{"t": "node", "id": "Olympiade", "features": ["Kalenderjahren", "Spielen", "gelernt"], "labels": ["Olympiade"]}
-{"t": "node", "id": "Olympische", "features": ["Sportwettkampfveranstaltungen", "gelernt"], "labels": ["Olympische"]}
-{"t": "node", "id": "Olympischen", "features": ["Umfang", "gelernt"], "labels": ["Olympischen"]}
-{"t": "node", "id": "Opposition", "features": ["Bestandteil", "gelernt"], "labels": ["Opposition"]}
-{"t": "node", "id": "Optimum", "features": ["Wertung", "gelernt"], "labels": ["Optimum"]}
-{"t": "node", "id": "Ort", "features": ["Allel", "gelernt"], "labels": ["Ort"]}
-{"t": "node", "id": "Ostasien", "features": ["Renaissance", "gelernt"], "labels": ["Ostasien"]}
-{"t": "node", "id": "Ostbelgien", "features": ["gelernt"], "labels": ["Ostbelgien"]}
-{"t": "node", "id": "Osten_Gegenüber_Asien", "features": ["gelernt"], "labels": ["Osten", "Osten gegenüber Asien keine", "Osten_Gegenüber_Asien"]}
-{"t": "node", "id": "Ozean", "features": ["Erde", "gelernt"], "labels": ["Ozean"]}
-{"t": "node", "id": "Ozeanbodens", "features": ["gelernt"], "labels": ["Hebungen", "Hebungen Senkungen Ozeanbodens aufgrund", "Ozeanbodens"]}
-{"t": "node", "id": "Ozeane", "features": ["Hydrografischen", "gelernt"], "labels": ["Ozeane"]}
-{"t": "node", "id": "Paroxysmus", "features": ["Ausbrüchen", "gelernt"], "labels": ["Paroxysmus"]}
-{"t": "node", "id": "Paternalistischen_Ermessenspielraum_Ärzte", "features": ["gelernt"], "labels": ["Paternalistischen_Ermessenspielraum_Ärzte", "paternalistischen Ermessenspielraum Ärzte zurückzudrängen"]}
-{"t": "node", "id": "Personen", "features": ["Hauptfach", "gelernt"], "labels": ["Personen"]}
-{"t": "node", "id": "Pflicht", "features": ["Unangefochten", "gelernt"], "labels": ["Pflicht"]}
-{"t": "node", "id": "Philosophie", "features": ["Wahrheit", "gelernt"], "labels": ["Philosophie"]}
-{"t": "node", "id": "Phonetisch", "features": ["Herkunft", "gelernt"], "labels": ["Phonetisch"]}
-{"t": "node", "id": "Phonographie", "features": ["gelernt"], "labels": ["Phonographie", "dagegen Kinematographie Analogbildung Phonographie"]}
-{"t": "node", "id": "Physik", "features": ["Natur", "gelernt"], "labels": ["Hauptsäulen", "Hauptsäulen modernen Physik", "Physik"]}
-{"t": "node", "id": "Physikalische", "features": ["Geowissenschaften", "gelernt"], "labels": ["Physikalische", "physikalische"]}
-{"t": "node", "id": "Physiologie", "features": ["gelernt"], "labels": ["Physiologie"]}
-{"t": "node", "id": "Piktorialismus", "features": ["gelernt"], "labels": ["Piktorialismus", "seit fotografischen Stilrichtung Piktorialismus"]}
-{"t": "node", "id": "Planeten", "features": ["gelernt"], "labels": ["Planeten", "Venus", "Venus Erde Planeten geringsten"]}
-{"t": "node", "id": "Planetenbahnen", "features": ["Erdbahnebene", "gelernt"], "labels": ["Planetenbahnen"]}
-{"t": "node", "id": "Planvolles", "features": ["Architektur", "gelernt"], "labels": ["Planvolles"]}
-{"t": "node", "id": "Pluto", "features": ["Unterwelt", "Zwergplanet", "gelernt"], "labels": ["Pluto"]}
-{"t": "node", "id": "Pluto_Größte", "features": ["gelernt"], "labels": ["Pluto", "Pluto größte", "Pluto_Größte"]}
-{"t": "node", "id": "Popkultur", "features": ["gelernt"], "labels": ["Popkultur", "weltweiten Popkultur geworden spielen"]}
-{"t": "node", "id": "Prinzip", "features": ["Holz", "gelernt"], "labels": ["Prinzip"]}
-{"t": "node", "id": "Prinzipien", "features": ["gelernt"], "labels": ["Prinzipien"]}
-{"t": "node", "id": "Privatsphäre", "features": ["gelernt"], "labels": ["Ortsunabhängigkeit", "Ortsunabhängigkeit Mobilfunkstationen Latenzfreiheit Privatsphäre", "Privatsphäre"]}
-{"t": "node", "id": "Problematik", "features": ["gelernt"], "labels": ["Problematik", "Problematik als LeibSeeleProblem"]}
-{"t": "node", "id": "Problemlösung", "features": ["gelernt"], "labels": ["Problemlösung", "Problemlösung schließlich völlig neues"]}
-{"t": "node", "id": "Produktion_Bis_Seiner", "features": ["gelernt"], "labels": ["Produktion", "Produktion bis seiner Verbreitung", "Produktion_Bis_Seiner"]}
-{"t": "node", "id": "Prozess", "features": ["Kohlenstoffanteils", "gelernt"], "labels": ["Prozess"]}
-{"t": "node", "id": "Psychische_Gesundheitsschäden", "features": ["gelernt"], "labels": ["Psychische_Gesundheitsschäden", "psychische Gesundheitsschäden"]}
-{"t": "node", "id": "Psychoanalyse", "features": ["Verfahren", "gelernt"], "labels": ["Psychoanalyse"]}
-{"t": "node", "id": "Psychologie", "features": ["Herbart", "Ziel", "gelernt"], "labels": ["Psychologie"]}
-{"t": "node", "id": "Publikationen", "features": ["gelernt"], "labels": ["Publikationen", "Wortschöpfungen", "Wortschöpfungen diversen sprachkritischen Publikationen"]}
-{"t": "node", "id": "Punkt", "features": ["Kinnarodden", "gelernt"], "labels": ["Punkt"]}
-{"t": "node", "id": "Quantenmechanik", "features": ["Gesetzmäßigkeiten", "Physik", "gelernt"], "labels": ["Quantenmechanik"]}
-{"t": "node", "id": "Quelle", "features": ["gelernt"], "labels": ["Quelle", "nach wie wichtige Quelle"]}
-{"t": "node", "id": "RIKEN", "features": ["Forschungsinstitut", "gelernt"], "labels": ["RIKEN"]}
-{"t": "node", "id": "Raffael", "features": ["gelernt"], "labels": ["Raffael"]}
-{"t": "node", "id": "Rechnernetzwerken", "features": ["gelernt"], "labels": ["Rechnernetzwerken", "weltweiter Verbund Rechnernetzwerken autonomen"]}
-{"t": "node", "id": "Recht", "features": ["Definiert", "Gemeinschaft", "Rechten", "gelernt"], "labels": ["Recht", "recht kurz kräftig"]}
-{"t": "node", "id": "Rechten", "features": ["gelernt"], "labels": ["Rechten", "unterscheiden subjektiven Rechten konkreten"]}
-{"t": "node", "id": "Rechtsphilosophie", "features": ["gelernt"], "labels": ["Rechtsphilosophie"]}
-{"t": "node", "id": "Rechtsvorschriften", "features": ["gelernt"], "labels": ["Rechtsvorschriften"]}
-{"t": "node", "id": "Reflexion", "features": ["gelernt"], "labels": ["Reflexion", "immer geistigen Reflexion aus"]}
-{"t": "node", "id": "Regenerate", "features": ["Verkrüppelungen", "gelernt"], "labels": ["Regenerate"]}
-{"t": "node", "id": "Regenerative", "features": ["gelernt"], "labels": ["Einzelnen", "Einzelnen Fossile Energie Regenerative", "Regenerative"]}
-{"t": "node", "id": "Regenwald", "features": ["Wälder", "gelernt"], "labels": ["Regenwald"]}
-{"t": "node", "id": "Regionen", "features": ["gelernt"], "labels": ["Regionen", "diesen Regionen vorherrschend"]}
-{"t": "node", "id": "Relativ", "features": ["gelernt"], "labels": ["Relativ", "relativ gering wodurch vielen"]}
-{"t": "node", "id": "Relativ_Ausgeprägte_Klimaanomalie", "features": ["gelernt"], "labels": ["Relativ_Ausgeprägte_Klimaanomalie", "relativ ausgeprägte Klimaanomalie"]}
-{"t": "node", "id": "Renaissance", "features": ["Jahrhunderte", "gelernt"], "labels": ["Renaissance", "bedeutendste Errungenschaft Technik Renaissance"]}
-{"t": "node", "id": "Renaissance_Erst_Seit", "features": ["gelernt"], "labels": ["Renaissance", "Renaissance erst seit Mitte", "Renaissance_Erst_Seit"]}
-{"t": "node", "id": "Revolution", "features": ["gelernt"], "labels": ["Revolution", "Verwendung", "Verwendung Begriffs industrielle Revolution"]}
-{"t": "node", "id": "Rheische", "features": ["gelernt"], "labels": ["Rheische", "beispielsweise Mirovia Panthalassa Rheische"]}
-{"t": "node", "id": "Richtete_Erst_Laufe", "features": ["gelernt"], "labels": ["Richtete_Erst_Laufe", "richtete erst Laufe"]}
-{"t": "node", "id": "Rohstoffen", "features": ["gelernt"], "labels": ["Nachweis", "Nachweis Erschließung Rohstoffen wie", "Rohstoffen"]}
-{"t": "node", "id": "Römischen_Reichs", "features": ["gelernt"], "labels": ["Römischen", "Römischen Reichs", "Römischen_Reichs"]}
-{"t": "node", "id": "Rückbesinnung", "features": ["gelernt"], "labels": ["Formen", "Formen Rückbesinnung auf Antike", "Rückbesinnung"]}
-{"t": "node", "id": "Sachsen", "features": ["gelernt"], "labels": ["Sachsen", "historische Volk Sachsen gemeint"]}
-{"t": "node", "id": "Sanddünen", "features": ["Muharek", "gelernt"], "labels": ["Sanddünen"]}
-{"t": "node", "id": "Sandebenen", "features": ["gelernt"], "labels": ["Sandebenen", "verfestigte Sandebenen ansonsten insbesondere"]}
-{"t": "node", "id": "Sandwüste", "features": ["Arabien", "Oberfläche", "gelernt"], "labels": ["Sandwüste"]}
-{"t": "node", "id": "Satzes", "features": ["gelernt"], "labels": ["Beweis", "Beweis Satzes", "Satzes"]}
-{"t": "node", "id": "Schicht", "features": ["gelernt"], "labels": ["Schicht", "lichtempfindliche Schicht auf Bildebene"]}
-{"t": "node", "id": "Schichtvulkan", "features": ["gelernt"], "labels": ["Schichtvulkan", "als Schichtvulkan als Schildvulkan"]}
-{"t": "node", "id": "Schilddrüsenfunktion", "features": ["gelernt"], "labels": ["Schilddrüsenfunktion", "evolutionär erworbene Veränderung Schilddrüsenfunktion"]}
-{"t": "node", "id": "Schnauze", "features": ["gelernt"], "labels": ["Schnauze", "unterständig Schnauze abgerundet kleinen"]}
-{"t": "node", "id": "Schulterblatt", "features": ["gelernt"], "labels": ["Schulterblatt", "unter anderem verlängerte Schulterblatt"]}
-{"t": "node", "id": "See", "features": ["gelernt"], "labels": ["See", "endemisch XochimilcoSee benachbarten ChalcoSee"]}
-{"t": "node", "id": "Seine_Zentrale_Bedeutung", "features": ["gelernt"], "labels": ["Seine_Zentrale_Bedeutung", "seine zentrale Bedeutung Literaturgeschichten"]}
-{"t": "node", "id": "Seitdem", "features": ["Bestandteil", "gelernt"], "labels": ["Seitdem"]}
-{"t": "node", "id": "Selbst", "features": ["gelernt"], "labels": ["Selbst"]}
-{"t": "node", "id": "Selten_Iatrik", "features": ["gelernt"], "labels": ["Selten_Iatrik", "selten auch die Iatrik"]}
-{"t": "node", "id": "Sie_Dominante_Rolle", "features": ["gelernt"], "labels": ["Sie_Dominante_Rolle", "sie dominante Rolle erhoben"]}
-{"t": "node", "id": "Sie_Ihre_Diagnosen", "features": ["gelernt"], "labels": ["Sie_Ihre_Diagnosen", "sie ihre Diagnosen"]}
-{"t": "node", "id": "Sieht_Wie_Blendend", "features": ["gelernt"], "labels": ["Sieht_Wie_Blendend", "sieht wie blendend heller"]}
-{"t": "node", "id": "Sinne", "features": ["gelernt"], "labels": ["Sinne", "weitesten Sinne handwerkliche industrielle"]}
-{"t": "node", "id": "Situation", "features": ["gelernt"], "labels": ["Situation", "Zeichen", "Zeichen Situation"]}
-{"t": "node", "id": "Smartphone", "features": ["gelernt"], "labels": ["Smartphone"]}
-{"t": "node", "id": "Smartphones", "features": ["Telefonieren", "gelernt"], "labels": ["Smartphones"]}
-{"t": "node", "id": "Sobald", "features": ["Frage", "gelernt"], "labels": ["Sobald"]}
-{"t": "node", "id": "Soll", "features": ["gelernt"], "labels": ["Soll", "soll"]}
-{"t": "node", "id": "Sonne", "features": ["Sonnensystems", "gelernt"], "labels": ["Sonne"]}
-{"t": "node", "id": "Sonne_Scheinbaren_Durchmesser", "features": ["gelernt"], "labels": ["Sonne", "Sonne scheinbaren Durchmesser", "Sonne_Scheinbaren_Durchmesser"]}
-{"t": "node", "id": "Sonnenenergie", "features": ["Energieträger", "gelernt"], "labels": ["Sonnenenergie"]}
-{"t": "node", "id": "Sonnensystem", "features": ["Erde", "gelernt"], "labels": ["Sonnensystem"]}
-{"t": "node", "id": "Sonnensystems", "features": ["gelernt"], "labels": ["Sonnensystems", "Zentralstern", "Zentralstern Sonnensystems"]}
-{"t": "node", "id": "Sowohl", "features": ["Diskussion", "gelernt"], "labels": ["Sowohl"]}
-{"t": "node", "id": "Sowohl_Analogals_Digitalbereich", "features": ["gelernt"], "labels": ["Sowohl_Analogals_Digitalbereich", "sowohl Analogals Digitalbereich Spiegelreflexkamera"]}
-{"t": "node", "id": "Speziellen_Zweig", "features": ["gelernt"], "labels": ["Speziellen_Zweig", "speziellen Zweig"]}
-{"t": "node", "id": "Spezifische_Einzelne_Ursachen", "features": ["gelernt"], "labels": ["Spezifische_Einzelne_Ursachen", "spezifische einzelne Ursachen Industriellen"]}
-{"t": "node", "id": "Spielen", "features": ["gelernt"], "labels": ["Spielen", "Zeitraum", "Zeitraum vier Jahren Spielen"]}
-{"t": "node", "id": "Spielzeit", "features": ["Minuten", "gelernt"], "labels": ["Spielzeit"]}
-{"t": "node", "id": "Sport", "features": ["gelernt"], "labels": ["Sport"]}
-{"t": "node", "id": "Sport_Als_Überbegriff", "features": ["gelernt"], "labels": ["Sport", "Sport als Überbegriff Konzepte", "Sport_Als_Überbegriff"]}
-{"t": "node", "id": "Sportler", "features": ["gelernt"], "labels": ["Sport", "Sport ausübende Sportler", "Sportler"]}
-{"t": "node", "id": "Sportwettkampfveranstaltungen", "features": ["gelernt"], "labels": ["Sammelbezeichnung", "Sammelbezeichnung regelmäßig ausgetragenen Sportwettkampfveranstaltungen", "Sportwettkampfveranstaltungen"]}
-{"t": "node", "id": "Sprache", "features": ["gelernt"], "labels": ["Sprache", "plurizentrische Sprache also mehrere", "stark metaphorischen Sprache geprägt"]}
-{"t": "node", "id": "Sprachgebrauch", "features": ["gelernt"], "labels": ["Sprachgebrauch", "europäischenglischen Sprachgebrauch geheimnisvolle transzendente"]}
-{"t": "node", "id": "Spätrenaissance", "features": ["Anfang", "gelernt"], "labels": ["Spätrenaissance"]}
-{"t": "node", "id": "Staatlich", "features": ["Moral", "gelernt"], "labels": ["Staatlich"]}
-{"t": "node", "id": "Staubteilchen", "features": ["gelernt"], "labels": ["Staubteilchen"]}
-{"t": "node", "id": "Stein_Weisen", "features": ["gelernt"], "labels": ["Stein", "Stein Weisen", "Stein_Weisen"]}
-{"t": "node", "id": "Steinschneider", "features": ["gelernt"], "labels": ["Steinschneider"]}
-{"t": "node", "id": "Stoff", "features": ["gelernt"], "labels": ["Stoff"]}
-{"t": "node", "id": "Struktur_Gesamten_Universums", "features": ["gelernt"], "labels": ["Struktur", "Struktur gesamten Universums zum", "Struktur_Gesamten_Universums", "Wissenschaft", "Wissenschaft Aufbau Zusammensetzung Struktur"]}
-{"t": "node", "id": "Subatomaren_Bereich", "features": ["gelernt"], "labels": ["Subatomaren_Bereich", "subatomaren Bereich"]}
-{"t": "node", "id": "Subsistenzorientierte", "features": ["Bilden", "gelernt"], "labels": ["Subsistenzorientierte"]}
-{"t": "node", "id": "Subtraktion", "features": ["gelernt"], "labels": ["Subtraktion", "minus Sobald Subtraktion definiert"]}
-{"t": "node", "id": "System", "features": ["gelernt"], "labels": ["System", "kein KI-System wenn schnellste"]}
-{"t": "node", "id": "System_Alltag_Konkret", "features": ["Annäherung", "gelernt"], "labels": ["System", "System Alltag konkret", "System_Alltag_Konkret"]}
-{"t": "node", "id": "Systeme", "features": ["gelernt"], "labels": ["Systeme", "weitesten Sinne computerbasierte Systeme"]}
-{"t": "node", "id": "Systemkamera", "features": ["Abzulösen", "gelernt"], "labels": ["Systemkamera"]}
-{"t": "node", "id": "Südtirol", "features": ["gelernt"], "labels": ["Südtirol"]}
-{"t": "node", "id": "Tabelle", "features": ["Elementen", "gelernt"], "labels": ["Tabelle"]}
-{"t": "node", "id": "Tagebau", "features": ["gelernt"], "labels": ["Tagebau"]}
-{"t": "node", "id": "Technik", "features": ["gelernt"], "labels": ["Technik", "starke Bezüge zur Technik"]}
-{"t": "node", "id": "Technische", "features": ["Filmgeschichte", "gelernt"], "labels": ["Technische", "technische"]}
-{"t": "node", "id": "Teilbereich", "features": ["Vererbung", "gelernt"], "labels": ["Teilbereich"]}
-{"t": "node", "id": "Teilweise", "features": ["gelernt"], "labels": ["Teilweise", "teilweise stark elliptisch kreuzen"]}
-{"t": "node", "id": "Telefonieren", "features": ["gelernt"], "labels": ["Telefonieren", "bezüglich Konstruktion Bedienung Telefonieren"]}
-{"t": "node", "id": "Themen", "features": ["gelernt"], "labels": ["Themen", "sehr weit Zuordnung Themen"]}
-{"t": "node", "id": "Theoretische_Biologie", "features": ["gelernt"], "labels": ["Theoretische", "Theoretische Biologie", "Theoretische_Biologie"]}
-{"t": "node", "id": "Theorien_Auf_Wissenschaftlicher", "features": ["gelernt"], "labels": ["Theorien", "Theorien auf wissenschaftlicher Ebene", "Theorien_Auf_Wissenschaftlicher"]}
-{"t": "node", "id": "Therapien_Verbessern_Will", "features": ["gelernt"], "labels": ["Therapien", "Therapien verbessern will", "Therapien_Verbessern_Will"]}
-{"t": "node", "id": "Tiefe", "features": ["gelernt"], "labels": ["Tiefe", "einheitlich sondern ändert Tiefe"]}
-{"t": "node", "id": "Tiere", "features": ["Nachtaktiv", "gelernt"], "labels": ["Tiere"]}
-{"t": "node", "id": "Tierischen_Körpers_Gesundem", "features": ["gelernt"], "labels": ["Tierischen_Körpers_Gesundem", "tierischen Körpers gesundem"]}
-{"t": "node", "id": "Tilman", "features": ["gelernt"], "labels": ["Tilman", "beispielsweise Donatello Michelangelo Tilman"]}
-{"t": "node", "id": "Tizian", "features": ["gelernt"], "labels": ["Tizian"]}
-{"t": "node", "id": "Traditionell", "features": ["Zeitng", "gelernt"], "labels": ["Traditionell"]}
-{"t": "node", "id": "Transformer", "features": ["gelernt"], "labels": ["Multiagentensysteme", "Multiagentensysteme Expertensysteme Transformer serviceorientierte", "Transformer"]}
-{"t": "node", "id": "Treibeis", "features": ["gelernt"], "labels": ["Treibeis", "teils ganz Packis Treibeis"]}
-{"t": "node", "id": "Trivialname", "features": ["Abgeleitet", "gelernt"], "labels": ["Trivialname"]}
-{"t": "node", "id": "Trotz", "features": ["Art", "gelernt"], "labels": ["Trotz"]}
-{"t": "node", "id": "Trägermaterialien", "features": ["Zelluloseacetat", "gelernt"], "labels": ["Trägermaterialien"]}
-{"t": "node", "id": "Typische", "features": ["Mobiltelefonen", "gelernt"], "labels": ["Typische"]}
-{"t": "node", "id": "Tümpel", "features": ["gelernt"], "labels": ["Tümpel", "schwer passierbar wegen Tümpel"]}
-{"t": "node", "id": "UEFA", "features": ["gelernt"], "labels": ["UEFA"]}
-{"t": "node", "id": "Umfang", "features": ["gelernt"], "labels": ["Umfang", "ihrem Umfang stetig gewachsen"]}
-{"t": "node", "id": "Umschreibt_Philosophie_Als", "features": ["gelernt"], "labels": ["Umschreibt_Philosophie_Als", "umschreibt Philosophie als Frage"]}
-{"t": "node", "id": "Umstritten", "features": ["gelernt"], "labels": ["Umstritten", "umstritten"]}
-{"t": "node", "id": "Umstrittene", "features": ["Definition", "gelernt"], "labels": ["Umstrittene"]}
-{"t": "node", "id": "Umweltdatensatz", "features": ["gelernt"], "labels": ["Umweltdatensatz", "wichtigster Umweltdatensatz"]}
-{"t": "node", "id": "Unablässige", "features": ["gelernt"], "labels": ["Beständige", "Beständige Unablässige wie ununterbrochen", "Unablässige"]}
-{"t": "node", "id": "Unangefochten", "features": ["gelernt"], "labels": ["Unangefochten", "unangefochten sowohl international gültigen"]}
-{"t": "node", "id": "Union", "features": ["gelernt"], "labels": ["Europarat", "Europarat Europäische Union", "Union", "meistgesprochene Muttersprache Europäischen Union"]}
-{"t": "node", "id": "Unterscheidungsbeispiel", "features": ["Daten", "gelernt"], "labels": ["Unterscheidungsbeispiel"]}
-{"t": "node", "id": "Unterscheidungsbeispiel_Navigationssystem", "features": ["Daten", "gelernt"], "labels": ["Unterscheidungsbeispiel", "Unterscheidungsbeispiel Navigationssystem", "Unterscheidungsbeispiel_Navigationssystem"]}
-{"t": "node", "id": "Unterschied_Einmal_Gefasst", "features": ["gelernt"], "labels": ["Unterschied", "Unterschied einmal gefasst Hans", "Unterschied_Einmal_Gefasst"]}
-{"t": "node", "id": "Untersucht_Hilfe_Quantenphysik", "features": ["gelernt"], "labels": ["Untersucht_Hilfe_Quantenphysik", "untersucht Hilfe Quantenphysik Universum"]}
-{"t": "node", "id": "Untersuchungsobjekte", "features": ["Malerei", "gelernt"], "labels": ["Untersuchungsobjekte"]}
-{"t": "node", "id": "Unterwelt", "features": ["gelernt"], "labels": ["Unterwelt", "nach römischen Gott Unterwelt"]}
-{"t": "node", "id": "Ursache", "features": ["Schilddrüsenfunktion", "Wärme", "gelernt"], "labels": ["Ursache"]}
-{"t": "node", "id": "Ursachen_Aller_Dinge", "features": ["gelernt"], "labels": ["Ursachen", "Ursachen aller Dinge befasst", "Ursachen_Aller_Dinge"]}
-{"t": "node", "id": "Venus", "features": ["gelernt"], "labels": ["Merkur", "Merkur Venus", "Venus"]}
-{"t": "node", "id": "Verarbeitung", "features": ["gelernt"], "labels": ["Verarbeitung", "Wissenschaft", "Wissenschaft systematischen Darstellung Verarbeitung"]}
-{"t": "node", "id": "Verbindungen", "features": ["gelernt"], "labels": ["Verbindungen", "organische Chemie kohlenstoffhaltige Verbindungen"]}
-{"t": "node", "id": "Verbreitung", "features": ["gelernt"], "labels": ["Verbreitung"]}
-{"t": "node", "id": "Verbrennung", "features": ["Zudem", "gelernt"], "labels": ["Verbrennung"]}
-{"t": "node", "id": "Vererbung", "features": ["gelernt"], "labels": ["Molekulargenetik", "Molekulargenetik molekularen Grundlagen Vererbung", "Vererbung"]}
-{"t": "node", "id": "Verfahren", "features": ["Bilder", "Garen", "gelernt"], "labels": ["Verfahren", "heute psychotherapeutisches Verfahren zur"]}
-{"t": "node", "id": "Verkleinerung", "features": ["gelernt"], "labels": ["Verkleinerung", "seitlicher Ansicht exponiert Verkleinerung"]}
-{"t": "node", "id": "Verkrüppelungen", "features": ["gelernt"], "labels": ["Regel", "Regel keine Verkrüppelungen sondern", "Verkrüppelungen"]}
-{"t": "node", "id": "Vermarktung", "features": ["gelernt"], "labels": ["Vermarktung"]}
-{"t": "node", "id": "Verteilung", "features": ["Erdhülle", "gelernt"], "labels": ["Verteilung"]}
-{"t": "node", "id": "Vervielfältigung", "features": ["gelernt"], "labels": ["Vervielfältigung"]}
-{"t": "node", "id": "Verwendung", "features": ["Carlowitz", "gelernt"], "labels": ["Verwendung"]}
-{"t": "node", "id": "Verwertung", "features": ["gelernt"], "labels": ["Verwertung"]}
-{"t": "node", "id": "Verwesung", "features": ["gelernt"], "labels": ["Verwesung", "geht Verwesung über"]}
-{"t": "node", "id": "Veränderungen_Fast_Allen", "features": ["gelernt"], "labels": ["Veränderungen", "Veränderungen fast allen Lebensbereichen", "Veränderungen_Fast_Allen"]}
-{"t": "node", "id": "Vielfältige_Berührungspunkte_Naturwissenschaften", "features": ["gelernt"], "labels": ["Vielfältige_Berührungspunkte_Naturwissenschaften", "vielfältige Berührungspunkte Naturwissenschaften"]}
-{"t": "node", "id": "Vielfältige_Vorteile", "features": ["gelernt"], "labels": ["Vielfältige_Vorteile", "vielfältige Vorteile"]}
-{"t": "node", "id": "Vierte_Industrielle_Revolution", "features": ["gelernt"], "labels": ["Vierte_Industrielle_Revolution", "vierte industrielle Revolution aufkommen"]}
-{"t": "node", "id": "Volkes", "features": ["gelernt"], "labels": ["Macht", "Macht Volkes über Volk", "Volkes"]}
-{"t": "node", "id": "Volkswirtschaft", "features": ["gelernt"], "labels": ["Deutschland", "Deutschland größte Volkswirtschaft bedeutendsten", "Volkswirtschaft"]}
-{"t": "node", "id": "Vom", "features": ["gelernt"], "labels": ["Vom"]}
-{"t": "node", "id": "Vorstellungen", "features": ["gelernt"], "labels": ["Vorstellungen", "relativ jung Vorstellungen solchen"]}
-{"t": "node", "id": "Vorteile", "features": ["Privatsphäre", "gelernt"], "labels": ["Vorteile"]}
-{"t": "node", "id": "Vorverständnis", "features": ["Quelle", "gelernt"], "labels": ["Vorverständnis"]}
-{"t": "node", "id": "Vulkan", "features": ["Magma", "Meer", "gelernt"], "labels": ["Vulkan"]}
-{"t": "node", "id": "Vulkanismus", "features": ["gelernt"], "labels": ["Vulkanismus", "als Vulkanismus"]}
-{"t": "node", "id": "Wahrheit", "features": ["gelernt"], "labels": ["Wahrheit", "beste aller Staatsformen Wahrheit"]}
-{"t": "node", "id": "Wassergehalt_Zusammensetzung_Seines", "features": ["gelernt"], "labels": ["Wassergehalt", "Wassergehalt Zusammensetzung seines Magmas", "Wassergehalt_Zusammensetzung_Seines"]}
-{"t": "node", "id": "Wasserkörper", "features": ["Tiefe", "gelernt"], "labels": ["Wasserkörper"]}
-{"t": "node", "id": "Weg", "features": ["gelernt"], "labels": ["Weg", "überschrieben Slogan Weg enkelgerechte"]}
-{"t": "node", "id": "Weise", "features": ["gelernt"], "labels": ["Weise", "Weise wie sie durch"]}
-{"t": "node", "id": "Weiter", "features": ["gelernt"], "labels": ["Weiter"]}
-{"t": "node", "id": "Weitere", "features": ["Asteroiden", "Erkenntnisgewinns", "Ozeanbodens", "gelernt"], "labels": ["Weitere"]}
-{"t": "node", "id": "Weitere_Gängige_Metapher", "features": ["Intransparenz", "gelernt"], "labels": ["Weitere_Gängige_Metapher", "weitere gängige Metapher"]}
-{"t": "node", "id": "Weitergabe_Erbanlagen_Nächste", "features": ["gelernt"], "labels": ["Weitergabe", "Weitergabe Erbanlagen nächste Generation", "Weitergabe_Erbanlagen_Nächste"]}
-{"t": "node", "id": "Weiterhin", "features": ["gelernt"], "labels": ["Weiterhin", "weiterhin als Basis Teilgebiete"]}
-{"t": "node", "id": "Wellen", "features": ["gelernt"], "labels": ["Wellen", "besonders gefährliche Wellen durch"]}
-{"t": "node", "id": "Weltraum", "features": ["Kugelraumfläche", "gelernt"], "labels": ["Weltraum"]}
-{"t": "node", "id": "Wer", "features": ["Historisch", "gelernt"], "labels": ["Wer"]}
-{"t": "node", "id": "Werke", "features": ["gelernt"], "labels": ["Kunstgattung", "Kunstgattung Werke aus organisierten", "Werke", "seitdem Debatte Bedeutung Werke"]}
-{"t": "node", "id": "Wertung", "features": ["gelernt"], "labels": ["Konvention", "Konvention Klimasystematik keine Wertung", "Wertung"]}
-{"t": "node", "id": "Wetterauswirkungen", "features": ["Kurzund", "gelernt"], "labels": ["Wetterauswirkungen"]}
-{"t": "node", "id": "Wichtigsten", "features": ["Verbindungen", "gelernt"], "labels": ["Wichtigsten", "wichtigsten"]}
-{"t": "node", "id": "Wildfärbung", "features": ["Dunkelgrau", "gelernt"], "labels": ["Wildfärbung"]}
-{"t": "node", "id": "Wissen", "features": ["Vorstellungen", "gelernt"], "labels": ["Wissen"]}
-{"t": "node", "id": "Wissenschaft", "features": ["gelernt"], "labels": ["Erdoberfläche", "Erdoberfläche befassende Wissenschaft sowohl", "Wissenschaft", "Wissenschaft über man reden", "heutzutage Wissenschaft innig miteinander"]}
-{"t": "node", "id": "Wissenschaften", "features": ["gelernt"], "labels": ["Wissenschaften", "unterliegt wie Wissenschaften kontinuierlichen", "ältesten Wissenschaften"]}
-{"t": "node", "id": "Wort", "features": ["Mode", "Phonographie", "Sinne", "Wurzel", "gelernt"], "labels": ["Wort"]}
-{"t": "node", "id": "Wortbildung", "features": ["gelernt"], "labels": ["Wortbildung", "Wortbildung aus altgriechisch deutsch"]}
-{"t": "node", "id": "Wueste", "features": ["Tümpel", "gelernt"], "labels": ["Wueste"]}
-{"t": "node", "id": "Wurzel", "features": ["gelernt"], "labels": ["Wurzel", "aus indogermanischen Wurzel aufrichten"]}
-{"t": "node", "id": "Wälder", "features": ["gelernt"], "labels": ["Wälder", "Wälder durch ganzjährig fallende"]}
-{"t": "node", "id": "Wärme", "features": ["gelernt"], "labels": ["Wärme", "entweder fehlende Wärme polaren"]}
-{"t": "node", "id": "Zehn_Bis_Billionen", "features": ["gelernt"], "labels": ["Zehn_Bis_Billionen", "zehn bis Billionen Zellen"]}
-{"t": "node", "id": "Zeit", "features": ["gelernt"], "labels": ["Zeit"]}
-{"t": "node", "id": "Zeitlich_Scharf_Begrenzte", "features": ["gelernt"], "labels": ["Zeitlich_Scharf_Begrenzte", "zeitlich scharf begrenzte"]}
-{"t": "node", "id": "Zeitng", "features": ["gelernt"], "labels": ["Zeitng", "Zusammenarbeit", "Zusammenarbeit Astronomie Geodäsie Zeitng"]}
-{"t": "node", "id": "Zellbiologie", "features": ["gelernt"], "labels": ["Zellbiologie"]}
-{"t": "node", "id": "Zelluloseacetat", "features": ["gelernt"], "labels": ["Zelluloseacetat", "Zelluloseacetat früher diente dazu"]}
-{"t": "node", "id": "Zentrale", "features": ["Bindungen", "gelernt"], "labels": ["Zentrale"]}
-{"t": "node", "id": "Ziel", "features": ["Objekte", "gelernt"], "labels": ["Ziel", "empirische Wissenschaft Ziel menschliches"]}
-{"t": "node", "id": "Ziele", "features": ["Kuration", "gelernt"], "labels": ["Ziele"]}
-{"t": "node", "id": "Zielgerichtete_Körperliche", "features": ["gelernt"], "labels": ["Zielgerichtete_Körperliche", "zielgerichtete körperliche"]}
-{"t": "node", "id": "Zimmermann", "features": ["gelernt"], "labels": ["Zimmermann"]}
-{"t": "node", "id": "Zonen", "features": ["gelernt"], "labels": ["Zonen", "sie artenreichsten Lebensräume Zonen"]}
-{"t": "node", "id": "Zudem", "features": ["gelernt"], "labels": ["Zudem", "zudem bedingt durch enthaltenen"]}
-{"t": "node", "id": "Zuge", "features": ["gelernt"], "labels": ["Zuge", "erhebliche Steigerung Lithiumabbaus Zuge"]}
-{"t": "node", "id": "Zugleich", "features": ["gelernt"], "labels": ["Zugleich", "zugleich eines wichtigsten Elemente"]}
-{"t": "node", "id": "Zunächst_Enorme_Umweltschäden", "features": ["gelernt"], "labels": ["Zunächst_Enorme_Umweltschäden", "zunächst enorme Umweltschäden durch"]}
-{"t": "node", "id": "Zusammenhängen", "features": ["gelernt"], "labels": ["Medium", "Medium sehr verschiedenen Zusammenhängen", "Zusammenhängen"]}
-{"t": "node", "id": "Zustand", "features": ["gelernt"], "labels": ["Zielkonflikt", "Zielkonflikt veränderlicher bestmöglicher Zustand", "Zustand"]}
-{"t": "node", "id": "Zustimmung_Patienten_Unabdingbar", "features": ["gelernt"], "labels": ["Zustimmung", "Zustimmung Patienten unabdingbar", "Zustimmung_Patienten_Unabdingbar"]}
-{"t": "node", "id": "Zwergplanet", "features": ["gelernt"], "labels": ["Zwergplanet", "größte zweitmassivste bekannte Zwergplanet"]}
-{"t": "node", "id": "Zwergplaneten", "features": ["gelernt"], "labels": ["Zwergplaneten"]}
-{"t": "node", "id": "Ähnlich", "features": ["gelernt"], "labels": ["Ähnlich", "ähnlich schwierig bestimmen wie"]}
-{"t": "node", "id": "Ärzteschaft", "features": ["gelernt"], "labels": ["Ärzteschaft"]}
-{"t": "node", "id": "Ätna", "features": ["gelernt"], "labels": ["Ätna", "Ätna auf Sizilien"]}
-{"t": "node", "id": "Ökologie", "features": ["gelernt"], "labels": ["Ökologie"]}
-{"t": "node", "id": "Österreich", "features": ["gelernt"], "labels": ["Österreich"]}
-{"t": "node", "id": "Übergänge", "features": ["Fließend", "gelernt"], "labels": ["Übergänge"]}
-{"t": "node", "id": "Überreste", "features": ["Kontinenten", "gelernt"], "labels": ["Überreste"]}
-{"t": "node", "id": "Übersät", "features": ["gelernt"], "labels": ["Übersät", "übersät dicht blockigem kantigem"]}
+{"t": "meta", "format": "memory_jsonl", "encoding": "utf-8", "umlaute": true, "created_at": "2026-02-14T01:39:04", "counts": {"nodes": 681, "edges": 1123}}
+{"t": "node", "id": "Abgeleitet", "features": ["gelernt"], "labels": ["Abgeleitet", "abgeleitet aus atl Xolotl"], "cluster": "C077"}
+{"t": "node", "id": "Abgrenzung", "features": ["Astronomie", "Einordnung", "gelernt"], "labels": ["Abgrenzung"], "cluster": "C006"}
+{"t": "node", "id": "Ableitungen", "features": ["gelernt"], "labels": ["Ableitungen", "zahlreiche Ableitungen wie filmen"], "cluster": "C011"}
+{"t": "node", "id": "Abzug", "features": ["Ausbelichtung", "gelernt"], "labels": ["Abzug"], "cluster": "C078"}
+{"t": "node", "id": "Abzulösen", "features": ["gelernt"], "labels": ["Abzulösen", "abzulösen"], "cluster": "C079"}
+{"t": "node", "id": "Acht_Sie_Umkreisenden", "features": ["gelernt"], "labels": ["Acht_Sie_Umkreisenden", "acht sie umkreisenden Planeten"], "cluster": "C001"}
+{"t": "node", "id": "Adjektiv", "features": ["Form", "gelernt"], "labels": ["Adjektiv"], "cluster": "C048"}
+{"t": "node", "id": "Adverb", "features": ["gelernt"], "labels": ["Adverb", "gotischen Adverb iudisk belegt"], "cluster": "C049"}
+{"t": "node", "id": "Ahd", "features": ["gelernt"], "labels": ["Ahd", "ahd"], "cluster": "C007"}
+{"t": "node", "id": "Akademische_Mediziner_Früherer", "features": ["gelernt"], "labels": ["Akademische_Mediziner_Früherer", "akademische Mediziner früherer Zeit"], "cluster": "C025"}
+{"t": "node", "id": "Albrecht_Dürer", "features": ["gelernt"], "labels": ["Albrecht", "Albrecht Dürer", "Albrecht_Dürer"], "cluster": "C008"}
+{"t": "node", "id": "Alle", "features": ["Vulkanismus", "gelernt"], "labels": ["Alle"], "cluster": "C080"}
+{"t": "node", "id": "Alle_Bereiche_Films", "features": ["gelernt"], "labels": ["Alle_Bereiche_Films", "alle Bereiche Films Filmherstellung"], "cluster": "C016"}
+{"t": "node", "id": "Alle_Regeln_Zur", "features": ["gelernt"], "labels": ["Alle_Regeln_Zur", "alle Regeln zur Konfliktverhütung"], "cluster": "C009"}
+{"t": "node", "id": "Allein", "features": ["gelernt"], "labels": ["Allein", "allein auf Naturbeobachtung angewiesen"], "cluster": "C006"}
+{"t": "node", "id": "Allel", "features": ["gelernt"], "labels": ["Allel", "als Allel"], "cluster": "C081"}
+{"t": "node", "id": "Allen", "features": ["Maß", "gelernt"], "labels": ["Allen"], "cluster": "C082"}
+{"t": "node", "id": "Allgemein", "features": ["Sachsen", "gelernt"], "labels": ["Allgemein"], "cluster": "C083"}
+{"t": "node", "id": "Alltagspsychologie", "features": ["Disziplin", "gelernt"], "labels": ["Alltagspsychologie"], "cluster": "C017"}
+{"t": "node", "id": "Altertum", "features": ["Mittelalter", "gelernt"], "labels": ["Altertum"], "cluster": "C084"}
+{"t": "node", "id": "Anders", "features": ["gelernt"], "labels": ["Anders", "anders als Wörter Endung"], "cluster": "C085"}
+{"t": "node", "id": "Anfang", "features": ["gelernt"], "labels": ["Anfang"], "cluster": "C086"}
+{"t": "node", "id": "Anglizismus", "features": ["gelernt"], "labels": ["Anglizismus"], "cluster": "C011"}
+{"t": "node", "id": "Anhäufung_Tausenden_Asteroiden", "features": ["gelernt"], "labels": ["Anhäufung", "Anhäufung tausenden Asteroiden", "Anhäufung_Tausenden_Asteroiden"], "cluster": "C018"}
+{"t": "node", "id": "Annäherung", "features": ["gelernt"], "labels": ["Annäherung", "vielen Unternehmen Annäherung über"], "cluster": "C087"}
+{"t": "node", "id": "Ansätze", "features": ["Wissenschaft", "gelernt"], "labels": ["Ansätze"], "cluster": "C033"}
+{"t": "node", "id": "Antike", "features": ["gelernt"], "labels": ["Antike"], "cluster": "C050"}
+{"t": "node", "id": "Anwendungsbezogene_Forschung_Ihrer", "features": ["gelernt"], "labels": ["Anwendungsbezogene_Forschung_Ihrer", "anwendungsbezogene Forschung ihrer Vertreter"], "cluster": "C003"}
+{"t": "node", "id": "Arabien", "features": ["gelernt"], "labels": ["Arabien", "Rub", "Rub alChali Arabien zweitgrößte"], "cluster": "C034"}
+{"t": "node", "id": "Archi", "features": ["gelernt"], "labels": ["Archi", "archi"], "cluster": "C010"}
+{"t": "node", "id": "Architektur", "features": ["gelernt"], "labels": ["Architektur", "heute großer Formenreichtum Architektur", "zentrale Inhalt Architektur"], "cluster": "C088"}
+{"t": "node", "id": "Architekturgeschichte", "features": ["Kunstgeschichte", "gelernt"], "labels": ["Architekturgeschichte"], "cluster": "C089"}
+{"t": "node", "id": "Architekturtheorie", "features": ["gelernt"], "labels": ["Architekturtheorie"], "cluster": "C090"}
+{"t": "node", "id": "Art", "features": ["gelernt"], "labels": ["Art", "Art inzwischen verschwunden", "meisten Bereiche DNA Art"], "cluster": "C091"}
+{"t": "node", "id": "Asien", "features": ["gelernt"], "labels": ["Asien", "Europa", "Europa Subkontinent Asien zusammen"], "cluster": "C092"}
+{"t": "node", "id": "Asteroiden", "features": ["Kilometer", "gelernt"], "labels": ["Asteroiden", "neben Zwergplaneten Millionen Asteroiden"], "cluster": "C019"}
+{"t": "node", "id": "Astronomie", "features": ["Allein", "Gestirne", "Wissenschaften", "gelernt"], "labels": ["Astronomie", "während Astronomie auf empirischer"], "cluster": "C006"}
+{"t": "node", "id": "Atomen", "features": ["gelernt"], "labels": ["Atomen"], "cluster": "C035"}
+{"t": "node", "id": "Aufgr", "features": ["Kern", "gelernt"], "labels": ["Aufgr"], "cluster": "C051"}
+{"t": "node", "id": "Aufwand", "features": ["Relativ", "gelernt"], "labels": ["Aufwand"], "cluster": "C093"}
+{"t": "node", "id": "Ausbelichtung", "features": ["gelernt"], "labels": ["Ausbelichtung", "Ergebnis", "Ergebnis Kontaktkopie Vergrößerung Ausbelichtung"], "cluster": "C078"}
+{"t": "node", "id": "Ausbrüchen", "features": ["gelernt"], "labels": ["Ausbrüchen", "Folge", "Folge steigernden Ausbrüchen eines"], "cluster": "C094"}
+{"t": "node", "id": "Ausdruck", "features": ["Anglizismus", "Wortbildung", "gelernt"], "labels": ["Ausdruck", "Kunstform", "Kunstform ihren Ausdruck als"], "cluster": "C011"}
+{"t": "node", "id": "Ausgenommen", "features": ["Konservierung", "gelernt"], "labels": ["Ausgenommen"], "cluster": "C095"}
+{"t": "node", "id": "Autokratie", "features": ["gelernt"], "labels": ["Autokratie", "Sartori", "Sartori Autokratie"], "cluster": "C207"}
+{"t": "node", "id": "Autoren", "features": ["gelernt"], "labels": ["Autoren", "häufig unklar inwieweit Autoren"], "cluster": "C208"}
+{"t": "node", "id": "Axolotl", "features": ["Mexiko", "Mexiko_Rein_Aquatisch", "See", "gelernt"], "labels": ["Axolotl", "Der Axolotl"], "cluster": "C012"}
+{"t": "node", "id": "Bahnen", "features": ["Teilweise", "gelernt"], "labels": ["Bahnen"], "cluster": "C096"}
+{"t": "node", "id": "Ballspielen", "features": ["gelernt"], "labels": ["Abbildungen", "Abbildungen Ballspielen auf Reliefs", "Ballspielen"], "cluster": "C209"}
+{"t": "node", "id": "Ballsportart", "features": ["gelernt"], "labels": ["Ballsportart", "Ballsportart bei zwei Mannschaften"], "cluster": "C097"}
+{"t": "node", "id": "Barbiere", "features": ["gelernt"], "labels": ["Barbiere"], "cluster": "C025"}
+{"t": "node", "id": "Baustein", "features": ["gelernt"], "labels": ["Baustein", "zentraler Baustein eines nachhaltigen"], "cluster": "C098"}
+{"t": "node", "id": "Bedeutende", "features": ["Union", "gelernt"], "labels": ["Bedeutende"], "cluster": "C210"}
+{"t": "node", "id": "Bedeutung_Internets_Nochmal", "features": ["gelernt"], "labels": ["Bedeutung", "Bedeutung Internets nochmal verstärkt", "Bedeutung_Internets_Nochmal"], "cluster": "C036"}
+{"t": "node", "id": "Bedeutungen", "features": ["gelernt"], "labels": ["Bedeutungen", "Wesentlichen", "Wesentlichen drei Bedeutungen unterscheiden"], "cluster": "C099"}
+{"t": "node", "id": "Begriffe", "features": ["Metaphern", "gelernt"], "labels": ["Begriffe"], "cluster": "C052"}
+{"t": "node", "id": "Begriffe_Wie_Künstliche", "features": ["Metaphern", "gelernt"], "labels": ["Begriffe", "Begriffe wie künstliche", "Begriffe_Wie_Künstliche"], "cluster": "C052"}
+{"t": "node", "id": "Behandlung", "features": ["gelernt"], "labels": ["Behandlung", "Wissenschaft", "Wissenschaft Vorbeugung Erkennung Behandlung"], "cluster": "C003"}
+{"t": "node", "id": "Beide", "features": ["Ekliptik", "gelernt"], "labels": ["Beide"], "cluster": "C100"}
+{"t": "node", "id": "Beispiel", "features": ["Mobiltelefone", "gelernt", "Ätna"], "labels": ["Beispiel", "Beispiel sehr rasch verlaufenden"], "cluster": "C020"}
+{"t": "node", "id": "Beispiele", "features": ["Kalahari", "Transformer", "gelernt"], "labels": ["Beispiele"], "cluster": "C037"}
+{"t": "node", "id": "Beispiele_Dafür", "features": ["Transformer", "gelernt"], "labels": ["Beispiele", "Beispiele dafür", "Beispiele_Dafür"], "cluster": "C037"}
+{"t": "node", "id": "Beruf", "features": ["Fotograf", "gelernt"], "labels": ["Beruf"], "cluster": "C101"}
+{"t": "node", "id": "Besonders_Bergbau_Verwendung", "features": ["gelernt"], "labels": ["Besonders_Bergbau_Verwendung", "besonders Bergbau Verwendung findet"], "cluster": "C026"}
+{"t": "node", "id": "Bestandteil", "features": ["gelernt"], "labels": ["Bestandteil", "fester Bestandteil eines solchen", "molekulare Genetik zentraler Bestandteil"], "cluster": "C053"}
+{"t": "node", "id": "Beziehung_Aufkommen_Modernen", "features": ["gelernt"], "labels": ["Beziehung", "Beziehung Aufkommen modernen Medizin", "Beziehung_Aufkommen_Modernen"], "cluster": "C211"}
+{"t": "node", "id": "Bezug", "features": ["gelernt"], "labels": ["Bezug", "durch ihren engen Bezug"], "cluster": "C102"}
+{"t": "node", "id": "Bilden", "features": ["gelernt"], "labels": ["Bilden", "bilden stabile dauerhafte also"], "cluster": "C103"}
+{"t": "node", "id": "Bilder", "features": ["gelernt"], "labels": ["Bilder", "Staubverfahren", "Staubverfahren einbrennbare Bilder auf"], "cluster": "C038"}
+{"t": "node", "id": "Bildkünste", "features": ["gelernt"], "labels": ["Bildkünste", "geisteswissenschaftliche Disziplin Architektur Bildkünste"], "cluster": "C089"}
+{"t": "node", "id": "Bildung", "features": ["Adverb", "gelernt"], "labels": ["Bildung", "häufig Bildung neuer geeigneter"], "cluster": "C049"}
+{"t": "node", "id": "Bindungen", "features": ["gelernt"], "labels": ["Bindungen", "chemische Reaktionen chemische Bindungen"], "cluster": "C104"}
+{"t": "node", "id": "Biologie", "features": ["Lebewesen", "Naturwissenschaften", "gelernt"], "labels": ["Biologie", "Wissenschaft", "Wissenschaft Vererbung Teilgebiet Biologie"], "cluster": "C004"}
+{"t": "node", "id": "Boden", "features": ["Oberseite", "gelernt"], "labels": ["Boden"], "cluster": "C105"}
+{"t": "node", "id": "Botticelli", "features": ["gelernt"], "labels": ["Botticelli"], "cluster": "C008"}
+{"t": "node", "id": "Braun_Marmoriert", "features": ["gelernt"], "labels": ["Braun_Marmoriert", "braun marmoriert"], "cluster": "C012"}
+{"t": "node", "id": "Bridge", "features": ["gelernt"], "labels": ["Bridge"], "cluster": "C054"}
+{"t": "node", "id": "Bspw", "features": ["gelernt"], "labels": ["Bspw", "bspw"], "cluster": "C021"}
+{"t": "node", "id": "Bürgerliche_Gesellschaft_Versucht", "features": ["gelernt"], "labels": ["Bürgerliche_Gesellschaft_Versucht", "bürgerliche Gesellschaft versucht"], "cluster": "C039"}
+{"t": "node", "id": "CERN", "features": ["gelernt"], "labels": ["CERN"], "cluster": "C002"}
+{"t": "node", "id": "Carl", "features": ["Wissenschaft", "gelernt"], "labels": ["Carl"], "cluster": "C033"}
+{"t": "node", "id": "Carlowitz", "features": ["Land", "gelernt"], "labels": ["Carlowitz", "bei Hans Carl Carlowitz"], "cluster": "C055"}
+{"t": "node", "id": "Ceres", "features": ["Körper", "gelernt"], "labels": ["Ceres"], "cluster": "C022"}
+{"t": "node", "id": "Chemie", "features": ["Eigenschaften", "gelernt"], "labels": ["Chemie", "heute zentrale Anliegen Chemie"], "cluster": "C056"}
+{"t": "node", "id": "China", "features": ["gelernt"], "labels": ["China", "diesem Zeitpunkt Elektroautos China"], "cluster": "C106"}
+{"t": "node", "id": "Cluster_1", "features": ["cluster"], "labels": ["Cluster 1"], "cluster": ""}
+{"t": "node", "id": "Cluster_10", "features": ["cluster"], "labels": ["Cluster 10"], "cluster": ""}
+{"t": "node", "id": "Cluster_11", "features": ["cluster"], "labels": ["Cluster 11"], "cluster": ""}
+{"t": "node", "id": "Cluster_12", "features": ["cluster"], "labels": ["Cluster 12"], "cluster": ""}
+{"t": "node", "id": "Cluster_13", "features": ["cluster"], "labels": ["Cluster 13"], "cluster": ""}
+{"t": "node", "id": "Cluster_14", "features": ["cluster"], "labels": ["Cluster 14"], "cluster": ""}
+{"t": "node", "id": "Cluster_15", "features": ["cluster"], "labels": ["Cluster 15"], "cluster": ""}
+{"t": "node", "id": "Cluster_16", "features": ["cluster"], "labels": ["Cluster 16"], "cluster": ""}
+{"t": "node", "id": "Cluster_2", "features": ["cluster"], "labels": ["Cluster 2"], "cluster": ""}
+{"t": "node", "id": "Cluster_3", "features": ["cluster"], "labels": ["Cluster 3"], "cluster": ""}
+{"t": "node", "id": "Cluster_4", "features": ["cluster"], "labels": ["Cluster 4"], "cluster": ""}
+{"t": "node", "id": "Cluster_5", "features": ["cluster"], "labels": ["Cluster 5"], "cluster": ""}
+{"t": "node", "id": "Cluster_6", "features": ["cluster"], "labels": ["Cluster 6"], "cluster": ""}
+{"t": "node", "id": "Cluster_7", "features": ["cluster"], "labels": ["Cluster 7"], "cluster": ""}
+{"t": "node", "id": "Cluster_8", "features": ["cluster"], "labels": ["Cluster 8"], "cluster": ""}
+{"t": "node", "id": "Cluster_9", "features": ["cluster"], "labels": ["Cluster 9"], "cluster": ""}
+{"t": "node", "id": "DOSB_Schach_Als", "features": ["gelernt"], "labels": ["DOSB", "DOSB Schach als Sportart", "DOSB_Schach_Als"], "cluster": "C054"}
+{"t": "node", "id": "Dadurch", "features": ["China", "gelernt"], "labels": ["Dadurch"], "cluster": "C106"}
+{"t": "node", "id": "Damals_Eher_Unter", "features": ["gelernt"], "labels": ["Damals_Eher_Unter", "damals eher unter Turnen"], "cluster": "C027"}
+{"t": "node", "id": "Darüber", "features": ["Dritter", "Energierohstoffen", "gelernt"], "labels": ["Darüber"], "cluster": "C057"}
+{"t": "node", "id": "Daten", "features": ["gelernt"], "labels": ["Daten", "KI-System", "KI-System wenn anhand Daten", "mangels valider Daten keine"], "cluster": "C058"}
+{"t": "node", "id": "Davon", "features": ["Schichtvulkan", "gelernt"], "labels": ["Davon"], "cluster": "C107"}
+{"t": "node", "id": "Dazu", "features": ["Bildung", "gelernt"], "labels": ["Dazu"], "cluster": "C049"}
+{"t": "node", "id": "Debatte", "features": ["gelernt"], "labels": ["Debatte"], "cluster": "C108"}
+{"t": "node", "id": "Definiert", "features": ["gelernt"], "labels": ["Definiert", "definiert als Menschen innerlich"], "cluster": "C009"}
+{"t": "node", "id": "Definition", "features": ["gelernt"], "labels": ["Behinderungen", "Behinderungen psychische Erkrankungen Definition", "Definition"], "cluster": "C059"}
+{"t": "node", "id": "Demgegenüber", "features": ["gelernt"], "labels": ["Demgegenüber", "demgegenüber seit"], "cluster": "C109"}
+{"t": "node", "id": "Demokratie", "features": ["Herrschaftsorganisation", "Kompositum", "gelernt"], "labels": ["Demokratie"], "cluster": "C040"}
+{"t": "node", "id": "Denen_Nichts_Neues", "features": ["gelernt"], "labels": ["Denen_Nichts_Neues", "denen nichts Neues sagen"], "cluster": "C013"}
+{"t": "node", "id": "Dennoch", "features": ["Disziplinen", "gelernt"], "labels": ["Dennoch"], "cluster": "C054"}
+{"t": "node", "id": "Deutsch", "features": ["Union", "gelernt"], "labels": ["Deutsch"], "cluster": "C014"}
+{"t": "node", "id": "Deutsch_Baumeister", "features": ["gelernt"], "labels": ["Deutsch_Baumeister", "deutsch Baumeister"], "cluster": "C010"}
+{"t": "node", "id": "Deutsch_Haupt", "features": ["gelernt"], "labels": ["Deutsch_Haupt", "deutsch Haupt"], "cluster": "C010"}
+{"t": "node", "id": "Deutsche", "features": ["Sprache", "Weg", "gelernt"], "labels": ["Deutsche"], "cluster": "C014"}
+{"t": "node", "id": "Deutsche_Sprache", "features": ["Germanistik", "gelernt"], "labels": ["Deutsche_Sprache"], "cluster": "C110"}
+{"t": "node", "id": "Deutschland_Führenden_Wirtschaftsnationen", "features": ["gelernt"], "labels": ["Deutschland", "Deutschland führenden Wirtschaftsnationen weltweit", "Deutschland_Führenden_Wirtschaftsnationen"], "cluster": "C005"}
+{"t": "node", "id": "Deutschschweiz", "features": ["gelernt"], "labels": ["Deutschschweiz"], "cluster": "C005"}
+{"t": "node", "id": "Differenzierung", "features": ["gelernt"], "labels": ["Differenzierung"], "cluster": "C060"}
+{"t": "node", "id": "Dinosaurier", "features": ["Oberen", "Popkultur", "Schulterblatt", "gelernt"], "labels": ["Dinosaurier"], "cluster": "C041"}
+{"t": "node", "id": "Diskurs", "features": ["Sprache", "gelernt"], "labels": ["Diskurs"], "cluster": "C014"}
+{"t": "node", "id": "Diskurs_Über", "features": ["Sprache", "gelernt"], "labels": ["Diskurs", "Diskurs über", "Diskurs_Über"], "cluster": "C014"}
+{"t": "node", "id": "Diskussion", "features": ["gelernt"], "labels": ["Diskussion", "wissenschaftlichen Diskussion recht unterschiedlich"], "cluster": "C111"}
+{"t": "node", "id": "Disziplin", "features": ["gelernt"], "labels": ["Disziplin", "selbst vereinzelt akademischen Disziplin"], "cluster": "C017"}
+{"t": "node", "id": "Disziplin_Computer_Science", "features": ["gelernt"], "labels": ["Disziplin", "Disziplin_Computer_Science", "die Disziplin computer science"], "cluster": "C061"}
+{"t": "node", "id": "Disziplinen", "features": ["gelernt"], "labels": ["Bedeutung", "Bedeutung Herbarts beide Disziplinen", "Disziplinen", "deutsche stark Bedeutung lateinischen"], "cluster": "C017"}
+{"t": "node", "id": "Dritter", "features": ["gelernt"], "labels": ["Dritter", "kommerziellen Interessen mächtiger Dritter"], "cluster": "C057"}
+{"t": "node", "id": "Dunkelgrau", "features": ["gelernt"], "labels": ["Dunkelgrau", "dunkelgrau", "dunkelgrau braun marmoriert bauchseits"], "cluster": "C012"}
+{"t": "node", "id": "Durchmesser", "features": ["Kilometern", "gelernt"], "labels": ["Durchmesser"], "cluster": "C212"}
+{"t": "node", "id": "Durchsetzungsinitiative", "features": ["gelernt"], "labels": ["Durchsetzungsinitiative", "also rechtlich gewährleistete Durchsetzungsinitiative"], "cluster": "C112"}
+{"t": "node", "id": "ESA", "features": ["gelernt"], "labels": ["ESA"], "cluster": "C002"}
+{"t": "node", "id": "Ebenfalls", "features": ["gelernt"], "labels": ["Ebenfalls", "ebenfalls kein grundlegend neues"], "cluster": "C113"}
+{"t": "node", "id": "Ebenso", "features": ["Geschichte", "Internets", "gelernt"], "labels": ["Ebenso"], "cluster": "C114"}
+{"t": "node", "id": "Eigenen_Schriftsprache_Weiterentwickelt", "features": ["gelernt"], "labels": ["Eigenen_Schriftsprache_Weiterentwickelt", "eigenen Schriftsprache weiterentwickelt Ähnliches"], "cluster": "C062"}
+{"t": "node", "id": "Eigenschaften", "features": ["gelernt"], "labels": ["Eigenschaften", "Elemente", "Elemente Guttmanns Eigenschaften eines", "diejenige Naturwissenschaft Aufbau Eigenschaften"], "cluster": "C056"}
+{"t": "node", "id": "Einfluss", "features": ["gelernt"], "labels": ["Einfluss"], "cluster": "C042"}
+{"t": "node", "id": "Einordnung", "features": ["gelernt"], "labels": ["Einordnung", "einheitlich definiert Einordnung einzelner"], "cluster": "C006"}
+{"t": "node", "id": "Einzelne", "features": ["Wellen", "gelernt"], "labels": ["Einzelne"], "cluster": "C115"}
+{"t": "node", "id": "Ekliptik", "features": ["gelernt"], "labels": ["Ekliptik", "stärker gegen Ekliptik geneigt"], "cluster": "C100"}
+{"t": "node", "id": "Elektromobilität", "features": ["Baustein", "gelernt"], "labels": ["Elektromobilität"], "cluster": "C098"}
+{"t": "node", "id": "Elementen", "features": ["gelernt"], "labels": ["Elementen", "aus drei genannten Elementen", "basaltisch verarmt Elementen schlecht"], "cluster": "C023"}
+{"t": "node", "id": "Elsass", "features": ["gelernt"], "labels": ["Elsass"], "cluster": "C005"}
+{"t": "node", "id": "Ende", "features": ["gelernt", "Ähnlich"], "labels": ["Ende"], "cluster": "C116"}
+{"t": "node", "id": "Endung", "features": ["Anders", "gelernt"], "labels": ["Endung"], "cluster": "C085"}
+{"t": "node", "id": "Energie", "features": ["gelernt"], "labels": ["Energie", "abgeschlossenen System Element Energie", "mengenmäßig bilanzierfähige Mittel Energie"], "cluster": "C028"}
+{"t": "node", "id": "Energiequelle", "features": ["Energie", "gelernt"], "labels": ["Energiequelle"], "cluster": "C028"}
+{"t": "node", "id": "Energierohstoffen", "features": ["gelernt"], "labels": ["Energierohstoffen", "Sicherung", "Sicherung Trinkwasser Energierohstoffen wie"], "cluster": "C057"}
+{"t": "node", "id": "Energieträger", "features": ["Energie", "gelernt"], "labels": ["Energieträger", "als fossiler Energieträger begrenztem", "heimischer Energieträger sichert also", "treibende Kraft Energieträger wie"], "cluster": "C028"}
+{"t": "node", "id": "Enges_Feld_Literarischer", "features": ["gelernt"], "labels": ["Enges_Feld_Literarischer", "enges Feld literarischer Kunstwerke"], "cluster": "C060"}
+{"t": "node", "id": "Entdeckung", "features": ["gelernt"], "labels": ["Entdeckung"], "cluster": "C018"}
+{"t": "node", "id": "Entstehungsgeschichte", "features": ["Kuipergürtels", "gelernt"], "labels": ["Entstehungsgeschichte"], "cluster": "C117"}
+{"t": "node", "id": "Entwicklung", "features": ["gelernt"], "labels": ["Entwicklung"], "cluster": "C029"}
+{"t": "node", "id": "Erasmus", "features": ["gelernt"], "labels": ["Erasmus"], "cluster": "C002"}
+{"t": "node", "id": "Erdbahnebene", "features": ["gelernt"], "labels": ["Erdbahnebene", "wenig gegenüber Erdbahnebene geneigt"], "cluster": "C118"}
+{"t": "node", "id": "Erde", "features": ["gelernt"], "labels": ["Erde", "Planetensystem", "Planetensystem Erde befindet", "größten Meere Erde", "minimale Entfernung Venus Erde"], "cluster": "C001"}
+{"t": "node", "id": "Erdhülle", "features": ["gelernt"], "labels": ["Erdhülle", "auf Erdhülle zurückzuführen während"], "cluster": "C119"}
+{"t": "node", "id": "Erdteil", "features": ["gelernt"], "labels": ["Erdteil", "Erdteil über westliche Fünftel"], "cluster": "C002"}
+{"t": "node", "id": "Erdöfen", "features": ["Lebensmittel", "gelernt"], "labels": ["Erdöfen"], "cluster": "C120"}
+{"t": "node", "id": "Erfahrungswissenschaft", "features": ["gelernt"], "labels": ["Erfahrungswissenschaft", "praxisorientierte Erfahrungswissenschaft"], "cluster": "C003"}
+{"t": "node", "id": "Erkenntnisgewinns", "features": ["gelernt"], "labels": ["Erkenntnisgewinns", "Erkenntnistheorie", "Erkenntnistheorie Wissenschaftstheorie Möglichkeiten Erkenntnisgewinns"], "cluster": "C019"}
+{"t": "node", "id": "Ermächtigungen", "features": ["gelernt"], "labels": ["Ermächtigungen", "gesetzliche Ermächtigungen bestimmen wer"], "cluster": "C027"}
+{"t": "node", "id": "Ermöglicht_Big_Tech", "features": ["gelernt"], "labels": ["Ermöglicht_Big_Tech", "ermöglicht Big Tech"], "cluster": "C024"}
+{"t": "node", "id": "Erwiesen", "features": ["gelernt"], "labels": ["Erwiesen", "erwiesen"], "cluster": "C018"}
+{"t": "node", "id": "Europa", "features": ["Erdteil", "Kontinent", "gelernt"], "labels": ["Europa"], "cluster": "C002"}
+{"t": "node", "id": "Europäische_Filmakademie", "features": ["gelernt"], "labels": ["Europäische", "Europäische Filmakademie", "Europäische_Filmakademie"], "cluster": "C002"}
+{"t": "node", "id": "Europäische_Rundfunkunion", "features": ["gelernt"], "labels": ["Europäische", "Europäische Rundfunkunion", "Europäische_Rundfunkunion"], "cluster": "C002"}
+{"t": "node", "id": "Europäisches", "features": ["Genetik", "gelernt"], "labels": ["Europäisches"], "cluster": "C004"}
+{"t": "node", "id": "Evolution_Erheblich_Ausweitung", "features": ["gelernt"], "labels": ["Evolution", "Evolution erheblich Ausweitung verschiedene", "Evolution_Erheblich_Ausweitung"], "cluster": "C063"}
+{"t": "node", "id": "Expertenwissen", "features": ["gelernt"], "labels": ["Expertenwissen"], "cluster": "C025"}
+{"t": "node", "id": "Facettenreiche_Begriffsgeschichte", "features": ["gelernt"], "labels": ["Facettenreiche_Begriffsgeschichte", "facettenreiche Begriffsgeschichte"], "cluster": "C043"}
+{"t": "node", "id": "Februar", "features": ["Neptunbahn", "gelernt"], "labels": ["Februar"], "cluster": "C121"}
+{"t": "node", "id": "Film", "features": ["Ableitungen", "Ausdruck", "Filmtheorie", "Zugleich", "gelernt"], "labels": ["Film"], "cluster": "C011"}
+{"t": "node", "id": "Filmgeschichte", "features": ["gelernt"], "labels": ["Filmgeschichte", "unter Filmgeschichte ausführlich dargestellt"], "cluster": "C122"}
+{"t": "node", "id": "Filmindustrie", "features": ["Films", "gelernt"], "labels": ["Filmindustrie"], "cluster": "C123"}
+{"t": "node", "id": "Films", "features": ["gelernt"], "labels": ["Films", "auf Massenkompatibilität Films früh"], "cluster": "C123"}
+{"t": "node", "id": "Filmtheorie", "features": ["gelernt"], "labels": ["Filmtheorie", "unter anderem Filmwissenschaft Filmtheorie"], "cluster": "C011"}
+{"t": "node", "id": "Filmwirtschaft", "features": ["gelernt"], "labels": ["Filmwirtschaft"], "cluster": "C016"}
+{"t": "node", "id": "Fließend", "features": ["gelernt"], "labels": ["Fließend", "fließend"], "cluster": "C124"}
+{"t": "node", "id": "Flüssigkeit", "features": ["gelernt"], "labels": ["Flüssigkeit", "engeren Sinne Erhitzen Flüssigkeit"], "cluster": "C064"}
+{"t": "node", "id": "Form", "features": ["Klimawechsel", "gelernt"], "labels": ["Form", "weiblichen Form mousik zuerst"], "cluster": "C048"}
+{"t": "node", "id": "Formalwissenschaft", "features": ["gelernt"], "labels": ["Formalwissenschaft", "Formalwissenschaft aus Untersuchung geometrischen", "sowohl Grundlagen Formalwissenschaft als"], "cluster": "C213"}
+{"t": "node", "id": "Forschung", "features": ["gelernt"], "labels": ["Forschung", "bekannt seine bahnbrechende Forschung"], "cluster": "C125"}
+{"t": "node", "id": "Forschungsinstitut", "features": ["gelernt"], "labels": ["Forschungsinstitut", "Japans", "Japans führendes Forschungsinstitut bekannt"], "cluster": "C126"}
+{"t": "node", "id": "Fossile", "features": ["Methanhydrat", "gelernt"], "labels": ["Fossile"], "cluster": "C127"}
+{"t": "node", "id": "Fotograf", "features": ["gelernt"], "labels": ["Fotograf"], "cluster": "C101"}
+{"t": "node", "id": "Fotografie", "features": ["Kunstgeschichte", "Zusammenhängen", "gelernt"], "labels": ["Fotografie"], "cluster": "C030"}
+{"t": "node", "id": "Frage", "features": ["Nachdenken", "Subtraktion", "gelernt"], "labels": ["Frage", "Lage", "Lage folgende Frage verstehen"], "cluster": "C044"}
+{"t": "node", "id": "Friedliches_Miteinander_Möglich", "features": ["gelernt"], "labels": ["Friedliches_Miteinander_Möglich", "friedliches Miteinander möglich"], "cluster": "C009"}
+{"t": "node", "id": "Frühere", "features": ["Rheische", "gelernt"], "labels": ["Frühere"], "cluster": "C128"}
+{"t": "node", "id": "Funde", "features": ["Jahre", "gelernt"], "labels": ["Funde"], "cluster": "C129"}
+{"t": "node", "id": "Funktion_Menschlichen", "features": ["gelernt"], "labels": ["Funktion", "Funktion menschlichen", "Funktion_Menschlichen"], "cluster": "C003"}
+{"t": "node", "id": "Fussball", "features": ["Mannschaftssportart", "gelernt"], "labels": ["Fussball"], "cluster": "C130"}
+{"t": "node", "id": "Fußball", "features": ["Ballsportart", "gelernt"], "labels": ["Fußball"], "cluster": "C097"}
+{"t": "node", "id": "Garen", "features": ["gelernt"], "labels": ["Garen", "sicherlich Grillen Garen heißer"], "cluster": "C038"}
+{"t": "node", "id": "Gebieten", "features": ["gelernt"], "labels": ["Europa", "Europa Vergleich Gebieten gleicher", "Gebieten"], "cluster": "C131"}
+{"t": "node", "id": "Gedrungen", "features": ["gelernt"], "labels": ["Gedrungen", "gedrungen gebaut weisen meist"], "cluster": "C132"}
+{"t": "node", "id": "Gegenwärtige", "features": ["Beispiel", "gelernt"], "labels": ["Gegenwärtige", "gegenwärtige"], "cluster": "C020"}
+{"t": "node", "id": "Gegenüber", "features": ["Verkleinerung", "gelernt"], "labels": ["Gegenüber"], "cluster": "C133"}
+{"t": "node", "id": "Gehalt_Siliciumdioxid", "features": ["gelernt"], "labels": ["Gehalt", "Gehalt Siliciumdioxid", "Gehalt_Siliciumdioxid"], "cluster": "C042"}
+{"t": "node", "id": "Geistige_Aktivitäten", "features": ["gelernt"], "labels": ["Geistige_Aktivitäten", "geistige Aktivitäten"], "cluster": "C045"}
+{"t": "node", "id": "Gekennzeichnet", "features": ["gelernt"], "labels": ["Gekennzeichnet", "gekennzeichnet durch effiziente langsame"], "cluster": "C031"}
+{"t": "node", "id": "Gel", "features": ["gelernt"], "labels": ["Gel"], "cluster": "C030"}
+{"t": "node", "id": "Gelderwerbs", "features": ["gelernt"], "labels": ["Gelderwerbs", "endlich anzuführen Ausübung Gelderwerbs"], "cluster": "C134"}
+{"t": "node", "id": "Gemeinschaft", "features": ["gelernt"], "labels": ["Gemeinschaft", "Gesamtheit", "Gesamtheit genereller Verhaltensregeln Gemeinschaft"], "cluster": "C009"}
+{"t": "node", "id": "Genen", "features": ["gelernt"], "labels": ["Form", "Form Genen codiert bei", "Genen"], "cluster": "C065"}
+{"t": "node", "id": "Generalisierbarkeit", "features": ["gelernt"], "labels": ["Generalisierbarkeit", "ihre Generalisierbarkeit fraglich"], "cluster": "C066"}
+{"t": "node", "id": "Genetik", "features": ["Biologie", "gelernt"], "labels": ["Genetik", "führend molekularen Biologie Genetik"], "cluster": "C004"}
+{"t": "node", "id": "Genetiker", "features": ["gelernt"], "labels": ["Genetiker"], "cluster": "C015"}
+{"t": "node", "id": "Genomforschung", "features": ["gelernt"], "labels": ["Genomforschung", "weltweit führend Genomforschung"], "cluster": "C135"}
+{"t": "node", "id": "Geografie", "features": ["Wissenschaft", "gelernt"], "labels": ["Geografie"], "cluster": "C033"}
+{"t": "node", "id": "Geographisch", "features": ["Asien", "gelernt"], "labels": ["Geographisch"], "cluster": "C092"}
+{"t": "node", "id": "Geologe", "features": ["Rohstoffen", "gelernt"], "labels": ["Geologe"], "cluster": "C136"}
+{"t": "node", "id": "Geologie", "features": ["Struktur_Gesamten_Universums", "gelernt"], "labels": ["Geologie"], "cluster": "C137"}
+{"t": "node", "id": "Geologische_Grenze", "features": ["gelernt"], "labels": ["Geologische_Grenze", "geologische Grenze"], "cluster": "C002"}
+{"t": "node", "id": "Geordnetes", "features": ["gelernt"], "labels": ["Geordnetes", "geordnetes"], "cluster": "C009"}
+{"t": "node", "id": "Geostatistik", "features": ["gelernt"], "labels": ["Geostatistik"], "cluster": "C026"}
+{"t": "node", "id": "Geowissenschaften", "features": ["gelernt"], "labels": ["Geowissenschaften", "spezialisierter Geowissenschaften"], "cluster": "C006"}
+{"t": "node", "id": "Gerade", "features": ["Möglich", "gelernt"], "labels": ["Gerade"], "cluster": "C138"}
+{"t": "node", "id": "Geringfügig", "features": ["Erde", "gelernt"], "labels": ["Geringfügig"], "cluster": "C001"}
+{"t": "node", "id": "Germanistik", "features": ["gelernt"], "labels": ["Germanistik"], "cluster": "C110"}
+{"t": "node", "id": "Geschichte", "features": ["gelernt"], "labels": ["Geschichte", "Mathematik", "Mathematik ihrer Geschichte fortgeschritten"], "cluster": "C114"}
+{"t": "node", "id": "Geschichte_Antiken_Griechenlands", "features": ["gelernt"], "labels": ["Geschichte", "Geschichte antiken Griechenlands", "Geschichte_Antiken_Griechenlands"], "cluster": "C050"}
+{"t": "node", "id": "Geschlechter", "features": ["Kloake", "gelernt"], "labels": ["Geschlechter"], "cluster": "C139"}
+{"t": "node", "id": "Geschlechtsreife", "features": ["Gedrungen", "gelernt"], "labels": ["Geschlechtsreife"], "cluster": "C132"}
+{"t": "node", "id": "Gesetzmäßigkeiten", "features": ["gelernt"], "labels": ["Gesetzmäßigkeiten", "physikalische Theorie Eigenschaften Gesetzmäßigkeiten"], "cluster": "C015"}
+{"t": "node", "id": "Gestaltung_Innenräumen_Zum", "features": ["gelernt"], "labels": ["Gestaltung", "Gestaltung Innenräumen zum Ziel", "Gestaltung_Innenräumen_Zum"], "cluster": "C140"}
+{"t": "node", "id": "Gestirne", "features": ["gelernt"], "labels": ["Gestirne", "Wissenschaft", "Wissenschaft Gestirne"], "cluster": "C006"}
+{"t": "node", "id": "Gleiche", "features": ["gelernt"], "labels": ["Gleiche", "gleiche wie vielen europäischen"], "cluster": "C141"}
+{"t": "node", "id": "Gleichmäßig_Kleine_Körnchen", "features": ["gelernt"], "labels": ["Gleichmäßig_Kleine_Körnchen", "gleichmäßig kleine Körnchen eines"], "cluster": "C030"}
+{"t": "node", "id": "Gleichzeitig", "features": ["Zuge", "gelernt"], "labels": ["Gleichzeitig"], "cluster": "C142"}
+{"t": "node", "id": "Gliedmaßen", "features": ["Recht", "gelernt"], "labels": ["Gliedmaßen"], "cluster": "C009"}
+{"t": "node", "id": "Grenzziehung", "features": ["gelernt"], "labels": ["Grenzziehung"], "cluster": "C067"}
+{"t": "node", "id": "Große", "features": ["Leon", "gelernt"], "labels": ["Große"], "cluster": "C143"}
+{"t": "node", "id": "Großen_Zahl_Recht", "features": ["gelernt"], "labels": ["Großen_Zahl_Recht", "großen Zahl recht unterschiedlicher"], "cluster": "C063"}
+{"t": "node", "id": "Grundbausteine", "features": ["Rechtsvorschriften", "gelernt"], "labels": ["Grundbausteine"], "cluster": "C144"}
+{"t": "node", "id": "Grundlage", "features": ["Mikroelektronik", "gelernt"], "labels": ["Grundlage"], "cluster": "C145"}
+{"t": "node", "id": "Grundsätzen", "features": ["gelernt"], "labels": ["Grundsätzen", "diesen überkommenen philosophischen Grundsätzen"], "cluster": "C214"}
+{"t": "node", "id": "Gut", "features": ["Sandebenen", "gelernt"], "labels": ["Gut", "gut passierbar"], "cluster": "C068"}
+{"t": "node", "id": "Guttmann", "features": ["gelernt"], "labels": ["Guttmann", "modernen Sports umstritten Guttmann"], "cluster": "C215"}
+{"t": "node", "id": "Gültigkeit_Jeglicher_Erkenntnisgewinnung", "features": ["gelernt"], "labels": ["Gültigkeit", "Gültigkeit jeglicher Erkenntnisgewinnung wie", "Gültigkeit_Jeglicher_Erkenntnisgewinnung"], "cluster": "C013"}
+{"t": "node", "id": "Hand", "features": ["gelernt"], "labels": ["Hand", "rückwärtig orientiert Hand asymmetrisch"], "cluster": "C065"}
+{"t": "node", "id": "Handlungsprinzip", "features": ["Zustand", "gelernt"], "labels": ["Handlungsprinzip", "Handlungsprinzip bei Nutzung Ressourcen"], "cluster": "C031"}
+{"t": "node", "id": "Hauptbaumeister_Übersetzen", "features": ["gelernt"], "labels": ["Hauptbaumeister", "Hauptbaumeister übersetzen", "Hauptbaumeister_Übersetzen"], "cluster": "C010"}
+{"t": "node", "id": "Hauptenergiequelle", "features": ["Sonne", "gelernt"], "labels": ["Hauptenergiequelle"], "cluster": "C001"}
+{"t": "node", "id": "Hauptfach", "features": ["gelernt"], "labels": ["Bezeichnung", "Bezeichnung Deutschland Hochschulstudium Hauptfach", "Hauptfach"], "cluster": "C043"}
+{"t": "node", "id": "Hebräischen_Einflüssen_Eigenständig", "features": ["gelernt"], "labels": ["Hebräischen_Einflüssen_Eigenständig", "hebräischen Einflüssen eigenständig"], "cluster": "C062"}
+{"t": "node", "id": "Heimische", "features": ["Importkohle", "gelernt"], "labels": ["Heimische"], "cluster": "C146"}
+{"t": "node", "id": "Herbart", "features": ["gelernt"], "labels": ["Herbart", "geläufig Herbart vornehmlich als"], "cluster": "C032"}
+{"t": "node", "id": "Herkunft", "features": ["gelernt"], "labels": ["Herkunft", "demnach Herkunft vom akkadischen"], "cluster": "C147"}
+{"t": "node", "id": "Herleitung", "features": ["Satzes", "gelernt"], "labels": ["Herleitung"], "cluster": "C148"}
+{"t": "node", "id": "Herrschaftsorganisation", "features": ["Regenerative", "gelernt"], "labels": ["Formen", "Formen Herrschaftsorganisation auf Grundlage", "Herrschaftsorganisation"], "cluster": "C040"}
+{"t": "node", "id": "Herstellung", "features": ["Chemie", "gelernt"], "labels": ["Herstellung"], "cluster": "C056"}
+{"t": "node", "id": "Hervorgebracht", "features": ["gelernt"], "labels": ["Hervorgebracht", "hervorgebracht"], "cluster": "C026"}
+{"t": "node", "id": "Heute", "features": ["Ermächtigungen", "Volkswirtschaft", "gelernt"], "labels": ["Heute"], "cluster": "C027"}
+{"t": "node", "id": "Heute_Weitgehende_Definitionsmacht", "features": ["gelernt"], "labels": ["Heute_Weitgehende_Definitionsmacht", "heute weitgehende Definitionsmacht"], "cluster": "C069"}
+{"t": "node", "id": "Heutzutage", "features": ["Bedeutungen", "gelernt"], "labels": ["Heutzutage"], "cluster": "C099"}
+{"t": "node", "id": "Hingegen", "features": ["gelernt"], "labels": ["Hingegen"], "cluster": "C039"}
+{"t": "node", "id": "Hintergr", "features": ["Gleiche", "gelernt"], "labels": ["Hintergr"], "cluster": "C141"}
+{"t": "node", "id": "Historisch", "features": ["gelernt"], "labels": ["Historisch", "unbedingt echte Historisch veränderlich"], "cluster": "C149"}
+{"t": "node", "id": "Historisch_Ergeben", "features": ["gelernt"], "labels": ["Historisch_Ergeben", "historisch ergeben"], "cluster": "C067"}
+{"t": "node", "id": "Hobby", "features": ["gelernt"], "labels": ["Hobby", "sie verbreitetes Hobby"], "cluster": "C046"}
+{"t": "node", "id": "Hochflächen", "features": ["gelernt"], "labels": ["Geröll", "Geröll bedeckte Hochflächen", "Hochflächen"], "cluster": "C150"}
+{"t": "node", "id": "Holozäns", "features": ["gelernt"], "labels": ["Holozäns"], "cluster": "C047"}
+{"t": "node", "id": "Holz", "features": ["gelernt"], "labels": ["Holz", "viel Holz schlagen wie"], "cluster": "C151"}
+{"t": "node", "id": "Hydrografischen", "features": ["gelernt"], "labels": ["Hydrografischen", "laut Beschluss Internationalen Hydrografischen"], "cluster": "C152"}
+{"t": "node", "id": "Härter", "features": ["gelernt"], "labels": ["Härter", "härter als"], "cluster": "C153"}
+{"t": "node", "id": "Ihr", "features": ["gelernt"], "labels": ["Ihr"], "cluster": "C005"}
+{"t": "node", "id": "Ihre", "features": ["Generalisierbarkeit", "Zeit", "gelernt"], "labels": ["Ihre"], "cluster": "C066"}
+{"t": "node", "id": "Ihre_Ursprünge_Philosophie", "features": ["gelernt"], "labels": ["Ihre_Ursprünge_Philosophie", "ihre Ursprünge Philosophie"], "cluster": "C017"}
+{"t": "node", "id": "Import", "features": ["Meta", "import:01_kuenstliche_intelligenz.txt:2026-02-14", "import:02_sonnensystem.txt:2026-02-14", "import:03_geschichte_deutschlands.txt:2026-02-14", "import:04_quantenmechanik.txt:2026-02-14", "import:05_deutsche_sprache.txt:2026-02-14", "import:06_axolotl.txt:2026-02-14", "import:07_philosophie.txt:2026-02-14", "import:08_psychologie.txt:2026-02-14", "import:09_biologie.txt:2026-02-14", "import:10_chemie.txt:2026-02-14", "import:11_pluto.txt:2026-02-14", "import:12_physik.txt:2026-02-14", "import:13_astronomie.txt:2026-02-14", "import:14_geographie.txt:2026-02-14", "import:15_geologie.txt:2026-02-14", "import:16_informatik.txt:2026-02-14", "import:17_mathematik.txt:2026-02-14", "import:18_medizin.txt:2026-02-14", "import:19_architektur.txt:2026-02-14", "import:20_musik.txt:2026-02-14", "import:21_literatur.txt:2026-02-14", "import:22_kunstgeschichte.txt:2026-02-14", "import:23_film.txt:2026-02-14", "import:24_fotografie.txt:2026-02-14", "import:25_kochen.txt:2026-02-14", "import:26_sport.txt:2026-02-14", "import:27_fussball.txt:2026-02-14", "import:28_olympische_spiele.txt:2026-02-14", "import:29_weltraumfahrt.txt:2026-02-14", "import:30_klimawandel.txt:2026-02-14", "import:31_nachhaltigkeit.txt:2026-02-14", "import:32_okonomie.txt:2026-02-14", "import:33_recht.txt:2026-02-14", "import:34_demokratie.txt:2026-02-14", "import:35_europa.txt:2026-02-14", "import:36_antike.txt:2026-02-14", "import:37_mittelalter.txt:2026-02-14", "import:38_renaissance.txt:2026-02-14", "import:39_industrielle_revolution.txt:2026-02-14", "import:40_internet.txt:2026-02-14", "import:41_smartphone.txt:2026-02-14", "import:42_elektromobilitaet.txt:2026-02-14", "import:43_energiequelle.txt:2026-02-14", "import:44_ozean.txt:2026-02-14", "import:45_wueste.txt:2026-02-14", "import:46_regenwald.txt:2026-02-14", "import:47_vulkan.txt:2026-02-14", "import:48_dinosaurier.txt:2026-02-14", "import:49_evolution.txt:2026-02-14", "import:50_genetik.txt:2026-02-14", "import:51_menschlicher_koerper.txt:2026-02-14", "import:52_europa.txt:2026-02-14"], "labels": ["Import"], "cluster": "C216"}
+{"t": "node", "id": "Importkohle", "features": ["gelernt"], "labels": ["Importkohle", "verglichen Importkohle sehr teuer"], "cluster": "C146"}
+{"t": "node", "id": "Industrie", "features": ["gelernt"], "labels": ["Industrie"], "cluster": "C154"}
+{"t": "node", "id": "Industrielle_Revolution", "features": ["gelernt"], "labels": ["Industrielle_Revolution"], "cluster": "C155"}
+{"t": "node", "id": "Industriezweigen", "features": ["gelernt"], "labels": ["Industriezweigen", "wichtigsten Industriezweigen"], "cluster": "C154"}
+{"t": "node", "id": "Informatik", "features": ["Disziplin_Computer_Science", "Formalwissenschaft", "Verarbeitung", "gelernt"], "labels": ["Informatik"], "cluster": "C061"}
+{"t": "node", "id": "Ingenieurwissenschaften", "features": ["Bezug", "gelernt"], "labels": ["Ingenieurwissenschaften"], "cluster": "C102"}
+{"t": "node", "id": "Inhaltlich", "features": ["Disziplinen", "gelernt"], "labels": ["Inhaltlich"], "cluster": "C017"}
+{"t": "node", "id": "Innenarchitektur", "features": ["gelernt"], "labels": ["Innenarchitektur"], "cluster": "C140"}
+{"t": "node", "id": "Insbesondere", "features": ["gelernt"], "labels": ["Insbesondere"], "cluster": "C063"}
+{"t": "node", "id": "Insbesondere_Aufkommen_Neuer", "features": ["gelernt"], "labels": ["Insbesondere_Aufkommen_Neuer", "insbesondere Aufkommen neuer Wissenschaftsdisziplinen"], "cluster": "C067"}
+{"t": "node", "id": "Insbesondere_Biophysik", "features": ["gelernt"], "labels": ["Insbesondere_Biophysik", "insbesondere Biophysik"], "cluster": "C004"}
+{"t": "node", "id": "Insgesamt", "features": ["Meeren", "gelernt"], "labels": ["Insgesamt"], "cluster": "C156"}
+{"t": "node", "id": "Instrumentell", "features": ["Technik", "gelernt"], "labels": ["Instrumentell"], "cluster": "C157"}
+{"t": "node", "id": "Internet", "features": ["Rechnernetzwerken", "gelernt"], "labels": ["Informatik", "Informatik zwingend Internet sondern", "Internet"], "cluster": "C021"}
+{"t": "node", "id": "Internets", "features": ["gelernt"], "labels": ["Internets", "große Teile Internets heute"], "cluster": "C021"}
+{"t": "node", "id": "Intransparenz", "features": ["gelernt"], "labels": ["Black", "Black Box Intransparenz vieler", "Intransparenz"], "cluster": "C070"}
+{"t": "node", "id": "Ionen", "features": ["gelernt"], "labels": ["Ionen"], "cluster": "C035"}
+{"t": "node", "id": "Jahre", "features": ["gelernt"], "labels": ["Jahre", "über Millionen Jahre alt"], "cluster": "C129"}
+{"t": "node", "id": "Jahrhundert", "features": ["Grundsätzen", "gelernt"], "labels": ["Jahrhundert"], "cluster": "C008"}
+{"t": "node", "id": "Jahrhunderte", "features": ["gelernt"], "labels": ["Jahrhunderte", "über drei Jahrhunderte erstreckende"], "cluster": "C008"}
+{"t": "node", "id": "Jahrhunderts", "features": ["Mathematik", "gelernt"], "labels": ["Jahrhunderts"], "cluster": "C008"}
+{"t": "node", "id": "Jedenfalls_Hellste_Vertreter", "features": ["gelernt"], "labels": ["Jedenfalls_Hellste_Vertreter", "jedenfalls hellste Vertreter Kuipergürtels"], "cluster": "C018"}
+{"t": "node", "id": "Jeder", "features": ["Architekturtheorie", "gelernt"], "labels": ["Jeder"], "cluster": "C090"}
+{"t": "node", "id": "Jiddische", "features": ["gelernt"], "labels": ["Jiddische"], "cluster": "C062"}
+{"t": "node", "id": "Jupitermonde", "features": ["gelernt"], "labels": ["Jupitermonde", "acht Planeten vier Jupitermonde"], "cluster": "C032"}
+{"t": "node", "id": "Jährlich", "features": ["gelernt"], "labels": ["Jährlich", "jährlich weltweit neu verkauften"], "cluster": "C217"}
+{"t": "node", "id": "Kalahari", "features": ["gelernt"], "labels": ["Kalahari", "größten Teile Sahara Kalahari"], "cluster": "C037"}
+{"t": "node", "id": "Kalenderjahren", "features": ["gelernt"], "labels": ["Kalenderjahren", "wiederholenden Zeitraum vier Kalenderjahren"], "cluster": "C071"}
+{"t": "node", "id": "Kalte", "features": ["Regionen", "gelernt"], "labels": ["Kalte"], "cluster": "C158"}
+{"t": "node", "id": "Karolingische", "features": ["Rückbesinnung", "gelernt"], "labels": ["Karolingische"], "cluster": "C159"}
+{"t": "node", "id": "Keeling", "features": ["Umweltdatensatz", "gelernt"], "labels": ["Keeling"], "cluster": "C160"}
+{"t": "node", "id": "Kein", "features": ["gelernt"], "labels": ["Kein"], "cluster": "C072"}
+{"t": "node", "id": "Kennzeichnend", "features": ["Weise", "gelernt"], "labels": ["Kennzeichnend"], "cluster": "C161"}
+{"t": "node", "id": "Kern", "features": ["gelernt"], "labels": ["Kern", "Kern ideologisch geprägt"], "cluster": "C051"}
+{"t": "node", "id": "Kerngebiete", "features": ["Metaphysik", "gelernt"], "labels": ["Kerngebiete"], "cluster": "C162"}
+{"t": "node", "id": "Kieswüsten", "features": ["Gut", "gelernt"], "labels": ["Kieswüsten"], "cluster": "C068"}
+{"t": "node", "id": "Kilometer", "features": ["gelernt"], "labels": ["Kilometer", "wenige Kilometer groß wenige"], "cluster": "C019"}
+{"t": "node", "id": "Kilometern", "features": ["gelernt"], "labels": ["Kilometern", "Millionen", "Millionen Kilometern bei weitem"], "cluster": "C019"}
+{"t": "node", "id": "Kinnarodden", "features": ["gelernt"], "labels": ["Kinnarodden", "Kinnarodden auf Nordkinnhalbinsel Norwegen"], "cluster": "C163"}
+{"t": "node", "id": "Kleinkörpern", "features": ["gelernt"], "labels": ["Kleinkörpern"], "cluster": "C001"}
+{"t": "node", "id": "Klima", "features": ["Gebieten", "gelernt"], "labels": ["Klima"], "cluster": "C131"}
+{"t": "node", "id": "Klimas", "features": ["gelernt"], "labels": ["Klimas", "weltweit auftretende Veränderung Klimas"], "cluster": "C164"}
+{"t": "node", "id": "Klimawandel", "features": ["Klimas", "gelernt"], "labels": ["Klimawandel"], "cluster": "C164"}
+{"t": "node", "id": "Klimawechsel", "features": ["gelernt"], "labels": ["Klimawechsel", "abrupte Klimawechsel"], "cluster": "C048"}
+{"t": "node", "id": "Kloake", "features": ["gelernt"], "labels": ["Kloake", "Kloake etwas hervorgewölbt bei"], "cluster": "C139"}
+{"t": "node", "id": "Kochen", "features": ["Flüssigkeit", "gelernt"], "labels": ["Kochen", "Kochen sogar wesentlich früher"], "cluster": "C064"}
+{"t": "node", "id": "Kohle", "features": ["Energieträger", "gelernt"], "labels": ["Kohle"], "cluster": "C028"}
+{"t": "node", "id": "Kohlenstoffanteils", "features": ["gelernt"], "labels": ["Kohlenstoffanteils", "durch Zunahme relativen Kohlenstoffanteils"], "cluster": "C165"}
+{"t": "node", "id": "Kometenkernen_Scheibenförmigen_Region", "features": ["gelernt"], "labels": ["Kometenkernen", "Kometenkernen scheibenförmigen Region hinter", "Kometenkernen_Scheibenförmigen_Region"], "cluster": "C018"}
+{"t": "node", "id": "Komplexe", "features": ["gelernt"], "labels": ["Komplexe", "komplexe"], "cluster": "C043"}
+{"t": "node", "id": "Komponente", "features": ["Durchsetzungsinitiative", "gelernt"], "labels": ["Komponente"], "cluster": "C112"}
+{"t": "node", "id": "Kompositum", "features": ["gelernt"], "labels": ["Kompositum", "auf altgriechisch zurückzuführen Kompositum"], "cluster": "C040"}
+{"t": "node", "id": "Konnte", "features": ["Gelderwerbs", "gelernt"], "labels": ["Konnte"], "cluster": "C134"}
+{"t": "node", "id": "Konservierung", "features": ["gelernt"], "labels": ["Konservierung", "künstliche Konservierung als anatomisches"], "cluster": "C095"}
+{"t": "node", "id": "Kontinent", "features": ["gelernt"], "labels": ["Kontinent", "nach Australien zweitkleinste Kontinent"], "cluster": "C002"}
+{"t": "node", "id": "Kontinenten", "features": ["gelernt"], "labels": ["Kontinenten", "auf allen Kontinenten gefunden"], "cluster": "C002"}
+{"t": "node", "id": "Koroibos", "features": ["gelernt"], "labels": ["Koroibos"], "cluster": "C218"}
+{"t": "node", "id": "Kosmologie", "features": ["gelernt"], "labels": ["Kosmologie"], "cluster": "C029"}
+{"t": "node", "id": "Krankem_Zustand", "features": ["gelernt"], "labels": ["Krankem_Zustand", "krankem Zustand"], "cluster": "C003"}
+{"t": "node", "id": "Kritisch_Betrachtet", "features": ["gelernt"], "labels": ["Kritisch_Betrachtet", "kritisch betrachtet"], "cluster": "C036"}
+{"t": "node", "id": "Kton", "features": ["gelernt"], "labels": ["Kton", "kton"], "cluster": "C010"}
+{"t": "node", "id": "Kugelraumfläche", "features": ["gelernt"], "labels": ["Kugelraumfläche", "über gesamte Kugelraumfläche betrachtet"], "cluster": "C166"}
+{"t": "node", "id": "Kuipergürtels", "features": ["gelernt"], "labels": ["Kuipergürtels", "demnach eng Kuipergürtels verknüpft"], "cluster": "C117"}
+{"t": "node", "id": "Kultur", "features": ["gelernt"], "labels": ["Kultur", "Musik", "Musik Universalie menschlichen Kultur"], "cluster": "C219"}
+{"t": "node", "id": "Kunst", "features": ["gelernt"], "labels": ["Gattungen", "Gattungen Kunst", "Kunst"], "cluster": "C167"}
+{"t": "node", "id": "Kunstcharakter", "features": ["Piktorialismus", "gelernt"], "labels": ["Kunstcharakter"], "cluster": "C168"}
+{"t": "node", "id": "Kunstgeschichte", "features": ["Bildkünste", "gelernt"], "labels": ["Kunstgeschichte", "teilweise Forschung Lehre Kunstgeschichte", "zentraler Bestandteil Kunstgeschichte"], "cluster": "C030"}
+{"t": "node", "id": "Kuration", "features": ["gelernt"], "labels": ["Kuration", "Prävention", "Prävention Erkrankungen Komplikationen Kuration"], "cluster": "C169"}
+{"t": "node", "id": "Kurzund", "features": ["gelernt"], "labels": ["Kurzund", "kurzund mittelfristig"], "cluster": "C170"}
+{"t": "node", "id": "Körper", "features": ["Menschen", "Problematik", "Verwesung", "gelernt"], "labels": ["Körper", "größte Körper gilt als"], "cluster": "C022"}
+{"t": "node", "id": "Körper_Fordernde_Konzentration", "features": ["gelernt"], "labels": ["Körper", "Körper fordernde Konzentration beziehungsweise", "Körper_Fordernde_Konzentration"], "cluster": "C045"}
+{"t": "node", "id": "Künstliche", "features": ["Systeme", "gelernt"], "labels": ["Künstliche"], "cluster": "C073"}
+{"t": "node", "id": "Künstliche_Intelligenz", "features": ["Systeme", "gelernt"], "labels": ["Künstliche", "Künstliche Intelligenz", "Künstliche_Intelligenz"], "cluster": "C073"}
+{"t": "node", "id": "Land", "features": ["gelernt"], "labels": ["Land", "ohne welche Land seinem"], "cluster": "C055"}
+{"t": "node", "id": "Lassen_Kategorien_Bilden", "features": ["Themen", "gelernt"], "labels": ["Lassen_Kategorien_Bilden", "lassen Kategorien bilden"], "cluster": "C171"}
+{"t": "node", "id": "Lava", "features": ["gelernt"], "labels": ["Lava"], "cluster": "C023"}
+{"t": "node", "id": "Lebensbedingungen", "features": ["Härter", "gelernt"], "labels": ["Lebensbedingungen"], "cluster": "C153"}
+{"t": "node", "id": "Lebenselixier_Entdeckt", "features": ["gelernt"], "labels": ["Lebenselixier", "Lebenselixier entdeckt", "Lebenselixier_Entdeckt"], "cluster": "C072"}
+{"t": "node", "id": "Lebensmittel", "features": ["gelernt"], "labels": ["Lebensmittel", "heute Gebrauch denen Lebensmittel"], "cluster": "C120"}
+{"t": "node", "id": "Lebewesen", "features": ["gelernt"], "labels": ["Lebewesen", "Wissenschaft", "Wissenschaft belebten Materie Lebewesen"], "cluster": "C004"}
+{"t": "node", "id": "Lehret", "features": ["Wissenschaften", "gelernt"], "labels": ["Lehret"], "cluster": "C006"}
+{"t": "node", "id": "Leon", "features": ["gelernt"], "labels": ["Leon", "insbesondere Filippo Brunelleschi Leon"], "cluster": "C143"}
+{"t": "node", "id": "Leonardo_Vinci", "features": ["gelernt"], "labels": ["Leonardo", "Leonardo Vinci", "Leonardo_Vinci"], "cluster": "C008"}
+{"t": "node", "id": "Letzteres", "features": ["gelernt"], "labels": ["Letzteres"], "cluster": "C010"}
+{"t": "node", "id": "Liechtenstein", "features": ["gelernt"], "labels": ["Liechtenstein"], "cluster": "C005"}
+{"t": "node", "id": "Ließe_Demnach_Als", "features": ["gelernt"], "labels": ["Ließe_Demnach_Als", "ließe demnach als Oberster"], "cluster": "C010"}
+{"t": "node", "id": "Literatur", "features": ["gelernt"], "labels": ["Literatur"], "cluster": "C167"}
+{"t": "node", "id": "Literaturdiskussion", "features": ["Demgegenüber", "gelernt"], "labels": ["Literaturdiskussion"], "cluster": "C109"}
+{"t": "node", "id": "Literaturkritik", "features": ["gelernt"], "labels": ["Literaturkritik"], "cluster": "C007"}
+{"t": "node", "id": "Literaturtheorie", "features": ["gelernt"], "labels": ["Literaturtheorie"], "cluster": "C007"}
+{"t": "node", "id": "Literaturzeitschriften", "features": ["gelernt"], "labels": ["Literaturzeitschriften"], "cluster": "C007"}
+{"t": "node", "id": "LithiumPreis_Innerhalb_Eines", "features": ["gelernt"], "labels": ["LithiumPreis", "LithiumPreis innerhalb eines Jahres", "LithiumPreis_Innerhalb_Eines"], "cluster": "C051"}
+{"t": "node", "id": "Ludwig", "features": ["gelernt"], "labels": ["Ludwig"], "cluster": "C013"}
+{"t": "node", "id": "Luxemburg", "features": ["gelernt"], "labels": ["Luxemburg"], "cluster": "C005"}
+{"t": "node", "id": "Lösung", "features": ["gelernt"], "labels": ["Lösung", "lösung"], "cluster": "C009"}
+{"t": "node", "id": "Magma", "features": ["Elementen", "Lava", "gelernt"], "labels": ["Magma", "geologische Struktur wenn Magma"], "cluster": "C023"}
+{"t": "node", "id": "Malerei", "features": ["gelernt"], "labels": ["Malerei", "europäische vorderasiatische Werke Malerei"], "cluster": "C172"}
+{"t": "node", "id": "Manchen_Staatlichen_Akteuren", "features": ["gelernt"], "labels": ["Manchen_Staatlichen_Akteuren", "manchen staatlichen Akteuren umfangreichere"], "cluster": "C024"}
+{"t": "node", "id": "Mannschaftssportart", "features": ["gelernt"], "labels": ["Mannschaftssportart", "weltweit beliebteste Mannschaftssportart"], "cluster": "C130"}
+{"t": "node", "id": "Massiven_SchmelzwasserEintrag_Nordatlantik", "features": ["gelernt"], "labels": ["Massiven_SchmelzwasserEintrag_Nordatlantik", "massiven SchmelzwasserEintrag Nordatlantik"], "cluster": "C047"}
+{"t": "node", "id": "Materiellen_Grundlagen_Ausbildung", "features": ["gelernt"], "labels": ["Materiellen_Grundlagen_Ausbildung", "materiellen Grundlagen Ausbildung erblichen"], "cluster": "C015"}
+{"t": "node", "id": "Mathematik", "features": ["Formalwissenschaft", "Wissenschaften", "gelernt"], "labels": ["Mathematik", "aus heutigen Mathematik ebenfalls"], "cluster": "C006"}
+{"t": "node", "id": "Maul", "features": ["Schnauze", "gelernt"], "labels": ["Maul"], "cluster": "C173"}
+{"t": "node", "id": "Max", "features": ["Forschung", "gelernt"], "labels": ["Max"], "cluster": "C125"}
+{"t": "node", "id": "Maß", "features": ["gelernt"], "labels": ["Maß", "gemeinsam sie begrenztem Maß"], "cluster": "C082"}
+{"t": "node", "id": "Medizin", "features": ["Behandlung", "Erfahrungswissenschaft", "Selten_Iatrik", "gelernt"], "labels": ["Medizin", "Person", "Person Medizin studiert"], "cluster": "C003"}
+{"t": "node", "id": "Mediziner", "features": ["Medizin", "gelernt"], "labels": ["Mediziner"], "cluster": "C003"}
+{"t": "node", "id": "Medizinischpolitischen_Maßnahmen_Dagegen", "features": ["gelernt"], "labels": ["Medizinischpolitischen_Maßnahmen_Dagegen", "medizinischpolitischen Maßnahmen dagegen ergriffen"], "cluster": "C069"}
+{"t": "node", "id": "Meer", "features": ["gelernt"], "labels": ["Liparischen", "Liparischen Inseln Tyrrhenischen Meer", "Meer"], "cluster": "C023"}
+{"t": "node", "id": "Meeren", "features": ["gelernt"], "labels": ["Meeren", "Prozent", "Prozent Erdoberfläche Meeren bedeckt"], "cluster": "C156"}
+{"t": "node", "id": "Meist", "features": ["Hochflächen", "gelernt"], "labels": ["Meist"], "cluster": "C150"}
+{"t": "node", "id": "Mensch", "features": ["gelernt"], "labels": ["Mensch"], "cluster": "C220"}
+{"t": "node", "id": "Menschen", "features": ["gelernt"], "labels": ["Menschen", "materielle Menschen"], "cluster": "C022"}
+{"t": "node", "id": "Merkmale", "features": ["Genen", "Hand", "gelernt"], "labels": ["Merkmale"], "cluster": "C065"}
+{"t": "node", "id": "Metapher", "features": ["Intransparenz", "gelernt"], "labels": ["Metapher"], "cluster": "C070"}
+{"t": "node", "id": "Metaphern", "features": ["gelernt"], "labels": ["Metaphern", "selbst anthropomorphe Metaphern auf"], "cluster": "C052"}
+{"t": "node", "id": "Metaphysik", "features": ["gelernt"], "labels": ["Logik", "Logik Ethik Metaphysik", "Metaphysik"], "cluster": "C162"}
+{"t": "node", "id": "Methanhydrat", "features": ["Energieträger", "gelernt"], "labels": ["Kohle", "Kohle Erdgas Erdöl Methanhydrat", "Methanhydrat"], "cluster": "C127"}
+{"t": "node", "id": "Methoden", "features": ["Weiterhin", "gelernt"], "labels": ["Methoden"], "cluster": "C174"}
+{"t": "node", "id": "Mexiko", "features": ["gelernt"], "labels": ["Mexiko", "Mexiko rein aquatisch lebender"], "cluster": "C012"}
+{"t": "node", "id": "Mexiko_Rein_Aquatisch", "features": ["gelernt"], "labels": ["Mexiko", "Mexiko rein aquatisch", "Mexiko rein aquatisch lebender", "Mexiko_Rein_Aquatisch"], "cluster": "C012"}
+{"t": "node", "id": "Mikroelektronik", "features": ["gelernt"], "labels": ["Mikroelektronik", "weiterhin Mikroelektronik"], "cluster": "C145"}
+{"t": "node", "id": "Minuten", "features": ["gelernt"], "labels": ["Minuten", "üblicherweise zweimal Minuten zuzüglich"], "cluster": "C175"}
+{"t": "node", "id": "Mittelalter", "features": ["gelernt"], "labels": ["Mittelalter", "Mittelalter nach breiten regional"], "cluster": "C084"}
+{"t": "node", "id": "Mobiltelefone", "features": ["gelernt"], "labels": ["Mobiltelefone", "eingebaute optionale JavaUnterstützung Mobiltelefone"], "cluster": "C020"}
+{"t": "node", "id": "Mobiltelefonen", "features": ["gelernt"], "labels": ["Mobiltelefonen", "Vergleich", "Vergleich älteren Mobiltelefonen relativ"], "cluster": "C020"}
+{"t": "node", "id": "Mode", "features": ["gelernt"], "labels": ["Mode", "erst Frühmoderne Mode kommende"], "cluster": "C007"}
+{"t": "node", "id": "Molekularbiologie", "features": ["gelernt"], "labels": ["Molekularbiologie"], "cluster": "C004"}
+{"t": "node", "id": "Molekülen", "features": ["gelernt"], "labels": ["Molekülen"], "cluster": "C035"}
+{"t": "node", "id": "Mondlose", "features": ["Venus", "gelernt"], "labels": ["Mondlose"], "cluster": "C176"}
+{"t": "node", "id": "Moral", "features": ["gelernt"], "labels": ["Gegensatz", "Gegensatz Normenordnungen wie Moral", "Moral"], "cluster": "C177"}
+{"t": "node", "id": "Muharek", "features": ["gelernt"], "labels": ["Abu", "Abu Muharek", "Muharek"], "cluster": "C178"}
+{"t": "node", "id": "Musik", "features": ["Reflexion", "Werke", "gelernt"], "labels": ["Musik"], "cluster": "C074"}
+{"t": "node", "id": "Möglich", "features": ["gelernt"], "labels": ["Möglich", "möglich nach Kriterien beurteilen"], "cluster": "C138"}
+{"t": "node", "id": "Möglicherweise", "features": ["Kochen", "gelernt"], "labels": ["Möglicherweise"], "cluster": "C064"}
+{"t": "node", "id": "Möglichkeiten_Vorratshaltung_Verbessert", "features": ["gelernt"], "labels": ["Möglichkeiten", "Möglichkeiten Vorratshaltung verbessert", "Möglichkeiten_Vorratshaltung_Verbessert"], "cluster": "C179"}
+{"t": "node", "id": "Nachdenken", "features": ["gelernt"], "labels": ["Nachdenken", "alt wie Nachdenken über"], "cluster": "C044"}
+{"t": "node", "id": "Nachhaltigkeit", "features": ["Gekennzeichnet", "Handlungsprinzip", "Unablässige", "gelernt"], "labels": ["Nachhaltigkeit"], "cluster": "C031"}
+{"t": "node", "id": "Nachhaltigkeitsbegriff", "features": ["Ebenfalls", "gelernt"], "labels": ["Nachhaltigkeitsbegriff"], "cluster": "C113"}
+{"t": "node", "id": "Nachtaktiv", "features": ["gelernt"], "labels": ["Nachtaktiv", "nachtaktiv bevorzugen kühles sauerstoffreiches"], "cluster": "C180"}
+{"t": "node", "id": "Namen", "features": ["Situation", "gelernt"], "labels": ["Namen"], "cluster": "C181"}
+{"t": "node", "id": "National", "features": ["Genomforschung", "gelernt"], "labels": ["National"], "cluster": "C135"}
+{"t": "node", "id": "Natur", "features": ["gelernt"], "labels": ["Natur", "Naturwissenschaft", "Naturwissenschaft grundlegende Phänomene Natur"], "cluster": "C015"}
+{"t": "node", "id": "Naturphilosophen", "features": ["Soll", "gelernt"], "labels": ["Naturphilosophen"], "cluster": "C182"}
+{"t": "node", "id": "Naturwissenschaften", "features": ["gelernt"], "labels": ["Naturwissenschaften", "Teilgebiet", "Teilgebiet Naturwissenschaften befasst sowohl"], "cluster": "C004"}
+{"t": "node", "id": "Natürlichen_Satelliten", "features": ["gelernt"], "labels": ["Natürlichen_Satelliten", "natürlichen Satelliten"], "cluster": "C001"}
+{"t": "node", "id": "Navigationssystem", "features": ["System", "gelernt"], "labels": ["Navigationssystem"], "cluster": "C183"}
+{"t": "node", "id": "Neben_Gaslt", "features": ["gelernt"], "labels": ["Neben_Gaslt", "neben Gaslt"], "cluster": "C042"}
+{"t": "node", "id": "Neptunbahn", "features": ["gelernt"], "labels": ["Neptunbahn", "als Neptunbahn"], "cluster": "C121"}
+{"t": "node", "id": "Netz", "features": ["Internet", "gelernt"], "labels": ["Netz"], "cluster": "C021"}
+{"t": "node", "id": "Nichts", "features": ["gelernt"], "labels": ["Nichts", "nichts bekannt"], "cluster": "C221"}
+{"t": "node", "id": "Nimmt", "features": ["Planeten", "gelernt"], "labels": ["Nimmt"], "cluster": "C184"}
+{"t": "node", "id": "Nomen", "features": ["Sportler", "gelernt"], "labels": ["Nomen"], "cluster": "C185"}
+{"t": "node", "id": "Norder", "features": ["Treibeis", "gelernt"], "labels": ["Norder"], "cluster": "C186"}
+{"t": "node", "id": "Nordosten_Lothringens", "features": ["gelernt"], "labels": ["Nordosten", "Nordosten Lothringens", "Nordosten_Lothringens"], "cluster": "C005"}
+{"t": "node", "id": "Nordschleswig", "features": ["gelernt"], "labels": ["Nordschleswig"], "cluster": "C005"}
+{"t": "node", "id": "Oberen", "features": ["gelernt"], "labels": ["Gruppe", "Gruppe Landwirbeltiere Erdmittelalter Oberen", "Oberen"], "cluster": "C041"}
+{"t": "node", "id": "Oberfläche", "features": ["gelernt", "Übersät"], "labels": ["Oberfläche", "Wüste", "Wüste Oberfläche überwiegend aus"], "cluster": "C034"}
+{"t": "node", "id": "Oberseite", "features": ["gelernt"], "labels": ["Oberseite", "Oberseite eines Stücks ozeanischer"], "cluster": "C105"}
+{"t": "node", "id": "Objekte", "features": ["Jupitermonde", "gelernt"], "labels": ["Objekte", "künstlerischen Objekte nach ihren"], "cluster": "C032"}
+{"t": "node", "id": "Obwohl", "features": ["Hobby", "Publikationen", "Zonen", "gelernt"], "labels": ["Obwohl"], "cluster": "C046"}
+{"t": "node", "id": "Oft", "features": ["Problemlösung", "gelernt"], "labels": ["Oft"], "cluster": "C187"}
+{"t": "node", "id": "Olympiade", "features": ["Kalenderjahren", "Spielen", "gelernt"], "labels": ["Olympiade"], "cluster": "C071"}
+{"t": "node", "id": "Olympische", "features": ["Sportwettkampfveranstaltungen", "gelernt"], "labels": ["Olympische"], "cluster": "C188"}
+{"t": "node", "id": "Olympischen", "features": ["Umfang", "gelernt"], "labels": ["Olympischen"], "cluster": "C189"}
+{"t": "node", "id": "Opposition", "features": ["Bestandteil", "gelernt"], "labels": ["Opposition"], "cluster": "C053"}
+{"t": "node", "id": "Optimum", "features": ["Wertung", "gelernt"], "labels": ["Optimum"], "cluster": "C190"}
+{"t": "node", "id": "Ort", "features": ["Allel", "gelernt"], "labels": ["Ort"], "cluster": "C081"}
+{"t": "node", "id": "Ostasien", "features": ["Renaissance", "gelernt"], "labels": ["Ostasien"], "cluster": "C008"}
+{"t": "node", "id": "Ostbelgien", "features": ["gelernt"], "labels": ["Ostbelgien"], "cluster": "C005"}
+{"t": "node", "id": "Osten_Gegenüber_Asien", "features": ["gelernt"], "labels": ["Osten", "Osten gegenüber Asien keine", "Osten_Gegenüber_Asien"], "cluster": "C002"}
+{"t": "node", "id": "Ozean", "features": ["Erde", "gelernt"], "labels": ["Ozean"], "cluster": "C001"}
+{"t": "node", "id": "Ozeanbodens", "features": ["gelernt"], "labels": ["Hebungen", "Hebungen Senkungen Ozeanbodens aufgrund", "Ozeanbodens"], "cluster": "C019"}
+{"t": "node", "id": "Ozeane", "features": ["Hydrografischen", "gelernt"], "labels": ["Ozeane"], "cluster": "C152"}
+{"t": "node", "id": "Paroxysmus", "features": ["Ausbrüchen", "gelernt"], "labels": ["Paroxysmus"], "cluster": "C094"}
+{"t": "node", "id": "Paternalistischen_Ermessenspielraum_Ärzte", "features": ["gelernt"], "labels": ["Paternalistischen_Ermessenspielraum_Ärzte", "paternalistischen Ermessenspielraum Ärzte zurückzudrängen"], "cluster": "C039"}
+{"t": "node", "id": "Personen", "features": ["Hauptfach", "gelernt"], "labels": ["Personen"], "cluster": "C043"}
+{"t": "node", "id": "Pflicht", "features": ["Unangefochten", "gelernt"], "labels": ["Pflicht"], "cluster": "C191"}
+{"t": "node", "id": "Philosophie", "features": ["Wahrheit", "gelernt"], "labels": ["Philosophie"], "cluster": "C192"}
+{"t": "node", "id": "Phonetisch", "features": ["Herkunft", "gelernt"], "labels": ["Phonetisch"], "cluster": "C147"}
+{"t": "node", "id": "Phonographie", "features": ["gelernt"], "labels": ["Phonographie", "dagegen Kinematographie Analogbildung Phonographie"], "cluster": "C007"}
+{"t": "node", "id": "Physik", "features": ["Natur", "gelernt"], "labels": ["Hauptsäulen", "Hauptsäulen modernen Physik", "Physik"], "cluster": "C015"}
+{"t": "node", "id": "Physikalische", "features": ["Geowissenschaften", "gelernt"], "labels": ["Physikalische", "physikalische"], "cluster": "C006"}
+{"t": "node", "id": "Physiologie", "features": ["gelernt"], "labels": ["Physiologie"], "cluster": "C004"}
+{"t": "node", "id": "Piktorialismus", "features": ["gelernt"], "labels": ["Piktorialismus", "seit fotografischen Stilrichtung Piktorialismus"], "cluster": "C168"}
+{"t": "node", "id": "Planeten", "features": ["gelernt"], "labels": ["Planeten", "Venus", "Venus Erde Planeten geringsten"], "cluster": "C184"}
+{"t": "node", "id": "Planetenbahnen", "features": ["Erdbahnebene", "gelernt"], "labels": ["Planetenbahnen"], "cluster": "C118"}
+{"t": "node", "id": "Planvolles", "features": ["Architektur", "gelernt"], "labels": ["Planvolles"], "cluster": "C088"}
+{"t": "node", "id": "Pluto", "features": ["Unterwelt", "Zwergplanet", "gelernt"], "labels": ["Pluto"], "cluster": "C193"}
+{"t": "node", "id": "Pluto_Größte", "features": ["gelernt"], "labels": ["Pluto", "Pluto größte", "Pluto_Größte"], "cluster": "C018"}
+{"t": "node", "id": "Popkultur", "features": ["gelernt"], "labels": ["Popkultur", "weltweiten Popkultur geworden spielen"], "cluster": "C041"}
+{"t": "node", "id": "Prinzip", "features": ["Holz", "gelernt"], "labels": ["Prinzip"], "cluster": "C151"}
+{"t": "node", "id": "Prinzipien", "features": ["gelernt"], "labels": ["Prinzipien"], "cluster": "C013"}
+{"t": "node", "id": "Privatsphäre", "features": ["gelernt"], "labels": ["Ortsunabhängigkeit", "Ortsunabhängigkeit Mobilfunkstationen Latenzfreiheit Privatsphäre", "Privatsphäre"], "cluster": "C194"}
+{"t": "node", "id": "Problematik", "features": ["gelernt"], "labels": ["Problematik", "Problematik als LeibSeeleProblem"], "cluster": "C022"}
+{"t": "node", "id": "Problemlösung", "features": ["gelernt"], "labels": ["Problemlösung", "Problemlösung schließlich völlig neues"], "cluster": "C187"}
+{"t": "node", "id": "Produktion_Bis_Seiner", "features": ["gelernt"], "labels": ["Produktion", "Produktion bis seiner Verbreitung", "Produktion_Bis_Seiner"], "cluster": "C016"}
+{"t": "node", "id": "Prozess", "features": ["Kohlenstoffanteils", "gelernt"], "labels": ["Prozess"], "cluster": "C165"}
+{"t": "node", "id": "Psychische_Gesundheitsschäden", "features": ["gelernt"], "labels": ["Psychische_Gesundheitsschäden", "psychische Gesundheitsschäden"], "cluster": "C024"}
+{"t": "node", "id": "Psychoanalyse", "features": ["Verfahren", "gelernt"], "labels": ["Psychoanalyse"], "cluster": "C038"}
+{"t": "node", "id": "Psychologie", "features": ["Herbart", "Ziel", "gelernt"], "labels": ["Psychologie"], "cluster": "C032"}
+{"t": "node", "id": "Publikationen", "features": ["gelernt"], "labels": ["Publikationen", "Wortschöpfungen", "Wortschöpfungen diversen sprachkritischen Publikationen"], "cluster": "C046"}
+{"t": "node", "id": "Punkt", "features": ["Kinnarodden", "gelernt"], "labels": ["Punkt"], "cluster": "C163"}
+{"t": "node", "id": "Quantenmechanik", "features": ["Gesetzmäßigkeiten", "Physik", "gelernt"], "labels": ["Quantenmechanik"], "cluster": "C015"}
+{"t": "node", "id": "Quelle", "features": ["gelernt"], "labels": ["Quelle", "nach wie wichtige Quelle"], "cluster": "C195"}
+{"t": "node", "id": "RIKEN", "features": ["Forschungsinstitut", "gelernt"], "labels": ["RIKEN"], "cluster": "C126"}
+{"t": "node", "id": "Raffael", "features": ["gelernt"], "labels": ["Raffael"], "cluster": "C008"}
+{"t": "node", "id": "Rechnernetzwerken", "features": ["gelernt"], "labels": ["Rechnernetzwerken", "weltweiter Verbund Rechnernetzwerken autonomen"], "cluster": "C021"}
+{"t": "node", "id": "Recht", "features": ["Definiert", "Gemeinschaft", "Rechten", "gelernt"], "labels": ["Recht", "recht kurz kräftig"], "cluster": "C009"}
+{"t": "node", "id": "Rechten", "features": ["gelernt"], "labels": ["Rechten", "unterscheiden subjektiven Rechten konkreten"], "cluster": "C009"}
+{"t": "node", "id": "Rechtsphilosophie", "features": ["gelernt"], "labels": ["Rechtsphilosophie"], "cluster": "C222"}
+{"t": "node", "id": "Rechtsvorschriften", "features": ["gelernt"], "labels": ["Rechtsvorschriften"], "cluster": "C144"}
+{"t": "node", "id": "Reflexion", "features": ["gelernt"], "labels": ["Reflexion", "immer geistigen Reflexion aus"], "cluster": "C074"}
+{"t": "node", "id": "Regenerate", "features": ["Verkrüppelungen", "gelernt"], "labels": ["Regenerate"], "cluster": "C196"}
+{"t": "node", "id": "Regenerative", "features": ["gelernt"], "labels": ["Einzelnen", "Einzelnen Fossile Energie Regenerative", "Regenerative"], "cluster": "C040"}
+{"t": "node", "id": "Regenwald", "features": ["Wälder", "gelernt"], "labels": ["Regenwald"], "cluster": "C197"}
+{"t": "node", "id": "Regionen", "features": ["gelernt"], "labels": ["Regionen", "diesen Regionen vorherrschend"], "cluster": "C158"}
+{"t": "node", "id": "Relativ", "features": ["gelernt"], "labels": ["Relativ", "relativ gering wodurch vielen"], "cluster": "C093"}
+{"t": "node", "id": "Relativ_Ausgeprägte_Klimaanomalie", "features": ["gelernt"], "labels": ["Relativ_Ausgeprägte_Klimaanomalie", "relativ ausgeprägte Klimaanomalie"], "cluster": "C047"}
+{"t": "node", "id": "Renaissance", "features": ["Jahrhunderte", "gelernt"], "labels": ["Renaissance", "bedeutendste Errungenschaft Technik Renaissance"], "cluster": "C008"}
+{"t": "node", "id": "Renaissance_Erst_Seit", "features": ["gelernt"], "labels": ["Renaissance", "Renaissance erst seit Mitte", "Renaissance_Erst_Seit"], "cluster": "C223"}
+{"t": "node", "id": "Revolution", "features": ["gelernt"], "labels": ["Revolution", "Verwendung", "Verwendung Begriffs industrielle Revolution"], "cluster": "C224"}
+{"t": "node", "id": "Rheische", "features": ["gelernt"], "labels": ["Rheische", "beispielsweise Mirovia Panthalassa Rheische"], "cluster": "C128"}
+{"t": "node", "id": "Richtete_Erst_Laufe", "features": ["gelernt"], "labels": ["Richtete_Erst_Laufe", "richtete erst Laufe"], "cluster": "C060"}
+{"t": "node", "id": "Rohstoffen", "features": ["gelernt"], "labels": ["Nachweis", "Nachweis Erschließung Rohstoffen wie", "Rohstoffen"], "cluster": "C136"}
+{"t": "node", "id": "Römischen_Reichs", "features": ["gelernt"], "labels": ["Römischen", "Römischen Reichs", "Römischen_Reichs"], "cluster": "C050"}
+{"t": "node", "id": "Rückbesinnung", "features": ["gelernt"], "labels": ["Formen", "Formen Rückbesinnung auf Antike", "Rückbesinnung"], "cluster": "C159"}
+{"t": "node", "id": "Sachsen", "features": ["gelernt"], "labels": ["Sachsen", "historische Volk Sachsen gemeint"], "cluster": "C083"}
+{"t": "node", "id": "Sanddünen", "features": ["Muharek", "gelernt"], "labels": ["Sanddünen"], "cluster": "C178"}
+{"t": "node", "id": "Sandebenen", "features": ["gelernt"], "labels": ["Sandebenen", "verfestigte Sandebenen ansonsten insbesondere"], "cluster": "C068"}
+{"t": "node", "id": "Sandwüste", "features": ["Arabien", "Oberfläche", "gelernt"], "labels": ["Sandwüste"], "cluster": "C034"}
+{"t": "node", "id": "Satzes", "features": ["gelernt"], "labels": ["Beweis", "Beweis Satzes", "Satzes"], "cluster": "C148"}
+{"t": "node", "id": "Schicht", "features": ["gelernt"], "labels": ["Schicht", "lichtempfindliche Schicht auf Bildebene"], "cluster": "C225"}
+{"t": "node", "id": "Schichtvulkan", "features": ["gelernt"], "labels": ["Schichtvulkan", "als Schichtvulkan als Schildvulkan"], "cluster": "C107"}
+{"t": "node", "id": "Schilddrüsenfunktion", "features": ["gelernt"], "labels": ["Schilddrüsenfunktion", "evolutionär erworbene Veränderung Schilddrüsenfunktion"], "cluster": "C075"}
+{"t": "node", "id": "Schnauze", "features": ["gelernt"], "labels": ["Schnauze", "unterständig Schnauze abgerundet kleinen"], "cluster": "C173"}
+{"t": "node", "id": "Schulterblatt", "features": ["gelernt"], "labels": ["Schulterblatt", "unter anderem verlängerte Schulterblatt"], "cluster": "C041"}
+{"t": "node", "id": "See", "features": ["gelernt"], "labels": ["See", "endemisch XochimilcoSee benachbarten ChalcoSee"], "cluster": "C012"}
+{"t": "node", "id": "Seine_Zentrale_Bedeutung", "features": ["gelernt"], "labels": ["Seine_Zentrale_Bedeutung", "seine zentrale Bedeutung Literaturgeschichten"], "cluster": "C007"}
+{"t": "node", "id": "Seitdem", "features": ["Bestandteil", "gelernt"], "labels": ["Seitdem"], "cluster": "C053"}
+{"t": "node", "id": "Selbst", "features": ["gelernt"], "labels": ["Selbst"], "cluster": "C026"}
+{"t": "node", "id": "Selten_Iatrik", "features": ["gelernt"], "labels": ["Selten_Iatrik", "selten auch die Iatrik"], "cluster": "C003"}
+{"t": "node", "id": "Sie_Dominante_Rolle", "features": ["gelernt"], "labels": ["Sie_Dominante_Rolle", "sie dominante Rolle erhoben"], "cluster": "C025"}
+{"t": "node", "id": "Sie_Ihre_Diagnosen", "features": ["gelernt"], "labels": ["Sie_Ihre_Diagnosen", "sie ihre Diagnosen"], "cluster": "C003"}
+{"t": "node", "id": "Sieht_Wie_Blendend", "features": ["gelernt"], "labels": ["Sieht_Wie_Blendend", "sieht wie blendend heller"], "cluster": "C076"}
+{"t": "node", "id": "Sinne", "features": ["gelernt"], "labels": ["Sinne", "weitesten Sinne handwerkliche industrielle"], "cluster": "C007"}
+{"t": "node", "id": "Situation", "features": ["gelernt"], "labels": ["Situation", "Zeichen", "Zeichen Situation"], "cluster": "C181"}
+{"t": "node", "id": "Smartphone", "features": ["gelernt"], "labels": ["Smartphone"], "cluster": "C024"}
+{"t": "node", "id": "Smartphones", "features": ["Telefonieren", "gelernt"], "labels": ["Smartphones"], "cluster": "C024"}
+{"t": "node", "id": "Sobald", "features": ["Frage", "gelernt"], "labels": ["Sobald"], "cluster": "C044"}
+{"t": "node", "id": "Soll", "features": ["gelernt"], "labels": ["Soll", "soll"], "cluster": "C182"}
+{"t": "node", "id": "Sonne", "features": ["Sonnensystems", "gelernt"], "labels": ["Sonne"], "cluster": "C001"}
+{"t": "node", "id": "Sonne_Scheinbaren_Durchmesser", "features": ["gelernt"], "labels": ["Sonne", "Sonne scheinbaren Durchmesser", "Sonne_Scheinbaren_Durchmesser"], "cluster": "C076"}
+{"t": "node", "id": "Sonnenenergie", "features": ["Energieträger", "gelernt"], "labels": ["Sonnenenergie"], "cluster": "C028"}
+{"t": "node", "id": "Sonnensystem", "features": ["Erde", "gelernt"], "labels": ["Sonnensystem"], "cluster": "C001"}
+{"t": "node", "id": "Sonnensystems", "features": ["gelernt"], "labels": ["Sonnensystems", "Zentralstern", "Zentralstern Sonnensystems"], "cluster": "C001"}
+{"t": "node", "id": "Sowohl", "features": ["Diskussion", "gelernt"], "labels": ["Sowohl"], "cluster": "C111"}
+{"t": "node", "id": "Sowohl_Analogals_Digitalbereich", "features": ["gelernt"], "labels": ["Sowohl_Analogals_Digitalbereich", "sowohl Analogals Digitalbereich Spiegelreflexkamera"], "cluster": "C226"}
+{"t": "node", "id": "Speziellen_Zweig", "features": ["gelernt"], "labels": ["Speziellen_Zweig", "speziellen Zweig"], "cluster": "C026"}
+{"t": "node", "id": "Spezifische_Einzelne_Ursachen", "features": ["gelernt"], "labels": ["Spezifische_Einzelne_Ursachen", "spezifische einzelne Ursachen Industriellen"], "cluster": "C155"}
+{"t": "node", "id": "Spielen", "features": ["gelernt"], "labels": ["Spielen", "Zeitraum", "Zeitraum vier Jahren Spielen"], "cluster": "C071"}
+{"t": "node", "id": "Spielzeit", "features": ["Minuten", "gelernt"], "labels": ["Spielzeit"], "cluster": "C175"}
+{"t": "node", "id": "Sport", "features": ["gelernt"], "labels": ["Sport"], "cluster": "C045"}
+{"t": "node", "id": "Sport_Als_Überbegriff", "features": ["gelernt"], "labels": ["Sport", "Sport als Überbegriff Konzepte", "Sport_Als_Überbegriff"], "cluster": "C027"}
+{"t": "node", "id": "Sportler", "features": ["gelernt"], "labels": ["Sport", "Sport ausübende Sportler", "Sportler"], "cluster": "C185"}
+{"t": "node", "id": "Sportwettkampfveranstaltungen", "features": ["gelernt"], "labels": ["Sammelbezeichnung", "Sammelbezeichnung regelmäßig ausgetragenen Sportwettkampfveranstaltungen", "Sportwettkampfveranstaltungen"], "cluster": "C188"}
+{"t": "node", "id": "Sprache", "features": ["gelernt"], "labels": ["Sprache", "plurizentrische Sprache also mehrere", "stark metaphorischen Sprache geprägt"], "cluster": "C014"}
+{"t": "node", "id": "Sprachgebrauch", "features": ["gelernt"], "labels": ["Sprachgebrauch", "europäischenglischen Sprachgebrauch geheimnisvolle transzendente"], "cluster": "C227"}
+{"t": "node", "id": "Spätrenaissance", "features": ["Anfang", "gelernt"], "labels": ["Spätrenaissance"], "cluster": "C086"}
+{"t": "node", "id": "Staatlich", "features": ["Moral", "gelernt"], "labels": ["Staatlich"], "cluster": "C177"}
+{"t": "node", "id": "Staubteilchen", "features": ["gelernt"], "labels": ["Staubteilchen"], "cluster": "C001"}
+{"t": "node", "id": "Stein_Weisen", "features": ["gelernt"], "labels": ["Stein", "Stein Weisen", "Stein_Weisen"], "cluster": "C072"}
+{"t": "node", "id": "Steinschneider", "features": ["gelernt"], "labels": ["Steinschneider"], "cluster": "C025"}
+{"t": "node", "id": "Stoff", "features": ["gelernt"], "labels": ["Stoff"], "cluster": "C035"}
+{"t": "node", "id": "Struktur_Gesamten_Universums", "features": ["gelernt"], "labels": ["Struktur", "Struktur gesamten Universums zum", "Struktur_Gesamten_Universums", "Wissenschaft", "Wissenschaft Aufbau Zusammensetzung Struktur"], "cluster": "C029"}
+{"t": "node", "id": "Subatomaren_Bereich", "features": ["gelernt"], "labels": ["Subatomaren_Bereich", "subatomaren Bereich"], "cluster": "C029"}
+{"t": "node", "id": "Subsistenzorientierte", "features": ["Bilden", "gelernt"], "labels": ["Subsistenzorientierte"], "cluster": "C103"}
+{"t": "node", "id": "Subtraktion", "features": ["gelernt"], "labels": ["Subtraktion", "minus Sobald Subtraktion definiert"], "cluster": "C044"}
+{"t": "node", "id": "System", "features": ["gelernt"], "labels": ["System", "kein KI-System wenn schnellste"], "cluster": "C183"}
+{"t": "node", "id": "System_Alltag_Konkret", "features": ["Annäherung", "gelernt"], "labels": ["System", "System Alltag konkret", "System_Alltag_Konkret"], "cluster": "C087"}
+{"t": "node", "id": "Systeme", "features": ["gelernt"], "labels": ["Systeme", "weitesten Sinne computerbasierte Systeme"], "cluster": "C073"}
+{"t": "node", "id": "Systemkamera", "features": ["Abzulösen", "gelernt"], "labels": ["Systemkamera"], "cluster": "C079"}
+{"t": "node", "id": "Südtirol", "features": ["gelernt"], "labels": ["Südtirol"], "cluster": "C005"}
+{"t": "node", "id": "Tabelle", "features": ["Elementen", "gelernt"], "labels": ["Tabelle"], "cluster": "C023"}
+{"t": "node", "id": "Tagebau", "features": ["gelernt"], "labels": ["Tagebau"], "cluster": "C198"}
+{"t": "node", "id": "Technik", "features": ["gelernt"], "labels": ["Technik", "starke Bezüge zur Technik"], "cluster": "C157"}
+{"t": "node", "id": "Technische", "features": ["Filmgeschichte", "gelernt"], "labels": ["Technische", "technische"], "cluster": "C122"}
+{"t": "node", "id": "Teilbereich", "features": ["Vererbung", "gelernt"], "labels": ["Teilbereich"], "cluster": "C199"}
+{"t": "node", "id": "Teilweise", "features": ["gelernt"], "labels": ["Teilweise", "teilweise stark elliptisch kreuzen"], "cluster": "C096"}
+{"t": "node", "id": "Telefonieren", "features": ["gelernt"], "labels": ["Telefonieren", "bezüglich Konstruktion Bedienung Telefonieren"], "cluster": "C024"}
+{"t": "node", "id": "Themen", "features": ["gelernt"], "labels": ["Themen", "sehr weit Zuordnung Themen"], "cluster": "C171"}
+{"t": "node", "id": "Theoretische_Biologie", "features": ["gelernt"], "labels": ["Theoretische", "Theoretische Biologie", "Theoretische_Biologie"], "cluster": "C004"}
+{"t": "node", "id": "Theorien_Auf_Wissenschaftlicher", "features": ["gelernt"], "labels": ["Theorien", "Theorien auf wissenschaftlicher Ebene", "Theorien_Auf_Wissenschaftlicher"], "cluster": "C013"}
+{"t": "node", "id": "Therapien_Verbessern_Will", "features": ["gelernt"], "labels": ["Therapien", "Therapien verbessern will", "Therapien_Verbessern_Will"], "cluster": "C003"}
+{"t": "node", "id": "Tiefe", "features": ["gelernt"], "labels": ["Tiefe", "einheitlich sondern ändert Tiefe"], "cluster": "C200"}
+{"t": "node", "id": "Tiere", "features": ["Nachtaktiv", "gelernt"], "labels": ["Tiere"], "cluster": "C180"}
+{"t": "node", "id": "Tierischen_Körpers_Gesundem", "features": ["gelernt"], "labels": ["Tierischen_Körpers_Gesundem", "tierischen Körpers gesundem"], "cluster": "C003"}
+{"t": "node", "id": "Tilman", "features": ["gelernt"], "labels": ["Tilman", "beispielsweise Donatello Michelangelo Tilman"], "cluster": "C228"}
+{"t": "node", "id": "Tizian", "features": ["gelernt"], "labels": ["Tizian"], "cluster": "C008"}
+{"t": "node", "id": "Traditionell", "features": ["Zeitng", "gelernt"], "labels": ["Traditionell"], "cluster": "C201"}
+{"t": "node", "id": "Transformer", "features": ["gelernt"], "labels": ["Multiagentensysteme", "Multiagentensysteme Expertensysteme Transformer serviceorientierte", "Transformer"], "cluster": "C037"}
+{"t": "node", "id": "Treibeis", "features": ["gelernt"], "labels": ["Treibeis", "teils ganz Packis Treibeis"], "cluster": "C186"}
+{"t": "node", "id": "Trivialname", "features": ["Abgeleitet", "gelernt"], "labels": ["Trivialname"], "cluster": "C077"}
+{"t": "node", "id": "Trotz", "features": ["Art", "gelernt"], "labels": ["Trotz"], "cluster": "C091"}
+{"t": "node", "id": "Trägermaterialien", "features": ["Zelluloseacetat", "gelernt"], "labels": ["Trägermaterialien"], "cluster": "C202"}
+{"t": "node", "id": "Typische", "features": ["Mobiltelefonen", "gelernt"], "labels": ["Typische"], "cluster": "C020"}
+{"t": "node", "id": "Tümpel", "features": ["gelernt"], "labels": ["Tümpel", "schwer passierbar wegen Tümpel"], "cluster": "C203"}
+{"t": "node", "id": "UEFA", "features": ["gelernt"], "labels": ["UEFA"], "cluster": "C002"}
+{"t": "node", "id": "Umfang", "features": ["gelernt"], "labels": ["Umfang", "ihrem Umfang stetig gewachsen"], "cluster": "C189"}
+{"t": "node", "id": "Umschreibt_Philosophie_Als", "features": ["gelernt"], "labels": ["Umschreibt_Philosophie_Als", "umschreibt Philosophie als Frage"], "cluster": "C013"}
+{"t": "node", "id": "Umstritten", "features": ["gelernt"], "labels": ["Umstritten", "umstritten"], "cluster": "C059"}
+{"t": "node", "id": "Umstrittene", "features": ["Definition", "gelernt"], "labels": ["Umstrittene"], "cluster": "C059"}
+{"t": "node", "id": "Umweltdatensatz", "features": ["gelernt"], "labels": ["Umweltdatensatz", "wichtigster Umweltdatensatz"], "cluster": "C160"}
+{"t": "node", "id": "Unablässige", "features": ["gelernt"], "labels": ["Beständige", "Beständige Unablässige wie ununterbrochen", "Unablässige"], "cluster": "C031"}
+{"t": "node", "id": "Unangefochten", "features": ["gelernt"], "labels": ["Unangefochten", "unangefochten sowohl international gültigen"], "cluster": "C191"}
+{"t": "node", "id": "Union", "features": ["gelernt"], "labels": ["Europarat", "Europarat Europäische Union", "Union", "meistgesprochene Muttersprache Europäischen Union"], "cluster": "C014"}
+{"t": "node", "id": "Unterscheidungsbeispiel", "features": ["Daten", "gelernt"], "labels": ["Unterscheidungsbeispiel"], "cluster": "C058"}
+{"t": "node", "id": "Unterscheidungsbeispiel_Navigationssystem", "features": ["Daten", "gelernt"], "labels": ["Unterscheidungsbeispiel", "Unterscheidungsbeispiel Navigationssystem", "Unterscheidungsbeispiel_Navigationssystem"], "cluster": "C058"}
+{"t": "node", "id": "Unterschied_Einmal_Gefasst", "features": ["gelernt"], "labels": ["Unterschied", "Unterschied einmal gefasst Hans", "Unterschied_Einmal_Gefasst"], "cluster": "C013"}
+{"t": "node", "id": "Untersucht_Hilfe_Quantenphysik", "features": ["gelernt"], "labels": ["Untersucht_Hilfe_Quantenphysik", "untersucht Hilfe Quantenphysik Universum"], "cluster": "C029"}
+{"t": "node", "id": "Untersuchungsobjekte", "features": ["Malerei", "gelernt"], "labels": ["Untersuchungsobjekte"], "cluster": "C172"}
+{"t": "node", "id": "Unterwelt", "features": ["gelernt"], "labels": ["Unterwelt", "nach römischen Gott Unterwelt"], "cluster": "C193"}
+{"t": "node", "id": "Ursache", "features": ["Schilddrüsenfunktion", "Wärme", "gelernt"], "labels": ["Ursache"], "cluster": "C075"}
+{"t": "node", "id": "Ursachen_Aller_Dinge", "features": ["gelernt"], "labels": ["Ursachen", "Ursachen aller Dinge befasst", "Ursachen_Aller_Dinge"], "cluster": "C017"}
+{"t": "node", "id": "Venus", "features": ["gelernt"], "labels": ["Merkur", "Merkur Venus", "Venus"], "cluster": "C176"}
+{"t": "node", "id": "Verarbeitung", "features": ["gelernt"], "labels": ["Verarbeitung", "Wissenschaft", "Wissenschaft systematischen Darstellung Verarbeitung"], "cluster": "C061"}
+{"t": "node", "id": "Verbindungen", "features": ["gelernt"], "labels": ["Verbindungen", "organische Chemie kohlenstoffhaltige Verbindungen"], "cluster": "C204"}
+{"t": "node", "id": "Verbreitung", "features": ["gelernt"], "labels": ["Verbreitung"], "cluster": "C036"}
+{"t": "node", "id": "Verbrennung", "features": ["Zudem", "gelernt"], "labels": ["Verbrennung"], "cluster": "C205"}
+{"t": "node", "id": "Vererbung", "features": ["gelernt"], "labels": ["Molekulargenetik", "Molekulargenetik molekularen Grundlagen Vererbung", "Vererbung"], "cluster": "C199"}
+{"t": "node", "id": "Verfahren", "features": ["Bilder", "Garen", "gelernt"], "labels": ["Verfahren", "heute psychotherapeutisches Verfahren zur"], "cluster": "C038"}
+{"t": "node", "id": "Verkleinerung", "features": ["gelernt"], "labels": ["Verkleinerung", "seitlicher Ansicht exponiert Verkleinerung"], "cluster": "C133"}
+{"t": "node", "id": "Verkrüppelungen", "features": ["gelernt"], "labels": ["Regel", "Regel keine Verkrüppelungen sondern", "Verkrüppelungen"], "cluster": "C196"}
+{"t": "node", "id": "Vermarktung", "features": ["gelernt"], "labels": ["Vermarktung"], "cluster": "C016"}
+{"t": "node", "id": "Verteilung", "features": ["Erdhülle", "gelernt"], "labels": ["Verteilung"], "cluster": "C119"}
+{"t": "node", "id": "Vervielfältigung", "features": ["gelernt"], "labels": ["Vervielfältigung"], "cluster": "C016"}
+{"t": "node", "id": "Verwendung", "features": ["Carlowitz", "gelernt"], "labels": ["Verwendung"], "cluster": "C055"}
+{"t": "node", "id": "Verwertung", "features": ["gelernt"], "labels": ["Verwertung"], "cluster": "C016"}
+{"t": "node", "id": "Verwesung", "features": ["gelernt"], "labels": ["Verwesung", "geht Verwesung über"], "cluster": "C022"}
+{"t": "node", "id": "Veränderungen_Fast_Allen", "features": ["gelernt"], "labels": ["Veränderungen", "Veränderungen fast allen Lebensbereichen", "Veränderungen_Fast_Allen"], "cluster": "C021"}
+{"t": "node", "id": "Vielfältige_Berührungspunkte_Naturwissenschaften", "features": ["gelernt"], "labels": ["Vielfältige_Berührungspunkte_Naturwissenschaften", "vielfältige Berührungspunkte Naturwissenschaften"], "cluster": "C137"}
+{"t": "node", "id": "Vielfältige_Vorteile", "features": ["gelernt"], "labels": ["Vielfältige_Vorteile", "vielfältige Vorteile"], "cluster": "C036"}
+{"t": "node", "id": "Vierte_Industrielle_Revolution", "features": ["gelernt"], "labels": ["Vierte_Industrielle_Revolution", "vierte industrielle Revolution aufkommen"], "cluster": "C108"}
+{"t": "node", "id": "Volkes", "features": ["gelernt"], "labels": ["Macht", "Macht Volkes über Volk", "Volkes"], "cluster": "C229"}
+{"t": "node", "id": "Volkswirtschaft", "features": ["gelernt"], "labels": ["Deutschland", "Deutschland größte Volkswirtschaft bedeutendsten", "Volkswirtschaft"], "cluster": "C027"}
+{"t": "node", "id": "Vom", "features": ["gelernt"], "labels": ["Vom"], "cluster": "C076"}
+{"t": "node", "id": "Vorstellungen", "features": ["gelernt"], "labels": ["Vorstellungen", "relativ jung Vorstellungen solchen"], "cluster": "C206"}
+{"t": "node", "id": "Vorteile", "features": ["Privatsphäre", "gelernt"], "labels": ["Vorteile"], "cluster": "C194"}
+{"t": "node", "id": "Vorverständnis", "features": ["Quelle", "gelernt"], "labels": ["Vorverständnis"], "cluster": "C195"}
+{"t": "node", "id": "Vulkan", "features": ["Magma", "Meer", "gelernt"], "labels": ["Vulkan"], "cluster": "C023"}
+{"t": "node", "id": "Vulkanismus", "features": ["gelernt"], "labels": ["Vulkanismus", "als Vulkanismus"], "cluster": "C080"}
+{"t": "node", "id": "Wahrheit", "features": ["gelernt"], "labels": ["Wahrheit", "beste aller Staatsformen Wahrheit"], "cluster": "C192"}
+{"t": "node", "id": "Wassergehalt_Zusammensetzung_Seines", "features": ["gelernt"], "labels": ["Wassergehalt", "Wassergehalt Zusammensetzung seines Magmas", "Wassergehalt_Zusammensetzung_Seines"], "cluster": "C042"}
+{"t": "node", "id": "Wasserkörper", "features": ["Tiefe", "gelernt"], "labels": ["Wasserkörper"], "cluster": "C200"}
+{"t": "node", "id": "Weg", "features": ["gelernt"], "labels": ["Weg", "überschrieben Slogan Weg enkelgerechte"], "cluster": "C014"}
+{"t": "node", "id": "Weise", "features": ["gelernt"], "labels": ["Weise", "Weise wie sie durch"], "cluster": "C161"}
+{"t": "node", "id": "Weiter", "features": ["gelernt"], "labels": ["Weiter"], "cluster": "C179"}
+{"t": "node", "id": "Weitere", "features": ["Asteroiden", "Erkenntnisgewinns", "Ozeanbodens", "gelernt"], "labels": ["Weitere"], "cluster": "C019"}
+{"t": "node", "id": "Weitere_Gängige_Metapher", "features": ["Intransparenz", "gelernt"], "labels": ["Weitere_Gängige_Metapher", "weitere gängige Metapher"], "cluster": "C070"}
+{"t": "node", "id": "Weitergabe_Erbanlagen_Nächste", "features": ["gelernt"], "labels": ["Weitergabe", "Weitergabe Erbanlagen nächste Generation", "Weitergabe_Erbanlagen_Nächste"], "cluster": "C015"}
+{"t": "node", "id": "Weiterhin", "features": ["gelernt"], "labels": ["Weiterhin", "weiterhin als Basis Teilgebiete"], "cluster": "C174"}
+{"t": "node", "id": "Wellen", "features": ["gelernt"], "labels": ["Wellen", "besonders gefährliche Wellen durch"], "cluster": "C115"}
+{"t": "node", "id": "Weltraum", "features": ["Kugelraumfläche", "gelernt"], "labels": ["Weltraum"], "cluster": "C166"}
+{"t": "node", "id": "Wer", "features": ["Historisch", "gelernt"], "labels": ["Wer"], "cluster": "C149"}
+{"t": "node", "id": "Werke", "features": ["gelernt"], "labels": ["Kunstgattung", "Kunstgattung Werke aus organisierten", "Werke", "seitdem Debatte Bedeutung Werke"], "cluster": "C074"}
+{"t": "node", "id": "Wertung", "features": ["gelernt"], "labels": ["Konvention", "Konvention Klimasystematik keine Wertung", "Wertung"], "cluster": "C190"}
+{"t": "node", "id": "Wetterauswirkungen", "features": ["Kurzund", "gelernt"], "labels": ["Wetterauswirkungen"], "cluster": "C170"}
+{"t": "node", "id": "Wichtigsten", "features": ["Verbindungen", "gelernt"], "labels": ["Wichtigsten", "wichtigsten"], "cluster": "C204"}
+{"t": "node", "id": "Wildfärbung", "features": ["Dunkelgrau", "gelernt"], "labels": ["Wildfärbung"], "cluster": "C012"}
+{"t": "node", "id": "Wissen", "features": ["Vorstellungen", "gelernt"], "labels": ["Wissen"], "cluster": "C206"}
+{"t": "node", "id": "Wissenschaft", "features": ["gelernt"], "labels": ["Erdoberfläche", "Erdoberfläche befassende Wissenschaft sowohl", "Wissenschaft", "Wissenschaft über man reden", "heutzutage Wissenschaft innig miteinander"], "cluster": "C033"}
+{"t": "node", "id": "Wissenschaften", "features": ["gelernt"], "labels": ["Wissenschaften", "unterliegt wie Wissenschaften kontinuierlichen", "ältesten Wissenschaften"], "cluster": "C006"}
+{"t": "node", "id": "Wort", "features": ["Mode", "Phonographie", "Sinne", "Wurzel", "gelernt"], "labels": ["Wort"], "cluster": "C007"}
+{"t": "node", "id": "Wortbildung", "features": ["gelernt"], "labels": ["Wortbildung", "Wortbildung aus altgriechisch deutsch"], "cluster": "C011"}
+{"t": "node", "id": "Wueste", "features": ["Tümpel", "gelernt"], "labels": ["Wueste"], "cluster": "C203"}
+{"t": "node", "id": "Wurzel", "features": ["gelernt"], "labels": ["Wurzel", "aus indogermanischen Wurzel aufrichten"], "cluster": "C007"}
+{"t": "node", "id": "Wälder", "features": ["gelernt"], "labels": ["Wälder", "Wälder durch ganzjährig fallende"], "cluster": "C197"}
+{"t": "node", "id": "Wärme", "features": ["gelernt"], "labels": ["Wärme", "entweder fehlende Wärme polaren"], "cluster": "C075"}
+{"t": "node", "id": "Zehn_Bis_Billionen", "features": ["gelernt"], "labels": ["Zehn_Bis_Billionen", "zehn bis Billionen Zellen"], "cluster": "C022"}
+{"t": "node", "id": "Zeit", "features": ["gelernt"], "labels": ["Zeit"], "cluster": "C066"}
+{"t": "node", "id": "Zeitlich_Scharf_Begrenzte", "features": ["gelernt"], "labels": ["Zeitlich_Scharf_Begrenzte", "zeitlich scharf begrenzte"], "cluster": "C047"}
+{"t": "node", "id": "Zeitng", "features": ["gelernt"], "labels": ["Zeitng", "Zusammenarbeit", "Zusammenarbeit Astronomie Geodäsie Zeitng"], "cluster": "C201"}
+{"t": "node", "id": "Zellbiologie", "features": ["gelernt"], "labels": ["Zellbiologie"], "cluster": "C004"}
+{"t": "node", "id": "Zelluloseacetat", "features": ["gelernt"], "labels": ["Zelluloseacetat", "Zelluloseacetat früher diente dazu"], "cluster": "C202"}
+{"t": "node", "id": "Zentrale", "features": ["Bindungen", "gelernt"], "labels": ["Zentrale"], "cluster": "C104"}
+{"t": "node", "id": "Ziel", "features": ["Objekte", "gelernt"], "labels": ["Ziel", "empirische Wissenschaft Ziel menschliches"], "cluster": "C032"}
+{"t": "node", "id": "Ziele", "features": ["Kuration", "gelernt"], "labels": ["Ziele"], "cluster": "C169"}
+{"t": "node", "id": "Zielgerichtete_Körperliche", "features": ["gelernt"], "labels": ["Zielgerichtete_Körperliche", "zielgerichtete körperliche"], "cluster": "C045"}
+{"t": "node", "id": "Zimmermann", "features": ["gelernt"], "labels": ["Zimmermann"], "cluster": "C010"}
+{"t": "node", "id": "Zonen", "features": ["gelernt"], "labels": ["Zonen", "sie artenreichsten Lebensräume Zonen"], "cluster": "C046"}
+{"t": "node", "id": "Zudem", "features": ["gelernt"], "labels": ["Zudem", "zudem bedingt durch enthaltenen"], "cluster": "C205"}
+{"t": "node", "id": "Zuge", "features": ["gelernt"], "labels": ["Zuge", "erhebliche Steigerung Lithiumabbaus Zuge"], "cluster": "C142"}
+{"t": "node", "id": "Zugleich", "features": ["gelernt"], "labels": ["Zugleich", "zugleich eines wichtigsten Elemente"], "cluster": "C011"}
+{"t": "node", "id": "Zunächst_Enorme_Umweltschäden", "features": ["gelernt"], "labels": ["Zunächst_Enorme_Umweltschäden", "zunächst enorme Umweltschäden durch"], "cluster": "C198"}
+{"t": "node", "id": "Zusammenhängen", "features": ["gelernt"], "labels": ["Medium", "Medium sehr verschiedenen Zusammenhängen", "Zusammenhängen"], "cluster": "C030"}
+{"t": "node", "id": "Zustand", "features": ["gelernt"], "labels": ["Zielkonflikt", "Zielkonflikt veränderlicher bestmöglicher Zustand", "Zustand"], "cluster": "C031"}
+{"t": "node", "id": "Zustimmung_Patienten_Unabdingbar", "features": ["gelernt"], "labels": ["Zustimmung", "Zustimmung Patienten unabdingbar", "Zustimmung_Patienten_Unabdingbar"], "cluster": "C039"}
+{"t": "node", "id": "Zwergplanet", "features": ["gelernt"], "labels": ["Zwergplanet", "größte zweitmassivste bekannte Zwergplanet"], "cluster": "C001"}
+{"t": "node", "id": "Zwergplaneten", "features": ["gelernt"], "labels": ["Zwergplaneten"], "cluster": "C001"}
+{"t": "node", "id": "Ähnlich", "features": ["gelernt"], "labels": ["Ähnlich", "ähnlich schwierig bestimmen wie"], "cluster": "C116"}
+{"t": "node", "id": "Ärzteschaft", "features": ["gelernt"], "labels": ["Ärzteschaft"], "cluster": "C069"}
+{"t": "node", "id": "Ätna", "features": ["gelernt"], "labels": ["Ätna", "Ätna auf Sizilien"], "cluster": "C020"}
+{"t": "node", "id": "Ökologie", "features": ["gelernt"], "labels": ["Ökologie"], "cluster": "C004"}
+{"t": "node", "id": "Österreich", "features": ["gelernt"], "labels": ["Österreich"], "cluster": "C005"}
+{"t": "node", "id": "Übergänge", "features": ["Fließend", "gelernt"], "labels": ["Übergänge"], "cluster": "C124"}
+{"t": "node", "id": "Überreste", "features": ["Kontinenten", "gelernt"], "labels": ["Überreste"], "cluster": "C002"}
+{"t": "node", "id": "Übersät", "features": ["gelernt"], "labels": ["Übersät", "übersät dicht blockigem kantigem"], "cluster": "C034"}
 {"t": "edge", "src": "Abgrenzung", "dst": "Astronomie", "w": 0.85, "type": "ist"}
 {"t": "edge", "src": "Abgrenzung", "dst": "Einordnung", "w": 0.85, "type": "ist"}
 {"t": "edge", "src": "Abgrenzung", "dst": "Physik", "w": 0.08, "type": "coactive"}

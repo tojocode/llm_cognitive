@@ -1,0 +1,18 @@
+[
+  {"type": "Definition", "q": "Was ist ein Axolotl?", "expect": ["axolotl"]},
+  {"type": "Eigenschaft", "q": "Welche Farbe hat der Axolotl?", "expect": ["axolotl"]},
+  {"type": "Ort", "q": "Wo lebt der Axolotl?", "expect": ["axolotl"]},
+  {"type": "Definition", "q": "Was ist Klimawandel?", "expect": ["klimawandel"]},
+  {"type": "Warum", "q": "Warum gibt es den Klimawandel?", "expect": ["klimawandel"]},
+  {"type": "Wirkung", "q": "Welche Auswirkungen hat der Klimawandel?", "expect": ["klimawandel"]},
+  {"type": "Definition", "q": "Was ist Vulkan?", "expect": ["vulkan"]},
+  {"type": "Ursache", "q": "Wodurch entstehen Vulkane?", "expect": ["vulkan"]},
+  {"type": "Mehrhop", "q": "Zu welchem System gehört Pluto?", "expect": ["pluto", "sonnensystem"]},
+  {"type": "Warum", "q": "Warum ist Pluto ein Zwergplanet?", "expect": ["pluto"]},
+  {"type": "Vergleich", "q": "Was ist der Unterschied zwischen Geologie und Psychologie?", "expect": ["geologie", "psychologie"]},
+  {"type": "Vergleich", "q": "Worin unterscheidet sich Medizin von Psychologie?", "expect": ["medizin", "psychologie"]},
+  {"type": "Vergleich", "q": "Was ist der Unterschied zwischen Informatik und Mathematik?", "expect": ["informatik", "mathematik"]},
+  {"type": "Mehrhop", "q": "Welche Wissenschaft passt zu Quantenmechanik und Mathematik?", "expect": ["quantenmechanik", "mathematik", "physik"]},
+  {"type": "Definition", "q": "Was ist Demokratie?", "expect": ["demokratie"]},
+  {"type": "Definition", "q": "Was ist Quantenmechanik?", "expect": ["quantenmechanik"]}
+]

@@ -19,6 +19,7 @@ class Konzept:
     labels: List[str] = field(default_factory=list)
     semantische_features: List[str] = field(default_factory=list)
     verbindungen: List[Verbindung] = field(default_factory=list)
+    cluster_id: str = ""
     letzte_aktivierung: datetime = field(default_factory=datetime.now)
 
 
