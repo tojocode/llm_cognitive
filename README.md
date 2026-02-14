@@ -39,6 +39,7 @@ python data_import/wikipedia_to_core.py
 python data_import/wikipedia_to_core.py --augment
 python debug_analyse/run_benchmark.py
 python debug_analyse/run_benchmark.py --file debug_analyse/benchmark_cluster_context.json
+python debug_analyse/run_benchmark.py --file debug_analyse/benchmark_quality_extended.json
 python debug_analyse/export_cytoscape.py
 ```
 
@@ -64,3 +65,9 @@ python debug_analyse/export_cytoscape.py
 - Intent-Erkennung deckt auch Formen wie `Zu welchem ... gehört ...?` ab (wird als `PARTS` behandelt).
 - Benchmark-Runner akzeptiert `--file`, damit mehrere Benchmark-Sets gefahren werden können.
 - Neuer Kontext-Benchmark: `debug_analyse/benchmark_cluster_context.json` (Eigenschaft, Ursache/Wirkung, Vergleich, Mehrhop).
+- Content/Context-Trennung ist aktiv: Frageinhalte (`content_tokens`) und Fragelogik (`context_tokens`) werden getrennt gewichtet, um thematische Drift zu reduzieren.
+- Ensemble-Layer ist aktiv: Knoten können mehreren Ensembles zugeordnet sein (`ensembles`, `active_ensembles`), inklusive ko-aktiver Lernanpassung.
+- Episodische Kanten führen Evidenz-Metadaten (`evidence`, `confidence`, `context`) und werden score-basiert in Semantic konsolidiert.
+- Schema-Layer ist aktiv: Relationstypen werden auf Kernschemata (`is_a`, `part_of`, `causes`, `has_property`, ...) gemappt und intent-sensitiv gegatet.
+- Generic-Gating reduziert zu generische Antwortknoten; Fokus-nahe generische Knoten bleiben bei starker Ankerung weiterhin möglich.
+- Erweiterter Qualitäts-Benchmark: `debug_analyse/benchmark_quality_extended.json` prüft zusätzlich Unknown-Precision und Leakage-Freiheit (`forbid`-Labels).

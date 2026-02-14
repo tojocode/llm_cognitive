@@ -125,6 +125,9 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
         self.consolidate_threshold = 0.55
         self.consolidate_ratio = 0.7
         self.consolidate_boost = 0.04
+        self.consolidate_score_threshold = 0.62
+        self.consolidate_evidence_target = 2.8
+        self.consolidate_min_confidence = 0.22
 
         # Sprache (Broca/Wernicke)
         self._init_broca(lm_cmd, lm_callable)
@@ -166,6 +169,26 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
         self.answer_min_relevance = 0.18
         self.answer_min_relevance_cause = 0.26
         self.value_generic_penalty = 0.28
+
+        # Content/Context Trennung
+        self.content_cue_weight = 1.0
+        self.context_cue_weight = 0.42
+        self.context_generic_penalty = 0.78
+
+        # Schema-/Hierarchie-Layer
+        self.schema_mode_enabled = True
+        self.schema_core_relations = {
+            "is_a",
+            "part_of",
+            "causes",
+            "has_property",
+            "located_in",
+            "in_context",
+            "related_to",
+            "sequence",
+        }
+        self.generic_gate_penalty = 0.42
+        self.generic_gate_focus_boost = 0.78
 
         # Planning (Lookahead)
         self.plan_enabled = True
@@ -212,6 +235,19 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
         self.active_clusters: set[str] = set()
         self._cluster_intent = "OTHER"
 
+        # Ensemble Layer (multi-zugeordnete neuronale Gruppen)
+        self.ensembles_enabled = True
+        self.ensemble_min_size = 3
+        self.ensemble_max_per_node = 4
+        self.ensemble_boost = 0.18
+        self.ensemble_context_boost = 0.08
+        self.ensemble_coactive_lr = 0.04
+        self.ensemble_rel_types = {"ist", "klasse", "gehört_zu", "gehört_zu", "teil_von", "farbe"}
+
+        self.ensembles: Dict[str, Dict[str, float]] = {}
+        self.node_ensembles: Dict[str, Dict[str, float]] = {}
+        self.active_ensembles: set[str] = set()
+
         if self.semantic_datei:
             self.modell_laden(self.semantic_datei, episodic=False)
         if self.episodic_datei:
@@ -219,6 +255,7 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
 
         self._rebuild_cluster_index()
         self._rebuild_cluster_bridges()
+        self._rebuild_ensembles()
 
         # Lexikon wird in _init_wernicke geladen
         self._init_embeddings(embed_db_path, embed_dim)
@@ -441,6 +478,7 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
 
     def _clear_cluster_context(self):
         self.active_clusters = set()
+        self.active_ensembles = set()
         self._cluster_intent = "OTHER"
 
     def _set_active_clusters_from_cues(
@@ -554,6 +592,156 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
             return max(0.05, min(1.0, self.cluster_cross_bias))
         return max(0.03, min(0.9, self.cluster_cross_bias * 0.9))
 
+    def _ensure_node_ensemble(
+        self,
+        kid: str,
+        ensemble_id: str,
+        weight: float,
+    ):
+        if not kid or not ensemble_id:
+            return
+        self.node_ensembles.setdefault(kid, {})
+        cur = self.node_ensembles[kid].get(ensemble_id, 0.0)
+        self.node_ensembles[kid][ensemble_id] = max(cur, float(weight))
+
+        self.ensembles.setdefault(ensemble_id, {})
+        cur_rev = self.ensembles[ensemble_id].get(kid, 0.0)
+        self.ensembles[ensemble_id][kid] = max(cur_rev, float(weight))
+
+    def _rebuild_ensembles(self):
+        self.ensembles = {}
+        self.node_ensembles = {}
+        if not self.ensembles_enabled:
+            for k in self.konzepte.values():
+                k.ensemble_ids = []
+            return
+
+        # Basis 1: Cluster-Ensembles
+        for cluster_id, members in self.cluster_members.items():
+            ens_id = f"ENS_CL_{cluster_id}"
+            for kid in members:
+                self._ensure_node_ensemble(kid, ens_id, 0.9)
+
+        # Basis 2: Semantische Typ-Ensembles (multi assignment)
+        for src, k in self.konzepte.items():
+            if self._is_junk_concept_id(src):
+                continue
+            for e in k.verbindungen:
+                typ = self._canon_type(e.typ)
+                if typ not in self.ensemble_rel_types:
+                    continue
+                if float(e.gewicht or 0.0) < 0.18:
+                    continue
+                dst = e.ziel
+                if not dst or self._is_junk_concept_id(dst):
+                    continue
+                ens_id = f"ENS_{typ}_{dst}"
+                w_src = min(1.0, 0.42 + float(e.gewicht))
+                self._ensure_node_ensemble(src, ens_id, w_src)
+                self._ensure_node_ensemble(dst, ens_id, min(1.0, 0.34 + float(e.gewicht) * 0.6))
+
+        # Entferne zu kleine Ensembles
+        min_size = max(2, int(self.ensemble_min_size))
+        valid_ensembles = {
+            eid for eid, members in self.ensembles.items() if len(members) >= min_size
+        }
+        self.ensembles = {
+            eid: members
+            for eid, members in self.ensembles.items()
+            if eid in valid_ensembles
+        }
+
+        pruned_node_ens: Dict[str, Dict[str, float]] = {}
+        max_per_node = max(1, int(self.ensemble_max_per_node))
+        for kid, memberships in self.node_ensembles.items():
+            filtered = [(eid, w) for eid, w in memberships.items() if eid in valid_ensembles]
+            filtered.sort(key=lambda x: x[1], reverse=True)
+            top = filtered[:max_per_node]
+            if top:
+                pruned_node_ens[kid] = {eid: w for eid, w in top}
+        self.node_ensembles = pruned_node_ens
+
+        # Rückwärtsindex nach Pruning neu aufbauen
+        new_ensembles: Dict[str, Dict[str, float]] = {}
+        for kid, memberships in self.node_ensembles.items():
+            for eid, w in memberships.items():
+                new_ensembles.setdefault(eid, {})[kid] = w
+        self.ensembles = new_ensembles
+
+        # Persistente Felder in Konzepten
+        for cid, k in self.konzepte.items():
+            mids = self.node_ensembles.get(cid, {})
+            k.ensemble_ids = sorted(mids.keys())
+
+    def _select_active_ensembles(self, content_cues: Dict[str, float]):
+        self.active_ensembles = set()
+        if not self.ensembles_enabled or not content_cues:
+            return
+
+        scores: Dict[str, float] = {}
+        for kid, val in sorted(content_cues.items(), key=lambda x: x[1], reverse=True)[:6]:
+            memberships = self.node_ensembles.get(kid, {})
+            for eid, w in memberships.items():
+                scores[eid] = scores.get(eid, 0.0) + float(val) * float(w)
+
+        if not scores:
+            return
+
+        ranked = sorted(scores.items(), key=lambda x: x[1], reverse=True)[:4]
+        self.active_ensembles = {eid for eid, score in ranked if score > 0.05}
+
+    def _apply_ensemble_bias_to_cues(self, cues: Dict[str, float]) -> Dict[str, float]:
+        if not self.ensembles_enabled or not self.active_ensembles or not cues:
+            return cues
+
+        out: Dict[str, float] = {}
+        for kid, val in cues.items():
+            memberships = self.node_ensembles.get(kid, {})
+            overlap = 0.0
+            for eid in self.active_ensembles:
+                overlap += float(memberships.get(eid, 0.0))
+            boost = 1.0 + min(0.45, overlap * self.ensemble_boost)
+            if self._is_generic_concept(kid):
+                boost = 1.0 + min(0.2, overlap * self.ensemble_context_boost)
+            out[kid] = min(0.99, float(val) * boost)
+        return out
+
+    def _learn_ensemble_coactivation(self, pattern: List[Tuple[str, float]]):
+        if not self.ensembles_enabled or not pattern:
+            return
+        top = [(kid, act) for kid, act in pattern[:10] if act >= self.pattern_threshold]
+        if len(top) < 2:
+            return
+
+        for src, src_act in top:
+            src_ens = self.node_ensembles.get(src, {})
+            if not src_ens:
+                continue
+            for dst, dst_act in top:
+                if src == dst:
+                    continue
+                lr = self.ensemble_coactive_lr * min(float(src_act), float(dst_act))
+                if lr <= 0:
+                    continue
+                cur = self.node_ensembles.get(dst, {}).copy()
+                for eid, w in src_ens.items():
+                    new_w = max(cur.get(eid, 0.0), min(1.0, float(w) + lr))
+                    cur[eid] = new_w
+                if cur:
+                    keep = sorted(cur.items(), key=lambda x: x[1], reverse=True)[
+                        : max(1, int(self.ensemble_max_per_node))
+                    ]
+                    self.node_ensembles[dst] = {eid: w for eid, w in keep}
+
+        # Rückwärtsindex aktualisieren
+        rebuilt: Dict[str, Dict[str, float]] = {}
+        for kid, memberships in self.node_ensembles.items():
+            for eid, w in memberships.items():
+                rebuilt.setdefault(eid, {})[kid] = w
+            if kid in self.konzepte:
+                self.konzepte[kid].ensemble_ids = sorted(memberships.keys())
+        self.ensembles = rebuilt
+
     # -------------------------
     # Hybrid Memory (Embedding DB)
     # -------------------------
@@ -643,6 +831,46 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
                 return v
         return t0
 
+    def _schema_rel(self, rel_type: str) -> str:
+        t = self._canon_type(rel_type).strip().lower()
+        mapping = {
+            "ist": "is_a",
+            "klasse": "is_a",
+            "gehört_zu": "is_a",
+            "gehört_zu": "is_a",
+            "gehoert_zu": "is_a",
+            "gilt_als": "is_a",
+            "teil_von": "part_of",
+            "besteht_aus": "part_of",
+            "enthält": "part_of",
+            "enthält": "part_of",
+            "enthaelt": "part_of",
+            "hat": "has_property",
+            "eigenschaft": "has_property",
+            "eigenschaft_von": "has_property",
+            "farbe": "has_property",
+            "verursacht": "causes",
+            "verursacht_durch": "causes",
+            "verursacht_von": "causes",
+            "durch": "causes",
+            "ermöglicht": "causes",
+            "lebt_in": "located_in",
+            "in": "located_in",
+            "von": "located_in",
+            "folge": "sequence",
+            "prozess": "in_context",
+            "cooccur": "related_to",
+            "coactive": "related_to",
+            "similar": "related_to",
+            "cluster_of": "related_to",
+            "assoziation": "related_to",
+        }
+        if t in mapping:
+            return mapping[t]
+        if t.startswith("cluster") or t.startswith("co"):
+            return "related_to"
+        return "in_context"
+
     # -------------------------
     # Intent / Gating
     # -------------------------
@@ -684,65 +912,42 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
         return "OTHER"
 
     def _gate(self, edge_type: str, intent: str) -> float:
-        t = edge_type.strip().lower()
+        schema = self._schema_rel(edge_type)
+
         if intent == "DEF":
-            preferred = {
-                "ist",
-                "teil_von",
-                "klasse",
-                "gehört_zu",
-                "besteht_aus",
-                "eigenschaft",
-            }
+            preferred = {"is_a", "part_of"}
         elif intent == "CAUSE":
-            preferred = {
-                "ermöglicht",
-                "verursacht",
-                "verursacht_durch",
-                "verursacht_von",
-                "notwendig_für",
-                "benötigt",
-                "braucht",
-            }
+            preferred = {"causes"}
         elif intent == "WHERE":
-            preferred = {"lebt_in", "in", "von"}
+            preferred = {"located_in"}
         elif intent == "PARTS":
-            preferred = {"besteht_aus", "enthält", "hat", "teil_von"}
+            preferred = {"part_of", "is_a"}
         elif intent == "PROPS":
-            preferred = {"eigenschaft", "eigenschaft_von", "hat", "ist", "farbe"}
+            preferred = {"has_property", "is_a"}
         elif intent == "HOW":
-            preferred = {
-                "prozess",
-                "besteht_aus",
-                "benötigt",
-                "in",
-                "von",
-                "schritt",
-                "lebt_in",
-            }
+            preferred = {"causes", "part_of", "sequence", "in_context"}
         elif intent == "COMPARE":
-            preferred = {
-                "ist",
-                "klasse",
-                "gehört_zu",
-                "teil_von",
-                "eigenschaft",
-                "farbe",
-                "hat",
-            }
+            preferred = {"is_a", "has_property", "part_of"}
         else:
             preferred = set()
+
         if intent == "CAUSE":
-            return self.cause_gate_match if t in preferred else self.cause_gate_mismatch
+            return self.cause_gate_match if schema in preferred else self.cause_gate_mismatch
+
         if intent == "PROPS":
-            if t in {"farbe", "eigenschaft", "eigenschaft_von"}:
+            if schema == "has_property":
                 return max(self.gate_match, 1.35)
-            if t == "hat":
-                return max(self.gate_match, 1.2)
-            if t == "ist":
-                return min(self.gate_mismatch, 0.55)
+            if schema == "is_a":
+                return max(self.gate_mismatch, 0.58)
+            if schema == "part_of":
+                return max(self.gate_mismatch, 0.5)
             return self.gate_mismatch
-        return self.gate_match if t in preferred else self.gate_mismatch
+
+        if schema in preferred:
+            return self.gate_match
+        if self.schema_mode_enabled and schema == "related_to":
+            return min(self.gate_mismatch, 0.52)
+        return self.gate_mismatch
 
     # -------------------------
     # Modell laden (JSONL empfohlen)
@@ -820,6 +1025,10 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
                         labels = obj.get("labels") or []
                         labels = [self._nfc(str(x)) for x in labels if str(x).strip()]
                         cluster_id = self._nfc(str(obj.get("cluster", ""))).strip()
+                        context_ids = obj.get("contexts") or []
+                        context_ids = [self._nfc(str(x)) for x in context_ids if str(x).strip()]
+                        ensemble_ids = obj.get("ensembles") or []
+                        ensemble_ids = [self._nfc(str(x)) for x in ensemble_ids if str(x).strip()]
                         if not labels:
                             labels = [cid]
                         if cid not in self.konzepte:
@@ -828,6 +1037,8 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
                                 labels=labels,
                                 semantische_features=feats,
                                 cluster_id=cluster_id,
+                                context_ids=context_ids,
+                                ensemble_ids=ensemble_ids,
                             )
                         else:
                             if feats:
@@ -842,6 +1053,18 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
                                     if lb not in existing_l:
                                         self.konzepte[cid].labels.append(lb)
                                         existing_l.add(lb)
+                            if context_ids:
+                                ex_ctx = set(self.konzepte[cid].context_ids or [])
+                                for ctx in context_ids:
+                                    if ctx not in ex_ctx:
+                                        self.konzepte[cid].context_ids.append(ctx)
+                                        ex_ctx.add(ctx)
+                            if ensemble_ids:
+                                ex_ens = set(self.konzepte[cid].ensemble_ids or [])
+                                for ens in ensemble_ids:
+                                    if ens not in ex_ens:
+                                        self.konzepte[cid].ensemble_ids.append(ens)
+                                        ex_ens.add(ens)
                             if cluster_id:
                                 self.konzepte[cid].cluster_id = cluster_id
                         continue
@@ -856,11 +1079,30 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
                             w = 0.0
                         w = max(0.0, min(w, 0.99))
                         typ = self._canon_type(str(obj.get("type", "")))
+                        try:
+                            evidence = float(obj.get("evidence", 0.0))
+                        except Exception:
+                            evidence = 0.0
+                        try:
+                            confidence = float(obj.get("confidence", 0.0))
+                        except Exception:
+                            confidence = 0.0
+                        try:
+                            context_stability = float(obj.get("context", 0.0))
+                        except Exception:
+                            context_stability = 0.0
                         if src not in self.konzepte:
                             self.konzepte[src] = Konzept(id=src, labels=[src])
                         if dst not in self.konzepte:
                             self.konzepte[dst] = Konzept(id=dst, labels=[dst])
-                        edge = Verbindung(ziel=dst, gewicht=w, typ=typ)
+                        edge = Verbindung(
+                            ziel=dst,
+                            gewicht=w,
+                            typ=typ,
+                            evidence=max(0.0, evidence),
+                            confidence=max(0.0, min(1.0, confidence)),
+                            context_stability=max(0.0, min(1.0, context_stability)),
+                        )
                         if episodic:
                             self.episodic_edges.setdefault(src, []).append(edge)
                         else:
@@ -1246,23 +1488,43 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
                 "timestamp": datetime.now().isoformat(),
             }
 
-        base_cues = self._cue_set(frage)
-        cues = dict(base_cues)
-        seed_set = set(base_cues.keys())
-        focus_ids = [k for k, _ in sorted(cues.items(), key=lambda x: x[1], reverse=True)[:2]]
+        content_tokens, context_tokens = self._split_question_tokens(frage)
+
+        base_raw_cues = self._cue_set(frage)
+        base_content_cues, base_context_cues = self._split_cues_content_context(
+            base_raw_cues,
+            content_tokens,
+            context_tokens,
+        )
+
+        content_cues = dict(base_content_cues)
+        context_cues = dict(base_context_cues)
         memory_hits: List[Dict[str, object]] = []
         question_anchors = self._anchor_from_question(frage)
 
         for kid in question_anchors:
-            cues[kid] = max(cues.get(kid, 0.0), 0.95 + self.question_anchor_boost)
-            seed_set.add(kid)
+            toks = self._concept_query_tokens(kid)
+            overlap_content = len(toks.intersection(content_tokens)) if content_tokens else 0
+            if overlap_content > 0 or kid in content_cues:
+                content_cues[kid] = max(
+                    content_cues.get(kid, 0.0),
+                    0.95 + self.question_anchor_boost,
+                )
+            else:
+                context_cues[kid] = max(
+                    context_cues.get(kid, 0.0),
+                    0.72 + self.question_anchor_boost,
+                )
 
         anchored: List[str] = []
         if intent == "CAUSE":
             anchored = question_anchors
             for kid in anchored:
-                cues[kid] = max(cues.get(kid, 0.0), 0.95 + self.cause_focus_boost)
-                seed_set.add(kid)
+                content_cues[kid] = max(content_cues.get(kid, 0.0), 0.95 + self.cause_focus_boost)
+
+        cues = self._merge_content_context_cues(content_cues, context_cues)
+        seed_set = set(content_cues.keys()) if content_cues else set(cues.keys())
+        focus_ids = [k for k, _ in sorted(cues.items(), key=lambda x: x[1], reverse=True)[:2]]
 
         if cues:
             cues = {k: v for k, v in cues.items() if not self._is_junk_concept_id(k)}
@@ -1272,29 +1534,43 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
         allow_embed = True
         embed_strong = self.embed_min_score_strong
         if intent == "CAUSE":
-            if not base_cues and not anchored:
+            if not base_content_cues and not anchored:
                 allow_embed = False
             embed_strong = max(embed_strong, self.embed_min_score_strong * 1.4)
 
         if allow_embed and self.embed_enabled and self._use_embeddings_for(frage):
             memory_hits = self.embed_query(frage)
             top_score = float(memory_hits[0].get("score") or 0.0) if memory_hits else 0.0
-            if not base_cues and top_score < embed_strong:
+            if not base_content_cues and top_score < embed_strong:
                 memory_hits = []
             for hit in memory_hits:
                 score = float(hit.get("score") or 0.0)
                 if score <= 0:
                     continue
                 mcues = self._cue_set(str(hit.get("text") or ""))
+                m_content, m_context = self._split_cues_content_context(
+                    mcues,
+                    content_tokens,
+                    context_tokens,
+                )
                 boost = self.embed_cue_boost * score
-                for k, v in mcues.items():
-                    cues[k] = max(cues.get(k, 0.0), min(0.99, v * boost))
+                for k, v in m_content.items():
+                    content_cues[k] = max(content_cues.get(k, 0.0), min(0.99, v * boost))
+                for k, v in m_context.items():
+                    context_cues[k] = max(context_cues.get(k, 0.0), min(0.99, v * boost * 0.9))
 
         # Goal Layer cues (soft bias)
         for k, v in self._goal_cues().items():
-            cues[k] = max(cues.get(k, 0.0), v)
+            content_cues[k] = max(content_cues.get(k, 0.0), v)
 
-        self._set_active_clusters_from_cues(cues, question_anchors, intent)
+        cues = self._merge_content_context_cues(content_cues, context_cues)
+        seed_set = set(content_cues.keys()) if content_cues else set(cues.keys())
+
+        self._select_active_ensembles(content_cues)
+        cues = self._apply_ensemble_bias_to_cues(cues)
+
+        cluster_seed_cues = content_cues if content_cues else cues
+        self._set_active_clusters_from_cues(cluster_seed_cues, question_anchors, intent)
         if self.active_clusters and cues:
             biased: Dict[str, float] = {}
             for kid, val in cues.items():
@@ -1303,7 +1579,7 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
                 if v2 > self.cutoff * 0.5:
                     biased[kid] = v2
             if biased:
-                cues = biased
+                cues = self._apply_ensemble_bias_to_cues(biased)
                 seed_set = {k for k in seed_set if k in cues}
 
         if not cues:
@@ -1315,6 +1591,11 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
                 "denkmuster": [],
                 "focus": focus_ids,
                 "anchors": question_anchors,
+                "content_tokens": sorted(content_tokens),
+                "context_tokens": sorted(context_tokens),
+                "content_cues": sorted(content_cues.keys())[:8],
+                "context_cues": sorted(context_cues.keys())[:8],
+                "active_ensembles": sorted(self.active_ensembles),
                 "memories": memory_hits,
                 "trace": [],
                 "timestamp": datetime.now().isoformat(),
@@ -1399,6 +1680,9 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
                 if len(focus_ids) >= 2:
                     break
 
+        pattern = self._apply_generic_gate(pattern, focus_ids, intent)
+        self._update_context_tags(pattern, context_tokens, intent)
+
         trace_out = sorted(self.trace, key=lambda t: t.contrib, reverse=True)[:20]
         if question_anchors:
             trace_srcs = {t.src for t in trace_out if getattr(t, "src", None)}
@@ -1426,6 +1710,11 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
             "denkmuster": pattern,
             "focus": focus_ids,
             "anchors": question_anchors,
+            "content_tokens": sorted(content_tokens),
+            "context_tokens": sorted(context_tokens),
+            "content_cues": sorted(content_cues.keys())[:8],
+            "context_cues": sorted(context_cues.keys())[:8],
+            "active_ensembles": sorted(self.active_ensembles),
             "memories": memory_hits,
             "trace": trace_out,
             "timestamp": datetime.now().isoformat(),
@@ -1478,7 +1767,9 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
             return "Das weiß ich nicht. Bitte stelle mir eine neue Frage."
 
         if auto_lernen:
-            if not (self.pred_enabled and self.pred_learning_only):
+            if self.pred_enabled and self.pred_learning_only:
+                self.lerne_episodisch_trace(pattern, trace)
+            else:
                 self.lerne_aus_aktivierung(pattern, trace)
 
         use_lm_final = self.use_lm_default if use_lm is None else use_lm
@@ -1513,11 +1804,8 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
             return False
         return True
 
-    def _goal_tokens(self, frage: str) -> set[str]:
-        tokens = self._tokenize(frage)
-        if not tokens:
-            return set()
-        stop = {
+    def _context_terms(self) -> set[str]:
+        return {
             "der", "die", "das", "ein", "eine", "einen", "einem", "einer",
             "ist", "sind", "und", "oder", "zu", "im", "in", "am", "an", "von", "mit",
             "fuer", "für", "den", "dem", "des", "hat", "haben", "besteht", "bestehen",
@@ -1525,17 +1813,137 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
             "woraus", "womit", "wodurch", "wo", "wann", "wer", "wen", "wem", "wessen",
             "welche", "welcher", "welches", "welchen", "welchem",
             "außerdem", "ausserdem", "hierbei", "dabei", "somit", "jedoch",
-            "sich",
-            "unterschied",
-            "vergleich",
-            "differenz",
-            "abgrenzung",
-            "system",
-            "wissenschaft",
-            "modell",
-            "prinzip",
+            "sich", "unterschied", "vergleich", "differenz", "abgrenzung",
+            "system", "wissenschaft", "modell", "prinzip",
+            "wirkung", "auswirkung", "ursache", "folgen", "funktion", "prozess",
+            "frage", "kontext", "inhalt", "warumfrage", "definitionsfrage",
+            "zwischen", "gehört", "gehoert", "passt", "unterscheidet",
+            "vergleichbar", "zuordnung", "kategorie",
         }
-        return {t for t in tokens if t not in stop}
+
+    def _split_question_tokens(self, frage: str) -> tuple[set[str], set[str]]:
+        tokens = self._tokenize(frage)
+        if not tokens:
+            return set(), set()
+        context_terms = self._context_terms()
+        content: set[str] = set()
+        context: set[str] = set()
+        for t in tokens:
+            if t in context_terms:
+                context.add(t)
+                continue
+            if len(t) < 3 and not t.isupper():
+                context.add(t)
+                continue
+            content.add(t)
+        if not content:
+            for t in tokens:
+                if t not in context_terms and len(t) >= 2:
+                    content.add(t)
+                    break
+        return content, context
+
+    def _concept_query_tokens(self, kid: str) -> set[str]:
+        if not kid:
+            return set()
+        k = self.konzepte.get(kid)
+        labels = (k.labels if k and k.labels else [kid])
+        out: set[str] = set()
+        for lab in labels:
+            norm = self._norm_label(lab)
+            if not norm:
+                continue
+            for t in norm.split():
+                if t:
+                    out.add(t)
+                    for var in self._token_variants(t):
+                        if var:
+                            out.add(var)
+        return out
+
+    def _split_cues_content_context(
+        self,
+        cues: Dict[str, float],
+        content_tokens: set[str],
+        context_tokens: set[str],
+    ) -> tuple[Dict[str, float], Dict[str, float]]:
+        content_cues: Dict[str, float] = {}
+        context_cues: Dict[str, float] = {}
+
+        for kid, val in cues.items():
+            if self._is_junk_concept_id(kid):
+                continue
+            toks = self._concept_query_tokens(kid)
+            overlap_content = len(toks.intersection(content_tokens)) if content_tokens else 0
+            overlap_context = len(toks.intersection(context_tokens)) if context_tokens else 0
+
+            if overlap_content > 0:
+                score = float(val) * (1.0 + 0.12 * overlap_content)
+                if self._is_generic_concept(kid):
+                    score *= 0.85
+                content_cues[kid] = max(content_cues.get(kid, 0.0), score)
+                continue
+
+            if overlap_context > 0:
+                score = float(val) * (0.78 if not self._is_generic_concept(kid) else 0.62)
+                context_cues[kid] = max(context_cues.get(kid, 0.0), score)
+                continue
+
+            if content_tokens:
+                # Strikte Trennung: ohne Inhalts- oder Kontextmatch keine Übernahme.
+                continue
+
+            if self._is_generic_concept(kid):
+                context_cues[kid] = max(context_cues.get(kid, 0.0), float(val) * 0.42)
+            else:
+                content_cues[kid] = max(content_cues.get(kid, 0.0), float(val) * 0.68)
+
+        return content_cues, context_cues
+
+    def _merge_content_context_cues(
+        self,
+        content_cues: Dict[str, float],
+        context_cues: Dict[str, float],
+    ) -> Dict[str, float]:
+        merged: Dict[str, float] = {}
+        for kid, val in content_cues.items():
+            merged[kid] = max(merged.get(kid, 0.0), min(0.99, float(val) * self.content_cue_weight))
+        for kid, val in context_cues.items():
+            score = float(val) * self.context_cue_weight
+            if self._is_generic_concept(kid):
+                score *= (1.0 - self.context_generic_penalty)
+            merged[kid] = max(merged.get(kid, 0.0), min(0.99, score))
+        return merged
+
+    def _update_context_tags(
+        self,
+        pattern: List[Tuple[str, float]],
+        context_tokens: set[str],
+        intent: str,
+    ):
+        if not pattern:
+            return
+        tags = [f"intent:{(intent or 'other').lower()}"]
+        for tok in sorted(context_tokens):
+            if len(tags) >= 5:
+                break
+            tags.append(f"ctx:{tok}")
+
+        for kid, _score in pattern[:6]:
+            k = self.konzepte.get(kid)
+            if not k:
+                continue
+            existing = list(k.context_ids or [])
+            for tag in tags:
+                if tag not in existing:
+                    existing.append(tag)
+            if len(existing) > 10:
+                existing = existing[-10:]
+            k.context_ids = existing
+
+    def _goal_tokens(self, frage: str) -> set[str]:
+        content_tokens, _context_tokens = self._split_question_tokens(frage)
+        return content_tokens
 
     def _value_score(self, kid: str, goal_tokens: set[str]) -> float:
         if not kid:
@@ -1594,19 +2002,19 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
 
     def _intent_rel_types(self, intent: str) -> set[str]:
         if intent == "DEF":
-            return {"ist", "klasse", "gehört_zu", "gehört_zu", "gehoert_zu"}
+            return {"is_a", "part_of"}
         if intent == "CAUSE":
-            return {"verursacht", "verursacht_durch", "verursacht_von", "durch"}
+            return {"causes"}
         if intent == "PARTS":
-            return {"besteht_aus", "enthält", "enthält", "enthaelt", "teil_von"}
+            return {"part_of", "is_a"}
         if intent == "WHERE":
-            return {"lebt_in", "sichtbar_in", "gehört_zu", "gehört_zu", "gehoert_zu"}
+            return {"located_in", "is_a"}
         if intent == "PROPS":
-            return {"eigenschaft", "eigenschaft_von", "zeigt", "hat", "farbe"}
+            return {"has_property", "is_a"}
         if intent == "HOW":
-            return {"prozess", "verursacht", "durch"}
+            return {"causes", "part_of", "sequence", "in_context"}
         if intent == "COMPARE":
-            return {"ist", "klasse", "gehört_zu", "teil_von", "eigenschaft", "hat"}
+            return {"is_a", "has_property", "part_of"}
         return set()
 
     def _label_match_ratio(self, kid: str, goal_tokens: set[str]) -> float:
@@ -1641,9 +2049,50 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
                 continue
             if self._label_match_ratio(dst, goal_tokens) > 0:
                 bonus += self.plan_boost * float(e.gewicht)
-            if rel_types and e.typ in rel_types:
+            e_schema = self._schema_rel(e.typ)
+            if rel_types and e_schema in rel_types:
                 bonus += self.plan_intent_bonus * float(e.gewicht)
         return min(0.6, bonus)
+
+    def _apply_generic_gate(
+        self,
+        pattern: List[Tuple[str, float]],
+        focus_ids: List[str],
+        intent: str,
+    ) -> List[Tuple[str, float]]:
+        if not pattern:
+            return pattern
+        focus_set = set(focus_ids or [])
+        out: List[Tuple[str, float]] = []
+
+        for kid, val in pattern:
+            score = float(val)
+            if not self._is_generic_concept(kid):
+                out.append((kid, score))
+                continue
+
+            factor = self.generic_gate_penalty
+            if kid in focus_set:
+                factor = max(factor, self.generic_gate_focus_boost)
+
+            has_semantic_anchor = False
+            for _, e, _layer in self._iter_edges(kid, include_seq=False):
+                if e.ziel not in focus_set:
+                    continue
+                schema = self._schema_rel(e.typ)
+                if (
+                    schema in {"is_a", "part_of", "has_property", "located_in"}
+                    and e.gewicht >= 0.32
+                ):
+                    has_semantic_anchor = True
+                    break
+            if has_semantic_anchor:
+                factor = max(factor, 0.9 if intent in {"COMPARE", "PARTS"} else 0.82)
+
+            out.append((kid, score * factor))
+
+        out.sort(key=lambda x: x[1], reverse=True)
+        return out
 
     def _focus_from_question(self, frage: str, seed_set: set[str]) -> List[str]:
         if not seed_set:
@@ -1651,24 +2100,7 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
         tokens = self._tokenize(frage)
         if not tokens:
             return []
-        stop = {
-            "der", "die", "das", "ein", "eine", "einen", "einem", "einer",
-            "ist", "sind", "und", "oder", "zu", "im", "in", "am", "an", "von", "mit",
-            "fuer", "für", "den", "dem", "des", "hat", "haben", "besteht", "bestehen",
-            "lebt", "gibt", "was", "wie", "warum", "wieso", "weshalb",
-            "woraus", "womit", "wodurch", "wo", "wann", "wer", "wen", "wem", "wessen",
-            "welche", "welcher", "welches", "welchen", "welchem",
-            "außerdem", "ausserdem", "hierbei", "dabei", "somit", "jedoch",
-            "sich",
-            "unterschied",
-            "vergleich",
-            "differenz",
-            "abgrenzung",
-            "system",
-            "wissenschaft",
-            "modell",
-            "prinzip",
-        }
+        stop = self._context_terms()
         tokens = [t for t in tokens if t not in stop]
         if not tokens:
             return []
@@ -1729,24 +2161,7 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
         tokens = self._tokenize(frage)
         if not tokens or not self.lexikon:
             return []
-        stop = {
-            "der", "die", "das", "ein", "eine", "einen", "einem", "einer",
-            "ist", "sind", "und", "oder", "zu", "im", "in", "am", "an", "von", "mit",
-            "fuer", "für", "den", "dem", "des", "hat", "haben", "besteht", "bestehen",
-            "lebt", "gibt", "was", "wie", "warum", "wieso", "weshalb",
-            "woraus", "womit", "wodurch", "wo", "wann", "wer", "wen", "wem", "wessen",
-            "welche", "welcher", "welches", "welchen", "welchem",
-            "außerdem", "ausserdem", "hierbei", "dabei", "somit", "jedoch",
-            "sich",
-            "unterschied",
-            "vergleich",
-            "differenz",
-            "abgrenzung",
-            "system",
-            "wissenschaft",
-            "modell",
-            "prinzip",
-        }
+        stop = self._context_terms()
         tokens = [t for t in tokens if t not in stop]
         if not tokens:
             return []
@@ -1820,9 +2235,124 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
         for e in self.episodic_edges[src]:
             if e.ziel == dst and e.typ == typ:
                 return e
-        e = Verbindung(ziel=dst, gewicht=max(0.01, min(w_init, 0.99)), typ=typ)
+        e = Verbindung(
+            ziel=dst,
+            gewicht=max(0.01, min(w_init, 0.99)),
+            typ=typ,
+            evidence=0.12,
+            confidence=0.18,
+            context_stability=self._edge_context_stability(src, dst),
+        )
         self.episodic_edges[src].append(e)
         return e
+
+    def _edge_context_stability(self, src: str, dst: str) -> float:
+        score = 0.0
+        c_src = self._cluster_for(src)
+        c_dst = self._cluster_for(dst)
+        if c_src and c_dst:
+            if c_src == c_dst:
+                score = max(score, 0.92)
+            elif c_dst in self.cluster_bridges.get(c_src, set()):
+                score = max(score, 0.62)
+            elif self.active_clusters and (
+                c_src in self.active_clusters or c_dst in self.active_clusters
+            ):
+                score = max(score, 0.4)
+
+        ens_src = self.node_ensembles.get(src, {})
+        ens_dst = self.node_ensembles.get(dst, {})
+        shared = set(ens_src).intersection(set(ens_dst))
+        if shared:
+            shared_w = sum(min(float(ens_src[eid]), float(ens_dst[eid])) for eid in shared)
+            score = max(score, min(0.95, 0.58 + 0.18 * shared_w))
+        if self.active_ensembles and shared.intersection(self.active_ensembles):
+            score = min(1.0, max(score, 0.76))
+
+        ctx_src = set((self.konzepte.get(src).context_ids if self.konzepte.get(src) else []) or [])
+        ctx_dst = set((self.konzepte.get(dst).context_ids if self.konzepte.get(dst) else []) or [])
+        if ctx_src and ctx_dst and ctx_src.intersection(ctx_dst):
+            score = min(1.0, max(score, 0.66))
+
+        return max(0.0, min(1.0, score))
+
+    def _consolidation_score(self, e: Verbindung) -> float:
+        w = max(0.0, min(1.0, float(e.gewicht)))
+        evidence = max(0.0, float(getattr(e, "evidence", 0.0) or 0.0))
+        ev_norm = min(1.0, evidence / max(0.1, self.consolidate_evidence_target))
+        conf = max(0.0, min(1.0, float(getattr(e, "confidence", 0.0) or 0.0)))
+        ctx = max(0.0, min(1.0, float(getattr(e, "context_stability", 0.0) or 0.0)))
+        return 0.35 * w + 0.30 * ev_norm + 0.20 * conf + 0.15 * ctx
+
+    def lerne_episodisch_trace(self, pattern: List[Tuple[str, float]], trace: List[TraceItem]):
+        act_map = {k: a for k, a in pattern}
+
+        for t in trace[:12]:
+            if t.contrib <= 0:
+                continue
+            e = self._get_or_create_episodic_edge(
+                t.src,
+                t.dst,
+                self._canon_type(t.typ),
+                w_init=0.2 + min(0.45, t.contrib),
+            )
+            boost = max(act_map.get(t.src, 0.0), act_map.get(t.dst, 0.0))
+            e.gewicht = min(0.99, e.gewicht + self.lr_hebb * 0.45 * boost)
+
+            e.evidence = min(999.0, float(getattr(e, "evidence", 0.0) or 0.0) + 0.25 + t.contrib)
+            obs_conf = max(0.0, min(1.0, float(t.contrib) * 1.05))
+            e.confidence = max(
+                obs_conf,
+                0.9 * float(getattr(e, "confidence", 0.0) or 0.0) + 0.1 * obs_conf,
+            )
+            ctx = self._edge_context_stability(t.src, t.dst)
+            e.context_stability = max(
+                0.0,
+                min(1.0, 0.85 * float(getattr(e, "context_stability", 0.0) or 0.0) + 0.15 * ctx),
+            )
+
+        act_sorted = sorted(pattern, key=lambda x: x[1], reverse=True)[:8]
+        ids = [k for k, _ in act_sorted]
+        for a in ids:
+            for b in ids:
+                if a == b:
+                    continue
+                for c in ids:
+                    if c in (a, b):
+                        continue
+                    if self._has_edge(a, b) and self._has_edge(b, c) and not self._has_edge(a, c):
+                        te = self._get_or_create_episodic_edge(
+                            a,
+                            c,
+                            "assoziation",
+                            w_init=self.triangle_create_w,
+                        )
+                        te.evidence = max(float(getattr(te, "evidence", 0.0) or 0.0), 0.12)
+                        te.confidence = max(float(getattr(te, "confidence", 0.0) or 0.0), 0.18)
+                        te.context_stability = max(
+                            float(getattr(te, "context_stability", 0.0) or 0.0),
+                            self._edge_context_stability(a, c) * 0.75,
+                        )
+
+        for src, edges in list(self.episodic_edges.items()):
+            kept = []
+            for e in edges:
+                e.gewicht = max(0.01, min(0.99, e.gewicht * self.episodic_weight_decay))
+                e.evidence = max(0.0, float(getattr(e, "evidence", 0.0) or 0.0) * 0.994)
+                e.confidence = max(
+                    0.0,
+                    min(1.0, float(getattr(e, "confidence", 0.0) or 0.0) * 0.998),
+                )
+                e.context_stability = max(
+                    0.0,
+                    min(1.0, float(getattr(e, "context_stability", 0.0) or 0.0) * 0.998),
+                )
+                if e.gewicht >= 0.05 or e.evidence >= 0.28:
+                    kept.append(e)
+            self.episodic_edges[src] = kept
+
+        self.konsolidiere_episodisch()
+        self._learn_ensemble_coactivation(pattern)
 
     def lerne_aus_aktivierung(self, pattern: List[Tuple[str, float]], trace: List[TraceItem]):
         aktive = {k for k, _ in pattern}
@@ -1841,6 +2371,25 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
             boost = max(act_map.get(t.src, 0.0), act_map.get(t.dst, 0.0))
             e.gewicht = min(0.99, e.gewicht + self.lr_hebb * boost)
 
+            # Hippocampus-Statistiken: Evidenz + Konfidenz + Kontextstabilität.
+            e.evidence = max(0.0, float(getattr(e, "evidence", 0.0) or 0.0))
+            e.evidence = min(999.0, e.evidence + 0.35 + float(max(0.0, t.contrib)))
+
+            obs_conf = max(0.0, min(1.0, float(t.contrib) * 1.1))
+            e.confidence = max(
+                obs_conf,
+                0.86 * float(getattr(e, "confidence", 0.0) or 0.0) + 0.14 * obs_conf,
+            )
+
+            ctx = self._edge_context_stability(t.src, t.dst)
+            e.context_stability = max(
+                0.0,
+                min(
+                    1.0,
+                    0.82 * float(getattr(e, "context_stability", 0.0) or 0.0) + 0.18 * ctx,
+                ),
+            )
+
         act_sorted = sorted(pattern, key=lambda x: x[1], reverse=True)[:10]
         ids = [k for k, _ in act_sorted]
         for a in ids:
@@ -1851,11 +2400,17 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
                     if c in (a, b):
                         continue
                     if self._has_edge(a, b) and self._has_edge(b, c) and not self._has_edge(a, c):
-                        self._get_or_create_episodic_edge(
+                        te = self._get_or_create_episodic_edge(
                             a,
                             c,
                             "assoziation",
                             w_init=self.triangle_create_w,
+                        )
+                        te.evidence = max(float(getattr(te, "evidence", 0.0) or 0.0), 0.15)
+                        te.confidence = max(float(getattr(te, "confidence", 0.0) or 0.0), 0.2)
+                        te.context_stability = max(
+                            float(getattr(te, "context_stability", 0.0) or 0.0),
+                            self._edge_context_stability(a, c) * 0.8,
                         )
 
         for src, src_a in act_map.items():
@@ -1876,11 +2431,21 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
             kept = []
             for e in edges:
                 e.gewicht = max(0.01, min(0.99, e.gewicht * self.episodic_weight_decay))
-                if e.gewicht >= 0.06:
+                e.evidence = max(0.0, float(getattr(e, "evidence", 0.0) or 0.0) * 0.992)
+                e.confidence = max(
+                    0.0,
+                    min(1.0, float(getattr(e, "confidence", 0.0) or 0.0) * 0.997),
+                )
+                e.context_stability = max(
+                    0.0,
+                    min(1.0, float(getattr(e, "context_stability", 0.0) or 0.0) * 0.998),
+                )
+                if e.gewicht >= 0.06 or e.evidence >= 0.35:
                     kept.append(e)
             self.episodic_edges[src] = kept
 
         self.konsolidiere_episodisch()
+        self._learn_ensemble_coactivation(pattern)
 
     def _get_or_create_semantic_edge(
         self,
@@ -1894,16 +2459,35 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
         for e in self.konzepte[src].verbindungen:
             if e.ziel == dst and e.typ == typ:
                 return e
-        e = Verbindung(ziel=dst, gewicht=max(0.01, min(w_init, 0.99)), typ=typ)
+        e = Verbindung(
+            ziel=dst,
+            gewicht=max(0.01, min(w_init, 0.99)),
+            typ=typ,
+            evidence=0.0,
+            confidence=0.0,
+            context_stability=0.0,
+        )
         self.konzepte[src].verbindungen.append(e)
         return e
 
     def konsolidiere_episodisch(self):
         for src, edges in self.episodic_edges.items():
             for e in edges:
-                if e.gewicht < self.consolidate_threshold:
+                score = self._consolidation_score(e)
+                conf = float(getattr(e, "confidence", 0.0) or 0.0)
+                if (
+                    e.gewicht < self.consolidate_threshold
+                    and score < self.consolidate_score_threshold
+                ):
                     continue
-                w_init = e.gewicht * self.consolidate_ratio
+                if (
+                    conf < self.consolidate_min_confidence
+                    and score < (self.consolidate_score_threshold + 0.08)
+                ):
+                    continue
+
+                transfer = min(1.0, max(0.0, score))
+                w_init = e.gewicht * self.consolidate_ratio * (0.75 + 0.45 * transfer)
                 se = self._get_or_create_semantic_edge(
                     src,
                     e.ziel,
@@ -1911,7 +2495,19 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
                     w_init=w_init,
                 )
                 se.gewicht = min(0.99, max(se.gewicht, w_init))
-                se.gewicht = min(0.99, se.gewicht + self.consolidate_boost)
+                se.gewicht = min(0.99, se.gewicht + self.consolidate_boost * (0.8 + 0.4 * transfer))
+                se.evidence = min(
+                    999.0,
+                    float(getattr(se, "evidence", 0.0) or 0.0) + 0.5 * transfer,
+                )
+                se.confidence = max(
+                    float(getattr(se, "confidence", 0.0) or 0.0),
+                    min(1.0, 0.6 * transfer + 0.4 * conf),
+                )
+                se.context_stability = max(
+                    float(getattr(se, "context_stability", 0.0) or 0.0),
+                    float(getattr(e, "context_stability", 0.0) or 0.0),
+                )
 
     # -------------------------
     # Speichern (JSONL empfohlen)
@@ -1921,6 +2517,7 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
         if self.cluster_mode_enabled:
             self._rebuild_cluster_index()
             self._rebuild_cluster_bridges()
+        self._rebuild_ensembles()
         if datei.lower().endswith(".jsonl"):
             self._speichere_jsonl(datei, episodic_datei=episodic_datei)
         else:
@@ -1952,6 +2549,8 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
                     "features": sorted(set(feats)),
                     "labels": sorted(set(labels)),
                     "cluster": (self.konzepte[cid].cluster_id or ""),
+                    "contexts": sorted(set(self.konzepte[cid].context_ids or [])),
+                    "ensembles": sorted(set(self.konzepte[cid].ensemble_ids or [])),
                 }
                 f.write(json.dumps(obj, ensure_ascii=False) + "\n")
             for src in sorted(self.konzepte.keys()):
@@ -1962,6 +2561,9 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
                         "dst": v.ziel,
                         "w": round(float(v.gewicht), 4),
                         "type": self._canon_type(v.typ),
+                        "evidence": round(float(getattr(v, "evidence", 0.0) or 0.0), 4),
+                        "confidence": round(float(getattr(v, "confidence", 0.0) or 0.0), 4),
+                        "context": round(float(getattr(v, "context_stability", 0.0) or 0.0), 4),
                     }
                     f.write(json.dumps(obj, ensure_ascii=False) + "\n")
 
@@ -1990,7 +2592,9 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
                         "id": cid,
                         "features": sorted(set(feats)),
                         "labels": sorted(set(labels)),
-                    "cluster": (self.konzepte[cid].cluster_id or ""),
+                        "cluster": (self.konzepte[cid].cluster_id or ""),
+                        "contexts": sorted(set(self.konzepte[cid].context_ids or [])),
+                        "ensembles": sorted(set(self.konzepte[cid].ensemble_ids or [])),
                     }
                     f.write(json.dumps(obj, ensure_ascii=False) + "\n")
                 for src in sorted(self.episodic_edges.keys()):
@@ -2001,6 +2605,9 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
                             "dst": v.ziel,
                             "w": round(float(v.gewicht), 4),
                             "type": self._canon_type(v.typ),
+                            "evidence": round(float(getattr(v, "evidence", 0.0) or 0.0), 4),
+                            "confidence": round(float(getattr(v, "confidence", 0.0) or 0.0), 4),
+                            "context": round(float(getattr(v, "context_stability", 0.0) or 0.0), 4),
                         }
                         f.write(json.dumps(obj, ensure_ascii=False) + "\n")
 

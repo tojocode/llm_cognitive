@@ -1,0 +1,19 @@
+[
+  {"type": "Definition", "q": "Was ist Pluto?", "expect": ["pluto"], "forbid": ["axolotl", "klimawandel"]},
+  {"type": "Mehrhop", "q": "Zu welchem System gehört Pluto?", "expect": ["pluto", "sonnensystem"], "forbid": ["axolotl", "demokratie"]},
+  {"type": "Eigenschaft", "q": "Welche Farbe hat der Axolotl?", "expect": ["axolotl"], "forbid": ["pluto", "klimawandel", "demokratie"]},
+  {"type": "Ort", "q": "Wo lebt der Axolotl?", "expect": ["axolotl"], "forbid": ["pluto", "vulkan"]},
+  {"type": "Ursache", "q": "Warum gibt es den Klimawandel?", "expect": ["klimawandel"], "forbid": ["axolotl", "pluto"]},
+  {"type": "Wirkung", "q": "Welche Auswirkungen hat der Klimawandel?", "expect": ["klimawandel"], "forbid": ["axolotl", "pluto"]},
+  {"type": "Ursache", "q": "Wodurch entstehen Vulkane?", "expect": ["vulkan"], "forbid": ["axolotl", "pluto"]},
+  {"type": "Vergleich", "q": "Was ist der Unterschied zwischen Geologie und Psychologie?", "expect": ["geologie", "psychologie"], "forbid": ["pluto", "axolotl", "klimawandel"]},
+  {"type": "Vergleich", "q": "Was ist der Unterschied zwischen Informatik und Mathematik?", "expect": ["informatik", "mathematik"], "forbid": ["pluto", "demokratie"]},
+  {"type": "Definition", "q": "Was ist Künstliche Intelligenz?", "expect": ["künstliche intelligenz", "ki"], "forbid": ["axolotl", "pluto"]},
+  {"type": "Definition", "q": "Was ist Demokratie?", "expect": ["demokratie"], "forbid": ["axolotl", "pluto"]},
+  {"type": "Definition", "q": "Was ist Ozean?", "expect": ["ozean"], "forbid": ["axolotl", "demokratie"]},
+
+  {"type": "Unknown", "q": "Warum ist der Himmel blau?", "expect_unknown": true},
+  {"type": "Unknown", "q": "Was ist ein Warp-Antrieb?", "expect_unknown": true},
+  {"type": "Unknown", "q": "Wer ist der Präsident von Mars?", "expect_unknown": true},
+  {"type": "Unknown", "q": "Welche Farbe hat Unsichtbarkeit?", "expect_unknown": true}
+]

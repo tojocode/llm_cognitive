@@ -73,6 +73,20 @@ def _extract_trace_src_ids(res: dict) -> List[str]:
     return out
 
 
+def _is_unknown_answer(text: str) -> bool:
+    t = (text or "").strip().lower()
+    if not t:
+        return True
+    prefixes = (
+        "das weiß ich nicht",
+        "das weiss ich nicht",
+        "ich weiß nicht",
+        "ich weiss nicht",
+        "unbekannt",
+    )
+    return any(t.startswith(p) for p in prefixes)
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description="Benchmark für den Denk-Kern")
     parser.add_argument(
@@ -99,14 +113,42 @@ def main() -> int:
     trace_hits = 0
     missing = 0
     missing_list = []
-    total = 0
+
+    known_total = 0
+    unknown_total = 0
+    unknown_ok = 0
+
+    leakage_cases = 0
+    leakage_clean = 0
 
     for i, case in enumerate(cases, 1):
         q = str(case.get("q", "")).strip()
         expect = case.get("expect") or []
-        if not q or not expect:
+        expect_unknown = bool(case.get("expect_unknown"))
+        forbid = case.get("forbid") or []
+
+        if not q:
             continue
-        total += 1
+
+        if expect_unknown:
+            unknown_total += 1
+            answer = engine.antworte(q, auto_lernen=False)
+            ok_unknown = _is_unknown_answer(answer)
+            if ok_unknown:
+                unknown_ok += 1
+            status = "OK" if ok_unknown else "MISS"
+            print(f"[{i:02d}] {status} | {q}")
+            if not ok_unknown:
+                short = answer.strip().replace("\n", " ")
+                if len(short) > 220:
+                    short = short[:220] + "..."
+                print(f"     answer: {short}")
+            continue
+
+        if not expect:
+            continue
+
+        known_total += 1
 
         res = engine.denken(q)
         pattern = res.get("denkmuster") or []
@@ -133,10 +175,22 @@ def main() -> int:
         if trace_hit:
             trace_hits += 1
 
+        forbid_ids: Set[str] = set()
+        for fb in forbid:
+            forbid_ids.update(_candidate_ids(engine, label_map, str(fb)))
+
+        leaked = False
+        if forbid_ids:
+            leakage_cases += 1
+            leak_pool = set(top_ids[:3]) | set(focus_ids) | set(trace_srcs[:3])
+            leaked = any(cid in leak_pool for cid in forbid_ids)
+            if not leaked:
+                leakage_clean += 1
+
         ok = _any_hit(candidates, top_ids, 5) or focus_hit or trace_hit
-        status = "OK" if ok else "MISS"
+        status = "OK" if ok and not leaked else "MISS"
         print(f"[{i:02d}] {status} | {q}")
-        if not ok:
+        if not ok or leaked:
             top3 = ", ".join(top_ids[:3]) if top_ids else "(leer)"
             focus = ", ".join(focus_ids) if focus_ids else "(leer)"
             tr = ", ".join(trace_srcs[:3]) if trace_srcs else "(leer)"
@@ -144,17 +198,39 @@ def main() -> int:
             print(f"     focus: {focus}")
             print(f"     trace_src: {tr}")
             print(f"     expect: {', '.join(str(x) for x in expect)}")
+            if leaked:
+                print(f"     leak_forbid: {', '.join(str(x) for x in forbid)}")
 
-    if total == 0:
+    if known_total == 0 and unknown_total == 0:
         print("WARN Keine gültigen Fälle im Benchmark.")
         return 1
 
     print("\n=== Benchmark Summary ===")
-    for k in ks:
-        rate = hits[k] / max(1, total)
-        print(f"Hit@{k}: {hits[k]}/{total} = {rate:.2%}")
-    print(f"Hit@focus: {focus_hits}/{total} = {focus_hits / max(1, total):.2%}")
-    print(f"Hit@trace-src: {trace_hits}/{total} = {trace_hits / max(1, total):.2%}")
+    if known_total:
+        for k in ks:
+            rate = hits[k] / max(1, known_total)
+            print(f"Hit@{k}: {hits[k]}/{known_total} = {rate:.2%}")
+        print(
+            f"Hit@focus: {focus_hits}/{known_total} = "
+            f"{focus_hits / max(1, known_total):.2%}"
+        )
+        print(
+            f"Hit@trace-src: {trace_hits}/{known_total} = "
+            f"{trace_hits / max(1, known_total):.2%}"
+        )
+
+    if unknown_total:
+        print(
+            f"Unknown-Precision: {unknown_ok}/{unknown_total} = "
+            f"{unknown_ok / max(1, unknown_total):.2%}"
+        )
+
+    if leakage_cases:
+        print(
+            f"Leakage-Free@3/focus/trace: {leakage_clean}/{leakage_cases} = "
+            f"{leakage_clean / max(1, leakage_cases):.2%}"
+        )
+
     if missing:
         print(f"WARN Fehlende Aliase (nicht im Lexikon/Labels gefunden): {missing}")
         for m in missing_list:

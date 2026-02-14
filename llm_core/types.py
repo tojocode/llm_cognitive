@@ -11,6 +11,9 @@ class Verbindung:
     ziel: str
     gewicht: float
     typ: str
+    evidence: float = 0.0
+    confidence: float = 0.0
+    context_stability: float = 0.0
 
 
 @dataclass
@@ -20,6 +23,8 @@ class Konzept:
     semantische_features: List[str] = field(default_factory=list)
     verbindungen: List[Verbindung] = field(default_factory=list)
     cluster_id: str = ""
+    context_ids: List[str] = field(default_factory=list)
+    ensemble_ids: List[str] = field(default_factory=list)
     letzte_aktivierung: datetime = field(default_factory=datetime.now)
 
 
