@@ -33,6 +33,7 @@ class BrocaMixin:
             "benötigt", "benötigt", "benoetigt", "braucht",
             "verursacht_durch", "verursacht_von",
         }
+        self.broca_weak_rel_types = {"cooccur", "coactive", "similar", "cluster_of"}
 
     # -------------------------
     # Output
@@ -70,6 +71,13 @@ class BrocaMixin:
             "es",
             "er",
             "sie",
+            "sich",
+            "nicht",
+            "wurde",
+            "noch",
+            "etwa",
+            "so",
+            "nur",
             "man",
             "dies",
             "diese",
@@ -123,6 +131,13 @@ class BrocaMixin:
             "manche",
             "einige",
             "viele",
+            "noch",
+            "etwa",
+            "so",
+            "nur",
+            "wurde",
+            "nicht",
+            "sich",
             "mehr",
             "weniger",
             "andere",
@@ -596,6 +611,8 @@ class BrocaMixin:
             if self._is_junk_node(src):
                 continue
             for e in self.konzepte.get(src, Konzept(src)).verbindungen:
+                if e.typ in self.broca_weak_rel_types:
+                    continue
                 if e.ziel in aktive:
                     if self._is_junk_node(e.ziel):
                         continue
@@ -620,6 +637,8 @@ class BrocaMixin:
                     if focus_set and (src in focus_set or e.ziel in focus_set):
                         focus_edges.append(item)
             for e in self.episodic_edges.get(src, []):
+                if e.typ in self.broca_weak_rel_types:
+                    continue
                 if e.ziel in aktive:
                     if self._is_junk_node(e.ziel):
                         continue
@@ -658,6 +677,8 @@ class BrocaMixin:
                 continue
             if src in self.konzepte:
                 for e in self.konzepte[src].verbindungen:
+                    if e.typ in self.broca_weak_rel_types:
+                        continue
                     if self._is_junk_node(e.ziel):
                         continue
                     score = e.gewicht * self._gate(e.typ, intent)
@@ -673,6 +694,8 @@ class BrocaMixin:
                         }
                     )
             for e in self.episodic_edges.get(src, []):
+                if e.typ in self.broca_weak_rel_types:
+                    continue
                 if self._is_junk_node(e.ziel):
                     continue
                 score = (e.gewicht * 0.9) * self._gate(e.typ, intent)

@@ -54,4 +54,6 @@ python debug_analyse/export_cytoscape.py
 - Import hat robustere Subjektauflösung (Pronomen/Alternativen wie `... oder ...`) und zusätzliche Muster (`gilt als`, `zählt zu`, `befasst sich mit`, `Zu den ... gehören ...`, `wird ... genannt`).
 - Vergleichsfragen werden als eigener Intent (`COMPARE`) behandelt; generische Knoten (`System`, `Wissenschaft` usw.) werden im Ranking stärker abgewertet.
 - Zusätzliche Junk-Filter reduzieren Rauschknoten wie `Sich`, `Wurde`, `Nicht`.
+- Import-IDs werden aus **Content-Tokens** aufgebaut: Füllwörter und Hilfsverben (`der`, `die`, `ist`, `so`, `etwa`, `noch`, ...) werden bei der Knotenbildung aktiv entfernt.
+- Broca blendet schwache Strukturkanten (`cooccur`, `coactive`, `similar`, `cluster_of`) in der Sprachausgabe aus, damit Antworten primär auf Wissensrelationen basieren.
 

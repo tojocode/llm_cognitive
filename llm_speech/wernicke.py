@@ -52,6 +52,13 @@ JUNK_IDS = {
     "wurde",
     "sich",
     "nicht",
+    "noch",
+    "etwa",
+    "so",
+    "nur",
+    "bereits",
+    "zwar",
+    "schon",
     "verb",
 }
 JUNK_TOKENS = {
@@ -84,6 +91,13 @@ JUNK_TOKENS = {
     "einige",
     "viele",
     "nicht",
+    "noch",
+    "etwa",
+    "so",
+    "nur",
+    "bereits",
+    "zwar",
+    "schon",
     "sich",
     "wurde",
     "mehr",
@@ -137,6 +151,24 @@ VERB_TOKENS = {
     "lebt",
     "kommt",
 }
+CONTENT_STOPWORDS = JUNK_TOKENS.union(
+    {
+        "hier",
+        "dort",
+        "damit",
+        "dass",
+        "dessen",
+        "deren",
+        "daher",
+        "somit",
+        "jedoch",
+        "allerdings",
+        "vor",
+        "allem",
+        "u",
+        "a",
+    }
+)
 
 
 class WernickeMixin:
@@ -366,6 +398,26 @@ class WernickeMixin:
             parts = [p[:1].upper() + p[1:] if p else p for p in parts]
             return "_".join(parts)
         return tok[:1].upper() + tok[1:]
+
+    def _content_tokens_in_phrase(self, phrase: str) -> List[str]:
+        p = self._nfc(phrase or "")
+        if not p:
+            return []
+        raw = re.findall(r"[A-Za-zÄÖÜäöüß0-9\-]+", p)
+        out: List[str] = []
+        for token in raw:
+            t = token.strip("-")
+            low = t.lower()
+            if not low:
+                continue
+            if low in CONTENT_STOPWORDS or low in VERB_TOKENS:
+                continue
+            if low.isdigit():
+                continue
+            if len(low) < 3 and not low.isupper():
+                continue
+            out.append(t)
+        return out
 
     def _extract_topic_token(self, frage: str) -> str:
         tokens = self._tokenize(frage)
@@ -846,8 +898,14 @@ class WernickeMixin:
         s_clean = s.split(",", 1)[0].strip()
         s_clean = re.split(r"\s+oder\s+", s_clean, maxsplit=1, flags=re.IGNORECASE)[0].strip()
         s_clean = re.split(r"\s+sowie\s+", s_clean, maxsplit=1, flags=re.IGNORECASE)[0].strip()
-        s_head = self._subject_head_phrase(s_clean)
-        src = self._phrase_to_concept_id(s_head or s_clean)
+        content = self._content_tokens_in_phrase(s_clean)
+        if len(content) >= 2:
+            s_label = " ".join(content[:3])
+            src = self._phrase_to_concept_id(s_label)
+            s_head = s_label
+        else:
+            s_head = self._subject_head_phrase(s_clean)
+            src = self._phrase_to_concept_id(s_head or s_clean)
         if not src and doc_topic and s_norm in pronouns:
             return doc_topic, self._label_for_output(doc_topic)
         label = self._nfc(s_head or s_clean or s).strip()
@@ -876,6 +934,10 @@ class WernickeMixin:
         if nouns:
             return nouns[0]
 
+        content = self._content_tokens_in_phrase(p)
+        if content:
+            return content[0]
+
         tok = p.split(" ", 1)[0].strip()
         tok = re.sub(r"[^\wäöüß\-]+", "", tok, flags=re.IGNORECASE)
         return tok
@@ -902,7 +964,7 @@ class WernickeMixin:
                 p = p[len(a):].strip()
                 break
         p = p.split(",")[0].strip()
-        words = [w for w in p.split(" ") if w][:3]
+        words = self._content_tokens_in_phrase(p)[:3]
         if not words:
             return ""
         if len(words) == 1:
@@ -917,14 +979,16 @@ class WernickeMixin:
             return []
         parts = []
         if split_conjunctions:
-            chunks = re.split(r",|\s+und\s+", o)
+            chunks = re.split(r",|\s+und\s+|\s+oder\s+|\s+sowie\s+", o)
         else:
             chunks = [o]
         for chunk in chunks:
             c = chunk.strip()
             if c:
-                parts.append(c)
-        return parts if parts else [o]
+                toks = self._content_tokens_in_phrase(c)
+                if toks:
+                    parts.append(" ".join(toks[:4]))
+        return parts
 
     def _cut_at_keywords(self, text: str, keywords: List[str]) -> str:
         if not text:
