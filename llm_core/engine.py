@@ -865,11 +865,17 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
             "cluster_of": "related_to",
             "assoziation": "related_to",
         }
-        if t in mapping:
-            return mapping[t]
-        if t.startswith("cluster") or t.startswith("co"):
-            return "related_to"
-        return "in_context"
+        schema = mapping.get(t)
+        if schema is None:
+            if t.startswith("cluster") or t.startswith("co"):
+                schema = "related_to"
+            else:
+                schema = "in_context"
+
+        # Nur freigegebene Kernrelationen zulassen; alles andere auf "related_to" mappen.
+        if schema in self.schema_core_relations:
+            return schema
+        return "related_to"
 
     # -------------------------
     # Intent / Gating
