@@ -1,0 +1,319 @@
+[
+  {
+    "type": "Definition",
+    "q": "Definiere Künstliche Intelligenz.",
+    "expect": [
+      "künstliche intelligenz",
+      "ki"
+    ],
+    "forbid": [
+      "axolotl",
+      "pluto"
+    ]
+  },
+  {
+    "type": "Definition",
+    "q": "Erkläre kurz das Sonnensystem.",
+    "expect": [
+      "sonnensystem"
+    ],
+    "forbid": [
+      "axolotl",
+      "demokratie"
+    ]
+  },
+  {
+    "type": "Definition",
+    "q": "Wie würdest du Pluto einordnen?",
+    "expect": [
+      "pluto"
+    ],
+    "forbid": [
+      "axolotl",
+      "klimawandel"
+    ]
+  },
+  {
+    "type": "Definition",
+    "q": "Nenne mir eine Kurzdefinition des Axolotls.",
+    "expect": [
+      "axolotl"
+    ],
+    "forbid": [
+      "pluto",
+      "demokratie"
+    ]
+  },
+  {
+    "type": "Definition",
+    "q": "Worum geht es in der Quantenmechanik?",
+    "expect": [
+      "quantenmechanik"
+    ],
+    "forbid": [
+      "axolotl",
+      "fußball"
+    ]
+  },
+  {
+    "type": "Definition",
+    "q": "Was versteht man unter der deutschen Sprache?",
+    "expect": [
+      "deutsche sprache"
+    ]
+  },
+  {
+    "type": "Definition",
+    "q": "Womit befasst sich die Philosophie?",
+    "expect": [
+      "philosophie"
+    ]
+  },
+  {
+    "type": "Definition",
+    "q": "Was untersucht die Psychologie?",
+    "expect": [
+      "psychologie"
+    ]
+  },
+  {
+    "type": "Definition",
+    "q": "Was untersucht die Geologie?",
+    "expect": [
+      "geologie"
+    ]
+  },
+  {
+    "type": "Definition",
+    "q": "Womit beschäftigt sich die Informatik?",
+    "expect": [
+      "informatik"
+    ]
+  },
+  {
+    "type": "Definition",
+    "q": "Wie ordnet man Mathematik als Wissenschaft ein?",
+    "expect": [
+      "mathematik"
+    ]
+  },
+  {
+    "type": "Definition",
+    "q": "Wofür steht Medizin als Fachgebiet?",
+    "expect": [
+      "medizin"
+    ]
+  },
+  {
+    "type": "Definition",
+    "q": "Was ist Fußball für eine Sportart?",
+    "expect": [
+      "fußball"
+    ]
+  },
+  {
+    "type": "Definition",
+    "q": "Was bedeutet Nachhaltigkeit im Kern?",
+    "expect": [
+      "nachhaltigkeit"
+    ]
+  },
+  {
+    "type": "Definition",
+    "q": "Was versteht man unter Demokratie?",
+    "expect": [
+      "demokratie"
+    ]
+  },
+  {
+    "type": "Definition",
+    "q": "Wie wird Europa geografisch eingeordnet?",
+    "expect": [
+      "europa"
+    ]
+  },
+  {
+    "type": "Definition",
+    "q": "Wofür steht das Internet?",
+    "expect": [
+      "internet"
+    ]
+  },
+  {
+    "type": "Definition",
+    "q": "Was meint man mit Klimawandel?",
+    "expect": [
+      "klimawandel"
+    ]
+  },
+  {
+    "type": "Definition",
+    "q": "Was versteht man unter einem Ozean?",
+    "expect": [
+      "ozean"
+    ]
+  },
+  {
+    "type": "Definition",
+    "q": "Wie entsteht ein Vulkan grundsätzlich?",
+    "expect": [
+      "vulkan"
+    ]
+  },
+  {
+    "type": "Warum",
+    "q": "Weshalb verändert sich das Weltklima?",
+    "expect": [
+      "klimawandel"
+    ],
+    "forbid": [
+      "axolotl",
+      "pluto"
+    ]
+  },
+  {
+    "type": "Warum",
+    "q": "Warum gilt Pluto nicht als klassischer Planet?",
+    "expect": [
+      "pluto"
+    ],
+    "forbid": [
+      "axolotl",
+      "demokratie"
+    ]
+  },
+  {
+    "type": "Wie",
+    "q": "Auf welche Weise funktioniert das Internet?",
+    "expect": [
+      "internet"
+    ]
+  },
+  {
+    "type": "Wie",
+    "q": "Durch welche Prozesse bildet sich ein Vulkan?",
+    "expect": [
+      "vulkan"
+    ]
+  },
+  {
+    "type": "Vergleich",
+    "q": "Vergleiche Informatik und Mathematik.",
+    "expect": [
+      "informatik",
+      "mathematik"
+    ],
+    "forbid": [
+      "pluto",
+      "axolotl"
+    ]
+  },
+  {
+    "type": "Vergleich",
+    "q": "Vergleiche Geologie mit Psychologie.",
+    "expect": [
+      "geologie",
+      "psychologie"
+    ],
+    "forbid": [
+      "pluto",
+      "demokratie"
+    ]
+  },
+  {
+    "type": "Abgrenzung",
+    "q": "Worin unterscheidet sich Demokratie von einer Diktatur?",
+    "expect": [
+      "demokratie"
+    ]
+  },
+  {
+    "type": "Abgrenzung",
+    "q": "Worin unterscheiden sich Medizin und Psychologie?",
+    "expect": [
+      "medizin",
+      "psychologie"
+    ]
+  },
+  {
+    "type": "Ursache/Wirkung",
+    "q": "Welche Folgen hat der Klimawandel?",
+    "expect": [
+      "klimawandel"
+    ]
+  },
+  {
+    "type": "Ursache/Wirkung",
+    "q": "Was verursacht Vulkanausbrüche?",
+    "expect": [
+      "vulkan"
+    ]
+  },
+  {
+    "type": "Mehrhop",
+    "q": "Welchem System wird Pluto zugeordnet?",
+    "expect": [
+      "pluto",
+      "sonnensystem"
+    ]
+  },
+  {
+    "type": "Mehrhop",
+    "q": "Welche Disziplin verbindet Quantenmechanik und Mathematik?",
+    "expect": [
+      "quantenmechanik",
+      "mathematik",
+      "physik"
+    ]
+  },
+  {
+    "type": "Eigenschaft",
+    "q": "Welche Färbung hat der Axolotl?",
+    "expect": [
+      "axolotl"
+    ],
+    "forbid": [
+      "pluto",
+      "demokratie"
+    ]
+  },
+  {
+    "type": "Ort",
+    "q": "Wo lebt der Axolotl natürlicherweise?",
+    "expect": [
+      "axolotl"
+    ],
+    "forbid": [
+      "pluto",
+      "vulkan"
+    ]
+  },
+  {
+    "type": "Unknown",
+    "q": "Warum ist der Himmel blau?",
+    "expect_unknown": true,
+    "repeat": 3,
+    "min_repeat_pass": 3
+  },
+  {
+    "type": "Unknown",
+    "q": "Was ist ein Warp-Antrieb?",
+    "expect_unknown": true,
+    "repeat": 2,
+    "min_repeat_pass": 2
+  },
+  {
+    "type": "Unknown",
+    "q": "Wer ist König von Atlantis?",
+    "expect_unknown": true,
+    "repeat": 2,
+    "min_repeat_pass": 2
+  },
+  {
+    "type": "Unknown",
+    "q": "Welche Farbe hat Unsichtbarkeit?",
+    "expect_unknown": true,
+    "repeat": 2,
+    "min_repeat_pass": 2
+  }
+]

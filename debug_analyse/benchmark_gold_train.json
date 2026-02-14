@@ -1,0 +1,257 @@
+[
+  {
+    "type": "Definition",
+    "q": "Was ist Künstliche Intelligenz?",
+    "expect": [
+      "künstliche intelligenz",
+      "ki"
+    ],
+    "forbid": [
+      "axolotl",
+      "klimawandel"
+    ]
+  },
+  {
+    "type": "Definition",
+    "q": "Was ist das Sonnensystem?",
+    "expect": [
+      "sonnensystem"
+    ]
+  },
+  {
+    "type": "Definition",
+    "q": "Was ist Pluto?",
+    "expect": [
+      "pluto"
+    ]
+  },
+  {
+    "type": "Definition",
+    "q": "Was ist ein Axolotl?",
+    "expect": [
+      "axolotl"
+    ]
+  },
+  {
+    "type": "Definition",
+    "q": "Was ist Quantenmechanik?",
+    "expect": [
+      "quantenmechanik"
+    ]
+  },
+  {
+    "type": "Definition",
+    "q": "Was ist die deutsche Sprache?",
+    "expect": [
+      "deutsche sprache"
+    ]
+  },
+  {
+    "type": "Definition",
+    "q": "Was ist Philosophie?",
+    "expect": [
+      "philosophie"
+    ]
+  },
+  {
+    "type": "Definition",
+    "q": "Was ist Psychologie?",
+    "expect": [
+      "psychologie"
+    ]
+  },
+  {
+    "type": "Definition",
+    "q": "Was ist Geologie?",
+    "expect": [
+      "geologie"
+    ]
+  },
+  {
+    "type": "Definition",
+    "q": "Was ist Informatik?",
+    "expect": [
+      "informatik"
+    ]
+  },
+  {
+    "type": "Definition",
+    "q": "Was ist Mathematik?",
+    "expect": [
+      "mathematik"
+    ]
+  },
+  {
+    "type": "Definition",
+    "q": "Was ist Medizin?",
+    "expect": [
+      "medizin"
+    ]
+  },
+  {
+    "type": "Definition",
+    "q": "Was ist Fußball?",
+    "expect": [
+      "fußball"
+    ]
+  },
+  {
+    "type": "Definition",
+    "q": "Was ist Nachhaltigkeit?",
+    "expect": [
+      "nachhaltigkeit"
+    ]
+  },
+  {
+    "type": "Definition",
+    "q": "Was ist Demokratie?",
+    "expect": [
+      "demokratie"
+    ]
+  },
+  {
+    "type": "Definition",
+    "q": "Was ist Europa?",
+    "expect": [
+      "europa"
+    ]
+  },
+  {
+    "type": "Definition",
+    "q": "Was ist das Internet?",
+    "expect": [
+      "internet"
+    ]
+  },
+  {
+    "type": "Definition",
+    "q": "Was ist Klimawandel?",
+    "expect": [
+      "klimawandel"
+    ]
+  },
+  {
+    "type": "Definition",
+    "q": "Was ist Ozean?",
+    "expect": [
+      "ozean"
+    ]
+  },
+  {
+    "type": "Definition",
+    "q": "Was ist Vulkan?",
+    "expect": [
+      "vulkan"
+    ]
+  },
+  {
+    "type": "Warum",
+    "q": "Warum gibt es den Klimawandel?",
+    "expect": [
+      "klimawandel"
+    ]
+  },
+  {
+    "type": "Warum",
+    "q": "Warum ist Pluto ein Zwergplanet?",
+    "expect": [
+      "pluto"
+    ]
+  },
+  {
+    "type": "Wie",
+    "q": "Wie funktioniert das Internet?",
+    "expect": [
+      "internet"
+    ]
+  },
+  {
+    "type": "Wie",
+    "q": "Wie entsteht ein Vulkan?",
+    "expect": [
+      "vulkan"
+    ]
+  },
+  {
+    "type": "Vergleich",
+    "q": "Was ist der Unterschied zwischen Informatik und Mathematik?",
+    "expect": [
+      "informatik",
+      "mathematik"
+    ]
+  },
+  {
+    "type": "Vergleich",
+    "q": "Was ist der Unterschied zwischen Geologie und Psychologie?",
+    "expect": [
+      "geologie",
+      "psychologie"
+    ]
+  },
+  {
+    "type": "Abgrenzung",
+    "q": "Worin unterscheidet sich Demokratie von Diktatur?",
+    "expect": [
+      "demokratie"
+    ]
+  },
+  {
+    "type": "Abgrenzung",
+    "q": "Worin unterscheidet sich Medizin von Psychologie?",
+    "expect": [
+      "medizin",
+      "psychologie"
+    ]
+  },
+  {
+    "type": "Ursache/Wirkung",
+    "q": "Welche Auswirkungen hat der Klimawandel?",
+    "expect": [
+      "klimawandel"
+    ]
+  },
+  {
+    "type": "Ursache/Wirkung",
+    "q": "Wodurch entstehen Vulkane?",
+    "expect": [
+      "vulkan"
+    ]
+  },
+  {
+    "type": "Mehrhop",
+    "q": "Zu welchem System gehört Pluto?",
+    "expect": [
+      "pluto",
+      "sonnensystem"
+    ]
+  },
+  {
+    "type": "Mehrhop",
+    "q": "Welche Wissenschaft passt zu Quantenmechanik und Mathematik?",
+    "expect": [
+      "quantenmechanik",
+      "mathematik",
+      "physik"
+    ]
+  },
+  {
+    "type": "Unknown",
+    "q": "Warum ist der Himmel blau?",
+    "expect_unknown": true
+  },
+  {
+    "type": "Unknown",
+    "q": "Was ist ein Warp-Antrieb?",
+    "expect_unknown": true
+  },
+  {
+    "type": "Unknown",
+    "q": "Wer ist der Präsident von Mars?",
+    "expect_unknown": true
+  },
+  {
+    "type": "Unknown",
+    "q": "Welche Farbe hat Unsichtbarkeit?",
+    "expect_unknown": true
+  }
+]

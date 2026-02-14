@@ -78,6 +78,8 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
         self.pred_error_gain = 0.35
         self.pred_min_error = 0.02
         self.pred_learning_only = True
+        self.pred_update_on_think = False
+        self.inference_track_recency = False
 
         # Sequenz-Kanten (zeitlicher Kontext)
         self.seq_type = "folge"
@@ -169,6 +171,7 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
         self.answer_min_relevance = 0.18
         self.answer_min_relevance_cause = 0.26
         self.value_generic_penalty = 0.28
+        self.create_unknown_stubs = False
 
         # Content/Context Trennung
         self.content_cue_weight = 1.0
@@ -1303,13 +1306,17 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
         e = self._get_or_create_episodic_edge(src, dst, self.seq_type, w_init=w_init)
         e.gewicht = max(0.01, min(0.99, e.gewicht + self.seq_lr * max(0.05, w_init)))
 
-    def spreading_activation(self, intent: str = "OTHER") -> Dict[str, float]:
+    def spreading_activation(
+        self,
+        intent: str = "OTHER",
+        track_recency: bool = True,
+    ) -> Dict[str, float]:
         act: Dict[str, float] = {}
         self.trace = []
 
         for w in self.wm:
             act[w.id] = max(act.get(w.id, 0.0), w.a)
-            if w.id in self.konzepte:
+            if track_recency and w.id in self.konzepte:
                 self.konzepte[w.id].letzte_aktivierung = datetime.now()
 
         for tick in range(self.ticks):
@@ -1352,11 +1359,12 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
             nxt = self._inhibit(nxt)
             nxt = self._topk_clamp(nxt, self.topk_global)
 
-            now = datetime.now()
-            for kid, val in nxt.items():
-                if kid not in self.konzepte:
-                    self.konzepte[kid] = Konzept(id=kid, labels=[kid])
-                self.konzepte[kid].letzte_aktivierung = now
+            if track_recency:
+                now = datetime.now()
+                for kid, val in nxt.items():
+                    if kid not in self.konzepte:
+                        self.konzepte[kid] = Konzept(id=kid, labels=[kid])
+                    self.konzepte[kid].letzte_aktivierung = now
 
             act = nxt
             self._wm_refresh(act)
@@ -1367,6 +1375,8 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
         self,
         cues: Dict[str, float],
         intent: str = "OTHER",
+        update_weights: bool = True,
+        track_recency: bool = True,
     ) -> Dict[str, float]:
         act: Dict[str, float] = {}
         self.trace = []
@@ -1374,7 +1384,7 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
         self._wm_init(cues)
         for w in self.wm:
             act[w.id] = max(act.get(w.id, 0.0), w.a)
-            if w.id in self.konzepte:
+            if track_recency and w.id in self.konzepte:
                 self.konzepte[w.id].letzte_aktivierung = datetime.now()
 
         prev_focus = self.wm[0].id if self.wm else ""
@@ -1427,21 +1437,22 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
                 error[k] = act.get(k, 0.0) - pred.get(k, 0.0)
 
             # Lernupdate nur über Vorhersagefehler (ohne Sequenzkanten)
-            for src in wm_ids:
-                src_a = act.get(src, 0.0)
-                if src_a <= self.cutoff:
-                    continue
-                for _, e, layer in self._iter_edges(src, include_seq=True):
-                    if e.typ == self.seq_type:
+            if update_weights:
+                for src in wm_ids:
+                    src_a = act.get(src, 0.0)
+                    if src_a <= self.cutoff:
                         continue
-                    dst = e.ziel
-                    if not dst:
-                        continue
-                    err = error.get(dst, 0.0)
-                    if abs(err) < self.pred_min_error:
-                        continue
-                    delta = self.pred_lr * src_a * err
-                    e.gewicht = max(0.01, min(0.99, e.gewicht + delta))
+                    for _, e, layer in self._iter_edges(src, include_seq=True):
+                        if e.typ == self.seq_type:
+                            continue
+                        dst = e.ziel
+                        if not dst:
+                            continue
+                        err = error.get(dst, 0.0)
+                        if abs(err) < self.pred_min_error:
+                            continue
+                        delta = self.pred_lr * src_a * err
+                        e.gewicht = max(0.01, min(0.99, e.gewicht + delta))
 
             # Next activation = prediction + sensory anchors + (optional) error injection
             act = dict(pred)
@@ -1454,17 +1465,18 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
                         if val > act.get(k, 0.0):
                             act[k] = val
 
-            now = datetime.now()
-            for kid, val in act.items():
-                if kid not in self.konzepte:
-                    self.konzepte[kid] = Konzept(id=kid, labels=[kid])
-                self.konzepte[kid].letzte_aktivierung = now
+            if track_recency:
+                now = datetime.now()
+                for kid, val in act.items():
+                    if kid not in self.konzepte:
+                        self.konzepte[kid] = Konzept(id=kid, labels=[kid])
+                    self.konzepte[kid].letzte_aktivierung = now
 
             self._wm_refresh(act)
 
             # Sequenzkanten updaten (Focus -> Focus)
             cur_focus = self.wm[0].id if self.wm else ""
-            if prev_focus and cur_focus and prev_focus != cur_focus:
+            if update_weights and prev_focus and cur_focus and prev_focus != cur_focus:
                 strength = act.get(cur_focus, 0.0)
                 if strength >= self.seq_min_act:
                     self._update_seq_edge(prev_focus, cur_focus, strength)
@@ -1589,7 +1601,7 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
                 seed_set = {k for k in seed_set if k in cues}
 
         if not cues:
-            unknown = self._create_unknown_stub(frage)
+            unknown = self._create_unknown_stub(frage) if self.create_unknown_stubs else ""
             return {
                 "frage": frage,
                 "intent": intent,
@@ -1608,10 +1620,18 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
             }
 
         if self.pred_enabled:
-            act = self.predictive_activation(cues, intent=intent)
+            act = self.predictive_activation(
+                cues,
+                intent=intent,
+                update_weights=self.pred_update_on_think,
+                track_recency=self.inference_track_recency,
+            )
         else:
             self._wm_init(cues)
-            act = self.spreading_activation(intent=intent)
+            act = self.spreading_activation(
+                intent=intent,
+                track_recency=self.inference_track_recency,
+            )
 
         pattern_all = sorted(
             [
@@ -1847,7 +1867,14 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
                 if t not in context_terms and len(t) >= 2:
                     content.add(t)
                     break
-        return content, context
+
+        expanded_content: set[str] = set()
+        for tok in content:
+            expanded_content.add(tok)
+            for var in self._token_variants(tok):
+                if var:
+                    expanded_content.add(var)
+        return expanded_content, context
 
     def _concept_query_tokens(self, kid: str) -> set[str]:
         if not kid:
@@ -2748,10 +2775,15 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
                 cues[seeds[1]] = 0.75
 
             if self.pred_enabled:
-                act = self.predictive_activation(cues, intent="OTHER")
+                act = self.predictive_activation(
+                    cues,
+                    intent="OTHER",
+                    update_weights=True,
+                    track_recency=True,
+                )
             else:
                 self._wm_init(cues)
-                act = self.spreading_activation(intent="OTHER")
+                act = self.spreading_activation(intent="OTHER", track_recency=True)
             pattern = sorted(
                 [(k, v) for k, v in act.items() if v >= self.pattern_threshold],
                 key=lambda x: x[1],

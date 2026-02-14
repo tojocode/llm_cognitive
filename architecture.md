@@ -24,7 +24,9 @@ Das Modell kombiniert symbolisches Graph-Denken, episodisches Lernen und optiona
 - `data_import/wikipedia_to_core.py`
   - Import-Pipeline fuer Wikipedia-TXT in beide Memory-Layer inkl. Pruning/Lexikon-Update.
 - `debug_analyse/run_benchmark.py`
-  - Qualitaetsmessung (Hit@k, Focus/Trace, Unknown-Precision, Leakage-Checks).
+  - Qualitaetsmessung (Hit@k, Focus/Trace, Unknown-Precision, Leakage-Checks, Repeat-Stability).
+- `debug_analyse/run_eval_suite.py`
+  - Train/Holdout-Suite mit festen Thresholds fuer Regression-Checks (CI-tauglich).
 
 ## Datenmodell
 ### Knoten (`Konzept`)
@@ -54,12 +56,14 @@ Das Modell kombiniert symbolisches Graph-Denken, episodisches Lernen und optiona
 ### 2) Cue-Bildung
 - Lexikon-Matches, Token-Varianten, optionale Embedding-Hits, Goal-Cues.
 - Content-Cues und Context-Cues werden separat bewertet und danach gemerged.
+- Tokenvarianten enthalten Plural/Flexion, Umlaut-Transliteration und Komposita-Splits (z. B. `Weltklima` -> `Klima`).
 
 ### 3) Strukturierte Aktivierung
 - Cluster-First: lokale Aktivierung im relevanten Cluster, Cross-Cluster nur ueber Bridge-Gating.
 - Ensemble-Layer: aktive Ensembles verstaerken kompatible Knoten.
 - Workspace + Inhibition: begrenztes Aktivierungsbudget, Konkurrenzunterdrueckung.
 - Intent-Gating nach Relationsschema (`is_a`, `part_of`, `causes`, `has_property`, ...).
+- Inferenzmodus nutzt standardmäßig keine Predictive-Gewichtsupdates im Fragebetrieb (`pred_update_on_think=False`).
 
 ### 4) Musterselektion
 - Denkmuster (`pattern`) mit Top-K Knoten.
@@ -68,6 +72,8 @@ Das Modell kombiniert symbolisches Graph-Denken, episodisches Lernen und optiona
 
 ### 5) Antwortgenerierung
 - Unknown-Gate: bei niedriger Relevanz/Unsicherheit -> "Das weiss ich nicht...".
+- Unknown-Stubs sind standardmaessig deaktiviert (`create_unknown_stubs=False`),
+  damit Wiederholungen unbekannter Fragen nicht ungewollt neue Pseudo-Konzepte erzeugen.
 - Sonst Broca-Ausgabe:
   - bevorzugt intent-passende Relationen
   - filtert schwache Strukturrelationen (`cooccur`, `coactive`, `similar`, `cluster_of`)
@@ -105,6 +111,13 @@ Das Modell kombiniert symbolisches Graph-Denken, episodisches Lernen und optiona
   - bekannte Faelle: Hit@k, Focus, Trace
   - unknown-Faelle: Unknown-Precision
   - Leakage-Pruefung ueber `forbid`
+- Gold-Split fuer robuste Generalisierung:
+  - Train: `debug_analyse/benchmark_gold_train.json`
+  - Holdout: `debug_analyse/benchmark_gold_holdout.json`
+  - Holdout enthaelt Paraphrasen und Repeat-Faelle (`repeat`, `min_repeat_pass`).
+- CI-Suite: `python debug_analyse/run_eval_suite.py`
+  - prueft Train/Holdout gegen feste Mindestwerte
+  - liefert Exit-Code != 0 bei Regression
 
 ## Staerken
 - Sehr gute Nachvollziehbarkeit (Trace + Focus + Pattern).

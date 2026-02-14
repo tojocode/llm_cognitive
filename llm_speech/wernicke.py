@@ -253,14 +253,42 @@ class WernickeMixin:
         tok = (token or "").strip().lower()
         if not tok:
             return []
-        out = [tok]
+
+        out: List[str] = [tok]
+
+        translit = (
+            tok.replace("ä", "ae")
+            .replace("ö", "oe")
+            .replace("ü", "ue")
+            .replace("ß", "ss")
+        )
+        if translit != tok and translit not in out:
+            out.append(translit)
+
         if len(tok) >= 5:
-            # very small German plural/inflection fallback for query matching
-            for suf in ("en", "er", "e", "n", "s"):
+            # kleiner deutscher Plural-/Flexionsfallback für Query-Matching
+            for suf in ("innen", "ungen", "ung", "en", "er", "e", "n", "s", "t"):
                 if tok.endswith(suf) and len(tok) - len(suf) >= 4:
                     base = tok[:-len(suf)]
                     if base and base not in out:
                         out.append(base)
+
+        # Komposita auf bekannte Lexikonwörter abbilden (z. B. "vulkanausbrüche" -> "vulkan").
+        if len(tok) >= 8 and self.lexikon:
+            aliases = getattr(self, "_single_word_aliases", None)
+            if aliases is None:
+                aliases = {
+                    a for a in self.lexikon.keys() if a and " " not in a and len(a) >= 4
+                }
+                setattr(self, "_single_word_aliases", aliases)
+            for alias in aliases:
+                if alias in tok and alias not in out:
+                    out.append(alias)
+
+        for root in ("klima", "wandel", "wechsel", "vulkan", "ausbruch"):
+            if root in tok and root not in out:
+                out.append(root)
+
         return out
 
     def _normalize_import_text(self, text: str) -> str:
@@ -382,6 +410,32 @@ class WernickeMixin:
                 ftl = ft.lower()
                 if ftl in expanded_tokset:
                     cues[kid] = max(cues.get(kid, 0.0), 0.75)
+
+        # Semantische Brücken für paraphrasierte Fragen.
+        climate_change_tokens = {
+            "wandel",
+            "wechsel",
+            "veraender",
+            "veraendern",
+            "veraendert",
+            "veränder",
+            "verändern",
+            "verändert",
+        }
+        if "klima" in expanded_tokset and climate_change_tokens.intersection(expanded_tokset):
+            cid = self.lexikon.get("klimawandel") if self.lexikon else None
+            if cid and not self._is_junk_concept_id(cid):
+                cues[cid] = max(cues.get(cid, 0.0), 0.90)
+
+        if "vulkan" in expanded_tokset:
+            has_eruption = any(
+                t.startswith("ausbruch") or t.startswith("ausbr")
+                for t in expanded_tokset
+            )
+            if has_eruption:
+                cid = self.lexikon.get("vulkan") if self.lexikon else None
+                if cid and not self._is_junk_concept_id(cid):
+                    cues[cid] = max(cues.get(cid, 0.0), 0.92)
 
         return cues
 

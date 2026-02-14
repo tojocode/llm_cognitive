@@ -29,6 +29,9 @@ mindgraph_model/
   debug_analyse/
     test_questions.py
     run_benchmark.py
+    run_eval_suite.py
+    benchmark_gold_train.json
+    benchmark_gold_holdout.json
     export_cytoscape.py
 ```
 
@@ -41,6 +44,8 @@ python data_import/wikipedia_to_core.py --augment
 python debug_analyse/run_benchmark.py
 python debug_analyse/run_benchmark.py --file debug_analyse/benchmark_cluster_context.json
 python debug_analyse/run_benchmark.py --file debug_analyse/benchmark_quality_extended.json
+python debug_analyse/run_benchmark.py --file debug_analyse/benchmark_gold_holdout.json
+python debug_analyse/run_eval_suite.py
 python debug_analyse/export_cytoscape.py
 ```
 
@@ -74,3 +79,12 @@ python debug_analyse/export_cytoscape.py
 - Erweiterter Qualitäts-Benchmark: `debug_analyse/benchmark_quality_extended.json` prüft zusätzlich Unknown-Precision und Leakage-Freiheit (`forbid`-Labels).
 
 - Vollstaendige Architektur-Doku: `architecture.md` (Komponenten, Datenmodell, Laufzeitpipeline, Lernen/Konsolidierung).
+
+- Gold-Eval-Split ist aktiv: `debug_analyse/benchmark_gold_train.json` (Tuning) und `debug_analyse/benchmark_gold_holdout.json` (Generalisierung).
+- Benchmark-Runner unterstützt Repeat-/Stabilitätsprüfungen (`repeat`, `min_repeat_pass`) sowie CI-Thresholds (`--min-hit1`, `--min-unknown-precision`, ...).
+- Eval-Suite für CI: `python debug_analyse/run_eval_suite.py` (Train/Holdout inkl. Grenzwerten, Exit-Code != 0 bei Regression).
+- Für isolierte Bewertung stehen `--fresh-per-case` und `--fresh-per-run` zur Verfügung.
+- Benchmark-Läufe sind deterministisch: Inferenz-Updates auf Predictive/Sequenzgewichten sind im Runner deaktiviert.
+- Inferenz erzeugt standardmäßig keine Unknown-Stubs mehr (`create_unknown_stubs=False`), damit Unknown-Fragen nicht durch Wiederholung „falsch bekannt" werden.
+- Query-Matching wurde für Komposita/Paraphrasen erweitert (z. B. `Weltklima`/`Vulkanausbrüche`).
+
