@@ -179,14 +179,31 @@ class WernickeMixin:
     def _init_wernicke(self, lexikon_datei: str | None):
         self.lexikon_datei = lexikon_datei
         self.lexikon: Dict[str, str] = {}
+        self._norm_label_cache: Dict[str, str] = {}
+        self._token_variants_cache: Dict[str, List[str]] = {}
+        self._junk_id_cache: Dict[str, bool] = {}
         if self.lexikon_datei:
             self.lade_lexikon(self.lexikon_datei)
+
+    def _invalidate_lexikon_caches(self):
+        # Komposita-Split, Tokenvarianten und Konzept-Tokens hängen vom Lexikonstand ab.
+        self._single_word_aliases = None
+        self._token_variants_cache = {}
+        self._concept_tokens_cache = {}
 
     # -------------------------
     # Lexikon
     # -------------------------
 
     def _norm_label(self, s: str) -> str:
+        if not isinstance(s, str):
+            return ""
+        cache = getattr(self, "_norm_label_cache", None)
+        if cache is None:
+            cache = self._norm_label_cache = {}
+        hit = cache.get(s)
+        if hit is not None:
+            return hit
         t = self._nfc(s).strip().lower()
         t = re.sub(r"[\.,;:!?()\[\]{}<>\"'`]", " ", t)
         t = re.sub(r"\s+", " ", t).strip()
@@ -194,6 +211,9 @@ class WernickeMixin:
             if t.startswith(a):
                 t = t[len(a):].strip()
                 break
+        if len(cache) > 200_000:
+            cache.clear()
+        cache[s] = t
         return t
 
     def lade_lexikon(self, datei: str):
@@ -223,6 +243,7 @@ class WernickeMixin:
                 if a and c:
                     lex[a] = c
         self.lexikon = lex
+        self._invalidate_lexikon_caches()
 
     def speichere_lexikon(self, datei: str | None = None):
         target = datei or self.lexikon_datei or "lexikon.json"
@@ -237,6 +258,7 @@ class WernickeMixin:
             return False
         self.lexikon[a] = cid
         self._ensure_label(cid, alias)
+        self._invalidate_lexikon_caches()
         return True
 
     # -------------------------
@@ -253,6 +275,13 @@ class WernickeMixin:
         tok = (token or "").strip().lower()
         if not tok:
             return []
+
+        cache = getattr(self, "_token_variants_cache", None)
+        if cache is None:
+            cache = self._token_variants_cache = {}
+        hit = cache.get(tok)
+        if hit is not None:
+            return hit
 
         out: List[str] = [tok]
 
@@ -289,6 +318,9 @@ class WernickeMixin:
             if root in tok and root not in out:
                 out.append(root)
 
+        if len(cache) > 100_000:
+            cache.clear()
+        cache[tok] = out
         return out
 
     def _normalize_import_text(self, text: str) -> str:
@@ -307,6 +339,19 @@ class WernickeMixin:
     def _is_junk_concept_id(self, cid: str) -> bool:
         if not cid:
             return True
+        cache = getattr(self, "_junk_id_cache", None)
+        if cache is None:
+            cache = self._junk_id_cache = {}
+        hit = cache.get(cid)
+        if hit is not None:
+            return hit
+        result = self._is_junk_concept_id_uncached(cid)
+        if len(cache) > 200_000:
+            cache.clear()
+        cache[cid] = result
+        return result
+
+    def _is_junk_concept_id_uncached(self, cid: str) -> bool:
         low = cid.lower()
         if low in JUNK_IDS:
             return True

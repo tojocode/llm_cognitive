@@ -119,6 +119,31 @@ Das Modell kombiniert symbolisches Graph-Denken, episodisches Lernen und optiona
   - prueft Train/Holdout gegen feste Mindestwerte
   - liefert Exit-Code != 0 bei Regression
 
+## Performance-Architektur
+Die Denk-Pipeline ist auf niedrige Latenz pro Frage optimiert (Stand 2026-07-10: ~12 ms/Frage bei 681 Konzepten, vorher ~72 ms). Details und Messwerte: `dokumentation/devlog.md`.
+
+### Memo-Caches (reine String-Funktionen)
+- `_norm_label`, `_token_variants`, `_is_junk_concept_id` (Wernicke) und
+  `_canon_type`, `_schema_rel`, `_concept_query_tokens` (Engine) sind memoisiert.
+- Caches sind groessenbegrenzt (Clear bei Ueberlauf) und werden bei
+  Lexikon-Aenderungen ueber `_invalidate_lexikon_caches()` zurueckgesetzt
+  (`lade_lexikon`, `lexikon_add`).
+- `_concept_query_tokens` nutzt `len(labels)` als Versionsschluessel —
+  Labels sind append-only (Deckel bei 10 in `_ensure_label`).
+
+### Hot-Path der Aktivierung
+- Triangle-Boost: pro Tick werden die Ausgangs-Nachbar-Sets aller WM-Knoten
+  einmal vorberechnet (`_wm_out_neighbors`); `_triangle_adjust` arbeitet nur
+  noch mit Set-Lookups statt Kantenlisten-Scans.
+- Intent-Gating: `_gate(typ, intent)` wird pro Aktivierungslauf in einem
+  lokalen Cache gehalten (Intent ist pro Lauf fix).
+
+### Invarianten
+- Memo-Caches setzen Reinheit voraus: Laufzeit-Mutation von `lexikon`,
+  `schema_core_relations` oder Label-Semantik erfordert Cache-Invalidierung.
+- `_wm_out_neighbors` spiegelt exakt die `_has_edge`-Semantik
+  (semantic: alle Typen; episodic: ohne Sequenzkanten).
+
 ## Staerken
 - Sehr gute Nachvollziehbarkeit (Trace + Focus + Pattern).
 - Robustes Unknown-Verhalten statt Halluzinations-Output.

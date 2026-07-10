@@ -59,6 +59,11 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
         self.episodic_edges: Dict[str, List[Verbindung]] = {}
         self.trace: List[TraceItem] = []
 
+        # Memo-Caches für Hot-Path-Funktionen (reine String-Abbildungen)
+        self._canon_type_cache: Dict[str, str] = {}
+        self._schema_rel_cache: Dict[str, str] = {}
+        self._concept_tokens_cache: Dict[str, Tuple[int, set]] = {}
+
         self.base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
         self.semantic_datei = modell_datei
         self.episodic_datei = episodic_datei
@@ -813,6 +818,19 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
 
 
     def _canon_type(self, t: str) -> str:
+        cache = getattr(self, "_canon_type_cache", None)
+        if cache is None:
+            cache = self._canon_type_cache = {}
+        hit = cache.get(t)
+        if hit is not None:
+            return hit
+        result = self._canon_type_uncached(t)
+        if len(cache) > 50_000:
+            cache.clear()
+        cache[t] = result
+        return result
+
+    def _canon_type_uncached(self, t: str) -> str:
         t0 = self._nfc(t).strip()
         if not t0:
             return ""
@@ -835,6 +853,19 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
         return t0
 
     def _schema_rel(self, rel_type: str) -> str:
+        cache = getattr(self, "_schema_rel_cache", None)
+        if cache is None:
+            cache = self._schema_rel_cache = {}
+        hit = cache.get(rel_type)
+        if hit is not None:
+            return hit
+        result = self._schema_rel_uncached(rel_type)
+        if len(cache) > 50_000:
+            cache.clear()
+        cache[rel_type] = result
+        return result
+
+    def _schema_rel_uncached(self, rel_type: str) -> str:
         t = self._canon_type(rel_type).strip().lower()
         mapping = {
             "ist": "is_a",
@@ -899,7 +930,7 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
             return "PARTS"
         if f.startswith(("wo ", "wohin", "woher")):
             return "WHERE"
-        if f.startswith(("woraus", "woraus besteht", "woraus setzt", "woraus besteht")):
+        if f.startswith("woraus"):
             return "PARTS"
         if f.startswith(
             (
@@ -1290,12 +1321,31 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
                     return True
         return False
 
-    def _triangle_adjust(self, src: str, dst: str) -> float:
-        wm_ids = {w.id for w in self.wm}
+    def _wm_out_neighbors(self, wm_ids: List[str]) -> Dict[str, set]:
+        # Ausgangs-Nachbarn (semantic + episodic ohne Sequenzkanten) je WM-Knoten,
+        # einmal pro Tick statt per-Kante-Scans in _triangle_adjust.
+        out: Dict[str, set] = {}
         for mid in wm_ids:
+            s: set = set()
+            k = self.konzepte.get(mid)
+            if k:
+                for e in k.verbindungen:
+                    s.add(e.ziel)
+            for e in self.episodic_edges.get(mid, []):
+                if e.typ == self.seq_type:
+                    continue
+                s.add(e.ziel)
+            out[mid] = s
+        return out
+
+    def _triangle_adjust(self, src: str, dst: str, wm_nb: Dict[str, set]) -> float:
+        src_nb = wm_nb.get(src)
+        if not src_nb:
+            return 1.0
+        for mid, mid_nb in wm_nb.items():
             if mid == src or mid == dst:
                 continue
-            if self._has_edge(src, mid) and self._has_edge(mid, dst):
+            if mid in src_nb and dst in mid_nb:
                 return self.triangle_boost
         return 1.0
 
@@ -1319,10 +1369,13 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
             if track_recency and w.id in self.konzepte:
                 self.konzepte[w.id].letzte_aktivierung = datetime.now()
 
+        gate_cache: Dict[str, float] = {}
+
         for tick in range(self.ticks):
             nxt: Dict[str, float] = dict(act)
 
             wm_ids = [w.id for w in self.wm]
+            wm_nb = self._wm_out_neighbors(wm_ids)
 
             for src in wm_ids:
                 src_a = act.get(src, 0.0)
@@ -1334,8 +1387,11 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
                     if not dst:
                         continue
 
-                    gate = self._gate(e.typ, intent)
-                    tri = self._triangle_adjust(src, dst)
+                    gate = gate_cache.get(e.typ)
+                    if gate is None:
+                        gate = self._gate(e.typ, intent)
+                        gate_cache[e.typ] = gate
+                    tri = self._triangle_adjust(src, dst, wm_nb)
                     incoming = src_a * e.gewicht * self.damp * gate * tri
 
                     if dst in self.konzepte:
@@ -1389,9 +1445,12 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
 
         prev_focus = self.wm[0].id if self.wm else ""
 
+        gate_cache: Dict[str, float] = {}
+
         for tick in range(self.ticks):
             pred: Dict[str, float] = {}
             wm_ids = [w.id for w in self.wm]
+            wm_nb = self._wm_out_neighbors(wm_ids)
 
             for src in wm_ids:
                 src_a = act.get(src, 0.0)
@@ -1403,11 +1462,14 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
                     if not dst:
                         continue
 
-                    gate = self._gate(e.typ, intent)
+                    gate = gate_cache.get(e.typ)
+                    if gate is None:
+                        gate = self._gate(e.typ, intent)
+                        gate_cache[e.typ] = gate
                     if layer == "episodic" and e.typ == self.seq_type:
                         gate = max(gate, self.seq_boost)
 
-                    tri = self._triangle_adjust(src, dst)
+                    tri = self._triangle_adjust(src, dst, wm_nb)
                     incoming = src_a * e.gewicht * self.damp * gate * tri
 
                     if dst in self.konzepte:
@@ -1881,6 +1943,15 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
             return set()
         k = self.konzepte.get(kid)
         labels = (k.labels if k and k.labels else [kid])
+
+        # Labels werden nur angehängt -> len(labels) dient als Cache-Version.
+        cache = getattr(self, "_concept_tokens_cache", None)
+        if cache is None:
+            cache = self._concept_tokens_cache = {}
+        hit = cache.get(kid)
+        if hit is not None and hit[0] == len(labels):
+            return hit[1]
+
         out: set[str] = set()
         for lab in labels:
             norm = self._norm_label(lab)
@@ -1892,6 +1963,9 @@ class KognitivesModell(WernickeMixin, BrocaMixin):
                     for var in self._token_variants(t):
                         if var:
                             out.add(var)
+        if len(cache) > 100_000:
+            cache.clear()
+        cache[kid] = (len(labels), out)
         return out
 
     def _split_cues_content_context(
